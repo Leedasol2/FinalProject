@@ -1,0 +1,22 @@
+server: 
+  port: 9001 
+spring: 
+  mvc: 
+    view: 
+      prefix: /WEB-INF/
+      suffix: .jsp 
+  devtools: 
+    livereload: 
+      enabled: true 
+#mysql 
+  datasource: 
+    driver-class-name: com.mysql.cj.jdbc.Driver 
+    url: jdbc:mysql://finalproject.chrgn3ko5veh.ap-northeast-2.rds.amazonaws.com:3306/finalDB?serverTimezone=UTC&characterEncoding=UTF-8
+    username: finaladmin
+    password: a123456789
+    
+#mybatis setting 
+mybatis: 
+  type-aliases-package: data.dto, data.mapper 
+  mapper-locations: 
+  - /mapper/**/*.xml
