@@ -1,0 +1,210 @@
+/* font */
+@font-face {
+    font-family: 'ChosunSg';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunSg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
+
+@font-face {
+    font-family: 'MinSans-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 헤더시작 */
+div.header{
+	position: absolute;
+	/* border: 1px solid black; */
+	width: 100%;
+	top: 0;
+	height: 300px;
+}
+
+img.logoimg{
+	position: absolute;
+	left: 55px;
+	top: 40px;
+}
+
+input.search{
+	position: absolute;
+	width: 555px;
+	height: 72px;
+	background-color: #f2f2f2;
+	border-radius: 5px;
+	left: 350px;
+	top: 30px;
+    font-family: 'ChosunSg';
+    font-weight: 580;
+    font-size: 15pt;
+    font-color: #21529;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+button.login{
+	position: absolute;
+	width: 208px;
+	height: 62px;
+	right: 300px;
+	top: 35px;
+ 	font-family: 'Noto Sans KR', sans-serif;
+ 	font-weight: bold;
+ 	font-size: 15pt;
+ 	color: #666d75;
+ 	background-color: #ffffff;
+    border: none;
+	border-radius: 10px;
+}
+button.join{
+	position: absolute;
+	width: 208px;
+	height: 62px;
+	right: 55px;
+	top: 35px;
+ 	font-family: 'Noto Sans KR', sans-serif;
+ 	font-weight: bold;
+ 	font-size: 15pt;
+ 	color: #2bae66;
+ 	background-color: #ffffff;
+    border: 1px solid #2bae66;
+	border-radius: 10px;
+}
+img.mainline{
+	position: absolute;
+	top: 130px;
+}
+
+img.submenuicon1{
+	position:absolute;
+	top:118px;
+	left: 80px;
+}
+
+img.submenuicon2{
+	position:absolute;
+	top:118px;
+	left: 85px;
+}
+
+/* 헤더메뉴 */
+ul.myMenu {}
+ul.myMenu > li { 
+	display:inline-block; 
+	width:300px; 
+	height:130px;
+	text-align:center; 
+	position:relative; 
+	top:140px;
+	padding-top:50px;
+	color: #495056;
+ 	font-family: 'MinSans-Medium';
+ 	font-weight: 550;
+ 	font-size: 19pt;
+ 	margin-left:30px;
+ 	text-decoration : none;
+}
+
+ul.myMenu > li > a > img {
+	padding-bottom:17px;
+}
+
+ul.myMenu > li ul.submenu { 
+	display:none;
+	position:absolute; 
+	top:117px;
+	left: -40px;
+	
+}
+
+ul.myMenu > li:hover ul.submenu { display:block; }
+
+ul.myMenu > li ul.submenu > li { 
+	display:inline-block; 
+	width:300px; 
+	height: 100px; 
+	background-color:rgba(43, 174, 102, 0.7);
+	text-align:center; 
+	color: white;
+ 	font-family: 'MinSans-Medium';
+ 	font-weight: normal;
+ 	font-size: 15pt;
+	padding-top:30px;
+}
+
+ul.myMenu > li ul.submenu > li:hover { font-size:16pt; }
+
+button.findtrip{
+	position: absolute;
+	width: 313px;
+	height: 62px;
+	right: 125px;
+	top: 185px;
+ 	font-family: 'Noto Sans KR', sans-serif;
+ 	font-weight: bold;
+ 	font-size: 14pt;
+ 	color: #ffffff;
+ 	background-color: #2bae66;
+	border-radius: 10px;
+	border: none;
+}/* 헤더 끝 */
+
+/* 메인 시작 */
+div.main{
+ 	position: absolute; 
+	width: 100%;
+	top:267px;
+} /* 메인 끝 */
+
+/* 푸터 시작 */
+div.footer img.logowhite{
+	position:absolute;
+	top: 100px;
+	left: 100px;
+}
+div.footer img.footerdeco{
+	position:absolute;
+	right:80px;
+}
+
+div.footer{
+	width: 100%;
+	height: 642px;
+ 	background-color: #2bae66;
+ 	position: absolute; 
+ 	top: 1800px; 
+}
+
+div.footer pre.pre1{
+ 	background-color: #2bae66;
+	position:absolute;
+	top: 300px;
+	left: 100px;
+ 	font-family: 'MinSans-Medium';
+ 	font-weight: 400;
+ 	font-size: 14pt;
+ 	color: #ffffff;
+ 	line-height:50px;
+ 	border: none;
+}
+
+div.footer pre.pre2{
+ 	background-color: #2bae66;
+	position:absolute;
+	top: 70px;
+	right: 130px;
+ 	font-family: 'MinSans-Medium';
+ 	font-weight: 400;
+ 	font-size: 15pt;
+ 	color: #ffffff;
+ 	line-height:50px;
+ 	border: none;
+}/* 푸터 끝 */
