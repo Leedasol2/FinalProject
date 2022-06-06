@@ -26,25 +26,26 @@ div.home{
 div.header{
 	position: absolute;
 	/* border: 1px solid black; */
-	width: 1190px;
-	left: 364px;
+	width: 970px;
+	left: 475px;
 	height: 232px;
-}
-
+    align-items: center;
+} 
 img.logoimg{
 	position: absolute;
-	left: 55px;
+	left: 45px;
 	top: 40px;
+	
 }
 
 input.search{
 	position: absolute;
-	width: 400px;
-	height: 60px;
+	width: 340px;
+	height: 50px;
 	background-color: #f2f2f2;
 	border-radius: 5px;
-	left: 300px;
-	top: 35px;
+	left: 200px;
+	top: 30px;
     font-family: 'ChosunSg';
     font-weight: 580;
     font-size: 13pt;
@@ -57,12 +58,12 @@ input.search{
 button.login{
 	position: absolute;
 	width: 108px;
-	height: 62px;
-	right: 300px;
+	height: 45px;
+	right: 220px;
 	top: 35px;
  	font-family: 'Noto Sans KR', sans-serif;
  	font-weight: bold;
- 	font-size: 15pt;
+ 	font-size: 12pt;
  	color: #666d75;
  	background-color: #ffffff;
     border: none;
@@ -70,13 +71,13 @@ button.login{
 }
 button.join{
 	position: absolute;
-	width: 208px;
-	height: 62px;
-	right: 55px;
+	width: 150px;
+	height: 45px;
+	right: 45px;
 	top: 35px;
  	font-family: 'Noto Sans KR', sans-serif;
  	font-weight: bold;
- 	font-size: 15pt;
+ 	font-size: 12pt;
  	color: #2bae66;
  	background-color: #ffffff;
     border: 1px solid #2bae66;
@@ -85,32 +86,32 @@ button.join{
 
 img.mainline{
 	position: absolute;
-	top: 120px;
-	width: 1190px;
+	top: 100px;
+	width: 970px;
 }
 
 /* 헤더메뉴 */
 img.submenuicon1{
 	position:absolute;
-	top:80px;
-	left: 35px;
+	top:83px;
+	left: 42px;
 }
 
 img.submenuicon2{
 	position:absolute;
-	top:80px;
-	left: 31px;
+	top:83px;
+	left: 42px;
 }
 
 ul.myMenu {}
 ul.myMenu > li { 
 	display:inline-block; 
-	width:200px; 
+	width:160px; 
 	height:90px;
 	text-align:center; 
 	position:relative; 
-	top:140px;
-	padding-top:20px;
+	top:120px;
+	padding-top:27px;
 	color: #495056;
  	font-family: 'MinSans-Medium';
  	font-weight: 500;
@@ -125,7 +126,7 @@ ul.myMenu > li > a > img {
 ul.myMenu > li ul.submenu { 
 	display:none;
 	position:absolute; 
-	top:80px;
+	top:83px;
 	left: -40px;
 	
 }
@@ -134,28 +135,28 @@ ul.myMenu > li:hover ul.submenu { display:block; }
 
 ul.myMenu > li ul.submenu > li { 
 	display:inline-block; 
-	width:200px; 
+	width:160px; 
 	height: 100px; 
 	background-color:rgba(43, 174, 102, 0.7);
 	text-align:center; 
 	color: white;
  	font-family: 'MinSans-Medium';
  	font-weight: normal;
- 	font-size: 15pt;
+ 	font-size: 11pt;
 	padding-top:30px;
 }
 
-ul.myMenu > li ul.submenu > li:hover { font-size:16pt; }
+ul.myMenu > li ul.submenu > li:hover { font-size:13pt; }
 
 button.findtrip{
 	position: absolute;
-	width: 250px;
-	height: 50px;
-	right: 35px;
-	top: 160px;
+	width: 200px;
+	height: 40px;
+	right: 40px;
+	top: 140px;
  	font-family: 'Noto Sans KR', sans-serif;
  	font-weight: bold;
- 	font-size: 13pt;
+ 	font-size: 10pt;
  	color: #ffffff;
  	background-color: #2bae66;
 	border-radius: 10px;
@@ -170,47 +171,46 @@ div.main{
 } /* 메인 끝 */
 
 /* 푸터 시작 */
-div.footer img.logowhite{
-	position:absolute;
-	top: 100px;
-	left: 364px;
-}
-div.footer img.footerdeco{
-	position:absolute;
-	width: 700px;
-	top: 465px;
-	right:370px;
-}
-
 div.footer{
 	width: 100%;
-	height: 642px;
+	height: 550px;
  	background-color: #2bae66;
  	position: absolute; 
  	top: 1800px; 
 }
 
+div.footer img.logowhite{
+	position:absolute;
+	top: 90px;
+	left: 480px;
+}
+div.footer img.footerdeco{
+	position:absolute;
+	top: 455px;
+	right:560px;
+}
+
 div.footer pre.pre1{
  	background-color: #2bae66;
 	position:absolute;
-	top: 350px;
-	left: 364px;
+	top: 320px;
+	left: 465px;
  	font-family: 'MinSans-Medium';
  	font-weight: 300;
- 	font-size: 11pt;
+ 	font-size: 10pt;
  	color: #ffffff;
- 	line-height:40px;
+ 	line-height:30px;
  	border: none;
 }
 
 div.footer pre.pre2{
  	background-color: #2bae66;
 	position:absolute;
-	top: 70px;
-	right: 364px;
+	top: 60px;
+	right: 550px;
  	font-family: 'MinSans-Medium';
  	font-weight: 400;
- 	font-size: 15pt;
+ 	font-size: 13pt;
  	color: #ffffff;
  	line-height:50px;
  	border: none;
