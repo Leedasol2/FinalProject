@@ -37,6 +37,7 @@ a:hover { text-decoration:none !important;color: #495056; }
 
 	<!-- header 시작 -->
 	<div class="header">
+	  <div class="headercontent">
 		<a href="${root }/"><img class="logoimg" src="${root }/image/asset/로고.png"></a>
 		<input type="text" name="search" class="search" placeholder="이런 여행 없을까? 검색해보세요">
 		<button type="button" class="login">로그인</button>
@@ -70,6 +71,7 @@ a:hover { text-decoration:none !important;color: #495056; }
 		
 		<button type="button" class="findtrip">나에게 딱 맞는 여행지는?</button>
 		</div>
+	  </div>
 	</div> <!-- header 끝 -->
 
 	<!-- main 시작 -->
