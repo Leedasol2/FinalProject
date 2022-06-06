@@ -24,6 +24,7 @@ input.search
 
 a { text-decoration:none !important;color: #495056; }
 a:hover { text-decoration:none !important;color: #495056; }
+
 </style>
 
 <!-- js -->
@@ -79,7 +80,7 @@ a:hover { text-decoration:none !important;color: #495056; }
 	<!-- footer 시작 -->
 	<div class="footer">
 		<img class="logowhite" src="${root }/image/asset/로고white.png">
-		<img class="footerdeco" src="${root }/image/asset/footerdeco.png">
+		<img class="footerdeco" src="${root }/image/asset/개발도구.png">
 		<pre class="pre1">(주) 2RUN TRIP
 서울특별시 강남구 이런트립타워 2층		고객센터 : 2222-2222
 사업자등록번호: 222-22-22222		이메일 : 2RUN@gmail.com
