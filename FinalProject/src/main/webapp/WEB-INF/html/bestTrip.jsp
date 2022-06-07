@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+	<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -30,29 +30,7 @@ a:hover { text-decoration:none !important;color: #495056; }
 
 <!-- js -->
 <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-<script type="text/javascript">
 
-$(function(){
-	
-	//사이드바 선택시 글씨색 변경
-	$("a.best-category").click(function(){
-		$(this).css("color","#212529");
-		$("a.region-category").css("color","gray");
-		$("a.theme-category").css("color","gray");
-	});
-	$("a.region-category").click(function(){
-		$(this).css("color","#212529");
-		$("a.best-category").css("color","gray");
-		$("a.theme-category").css("color","gray");
-	});
-	$("a.theme-category").click(function(){
-		$(this).css("color","#212529");
-		$("a.region-category").css("color","gray");
-		$("a.best-category").css("color","gray");
-	});
-});
-
-</script>
 </head>
 <body>
 
@@ -102,7 +80,7 @@ $(function(){
 <div class="trip-category">
   <a href="#1" class="best-category tripcategory">베스트 여행지</a><br><br><br>
   <a href="#2" class="region-category tripcategory">지역별 여행지</a><br><br><br>
-  <a href="#3" class="theme-category tripcategory">테마별 여행지</a>
+  <a href="#3" class="themea-category tripcategory">테마별 여행지</a>
 </div>
 
 <div class="category-title">

@@ -1,8 +1,15 @@
 @charset "UTF-8";
 
 @font-face {
-    font-family: 'MinSans-Black';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Black.woff') format('woff');
+    font-family: 'MinSans-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MinSans-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Light.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -16,6 +23,7 @@ div.trip-category{
 	position: relative;
 	top: 209px;
 	left: 477px;
+	font-family: 'MinSans-Medium';
 }
 
 div.trip-category > a.tripcategory{
@@ -31,7 +39,6 @@ div.trip-category > a.best-category {
 div.trip-category > a:hover{
 	color: #212529;
 	transition: 0.3s ease; 
-	font-weight: bold;
 }
 
 div.category-title {
