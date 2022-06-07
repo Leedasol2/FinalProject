@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'MinSans-Black';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+div.trip-category{
+	width: 210px;
+	height: 230px;
+	background-color: #ffffea;
+	padding-left: 57px;
+	padding-top: 36px;
+	position: relative;
+	top: 209px;
+	left: 477px;
+}
+
+div.trip-category > a.tripcategory{
+	color: gray;
+	font-weight: 650;
+	font-size: 17px;
+}
+
+div.trip-category > a.best-category {
+	color: #212529;
+}
+
+div.trip-category > a:hover{
+	color: #212529;
+	transition: 0.3s ease; 
+	font-weight: bold;
+}
+
+div.category-title {
+	display: inline-block;
+	position: relative;
+	left: 730px;
+	top: 20px;
+}
+
+div.category-title > span.main-title{
+	font-weight: bold;
+	font-size: 25px;
+	color: #212529;
+}
+
+div.category-title > span.sub-title{
+	font-size: 0.8em;
+	color: #afafaf;
+}
+
+div.category-title > span.title-content{
+	float: right;
+	font-size: 0.8em;
+	padding-left: 218px;
+	text-align: right;
+}
+
+div.trip-content{
+	width: 220px;
+	height: 270px;
+	border: 1px solid #afafaf;
+	border-radius: 10px;
+	position: relative;
+	left: 720px;
+	top: 30px;
+	margin-left: 10px;
+	margin-bottom: 47px;
+}
+
+div.trip-content > img.trip-img{
+	width: 100%;
+	height: 170px;
+	border-top-left-radius : 10px;
+	border-top-right-radius : 10px;
+	cursor: pointer;	
+}
+
+div.trip-content > span.trip-name{
+	position: relative;
+	top: 11px;
+	padding-left: 17px;
+	font-size: 1.1em;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+div.trip-content > span.trip-explanation{
+	font-size: 0.8em;
+	padding-left: 17px;
+	position: relative;
+	top: 18px;
+}
+
+div.trip-content > span.trip-region{
+	font-size: 0.8em;
+	color: #2bae66;
+	padding-left: 17px;
+	position: relative;
+	top: 20px;
+	cursor: pointer;
+}
+
+div.trip-content > span.trip-region > img{
+	width: 12px;
+}
+
+span.star-review > img{
+	position: relative;
+	top: 7px;
+	left: 42px;
+	width: 9px;
+	padding: 0;
+	margin: 0;
+}
+
+
