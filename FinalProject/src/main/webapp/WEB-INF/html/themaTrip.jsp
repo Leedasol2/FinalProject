@@ -13,7 +13,7 @@
 
 <!-- CSS -->
 <link rel="stylesheet" href="${root }/css/main.css"/>
-<link rel="stylesheet" href="${root }/css/themaTrip.css"/>
+<link rel="stylesheet" href="${root }/css/themaTrip.css?after"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <style type="text/css"> /* css파일에 적용했더니 안되고, 여기서 작성하면 적용되는 css들..ㅠㅠ */
 input.search
@@ -68,6 +68,18 @@ $(function(){
 </script>
 </head>
 <body>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+	  var currentPosition = parseInt($(".trip-category").css("top"));
+	  $(window).scroll(function() {
+	    var position = $(window).scrollTop(); 
+	    $(".trip-category").stop().animate({"top":position+currentPosition+"px"},1000);
+	  });
+	});
+
+</script> 
 
 <!-- 헤더 시작 -->
 <div class="header">

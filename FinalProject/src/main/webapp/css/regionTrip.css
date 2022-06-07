@@ -13,10 +13,10 @@ div.trip-category{
 	background-color: #ffffea;
 	padding-left: 57px;
 	padding-top: 36px;
-	position: relative;
 	top: 209px;
 	left: 477px;
 	font-family: 'MinSans-Medium';
+    position: relative;
 }
 
 div.trip-category > a.tripcategory{
@@ -134,7 +134,6 @@ div.regionofkorea > a.region{
 div.regionofkorea > a:hover{
 	color: #212529;
 	transition: 0.3s ease; 
-	font-weight: bold;
 }
 
 div.regionofkorea > a.daejeon-chungcheong{
