@@ -69,6 +69,18 @@ $(function(){
 </head>
 <body>
 
+<script type="text/javascript">
+
+$(document).ready(function(){
+	  var currentPosition = parseInt($(".trip-category").css("top"));
+	  $(window).scroll(function() {
+	    var position = $(window).scrollTop(); 
+	    $(".trip-category").stop().animate({"top":position+currentPosition+"px"},1000);
+	  });
+	});
+
+</script> 
+
 <!-- 헤더 시작 -->
 <div class="header">
 	  <div class="headercontent">
