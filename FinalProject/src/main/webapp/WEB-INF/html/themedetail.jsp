@@ -37,7 +37,7 @@ a:hover { text-decoration:none !important;color: #495056; }
 	margin-left: 500px;
 	padding-right: 50px;
 }
-.sogae, .map, .image, .madi{
+.sogae, .map, .image{
 	position: relative;
 	left: 500px;
 	top: 20px;
