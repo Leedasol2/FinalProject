@@ -12,8 +12,22 @@
 }
 
 @font-face {
+    font-family: 'MinSans-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'MinSans-Medium';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MinSans-Black';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Black.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -30,6 +44,7 @@ div.header{
 	left: 475px;
 	height: 232px;
     align-items: center;
+    z-index:1;
 } 
 img.logoimg{
 	position: absolute;
@@ -136,8 +151,8 @@ ul.myMenu > li:hover ul.submenu { display:block; }
 ul.myMenu > li ul.submenu > li { 
 	display:inline-block; 
 	width:160px; 
-	height: 100px; 
-	background-color:rgba(43, 174, 102, 0.7);
+	height: 80px; 
+	background-color:rgba(43, 174, 102, 0.8);
 	text-align:center; 
 	color: white;
  	font-family: 'MinSans-Medium';
@@ -167,8 +182,436 @@ button.findtrip{
 div.main{
  	position: absolute; 
 	width: 100%;
-	top:267px;
+	top:208px;
+	margin: 0;
+	padding: 0;
+	box-sizing:border-box;
 } 
+
+/* 배너 */
+ul,li {list-style:none;}
+.slidebox ul,li{margin:0;padding:0;}
+[name="slide"] {display:none;}
+.slidebox {max-width:1000px;width:100%;margin:0 auto;text-align:center;}
+.slidebox img {max-width:100%;}
+.slidebox .slidelist {
+   white-space:nowrap;
+   font-size:0;
+   overflow:hidden;
+}
+.slidebox .slideitem {
+   position:relative;
+   display:inline-block;
+   vertical-align:middle;
+   width:100%;
+   transition:all 0.5s;
+}
+.slidebox .slideitem label {
+   position:absolute;
+   z-index:2;
+   top:50%;
+   transform:translateY(-50%);
+   padding:20px;
+   border-radius:50%;
+   cursor:pointer;
+}
+.slidebox .slideitem img{
+	cursor:pointer;
+}
+
+ /* 페이징 스타일 */
+.paginglist {text-align:center;padding:30px 0;}
+.paginglist > li {display:inline-block;vertical-align:middle;margin:0 10px;}
+.paginglist > li > label {display:block;padding:10px 30px;border-radius:10px;background:#ccc;cursor:pointer;}
+.paginglist > li:hover > label {background:#333;}
+
+[id="slide01"]:checked ~ .slidelist .slideitem {transform:translateX(0);animation:slide01 15s infinite;}
+[id="slide02"]:checked ~ .slidelist .slideitem {transform:translateX(-100%);animation:slide02 15s infinite;}
+[id="slide03"]:checked ~ .slidelist .slideitem {transform:translateX(-200%);animation:slide03 15s infinite;}
+[id="slide04"]:checked ~ .slidelist .slideitem {transform:translateX(-300%);animation:slide04 15s infinite;}
+
+@keyframes slide01 {
+   0% {left:0%;}
+   23% {left:0%;}
+   25% {left:-100%;}
+   48% {left:-100%;}
+   50% {left:-200%;}
+   73% {left:-200%;}
+   75% {left:-300%;}
+   98% {left:-300%;}
+   100% {left:0%;}
+}
+@keyframes slide02 {
+   0% {left:0%;}
+   23% {left:0%;}
+   25% {left:-100%;}
+   48% {left:-100%;}
+   50% {left:-200%;}
+   73% {left:-200%;}
+   75% {left:100%;}
+   98% {left:100%;}
+   100% {left:0%;}
+}
+@keyframes slide03 {
+   0% {left:0%;}
+   23% {left:0%;}
+   25% {left:-100%;}
+   48% {left:-100%;}
+   50% {left:200%;}
+   73% {left:200%;}
+   75% {left:100%;}
+   98% {left:100%;}
+   100% {left:0%;}
+}
+@keyframes slide04 {
+   0% {left:0%;}
+   23% {left:0%;}
+   25% {left:300%;}
+   48% {left:300%;}
+   50% {left:200%;}
+   73% {left:200%;}
+   75% {left:100%;}
+   98% {left:100%;}
+   100% {left:0%;}
+}/* 배너끝 */
+
+/* 여행이야기 */
+div.tripstory{
+	text-align: center;
+	font-family: 'ChosunSg';
+	font-size:30pt;
+	font-weight:600;
+	padding-top:40px;
+}
+div.tripstory img.icon{
+	width: 40px;
+	padding-bottom:7px;
+}
+
+div.trip-content{
+	width: 240px;
+	height: 290px;
+	border: 1px solid #afafaf;
+	border-radius: 10px;
+	position: relative;
+	left: 476px;
+	top: 30px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+div.tripstory img.trip-img{
+	width: 100%;
+	height: 170px;
+	border-top-left-radius : 10px;
+	border-top-right-radius : 10px;
+	cursor: pointer;	
+}
+div.trip-content > span.trip-name{
+	position: absolute;
+	top: 185px;
+	left: 15px;
+	font-size: 12pt;
+	font-weight: bold;
+	cursor: pointer;
+	font-family: 'ChosunSg';
+}
+
+div.trip-content > span.trip-explanation{
+	font-size: 10pt;
+	left: -65px;
+	position: relative;
+	top: 15px;
+	font-family: 'ChosunSg';
+}
+
+div.trip-content > span.trip-region{
+	font-size: 10pt;
+	color: #2bae66;
+	position: relative;
+	top:-6px;
+	cursor: pointer;
+	left: -50px;
+	font-family: 'ChosunSg';
+}
+img.regionicon {
+	width: 13px;
+	padding-bottom:6px;
+}
+/* 별점 css */
+.star-ratings {
+  color: #aaa9a9; 
+  position: relative;
+  unicode-bidi: bidi-override;
+  width: max-content;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: #afafaf;
+  float: left;
+  left: 165px;
+  top: 14px;
+  font-size: 12px;
+}
+.star-ratings-fill {
+  color: #fff58c;
+  padding: 0;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  -webkit-text-fill-color: gold;
+}
+.star-ratings-base {
+  z-index: 0;
+  padding: 0;
+}
+
+div.tripstory-banner{
+	position:absolute;
+	top:468px;
+	left:1000px;
+	width:440px;
+	cursor: pointer;
+}
+span.tripstory-subject{
+	font-family: 'MinSans-Black';
+	font-size:17pt;
+	position: absolute;
+	top: 270px;
+	left:20px;
+	cursor: pointer;
+}
+span.tripstory-subject > a > img {
+	position:absolute;
+	top:5px;
+	left:380px;
+	width:15px;
+	cursor: pointer;
+}
+span.tripstory-list {
+	text-align: left;
+    font-family: 'MinSans-Light';
+	font-size:14pt;
+	position: absolute;
+	top: 320px;
+	left:20px;
+	line-height:45px;
+	cursor: pointer;
+}
+span.tripstory-list a:hover{color:#2bae66}
+a.fontgreen{color:#2bae66;} /* 여행이야기 끝 */
+
+/* 새로오픈한테마파크 */
+div.newpark{
+	text-align: center;
+	font-family: 'ChosunSg';
+	font-size:30pt;
+	font-weight:600;
+	padding-top:80px;
+	width:970px;
+	position:relative;
+	left:480px;
+}
+div.newpark img.icon{
+	width: 40px;
+	padding-bottom:7px;
+}
+div.newpark img.trip-img{
+	width: 100%;
+	height: 170px;
+	border-top-left-radius : 10px;
+	border-top-right-radius : 10px;
+	cursor: pointer;	
+}
+div.newpark-content{
+	width: 280px;
+	height: 260px;
+	border: 1px solid #afafaf;
+	border-radius: 10px;
+	position: relative;
+	left:40px;
+	top: 30px;
+	margin-left: 10px;
+	margin-bottom: 30px;
+}
+div.newpark-content > span.trip-name{
+	position: absolute;
+	top: 185px;
+	left: 15px;
+	font-size: 12pt;
+	font-weight: bold;
+	cursor: pointer;
+	font-family: 'ChosunSg';
+}
+
+div.newpark-content > span.trip-region{
+	font-size: 10pt;
+	color: #2bae66;
+	position: relative;
+	top:20px;
+	cursor: pointer;
+	left: -95px;
+	font-family: 'ChosunSg';
+}
+
+/* 별점 css */
+.star-ratings2 {
+  color: #aaa9a9; 
+  position: relative;
+  unicode-bidi: bidi-override;
+  width: max-content;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: #afafaf;
+  float: left;
+  left: 210px;
+  top: 14px;
+  font-size: 12px;
+}
+.star-ratings-fill2 {
+  color: #fff58c;
+  padding: 0;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  -webkit-text-fill-color: gold;
+}
+.star-ratings-base2 {
+  z-index: 0;
+  padding: 0;
+}
+
+.bx-wrapper {position:relative;}
+.bx-controls-direction a {
+	position:absolute;
+	top: 50%;
+	transform:translateY(-50%);
+	display:block;
+	width:40px;
+	height:50px;
+	overflow:hidden;
+	color:#2bae66;
+}
+.bx-controls-direction .bx-prev{
+	left:0;
+}
+.bx-controls-direction .bx-next{
+	right:0;
+}
+.bx-controls-direction .bx-prev:before {
+	content:"\e93d";
+	font-family:'xeicon';
+}
+.bx-controls-direction .bx-next:before {
+	content:"\e940";
+	font-family:'xeicon';
+}
+
+.bx-pager div{
+	display:inline-block;
+	font-size:0;
+	color:transparent;
+}/* 테마파크끝 */
+
+/* 코스맵 */
+div.cosmap{
+	text-align: center;
+	font-family: 'ChosunSg';
+	font-size:30pt;
+	font-weight:600;
+	padding-top:80px;
+	width:970px;
+	position:relative;
+	left:480px;
+}
+table.cosmaptb{
+	position:relative;
+	right:60px;
+}
+table.cosmaptb td{
+	position:relative;
+	padding-left:100px;
+}
+span.smfont{
+	font-size:22px;
+	position:relative;
+	top:-20px;
+	font-weight:600;
+}
+
+div.cosimg{
+	position:relative;
+	top:10px;
+	width:400px;
+	height:400px;
+	cursor:pointer;
+}
+div.mapimg{
+	position:relative;
+	top:10px;
+	width:400px;
+	height:400px;
+	cursor:pointer;
+}/* 코스축제끝 */
+
+/* 축제 */
+div.nowfes{
+	text-align: center;
+	font-family: 'ChosunSg';
+	font-size:30pt;
+	font-weight:600;
+	padding-top:80px;
+	width:970px;
+	position:relative;
+	left:480px;
+	top:2350px;
+}
+
+div.nowfes img.icon{
+	width: 40px;
+	padding-bottom:7px;
+}
+div.nowfes img.trip-img{
+	width: 100%;
+	height: 200px;
+	border-top-left-radius : 10px;
+	border-top-right-radius : 10px;
+	cursor: pointer;	
+}
+div.nowfes-content{
+	width: 210px;
+	height: 290px;
+	border: 1px solid #afafaf;
+	border-radius: 10px;
+	position: relative;
+	left:40px;
+	top: 30px;
+	margin-left: 10px;
+	margin-bottom: 30px;
+}
+div.nowfes-content > span.trip-name{
+	position: absolute;
+	top: 220px;
+	left: 15px;
+	font-size: 12pt;
+	font-weight: bold;
+	cursor: pointer;
+	font-family: 'ChosunSg';
+}
+
+div.nowfes-content > span.trip-region{
+	font-size: 10pt;
+	color: #2bae66;
+	position: relative;
+	top:25px;
+	cursor: pointer;
+	left: -13px;
+	font-family: 'ChosunSg';
+}/* 축제끝 */
 
 /* 메인 끝 */
 
@@ -178,7 +621,7 @@ div.footer{
 	height: 550px;
  	background-color: #2bae66;
  	position: absolute; 
- 	top: 1800px; 
+ 	top: 2900px; 
 }
 
 div.footer img.logowhite{
