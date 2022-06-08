@@ -14,7 +14,7 @@
 <!-- CSS -->
 <link rel="stylesheet" href="${root }/css/main.css" />
 <link rel="stylesheet" href="${root }/css/myPageEdit.css" />
-<link rel="stylesheet" href="${root }/css/myScrap.css" />
+<link rel="stylesheet" href="${root }/css/myPageScrap.css" />
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <style type="text/css"> /* css파일에 적용했더니 안되고, 여기서 작성하면 적용되는 css들..ㅠㅠ */
