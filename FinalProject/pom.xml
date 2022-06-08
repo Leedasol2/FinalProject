@@ -55,11 +55,13 @@
 		    <scope>provided</scope> 
 		</dependency> 
 		<!-- https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/jstl --> 
-	      <dependency> 
-	          <groupId>jstl</groupId> 
-	          <artifactId>jstl</artifactId> 
-	          <version>1.2</version> 
-	      </dependency>
+		<dependency>
+		  <groupId>jstl</groupId>
+		  <artifactId>jstl</artifactId>
+		  <version>1.2</version>
+		  <scope>compile</scope>
+		</dependency>
+
 	      
 	      
 		<!-- DB(mysql) -->
