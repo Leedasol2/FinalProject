@@ -110,13 +110,14 @@ $(document).ready(function(){
         <div class="trip-content">
           <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
           <span class="trip-name">신평 양조장</span>
-          <span class="star-review">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-          </span><br>
+          <div class="star-ratings">
+		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
+		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+	      </div>
+	      <div class="star-ratings-base space-x-2 text-lg">
+		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+	      </div>
+        </div>
   		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
  		  <span class="trip-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
@@ -125,17 +126,18 @@ $(document).ready(function(){
         </div>
       </td>
       
-        <td>
+      <td>
         <div class="trip-content">
           <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
           <span class="trip-name">신평 양조장</span>
-          <span class="star-review">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-          </span><br>
+          <div class="star-ratings">
+		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
+		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+	      </div>
+	      <div class="star-ratings-base space-x-2 text-lg">
+		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+	      </div>
+        </div>
   		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
  		  <span class="trip-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
@@ -144,17 +146,18 @@ $(document).ready(function(){
         </div>
       </td>
       
-       <td>
+      <td>
         <div class="trip-content">
           <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
           <span class="trip-name">신평 양조장</span>
-          <span class="star-review">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-          </span><br>
+          <div class="star-ratings">
+		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
+		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+	      </div>
+	      <div class="star-ratings-base space-x-2 text-lg">
+		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+	      </div>
+        </div>
   		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
  		  <span class="trip-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
@@ -171,13 +174,14 @@ $(document).ready(function(){
         <div class="trip-content">
           <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
           <span class="trip-name">신평 양조장</span>
-          <span class="star-review">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-          </span><br>
+          <div class="star-ratings">
+		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
+		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+	      </div>
+	      <div class="star-ratings-base space-x-2 text-lg">
+		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+	      </div>
+        </div>
   		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
  		  <span class="trip-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
@@ -186,17 +190,18 @@ $(document).ready(function(){
         </div>
       </td>
       
-        <td>
+      <td>
         <div class="trip-content">
           <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
           <span class="trip-name">신평 양조장</span>
-          <span class="star-review">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-          </span><br>
+          <div class="star-ratings">
+		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
+		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+	      </div>
+	      <div class="star-ratings-base space-x-2 text-lg">
+		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+	      </div>
+        </div>
   		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
  		  <span class="trip-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
@@ -205,17 +210,18 @@ $(document).ready(function(){
         </div>
       </td>
       
-       <td>
+      <td>
         <div class="trip-content">
           <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
           <span class="trip-name">신평 양조장</span>
-          <span class="star-review">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-          </span><br>
+          <div class="star-ratings">
+		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
+		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+	      </div>
+	      <div class="star-ratings-base space-x-2 text-lg">
+		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+	      </div>
+        </div>
   		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
  		  <span class="trip-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
@@ -228,17 +234,38 @@ $(document).ready(function(){
     
     <tr>
     
+     <td>
+        <div class="trip-content">
+          <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
+          <span class="trip-name">신평 양조장</span>
+          <div class="star-ratings">
+		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
+		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+	      </div>
+	      <div class="star-ratings-base space-x-2 text-lg">
+		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+	      </div>
+        </div>
+  		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
+ 		  <span class="trip-region">
+ 		    <img src="${root}/image/asset/여행지 위치아이콘.png">
+ 		    충청남도 당진시
+ 		  </span>
+        </div>
+      </td>
+      
       <td>
         <div class="trip-content">
           <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
           <span class="trip-name">신평 양조장</span>
-          <span class="star-review">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-          </span><br>
+          <div class="star-ratings">
+		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
+		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+	      </div>
+	      <div class="star-ratings-base space-x-2 text-lg">
+		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+	      </div>
+        </div>
   		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
  		  <span class="trip-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
@@ -247,36 +274,18 @@ $(document).ready(function(){
         </div>
       </td>
       
-        <td>
+      <td>
         <div class="trip-content">
           <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
           <span class="trip-name">신평 양조장</span>
-          <span class="star-review">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-          </span><br>
-  		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
- 		  <span class="trip-region">
- 		    <img src="${root}/image/asset/여행지 위치아이콘.png">
- 		    충청남도 당진시
- 		  </span>
+          <div class="star-ratings">
+		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
+		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+	      </div>
+	      <div class="star-ratings-base space-x-2 text-lg">
+		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+	      </div>
         </div>
-      </td>
-      
-       <td>
-        <div class="trip-content">
-          <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
-          <span class="trip-name">신평 양조장</span>
-          <span class="star-review">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-            <img src="${root}/image/asset/star.png">
-          </span><br>
   		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
  		  <span class="trip-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
