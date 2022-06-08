@@ -51,42 +51,66 @@ div.home div.shareTripHome{
 } 
 
 div.tripHeader{
-	margin-right: 530px;
 	margin-bottom: 20px;
+	
 }
 div.tripHeader div{
 	font-size: 30px;
 	margin-bottom: 15px;
 	font-family: MinSans-Black;
 }
-div.tripHeader span{
+div.tripHeader>span{
 	font-size: 12px;
 	color: #212529;
 	font-family: MinSans-Light;
+	margin-bottom: 20px;
 }
 
 span.verLine{
       font-weight: bold;
 }
 
-div.shareTripHome .board span{
+div.tripHeader .board span{
 	margin: 0 150px 0 150px;
 	font-size: 16px;
 	color: #777;
 	cursor: pointer;
 }
-div.shareTripHome .board{
-	margin: 10px;
+div.tripHeader .board{
+	margin: 0;
 	font-family: MinSans-Light;
 }
+div.tripHeader .boardActive{
+	width: 880px;
+	height: 9px;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
 
-div.shareTripHome hr{
-	margin: 0;
+div.tripHeader .bestboardActive{
+	width: 120px;
+	margin-left: 140px;
+	visibility: hidden;
+	vertical-align: top;
+}
+div.tripHeader .bulboardActive{
+	width: 120px;
+	margin-left: 266px;
+	visibility: hidden;
+	vertical-align: top;
+}
+
+
+div.tripHeader hr{
+	margin: 0px;
 	width: 900px;
 	size: 1px;
 	color: gray;
 }
 
+div.tripHeader hr.hr1{
+	margin-top: 30px;
+}
 div.boardpreview table{
 	width: 900px;
 	margin-top: 50px;
