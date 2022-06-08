@@ -14,7 +14,10 @@
 <!-- CSS -->
 <link rel="stylesheet" href="${root }/css/main.css"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<style type="text/css"> /* css파일에 적용했더니 안되고, 여기서 작성하면 적용되는 css들..ㅠㅠ */
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style type="text/css">
 @font-face {
     font-family: 'MinSans-Medium';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
@@ -51,9 +54,10 @@ span.name{
 	left: 500px;
 	float: left;
 }
-span.edit{
+span.del, .update{
 	position: relative;
 	left: 1150px;
+	cursor: pointer;
 }
 span.date{
 	position: relative;
@@ -128,6 +132,38 @@ div.select span{
 }
 div.home{
 	height: 3500px;
+}
+
+/* 리뷰 동적 별점 */
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  justify-content: space-around;
+  padding: 0 0.2em;
+  text-align: center;
+  width: 5em;
+}
+ 
+.star-rating input {
+  display: none;
+}
+ 
+.star-rating label {
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2.3px;
+  -webkit-text-stroke-color: #2b2a29;
+  cursor: pointer;
+}
+ 
+.star-rating :checked ~ label {
+  -webkit-text-fill-color: gold;
+}
+ 
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  -webkit-text-fill-color: #fff58c;
 }
 
 /* 푸터 시작 */
@@ -217,6 +253,9 @@ $(function(){
 // 			//animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함 	        
 // 			$(".madi").animate({scrollTop : offset.top}, 400);
 // 		});
+
+	
+	
 });
 </script>
 	
@@ -329,7 +368,7 @@ $(function(){
 	<hr width="970px"><br>
 	
 	<div class="madi" id="sp4">
-	<b>여행자의 한마디</b><button class="btnadd">등록하기</button>
+	<b>여행자의 한마디</b><button class="btnadd" data-target="#myModal2" data-toggle="modal">등록하기</button>
 	</div>
 	<br><br><br>
 	<div>
@@ -342,11 +381,32 @@ $(function(){
 		<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 	</div>
 </div>
-	<span class="edit">삭제 | 수정</span>
+	<span class="del">삭제 |</span><span class="update">수정</span>
 	<span class="date">2022-06-07 15:53</span><br><br>
 	<span class="name">연인들의 천국, 외국인이면 더욱 서울의 야경을 멋지게 즐길 수 있습니다.20년만의 서울타워 방문이 아깝지 않았습니다.</span>
 	</div>
 	</div><!-- main 끝 -->
+	
+	<!-- 버튼 -->
+<!-- 		<td align="right"> -->
+<!-- 			<!-- 로그인중에서만 글쓰기 --> -->
+<%-- 			<c:if test="${sessionScope.loginok!=null }"> --%>
+<!-- 			<button type="button" class="btn btn-default" -->
+<!-- 			onclick="location.href='form'">글쓰기</button> -->
+<%-- 			</c:if> --%>
+<!-- 			<button type="button" class="btn btn-default" -->
+<%-- 			onclick="location.href='list?currentPage=${currentPage}'">목록</button> --%>
+			
+<!-- 	<!--  수정 삭제는 로그인중이고 세션의 아이디와 같은 아이디로 쓴글에만 수정 삭제되게 --> -->
+<%-- 		<c:if test="${sessionScope.loginok!=null and sessionScope.myid==dto.myid}"> --%>
+<!-- 		<button type="button" class="btn btn-default" -->
+<%-- 		onclick="location.href='updateform?num=${dto.num}&currentPage=${currentPage }'">수정</button> --%>
+<!-- 		<button type="button" class="btn btn-default" -->
+<%-- 		onclick="location.href='delete?num=${dto.num}&currentPage=${currentPage }'">삭제</button> --%>
+<%-- 		</c:if>	 --%>
+			
+<!-- 		</td> -->
+	
 
 	<!-- footer 시작 -->
 	<div class="footer">
@@ -365,5 +425,41 @@ $(function(){
 	</div><!-- footer 끝 -->
 	
 </div>
+
+<!-- 리뷰 작성 모달창 -->
+	<div class="modal fade myModal2" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">리뷰 작성</h4>
+        </div>
+        <div class="modal-body">
+        <span style="float: left;">여행지 명&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <div class="star-rating space-x-4 mx-auto">
+	<input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
+	<label for="5-stars" class="star pr-4">★</label>
+	<input type="radio" id="4-stars" name="rating" value="4" v-model="ratings"/>
+	<label for="4-stars" class="star">★</label>
+	<input type="radio" id="3-stars" name="rating" value="3" v-model="ratings"/>
+	<label for="3-stars" class="star">★</label>
+	<input type="radio" id="2-stars" name="rating" value="2" v-model="ratings"/>
+	<label for="2-stars" class="star">★</label>
+	<input type="radio" id="1-star" name="rating" value="1" v-model="ratings" />
+	<label for="1-star" class="star">★</label>
+		</div>     
+        <br>
+        <input type="text" id="ucontent" class="form-control">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default rbtn" data-dismiss="modal"
+          id="=modaladd">리뷰 등록</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 </body>
 </html>
