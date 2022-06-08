@@ -22,7 +22,7 @@ div.mypage-content{
 
 span.mypage-title{
 	font-weight: bold;
-    font-size: 25px;
+    font-size: 35px;
     color: #212529;
 }
 
@@ -135,7 +135,10 @@ button.btn-delete{
    	height: 70px;
     color: #33b679;
     border: 1px solid;
-    
-    
+}
+
+hr.title-line{
+	width: 970px;
+    margin-left: -20px;
 }
 
