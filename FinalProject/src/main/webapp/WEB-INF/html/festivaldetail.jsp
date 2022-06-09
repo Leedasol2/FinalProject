@@ -13,6 +13,7 @@
 
 <!-- CSS -->
 <link rel="stylesheet" href="${root }/css/main.css"/>
+<link rel="stylesheet" href="${root }/css/festivaldetail.css"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <style type="text/css"> /* css파일에 적용했더니 안되고, 여기서 작성하면 적용되는 css들..ㅠㅠ */
 @font-face {
@@ -30,123 +31,6 @@ input.search
 
 a { text-decoration:none !important;color: #495056; }
 a:hover { text-decoration:none !important;color: #495056; }
-.img1{
-	width: 500px;
-	height: 300px;
-	float: left;
-	margin-left: 500px;
-	padding-right: 50px;
-}
-.sogae, .map, .image, .date{
-	position: relative;
-	left: 500px;
-	top: 20px;
-	font-size: 1.7em;
-}
-span{
-	font-family: 'MinSans-Medium';
-}
-span.name{
-	position: relative;
-	left: 500px;
-	float: left;
-}
-span.edit{
-	position: relative;
-	left: 1150px;
-}
-span.date{
-	position: relative;
-	left: 1180px;
-	color: #afafaf;
-	font-size: 8pt;
-}
-img.map, img.image{
-	width: 600px;
-	height: 400px;
-	left: 650px;
-	top: 10px;
-}
-div.smimage > img{
-	position: relative;
-	left: 650px;
-	width: 117px;
-	height: 80px;
-	padding-right: 5px;
-	cursor: pointer;
-}
-div.subject{
-	font-family:  'MinSans-Light';
-	font-size: 1.7em;
-	margin-left: 500px;
-}
-div.select span{
-	font-size: 1.2em;
-	margin-right: 50px;
-	color: gray;
-	cursor: pointer;
-}
-.btnadd{
-	background-color: #2bae66;
-	color: white;
-	border-radius: 30px;
-	width: 130px;
-	height: 40px;
-	font-size: 10pt;
-	border: 0;
-	position: relative;
-	left: 600px;
-	font-family: 'MinSans-Medium';
-}
-div.home{
-	height: 2200px;
-}
-
-/* 푸터 시작 */
-div.footer{
-	width: 100%;
-	height: 550px;
- 	background-color: #2bae66;
- 	position: absolute; 
- 	top: 3000px; 
-}
-
-div.footer img.logowhite{
-	position:absolute;
-	top: 90px;
-	left: 480px;
-}
-div.footer img.footerdeco{
-	position:absolute;
-	top: 455px;
-	right:560px;
-}
-
-div.footer pre.pre1{
- 	background-color: #2bae66;
-	position:absolute;
-	top: 320px;
-	left: 465px;
- 	font-family: 'MinSans-Medium';
- 	font-weight: 300;
- 	font-size: 10pt;
- 	color: #ffffff;
- 	line-height:30px;
- 	border: none;
-}
-
-div.footer pre.pre2{
- 	background-color: #2bae66;
-	position:absolute;
-	top: 60px;
-	right: 550px;
- 	font-family: 'MinSans-Medium';
- 	font-weight: 400;
- 	font-size: 13pt;
- 	color: #ffffff;
- 	line-height:50px;
- 	border: none;
-}
 </style>
 
 <!-- js -->

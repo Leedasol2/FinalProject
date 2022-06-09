@@ -13,11 +13,11 @@
 
 <!-- CSS -->
 <link rel="stylesheet" href="${root }/css/main.css"/>
+<link rel="stylesheet" href="${root }/css/mytripdetail.css"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-<style type="text/css">
+<style type="text/css"> /* css파일에 적용했더니 안되고, 여기서 작성하면 적용되는 css들..ㅠㅠ */
 @font-face {
     font-family: 'MinSans-Medium';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
@@ -33,189 +33,9 @@ input.search
 
 a { text-decoration:none !important;color: #495056; }
 a:hover { text-decoration:none !important;color: #495056; }
-.img1{
-	width: 500px;
-	height: 300px;
-	float: left;
-	margin-left: 500px;
-	padding-right: 50px;
-}
-.sogae, .map, .image, .madi{
-	position: relative;
-	left: 500px;
-	top: 20px;
-	font-size: 1.7em;
-}
-span{
-	font-family: 'MinSans-Medium';
-}
-span.name{
-	position: relative;
-	left: 500px;
-	float: left;
-}
-span.del, .update{
-	position: relative;
-	left: 1150px;
-	cursor: pointer;
-}
-span.date{
-	position: relative;
-	left: 1180px;
-	color: #afafaf;
-	font-size: 8pt;
-}
-img.map, img.image{
-	width: 600px;
-	height: 400px;
-	left: 650px;
-	top: 10px;
-}
-div.smimage > img{
-	position: relative;
-	left: 650px;
-	width: 202px;
-	height: 150px;
-	padding-right: 15px;
-	cursor: pointer;
-}
-div.subject{
-	font-family:  'MinSans-Light';
-	font-size: 1.7em;
-	margin-left: 500px;
-}
-div.select span{
-	font-size: 1.2em;
-	margin-right: 50px;
-	color: gray;
-	cursor: pointer;
-}
-.btnadd{
-	background-color: #2bae66;
-	color: white;
-	border-radius: 30px;
-	width: 130px;
-	height: 40px;
-	font-size: 10pt;
-	border: 0;
-	position: relative;
-	left: 600px;
-	font-family: 'MinSans-Medium';
-}
-
-/* 별점 css */
-.star-ratings {
-  color: #aaa9a9; 
-  position: relative;
-  unicode-bidi: bidi-override;
-  width: max-content;
-  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1.3px;
-  -webkit-text-stroke-color: #2b2a29;
-  float: left;
-  left: 550px;
-}
-.star-ratings-fill {
-  color: #fff58c;
-  padding: 0;
-  position: absolute;
-  z-index: 1;
-  display: flex;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  -webkit-text-fill-color: gold;
-}
-.star-ratings-base {
-  z-index: 0;
-  padding: 0;
-}
-div.home{
-	height: 3500px;
-}
-
-/* 리뷰 동적 별점 */
-.star-rating {
-  display: flex;
-  flex-direction: row-reverse;
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  justify-content: space-around;
-  padding: 0 0.2em;
-  text-align: center;
-  width: 5em;
-}
- 
-.star-rating input {
-  display: none;
-}
- 
-.star-rating label {
-  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 2.3px;
-  -webkit-text-stroke-color: #2b2a29;
-  cursor: pointer;
-}
- 
-.star-rating :checked ~ label {
-  -webkit-text-fill-color: gold;
-}
- 
-.star-rating label:hover,
-.star-rating label:hover ~ label {
-  -webkit-text-fill-color: #fff58c;
-}
-
-/* 푸터 시작 */
-div.footer{
-	width: 100%;
-	height: 550px;
- 	background-color: #2bae66;
- 	position: absolute; 
- 	top: 3300px; 
-}
-
-div.footer img.logowhite{
-	position:absolute;
-	top: 90px;
-	left: 480px;
-}
-div.footer img.footerdeco{
-	position:absolute;
-	top: 455px;
-	right:560px;
-}
-
-div.footer pre.pre1{
- 	background-color: #2bae66;
-	position:absolute;
-	top: 320px;
-	left: 465px;
- 	font-family: 'MinSans-Medium';
- 	font-weight: 300;
- 	font-size: 10pt;
- 	color: #ffffff;
- 	line-height:30px;
- 	border: none;
-}
-
-div.footer pre.pre2{
- 	background-color: #2bae66;
-	position:absolute;
-	top: 60px;
-	right: 550px;
- 	font-family: 'MinSans-Medium';
- 	font-weight: 400;
- 	font-size: 13pt;
- 	color: #ffffff;
- 	line-height:50px;
- 	border: none;
-}
 </style>
-
 <!-- js -->
 <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-
 
 </head>
 <body>
@@ -303,6 +123,7 @@ $(function(){
 	<!-- main 시작 -->
 	<div class="main">
 		<div class="subject">
+		<br>
 		여행을 떠나요 <img alt="" src="${root }/photo/자동차아이콘.png" width="50px;">
 		</div>
 	<hr width="970px"><br><br>
@@ -387,27 +208,6 @@ $(function(){
 	</div>
 	</div><!-- main 끝 -->
 	
-	<!-- 버튼 -->
-<!-- 		<td align="right"> -->
-<!-- 			<!-- 로그인중에서만 글쓰기 --> -->
-<%-- 			<c:if test="${sessionScope.loginok!=null }"> --%>
-<!-- 			<button type="button" class="btn btn-default" -->
-<!-- 			onclick="location.href='form'">글쓰기</button> -->
-<%-- 			</c:if> --%>
-<!-- 			<button type="button" class="btn btn-default" -->
-<%-- 			onclick="location.href='list?currentPage=${currentPage}'">목록</button> --%>
-			
-<!-- 	<!--  수정 삭제는 로그인중이고 세션의 아이디와 같은 아이디로 쓴글에만 수정 삭제되게 --> -->
-<%-- 		<c:if test="${sessionScope.loginok!=null and sessionScope.myid==dto.myid}"> --%>
-<!-- 		<button type="button" class="btn btn-default" -->
-<%-- 		onclick="location.href='updateform?num=${dto.num}&currentPage=${currentPage }'">수정</button> --%>
-<!-- 		<button type="button" class="btn btn-default" -->
-<%-- 		onclick="location.href='delete?num=${dto.num}&currentPage=${currentPage }'">삭제</button> --%>
-<%-- 		</c:if>	 --%>
-			
-<!-- 		</td> -->
-	
-
 	<!-- footer 시작 -->
 	<div class="footer">
 		<img class="logowhite" src="${root }/image/asset/로고white.png">
@@ -451,11 +251,11 @@ $(function(){
 	<label for="1-star" class="star">★</label>
 		</div>     
         <br>
-        <input type="text" id="ucontent" class="form-control">
+        <input type="text" id="ucontent" class="form-control" placeholder="별점과 리뷰를 작성해주세요!">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default rbtn" data-dismiss="modal"
-          id="=modaladd">리뷰 등록</button>
+          id="=modaladd">작성</button>
         </div>
       </div>
     </div>
