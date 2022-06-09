@@ -71,7 +71,7 @@ span.verLine{
 }
 
 div.tripHeader .board span{
-	margin: 0 150px 0 150px;
+	margin: 0 180px 0 180px;
 	font-size: 16px;
 	color: #777;
 	cursor: pointer;
@@ -89,13 +89,13 @@ div.tripHeader .boardActive{
 
 div.tripHeader .bestboardActive{
 	width: 120px;
-	margin-left: 140px;
+	margin-left: 160px;
 	visibility: hidden;
 	vertical-align: top;
 }
 div.tripHeader .bulboardActive{
 	width: 120px;
-	margin-left: 266px;
+	margin-left: 330px;
 	visibility: hidden;
 	vertical-align: top;
 }
