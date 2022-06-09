@@ -64,7 +64,7 @@ input.search{
     font-family: 'ChosunSg';
     font-weight: 580;
     font-size: 13pt;
-    font-color: #21529;
+    color: #212529;
     border: none;
     outline: none;
     text-align: center;
@@ -118,7 +118,6 @@ img.submenuicon2{
 	left: 42px;
 }
 
-ul.myMenu {}
 ul.myMenu > li { 
 	display:inline-block; 
 	width:160px; 
@@ -288,7 +287,7 @@ div.tripstory img.icon{
 	padding-bottom:7px;
 }
 
-div.trip-content{
+div.tripstory-content{
 	width: 240px;
 	height: 290px;
 	border: 1px solid #afafaf;
@@ -299,14 +298,14 @@ div.trip-content{
 	margin-left: 10px;
 	margin-bottom: 10px;
 }
-div.tripstory img.trip-img{
+div.tripstory img.tripstory-img{
 	width: 100%;
 	height: 170px;
 	border-top-left-radius : 10px;
 	border-top-right-radius : 10px;
 	cursor: pointer;	
 }
-div.trip-content > span.trip-name{
+div.tripstory-content > span.tripstory-name{
 	position: absolute;
 	top: 185px;
 	left: 15px;
@@ -316,7 +315,7 @@ div.trip-content > span.trip-name{
 	font-family: 'ChosunSg';
 }
 
-div.trip-content > span.trip-explanation{
+div.tripstory-content > span.tripstory-explanation{
 	font-size: 10pt;
 	left: -65px;
 	position: relative;
@@ -324,7 +323,7 @@ div.trip-content > span.trip-explanation{
 	font-family: 'ChosunSg';
 }
 
-div.trip-content > span.trip-region{
+div.tripstory-content > span.tripstory-region{
 	font-size: 10pt;
 	color: #2bae66;
 	position: relative;
@@ -338,7 +337,7 @@ img.regionicon {
 	padding-bottom:6px;
 }
 /* 별점 css */
-.star-ratings {
+.tripstory-star-ratings {
   color: #aaa9a9; 
   position: relative;
   unicode-bidi: bidi-override;
@@ -351,7 +350,7 @@ img.regionicon {
   top: 14px;
   font-size: 12px;
 }
-.star-ratings-fill {
+.tripstory-star-ratings-fill {
   color: #fff58c;
   padding: 0;
   position: absolute;
@@ -362,7 +361,7 @@ img.regionicon {
   overflow: hidden;
   -webkit-text-fill-color: gold;
 }
-.star-ratings-base {
+.tripstory-star-ratings-base {
   z-index: 0;
   padding: 0;
 }
@@ -417,7 +416,7 @@ div.newpark img.icon{
 	width: 40px;
 	padding-bottom:7px;
 }
-div.newpark img.trip-img{
+div.newpark img.newpark-trip-img{
 	width: 100%;
 	height: 170px;
 	border-top-left-radius : 10px;
@@ -435,7 +434,7 @@ div.newpark-content{
 	margin-left: 10px;
 	margin-bottom: 30px;
 }
-div.newpark-content > span.trip-name{
+div.newpark-content > span.newpark-trip-name{
 	position: absolute;
 	top: 185px;
 	left: 15px;
@@ -445,7 +444,7 @@ div.newpark-content > span.trip-name{
 	font-family: 'ChosunSg';
 }
 
-div.newpark-content > span.trip-region{
+div.newpark-content > span.newpark-trip-region{
 	font-size: 10pt;
 	color: #2bae66;
 	position: relative;
@@ -456,7 +455,7 @@ div.newpark-content > span.trip-region{
 }
 
 /* 별점 css */
-.star-ratings2 {
+.newpark-star-ratings2 {
   color: #aaa9a9; 
   position: relative;
   unicode-bidi: bidi-override;
@@ -469,7 +468,7 @@ div.newpark-content > span.trip-region{
   top: 14px;
   font-size: 12px;
 }
-.star-ratings-fill2 {
+.newpark-star-ratings-fill2 {
   color: #fff58c;
   padding: 0;
   position: absolute;
@@ -480,7 +479,7 @@ div.newpark-content > span.trip-region{
   overflow: hidden;
   -webkit-text-fill-color: gold;
 }
-.star-ratings-base2 {
+.newpark-star-ratings-base2 {
   z-index: 0;
   padding: 0;
 }
@@ -575,7 +574,7 @@ div.nowfes img.icon{
 	width: 40px;
 	padding-bottom:7px;
 }
-div.nowfes img.trip-img{
+div.nowfes img.nowfes-trip-img{
 	width: 100%;
 	height: 200px;
 	border-top-left-radius : 10px;
@@ -593,7 +592,7 @@ div.nowfes-content{
 	margin-left: 10px;
 	margin-bottom: 30px;
 }
-div.nowfes-content > span.trip-name{
+div.nowfes-content > span.nowfes-trip-name{
 	position: absolute;
 	top: 220px;
 	left: 15px;
@@ -603,7 +602,7 @@ div.nowfes-content > span.trip-name{
 	font-family: 'ChosunSg';
 }
 
-div.nowfes-content > span.trip-region{
+div.nowfes-content > span.nowfes-trip-region{
 	font-size: 10pt;
 	color: #2bae66;
 	position: relative;
@@ -659,4 +658,4 @@ div.footer pre.pre2{
  	color: #ffffff;
  	line-height:50px;
  	border: none;
-}/* 푸터 끝 */
+} /* 푸터 끝 */
