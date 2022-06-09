@@ -1,0 +1,189 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'MinSans-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MinSans-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+table.boardDetailPage{
+	width: 900px;
+	position: absolute;
+    top: 241px;
+    left: 523px;
+}
+
+span.boardtitle{
+	font-size: 2.2em;
+    font-weight: bold;
+    font-family: 'MinSans-Medium';
+}
+
+span.boardwriter{
+	font-weight: 550;
+}
+
+ span.likes{
+	position: relative;
+    right: -5px;
+    top: -41px;
+    float: right;
+}
+
+span.likes-img{
+	cursor: pointer;
+	float: right;
+    position: relative;
+    top: -50px;
+    right: 38px;
+}
+
+img.chuimage{
+	width: 23px;
+}
+
+ span.board-upd{
+    font-weight: 550;
+    position: relative;
+    right: 47px;
+    top: -38px;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+}
+
+span.board-del{
+	font-weight: 550;
+    position: relative;
+    right: -30px;
+    top: -38px;
+    font-size: 16px;
+    cursor: pointer;	
+    float: right;
+}
+
+span.comment-del{
+	position: relative;
+    right: 142px;
+    top: -2px;
+    font-size: 14px;
+    cursor: pointer;
+    float: right;
+}
+
+ span.comment-upd{
+	position: relative;
+    right: 75px;
+    top: -2px;
+    font-size: 14px;
+    cursor: pointer;
+    float: right;
+}
+
+hr.underline{
+	width: 895px;
+}
+
+ pre.content-body{
+	display: block;
+    padding: 16px 9.5px 9.5px 9.5px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    border: 0px;
+    width: 900px;
+    height: 700px;
+    background-color: #fff;
+}
+
+
+
+span.comment-count{
+	font-family: 'MinSans-Medium';
+	color: #afafaf;
+}
+
+ span.comment-head{
+	padding-left: 17px;
+    font-size: 1.3em;
+}
+
+ span.comment-day{
+	float: right;
+	left: 704px;
+    position: absolute;
+    font-size: 0.8em;
+    color: #afafaf;
+}
+
+ span.comment-content{
+	position: relative;
+    top: 11px;
+}
+
+ button.btnreply{
+	margin-top: 27px;
+	border: 1px solid black;
+    background-color: #fff;
+}
+
+td.comment{
+	position: absolute;
+    left: 49px;
+    top: 976px;
+    width: 800px;
+}
+
+span.boardowner-id{
+    margin-left: 55px;
+}
+
+span.boardowner-writer{
+	color: red;
+	font-size: 0.8em;
+}
+
+span.boardowner-content{
+	margin-left: 55px;
+	position: absolute;
+    top: 330px;
+}
+
+span.comment-writer{
+	margin-left: 5px;
+}
+
+button.comment-insert{
+	float: right;
+	border: 1px solid black;
+    background-color: #fff;
+}
+
+input.commentbox{
+    width: 801px;
+    height: 82px;
+    margin-top: 5px;
+}
+
+button.listbtn{
+    float: right;
+    border: 1px solid black;
+    background-color: #fff;
+    width: 69px;
+    height: 38px;
+}
+
+td.list{
+	position: absolute;
+    top: 1485px;
+}

@@ -1,0 +1,193 @@
+.img1{
+	width: 500px;
+	height: 300px;
+	float: left;
+	margin-left: 500px;
+	padding-right: 50px;
+}
+.sogae, .map, .image, .madi{
+	position: relative;
+	left: 500px;
+	top: 20px;
+	font-size: 1.7em;
+}
+span{
+	font-family: 'MinSans-Medium';
+}
+span.name{
+	position: relative;
+	left: 500px;
+	float: left;
+}
+span.del, .update{
+	position: relative;
+	left: 1150px;
+	cursor: pointer;
+}
+span.date{
+	position: relative;
+	left: 1180px;
+	color: #afafaf;
+	font-size: 8pt;
+}
+.kakaomap, img.image{
+	width: 600px;
+	height: 400px;
+	left: 650px;
+	top: 10px;
+}
+div.smimage > img{
+	position: relative;
+	left: 650px;
+	width: 202px;
+	height: 150px;
+	padding-right: 15px;
+	cursor: pointer;
+}
+div.subject{
+	font-family:  'MinSans-Medium';
+	font-size: 1.7em;
+	margin-left: 500px;
+}
+div.select span{
+	font-size: 1.2em;
+	margin-right: 50px;
+	color: gray;
+	cursor: pointer;
+}
+.btnadd{
+	background-color: #2bae66;
+	color: white;
+	border-radius: 30px;
+	width: 130px;
+	height: 40px;
+	font-size: 10pt;
+	border: 0;
+	position: relative;
+	left: 600px;
+	font-family: 'MinSans-Medium';
+}
+
+/* modal 부분 */
+.modal-header{background-color: #2bae66;}
+.rbtn{
+	background-color: #2bae66;
+	color: white;
+	border-radius: 15px;
+	width: 80px;
+	height: 40px;
+	font-size: 10pt;
+	border: 0;
+	font-family: 'MinSans-Medium';
+}
+#ucontent{height: 180px;}
+
+
+/* 별점 css */
+.star-ratings {
+  color: #aaa9a9; 
+  position: relative;
+  unicode-bidi: bidi-override;
+  width: max-content;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1.3px;
+  -webkit-text-stroke-color: #2b2a29;
+  float: left;
+  left: 550px;
+}
+.star-ratings-fill {
+  color: #fff58c;
+  padding: 0;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  -webkit-text-fill-color: gold;
+}
+.star-ratings-base {
+  z-index: 0;
+  padding: 0;
+}
+div.home{
+	height: 3500px;
+}
+
+/* 리뷰 동적 별점 */
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  justify-content: space-around;
+  padding: 0 0.2em;
+  text-align: center;
+  width: 5em;
+}
+ 
+.star-rating input {
+  display: none;
+}
+ 
+.star-rating label {
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2.3px;
+  -webkit-text-stroke-color: #2b2a29;
+  cursor: pointer;
+}
+ 
+.star-rating :checked ~ label {
+  -webkit-text-fill-color: gold;
+}
+ 
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  -webkit-text-fill-color: #fff58c;
+}
+
+/* 푸터 시작 */
+div.footer{
+	width: 100%;
+	height: 550px;
+ 	background-color: #2bae66;
+ 	position: absolute; 
+ 	top: 3300px; 
+}
+
+div.footer img.logowhite{
+	position:absolute;
+	top: 90px;
+	left: 480px;
+}
+div.footer img.footerdeco{
+	position:absolute;
+	top: 455px;
+	right:560px;
+}
+
+div.footer pre.pre1{
+ 	background-color: #2bae66;
+	position:absolute;
+	top: 320px;
+	left: 465px;
+ 	font-family: 'MinSans-Medium';
+ 	font-weight: 300;
+ 	font-size: 10pt;
+ 	color: #ffffff;
+ 	line-height:30px;
+ 	border: none;
+}
+
+div.footer pre.pre2{
+ 	background-color: #2bae66;
+	position:absolute;
+	top: 60px;
+	right: 550px;
+ 	font-family: 'MinSans-Medium';
+ 	font-weight: 400;
+ 	font-size: 13pt;
+ 	color: #ffffff;
+ 	line-height:50px;
+ 	border: none;
+}
