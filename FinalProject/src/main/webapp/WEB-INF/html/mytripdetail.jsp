@@ -13,7 +13,10 @@
 
 <!-- CSS -->
 <link rel="stylesheet" href="${root }/css/main.css"/>
+<link rel="stylesheet" href="${root }/css/mytripdetail.css"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <style type="text/css"> /* css파일에 적용했더니 안되고, 여기서 작성하면 적용되는 css들..ㅠㅠ */
 @font-face {
     font-family: 'MinSans-Medium';
@@ -30,156 +33,9 @@ input.search
 
 a { text-decoration:none !important;color: #495056; }
 a:hover { text-decoration:none !important;color: #495056; }
-.img1{
-	width: 500px;
-	height: 300px;
-	float: left;
-	margin-left: 500px;
-	padding-right: 50px;
-}
-.sogae, .map, .image, .madi{
-	position: relative;
-	left: 500px;
-	top: 20px;
-	font-size: 1.7em;
-}
-span{
-	font-family: 'MinSans-Medium';
-}
-span.name{
-	position: relative;
-	left: 500px;
-	float: left;
-}
-span.edit{
-	position: relative;
-	left: 1150px;
-}
-span.date{
-	position: relative;
-	left: 1180px;
-	color: #afafaf;
-	font-size: 8pt;
-}
-img.map, img.image{
-	width: 600px;
-	height: 400px;
-	left: 650px;
-	top: 10px;
-}
-div.smimage > img{
-	position: relative;
-	left: 650px;
-	width: 202px;
-	height: 150px;
-	padding-right: 15px;
-	cursor: pointer;
-}
-div.subject{
-	font-family:  'MinSans-Light';
-	font-size: 1.7em;
-	margin-left: 500px;
-}
-div.select span{
-	font-size: 1.2em;
-	margin-right: 50px;
-	color: gray;
-	cursor: pointer;
-}
-.btnadd{
-	background-color: #2bae66;
-	color: white;
-	border-radius: 30px;
-	width: 130px;
-	height: 40px;
-	font-size: 10pt;
-	border: 0;
-	position: relative;
-	left: 600px;
-	font-family: 'MinSans-Medium';
-}
-
-/* 별점 css */
-.star-ratings {
-  color: #aaa9a9; 
-  position: relative;
-  unicode-bidi: bidi-override;
-  width: max-content;
-  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1.3px;
-  -webkit-text-stroke-color: #2b2a29;
-  float: left;
-  left: 550px;
-}
-.star-ratings-fill {
-  color: #fff58c;
-  padding: 0;
-  position: absolute;
-  z-index: 1;
-  display: flex;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  -webkit-text-fill-color: gold;
-}
-.star-ratings-base {
-  z-index: 0;
-  padding: 0;
-}
-div.home{
-	height: 3500px;
-}
-
-/* 푸터 시작 */
-div.footer{
-	width: 100%;
-	height: 550px;
- 	background-color: #2bae66;
- 	position: absolute; 
- 	top: 3300px; 
-}
-
-div.footer img.logowhite{
-	position:absolute;
-	top: 90px;
-	left: 480px;
-}
-div.footer img.footerdeco{
-	position:absolute;
-	top: 455px;
-	right:560px;
-}
-
-div.footer pre.pre1{
- 	background-color: #2bae66;
-	position:absolute;
-	top: 320px;
-	left: 465px;
- 	font-family: 'MinSans-Medium';
- 	font-weight: 300;
- 	font-size: 10pt;
- 	color: #ffffff;
- 	line-height:30px;
- 	border: none;
-}
-
-div.footer pre.pre2{
- 	background-color: #2bae66;
-	position:absolute;
-	top: 60px;
-	right: 550px;
- 	font-family: 'MinSans-Medium';
- 	font-weight: 400;
- 	font-size: 13pt;
- 	color: #ffffff;
- 	line-height:50px;
- 	border: none;
-}
 </style>
-
 <!-- js -->
 <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-
 
 </head>
 <body>
@@ -217,6 +73,9 @@ $(function(){
 // 			//animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함 	        
 // 			$(".madi").animate({scrollTop : offset.top}, 400);
 // 		});
+
+	
+	
 });
 </script>
 	
@@ -264,6 +123,7 @@ $(function(){
 	<!-- main 시작 -->
 	<div class="main">
 		<div class="subject">
+		<br>
 		여행을 떠나요 <img alt="" src="${root }/photo/자동차아이콘.png" width="50px;">
 		</div>
 	<hr width="970px"><br><br>
@@ -277,7 +137,7 @@ $(function(){
 	<br><br><br><br><br>
 	<img alt="" src="${root }/photo/위치아이콘.png" width="25px;"><span> 서울특별시 용산구 남산공원길 126</span>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<img alt="" src="${root }/photo/스크랩.png" width="20px;"><span> 스크랩 하기</span>
+	<img alt="" src="${root }/photo/스크랩안함.png" width="20px;"><span> 스크랩 하기</span>
 	</div>
 	<br><br><br><br><br><br>
 	<hr width="970px">
@@ -311,7 +171,19 @@ $(function(){
 	<b>지도</b>
 	</div>
 	<br><br>
-	<img alt="" src="${root }/photo/map1.png" class="map">
+	 
+	 <!-- KakaoMap -->
+	<div id="map" class="kakaomap"></div>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8148de36e2b8d4215e24f39fffbd1a62"></script> 
+	<script>
+		var container = document.getElementById('map');
+		var options = {
+			center: new kakao.maps.LatLng(37.551399, 126.988259), <!--위도 / 경도 -->
+			level: 4
+		};
+		var map = new kakao.maps.Map(container, options);
+	</script>
+	
 	<br><br><br><br>
 	<hr width="970px"><br>
 	
@@ -329,7 +201,7 @@ $(function(){
 	<hr width="970px"><br>
 	
 	<div class="madi" id="sp4">
-	<b>여행자의 한마디</b><button class="btnadd">등록하기</button>
+	<b>여행자의 한마디</b><button class="btnadd" data-target="#myModal2" data-toggle="modal">등록하기</button>
 	</div>
 	<br><br><br>
 	<div>
@@ -342,12 +214,12 @@ $(function(){
 		<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 	</div>
 </div>
-	<span class="edit">삭제 | 수정</span>
+	<span class="del">삭제 |</span><span class="update">수정</span>
 	<span class="date">2022-06-07 15:53</span><br><br>
 	<span class="name">연인들의 천국, 외국인이면 더욱 서울의 야경을 멋지게 즐길 수 있습니다.20년만의 서울타워 방문이 아깝지 않았습니다.</span>
 	</div>
 	</div><!-- main 끝 -->
-
+	
 	<!-- footer 시작 -->
 	<div class="footer">
 		<img class="logowhite" src="${root }/image/asset/로고white.png">
@@ -365,5 +237,41 @@ $(function(){
 	</div><!-- footer 끝 -->
 	
 </div>
+
+<!-- 리뷰 작성 모달창 -->
+	<div class="modal fade myModal2" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <span style="color: white;"><b>2run trip&nbsp;&nbsp;</b></span><span><b>  리뷰 작성</b></span>
+        </div>
+        <div class="modal-body">
+        <span style="float: left;"><b>여행지 명&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+        <div class="star-rating space-x-4 mx-auto">
+	<input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
+	<label for="5-stars" class="star pr-4">★</label>
+	<input type="radio" id="4-stars" name="rating" value="4" v-model="ratings"/>
+	<label for="4-stars" class="star">★</label>
+	<input type="radio" id="3-stars" name="rating" value="3" v-model="ratings"/>
+	<label for="3-stars" class="star">★</label>
+	<input type="radio" id="2-stars" name="rating" value="2" v-model="ratings"/>
+	<label for="2-stars" class="star">★</label>
+	<input type="radio" id="1-star" name="rating" value="1" v-model="ratings" />
+	<label for="1-star" class="star">★</label>
+		</div>     
+        <br>
+        <textarea id="ucontent" class="form-control" placeholder="별점과 리뷰를 작성해주세요!"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="rbtn" data-dismiss="modal"
+          id="=modaladd">작성</button> 
+        </div>
+      </div>
+    </div>
+  </div>
+  
 </body>
 </html>

@@ -23,19 +23,7 @@
     font-style: normal;
 }
 
-
-
-input.search
-{
-	background-image: url("${root }/image/asset/검색아이콘.png");
-	background-repeat: no-repeat;
-	background-position: 25px center;
-}
-
-a { text-decoration:none !important;color: #495056; }
-a:hover { text-decoration:none !important;color: #495056; }
-
-
+/* 본문 div설정 */
 div.home div.shareTripHome{
 
   align-items: center;
@@ -50,6 +38,7 @@ div.home div.shareTripHome{
   font-family: MinSans-Medium;
 } 
 
+/* 여행공유 헤더시작 */
 div.tripHeader{
 	margin-bottom: 20px;
 	
@@ -70,12 +59,18 @@ span.verLine{
       font-weight: bold;
 }
 
+div.tripHeader span.tripHeadMsg{
+	font-size: 11pt;
+	color: #212529;
+}
+
 div.tripHeader .board span{
-	margin: 0 150px 0 150px;
+	margin: 0 180px 0 180px;
 	font-size: 16px;
 	color: #777;
 	cursor: pointer;
 }
+
 div.tripHeader .board{
 	margin: 0;
 	font-family: MinSans-Light;
@@ -89,17 +84,26 @@ div.tripHeader .boardActive{
 
 div.tripHeader .bestboardActive{
 	width: 120px;
-	margin-left: 140px;
-	visibility: hidden;
+	margin-left: 160px;
 	vertical-align: top;
 }
 div.tripHeader .bulboardActive{
 	width: 120px;
-	margin-left: 266px;
-	visibility: hidden;
+	margin-left: 470px;
 	vertical-align: top;
 }
-
+div.tripHeader .bestboardActive{
+	visibility: visible;
+}
+div.tripHeader .bulboardActive{
+	visibility: visible;
+}
+div.tripHeader .bestboardNoActive{
+	visibility: hidden;
+}
+div.tripHeader .bulboardNoActive{
+	visibility: hidden;
+}
 
 div.tripHeader hr{
 	margin: 0px;
@@ -111,6 +115,10 @@ div.tripHeader hr{
 div.tripHeader hr.hr1{
 	margin-top: 30px;
 }
+/* 여행공유 헤더 끝 */
+
+
+/* 본문 시작 */
 div.boardpreview table{
 	width: 900px;
 	margin-top: 50px;

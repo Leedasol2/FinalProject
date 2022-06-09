@@ -13,7 +13,7 @@
 
 <!-- CSS -->
 <link rel="stylesheet" href="${root }/css/main.css"/>
-<link rel="stylesheet" href="${root }/css/themaTrip.css"/>
+<link rel="stylesheet" href="${root }/css/themePark.css? after"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <style type="text/css"> /* css파일에 적용했더니 안되고, 여기서 작성하면 적용되는 css들..ㅠㅠ */
 input.search
@@ -33,33 +33,41 @@ a:hover { text-decoration:none !important;color: #495056; }
 <script type="text/javascript">
 
 $(function(){
-	
+
 	//지역 선택시 글씨색 변경
-	$("a.sea").click(function(){
+	$("a.seoul").click(function(){
 		$(this).css("color","#2bae66");
 		$(this).siblings().css("color","gray");
 	});
-	$("a.mountain-valley").click(function(){
+	$("a.incheon-Gyeonggi").click(function(){
 		$(this).css("color","#2bae66");
 		$(this).siblings().css("color","gray");
 	});
-	$("a.citytour").click(function(){
+	$("a.daejeon-chungcheong").click(function(){
 		$(this).css("color","#2bae66");
 		$(this).siblings().css("color","gray");
 	});
-	$("a.rural-experience").click(function(){
+	$("a.daegu").click(function(){
 		$(this).css("color","#2bae66");
 		$(this).siblings().css("color","gray");
 	});
-	$("a.unique-experience").click(function(){
+	$("a.jeolla").click(function(){
 		$(this).css("color","#2bae66");
 		$(this).siblings().css("color","gray");
 	});
-	$("a.history").click(function(){
+	$("a.gyeongsang").click(function(){
 		$(this).css("color","#2bae66");
 		$(this).siblings().css("color","gray");
 	});
-	$("a.other").click(function(){
+	$("a.busan").click(function(){
+		$(this).css("color","#2bae66");
+		$(this).siblings().css("color","gray");
+	});
+	$("a.gangwon").click(function(){
+		$(this).css("color","#2bae66");
+		$(this).siblings().css("color","gray");
+	});
+	$("a.jeju").click(function(){
 		$(this).css("color","#2bae66");
 		$(this).siblings().css("color","gray");
 	});
@@ -68,19 +76,19 @@ $(function(){
 </script>
 </head>
 <body>
-
+ 
 <script type="text/javascript">
 
 $(document).ready(function(){
-	  var currentPosition = parseInt($(".trip-category").css("top"));
+	  var currentPosition = parseInt($(".theme-category").css("top"));
 	  $(window).scroll(function() {
 	    var position = $(window).scrollTop(); 
-	    $(".trip-category").stop().animate({"top":position+currentPosition+"px"},1000);
+	    $(".theme-category").stop().animate({"top":position+currentPosition+"px"},1000);
 	  });
 	});
 
 </script> 
-
+ 
 <!-- 헤더 시작 -->
 <div class="header">
 	  <div class="headercontent">
@@ -122,48 +130,59 @@ $(document).ready(function(){
 <!-- 헤더 끝 -->
 
 <!-- 본문 시작 -->
-<div class="themaTripText">
+<div class="theme-main">
 
-<div class="trip-category">
-  <a href="#1" class="best-category tripcategory">베스트 여행지</a><br><br><br>
-  <a href="#2" class="region-category tripcategory">지역별 여행지</a><br><br><br>
-  <a href="#3" class="themea-category tripcategory">테마별 여행지</a>
+<div class="theme-category">
+  <a href="#1" class="themepark-category themecategory">테마파크</a><br><br><br>
+  <a href="#2" class="festival-category themecategory">축제</a><br><br><br>
 </div>
 
 <div class="category-title">
-  <span class="main-title">테마별 여행지</span>
-  <span class="sub-title">여행을 떠나요</span>
-  <span class="title-content">자연부터 농촌체험,이색체험까지!<br>테마별 여행지를 사용자 리뷰와 함께 만나보세요</span>
+  <span class="main-title">테마파크</span>
+  <span class="sub-title">액티비티</span>
+  <span class="title-content">가고 싶은 지역별 테마파크를 골라보세요!<br>실제 여행객들의 생생한 리뷰까지 만나보세요</span>
   <hr class="title-line">
 </div>
 
-<div class="themeaofkorea">
-  <a href="#a" class="sea themea">바다</a>
-  <a href="#b" class="mountain-valley themea">산/계곡</a>
-  <a href="#c" class="citytour themea">도시관광</a>
-  <a href="#d" class="rural-experience themea">농촌체험</a>
-  <a href="#e" class="unique-experience themea">이색체험</a>
-  <a href="#f" class="history themea">역사</a>
-  <a href="#g" class="other themea">기타</a>
-</div>
-
-<div class="selectbar">
-  <select class="sortselect">
-    <option value="topview">추천순</option>
-    <option value="lotsofreviews">리뷰많은순</option>
-    <option value="highstarscore">별점높은순</option>
-    <option value="lowstarscore">별점낮은순</option>
-  </select>
+<div class="regionofkorea">
+  <a href="#a" class="seoul region">서울</a>
+  <a href="#b" class="incheon-Gyeonggi region">인천/경기</a>
+  <a href="#c" class="daejeon-chungcheong region">대전/충청</a>
+  <a href="#d" class="daegu region">대전</a>
+  <a href="#e" class="jeolla region">전라</a>
+  <a href="#f" class="gyeongsang region">경상</a>
+  <a href="#g" class="busan region">부산</a>
+  <a href="#h" class="gangwon region">강원</a>
+  <a href="#i" class="jeju region">제주</a>
 </div>
 
 <div>
-  <table class="trip-content">
+  <table class="theme-content">
     <tr>
     
+      <td>
+        <div class="theme-content">
+          <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="theme-img">
+          <span class="theme-name">제주 신화월드 테마파크</span>
+          <div class="star-ratings">
+		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
+		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+	      </div>
+	      <div class="star-ratings-base space-x-2 text-lg">
+		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+	      </div>
+        </div>
+ 		  <span class="theme-region">
+ 		    <img src="${root}/image/asset/여행지 위치아이콘.png">
+ 		    제주도 서귀포시
+ 		  </span>
+        </div>
+      </td>
+      
      <td>
-        <div class="trip-content">
-          <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
-          <span class="trip-name">신평 양조장</span>
+        <div class="theme-content">
+          <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="theme-img">
+          <span class="theme-name">제주 신화월드 테마파크</span>
           <div class="star-ratings">
 		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
 		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
@@ -172,18 +191,17 @@ $(document).ready(function(){
 		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 	      </div>
         </div>
-  		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
- 		  <span class="trip-region">
+ 		  <span class="theme-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
- 		    충청남도 당진시
+ 		    제주도 서귀포시
  		  </span>
         </div>
       </td>
       
-       <td>
-        <div class="trip-content">
-          <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
-          <span class="trip-name">신평 양조장</span>
+     <td>
+        <div class="theme-content">
+          <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="theme-img">
+          <span class="theme-name">제주 신화월드 테마파크</span>
           <div class="star-ratings">
 		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
 		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
@@ -192,30 +210,9 @@ $(document).ready(function(){
 		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 	      </div>
         </div>
-  		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
- 		  <span class="trip-region">
+ 		  <span class="theme-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
- 		    충청남도 당진시
- 		  </span>
-        </div>
-      </td>
-      
-       <td>
-        <div class="trip-content">
-          <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
-          <span class="trip-name">신평 양조장</span>
-          <div class="star-ratings">
-		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
-		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-	      <div class="star-ratings-base space-x-2 text-lg">
-		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-        </div>
-  		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
- 		  <span class="trip-region">
- 		    <img src="${root}/image/asset/여행지 위치아이콘.png">
- 		    충청남도 당진시
+ 		    제주도 서귀포시
  		  </span>
         </div>
       </td>
@@ -225,9 +222,9 @@ $(document).ready(function(){
     <tr>
     
      <td>
-        <div class="trip-content">
-          <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
-          <span class="trip-name">신평 양조장</span>
+        <div class="theme-content">
+          <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="theme-img">
+          <span class="theme-name">제주 신화월드 테마파크</span>
           <div class="star-ratings">
 		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
 		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
@@ -236,18 +233,17 @@ $(document).ready(function(){
 		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 	      </div>
         </div>
-  		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
- 		  <span class="trip-region">
+ 		  <span class="theme-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
- 		    충청남도 당진시
+ 		    제주도 서귀포시
  		  </span>
         </div>
       </td>
       
         <td>
-        <div class="trip-content">
-          <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
-          <span class="trip-name">신평 양조장</span>
+        <div class="theme-content">
+          <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="theme-img">
+          <span class="theme-name">제주 신화월드 테마파크</span>
           <div class="star-ratings">
 		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
 		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
@@ -256,18 +252,17 @@ $(document).ready(function(){
 		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 	      </div>
         </div>
-  		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
- 		  <span class="trip-region">
+ 		  <span class="theme-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
- 		    충청남도 당진시
+ 		    제주도 서귀포시
  		  </span>
         </div>
       </td>
       
       <td>
-        <div class="trip-content">
-          <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
-          <span class="trip-name">신평 양조장</span>
+        <div class="theme-content">
+          <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="theme-img">
+          <span class="theme-name">제주 신화월드 테마파크</span>
           <div class="star-ratings">
 		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
 		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
@@ -276,10 +271,9 @@ $(document).ready(function(){
 		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 	      </div>
         </div>
-  		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
- 		  <span class="trip-region">
+ 		  <span class="theme-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
- 		    충청남도 당진시
+ 		    제주도 서귀포시
  		  </span>
         </div>
       </td>
@@ -288,10 +282,10 @@ $(document).ready(function(){
     
     <tr>
     
-      <td>
-        <div class="trip-content">
-          <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
-          <span class="trip-name">신평 양조장</span>
+    <td>
+        <div class="theme-content">
+          <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="theme-img">
+          <span class="theme-name">제주 신화월드 테마파크</span>
           <div class="star-ratings">
 		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
 		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
@@ -300,18 +294,17 @@ $(document).ready(function(){
 		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 	      </div>
         </div>
-  		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
- 		  <span class="trip-region">
+ 		  <span class="theme-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
- 		    충청남도 당진시
+ 		    제주도 서귀포시
  		  </span>
         </div>
       </td>
       
-        <td>
-        <div class="trip-content">
-          <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
-          <span class="trip-name">신평 양조장</span>
+       <td>
+        <div class="theme-content">
+          <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="theme-img">
+          <span class="theme-name">제주 신화월드 테마파크</span>
           <div class="star-ratings">
 		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
 		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
@@ -320,18 +313,17 @@ $(document).ready(function(){
 		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 	      </div>
         </div>
-  		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
- 		  <span class="trip-region">
+ 		  <span class="theme-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
- 		    충청남도 당진시
+ 		    제주도 서귀포시
  		  </span>
         </div>
       </td>
       
-      <td>
-        <div class="trip-content">
-          <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
-          <span class="trip-name">신평 양조장</span>
+     <td>
+        <div class="theme-content">
+          <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="theme-img">
+          <span class="theme-name">제주 신화월드 테마파크</span>
           <div class="star-ratings">
 		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
 		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
@@ -340,10 +332,9 @@ $(document).ready(function(){
 		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 	      </div>
         </div>
-  		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
- 		  <span class="trip-region">
+ 		  <span class="theme-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
- 		    충청남도 당진시
+ 		    제주도 서귀포시
  		  </span>
         </div>
       </td>

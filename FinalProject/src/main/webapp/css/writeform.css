@@ -7,11 +7,8 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'MinSans-Light';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Light.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+div.writeform-main{
+	font-family: 'MinSans-Medium' !important;
 }
 
 div.writeform-main > div.writeform-title{
@@ -23,7 +20,6 @@ div.writeform-main > div.writeform-title{
 
 div.writeform-main > div.writeform-title > h2.writehead{
 	font-weight: bold;
-	font-family: 'MinSans-Medium';
 }
 
 div.writeform-body{
@@ -52,13 +48,11 @@ textarea.textfield{
 
 input::placeholder , textarea::placeholder{
 	color: #afafaf;
-	font-family: 'MinSans-Medium';
 	font-size: 0.9em;
 }
 
 span.filetitle{
 	margin-left: 10px;
-	font-family: 'MinSans-Medium';
 }
 
 #photo{
@@ -78,7 +72,6 @@ button.btn-cancel{
     border: 1px solid;
     color: #2bae66;
     background-color: white;
-    font-family: 'MinSans-Medium';
     font-size: 1.2em;
 }
 
@@ -91,6 +84,5 @@ button.btn-insert{
     border: 1px solid;
     color: white;
     background-color: #2bae66;
-    font-family: 'MinSans-Medium';
     font-size: 1.2em;
 }

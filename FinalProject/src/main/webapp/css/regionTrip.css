@@ -7,6 +7,10 @@
     font-style: normal;
 }
 
+div.regionTripText{
+	font-family: 'MinSans-Medium' !important;
+}
+
 div.trip-category{
 	width: 210px;
 	height: 230px;
@@ -15,7 +19,6 @@ div.trip-category{
 	padding-top: 36px;
 	top: 209px;
 	left: 477px;
-	font-family: 'MinSans-Medium';
     position: relative;
 }
 
@@ -55,7 +58,7 @@ div.category-title > span.sub-title{
 div.category-title > span.title-content{
 	float: right;
 	font-size: 0.8em;
-	padding-left: 218px;
+	padding-left: 266px;
 	text-align: right;
 }
 
@@ -91,10 +94,10 @@ div.trip-content > span.trip-name{
 
 div.trip-content > span.trip-explanation{
 	font-size: 0.8em;
-	padding-left: 45px;
+	padding-left: 57px;
 	position: relative;
 	top: 15px;
-	right: 29px;
+	right: 41px;
 }
 
 div.trip-content > span.trip-region{
@@ -169,11 +172,9 @@ select.sortselect{
 	border-color: #afafaf;
 	border-radius: 5px;	
 	padding: 7px;
-	font-family: 'MinSans-Medium';
 }
 
 select.sortselect > option {
-	font-family: 'MinSans-Medium';
 	font-size: 0.9em;
 	text-align: center;
 }

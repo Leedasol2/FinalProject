@@ -6,6 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+
 <title>이런여행</title>
 
 <!-- root -->
@@ -14,9 +15,10 @@
 <!-- CSS -->
 <link rel="stylesheet" href="${root }/css/main.css" />
 <link rel="stylesheet" href="${root }/css/myPageEdit.css" />
-<link rel="stylesheet" href="${root }/css/myPageScrap.css" />
+<link href="${root }/css/myPageCalendar.css? after" rel="stylesheet">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
 <style type="text/css"> /* css파일에 적용했더니 안되고, 여기서 작성하면 적용되는 css들..ㅠㅠ */
 input.search {
 	background-image: url("${root }/image/asset/검색아이콘.png");
@@ -37,8 +39,18 @@ a:hover {
 
 <!-- js -->
 <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/calendar.js"></script>
 
-
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		var calendarEl = document.getElementById('calendar');
+		var calendar = new FullCalendar.Calendar(calendarEl, {
+			locale : 'ko',
+			initialView : 'dayGridMonth'
+		});
+		calendar.render();
+	});
+</script>
 </head>
 <body>
 	<div class="home">
@@ -49,13 +61,15 @@ a:hover {
 				<a href="${root }/"><img class="logoimg"
 					src="${root }/image/asset/로고.png"></a> <input type="text"
 					name="search" class="search" placeholder="이런 여행 없을까? 검색해보세요">
+				<button type="button" class="login">로그아웃</button>
 				<button type="button" class="join">마이페이지</button>
 				<img class="mainline" src="${root }/image/asset/메인-라인.png">
 
 				<div id="container">
 					<ul class="myMenu">
-						
+
 					</ul>
+
 
 				</div>
 			</div>
@@ -64,7 +78,6 @@ a:hover {
 
 		<!-- main 시작 -->
 		<div class="mypage-content">
-
 			<div class="mypage-category">
 				<span class="mypage-title">마이페이지</span>
 				<ul class="mypage">
@@ -78,80 +91,7 @@ a:hover {
 				</ul>
 				<hr class="title-line">
 			</div>
-
-			<div class="scrp-main">
-
-				<div class="scrap-count" style="width: 800px;">
-					<b>총 스크랩 개수 ${totalCount }</b> <span class="scrap-logo"> <img
-						src="${root}/image/asset/스크랩아이콘.png">
-					</span>
-				</div>
-
-				<div>
-					<table class="scarp-content">
-						<tr>
-							<td>
-								<div class="scrap-content">
-									<img src="${root}/image/asset/스크랩.png" class="scrap-img">
-									<br>
-									<br> <span class="scrap-name"><b>남이섬 어쿠스틱 청춘
-											페스티벌</b></span>
-								</div>
-							</td>
-
-							<td>
-								<div class="scrap-content">
-									<img src="${root}/image/asset/스크랩.png" class="scrap-img">
-									<br>
-									<br> <span class="scrap-name"><b>남이섬 어쿠스틱 청춘
-											페스티벌</b></span>
-								</div>
-							</td>
-
-							<td>
-								<div class="scrap-content">
-									<img src="${root}/image/asset/스크랩.png" class="scrap-img">
-									<br>
-									<br> <span class="scrap-name"><b>남이섬 어쿠스틱 청춘
-											페스티벌</b></span>
-								</div>
-							</td>
-						</tr>
-						
-						<tr>
-							<td>
-								<div class="scrap-content">
-									<img src="${root}/image/asset/스크랩.png" class="scrap-img">
-									<br>
-									<br> <span class="scrap-name"><b>남이섬 어쿠스틱 청춘
-											페스티벌</b></span>
-								</div>
-							</td>
-
-							<td>
-								<div class="scrap-content">
-									<img src="${root}/image/asset/스크랩.png" class="scrap-img">
-									<br>
-									<br> <span class="scrap-name"><b>남이섬 어쿠스틱 청춘
-											페스티벌</b></span>
-								</div>
-							</td>
-
-							<td>
-								<div class="scrap-content">
-									<img src="${root}/image/asset/스크랩.png" class="scrap-img">
-									<br>
-									<br> <span class="scrap-name"><b>남이섬 어쿠스틱 청춘
-											페스티벌</b></span>
-								</div>
-							</td>
-						</tr>
-					</table>
-				</div>
-			</div>
-
-
-
+			<div id="calendar" class="calendar-main"></div>
 		</div>
 		<!-- main 끝 -->
 
@@ -174,4 +114,5 @@ a:hover {
 
 	</div>
 </body>
+
 </html>

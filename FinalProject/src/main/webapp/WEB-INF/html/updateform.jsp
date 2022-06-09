@@ -86,18 +86,6 @@ $(function(){
 	  </div>
 	</div> <!-- header 끝 -->
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- 본문 시작 -->
 <div class="updateform-main">
 
@@ -153,21 +141,6 @@ $(function(){
   </div>
 </div>
 <!-- 본문 끝 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 		<!-- footer 시작 -->
 	<div class="footer">
