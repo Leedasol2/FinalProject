@@ -122,7 +122,7 @@ $(document).ready(function(){
 <!-- 헤더 끝 -->
 
 <!-- 본문 시작 -->
-<div class="bestTrip-main">
+<div class="themaTripText">
 
 <div class="trip-category">
   <a href="#1" class="best-category tripcategory">베스트 여행지</a><br><br><br>
