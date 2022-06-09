@@ -1,0 +1,178 @@
+@charset "UTF-8";
+
+hr.title-line{
+	margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+    width: 670px;
+}
+
+div.theme-category{
+	width: 210px;
+	height: 230px;
+	background-color: #ffffea;
+	padding-left: 57px;
+	padding-top: 36px;
+	top: 209px;
+	left: 477px;
+	font-family: 'MinSans-Medium';
+    position: relative;
+}
+
+div.theme-category > a.themecategory{
+	color: gray;
+	font-weight: 650;
+	font-size: 17px;
+}
+
+div.theme-category > a.themepark-category {
+	color: #212529;
+}
+
+div.theme-category > a:hover{
+	color: #212529;
+	transition: 0.3s ease; 
+}
+
+div.category-title {
+	display: inline-block;
+	position: relative;
+	left: 730px;
+	top: 20px;
+}
+
+div.category-title > span.main-title{
+	font-weight: bold;
+	font-size: 25px;
+	color: #212529;
+}
+
+div.category-title > span.sub-title{
+	font-size: 0.8em;
+	color: #afafaf;
+}
+
+div.category-title > span.title-content{
+	float: right;
+	font-size: 0.8em;
+	padding-left: 218px;
+	text-align: right;
+}
+
+div.theme-content{
+	width: 220px;
+	height: 270px;
+	border: 1px solid #afafaf;
+	border-radius: 10px;
+	position: relative;
+	left: 720px;
+	top: 80px;
+	margin-left: 10px;
+	margin-bottom: 47px;
+}
+
+div.theme-content > img.theme-img{
+	width: 100%;
+	height: 170px;
+	border-top-left-radius : 10px;
+	border-top-right-radius : 10px;
+	cursor: pointer;	
+}
+
+div.theme-content > span.theme-name{
+    position: relative;
+    top: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    right: 56px;
+    font-size: 9pt;
+}
+
+div.theme-content > span.theme-explanation{
+	font-size: 0.8em;
+	padding-left: 45px;
+	position: relative;
+	top: 15px;
+	right: 29px;
+}
+
+div.theme-content > span.theme-region{
+	font-size: 0.8em;
+    color: #2bae66;
+    padding-left: 12px;
+    position: relative;
+    top: 25px;
+    cursor: pointer;
+}
+
+/* 별점 css */
+.star-ratings {
+  color: #aaa9a9; 
+  position: relative;
+  unicode-bidi: bidi-override;
+  width: max-content;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1.3px;
+  -webkit-text-stroke-color: #2b2a29;
+  float: left;
+  left: 148px;
+  top: 9px;
+  font-size: 12px;
+}
+.star-ratings-fill {
+  color: #fff58c;
+  padding: 0;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  -webkit-text-fill-color: gold;
+}
+.star-ratings-base {
+  z-index: 0;
+  padding: 0;
+}
+
+div.regionofkorea{
+	position: relative;
+	left: 700px;
+	top: 10px;
+	bottom: 25px;
+}
+
+div.regionofkorea > a.region{
+	margin-left: 33px;
+	font-size: 1.2em;
+	color: gray;
+	font-weight: bold;
+}
+
+div.regionofkorea > a:hover{
+	color: #212529;
+	transition: 0.3s ease; 
+}
+
+div.regionofkorea > a.daejeon-chungcheong{
+	color: #2bae66;
+}
+
+div.selectbar{
+	position: relative;
+	left: 1310px;
+	top: 65px;
+}
+
+select.sortselect{
+	border-color: #afafaf;
+	border-radius: 5px;	
+	padding: 7px;
+	font-family: 'MinSans-Medium';
+}
+
+select.sortselect > option {
+	font-family: 'MinSans-Medium';
+	font-size: 0.9em;
+	text-align: center;
