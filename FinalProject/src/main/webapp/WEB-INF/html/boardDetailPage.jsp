@@ -164,7 +164,7 @@ a:hover { text-decoration:none !important;color: #495056; }
       <hr class="comment-underline">
       
       <span class="comment-writer">nnn34**</span>
-      <button type="submit" class="comment-insert">등록</button><br>
+      <button type="submit" class="comment-insertbtn">등록</button><br>
       <input type="text" name="comment" class="commentbox" required="required">
     </td>
   </tr>
