@@ -137,7 +137,7 @@ $(function(){
 	<br><br><br><br><br>
 	<img alt="" src="${root }/photo/위치아이콘.png" width="25px;"><span> 서울특별시 용산구 남산공원길 126</span>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<img alt="" src="${root }/photo/스크랩.png" width="20px;"><span> 스크랩 하기</span>
+	<img alt="" src="${root }/photo/스크랩안함.png" width="20px;"><span> 스크랩 하기</span>
 	</div>
 	<br><br><br><br><br><br>
 	<hr width="970px">
@@ -171,7 +171,19 @@ $(function(){
 	<b>지도</b>
 	</div>
 	<br><br>
-	<img alt="" src="${root }/photo/map1.png" class="map">
+	 
+	 <!-- KakaoMap -->
+	<div id="map" class="kakaomap"></div>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8148de36e2b8d4215e24f39fffbd1a62"></script> 
+	<script>
+		var container = document.getElementById('map');
+		var options = {
+			center: new kakao.maps.LatLng(37.551399, 126.988259), <!--위도 / 경도 -->
+			level: 4
+		};
+		var map = new kakao.maps.Map(container, options);
+	</script>
+	
 	<br><br><br><br>
 	<hr width="970px"><br>
 	
@@ -234,10 +246,10 @@ $(function(){
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">리뷰 작성</h4>
+          <span style="color: white;"><b>2run trip&nbsp;&nbsp;</b></span><span><b>  리뷰 작성</b></span>
         </div>
         <div class="modal-body">
-        <span style="float: left;">여행지 명&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span style="float: left;"><b>여행지 명&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
         <div class="star-rating space-x-4 mx-auto">
 	<input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
 	<label for="5-stars" class="star pr-4">★</label>
@@ -251,11 +263,11 @@ $(function(){
 	<label for="1-star" class="star">★</label>
 		</div>     
         <br>
-        <input type="text" id="ucontent" class="form-control" placeholder="별점과 리뷰를 작성해주세요!">
+        <textarea id="ucontent" class="form-control" placeholder="별점과 리뷰를 작성해주세요!"></textarea>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default rbtn" data-dismiss="modal"
-          id="=modaladd">작성</button>
+          <button type="button" class="rbtn" data-dismiss="modal"
+          id="=modaladd">작성</button> 
         </div>
       </div>
     </div>

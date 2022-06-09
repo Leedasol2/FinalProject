@@ -30,7 +30,7 @@ span.date{
 	color: #afafaf;
 	font-size: 8pt;
 }
-img.map, img.image{
+.kakaomap, img.image{
 	width: 600px;
 	height: 400px;
 	left: 650px;
@@ -67,6 +67,21 @@ div.select span{
 	left: 600px;
 	font-family: 'MinSans-Medium';
 }
+
+/* modal 부분 */
+.modal-header{background-color: #2bae66;}
+.rbtn{
+	background-color: #2bae66;
+	color: white;
+	border-radius: 15px;
+	width: 80px;
+	height: 40px;
+	font-size: 10pt;
+	border: 0;
+	font-family: 'MinSans-Medium';
+}
+#ucontent{height: 180px;}
+
 
 /* 별점 css */
 .star-ratings {
