@@ -64,7 +64,7 @@ input.search{
     font-family: 'ChosunSg';
     font-weight: 580;
     font-size: 13pt;
-    font-color: #21529;
+    color: #212529;
     border: none;
     outline: none;
     text-align: center;
@@ -118,7 +118,6 @@ img.submenuicon2{
 	left: 42px;
 }
 
-ul.myMenu {}
 ul.myMenu > li { 
 	display:inline-block; 
 	width:160px; 
@@ -659,4 +658,4 @@ div.footer pre.pre2{
  	color: #ffffff;
  	line-height:50px;
  	border: none;
-}/* ÇªÅÍ ³¡ */
+} /* ÇªÅÍ ³¡ */
