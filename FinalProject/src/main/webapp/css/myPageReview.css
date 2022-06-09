@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+.star-ratings {
+	color: #aaa9a9;
+	position: relative;
+	unicode-bidi: bidi-override;
+	width: max-content;
+	-webkit-text-fill-color: transparent;
+	/* Will override color (regardless of order) */
+	-webkit-text-stroke-width: 1.3px;
+	-webkit-text-stroke-color: #2b2a29;
+	margin-left: 180px;
+    margin-top: -45px;
+}	
+
+
+.star-ratings-fill {
+	color: #fff58c;
+	padding: 0;
+	position: absolute;
+	z-index: 1;
+	display: flex;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	-webkit-text-fill-color: gold;
+}
+
+.star-ratings-base {
+	z-index: 0;
+	padding: 0;
+}
+
+.review-main-content {
+	font-size: 22pt;
+}
+
+.btn-form{
+	margin-left: 660px;
+    font-size: 15pt;
+    margin-top: -35px;
+}
+
+.btn-delete{
+	background-color: #fff;
+    border: 0px;
+    font-weight: bold;
+}
+
+.btn-update{
+	background-color: #fff;
+    border: 0px;
+    font-weight: bold;
+}
+
+span.form-date{
+	color: #dcdcdc;
+}
+
+span.review-contents{
+	font-size: 11pt;
+}
+
+hr.content-line{
+	width: 970px;
+    margin-left: -20px;
+    margin-bottom: 80px;
+}
