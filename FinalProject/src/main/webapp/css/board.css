@@ -20,7 +20,7 @@
     font-style: normal;
 }
 
-div.bulletinBoard{
+div.bulletinBoard,div.bestBoard{
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -34,11 +34,7 @@ div.bulletinBoard{
 }
 
 
-div.tripHeader .bulboardActive{
-	visibility: visible;
-}
-
-div.bulletinBoard div.bulBoardHeader{
+div.bulletinBoard div.bulBoardHeader,div.bestBoardHeader{
 	margin-top: 30px;
 	width: 900px;
 	display: flex;
@@ -46,7 +42,7 @@ div.bulletinBoard div.bulBoardHeader{
 }
 
 
-div.bulBoardHeader span.bulBoard{
+div.bulBoardHeader,div.bestBoardHeader span.bulBoard{
 	margin-left: 5px;
 	font-family: MinSans-Medium;
 	font-size: 22pt;
@@ -57,6 +53,8 @@ div.bulBoardHeader span.writeBul{
 }
 
 div.bulBoardHeader button.writeBul{
+	font-size: 11pt;
+	padding-top: 4px;
 	width: 90px;
 	height: 30px;
 	font-family: MinSans-Medium;
@@ -65,6 +63,7 @@ div.bulBoardHeader button.writeBul{
 	border: 1px solid #2bae66;
 	border-radius: 5px;
 	background-color: white;
+	margin-top: 5px;
 }
 
 div.bulletinBoard hr.hr2{
@@ -134,6 +133,7 @@ div.bulletinBoard div.myPagination{
 	justify-content: center;
 	color: #666;
 	font-family: MinSans-Light;
+	font-size: 12pt;
 }
 
 div.bulletinBoard ul.myPagination a{

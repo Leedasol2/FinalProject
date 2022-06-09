@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -68,16 +69,16 @@
 		<!-- 여행공유 홈 헤더 -->
 		<div class="tripHeader">
 			<div>여행공유</div>
-			<span class="verLine">｜</span>&nbsp;<span>여러분의 특별했던 여행의 순간을 공유해보세요</span>
+			<span class="verLine">｜</span>&nbsp;<span class="tripHeadMsg">여러분의 특별했던 여행의 순간을 공유해보세요</span>
 			<hr class="hr1">
 			<!-- 게시판 -->
 			<div class="board">
-				<span>BEST 게시글</span>
+				<span>BEST 게시판</span>
 				<span>자유게시판&nbsp;&nbsp;<img src="${root }/image/asset/새글아이콘.png" class="newIcon"></span>
 			</div>
 			<div class="boardActive">
-				<img src="${root }/image/asset/보고있는게시판아이콘.png" class="bestboardActive">
-				<img src="${root }/image/asset/보고있는게시판아이콘.png" class="bulboardActive">
+				<img src="${root }/image/asset/보고있는게시판아이콘.png" class="bestboardNoActive">
+				<img src="${root }/image/asset/보고있는게시판아이콘.png" class="bulboardNoActive">
 			</div>
 			<hr>
 		</div>
@@ -90,28 +91,28 @@
 		<div class="boardpreview">
 			<table id="">
 				<caption>
-					<div><span class="bestboard">BEST&nbsp;</span>게시글</div>
+					<div><span class="bestboard">BEST&nbsp;</span>게시판</div>
 				</caption>
 				<tbody>
 					<tr>
 						<td><span id="boardSubject">5월의 여행지 추천 포천 산정호수 둘레길 오리배 with 튤립축제</span></td>
-						<td class="boardId"><span>2runt****</span></td>
+						<td class="boardId"><span><c:out value="${fn:substring('dasolsol', 0, fn:length('dasolsol') - 4)}"/>****</span></td>
 					</tr>
 					<tr>
 						<td><span id="boardSubject">5월의 여행지 추천 포천 산정호수 둘레길 오리배 with 튤립축제</span></td>
-						<td class="boardId"><span>2runt****</span></td>
+						<td class="boardId"><span><c:out value="${fn:substring('dasolsol', 0, fn:length('dasolsol') - 4)}"/>****</span></td>
 					</tr>
 					<tr>
 						<td><span id="boardSubject">5월의 여행지 추천 포천 산정호수 둘레길 오리배 with 튤립축제</span></td>
-						<td class="boardId"><span>2runt****</span></td>
+						<td class="boardId"><span><c:out value="${fn:substring('dasolsol', 0, fn:length('dasolsol') - 4)}"/>****</span></td>
 					</tr>
 					<tr>
 						<td><span id="boardSubject">5월의 여행지 추천 포천 산정호수 둘레길 오리배 with 튤립축제</span></td>
-						<td class="boardId"><span>2runt****</span></td>
+						<td class="boardId"><span><c:out value="${fn:substring('dasolsol', 0, fn:length('dasolsol') - 4)}"/>****</span></td>
 					</tr>
 					<tr>
 						<td><span id="boardSubject">5월의 여행지 추천 포천 산정호수 둘레길 오리배 with 튤립축제</span></td>
-						<td class="boardId"><span>2runt****</span></td>
+						<td class="boardId"><span><c:out value="${fn:substring('dasolsol', 0, fn:length('dasolsol') - 4)}"/>****</span></td>
 					</tr>
 				</tbody>
 			</table>
@@ -123,23 +124,23 @@
 				<tbody>
 					<tr>
 						<td><span id="boardSubject">5월의 여행지 추천 포천 산정호수 둘레길 오리배 with 튤립축제</span></td>
-						<td class="boardId"><span>2runt****</span></td>
+						<td class="boardId"><span><c:out value="${fn:substring('dasolsol', 0, fn:length('dasolsol') - 4)}"/>****</span></td>
 					</tr>
 					<tr>
 						<td><span id="boardSubject">5월의 여행지 추천 포천 산정호수 둘레길 오리배 with 튤립축제</span></td>
-						<td class="boardId"><span>2runt****</span></td>
+						<td class="boardId"><span><c:out value="${fn:substring('dasolsol', 0, fn:length('dasolsol') - 4)}"/>****</span></td>
 					</tr>
 					<tr>
 						<td><span id="boardSubject">5월의 여행지 추천 포천 산정호수 둘레길 오리배 with 튤립축제</span></td>
-						<td class="boardId"><span>2runt****</span></td>
+						<td class="boardId"><span><c:out value="${fn:substring('dasolsol', 0, fn:length('dasolsol') - 4)}"/>****</span></td>
 					</tr>
 					<tr>
 						<td><span id="boardSubject">5월의 여행지 추천 포천 산정호수 둘레길 오리배 with 튤립축제</span></td>
-						<td class="boardId"><span>2runt****</span></td>
+						<td class="boardId"><span><c:out value="${fn:substring('dasolsol', 0, fn:length('dasolsol') - 4)}"/>****</span></td>
 					</tr>
 					<tr>
 						<td><span id="boardSubject">5월의 여행지 추천 포천 산정호수 둘레길 오리배 with 튤립축제</span></td>
-						<td class="boardId"><span>2runt****</span></td>
+						<td class="boardId"><span><c:out value="${fn:substring('dasolsol', 0, fn:length('dasolsol') - 4)}"/>****</span></td>
 					</tr>
 				</tbody>
 			</table>
