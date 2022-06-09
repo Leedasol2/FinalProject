@@ -124,39 +124,39 @@
 	    <table class="tripstory-content">
 	      <tr>
 	        <td>
-	          <div class="trip-content">
-	            <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
-	            <span class="trip-name">신평 양조장</span>
-		          <div class="star-ratings">
-				    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
+	          <div class="tripstory-content">
+	            <img src="${root}/image/asset/여행지이미지(예시).jpg" class="tripstory-img">
+	            <span class="tripstory-name">신평 양조장</span>
+		          <div class="tripstory-star-ratings">
+				    <div class="tripstory-star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
 				      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 			      </div>
-			      <div class="star-ratings-base space-x-2 text-lg">
+			      <div class="tripstory-star-ratings-base space-x-2 text-lg">
 				    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 			      </div>
 		        </div>
-		  		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
-		 		  <span class="trip-region">
-		 		    <img src="${root}/image/asset/여행지 위치아이콘.png" class="regionicon">
+		  		  <span class="tripstory-explanation">일상 탈출러를 위한 당진</span><br>
+		 		  <span class="tripstory-region">
+		 		    <img src="${root}/image/asset/여행지 위치아이콘.png" class="tripstory-regionicon">
 		 		    충청남도 당진시
 		 		  </span>
 	          </div>
 	        </td>
 	        <td>
-	          <div class="trip-content">
-	            <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
-	            <span class="trip-name">신평 양조장</span>
-		          <div class="star-ratings">
-				    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
+	          <div class="tripstory-content">
+	            <img src="${root}/image/asset/여행지이미지(예시).jpg" class="tripstory-img">
+	            <span class="tripstory-name">신평 양조장</span>
+		          <div class="tripstory-star-ratings">
+				    <div class="tripstory-star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
 				      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 			      </div>
-			      <div class="star-ratings-base space-x-2 text-lg">
+			      <div class="tripstory-star-ratings-base space-x-2 text-lg">
 				    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 			      </div>
 		        </div>
-		  		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
-		 		  <span class="trip-region">
-		 		    <img src="${root}/image/asset/여행지 위치아이콘.png" class="regionicon">
+		  		  <span class="tripstory-explanation">일상 탈출러를 위한 당진</span><br>
+		 		  <span class="tripstory-region">
+		 		    <img src="${root}/image/asset/여행지 위치아이콘.png" class="tripstory-regionicon">
 		 		    충청남도 당진시
 		 		  </span>
 	          </div>
@@ -165,39 +165,39 @@
 	      
 	      <tr>
 	        <td>
-	          <div class="trip-content">
-	            <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
-	            <span class="trip-name">신평 양조장</span>
-		          <div class="star-ratings">
-				    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
+	          <div class="tripstory-content">
+	            <img src="${root}/image/asset/여행지이미지(예시).jpg" class="tripstory-img">
+	            <span class="tripstory-name">신평 양조장</span>
+		          <div class="tripstory-star-ratings">
+				    <div class="tripstory-star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
 				      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 			      </div>
-			      <div class="star-ratings-base space-x-2 text-lg">
+			      <div class="tripstory-star-ratings-base space-x-2 text-lg">
 				    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 			      </div>
 		        </div>
-		  		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
-		 		  <span class="trip-region">
-		 		    <img src="${root}/image/asset/여행지 위치아이콘.png" class="regionicon">
+		  		  <span class="tripstory-explanation">일상 탈출러를 위한 당진</span><br>
+		 		  <span class="tripstory-region">
+		 		    <img src="${root}/image/asset/여행지 위치아이콘.png" class="tripstory-regionicon">
 		 		    충청남도 당진시
 		 		  </span>
 	          </div>
 	        </td>
 	        <td>
-	          <div class="trip-content">
-	            <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
-	            <span class="trip-name">신평 양조장</span>
-		          <div class="star-ratings">
-				    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
+	          <div class="tripstory-content">
+	            <img src="${root}/image/asset/여행지이미지(예시).jpg" class="tripstory-img">
+	            <span class="tripstory-name">신평 양조장</span>
+		          <div class="tripstory-star-ratings">
+				    <div class="tripstory-star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
 				      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 			      </div>
-			      <div class="star-ratings-base space-x-2 text-lg">
+			      <div class="tripstory-star-ratings-base space-x-2 text-lg">
 				    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 			      </div>
 		        </div>
-		  		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
-		 		  <span class="trip-region">
-		 		    <img src="${root}/image/asset/여행지 위치아이콘.png" class="regionicon">
+		  		  <span class="tripstory-explanation">일상 탈출러를 위한 당진</span><br>
+		 		  <span class="tripstory-region">
+		 		    <img src="${root}/image/asset/여행지 위치아이콘.png" class="tripstory-regionicon">
 		 		    충청남도 당진시
 		 		  </span>
 	          </div>
@@ -232,52 +232,52 @@
 			      <tr>
 			        <td>
 			          <div class="newpark-content">
-			            <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="trip-img">
-			            <span class="trip-name">제주 신화월드 테마파크</span>
-				          <div class="star-ratings2">
-						    <div class="star-ratings-fill2 space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
+			            <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="newpark-trip-img">
+			            <span class="newpark-trip-name">제주 신화월드 테마파크</span>
+				          <div class="newpark-star-ratings2">
+						    <div class="newpark-star-ratings-fill2 space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
 						      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 					      </div>
-					      <div class="star-ratings-base2 space-x-2 text-lg">
+					      <div class="newpark-star-ratings-base2 space-x-2 text-lg">
 						    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 					      </div>
 				        </div>
-				 		  <span class="trip-region">
-				 		    <img src="${root}/image/asset/여행지 위치아이콘.png" class="regionicon">
+				 		  <span class="newpark-trip-region">
+				 		    <img src="${root}/image/asset/여행지 위치아이콘.png" class="newpark-regionicon">
 				 		    제주도 서귀포시</span>
 		              </div>
 			        </td>
 			        <td>
 			          <div class="newpark-content">
-			            <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="trip-img">
-			            <span class="trip-name">제주 신화월드 테마파크</span>
-				          <div class="star-ratings2">
-						    <div class="star-ratings-fill2 space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
+			            <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="newpark-trip-img">
+			            <span class="newpark-trip-name">제주 신화월드 테마파크</span>
+				          <div class="newpark-star-ratings2">
+						    <div class="newpark-star-ratings-fill2 space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
 						      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 					      </div>
-					      <div class="star-ratings-base2 space-x-2 text-lg">
+					      <div class="newpark-star-ratings-base2 space-x-2 text-lg">
 						    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 					      </div>
 				        </div>
-				 		  <span class="trip-region">
-				 		    <img src="${root}/image/asset/여행지 위치아이콘.png" class="regionicon">
+				 		  <span class="newpark-trip-region">
+				 		    <img src="${root}/image/asset/여행지 위치아이콘.png" class="newpark-regionicon">
 				 		    제주도 서귀포시</span>
 		              </div>
 			        </td>
 			        <td>
 			          <div class="newpark-content">
-			            <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="trip-img">
-			            <span class="trip-name">제주 신화월드 테마파크</span>
-				          <div class="star-ratings2">
-						    <div class="star-ratings-fill2 space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
+			            <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="newpark-trip-img">
+			            <span class="newpark-trip-name">제주 신화월드 테마파크</span>
+				          <div class="newpark-star-ratings2">
+						    <div class="newpark-star-ratings-fill2 space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
 						      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 					      </div>
-					      <div class="star-ratings-base2 space-x-2 text-lg">
+					      <div class="newpark-star-ratings-base2 space-x-2 text-lg">
 						    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 					      </div>
 				        </div>
-				 		  <span class="trip-region">
-				 		    <img src="${root}/image/asset/여행지 위치아이콘.png" class="regionicon">
+				 		  <span class="newpark-trip-region">
+				 		    <img src="${root}/image/asset/여행지 위치아이콘.png" class="newpark-regionicon">
 				 		    제주도 서귀포시</span>
 		              </div>
 			        </td>
@@ -291,52 +291,52 @@
 			      <tr>
 			        <td>
 			          <div class="newpark-content">
-			            <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="trip-img">
-			            <span class="trip-name">제주 신화월드 테마파크</span>
-				          <div class="star-ratings2">
-						    <div class="star-ratings-fill2 space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
+			            <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="newpark-trip-img">
+			            <span class="newpark-trip-name">제주 신화월드 테마파크</span>
+				          <div class="newpark-star-ratings2">
+						    <div class="newpark-star-ratings-fill2 space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
 						      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 					      </div>
-					      <div class="star-ratings-base2 space-x-2 text-lg">
+					      <div class="newpark-star-ratings-base2 space-x-2 text-lg">
 						    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 					      </div>
 				        </div>
-				 		  <span class="trip-region">
-				 		    <img src="${root}/image/asset/여행지 위치아이콘.png" class="regionicon">
+				 		  <span class="newpark-trip-region">
+				 		    <img src="${root}/image/asset/여행지 위치아이콘.png" class="newpark-regionicon">
 				 		    제주도 서귀포시</span>
 		              </div>
 			        </td>
 			        <td>
 			          <div class="newpark-content">
-			            <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="trip-img">
-			            <span class="trip-name">제주 신화월드 테마파크</span>
-				          <div class="star-ratings2">
-						    <div class="star-ratings-fill2 space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
+			            <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="newpark-trip-img">
+			            <span class="newpark-trip-name">제주 신화월드 테마파크</span>
+				          <div class="newpark-star-ratings2">
+						    <div class="newpark-star-ratings-fill2 space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
 						      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 					      </div>
-					      <div class="star-ratings-base2 space-x-2 text-lg">
+					      <div class="newpark-star-ratings-base2 space-x-2 text-lg">
 						    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 					      </div>
 				        </div>
-				 		  <span class="trip-region">
-				 		    <img src="${root}/image/asset/여행지 위치아이콘.png" class="regionicon">
+				 		  <span class="newpark-trip-region">
+				 		    <img src="${root}/image/asset/여행지 위치아이콘.png" class="newpark-regionicon">
 				 		    제주도 서귀포시</span>
 		              </div>
 			        </td>
 			        <td>
 			          <div class="newpark-content">
-			            <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="trip-img">
-			            <span class="trip-name">제주 신화월드 테마파크</span>
-				          <div class="star-ratings2">
-						    <div class="star-ratings-fill2 space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
+			            <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="newpark-trip-img">
+			            <span class="newpark-trip-name">제주 신화월드 테마파크</span>
+				          <div class="newpark-star-ratings2">
+						    <div class="newpark-star-ratings-fill2 space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
 						      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 					      </div>
-					      <div class="star-ratings-base2 space-x-2 text-lg">
+					      <div class="newpark-star-ratings-base2 space-x-2 text-lg">
 						    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 					      </div>
 				        </div>
-				 		  <span class="trip-region">
-				 		    <img src="${root}/image/asset/여행지 위치아이콘.png" class="regionicon">
+				 		  <span class="newpark-trip-region">
+				 		    <img src="${root}/image/asset/여행지 위치아이콘.png" class="newpark-regionicon">
 				 		    제주도 서귀포시</span>
 		              </div>
 			        </td>
@@ -380,37 +380,37 @@
 			      <tr>
 			        <td>	          
 				      <div class="nowfes-content">
-			            <img src="${root}/image/asset/축제예시.png" class="trip-img">
-			            <span class="trip-name">남이섬 청춘 페스티벌</span>
-				 		<span class="trip-region">
-				 		<img src="${root}/image/asset/여행지 위치아이콘.png" class="regionicon">
+			            <img src="${root}/image/asset/축제예시.png" class="nowfes-trip-img">
+			            <span class="nowfes-trip-name">남이섬 청춘 페스티벌</span>
+				 		<span class="nowfes-trip-region">
+				 		<img src="${root}/image/asset/여행지 위치아이콘.png" class="nowfes-regionicon">
 				 		강원도 춘천시 남이섬길1</span>
 		             </div>
 			        </td>
 			        <td>	          
 				      <div class="nowfes-content">
-			            <img src="${root}/image/asset/축제예시.png" class="trip-img">
-			            <span class="trip-name">남이섬 청춘 페스티벌</span>
-				 		<span class="trip-region">
-				 		<img src="${root}/image/asset/여행지 위치아이콘.png" class="regionicon">
+			            <img src="${root}/image/asset/축제예시.png" class="nowfes-trip-img">
+			            <span class="nowfes-trip-name">남이섬 청춘 페스티벌</span>
+				 		<span class="nowfes-trip-region">
+				 		<img src="${root}/image/asset/여행지 위치아이콘.png" class="nowfes-regionicon">
 				 		강원도 춘천시 남이섬길1</span>
 		             </div>
 			        </td>
 			        <td>	          
 				      <div class="nowfes-content">
-			            <img src="${root}/image/asset/축제예시.png" class="trip-img">
-			            <span class="trip-name">남이섬 청춘 페스티벌</span>
-				 		<span class="trip-region">
-				 		<img src="${root}/image/asset/여행지 위치아이콘.png" class="regionicon">
+			            <img src="${root}/image/asset/축제예시.png" class="nowfes-trip-img">
+			            <span class="nowfes-trip-name">남이섬 청춘 페스티벌</span>
+				 		<span class="nowfes-trip-region">
+				 		<img src="${root}/image/asset/여행지 위치아이콘.png" class="nowfes-regionicon">
 				 		강원도 춘천시 남이섬길1</span>
 		             </div>
 			        </td>
 			        <td>	          
 				      <div class="nowfes-content">
-			            <img src="${root}/image/asset/축제예시.png" class="trip-img">
-			            <span class="trip-name">남이섬 청춘 페스티벌</span>
-				 		<span class="trip-region">
-				 		<img src="${root}/image/asset/여행지 위치아이콘.png" class="regionicon">
+			            <img src="${root}/image/asset/축제예시.png" class="nowfes-trip-img">
+			            <span class="nowfes-trip-name">남이섬 청춘 페스티벌</span>
+				 		<span class="nowfes-trip-region">
+				 		<img src="${root}/image/asset/여행지 위치아이콘.png" class="nowfes-regionicon">
 				 		강원도 춘천시 남이섬길1</span>
 		             </div>
 			        </td>
@@ -424,37 +424,37 @@
 			      <tr>
 			        <td>	          
 				      <div class="nowfes-content">
-			            <img src="${root}/image/asset/축제예시.png" class="trip-img">
-			            <span class="trip-name">남이섬 청춘 페스티벌</span>
-				 		<span class="trip-region">
-				 		<img src="${root}/image/asset/여행지 위치아이콘.png" class="regionicon">
+			            <img src="${root}/image/asset/축제예시.png" class="nowfes-trip-img">
+			            <span class="nowfes-trip-name">남이섬 청춘 페스티벌</span>
+				 		<span class="nowfes-trip-region">
+				 		<img src="${root}/image/asset/여행지 위치아이콘.png" class="nowfes-regionicon">
 				 		강원도 춘천시 남이섬길1</span>
 		             </div>
 			        </td>
 			        <td>	          
 				      <div class="nowfes-content">
-			            <img src="${root}/image/asset/축제예시.png" class="trip-img">
-			            <span class="trip-name">남이섬 청춘 페스티벌</span>
-				 		<span class="trip-region">
-				 		<img src="${root}/image/asset/여행지 위치아이콘.png" class="regionicon">
+			            <img src="${root}/image/asset/축제예시.png" class="nowfes-trip-img">
+			            <span class="nowfes-trip-name">남이섬 청춘 페스티벌</span>
+				 		<span class="nowfes-trip-region">
+				 		<img src="${root}/image/asset/여행지 위치아이콘.png" class="nowfes-regionicon">
 				 		강원도 춘천시 남이섬길1</span>
 		             </div>
 			        </td>
 			        <td>	          
 				      <div class="nowfes-content">
-			            <img src="${root}/image/asset/축제예시.png" class="trip-img">
-			            <span class="trip-name">남이섬 청춘 페스티벌</span>
-				 		<span class="trip-region">
-				 		<img src="${root}/image/asset/여행지 위치아이콘.png" class="regionicon">
+			            <img src="${root}/image/asset/축제예시.png" class="nowfes-trip-img">
+			            <span class="nowfes-trip-name">남이섬 청춘 페스티벌</span>
+				 		<span class="nowfes-trip-region">
+				 		<img src="${root}/image/asset/여행지 위치아이콘.png" class="nowfes-regionicon">
 				 		강원도 춘천시 남이섬길1</span>
 		             </div>
 			        </td>
 			        <td>	          
 				      <div class="nowfes-content">
-			            <img src="${root}/image/asset/축제예시.png" class="trip-img">
-			            <span class="trip-name">남이섬 청춘 페스티벌</span>
-				 		<span class="trip-region">
-				 		<img src="${root}/image/asset/여행지 위치아이콘.png" class="regionicon">
+			            <img src="${root}/image/asset/축제예시.png" class="nowfes-trip-img">
+			            <span class="nowfes-trip-name">남이섬 청춘 페스티벌</span>
+				 		<span class="nowfes-trip-region">
+				 		<img src="${root}/image/asset/여행지 위치아이콘.png" class="nowfes-regionicon">
 				 		강원도 춘천시 남이섬길1</span>
 		             </div>
 			        </td>
