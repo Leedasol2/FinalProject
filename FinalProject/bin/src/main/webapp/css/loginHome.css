@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'MinSans-Black';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+div.login-home{
+	width: auto;
+    position: relative;
+    left: 730px;
+    top: 60px;
+}
+
+span.login-home-title{
+	font-weight: bold;
+    font-size: 30pt;
+    color: #212529;
+    margin-left: 157px;
+}
+
+hr.login-home-line-up{
+	width: 510px;
+    margin-left: -30px; 
+    border: 0; 
+    height: 2px;
+    background-color: #afafaf;
+    margin-top: 40px;
+}
+
+hr.login-home-line{
+	width: 510px;
+    margin-left: -30px; 
+    border: 0; 
+    height: 2px;
+    background-color: #afafaf;
+}
+
+input.form-loginhome-input{
+	border: 2px solid;
+	border-color: #afafaf;
+	width: 450px;
+    height: 60px;
+    font-family: 'MinSans-Medium';
+    margin-top: 25px;
+    font-size: 12pt;
+
+}
+
+button.btn-login{
+	border-radius: 40px;
+    width: 450px;
+   	height: 45px;    
+    color: #fff;
+    background-color: #33b679;
+ 	border: 1px;    
+	margin-top: 25px;
+	font-size: 13pt;
+	font-weight: bold;
+}
+
+div.login-home-btn2{
+	position: relative;
+    font-size: 11pt;
+    margin-top: 25px;
+    left: 85px;
+
+}
+
+button.btn-save{
+	border: 0;
+    outline: 0;
+    background-color: #fff;
+    margin-top: 10px;    
+    font-family: 'MinSans-Medium';    
+    color: #696969;    
+}
+
+button.btn-save-text{
+	border: 0;
+    outline: 0;
+    background-color: #fff;
+    font-family: 'MinSans-Medium';    
+    color: #696969;
+    vertical-align: -3px;
+}
+
+button.btn-find{
+	border: 0;
+    outline: 0;
+    background-color: #fff;
+    color: #696969;
+}
+
+button.btn-join{
+	border: 0;
+    outline: 0;
+    background-color: #fff;
+    margin-left: 15px;
+    color: #696969;
+}
+
+button.btn-login-kakao{	
+	border: 0;
+    outline: 0;
+    background-color: #fff;
+    margin-left: 155px;
+    margin-top: 25px;    
+}
+
+
+button.btn-login-naver{
+
+   	height: 10px;	
+	border: 0;
+    outline: 0;
+    background-color: #fff;
+    margin-left: 15px;
+}

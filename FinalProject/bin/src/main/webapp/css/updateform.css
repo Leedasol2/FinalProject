@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'MinSans-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+div.updateform-main{
+	font-family: 'MinSans-Medium' !important;
+}
+
+div.updateform-main > div.updateform-title{
+	width: 900px;
+	position: relative;
+    top: 300px;
+    left: 520px;
+}
+
+div.updateform-main > div.updateform-title > h2.updatehead{
+	font-weight: bold;
+}
+
+div.updateform-body{
+	margin-top: 370px;
+    margin-left: 540px;
+}
+
+input.updatetitle{
+	width: 860px;
+    height: 50px;
+    border: 1px solid #afafaf;
+    border-radius: 5px;
+    padding-left: 15px;
+}
+
+textarea.textfield{
+	margin-top: 15px;
+    width: 860px;
+    height: 600px;
+    border: 1px solid #afafaf;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-top: 15px;
+    margin-bottom: 10px;
+}
+
+input::placeholder , textarea::placeholder{
+	color: #afafaf;
+	font-size: 0.9em;
+}
+
+span.filetitle{
+	margin-left: 10px;
+}
+
+#photo{
+	display: none;
+}
+
+span.photoimg{
+	cursor: pointer;
+}
+
+button.btn-back{
+	margin-top: 100px;
+    margin-right: 50px;
+    width: 125px;
+    height: 45px;
+    border-radius: 50px;
+    border: 1px solid;
+    color: #2bae66;
+    background-color: white;
+    font-size: 1.2em;
+}
+
+button.btn-update{
+	margin-top: 100px;
+    margin-right: 50px;
+    width: 125px;
+    height: 45px;
+    border-radius: 50px;
+    border: 1px solid;
+    color: white;
+    background-color: #2bae66;
+    font-size: 1.2em;
+}

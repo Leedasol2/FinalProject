@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'MinSans-Black';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+form.form-memberform{
+	position: relative;
+    margin-top: 100px;
+}
+
+div.mypage-content{
+	width: auto;
+    position: relative;
+    left: 500px;
+    top: 250px;
+}
+
+
+span.mypage-title{
+	font-weight: bold;
+    font-size: 35px;
+    color: #212529;
+}
+
+li.mypage-editmember{
+	display: inline-block;
+    width: 160px;
+    height: 90px;
+    left:-65px;
+    text-align: center;
+    position: relative;
+    padding-top: 27px;
+    color: #495056;
+    font-family: 'MinSans-Medium';
+    font-weight: 500;
+    font-size: 14pt;
+    text-decoration: none;
+}
+
+li.mypage-scrap{
+	display: inline-block;
+    width: 160px;
+    height: 90px;
+    left:-65px;
+    text-align: center;
+    position: relative;
+    padding-top: 27px;
+    color: #495056;
+    font-family: 'MinSans-Medium';
+    font-weight: 500;
+    font-size: 14pt;
+    text-decoration: none;
+}
+
+li.mypage-mycalendar{
+	display: inline-block;
+    width: 160px;
+    height: 90px;
+    left:-65px;    
+    text-align: center;
+    position: relative;
+    padding-top: 27px;
+    color: #495056;
+    font-family: 'MinSans-Medium';
+    font-weight: 500;
+    font-size: 14pt;
+    text-decoration: none;
+}
+
+li.mypage-review{
+	display: inline-block;
+    width: 160px;
+    height: 90px;
+    left:-65px;   
+    text-align: center;
+    position: relative;
+    padding-top: 27px;
+    color: #495056;
+    font-family: 'MinSans-Medium';
+    font-weight: 500;
+    font-size: 14pt;
+    text-decoration: none;
+}
+
+table.edit-content{
+	margin-left: 100px;
+    width: 800px;
+    height: 300px;
+    font-size: 15pt;
+	border-collapse: separate;
+    border-spacing: 0 40px;    
+}
+
+input.form-control-inputread{
+	width: 650px;
+    height: 70px;
+    border: 1px;
+    background-color:#969696;
+}
+
+input.form-control-inputbox{
+	width: 650px;
+    height: 70px;
+}
+
+input.form-control-inputmail{
+    height: 70px;
+}
+
+div.btn_group{
+	position: relative;
+    font-size: 18pt;
+    left: 170px;
+    margin-top: 60px;
+}
+
+button.btn-update{
+	border-radius: 40px;
+    margin-right: 50px;
+    width: 280px;
+   	height: 70px;    
+    color: #fff;
+    background-color: #33b679;
+ 	border: 1px;    
+}
+
+button.btn-delete{
+	border-radius: 40px;
+    margin-left: 50px;
+    width: 280px;
+   	height: 70px;
+    color: #33b679;
+    border: 1px solid;
+}
+
+hr.title-line{
+	width: 970px;
+    margin-left: -20px;
+    margin-bottom: 80px;    
+}
+
