@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+hr.title-line{
+	margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+    width: 670px;
+}
+
+span.proceeding-title{
+	font-size: 30pt;
+    margin-left: 880px;
+	
+}
+
+img.title-img{
+	width: 60px;
+    margin-top: -30px;
+}
+a.festival-calendar{
+	margin-left: 35px;
+    position: relative;
+    top: -45px;
+	
+}
+
+div.festival-category{
+	width: 210px;
+	height: 230px;
+	background-color: #ffffea;
+	padding-left: 57px;
+	padding-top: 36px;
+	top: 209px;
+	left: 477px;
+	font-family: 'MinSans-Medium';
+    position: relative;
+}
+
+div.festival-category > a.themecategory{
+	color: gray;
+	font-weight: 650;
+	font-size: 17px;
+}
+
+
+div.festival-category > a.festivals-category {
+	color: #212529;
+}
+
+div.festival-category > a:hover{
+	color: #212529;
+	transition: 0.3s ease; 
+}
+
+div.category-title {
+	display: inline-block;
+	position: relative;
+	left: 730px;
+	top: 20px;
+	margin-bottom: 30px;
+}
+
+div.category-title > span.main-title{
+	font-weight: bold;
+	font-size: 25px;
+	color: #212529;
+}
+
+div.category-title > span.sub-title{
+	font-size: 0.8em;
+	color: #afafaf;
+}
+
+div.category-title > span.title-content{
+	float: right;
+	font-size: 0.8em;
+	padding-left: 218px;
+	text-align: right;
+}
+
+div.festival-content{
+	width: 220px;
+	height: 270px;
+	border: 1px solid #afafaf;
+	border-radius: 10px;
+	position: relative;
+	left: 720px;
+	top: 80px;
+	margin-left: 10px;
+	margin-bottom: 47px;
+}
+
+div.festival-content > img.festival-img{
+	width: 100%;
+	height: 170px;
+	border-top-left-radius : 10px;
+	border-top-right-radius : 10px;
+	cursor: pointer;	
+}
+
+div.festival-content > span.festival-name{
+    position: relative;
+    top: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 11pt;
+    left: 12px;
+    
+}
+
+div.festival-content > span.festival-explanation{
+	font-size: 0.8em;
+	padding-left: 45px;
+	position: relative;
+	top: 15px;
+	right: 29px;
+}
+
+div.festival-content > span.festival-region{
+	font-size: 0.8em;
+    color: #2bae66;
+    padding-left: 20px;
+    position: relative;
+    top: 25px;
+    cursor: pointer;
+}
+
+
