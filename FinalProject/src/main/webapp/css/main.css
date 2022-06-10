@@ -587,10 +587,11 @@ div.festival div.swiper-button-prev:after, div.festival div.swiper-button-next:a
 }
 
 .bottom-info {
-    display: inline-block;
+    display: flex;
     width: 100%;
     padding: 0 70px;
     overflow: hidden;
+    align-items: flex-end;
 }
 .top-info .logo a {
     float: left;
@@ -603,18 +604,6 @@ div.festival div.swiper-button-prev:after, div.festival div.swiper-button-next:a
     vertical-align: middle;
 }
 
-.company-info {
-    float: left;
-    display: inline-block;
-    width: 51%;
-}
-
-.tools {
-    width: 49%;
-    float: right;
-    display: inline-block;
-}
-.tools img {
-    width: 100%;
-    padding-top: 80px;
-}
+.company-info {width: 51%;}
+.tools {width: 49%;}
+.tools img {width: 100%;}
