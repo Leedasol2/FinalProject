@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'MinSans-Black';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+div.login-email{
+	width: auto;
+    position: relative;
+    left: 630px;
+    top:60px;
+}
+
+td.login-email-email{
+	display: inline-block;
+    position: relative;
+    color: #2bae66;
+    font-family: 'MinSans-Medium';
+    font-size: 16pt;
+    font-weight: bold;
+
+}
+
+td.login-email-info{
+    position: relative;
+    color: #212529;
+    font-family: 'MinSans-Medium';
+    font-size: 16pt;
+    font-weight: bold;    
+}
+
+td.login-email-end{
+    position: relative;
+    color: #212529;
+    font-family: 'MinSans-Medium';
+    font-size: 16pt;
+    font-weight: bold;
+
+}
+
+hr.login-email-line{	
+	width: 50px;
+	border: 0;
+	height: 2px;
+	background-color: #afafaf;
+	margin-left: 10px;
+	margin-right: 10px;	
+	margin-top: 13px;		
+}
+
+span.login-email-title{
+	position: relative;
+	font-weight: bold;
+    font-size: 30pt;
+    color: #212529;
+    margin-left: 220px;
+
+}
+
+div.edong{
+	
+	margin-top:100px;
+	
+}
+
+table.login-email-table{
+	
+	margin-top: 80px;
+	margin-left: 140px;	
+}
+
+img.login-email{
+    position: relative;	
+	margin-bottom: 8px;
+}
+
+img.login-email-content{
+    position: relative;	
+	margin-left: 55px;
+}
+
+
+td.login-email-content{
+    width: 330px;
+    height: 60px;	
+	text-align: left;
+	border: 2px solid #afafaf;
+		
+}
+
+td.login-email-empty{
+    width: 330px;
+    height: 30px;	
+		
+}
+
+input.form-loginemail-input{
+	
+	border: none;
+	width: 230px;
+		
+}
+
+button.btn-email{
+	border-radius: 40px;
+    width: 80px;
+   	height: 45px;    
+    color: #33b679;
+    background-color: #fff;
+ 	border: 1px;
+	font-size: 14px;
+	font-weight: bold;
+	margin-left: 32px;
+	border-style: solid;
+	border-color: #33b679;
+}
+
+button.btn-code{
+	border-radius: 40px;
+    width: 80px;
+   	height: 45px;    
+    color: #fff;
+    background-color: #33b679;
+ 	border: 1px;
+	font-size: 14px;
+	font-weight: bold;
+	margin-left: 32px;
+}
+
+button.btn-back{
+	font-family: 'MinSans-Medium';
+	border: 0;
+    outline: 0;
+    background-color: #fff;
+    color: #696969;
+    margin-left: 230px;    
+}
+
+button.btn-next{
+    font-family: 'MinSans-Medium';	
+	border: 0;
+    outline: 0;
+    background-color: #fff;
+    color: #696969;
+    margin-top: 180px;  
+}
+
+
+
+img.login-email-back{
+	
+	margin-bottom: 4px;
+	margin-right: 10px;
+	
+}
+
+img.login-email-next{
+	
+	margin-bottom: 4px;
+	margin-left: 10px;
+	
+}
