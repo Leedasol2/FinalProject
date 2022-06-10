@@ -89,12 +89,18 @@ a:hover {
 		
 		
 		<!-- 나만의 여행지 본문 -->
-		<div class="myTripBody">
-			<div>지금 나에게 <span class="myTripBody">딱</span> 맞는 여행지를 찾으러 떠나 볼까요 ?</div>
-			<button>START</button>
+		<div class="myTripResult">
+			<div class="resultMsg1">이런 여행, 어떠세요?</div>
+			<div>
+			
+				<!-- 이미지 -->
+			
+				<span>언제나 새로운 경험을 해보고 싶은 <span class="green">모험가 유형의 당신! </span></span><br>
+				<span>2RUN TRIP에서 전에 느껴보지 못한 짜릿함을 경험하세요</span>
+			</div>
+			
+			<button class="result"><span>액티비티 보러가기</span></button>
 		</div>
-		
-		
 		
 		
 	</div>
