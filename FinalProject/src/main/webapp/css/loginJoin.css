@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'MinSans-Black';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+div.login-join{
+	width: auto;
+    position: relative;
+    left: 570px;
+ 	top: 60px;
+}
+
+span.login-join-title{
+	font-weight: bold;
+    font-size: 30pt;
+    color: #212529;
+    margin-left: 320px;
+}
+
+span.login-join-subtitle1{
+    font-family: 'MinSans-Medium';	
+    font-size: 13pt;
+    color: #212529;
+    margin-left: 240px;
+
+}
+
+span.login-join-subtitle2{
+    font-family: 'MinSans-Medium';
+    font-size: 13pt;
+    color: #212529;
+    margin-left: 215px;
+}
+
+a.acolor{
+	
+	color: #2bae66;
+}
+
+table.login-join-table{
+	
+	margin-top: 60px;
+	
+}
+
+td.table-empty1{
+	
+	border-top: 2px solid #afafaf;
+	border-left: 2px solid #afafaf;
+	border-right: 2px solid #afafaf;	
+	height: 30px;	
+	
+}
+
+td.table-empty2{
+
+	border-left: 2px solid #afafaf;	
+	border-right: 2px solid #afafaf;
+	height: 80px;
+	
+}
+
+td.table-empty3{
+	
+	border-right: 2px solid #afafaf;
+	height: 80px;
+	
+}
+
+td.table-empty4{
+	
+	border-bottom: 2px solid #afafaf;
+	border-left: 2px solid #afafaf;	
+	border-right: 2px solid #afafaf;
+	height: 30px;
+	
+}
+
+th.table-title1{
+
+	width: 400px;
+	height: 80px;	
+	text-align: center;
+	vertical-align: top;	
+	border-right: 2px solid #afafaf;
+	border-left: 2px solid #afafaf;
+    font-family: 'MinSans-Medium';
+    font-size: 15pt;
+    font-weight: bold;	
+	
+}
+
+th.table-title2{
+	
+	width: 400px;	
+	height: 80px;
+	text-align: center;
+	vertical-align: top;		
+	border-right: 2px solid #afafaf;
+    font-family: 'MinSans-Medium';
+    font-size: 15pt;
+    font-weight: bold;
+	
+}
+
+td.table-content1{
+	text-align: center;
+	border-right: 2px solid #afafaf;
+	border-left: 2px solid #afafaf;	
+}
+
+td.table-content2{
+	height: 50px;	
+	text-align: center;
+	border-right: 2px solid #afafaf;		
+}
+
+td.table-content3{
+	height: 50px;	
+	text-align: center;
+	border-right: 2px solid #afafaf;	
+		
+}
+
+button.btn-join{
+    width: 230px;
+   	height: 70px;    
+    color: #fff;
+    background-color: #33b679;
+ 	border: 1px;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+button.btn-sns{
+    width: 230px;
+   	height: 45px;    
+    color: #696969;
+    background-color: #fff;  
+    border-style: solid;
+ 	border-color: #afafaf;
+	font-size: 14px;
+	font-weight: bold;
+}
