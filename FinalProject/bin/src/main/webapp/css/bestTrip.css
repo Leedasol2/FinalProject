@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'MinSans-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+div.bestTripText{
+	font-family: 'MinSans-Medium' !important;
+}
+
+div.trip-category{
+	width: 210px;
+	height: 230px;
+	background-color: #ffffea;
+	padding-left: 57px;
+	padding-top: 36px;
+	position: relative;
+	top: 209px;
+	left: 477px;
+}
+
+div.trip-category > a.tripcategory{
+	color: gray;
+	font-weight: 650;
+	font-size: 17px;
+}
+
+div.trip-category > a.best-category {
+	color: #212529;
+}
+
+div.trip-category > a:hover{
+	color: #212529;
+	transition: 0.3s ease; 
+}
+
+div.category-title {
+	display: inline-block;
+	position: relative;
+	left: 730px;
+	top: 20px;
+}
+
+div.category-title > span.main-title{
+	font-weight: bold;
+	font-size: 25px;
+	color: #212529;
+}
+
+div.category-title > span.sub-title{
+	font-size: 0.8em;
+	color: #afafaf;
+}
+
+div.category-title > span.title-content{
+	float: right;
+	font-size: 0.8em;
+	padding-left: 266px;
+	text-align: right;
+}
+
+div.trip-content{
+	width: 220px;
+	height: 270px;
+	border: 1px solid #afafaf;
+	border-radius: 10px;
+	position: relative;
+	left: 720px;
+	top: 30px;
+	margin-left: 10px;
+	margin-bottom: 47px;
+}
+
+div.trip-content > img.trip-img{
+	width: 100%;
+	height: 170px;
+	border-top-left-radius : 10px;
+	border-top-right-radius : 10px;
+	cursor: pointer;	
+}
+
+div.trip-content > span.trip-name{
+	position: relative;
+	top: 11px;
+	padding-left: 17px;
+	font-size: 1.1em;
+	font-weight: bold;
+	cursor: pointer;
+	right: 63px;
+}
+
+div.trip-content > span.trip-explanation{
+	font-size: 0.8em;
+    margin-left: 57px;
+    position: relative;
+    top: 15px;
+    right: 41px;
+}
+
+div.trip-content > span.trip-region{
+	font-size: 0.8em;
+    color: #2bae66;
+    padding-left: 17px;
+    position: relative;
+    top: 22px;
+    cursor: pointer;
+}
+
+div.trip-content > span.trip-region > img{
+	width: 12px;
+	position: relative;
+    top: -2px;
+}
+
+/* 별점 css */
+.star-ratings {
+  color: #aaa9a9; 
+  position: relative;
+  unicode-bidi: bidi-override;
+  width: max-content;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1.3px;
+  -webkit-text-stroke-color: #2b2a29;
+  float: left;
+  left: 148px;
+  top: 9px;
+  font-size: 12px;
+}
+.star-ratings-fill {
+  color: #fff58c;
+  padding: 0;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  -webkit-text-fill-color: gold;
+}
+.star-ratings-base {
+  z-index: 0;
+  padding: 0;
+}

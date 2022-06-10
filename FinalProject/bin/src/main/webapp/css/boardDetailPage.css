@@ -1,0 +1,191 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'MinSans-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+table.boardDetailPage{
+	width: 900px;
+	position: absolute;
+    top: 241px;
+    left: 523px;
+    font-family: 'MinSans-Medium';
+}
+
+span.boardtitle{
+	font-size: 2.2em;
+    font-weight: bold;
+}
+
+span.boardwriter{
+	font-weight: 600;
+}
+
+ span.likes{
+	position: relative;
+    right: -3px;
+    top: -50px;
+    float: right;
+}
+
+span.likes-img{
+	cursor: pointer;
+	float: right;
+    position: relative;
+    top: -58px;
+    right: 38px;
+}
+
+img.chuimage{
+	width: 23px;
+}
+
+span.writer-id, span.boardowner-id, span.comment-writer{
+	font-weight: 600;
+}
+
+ span.board-upd{
+    font-weight: 600;
+    position: relative;
+    right: 49px;
+    top: -48px;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+}
+
+span.board-del{
+	font-weight: 600;
+    position: relative;
+    right: -21px;
+    top: -48px;
+    font-size: 16px;
+    cursor: pointer;	
+    float: right;
+}
+
+span.comment-del{
+	position: relative;
+    right: 137px;
+    top: -2px;
+    font-size: 14px;
+    cursor: pointer;
+    float: right;
+    font-weight: 600;
+}
+
+ span.comment-upd{
+	position: relative;
+    right: 76px;
+    top: -2px;
+    font-size: 14px;
+    cursor: pointer;
+    float: right;
+    font-weight: 600;
+}
+
+hr.underline{
+	width: 895px;
+}
+
+pre.content-body{
+	display: block;
+    padding: 16px 9.5px 9.5px 9.5px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    border: 0px;
+    width: 900px;
+    height: 700px;
+    background-color: #fff;
+}
+
+span.comment-count{
+	color: #afafaf;
+}
+
+span.comment-head{
+	padding-left: 17px;
+    font-size: 1.3em;
+}
+
+span.comment-day{
+	float: right;
+	left: 700px;
+    position: absolute;
+    font-size: 0.8em;
+    color: #afafaf;
+}
+
+span.comment-content{
+	position: relative;
+    top: 11px;
+}
+
+td.comment{
+	position: absolute;
+    left: 49px;
+    top: 976px;
+    width: 800px;
+}
+
+span.boardowner-id{
+    margin-left: 55px;
+}
+
+span.boardowner-writer{
+	color: red;
+	font-size: 0.9em;
+}
+
+span.boardowner-content{
+	margin-left: 55px;
+	position: absolute;
+    top: 330px;
+}
+
+span.comment-writer{
+	margin-left: 5px;
+}
+
+input.commentbox{
+    width: 801px;
+    height: 82px;
+    margin-top: 5px;
+}
+
+button.btnreply{
+	margin-top: 27px;
+	border: 1px solid black;
+    background-color: #fff;
+    width: 45px;
+    height: 26px;
+}
+
+button.comment-insertbtn{
+	float: right;
+	border: 1px solid black;
+    background-color: #fff;
+    width: 50px;
+    height: 30px;
+}
+
+
+button.listbtn{
+    float: right;
+    border: 1px solid black;
+    background-color: #fff;
+    width: 70px;
+    height: 40px;
+  	font-size: 1.2em;
+}
+
+td.list{
+	position: absolute;
+    top: 1485px;
+}

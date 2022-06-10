@@ -1,0 +1,173 @@
+@charset "EUC-KR";
+
+/* ÆùÆ® */
+@font-face {
+    font-family: 'MinSans-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MinSans-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MinSans-Black';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+div.bulletinBoard,div.bestBoard{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 250px;
+  color: #212529;
+  font-family: MinSans-Medium;
+}
+
+
+div.bulletinBoard div.bulBoardHeader,div.bestBoardHeader{
+	margin-top: 30px;
+	width: 900px;
+	display: flex;
+    align-items: flex-end;
+}
+
+
+div.bulBoardHeader,div.bestBoardHeader span.bulBoard{
+	margin-left: 5px;
+	font-family: MinSans-Medium;
+	font-size: 22pt;
+}
+
+div.bulBoardHeader span.writeBul{
+	margin-left: 650px;
+}
+
+div.bulBoardHeader button.writeBul{
+	font-size: 11pt;
+	padding-top: 4px;
+	width: 90px;
+	height: 30px;
+	font-family: MinSans-Medium;
+	font-weight:normal;
+	color: #2bae66;
+	border: 1px solid #2bae66;
+	border-radius: 5px;
+	background-color: white;
+	margin-top: 5px;
+}
+
+div.bulletinBoard hr.hr2{
+	width: 900px;
+	border-top: 2px solid #eee;
+}
+
+div.bulletinBoard table.bulBoard{
+	width: 880px;
+	margin-left: 5px;
+}
+
+div.bulletinBoard table.bulBoard thead *{
+	color: #555;
+	text-align: center;
+	padding-bottom: 5px;
+}
+div.bulletinBoard table.bulBoard thead{
+	border-bottom: 1px solid #eee;
+	height: 40px;
+}
+
+div.bulletinBoard table.bulBoard tbody td{
+	text-align: center;
+	height: 60px;
+	padding-bottom: 5px;
+}
+
+div.bulletinBoard table.bulBoard thead tr td:first-child{
+	width: 100px;
+}
+
+div.bulletinBoard table.bulBoard tbody img{
+	width: 14px;
+	height: 14px;
+	margin-bottom: 6px;
+}
+div.bulletinBoard table.bulBoard thead td.subject{
+	width: 500px;
+}
+
+div.bulletinBoard table.bulBoard tbody td.subject{
+	width: 500px;
+	float: left;
+	padding-top: 18px;
+	padding-left: 10px;
+	display: flex;
+}
+div.bulletinBoard table.bulBoard tbody span.subject{
+	width: 350px;
+	display: block;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+    cursor: pointer;
+}
+
+
+div.bulletinBoard table.bulBoard tbody span.cntComments{
+	margin-left: 7px;
+	margin-right: 7px;
+}
+
+div.bulletinBoard div.myPagination{
+	display: flex;
+	justify-content: center;
+	color: #666;
+	font-family: MinSans-Light;
+	font-size: 12pt;
+}
+
+div.bulletinBoard ul.myPagination a{
+	color: #666;
+	margin: 5px;
+}
+
+div.bulletinBoard li.myActive{
+	color: #212529;
+	font-family: MinSans-Black;
+}
+div.bulletinBoard li{
+	margin: 5px;
+	cursor: pointer;
+}
+
+div.bulletinBoard ul.myPagination{
+	display: flex;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

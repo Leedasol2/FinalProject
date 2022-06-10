@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'MinSans-Black';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+hr.title-line{
+	width: 970px;
+    margin-left: -20px;
+    margin-bottom: 80px;
+    
+}
+
+div.scrap-count{
+	font-size: 15pt;
+    margin-top: 60px;
+    margin-left: 30px;
+}
+
+span.scrap-logo{
+	margin-left: 820px;
+	margin-top: -5px;
+}
+
+img.scrap-img{
+	width: 220px;
+    margin-top: 60px;
+	margin-right: 135px;    
+}
+
+span.scrap-name{
+	margin-left: 11px;
+    color: #969696;
+}
