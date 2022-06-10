@@ -119,3 +119,11 @@ button.btn-login-naver{
     background-color: #fff;
     margin-left: 15px;
 }
+<!-- 푸터 길이 줄이기 --!>
+div.footer{
+	width: 100%;
+	height: 550px;
+ 	background-color: #2bae66;
+ 	position: absolute; 
+ 	top: 1200px; 
+}
