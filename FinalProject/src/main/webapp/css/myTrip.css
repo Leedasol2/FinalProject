@@ -1,0 +1,175 @@
+@charset "EUC-KR";
+
+/* 폰트 */
+@font-face {
+    font-family: 'MinSans-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MinSans-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MinSans-Black';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 본문 div css */
+div.home div.myTripStart{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 250px;
+  color: #212529;
+  font-family: MinSans-Medium;
+	
+}
+
+/* 본문 헤더 */
+ div.myTripStart div.myTripHeader{
+ 	font-size: 15pt;
+ 	margin-bottom: 50px;
+ }
+
+div.myTripStart hr.hr1{
+ 	width: 950px;
+ 	margin-top: 30px;
+}
+
+
+/* 나만의 여행지 시작페이지 */
+div.myTripStart div.myTripBody{
+	margin-top: 30px;
+ 	align-items: center;
+  	display: flex;
+ 	flex-direction: column;
+ 	font-size: 25px;
+ 	font-family: MinSans-Light;
+ 	margin-bottom: 50px;
+}
+
+div.myTripStart div.myTripBody button{
+ 	margin-top: 50px; 
+ 	font-family: 'MinSans-Black';
+ 	width: 150px;
+ 	height: 80px;
+ 	background-color: white;
+ 	border: 2px solid #2bae66;
+ 	border-radius: 10px;
+ 	color: #2bae66;
+}
+
+div.myTripStart span.myTripBody{
+	color: #2bae66;
+	font-family: MinSans-Medium;
+	
+}
+
+/* 나만의 여행지 테스트 */
+
+div.myTripStart div.myTripTest{
+	align-items: center;
+  	display: flex;
+ 	flex-direction: column;
+}
+
+div.myTripStart div.myTripTest div.question{
+	font-size: 25px;
+ 	margin-bottom: 50px;
+	font-family: MinSans-Black;
+}
+
+div.myTripStart div.myTripTest div.answer{
+	align-items: center;
+  	display: flex;
+} 
+
+
+div.myTripStart div.myTripTest div.answer button{
+	font-size: 30px;
+ 	margin-bottom: 50px;
+	border: 1px solid #2bae66;
+	border-radius: 10px;
+	width: 300px;
+	height: 300px;
+	margin: 10px;
+	text-align: center;
+	cursor: pointer;
+	padding: 50px;
+}
+
+div.myTripStart div.myTripTest button.noActive{
+	background-color: white;
+	color: #2bae66;
+}
+
+div.myTripStart div.myTripTest button.active{
+	background-color: #2bae66;
+	color: white;
+}
+
+div.myTripStart div.myTripTest button.next{
+	margin-top: 60px;
+	margin-bottom: 50px;
+	width: 120px;
+	height: 60px;
+	border: 0;
+	border-radius: 30px;
+	font-size: 13pt;
+}
+
+
+
+/* 결과페이지 */
+
+div.myTripStart div.myTripResult{
+	align-items: center;
+  	display: flex;
+ 	flex-direction: column;
+}
+
+div.myTripStart div.myTripResult div.resultMsg1{
+	
+	font-size: 30pt;
+	font-family: MinSans-Black;
+	margin-bottom: 90px;
+}
+
+div.myTripStart div.myTripResult span{
+	
+	font-size: 13pt;
+	margin-bottom: 10px;
+}
+
+div.myTripStart div.myTripResult span.green{
+	color: #2bae66;
+	font-family: MinSans-Black;
+}
+
+div.myTripStart div.myTripResult button.result{
+	
+	margin-top: 100px;
+	font-family: MinSans-Black;
+	width: 190px;
+	height: 60px;
+	
+	color: #2bae66;
+	border: 1px solid #2bae66;
+	background-color: white;
+	border-radius: 30px;
+}
+
+
+
+
+

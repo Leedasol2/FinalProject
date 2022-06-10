@@ -111,10 +111,6 @@ a:hover {
 			
 		</div>
 		
-		<hr class="hr1">
-		
-		
-		
 		
 		
 	</div>
