@@ -13,8 +13,8 @@
 
 <!-- CSS -->
 <link rel="stylesheet" href="${root }/css/main.css"/>
-<link rel="stylesheet" href="${root }/css/festivalCalendar.css? after"/>
-<link href="${root }/css/myPageCalendar.css? after" rel="stylesheet">
+<link rel="stylesheet" href="${root }/css/festivalCalendar.css"/>
+<link href="${root }/css/myPageCalendar.css" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
 <style type="text/css"> /* css파일에 적용했더니 안되고, 여기서 작성하면 적용되는 css들..ㅠㅠ */
