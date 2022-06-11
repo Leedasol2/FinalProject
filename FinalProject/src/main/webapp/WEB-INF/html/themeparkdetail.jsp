@@ -7,43 +7,12 @@
 <head>
 <meta charset="UTF-8">
 <title>이런여행</title>
-
-<!-- root -->
-<c:set var="root" value="<%=request.getContextPath() %>"/>
-
-<!-- CSS -->
-<link rel="stylesheet" href="${root }/css/main.css"/>
-<link rel="stylesheet" href="${root }/css/themeparkdetail.css"/>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<style type="text/css"> /* css파일에 적용했더니 안되고, 여기서 작성하면 적용되는 css들..ㅠㅠ */
-@font-face {
-    font-family: 'MinSans-Medium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-input.search
-{
-	background-image: url("${root }/image/asset/검색아이콘.png");
-	background-repeat: no-repeat;
-	background-position: 25px center;
-}
-
-a { text-decoration:none !important;color: #495056; }
-a:hover { text-decoration:none !important;color: #495056; }
-</style>
-
-<!-- js -->
-<script src="https://code.jquery.com/jquery-latest.min.js"></script>
-
 </head>
 <body>
 
 <script type="text/javascript">
 $(function(){
 	
-
 	<!-- image 클릭 이벤트 -->
 	$(".small").click(function(){
 		
@@ -75,8 +44,6 @@ $(function(){
 // 		});
 });
 </script>
-	
-<div class="home">
 
 <!-- 	<!-- header 시작 --> -->
 <!-- 	<div class="header"> -->
@@ -211,7 +178,6 @@ $(function(){
 <!-- 차동현 -->
 <!-- 이강진</pre> -->
 <!-- 	</div>footer 끝 -->
-	
-</div>
+
 </body>
 </html>

@@ -8,6 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>이런여행</title>
+</head>
 <body>
 
 	<!-- 본문 시작 -->

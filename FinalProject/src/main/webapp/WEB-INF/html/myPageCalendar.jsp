@@ -6,46 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
 <title>이런여행</title>
-
-<!-- root -->
-<c:set var="root" value="<%=request.getContextPath()%>" />
-
-<!-- CSS -->
-<link rel="stylesheet" href="${root }/css/main.css" />
-<link rel="stylesheet" href="${root }/css/myPageEdit.css" />
-<link href="${root }/css/myPageCalendar.css" rel="stylesheet">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-<style type="text/css"> /* css파일에 적용했더니 안되고, 여기서 작성하면 적용되는 css들..ㅠㅠ */
-input.search {
-	background-image: url("${root }/image/asset/검색아이콘.png");
-	background-repeat: no-repeat;
-	background-position: 25px center;
-}
-
-a {
-	text-decoration: none !important;
-	color: #495056;
-}
-
-a:link { /*링크 방문 전*/
-    color: #495056;
-}
- 
-
-a:hover { /*마우스를 올려놓을 때*/
-    color: black;
-}
-
-</style>
-
-<!-- js -->
-<script src="https://code.jquery.com/jquery-latest.min.js"></script>
-<script src="js/calendar.js"></script>
-
 <script>
 	document.addEventListener('DOMContentLoaded', function() {
 		var calendarEl = document.getElementById('calendar');
@@ -58,7 +19,6 @@ a:hover { /*마우스를 올려놓을 때*/
 </script>
 </head>
 <body>
-	<div class="home">
 
 		<!-- header 시작 -->
 		<div class="header">
@@ -117,7 +77,5 @@ a:hover { /*마우스를 올려놓을 때*/
 		</div>
 		<!-- footer 끝 -->
 
-	</div>
 </body>
-
 </html>
