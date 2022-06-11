@@ -5,7 +5,8 @@ hr.title-line{
     margin-bottom: 20px;
     border: 0;
     border-top: 1px solid #eee;
-    width: 670px;
+    width: 760px;
+    margin-left: -33px;
 }
 
 div.theme-category{
