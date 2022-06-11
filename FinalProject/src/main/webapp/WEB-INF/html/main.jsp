@@ -23,61 +23,6 @@
 <script src="${root}/js/main.js"></script>
 </head>
 <body>
-<div class="home">
-
-	<!-- header 시작 -->
-	<div class="header">
-			<div class="top-box">
-				<div class="inner">
-					<div class="search-box">
-						<div class="logo">
-							<a href="">
-								<img alt="2runtrip" src="${root}/image/asset/로고.png">				
-							</a>
-						</div>
-						<div class="search">
-							<input type="text" placeholder="이런 여행 없을까? 검색해보세요.">	
-						</div>
-					</div>
-					<div class="member-box">
-						<button class="login">로그인</button>
-						<button class="join">회원가입</button>
-					</div>
-				</div>
-			</div>
-			<div class="bottom-box">
-				<div class="inner">
-					<ul class="gnb">
-						<li>
-							<a href="#">여행을 떠나요</a>
-							<ul>
-								<li>베스트 여행지</li>
-								<li>지역별 여행지</li>
-								<li>테마별 여행지</li>
-							</ul>
-						</li>
-						<li>
-							<a href="#">액티비티</a>
-							<ul>
-								<li>테마파크</li>
-								<li>축제</li>
-							</ul>
-						</li>
-						<li>
-							<a href="#">여행 공유</a>
-						</li>
-						<li>
-							<a href="#">나만의 코스짜기</a>
-						</li>
-					</ul>
-					<div class="perfect-trip">
-						<button class="perfect-trip-btn">나에게 딱 맞는 여행지는?</button>
-					</div>
-				</div>
-			</div>
-			
-			
-		</div> <!-- header 끝 -->
 
 	<!-- main 시작 -->
 	<div class="container">
@@ -487,43 +432,5 @@
 
 	<!-- main 끝 -->
 
-	<!-- footer 시작 -->
-	<div class="footer">
-		<div class="inner">
-			<div class="top-info">
-				<div class="logo">
-					<a href=""><img alt="로고white" src="${root}/image/asset/로고white.png"></a>
-				</div>
-				<div class="name">
-					<ul class="namelist">
-						<li>이다솔</li>
-						<li>김은비</li>
-						<li>김태민</li>
-						<li>이용기</li>
-						<li>차동현</li>
-						<li>이강진</li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="bottom-info">
-				<div class="company-info">
-					<ul class="infolist">
-						<li>(주) 2RUN TRIP</li>
-						<li> 서울특별시 강남구 이런트립타워 2층 고객센터 : 2222-2222</li>
-						<li>사업자등록번호: 222-22-22222 이메일 : 2RUN@gmail.com</li>
-						<li>ⓒ 2022 2Run Trip Company. All Rights Reserved.</li>
-					</ul>
-				</div>
-				<div class="tools">
-					<img alt="tools" src="${root}/image/asset/개발도구.png">
-				</div>
-			</div>
-
-		</div>
-	</div>
-	<!-- footer끝 -->
-
-</div><!-- home끝 -->
 </body>
 </html>
