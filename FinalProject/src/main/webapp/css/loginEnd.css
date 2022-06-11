@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'MinSans-Black';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+div.login-end{
+	width: auto;
+    position: relative;
+    left: 630px;
+    top:60px;
+}
+
+td.login-end-email{
+	display: inline-block;
+    position: relative;
+    color: #212529;
+    font-family: 'MinSans-Medium';
+    font-size: 16pt;
+    font-weight: bold;
+
+}
+
+td.login-end-info{
+    position: relative;
+    color: #212529;
+    font-family: 'MinSans-Medium';
+    font-size: 16pt;
+    font-weight: bold;    
+}
+
+td.login-end-end{
+    position: relative;
+    color: #2bae66;
+    font-family: 'MinSans-Medium';
+    font-size: 16pt;
+    font-weight: bold;
+
+}
+
+hr.login-end-line{	
+	width: 50px;
+	border: 0;
+	height: 2px;
+	background-color: #afafaf;
+	margin-left: 10px;
+	margin-right: 10px;	
+	margin-top: 13px;		
+}
+
+span.login-end-title{
+	position: relative;
+	font-weight: bold;
+    font-size: 20pt;
+    color: #212529;
+    margin-left: 210px;
+
+}
+
+span.login-end-subtitle{
+	position: relative;
+    font-family: 'MinSans-Medium';
+    font-size: 11pt;
+    color: #212529;
+    margin-left: 190px;
+    margin-top: 60px;
+
+}
+
+
+img.login-end{
+    position: relative;	
+	margin-bottom: 8px;
+}
+
+div.edong-title{
+	
+	margin-top:100px;
+	
+}
+
+div.edong-subtitle{
+	
+	margin-top:30px;
+	
+}
+
+button.btn-end-login{
+	border-radius: 40px;
+    width: 120px;
+   	height: 45px;    
+    color: #fff;
+    background-color: #33b679;
+ 	border: 1px;
+	font-size: 15px;
+	font-weight: bold;
+	margin-left: 290px;
+	margin-top: 80px;	
+}
+
+
+
