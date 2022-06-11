@@ -15,6 +15,8 @@
 <link rel="stylesheet" href="${root }/css/main.css"/>
 <link rel="stylesheet" href="${root }/css/festivaldetail.css"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <style type="text/css"> /* css파일에 적용했더니 안되고, 여기서 작성하면 적용되는 css들..ㅠㅠ */
 @font-face {
     font-family: 'MinSans-Medium';
@@ -78,44 +80,44 @@ $(function(){
 	
 <div class="home">
 
-	<!-- header 시작 -->
-	<div class="header">
-	  <div class="headercontent">
-		<a href="${root }/"><img class="logoimg" src="${root }/image/asset/로고.png"></a>
-		<input type="text" name="search" class="search" placeholder="이런 여행 없을까? 검색해보세요">
-		<button type="button" class="login">로그인</button>
-		<button type="button" class="join">회원가입</button>
-		<img class="mainline" src="${root }/image/asset/메인-라인.png">
+<!-- 	<!-- header 시작 --> -->
+<!-- 	<div class="header"> -->
+<!-- 	  <div class="headercontent"> -->
+<%-- 		<a href="${root }/"><img class="logoimg" src="${root }/image/asset/로고.png"></a> --%>
+<!-- 		<input type="text" name="search" class="search" placeholder="이런 여행 없을까? 검색해보세요"> -->
+<!-- 		<button type="button" class="login">로그인</button> -->
+<!-- 		<button type="button" class="join">회원가입</button> -->
+<%-- 		<img class="mainline" src="${root }/image/asset/메인-라인.png"> --%>
 		
-		<div id="container">
-		<ul class="myMenu">
-		    <li class="menu1">
-		        <a href="#"><img alt="" src="${root }/image/asset/여행을떠나요아이콘.png">
-		        &nbsp;&nbsp;여행을 떠나요
-		        <img class="submenuicon1" src="${root }/image/asset/서브메뉴아이콘.png"></a>
-		        <ul class="menu1_s submenu">
-		            <li>베스트 여행지</li>
-		            <li>지역별 여행지</li>
-		            <li>테마별 여행지</li>
-		        </ul>   
-		    </li>
-		    <li class="menu2">
-		    	<a href="#"><img alt="" src="${root }/image/asset/액티비티아이콘.png">
-		        &nbsp;&nbsp;액티비티
-		        <img class="submenuicon2" src="${root }/image/asset/서브메뉴아이콘.png"></a>
-		        <ul class="menu2_s submenu">
-		            <li>테마파크</li>
-		            <li>축제</li>
-		        </ul>   
-		    </li>
-		    <li class="menu3"><a href="#"><img alt="" src="${root }/image/asset/여행공유아이콘.png">&nbsp;&nbsp;여행 공유</a></li>
-		    <li class="menu4"><a href="#"><img alt="" src="${root }/image/asset/나만의코스짜기아이콘.png">&nbsp;&nbsp;나만의 코스짜기</a></li>   
-		</ul>
+<!-- 		<div id="container"> -->
+<!-- 		<ul class="myMenu"> -->
+<!-- 		    <li class="menu1"> -->
+<%-- 		        <a href="#"><img alt="" src="${root }/image/asset/여행을떠나요아이콘.png"> --%>
+<!-- 		        &nbsp;&nbsp;여행을 떠나요 -->
+<%-- 		        <img class="submenuicon1" src="${root }/image/asset/서브메뉴아이콘.png"></a> --%>
+<!-- 		        <ul class="menu1_s submenu"> -->
+<!-- 		            <li>베스트 여행지</li> -->
+<!-- 		            <li>지역별 여행지</li> -->
+<!-- 		            <li>테마별 여행지</li> -->
+<!-- 		        </ul>    -->
+<!-- 		    </li> -->
+<!-- 		    <li class="menu2"> -->
+<%-- 		    	<a href="#"><img alt="" src="${root }/image/asset/액티비티아이콘.png"> --%>
+<!-- 		        &nbsp;&nbsp;액티비티 -->
+<%-- 		        <img class="submenuicon2" src="${root }/image/asset/서브메뉴아이콘.png"></a> --%>
+<!-- 		        <ul class="menu2_s submenu"> -->
+<!-- 		            <li>테마파크</li> -->
+<!-- 		            <li>축제</li> -->
+<!-- 		        </ul>    -->
+<!-- 		    </li> -->
+<%-- 		    <li class="menu3"><a href="#"><img alt="" src="${root }/image/asset/여행공유아이콘.png">&nbsp;&nbsp;여행 공유</a></li> --%>
+<%-- 		    <li class="menu4"><a href="#"><img alt="" src="${root }/image/asset/나만의코스짜기아이콘.png">&nbsp;&nbsp;나만의 코스짜기</a></li>    --%>
+<!-- 		</ul> -->
 		
-		<button type="button" class="findtrip">나에게 딱 맞는 여행지는?</button>
-		</div>
-	  </div>
-	</div> <!-- header 끝 -->
+<!-- 		<button type="button" class="findtrip">나에게 딱 맞는 여행지는?</button> -->
+<!-- 		</div> -->
+<!-- 	  </div> -->
+<!-- 	</div> header 끝 -->
 
 	<!-- main 시작 -->
 	<div class="main">
@@ -165,7 +167,19 @@ $(function(){
 	<b>지도</b>
 	</div>
 	<br><br>
-	<img alt="" src="${root }/photo/map3.png" class="map">
+	 
+	 <!-- KakaoMap -->
+	<div id="map" class="kakaomap"></div>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8148de36e2b8d4215e24f39fffbd1a62"></script> 
+	<script>
+		var container = document.getElementById('map');
+		var options = {
+				center: new kakao.maps.LatLng(37.520555375455, 127.11505129348), <!--위도 / 경도 -->
+			level: 3
+		};
+		var map = new kakao.maps.Map(container, options);
+	</script>
+	
 	<br><br><br><br>
 	<hr width="970px"><br>
 	
@@ -193,21 +207,21 @@ $(function(){
 	<br>양일간 페스티벌 진행!</span></div>
 	</div><!-- main 끝 -->
 
-	<!-- footer 시작 -->
-	<div class="footer">
-		<img class="logowhite" src="${root }/image/asset/로고white.png">
-		<img class="footerdeco" src="${root }/image/asset/개발도구.png">
-		<pre class="pre1">(주) 2RUN TRIP
-서울특별시 강남구 이런트립타워 2층		고객센터 : 2222-2222
-사업자등록번호: 222-22-22222		이메일 : 2RUN@gmail.com
-ⓒ 2022 2Run Trip Company. All Rights Reserved.</pre>
-		<pre class="pre2">이다솔
-김은비
-김태민
-이용기
-차동현
-이강진</pre>
-	</div><!-- footer 끝 -->
+<!-- 	<!-- footer 시작 --> -->
+<!-- 	<div class="footer"> -->
+<%-- 		<img class="logowhite" src="${root }/image/asset/로고white.png"> --%>
+<%-- 		<img class="footerdeco" src="${root }/image/asset/개발도구.png"> --%>
+<!-- 		<pre class="pre1">(주) 2RUN TRIP -->
+<!-- 서울특별시 강남구 이런트립타워 2층		고객센터 : 2222-2222 -->
+<!-- 사업자등록번호: 222-22-22222		이메일 : 2RUN@gmail.com -->
+<!-- ⓒ 2022 2Run Trip Company. All Rights Reserved.</pre> -->
+<!-- 		<pre class="pre2">이다솔 -->
+<!-- 김은비 -->
+<!-- 김태민 -->
+<!-- 이용기 -->
+<!-- 차동현 -->
+<!-- 이강진</pre> -->
+<!-- 	</div>footer 끝 -->
 	
 </div>
 </body>
