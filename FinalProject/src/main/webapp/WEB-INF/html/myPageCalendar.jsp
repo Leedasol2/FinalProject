@@ -15,7 +15,7 @@
 <!-- CSS -->
 <link rel="stylesheet" href="${root }/css/main.css" />
 <link rel="stylesheet" href="${root }/css/myPageEdit.css" />
-<link href="${root }/css/myPageCalendar.css? after" rel="stylesheet">
+<link href="${root }/css/myPageCalendar.css" rel="stylesheet">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
@@ -31,10 +31,15 @@ a {
 	color: #495056;
 }
 
-a:hover {
-	text-decoration: none !important;
-	color: #495056;
+a:link { /*링크 방문 전*/
+    color: #495056;
 }
+ 
+
+a:hover { /*마우스를 올려놓을 때*/
+    color: black;
+}
+
 </style>
 
 <!-- js -->
