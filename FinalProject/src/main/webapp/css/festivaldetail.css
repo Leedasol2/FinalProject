@@ -29,7 +29,7 @@ span.date{
 	color: #afafaf;
 	font-size: 8pt;
 }
-img.map, img.image{
+.kakaomap, img.image{
 	width: 600px;
 	height: 400px;
 	left: 650px;
