@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan({"data.*"})		 //패키지 등록 
+@ComponentScan({"data.*", "com.example.demo"})		 //패키지 등록 
 public class FinalProjectApplication {
 
 	public static void main(String[] args) {
