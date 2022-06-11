@@ -1,0 +1,206 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'MinSans-Black';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+div.login-info{
+	width: auto;
+    position: relative;
+    left: 630px;
+    top:60px;
+}
+
+td.login-info-email{
+	display: inline-block;
+    position: relative;
+    color: #212529;
+    font-family: 'MinSans-Medium';
+    font-size: 16pt;
+    font-weight: bold;
+
+}
+
+td.login-info-info{
+    position: relative;
+    color: #2bae66;
+    font-family: 'MinSans-Medium';
+    font-size: 16pt;
+    font-weight: bold;    
+}
+
+td.login-info-end{
+    position: relative;
+    color: #212529;
+    font-family: 'MinSans-Medium';
+    font-size: 16pt;
+    font-weight: bold;
+
+}
+
+hr.login-info-line{	
+	width: 50px;
+	border: 0;
+	height: 2px;
+	background-color: #afafaf;
+	margin-left: 10px;
+	margin-right: 10px;	
+	margin-top: 13px;		
+}
+
+span.login-info-title{
+	position: relative;
+	font-weight: bold;
+    font-size: 30pt;
+    color: #212529;
+    margin-left: 215px;
+
+}
+
+div.edong{
+	
+	margin-top:100px;
+	
+}
+
+table.login-info-table{
+	
+	margin-top: 80px;
+	margin-left: 70px;	
+}
+
+img.login-info{
+	
+    position: relative;	
+	margin-bottom: 8px;
+}
+
+td.table-title{
+	
+	width: 120px;
+	font-family: 'MinSans-Medium';
+	font-size: 15pt;
+		
+}
+
+
+td.login-info-content{
+    width: 400px;
+    height: 50px;	
+	text-align: left;
+	border: 2px solid #afafaf;
+		
+}
+
+td.login-info-empty{
+
+    height: 30px;			
+}
+
+td.login-info-empty-small{
+	
+    height: 20px;			
+}
+
+td.login-info-empty-small2{
+	
+    height: 10px;			
+}
+
+input.form-logineinfo-input{
+	
+	border: none;
+	width: 300px;
+	height: 40px;
+		
+}
+
+input:focus {
+	
+	outline:none;	
+}
+
+input.input-email{
+	
+	width: 185px;
+	height: 50px;
+	border: 2px solid #afafaf;	
+	
+}
+
+div.btn-group1{
+	
+	margin-top: 20px;
+}
+
+button.btn-check-all{
+	font-family: 'MinSans-Medium';
+	font-weight: bold;
+	border: 0;
+    outline: 0;
+    background-color: #fff;
+    color: #696969;
+    margin-left: 180px;   
+}
+
+button.btn-check{
+	font-family: 'MinSans-Medium';
+	border: 0;
+    outline: 0;
+    background-color: #fff;
+    color: #696969;
+    margin-left: 180px;   
+}
+
+button.btn-back{
+	font-family: 'MinSans-Medium';
+	border: 0;
+    outline: 0;
+    background-color: #fff;
+    color: #696969;
+    margin-left: 250px;    
+}
+
+button.btn-next{
+    font-family: 'MinSans-Medium';	
+	border: 0;
+    outline: 0;
+    background-color: #fff;
+    color: #696969;
+    margin-top: 70px;  
+}
+
+img.login-info-check{
+	
+	margin-bottom: 2px;
+	
+}
+
+img.login-info-check1{
+	
+	margin-left: 1px;
+	margin-bottom: 2px;
+	margin-right: 2px;
+}
+
+img.login-info-back{
+	
+	margin-bottom: 5px;
+	margin-right: 10px;
+	
+}
+
+img.login-info-next{
+	
+	margin-bottom: 5px;
+	margin-left: 10px;
+	
+}
+
+a.a-color{
+	color: #00BFFF;
+	
+}
