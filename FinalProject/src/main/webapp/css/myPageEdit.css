@@ -28,62 +28,56 @@ span.mypage-title{
 
 li.mypage-editmember{
 	display: inline-block;
-    width: 160px;
+    width: 255px;
     height: 90px;
-    left:-65px;
+    left: -60px;
     text-align: center;
     position: relative;
     padding-top: 27px;
     color: #495056;
     font-family: 'MinSans-Medium';
-    font-weight: 500;
-    font-size: 14pt;
-    text-decoration: none;
+    /* font-weight: 500; */
+    font-size: 16pt;
+    /* text-decoration: none; */
+    bottom: -40px;
 }
 
 li.mypage-scrap{
 	display: inline-block;
-    width: 160px;
     height: 90px;
-    left:-65px;
+    left: -60px;
     text-align: center;
     position: relative;
     padding-top: 27px;
     color: #495056;
     font-family: 'MinSans-Medium';
-    font-weight: 500;
-    font-size: 14pt;
-    text-decoration: none;
+    font-size: 16pt;
+    bottom: -40px;
 }
 
 li.mypage-mycalendar{
 	display: inline-block;
-    width: 160px;
     height: 90px;
-    left:-65px;    
     text-align: center;
     position: relative;
     padding-top: 27px;
     color: #495056;
     font-family: 'MinSans-Medium';
-    font-weight: 500;
-    font-size: 14pt;
-    text-decoration: none;
+    font-size: 16pt;
+    bottom: -40px;
 }
 
 li.mypage-review{
 	display: inline-block;
-    width: 160px;
     height: 90px;
-    left:-65px;   
     text-align: center;
     position: relative;
     padding-top: 27px;
     color: #495056;
     font-family: 'MinSans-Medium';
-    font-weight: 500;
-    font-size: 14pt;
-    text-decoration: none;
+    font-size: 16pt;
+    bottom: -40px;
+    left: 60px;
 }
 
 table.edit-content{
