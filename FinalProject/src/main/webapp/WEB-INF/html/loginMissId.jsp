@@ -7,34 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <title>이런여행</title>
-
-<!-- root -->
-<c:set var="root" value="<%=request.getContextPath() %>"/>
-
-<!-- CSS -->
-<link rel="stylesheet" href="${root }/css/main.css"/>
-<link rel="stylesheet" href="${root }/css/loginMissId.css" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<style type="text/css"> /* css파일에 적용했더니 안되고, 여기서 작성하면 적용되는 css들..ㅠㅠ */
-input.search
-{
-	background-image: url("${root }/image/asset/검색아이콘.png");
-	background-repeat: no-repeat;
-	background-position: 25px center;
-}
-
-a { text-decoration:none !important;color: #495056; }
-a:hover { text-decoration:none !important;color: #495056; }
-
-</style>
-
-<!-- js -->
-<script src="https://code.jquery.com/jquery-latest.min.js"></script>
-
-
 </head>
 <body>
-<div class="home">
 
 	<!-- main 시작 -->
 	<div class="main">
@@ -78,9 +52,8 @@ a:hover { text-decoration:none !important;color: #495056; }
 		<hr class="login-missid-line">
 			
 	</div>
-	</div><!-- main 끝 -->
-
-	
 </div>
+<!-- main 끝 -->
+
 </body>
 </html>
