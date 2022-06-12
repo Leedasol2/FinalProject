@@ -13,6 +13,7 @@ public class IndexController {
 		return "/layout/main";
 	}
 	
+	//용기
 	@GetMapping("/html/festival")
 	public String festival() {
 		
@@ -60,6 +61,53 @@ public class IndexController {
 		
 		return "/html/modalCalendar";
 	}
+
+	//다솔
+
+	@GetMapping("/html/bestBoard")
+	public String bestBoard() {
+		
+		return "/html/bestBoard";
+	}
+	
+	@GetMapping("/html/bulletinBoard")
+	public String bulletinBoard() {
+		
+		return "/html/bulletinBoard";
+	}
+	
+	
+	@GetMapping("/html/myTripResult")
+	public String myTripResult() {
+		
+		return "/html/myTripResult";
+	}
+	
+	@GetMapping("/html/myTripStart")
+	public String myTripStart() {
+		
+		return "/html/myTripStart";
+	}
+	
+	@GetMapping("/html/myTripTest")
+	public String myTripTest() {
+		
+		return "/html/myTripTest";
+	}
+	
+	
+	@GetMapping("/html/shareTripHome")
+	public String shareTripHome() {
+		
+		return "/html/shareTripHome";
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
