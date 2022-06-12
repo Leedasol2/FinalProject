@@ -1,11 +1,16 @@
 @charset "UTF-8";
 
-hr.title-line{
+.theme-main{
+	margin-top: -202px;
+    margin-bottom: 200px;
+}
+
+hr.theme-title-line{
 	margin-top: 20px;
     margin-bottom: 20px;
     border: 0;
     border-top: 1px solid #eee;
-    width: 760px;
+    width: 780px;
     margin-left: -33px;
 }
 
@@ -62,7 +67,7 @@ div.category-title > span.title-content{
 }
 
 div.theme-content{
-	width: 220px;
+	width: 245px;
 	height: 270px;
 	border: 1px solid #afafaf;
 	border-radius: 10px;
@@ -86,8 +91,8 @@ div.theme-content > span.theme-name{
     top: 11px;
     font-weight: bold;
     cursor: pointer;
-    right: 56px;
-    font-size: 9pt;
+    right: 50px;
+    font-size: 10pt;
 }
 
 div.theme-content > span.theme-explanation{
@@ -101,14 +106,14 @@ div.theme-content > span.theme-explanation{
 div.theme-content > span.theme-region{
 	font-size: 0.8em;
     color: #2bae66;
-    padding-left: 12px;
+    padding-left: 33px;
     position: relative;
     top: 25px;
     cursor: pointer;
 }
 
 /* 별점 css */
-.star-ratings {
+div.theme-content div.star-ratings {
   color: #aaa9a9; 
   position: relative;
   unicode-bidi: bidi-override;
@@ -117,11 +122,11 @@ div.theme-content > span.theme-region{
   -webkit-text-stroke-width: 1.3px;
   -webkit-text-stroke-color: #2b2a29;
   float: left;
-  left: 148px;
-  top: 9px;
+  left: 170px;
+  top: 12.5px;
   font-size: 12px;
 }
-.star-ratings-fill {
+div.theme-content div.star-ratings-fill {
   color: #fff58c;
   padding: 0;
   position: absolute;
@@ -132,7 +137,7 @@ div.theme-content > span.theme-region{
   overflow: hidden;
   -webkit-text-fill-color: gold;
 }
-.star-ratings-base {
+div.theme-content div.star-ratings-base {
   z-index: 0;
   padding: 0;
 }

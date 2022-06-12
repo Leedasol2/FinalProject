@@ -73,7 +73,7 @@ $("a.jeju").click(function(){
   <span class="main-title">테마파크</span>
   <span class="sub-title">액티비티</span>
   <span class="title-content">가고 싶은 지역별 테마파크를 골라보세요!<br>실제 여행객들의 생생한 리뷰까지 만나보세요</span>
-  <hr class="title-line">
+  <hr class="theme-title-line">
 </div>
 
 <div class="regionofkorea">
