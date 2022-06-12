@@ -7,10 +7,52 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class IndexController {
 
-	@GetMapping("/")
-	public String home() {
+	@GetMapping("/html/festival")
+	public String festival() {
 		
-		return "/layout/main";
+		return "/html/festival";
+	}
+	
+	@GetMapping("/html/festivalCalendar")
+	public String festivalCalendar() {
+		
+		return "/html/festivalCalendar";
+	}
+	
+	@GetMapping("/html/myPageCalendar")
+	public String myPageCalendar() {
+		
+		return "/html/myPageCalendar";
+	}
+	
+	@GetMapping("/html/modalCalendar")
+	public String modalCalendar() {
+		
+		return "/html/modalCalendar";
+	}
+	
+	@GetMapping("/html/myPageEdit")
+	public String myPageEdit() {
+		
+		return "/html/myPageEdit";
+	}
+	
+	@GetMapping("/html/myPageReview")
+	public String myPageReview() {
+		
+		return "/html/myPageReview";
+	}
+	
+	@GetMapping("/html/myPageScrap")
+	public String myPageScrap() {
+		
+		return "/html/myPageScrap";
+	}
+	
+	@GetMapping("/html/themePark")
+	public String themePark() {
+		
+		return "/html/themePark";
 	}
 	
 	
