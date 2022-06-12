@@ -21,7 +21,7 @@
 }
 
 /* º»¹® div css */
-div.home div.myTripStart{
+div.myTripStart{
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -29,7 +29,6 @@ div.home div.myTripStart{
   z-index: 1;
   width: 100%;
   height: 100%;
-  top: 250px;
   color: #212529;
   font-family: MinSans-Medium;
 	
@@ -39,11 +38,11 @@ div.home div.myTripStart{
  div.myTripStart div.myTripHeader{
  	font-size: 15pt;
  	margin-bottom: 50px;
+ 	margin-top: 30px;
  }
 
 div.myTripStart hr.hr1{
  	width: 950px;
- 	margin-top: 30px;
 }
 
 
@@ -59,13 +58,14 @@ div.myTripStart div.myTripBody{
 }
 
 div.myTripStart div.myTripBody button{
- 	margin-top: 50px; 
+ 	margin-top: 100px; 
+ 	margin-bottom: 100px; 
  	font-family: 'MinSans-Black';
- 	width: 150px;
+ 	width: 180px;
  	height: 80px;
  	background-color: white;
  	border: 2px solid #2bae66;
- 	border-radius: 10px;
+ 	border-radius: 45px;
  	color: #2bae66;
 }
 
@@ -81,6 +81,7 @@ div.myTripStart div.myTripTest{
 	align-items: center;
   	display: flex;
  	flex-direction: column;
+ 	margin-bottom: 50px;
 }
 
 div.myTripStart div.myTripTest div.question{
@@ -136,6 +137,8 @@ div.myTripStart div.myTripResult{
 	align-items: center;
   	display: flex;
  	flex-direction: column;
+ 	margin-bottom: 80px;
+ 	margin-top: 50px;
 }
 
 div.myTripStart div.myTripResult div.resultMsg1{
@@ -148,7 +151,8 @@ div.myTripStart div.myTripResult div.resultMsg1{
 div.myTripStart div.myTripResult span{
 	
 	font-size: 13pt;
-	margin-bottom: 10px;
+	padding-bottom: 10px;
+	font-family: MinSans-Medium;
 }
 
 div.myTripStart div.myTripResult span.green{
@@ -162,14 +166,15 @@ div.myTripStart div.myTripResult button.result{
 	font-family: MinSans-Black;
 	width: 190px;
 	height: 60px;
-	
-	color: #2bae66;
 	border: 1px solid #2bae66;
 	background-color: white;
 	border-radius: 30px;
 }
 
 
+div.myTripStart div.myTripResult button.result>span{
 
+	color: #2bae66;
+}
 
 
