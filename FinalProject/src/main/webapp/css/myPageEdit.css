@@ -9,14 +9,14 @@
 
 form.form-memberform{
 	position: relative;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 div.mypage-content{
 	width: auto;
     position: relative;
-    left: 500px;
-    top: 250px;
+  	left: 575px;
+    top: 30px;
 }
 
 
@@ -87,7 +87,7 @@ li.mypage-review{
 }
 
 table.edit-content{
-	margin-left: 100px;
+	margin-left: 50px;
     width: 800px;
     height: 300px;
     font-size: 15pt;
@@ -115,12 +115,15 @@ div.btn_group{
 	position: relative;
     font-size: 18pt;
     left: 170px;
-    margin-top: 60px;
+	margin-top: 130px;
+    margin-bottom: 120px;    
 }
 
-button.btn-update{
+button.btn-update-information{
+	position: relative;
+    top: -60px;
+    margin-bottom: 10px;	
 	border-radius: 40px;
-    margin-right: 50px;
     width: 280px;
    	height: 70px;    
     color: #fff;
@@ -129,17 +132,22 @@ button.btn-update{
 }
 
 button.btn-delete{
+	position: relative;
+    top: -60px;
+    margin-bottom: 10px;	
 	border-radius: 40px;
-    margin-left: 50px;
     width: 280px;
    	height: 70px;
     color: #33b679;
     border: 1px solid;
 }
 
-hr.title-line{
-	width: 970px;
-    margin-left: -20px;
-    margin-bottom: 80px;    
+hr.memberedit-title-line{
+	margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+    width: 935px;
+    margin-left: -33px; 
 }
 
