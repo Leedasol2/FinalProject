@@ -33,7 +33,7 @@
 
 					<li class="mypage-review"><a href="#">리뷰</a></li>
 				</ul>
-				<hr class="title-line">
+				<hr class="modal-title-line">
 			</div>
 
 
