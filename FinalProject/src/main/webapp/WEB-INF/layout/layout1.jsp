@@ -22,10 +22,6 @@
 <link rel="stylesheet" href="${root}/css/myTrip.css"/>
 <link rel="stylesheet" href="${root}/css/shareTripHome.css"/>
 
-<!-- 김은비 -->
-<link rel="stylesheet" href="${root}/css/main.css"/>
-<link rel="stylesheet" href="${root}/css/reset.css"/>
-
 <!-- 이용기 -->
 <link rel="stylesheet" href="${root}/css/modalCalendar.css"/>
 <link rel="stylesheet" href="${root}/css/myPageCalendar.css"/>
@@ -58,6 +54,10 @@
 <link rel="stylesheet" href="${root}/css/loginJoin.css"/>
 <link rel="stylesheet" href="${root}/css/loginMissId.css"/>
 <link rel="stylesheet" href="${root}/css/loginMissPass.css"/>
+
+<!-- 김은비 -->
+<link rel="stylesheet" href="${root}/css/main.css"/>
+<link rel="stylesheet" href="${root}/css/reset.css"/>
 
 <!-- js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
