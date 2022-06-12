@@ -122,9 +122,54 @@ public class IndexController {
 	}
 	
 	
+//태민	
 	
+	@GetMapping("/html/loginEmail")
+	public String loginEmail() {
+		
+		return "/html/loginEmail";
+	}	
 	
+	@GetMapping("/html/loginEmailCheck")
+	public String loginEmailCheck() {
+		
+		return "/html/loginEmailCheck";
+	}	
 	
+	@GetMapping("/html/loginEnd")
+	public String loginEnd() {
+		
+		return "/html/loginEnd";
+	}	
+	
+	@GetMapping("/html/loginHome")
+	public String loginHome() {
+		
+		return "/html/loginHome";
+	}	
+	
+	@GetMapping("/html/loginInfo")
+	public String loginInfo() {
+		
+		return "/html/loginInfo";
+	}	
+	
+	@GetMapping("/html/loginJoin")
+	public String loginJoin() {
+		
+		return "/html/loginJoin";
+	}	
+	
+	@GetMapping("/html/loginMissId")
+	public String loginMissId() {
+		
+		return "/html/loginMissId";
+	}	
+	@GetMapping("/html/loginMissPass")
+	public String loginMissPass() {
+		
+		return "/html/loginMissPass";
+	}	
 	
 	
 	
