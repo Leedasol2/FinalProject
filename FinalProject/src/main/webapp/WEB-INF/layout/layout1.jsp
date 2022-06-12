@@ -41,9 +41,9 @@
 <link rel="stylesheet" href="${root}/css/boardwriteform.css"/>
 
 <!-- 이강진 -->
-<link rel="stylesheet" href="${root}/css/themeparkdetail.css"/>
-<link rel="stylesheet" href="${root}/css/festivaldetail.css"/>
-<link rel="stylesheet" href="${root}/css/mytripdetail.css"/>
+<link rel="stylesheet" href="${root}/css/themeParkDetail.css"/>
+<link rel="stylesheet" href="${root}/css/festivalDetail.css"/>
+<link rel="stylesheet" href="${root}/css/myTripDetail.css"/>
 
 <!-- 김태민 -->
 <link rel="stylesheet" href="${root}/css/loginEmail.css"/>
