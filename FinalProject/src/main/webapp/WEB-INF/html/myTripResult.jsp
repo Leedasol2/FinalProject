@@ -29,7 +29,7 @@
 			
 				<!-- 이미지 -->
 			
-				<span>언제나 새로운 경험을 해보고 싶은 <span class="green">모험가 유형의 당신! </span></span><br>
+				<span>언제나 새로운 경험을 해보고 싶은 <span class="green">모험가 유형의 당신! </span></span><br><br>
 				<span>2RUN TRIP에서 전에 느껴보지 못한 짜릿함을 경험하세요</span>
 			</div>
 			
