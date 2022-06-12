@@ -67,13 +67,13 @@ public class IndexController {
 	@GetMapping("/html/bestBoard")
 	public String bestBoard() {
 		
-		return "/html/bestBoard";
+		return "/board/html/bestBoard";
 	}
 	
 	@GetMapping("/html/bulletinBoard")
 	public String bulletinBoard() {
 		
-		return "/html/bulletinBoard";
+		return "/board/html/bulletinBoard";
 	}
 	
 	
@@ -99,7 +99,7 @@ public class IndexController {
 	@GetMapping("/html/shareTripHome")
 	public String shareTripHome() {
 		
-		return "/html/shareTripHome";
+		return "/board/html/shareTripHome";
 	}
 	
 	
