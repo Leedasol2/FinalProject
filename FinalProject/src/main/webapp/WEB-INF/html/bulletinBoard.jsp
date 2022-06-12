@@ -13,24 +13,7 @@
 
 	<!-- 본문 시작 -->
 	<div class="bulletinBoard">
-		
-		<!-- 여행공유 홈 헤더-공통 -->
-		<div class="tripHeader">
-			<div>여행공유</div>
-			<span class="verLine">｜</span>&nbsp;<span class="tripHeadMsg">여러분의 특별했던 여행의 순간을 공유해보세요</span>
-			<hr class="hr1">
-			<!-- 게시판 -->
-			<div class="board">
-				<span>BEST 게시글</span>
-				<span>자유게시판&nbsp;&nbsp;<img src="${root }/image/asset/새글아이콘.png" class="newIcon"></span>
-			</div>
-			<div class="boardActive">
-				<img src="${root }/image/asset/보고있는게시판아이콘.png" class="bestboardNoActive">
-				<img src="${root }/image/asset/보고있는게시판아이콘.png" class="bulboardActive">
-			</div>
-			<hr>
-		</div>
-		
+
 		<!-- 게시판이름 + 글쓰기 버튼 -->
 		<div class="bulBoardHeader">
 			<span class="bulBoard">자유게시판</span>

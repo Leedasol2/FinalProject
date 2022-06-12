@@ -9,12 +9,24 @@
 		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp"/>
 	</definition>
 
+	<!-- 여행공유게시판 레이아웃 -->
+	<definition name="layout2" template="/WEB-INF/layout/layout2.jsp">
+		<put-attribute name="header" value="/WEB-INF/layout/header.jsp"/>
+		<put-attribute name="shareTripHeader" value="/WEB-INF/layout/shareTripHeader.jsp"/>
+		<put-attribute name="main" value="/WEB-INF/layout/main.jsp"/>
+		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp"/>
+	</definition>
+
+
 
 	<definition name="/*/*" extends="layout1">
 		<put-attribute name="main" value="/WEB-INF/{1}/{2}.jsp"></put-attribute>
 	</definition>
-
-
+	
+	<!-- 여행공유 게시판 와일드카드 -->
+	<definition name="/board/*/*" extends="layout2">
+		<put-attribute name="main" value="/WEB-INF/{1}/{2}.jsp"></put-attribute>
+	</definition>
 
 </tiles-definitions>
 
