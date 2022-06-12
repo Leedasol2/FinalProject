@@ -10,8 +10,15 @@ public class IndexController {
 	@GetMapping("/")
 	public String home() {
 		
-		return "/html/bestTrip";
+		return "/layout/main";
 	}
+	
+	@GetMapping("/html/festival")
+	public String festival() {
+		
+		return "/html/festival";
+	}
+	
 	
 	
 	
