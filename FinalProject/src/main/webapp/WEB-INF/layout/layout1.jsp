@@ -63,8 +63,11 @@
 
 <!-- js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="${root}/js/main.js"></script>
+<script src="${root}/js/calendar.js"></script>
+
 
 </head>
 <body>
