@@ -30,7 +30,7 @@
 			<div class="review-main">
 
 				<div class="review-main-content">
-					<b>남이섬 축제</b>
+					<b class="festival-name">남이섬 축제</b>
 					<div class="star-ratings">
 						<div class="star-ratings-fill space-x-2 text-lg"
 							:style="{ width: ratingToPercent + '%' }">
@@ -55,7 +55,7 @@
 				</div>
 				
 				<div class="review-main-content">
-					<b>남이섬 축제</b>
+					<b class="festival-name">남이섬 축제</b>
 					<div class="star-ratings">
 						<div class="star-ratings-fill space-x-2 text-lg"
 							:style="{ width: ratingToPercent + '%' }">
@@ -80,7 +80,7 @@
 				</div>
 				
 				<div class="review-main-content">
-					<b>남이섬 축제</b>
+					<b class="festival-name">남이섬 축제</b>
 					<div class="star-ratings">
 						<div class="star-ratings-fill space-x-2 text-lg"
 							:style="{ width: ratingToPercent + '%' }">

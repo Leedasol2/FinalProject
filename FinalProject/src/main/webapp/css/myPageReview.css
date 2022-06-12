@@ -1,20 +1,37 @@
 @charset "UTF-8";
 
-.star-ratings {
-	color: #aaa9a9;
+.review-main{
+	margin-bottom: 350px;
+}
+
+.review-main-content{
 	position: relative;
-	unicode-bidi: bidi-override;
-	width: max-content;
-	-webkit-text-fill-color: transparent;
-	/* Will override color (regardless of order) */
-	-webkit-text-stroke-width: 1.3px;
-	-webkit-text-stroke-color: #2b2a29;
-	margin-left: 180px;
-    margin-top: -45px;
+	font-size: 20px;
+	margin-top: 70px;
+}
+
+b.festival-name{
+	font-weight: bold;
+}
+
+div.review-main-content div.star-ratings {
+	color: #aaa9a9;
+    position: relative;
+    unicode-bidi: bidi-override;
+    width: max-content;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1.3px;
+    -webkit-text-stroke-color: #2b2a29;
+    margin-top: -10px;
+    margin-left: -106px;
+    left: 220px;
+    top: 7px;
+    margin-top: 5;
+    font-size: 20px;
 }	
 
 
-.star-ratings-fill {
+div.review-main-content div.star-ratings-fill {
 	color: #fff58c;
 	padding: 0;
 	position: absolute;
@@ -26,19 +43,20 @@
 	-webkit-text-fill-color: gold;
 }
 
-.star-ratings-base {
+div.review-main-content div.star-ratings-base {
 	z-index: 0;
 	padding: 0;
 }
 
-.review-main-content {
+div.review-main-content div.review-main-content {
 	font-size: 22pt;
 }
 
 .btn-form{
-	margin-left: 660px;
-    font-size: 15pt;
-    margin-top: -35px;
+	margin-left: 620px;
+    font-size: 13pt;
+    position: relative;
+    top: -10px;
 }
 
 .btn-delete{
@@ -62,7 +80,8 @@ span.review-contents{
 }
 
 hr.content-line{
-	width: 970px;
+	width: 935px;
     margin-left: -20px;
     margin-bottom: 80px;
+    margin-top: 50px;
 }
