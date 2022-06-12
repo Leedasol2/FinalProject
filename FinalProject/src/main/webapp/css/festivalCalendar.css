@@ -1,11 +1,16 @@
 @charset "UTF-8";
 
-hr.title-line{
+.festival-main{
+	margin-top: -202px;
+    margin-bottom: 200px;
+}
+
+hr.festival-title-line{
 	margin-top: 20px;
     margin-bottom: 20px;
     border: 0;
     border-top: 1px solid #eee;
-    width: 760px;
+    width: 780px;
     margin-left: -33px;
 }
 
@@ -172,5 +177,7 @@ div.festival-content > span.festival-region{
     top: 25px;
     cursor: pointer;
 }
+
+
 
 
