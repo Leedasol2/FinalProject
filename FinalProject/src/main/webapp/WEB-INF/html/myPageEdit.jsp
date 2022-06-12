@@ -24,7 +24,7 @@
 
 					<li class="mypage-review"><a href="#">리뷰</a></li>
 				</ul>
-				<hr class="title-line">
+				<hr class="memberedit-title-line">
 			</div>
 			<div class="editmember">
 				<form action="#" method="post" class="form-memberform">
@@ -72,7 +72,7 @@
 					</table>
 
 					<div class="btn_group">
-						<button type="submit" class="btn-update" >정보수정하기</button>
+						<button type="submit" class="btn-update-information" >정보수정하기</button>
 						<button type="submit" class="btn-delete">탈퇴하기</button>
 
 					</div>

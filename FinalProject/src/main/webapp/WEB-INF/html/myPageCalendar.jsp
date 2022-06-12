@@ -21,24 +21,8 @@
 <body>
 
 		<!-- header 시작 -->
-		<div class="header">
-			<div class="headercontent">
-				<a href="${root }/"><img class="logoimg"
-					src="${root }/image/asset/로고.png"></a> <input type="text"
-					name="search" class="search" placeholder="이런 여행 없을까? 검색해보세요">
-				<button type="button" class="login">로그아웃</button>
-				<button type="button" class="join">마이페이지</button>
-				<img class="mainline" src="${root }/image/asset/메인-라인.png">
-
-				<div id="container">
-					<ul class="myMenu">
-
-					</ul>
-
-
-				</div>
-			</div>
-		</div>
+		
+		
 		<!-- header 끝 -->
 
 		<!-- main 시작 -->
@@ -61,20 +45,7 @@
 		<!-- main 끝 -->
 
 		<!-- footer 시작 -->
-		<div class="footer">
-			<img class="logowhite" src="${root }/image/asset/로고white.png">
-			<img class="footerdeco" src="${root }/image/asset/개발도구.png">
-			<pre class="pre1">(주) 2RUN TRIP
-서울특별시 강남구 이런트립타워 2층		고객센터 : 2222-2222
-사업자등록번호: 222-22-22222		이메일 : 2RUN@gmail.com
-ⓒ 2022 2Run Trip Company. All Rights Reserved.</pre>
-			<pre class="pre2">이다솔
-김은비
-김태민
-이용기
-차동현
-이강진</pre>
-		</div>
+		
 		<!-- footer 끝 -->
 
 </body>
