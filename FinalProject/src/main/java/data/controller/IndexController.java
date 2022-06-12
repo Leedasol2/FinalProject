@@ -103,6 +103,24 @@ public class IndexController {
 	}
 	
 	
+	@GetMapping("/html/mytripdetail")
+	public String mytripdetail() {
+		
+		return "/html/myTripDetail";
+	}
+	
+	@GetMapping("/html/festivaldetail")
+	public String festivaldetail() {
+		
+		return "/html/festivalDetail";
+	}
+	
+	@GetMapping("/html/themeparkdetail")
+	public String themeparkdetail() {
+		
+		return "/html/themeParkDetail";
+	}
+	
 	
 	
 	
