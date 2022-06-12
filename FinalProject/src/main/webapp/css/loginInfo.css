@@ -12,6 +12,7 @@ div.login-info{
     position: relative;
     left: 630px;
     top:60px;
+    height: 1200px;
 }
 
 td.login-info-email{
@@ -48,7 +49,7 @@ hr.login-info-line{
 	background-color: #afafaf;
 	margin-left: 10px;
 	margin-right: 10px;	
-	margin-top: 13px;		
+	margin-bottom: 7px;				
 }
 
 span.login-info-title{
@@ -60,7 +61,7 @@ span.login-info-title{
 
 }
 
-div.edong{
+div.login-info-edong{
 	
 	margin-top:100px;
 	
@@ -75,10 +76,10 @@ table.login-info-table{
 img.login-info{
 	
     position: relative;	
-	margin-bottom: 8px;
+	margin-bottom: -6px;
 }
 
-td.table-title{
+td.login-info-table-title{
 	
 	width: 120px;
 	font-family: 'MinSans-Medium';
@@ -123,20 +124,28 @@ input:focus {
 	outline:none;	
 }
 
-input.input-email{
+input.login-info-input-email1{
 	
-	width: 185px;
+	width: 180px;
 	height: 50px;
 	border: 2px solid #afafaf;	
 	
 }
 
-div.btn-group1{
+input.login-info-input-email2{
+	
+	width: 181px;
+	height: 50px;
+	border: 2px solid #afafaf;	
+	
+}
+
+div.login-info-btn-group1{
 	
 	margin-top: 20px;
 }
 
-button.btn-check-all{
+button.login-info-btn-check-all{
 	font-family: 'MinSans-Medium';
 	font-weight: bold;
 	border: 0;
@@ -146,7 +155,7 @@ button.btn-check-all{
     margin-left: 180px;   
 }
 
-button.btn-check{
+button.login-info-btn-check{
 	font-family: 'MinSans-Medium';
 	border: 0;
     outline: 0;
@@ -155,7 +164,7 @@ button.btn-check{
     margin-left: 180px;   
 }
 
-button.btn-back{
+button.login-info-btn-back{
 	font-family: 'MinSans-Medium';
 	border: 0;
     outline: 0;
@@ -164,7 +173,7 @@ button.btn-back{
     margin-left: 250px;    
 }
 
-button.btn-next{
+button.login-info-btn-next{
     font-family: 'MinSans-Medium';	
 	border: 0;
     outline: 0;
@@ -173,34 +182,40 @@ button.btn-next{
     margin-top: 70px;  
 }
 
+div.login-info-btn-group1{
+	
+	margin-top:10px;
+	
+}
+
 img.login-info-check{
 	
-	margin-bottom: 2px;
+	margin-bottom:-4px;
 	
 }
 
 img.login-info-check1{
 	
 	margin-left: 1px;
-	margin-bottom: 2px;
+	margin-bottom: -2px;
 	margin-right: 2px;
 }
 
 img.login-info-back{
 	
-	margin-bottom: 5px;
+	margin-bottom: -6px;
 	margin-right: 10px;
 	
 }
 
 img.login-info-next{
 	
-	margin-bottom: 5px;
+	margin-bottom: -6px;
 	margin-left: 10px;
 	
 }
 
-a.a-color{
+a.login-info-a-color{
 	color: #00BFFF;
 	
 }

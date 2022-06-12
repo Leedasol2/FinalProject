@@ -13,6 +13,7 @@ div.login-join{
     position: relative;
     left: 570px;
  	top: 60px;
+ 	height:800px;
 }
 
 span.login-join-title{
@@ -37,7 +38,7 @@ span.login-join-subtitle2{
     margin-left: 215px;
 }
 
-a.acolor{
+a.login-join-acolor{
 	
 	color: #2bae66;
 }
@@ -48,7 +49,7 @@ table.login-join-table{
 	
 }
 
-td.table-empty1{
+td.login-join-table-empty1{
 	
 	border-top: 2px solid #afafaf;
 	border-left: 2px solid #afafaf;
@@ -57,7 +58,7 @@ td.table-empty1{
 	
 }
 
-td.table-empty2{
+td.login-join-table-empty2{
 
 	border-left: 2px solid #afafaf;	
 	border-right: 2px solid #afafaf;
@@ -65,14 +66,14 @@ td.table-empty2{
 	
 }
 
-td.table-empty3{
+td.login-join-table-empty3{
 	
 	border-right: 2px solid #afafaf;
 	height: 80px;
 	
 }
 
-td.table-empty4{
+td.login-join-table-empty4{
 	
 	border-bottom: 2px solid #afafaf;
 	border-left: 2px solid #afafaf;	
@@ -81,7 +82,14 @@ td.table-empty4{
 	
 }
 
-th.table-title1{
+td.login-join-table-empty5{
+	
+	border-right: 2px solid #afafaf;	
+	height: 10px;
+	
+}
+
+th.login-join-table-title1{
 
 	width: 400px;
 	height: 80px;	
@@ -95,7 +103,7 @@ th.table-title1{
 	
 }
 
-th.table-title2{
+th.login-join-table-title2{
 	
 	width: 400px;	
 	height: 80px;
@@ -108,26 +116,27 @@ th.table-title2{
 	
 }
 
-td.table-content1{
+td.login-join-table-content1{
 	text-align: center;
 	border-right: 2px solid #afafaf;
-	border-left: 2px solid #afafaf;	
+	border-left: 2px solid #afafaf;
+	vertical-align: middle;
 }
 
-td.table-content2{
+td.login-join-table-content2{
 	height: 50px;	
 	text-align: center;
 	border-right: 2px solid #afafaf;		
 }
 
-td.table-content3{
+td.login-join-table-content3{
 	height: 50px;	
 	text-align: center;
 	border-right: 2px solid #afafaf;	
 		
 }
 
-button.btn-join{
+button.login-join-btn-join{
     width: 230px;
    	height: 70px;    
     color: #fff;
@@ -137,7 +146,7 @@ button.btn-join{
 	font-weight: bold;
 }
 
-button.btn-sns{
+button.login-join-btn-sns{
     width: 230px;
    	height: 45px;    
     color: #696969;
@@ -146,4 +155,9 @@ button.btn-sns{
  	border-color: #afafaf;
 	font-size: 14px;
 	font-weight: bold;
+}
+
+img.login-join-snsimg{
+	
+	margin-bottom: -5px;
 }

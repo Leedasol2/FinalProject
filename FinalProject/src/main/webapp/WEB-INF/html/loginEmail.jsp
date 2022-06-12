@@ -11,7 +11,6 @@
 <body>
 
 	<!-- main 시작 -->
-	<div class="main">
 	<div class="login-email">
 		
 		<table class="login-email-header">
@@ -30,7 +29,7 @@
 		</table>
 		
 		<br>
-		<div class = "edong">	
+		<div class = "login-email-edong">	
 		<span class="login-email-title">이메일 인증</span>
 		</div>
 			<table class="login-email-table">
@@ -38,9 +37,9 @@
 					<tr>
 					<td class= "login-email-content"><input type="text" name="email" class="form-loginemail-input" 
 					placeholder="   이메일 주소를 입력해 주세요." required="required">
-					<img class="login-email-content" src="${root }/image/asset/이메일아이콘.png" width = "25px">
+					<img class="login-email-content1" src="${root }/image/asset/이메일아이콘.png" width = "25px">
 					</td>
-					<td><button type="submit" class= "btn-email" >인증 요청</button></td>
+					<td><button type="submit" class= "login-email-btn-email" >인증 요청</button></td>
 					</tr>
 	
 					<tr>
@@ -50,19 +49,18 @@
 					<tr>
 					<td class= "login-email-content"><input type="text" name="code" class="form-loginemail-input" 
 					placeholder="   인증코드를 입력해 주세요" required="required">
-					<img class="login-email-content" src="${root }/image/asset/x.png" width = "25px">
+					<img class="login-email-content2" src="${root }/image/asset/x.png" width = "25px">
 					</td>
-					<td><button type="submit" class= "btn-code">인증 확인</button></td>
+					<td><button type="submit" class= "login-email-btn-code">인증 확인</button></td>
 					</tr>
 						
 				</table>
 			
 
-				<button type="submit" class= "btn-back"><img class="login-email-back" src="${root }/image/asset/이전으로아이콘.png" width = "25px">이전으로</button>
+				<button type="submit" class= "login-email-btn-back"><img class="login-email-back" src="${root }/image/asset/이전으로아이콘.png" width = "25px">이전으로</button>
 				&nbsp;
-				<button type="submit" class= "btn-next">다음으로<img class="login-email-next" src="${root }/image/asset/다음으로아이콘.png" width = "25px"></button>
+				<button type="submit" class= "login-email-btn-next">다음으로<img class="login-email-next" src="${root }/image/asset/다음으로아이콘.png" width = "25px"></button>
 
-	</div>
 	</div><!-- main 끝 -->
 
 </body>

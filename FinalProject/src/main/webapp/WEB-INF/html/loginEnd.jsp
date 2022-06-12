@@ -11,7 +11,6 @@
 <body>
 
 	<!-- main 시작 -->
-	<div class="main">
 	<div class="login-end">
 		
 		<table class="login-end-header">
@@ -30,17 +29,17 @@
 		</table>
 		
 		<br>
-		<div class = "edong-title">	
+		<div class = "login-end-edong-title">	
 		<span class="login-end-title">가입이 완료되었습니다</span>
 		</div>
 		
-		<div class = "edong-subtitle">
+		<div class = "login-end-edong-subtitle">
 		<span class="login-end-subtitle">로그인하여 2RunTrip의 다양한 서비스를 즐겨보세요!</span><br>
 		</div>
 	
-		<button type="submit" class= "btn-end-login">로그인</button>
+		<button type="submit" class= "btn-login-end-login">로그인</button>
 	</div>
-	</div><!-- main 끝 -->
+<!-- main 끝 -->
 
 </body>
 </html>

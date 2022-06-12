@@ -12,6 +12,7 @@ div.login-missid{
     position: relative;
     left: 700px;
     top: 60px;    
+    height: 1000px;
 }
 
 span.login-missid-title{
@@ -22,10 +23,10 @@ span.login-missid-title{
 }
 
 
-li.login-missid{
+li.login-missid-missid{
 	display: inline-block;
     width: 160px;
-    left: 30px;
+    left: 80px;
     position: relative;
     padding-top: 100px;
     color: #212529;
@@ -34,10 +35,10 @@ li.login-missid{
     font-weight: bold;
 }
 
-li.login-misspass{
+li.login-missid-misspass{
 	display: inline-block;
     width: 160px;
-    left: 180px;
+    left: 200px;
     position: relative;
     padding-top: 100px;
     font-family: 'MinSans-Medium';
@@ -109,20 +110,20 @@ input.form-missid-id::placeholder{
 	color: black;
 }
 
-button.btn-findid{
+button.login-missid-btn-findid{
 	border-radius: 40px;
     width: 200px;
    	height: 45px;    
     color: #fff;
     background-color: #33b679;
  	border: 1px;
- 	margin-left: 50px;    
+ 	margin-left: 70px;    
 	margin-top: 25px;
 	font-size: 17px;
 	font-weight: bold;
 }
 
-button.btn-login{
+button.login-missid-btn-login{
 	border-radius: 40px;
     width: 200px;
    	height: 45px;    

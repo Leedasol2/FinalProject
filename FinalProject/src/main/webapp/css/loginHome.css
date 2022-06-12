@@ -9,6 +9,7 @@
 
 div.login-home{
 	width: auto;
+	height: 900px;
     position: relative;
     left: 730px;
     top: 60px;
@@ -49,7 +50,7 @@ input.form-loginhome-input{
 
 }
 
-button.btn-login{
+button.btn-login-home-login{
 	border-radius: 40px;
     width: 450px;
    	height: 45px;    
@@ -69,11 +70,11 @@ div.login-home-btn2{
 
 }
 
-button.btn-save{
+button.login-home-btn-save{
 	border: 0;
     outline: 0;
     background-color: #fff;
-    margin-top: 10px;    
+    margin-top: 0px;    
     font-family: 'MinSans-Medium';    
     color: #696969;    
 }
@@ -84,17 +85,17 @@ button.btn-save-text{
     background-color: #fff;
     font-family: 'MinSans-Medium';    
     color: #696969;
-    vertical-align: -3px;
+    vertical-align: 2px;
 }
 
-button.btn-find{
+button.login-home-btn-find{
 	border: 0;
     outline: 0;
     background-color: #fff;
     color: #696969;
-}
+}	
 
-button.btn-join{
+button.login-home-btn-join{
 	border: 0;
     outline: 0;
     background-color: #fff;
@@ -102,7 +103,7 @@ button.btn-join{
     color: #696969;
 }
 
-button.btn-login-kakao{	
+button.btn-login-home-kakao{	
 	border: 0;
     outline: 0;
     background-color: #fff;
@@ -111,11 +112,17 @@ button.btn-login-kakao{
 }
 
 
-button.btn-login-naver{
+button.btn-login-home-naver{
 
    	height: 10px;	
 	border: 0;
     outline: 0;
     background-color: #fff;
     margin-left: 15px;
+}
+
+img.btn-login-img-save{
+	
+	margin-top: 10px;
+	
 }
