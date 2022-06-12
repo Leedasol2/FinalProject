@@ -1,4 +1,4 @@
-@charset "UTF-8";
+¤»@charset "UTF-8";
 
 @font-face {
     font-family: 'MinSans-Medium';
@@ -11,59 +11,61 @@ div.writeform-main{
 	font-family: 'MinSans-Medium' !important;
 }
 
-div.writeform-main > div.writeform-title{
+div.writeform-main div.writeform-title{
 	width: 900px;
-	position: relative;
-    top: 300px;
-    left: 520px;
+    position: absolute;
+    top: 231px;
+    left: 506px;
 }
 
-div.writeform-main > div.writeform-title > h2.writehead{
+div.writeform-main div.writeform-title h2.writehead{
 	font-weight: bold;
+	font-size: 1.5em;
 }
 
-div.writeform-body{
-	margin-top: 370px;
-    margin-left: 540px;
+div.writeform-main div.writeform-body{
+	margin-top: 131px;
+    margin-left: 525px;
 }
 
-input.writetitle{
+div.writeform-main input.writetitle{
 	width: 860px;
     height: 50px;
-    border: 1px solid #afafaf;
+    border: 1px solid #e6e6fa;
     border-radius: 5px;
     padding-left: 15px;
 }
 
-textarea.textfield{
+div.writeform-main textarea.textfield{
 	margin-top: 15px;
     width: 860px;
     height: 600px;
-    border: 1px solid #afafaf;
+    border: 1px solid #e6e6fa;
     border-radius: 5px;
     padding-left: 15px;
     padding-top: 15px;
     margin-bottom: 10px;
+    line-height: 1.5;
 }
 
-input::placeholder , textarea::placeholder{
+div.writeform-main input::placeholder , textarea::placeholder{
 	color: #afafaf;
 	font-size: 0.9em;
 }
 
-span.filetitle{
-	margin-left: 10px;
+div.writeform-main span.filetitle{
+	margin-left: 20px;
 }
 
-#photo{
+div.writeform-main #photo{
 	display: none;
 }
 
-span.photoimg{
+div.writeform-main span.photoimg{
 	cursor: pointer;
 }
 
-button.btn-cancel{
+div.writeform-main button.btn-cancel{
 	margin-top: 100px;
     margin-right: 50px;
     width: 125px;
@@ -73,9 +75,10 @@ button.btn-cancel{
     color: #2bae66;
     background-color: white;
     font-size: 1.2em;
+    margin-bottom: 120px;
 }
 
-button.btn-insert{
+div.writeform-main button.btn-insert{
 	margin-top: 100px;
     margin-right: 50px;
     width: 125px;

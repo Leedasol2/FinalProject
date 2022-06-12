@@ -66,7 +66,7 @@ $(function(){
 						
 		  <tr>
 		    <td colspan="2" align="center">
-			  <button type="button" class="btn-back" onclick="location.href=''">이전으로</button>
+			  <button type="button" class="btn-return" onclick="location.href=''">이전으로</button>
 		      <button type="submit" class="btn-update" onclick="location.href=''">수정하기</button>
 			</td>
 		  </tr>

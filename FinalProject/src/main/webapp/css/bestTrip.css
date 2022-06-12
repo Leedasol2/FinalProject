@@ -11,70 +11,77 @@ div.bestTripText{
 	font-family: 'MinSans-Medium' !important;
 }
 
-div.trip-category{
+div.bestTripText > div.trip-category{
 	width: 210px;
-	height: 230px;
-	background-color: #ffffea;
-	padding-left: 57px;
-	padding-top: 36px;
-	position: relative;
-	top: 209px;
-	left: 477px;
+    height: 230px;
+    background-color: #ffffea;
+    padding-left: 58px;
+    padding-top: 58px;
+    margin-left: 437px;
 }
 
-div.trip-category > a.tripcategory{
+div.bestTripText > div.trip-category > a.tripcategory{
 	color: gray;
 	font-weight: 650;
 	font-size: 17px;
 }
 
-div.trip-category > a.best-category {
+div.bestTripText > div.trip-category > a.best-category {
 	color: #212529;
 }
 
-div.trip-category > a:hover{
+div.bestTripText > div.trip-category > a:hover{
 	color: #212529;
 	transition: 0.3s ease; 
 }
 
-div.category-title {
+div.bestTripText > div.category-title {
 	display: inline-block;
-	position: relative;
-	left: 730px;
-	top: 20px;
+    position: absolute;
+    left: 670px;
+    top: 233px;
 }
 
-div.category-title > span.main-title{
+div.bestTripText > div.category-title > hr.title-line{
+	margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee; 
+    width: 734px;
+    margin-left: 0;
+}
+
+div.bestTripText > div.category-title > span.main-title{
 	font-weight: bold;
 	font-size: 25px;
 	color: #212529;
 }
 
-div.category-title > span.sub-title{
+div.bestTripText > div.category-title > span.sub-title{
 	font-size: 0.8em;
 	color: #afafaf;
 }
 
-div.category-title > span.title-content{
+div.bestTripText > div.category-title > span.title-content{
 	float: right;
 	font-size: 0.8em;
 	padding-left: 266px;
 	text-align: right;
 }
 
-div.trip-content{
-	width: 220px;
-	height: 270px;
-	border: 1px solid #afafaf;
-	border-radius: 10px;
-	position: relative;
-	left: 720px;
-	top: 30px;
-	margin-left: 10px;
-	margin-bottom: 47px;
+div.bestTripText div.trip-content{
+	width: 230px;
+    height: 270px;
+    border: 1px solid #e6e6fa;
+    border-radius: 10px;
+    position: relative;
+    left: 663px;
+    top: -106px;
+    margin-left: 16px;
+    margin-bottom: 47px;
 }
 
-div.trip-content > img.trip-img{
+div.bestTripText div.trip-content > img.trip-img{
 	width: 100%;
 	height: 170px;
 	border-top-left-radius : 10px;
@@ -82,7 +89,7 @@ div.trip-content > img.trip-img{
 	cursor: pointer;	
 }
 
-div.trip-content > span.trip-name{
+div.bestTripText div.trip-content > span.trip-name{
 	position: relative;
 	top: 11px;
 	padding-left: 17px;
@@ -92,31 +99,31 @@ div.trip-content > span.trip-name{
 	right: 63px;
 }
 
-div.trip-content > span.trip-explanation{
+div.bestTripText div.trip-content > span.trip-explanation{
 	font-size: 0.8em;
     margin-left: 57px;
     position: relative;
-    top: 15px;
+    top: 22px;
     right: 41px;
 }
 
-div.trip-content > span.trip-region{
+div.bestTripText div.trip-content > span.trip-region{
 	font-size: 0.8em;
     color: #2bae66;
     padding-left: 17px;
     position: relative;
-    top: 22px;
+    top: 32px;
     cursor: pointer;
 }
 
-div.trip-content > span.trip-region > img{
+div.bestTripText div.trip-content > span.trip-region > img{
 	width: 12px;
 	position: relative;
-    top: -2px;
+    top: 1px;
 }
 
 /* 별점 css */
-.star-ratings {
+div.bestTripText .star-ratings {
   color: #aaa9a9; 
   position: relative;
   unicode-bidi: bidi-override;
@@ -125,11 +132,11 @@ div.trip-content > span.trip-region > img{
   -webkit-text-stroke-width: 1.3px;
   -webkit-text-stroke-color: #2b2a29;
   float: left;
-  left: 148px;
-  top: 9px;
+  left: 154px;
+  top: 11px;
   font-size: 12px;
 }
-.star-ratings-fill {
+div.bestTripText .star-ratings-fill {
   color: #fff58c;
   padding: 0;
   position: absolute;
@@ -140,7 +147,7 @@ div.trip-content > span.trip-region > img{
   overflow: hidden;
   -webkit-text-fill-color: gold;
 }
-.star-ratings-base {
+div.bestTripText .star-ratings-base {
   z-index: 0;
   padding: 0;
 }
