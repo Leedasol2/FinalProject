@@ -12,6 +12,7 @@ div.login-end{
     position: relative;
     left: 630px;
     top:60px;
+    height: 800px;
 }
 
 td.login-end-email{
@@ -48,7 +49,7 @@ hr.login-end-line{
 	background-color: #afafaf;
 	margin-left: 10px;
 	margin-right: 10px;	
-	margin-top: 13px;		
+	margin-bottom: 7px;	
 }
 
 span.login-end-title{
@@ -73,22 +74,22 @@ span.login-end-subtitle{
 
 img.login-end{
     position: relative;	
-	margin-bottom: 8px;
+	margin-bottom: -5px;
 }
 
-div.edong-title{
+div.login-end-edong-title{
 	
 	margin-top:100px;
 	
 }
 
-div.edong-subtitle{
+div.login-end-edong-subtitle{
 	
 	margin-top:30px;
 	
 }
 
-button.btn-end-login{
+button.btn-login-end-login{
 	border-radius: 40px;
     width: 120px;
    	height: 45px;    

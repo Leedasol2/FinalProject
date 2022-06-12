@@ -12,6 +12,7 @@ div.login-emailcheck{
     position: relative;
     left: 550px;
     top: 60px;
+    height:800px;
 }
 
 span.login-emailcheck-title{
@@ -38,20 +39,20 @@ hr.login-emailcheck-line-up{
     margin-bottom: 60px;
 }
 
-td.table-title{
+td.login-emailcheck-table-title{
 	font-family: 'MinSans-Medium';
 	font-size: 22pt;	
 	
 	
 }
 
-img.email-black{
+img.login-emailcheck-email-black{
 	
 	margin-bottom: 10px;
 	
 }
 
-td.empty-table{
+td.login-emailcheck-empty-table{
 	
 	height:20px;
 }
@@ -66,7 +67,7 @@ input.form-login-emailcheck-input{
 
 }
 
-select.sel-box{
+select.login-emailcheck-sel-box{
 	border: 2px solid;
 	border-color: #afafaf;
 	width: 100px;	
@@ -84,7 +85,7 @@ span.login-emailcheck-message{
 
 }
 
-button.btn-check{
+button.login-emailcheck-btn-check{
 	border-radius: 40px;
     width: 150px;
    	height: 55px;    
@@ -99,7 +100,7 @@ button.btn-check{
  	border-color: #33b679;
 }
 
-button.btn-use{
+button.login-emailcheck-btn-use{
 	border-radius: 40px;
     width: 150px;
    	height: 55px;    

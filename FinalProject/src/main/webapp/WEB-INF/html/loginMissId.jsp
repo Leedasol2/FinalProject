@@ -11,14 +11,13 @@
 <body>
 
 	<!-- main 시작 -->
-	<div class="main">
 	<div class="login-missid">
 		<span class="login-missid-title">아이디/비밀번호를 잊어버리셨나요?</span>
 		<ul>
 			
-			<li class="login-missid">아이디 찾기</li>
+			<li class="login-missid-missid">아이디 찾기</li>
 			
-			<li class="login-misspass"><a href="#" class = "misspass">비밀번호 찾기</a></li>
+			<li class="login-missid-misspass"><a class = "misspass">비밀번호 찾기</a></li>
 		</ul>		
 		
 		<hr class="login-missid-line-up">		
@@ -42,9 +41,9 @@
 					</table>
 
 					<!-- 버튼 -->
-					<div class="btn-findid">
-						<button type="submit" class="btn-findid">아이디찾기</button>
-						<button type="submit" class="btn-login">로그인</button>
+					<div class="login-missid-btn-findid">
+						<button type="submit" class="login-missid-btn-findid">아이디찾기</button>
+						<button type="submit" class="login-missid-btn-login">로그인</button>
 					</div>
 				</form>
 			</div>
@@ -52,7 +51,6 @@
 		<hr class="login-missid-line">
 			
 	</div>
-</div>
 <!-- main 끝 -->
 
 </body>

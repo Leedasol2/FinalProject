@@ -9,6 +9,7 @@
 
 div.login-email{
 	width: auto;
+	height: 1000px;
     position: relative;
     left: 630px;
     top:60px;
@@ -48,7 +49,7 @@ hr.login-email-line{
 	background-color: #afafaf;
 	margin-left: 10px;
 	margin-right: 10px;	
-	margin-top: 13px;		
+	margin-bottom: 7px;		
 }
 
 span.login-email-title{
@@ -60,7 +61,7 @@ span.login-email-title{
 
 }
 
-div.edong{
+div.login-email-edong{
 	
 	margin-top:100px;
 	
@@ -74,22 +75,30 @@ table.login-email-table{
 
 img.login-email{
     position: relative;	
-	margin-bottom: 8px;
+	margin-bottom: -6px;
 }
 
-img.login-email-content{
+img.login-email-content1{
     position: relative;	
 	margin-left: 55px;
+	margin-top: 20px;
 }
 
+
+img.login-email-content2{
+    position: relative;	
+	margin-left: 55px;
+	margin-top: 11px;
+	top:5px;
+}
 
 td.login-email-content{
     width: 330px;
     height: 60px;	
 	text-align: left;
 	border: 2px solid #afafaf;
-		
-}
+}		
+
 
 td.login-email-empty{
     width: 330px;
@@ -104,7 +113,8 @@ input.form-loginemail-input{
 		
 }
 
-button.btn-email{
+
+button.login-email-btn-email{
 	border-radius: 40px;
     width: 80px;
    	height: 45px;    
@@ -118,7 +128,7 @@ button.btn-email{
 	border-color: #33b679;
 }
 
-button.btn-code{
+button.login-email-btn-code{
 	border-radius: 40px;
     width: 80px;
    	height: 45px;    
@@ -130,16 +140,16 @@ button.btn-code{
 	margin-left: 32px;
 }
 
-button.btn-back{
+button.login-email-btn-back{
 	font-family: 'MinSans-Medium';
 	border: 0;
     outline: 0;
     background-color: #fff;
     color: #696969;
-    margin-left: 230px;    
+    margin-left: 220px;    
 }
 
-button.btn-next{
+button.login-email-btn-next{
     font-family: 'MinSans-Medium';	
 	border: 0;
     outline: 0;
@@ -152,14 +162,14 @@ button.btn-next{
 
 img.login-email-back{
 	
-	margin-bottom: 5px;
+	margin-bottom: -8px;
 	margin-right: 8px;
 	
 }
 
 img.login-email-next{
 	
-	margin-bottom: 5px;
+	margin-bottom: -8px;
 	margin-left: 8px;
 	
 }
