@@ -7,6 +7,11 @@
     font-style: normal;
 }
 
+.mypage-content{
+    margin-bottom: 200px;
+	
+}
+
 hr.title-line{
 	width: 970px;
     margin-left: -20px;
@@ -18,15 +23,16 @@ div.scrap-count{
 	font-size: 15pt;
     margin-top: 60px;
     margin-left: 30px;
+	font-weight: bold;    
 }
 
 span.scrap-logo{
-	margin-left: 820px;
+	margin-left: 805px;
 	margin-top: -5px;
 }
 
 img.scrap-img{
-	width: 220px;
+	width: 210px;
     margin-top: 60px;
 	margin-right: 135px;    
 }
