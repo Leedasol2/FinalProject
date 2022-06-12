@@ -7,11 +7,24 @@
     font-style: normal;
 }
 
+hr.modal-title-line{
+	margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+    width: 928px;
+    margin-left: -33px;
+}
+
+.form-input-box{
+	margin-top: 5px;
+}
 
 .modal-content{
 	width:600px;
     height: 600px;
     margin-left: 180px;
+    margin-top: 100px;
 }
 
 h2.modal-title{
@@ -38,7 +51,6 @@ hr.modal-line{
 
 .btn_modal{
 	position: relative;
-    bottom: 30px;
     left: 400px;
     cursor: pointer;
 }
