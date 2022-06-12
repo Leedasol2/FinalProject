@@ -7,43 +7,12 @@
 <head>
 <meta charset="UTF-8">
 <title>이런여행</title>
-
-<!-- root -->
-<c:set var="root" value="<%=request.getContextPath() %>"/>
-
-<!-- CSS -->
-<link rel="stylesheet" href="${root }/css/main.css"/>
-<link rel="stylesheet" href="${root }/css/themeparkdetail.css"/>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<style type="text/css"> /* css파일에 적용했더니 안되고, 여기서 작성하면 적용되는 css들..ㅠㅠ */
-@font-face {
-    font-family: 'MinSans-Medium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-input.search
-{
-	background-image: url("${root }/image/asset/검색아이콘.png");
-	background-repeat: no-repeat;
-	background-position: 25px center;
-}
-
-a { text-decoration:none !important;color: #495056; }
-a:hover { text-decoration:none !important;color: #495056; }
-</style>
-
-<!-- js -->
-<script src="https://code.jquery.com/jquery-latest.min.js"></script>
-
 </head>
 <body>
 
 <script type="text/javascript">
 $(function(){
 	
-
 	<!-- image 클릭 이벤트 -->
 	$(".small").click(function(){
 		
@@ -54,29 +23,27 @@ $(function(){
 	
 	<!-- select 클릭시 스크롤 이동 이벤트-->
 // 		$("span.sp1").click(function(){		
-// 			var offset = $(".sogae").offset(); //선택한 태그의 위치를 반환                
-// 			//animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함 	        
+// 			var offset = $(".sogae").offset(); //선택한 태그의 위치를 반환                
+// 			//animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함 	        
 // 			$(".sogae").animate({scrollTop : offset.top}, 400);
 // 		});
 // 		$("span.sp2").click(function(){		
-// 			var offset = $(".map").offset(); //선택한 태그의 위치를 반환                
-// 			//animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함 	        
+// 			var offset = $(".map").offset(); //선택한 태그의 위치를 반환                
+// 			//animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함 	        
 // 			$(".map").animate({scrollTop : offset.top}, 400);
 // 		});
 // 		$("span.sp3").click(function(){		
-// 			var offset = $(".image").offset(); //선택한 태그의 위치를 반환                
-// 			//animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함 	        
+// 			var offset = $(".image").offset(); //선택한 태그의 위치를 반환                
+// 			//animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함 	        
 // 			$(".image").animate({scrollTop : offset.top}, 400);
 // 		});
 // 		$("span.sp4").click(function(){		
-// 			var offset = $(".madi").offset(); //선택한 태그의 위치를 반환                
-// 			//animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함 	        
+// 			var offset = $(".madi").offset(); //선택한 태그의 위치를 반환                
+// 			//animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함 	        
 // 			$(".madi").animate({scrollTop : offset.top}, 400);
 // 		});
 });
 </script>
-	
-<div class="home">
 
 <!-- 	<!-- header 시작 --> -->
 <!-- 	<div class="header"> -->
@@ -120,20 +87,21 @@ $(function(){
 	<!-- main 시작 -->
 	<div class="main">
 		<div class="subject">
-		테마파크 <img alt="" src="${root }/photo/대관람차.png" width="50px;">
+		<br>
+		여행을 떠나요 <img alt="" src="${root }/photo/자동차아이콘.png" width="50px;">
 		</div>
 	<hr width="970px"><br><br>
 	<div class="subcontent">
-	<img alt="" src="${root }/photo/롯데월드.jpg" class="img1"> 
+	<img alt="" src="${root }/photo/n서울타워.jpg" class="img1"> 
 	<div style="font-family: 'MinSans-Black'; font-size: 1.7em;">
-	<b>롯데월드</b>
+	<b>N서울타워</b>
 	</div>
 	<br><br><br>
-	<span>날씨와 상관없이 1년 365일 놀이기구를 즐길 수 있는 테마파크!</span>
+	<span>서울특별시 남산에 있는 송신탑이자 서울을 대표하는 랜드마크이다</span>
 	<br><br><br><br><br>
-	<img alt="" src="${root }/photo/위치아이콘.png" width="25px;"><span> 서울특별시 송파구 올림픽로 240</span>
+	<img alt="" src="${root }/photo/위치아이콘.png" width="25px;"><span> 서울특별시 용산구 남산공원길 126</span>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<img alt="" src="${root }/photo/링크.png" width="20px;"><span> 홈페이지</span>
+	<img alt="" src="${root }/photo/스크랩안함.png" width="20px;"><span> 스크랩 하기</span>
 	</div>
 	<br><br><br><br><br><br>
 	<hr width="970px">
@@ -141,6 +109,7 @@ $(function(){
 	<a href="#sp1"><span>소개글</span></a>
 	<a href="#sp2"><span>지도</span></a>
 	<a href="#sp3"><span>사진</span></a>
+	<a href="#sp4"><span>여행자의 한마디</span></a>
 	</div>
 	<hr width="970px"><br>
 	
@@ -151,11 +120,11 @@ $(function(){
 	<div align="center">
 	<img alt="" src="${root }/photo/따옴표위.png" width="70px;">
 	<br><br><br><br>
-	<span>서울 롯데월드는 신나는 여가와 엔터테인먼트를 꿈구는 사람들과
-	<br>갈수록 늘어나는 외국인 관광 활성화를 위해 운영하는 테마파크입니다.<br>
-	롯데월드는 모험과 신비를 테마로 하는 실내 공원인 어드벤처, 석촌호수, 매직 아일랜드, <br>
-	민속박물관, 쇼핑몰, 호텔, 백화점, 아이스링크등으로 구성되어 있습니다.
-	<br>관광, 문화, 레저, 쇼핑을 원스톱으로 즐길 수 있는 대규모 복합 공간입니다.</span>
+	<span>최신 LED 기술의 조명으로 시시각각 색과 패턴이 변하는
+	<br>'빛의 예술'과의 어우러짐 속에서 다양한 미디어 아트와 함께<br>
+	색다른 문화예술을 경험하실 수 있습니다.
+	서울의 대표적인 복합문화 공간으로 새롭게 태어난 N서울타워,
+	<br>자랑스런 서울의 랜드마크가 될 것입니다.</span>
 	<br><br><br>
 	<img alt="" src="${root }/photo/따옴표아래.png" width="70px;">
 	</div>
@@ -166,14 +135,14 @@ $(function(){
 	<b>지도</b>
 	</div>
 	<br><br>
-	
+	 
 	 <!-- KakaoMap -->
 	<div id="map" class="kakaomap"></div>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8148de36e2b8d4215e24f39fffbd1a62"></script> 
 	<script>
 		var container = document.getElementById('map');
 		var options = {
-			center: new kakao.maps.LatLng(37.5125, 127.102778), <!--위도 / 경도 -->
+			center: new kakao.maps.LatLng(37.551399, 126.988259), <!--위도 / 경도 -->
 			level: 4
 		};
 		var map = new kakao.maps.Map(container, options);
@@ -186,16 +155,36 @@ $(function(){
 	<b>사진</b>
 	</div>
 	<br><br>
-	<img alt="" src="${root }/photo/롯데월드.jpg" class="image"><br><br>
+	<img alt="" src="${root }/photo/n서울타워.jpg" class="image"><br><br>
 	<div class="smimage">
-	<img alt="" src="${root }/photo/테마파크.jpg" class="small">
-	<img alt="" src="${root }/photo/테마파크2.jpg" class="small">
-	<img alt="" src="${root }/photo/테마파크3.jpg" class="small">
-	<img alt="" src="${root }/photo/테마파크4.jpg" class="small">
-	<img alt="" src="${root }/photo/테마파크5.jpg" class="small">
+	<img alt="" src="${root }/photo/n서울타워.jpg" class="small">
+	<img alt="" src="${root }/photo/n서울타워2.jpg" class="small">
+	<img alt="" src="${root }/photo/n서울타워3.jpg" class="small">
 	</div>
-	</div><!-- main 끝 -->
-
+	<br><br>
+	<hr width="970px"><br>
+	
+	<div class="madi" id="sp4">
+	<b>여행자의 한마디</b><button class="btnadd" data-target="#myModal2" data-toggle="modal">등록하기</button>
+	</div>
+	<br><br><br>
+	<div>
+	<span class="name"><b>ga*****</b></span><div class="star-ratings star" >
+	<div 
+    class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
+		<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+	</div>
+	<div class="star-ratings-base space-x-2 text-lg">
+		<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+	</div>
+</div>
+	<span class="del">삭제 |</span><span class="update">수정</span>
+	<span class="date">2022-06-07 15:53</span><br><br>
+	<span class="name">연인들의 천국, 외국인이면 더욱 서울의 야경을 멋지게 즐길 수 있습니다.20년만의 서울타워 방문이 아깝지 않았습니다.</span>
+	</div>
+	</div>
+<!-- main 끝 -->
+	
 <!-- 	<!-- footer 시작 --> -->
 <!-- 	<div class="footer"> -->
 <%-- 		<img class="logowhite" src="${root }/image/asset/로고white.png"> --%>
@@ -212,6 +201,41 @@ $(function(){
 <!-- 이강진</pre> -->
 <!-- 	</div>footer 끝 -->
 	
-</div>
+
+<!-- 리뷰 작성 모달창 -->
+	<div class="modal fade myModal2" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <span style="color: white;"><b>2run trip&nbsp;&nbsp;</b></span><span><b>  리뷰 작성</b></span>
+        </div>
+        <div class="modal-body">
+        <span style="float: left;"><b>여행지 명&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+        <div class="star-rating space-x-4 mx-auto">
+	<input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
+	<label for="5-stars" class="star pr-4">★</label>
+	<input type="radio" id="4-stars" name="rating" value="4" v-model="ratings"/>
+	<label for="4-stars" class="star">★</label>
+	<input type="radio" id="3-stars" name="rating" value="3" v-model="ratings"/>
+	<label for="3-stars" class="star">★</label>
+	<input type="radio" id="2-stars" name="rating" value="2" v-model="ratings"/>
+	<label for="2-stars" class="star">★</label>
+	<input type="radio" id="1-star" name="rating" value="1" v-model="ratings" />
+	<label for="1-star" class="star">★</label>
+		</div>     
+        <br>
+        <textarea id="ucontent" class="form-control" placeholder="별점과 리뷰를 작성해주세요!"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="rbtn" data-dismiss="modal"
+          id="=modaladd">작성</button> 
+        </div>
+      </div>
+    </div>
+  </div>
+  
 </body>
 </html>

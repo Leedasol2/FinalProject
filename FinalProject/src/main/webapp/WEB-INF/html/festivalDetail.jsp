@@ -7,45 +7,12 @@
 <head>
 <meta charset="UTF-8">
 <title>이런여행</title>
-
-<!-- root -->
-<c:set var="root" value="<%=request.getContextPath() %>"/>
-
-<!-- CSS -->
-<link rel="stylesheet" href="${root }/css/main.css"/>
-<link rel="stylesheet" href="${root }/css/festivaldetail.css"/>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<style type="text/css"> /* css파일에 적용했더니 안되고, 여기서 작성하면 적용되는 css들..ㅠㅠ */
-@font-face {
-    font-family: 'MinSans-Medium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-input.search
-{
-	background-image: url("${root }/image/asset/검색아이콘.png");
-	background-repeat: no-repeat;
-	background-position: 25px center;
-}
-
-a { text-decoration:none !important;color: #495056; }
-a:hover { text-decoration:none !important;color: #495056; }
-</style>
-
-<!-- js -->
-<script src="https://code.jquery.com/jquery-latest.min.js"></script>
-
-
 </head>
 <body>
 
 <script type="text/javascript">
 $(function(){
 	
-
 	<!-- image 클릭 이벤트 -->
 	$(".small").click(function(){
 		
@@ -56,30 +23,27 @@ $(function(){
 	
 	<!-- select 클릭시 스크롤 이동 이벤트-->
 // 		$("span.sp1").click(function(){		
-// 			var offset = $(".sogae").offset(); //선택한 태그의 위치를 반환                
-// 			//animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함 	        
+// 			var offset = $(".sogae").offset(); //선택한 태그의 위치를 반환                
+// 			//animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함 	        
 // 			$(".sogae").animate({scrollTop : offset.top}, 400);
 // 		});
 // 		$("span.sp2").click(function(){		
-// 			var offset = $(".map").offset(); //선택한 태그의 위치를 반환                
-// 			//animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함 	        
+// 			var offset = $(".map").offset(); //선택한 태그의 위치를 반환                
+// 			//animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함 	        
 // 			$(".map").animate({scrollTop : offset.top}, 400);
 // 		});
 // 		$("span.sp3").click(function(){		
-// 			var offset = $(".image").offset(); //선택한 태그의 위치를 반환                
-// 			//animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함 	        
+// 			var offset = $(".image").offset(); //선택한 태그의 위치를 반환                
+// 			//animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함 	        
 // 			$(".image").animate({scrollTop : offset.top}, 400);
 // 		});
 // 		$("span.sp4").click(function(){		
-// 			var offset = $(".madi").offset(); //선택한 태그의 위치를 반환                
-// 			//animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함 	        
+// 			var offset = $(".madi").offset(); //선택한 태그의 위치를 반환                
+// 			//animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함 	        
 // 			$(".madi").animate({scrollTop : offset.top}, 400);
 // 		});
 });
 </script>
-	
-<div class="home">
-
 <!-- 	<!-- header 시작 --> -->
 <!-- 	<div class="header"> -->
 <!-- 	  <div class="headercontent"> -->
@@ -222,7 +186,6 @@ $(function(){
 <!-- 차동현 -->
 <!-- 이강진</pre> -->
 <!-- 	</div>footer 끝 -->
-	
-</div>
+
 </body>
 </html>
