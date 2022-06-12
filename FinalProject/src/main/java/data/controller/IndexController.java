@@ -7,11 +7,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class IndexController {
 
-	@GetMapping("/")
-	public String home() {
+	@GetMapping("/html/festival")
+	public String festival() {
 		
-		return "/layout/main";
+		return "/html/festival";
 	}
+	
+
 	
 	
 	
