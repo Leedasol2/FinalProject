@@ -106,7 +106,7 @@ public class IndexController {
 	@GetMapping("/html/mytripdetail")
 	public String mytripdetail() {
 		
-		return "/html/myTripDetril";
+		return "/html/myTripDetail";
 	}
 	
 	@GetMapping("/html/festivaldetail")
