@@ -61,7 +61,23 @@ public class IndexController {
 		return "/html/modalCalendar";
 	}
 	
+	@GetMapping("/html/mytripdetail")
+	public String mytripdetail() {
+		
+		return "/html/mytripdetail";
+	}
 	
+	@GetMapping("/html/festivaldetail")
+	public String festivaldetail() {
+		
+		return "/html/festivalDetail";
+	}
+	
+	@GetMapping("/html/themeparkdetail")
+	public String themeparkdetail() {
+		
+		return "/html/themeParkDetail";
+	}
 	
 	
 	

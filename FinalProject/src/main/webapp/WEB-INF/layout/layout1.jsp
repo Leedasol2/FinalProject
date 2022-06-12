@@ -16,6 +16,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<link rel="stylesheet" href="${root}/css/reset.css"/>
+<link rel="stylesheet" href="${root}/css/main.css"/>
 
 <!-- 이다솔 -->
 <link rel="stylesheet" href="${root}/css/board.css"/>
@@ -41,9 +43,9 @@
 <link rel="stylesheet" href="${root}/css/boardwriteform.css"/>
 
 <!-- 이강진 -->
-<link rel="stylesheet" href="${root}/css/themeparkdetail.css"/>
-<link rel="stylesheet" href="${root}/css/festivaldetail.css"/>
-<link rel="stylesheet" href="${root}/css/mytripdetail.css"/>
+<link rel="stylesheet" href="${root}/css/themeParkDetail.css"/>
+<link rel="stylesheet" href="${root}/css/festivalDetail.css"/>
+<link rel="stylesheet" href="${root}/css/myTripDetail.css"/>
 
 <!-- 김태민 -->
 <link rel="stylesheet" href="${root}/css/loginEmail.css"/>
@@ -63,7 +65,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="${root}/js/main.js"></script>
-<script src="${root}/js/calendar.js"></script>
 
 </head>
 <body>

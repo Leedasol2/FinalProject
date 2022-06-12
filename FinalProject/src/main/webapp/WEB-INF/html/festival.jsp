@@ -7,10 +7,78 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<!-- root -->
+<c:set var="root" value="<%=request.getContextPath() %>"/>
+
+<!-- CSS -->
+<link rel="stylesheet" href="${root }/css/main.css"/>
+<link rel="stylesheet" href="${root }/css/festival.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style type="text/css"> /* css파일에 적용했더니 안되고, 여기서 작성하면 적용되는 css들..ㅠㅠ */
+input.search
+{
+	background-image: url("${root }/image/asset/검색아이콘.png");
+	background-repeat: no-repeat;
+	background-position: 25px center;
+}
+
+a { text-decoration:none !important;color: #495056; }
+a:hover { text-decoration:none !important;color: #495056; }
+
+</style>
+
+<!-- js -->
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+
+$(function(){
+
+	//지역 선택시 글씨색 변경
+	$("a.seoul").click(function(){
+		$(this).css("color","#2bae66");
+		$(this).siblings().css("color","gray");
+	});
+	$("a.incheon-Gyeonggi").click(function(){
+		$(this).css("color","#2bae66");
+		$(this).siblings().css("color","gray");
+	});
+	$("a.daejeon-chungcheong").click(function(){
+		$(this).css("color","#2bae66");
+		$(this).siblings().css("color","gray");
+	});
+	$("a.daegu").click(function(){
+		$(this).css("color","#2bae66");
+		$(this).siblings().css("color","gray");
+	});
+	$("a.jeolla").click(function(){
+		$(this).css("color","#2bae66");
+		$(this).siblings().css("color","gray");
+	});
+	$("a.gyeongsang").click(function(){
+		$(this).css("color","#2bae66");
+		$(this).siblings().css("color","gray");
+	});
+	$("a.busan").click(function(){
+		$(this).css("color","#2bae66");
+		$(this).siblings().css("color","gray");
+	});
+	$("a.gangwon").click(function(){
+		$(this).css("color","#2bae66");
+		$(this).siblings().css("color","gray");
+	});
+	$("a.jeju").click(function(){
+		$(this).css("color","#2bae66");
+		$(this).siblings().css("color","gray");
+	});
+});
+
+</script>
 </head>
 <body>
  
 <script type="text/javascript">
+
 $(document).ready(function(){
 	  var currentPosition = parseInt($(".festival-category").css("top"));
 	  $(window).scroll(function() {
@@ -19,46 +87,12 @@ $(document).ready(function(){
 	  });
 	});
 
-//지역 선택시 글씨색 변경
-$("a.seoul").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
-});
-$("a.incheon-Gyeonggi").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
-});
-$("a.daejeon-chungcheong").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
-});
-$("a.daegu").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
-});
-$("a.jeolla").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
-});
-$("a.gyeongsang").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
-});
-$("a.busan").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
-});
-$("a.gangwon").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
-});
-$("a.jeju").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
-	});
-});
 </script> 
  
+<!-- 헤더 시작 -->
+
+<!-- 헤더 끝 -->
+
 <!-- 본문 시작 -->
 <div class="festival-main">
 
@@ -207,6 +241,10 @@ $("a.jeju").click(function(){
 
 </div>
 <!-- 본문 끝 -->
+
+<!-- 푸터 시작 -->
+
+<!-- 푸터 끝 -->
 
 </body>
 </html>

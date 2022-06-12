@@ -8,9 +8,22 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
+
+<!-- root -->
+<c:set var="root" value="<%=request.getContextPath() %>"/>
+
+<!-- CSS -->
+<link rel="stylesheet" href="${root }/css/main.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="${root }/css/shareTripHome.css"/>
+<!-- js -->
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+
 </head>
 <body>
 
+<div class="home">
 	<!-- 본문 시작 -->
 	<div class="shareTripHome">
 	
@@ -97,6 +110,12 @@
 	
 	</div>
 	<!-- 본문 끝 -->
+
+
+
+</div>
+
+
 
 </body>
 </html>
