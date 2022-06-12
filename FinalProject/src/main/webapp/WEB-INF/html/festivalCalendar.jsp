@@ -7,9 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-</head>
-<body>
- 
+
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
 	var calendarEl = document.getElementById('calendar');
@@ -19,6 +17,13 @@ document.addEventListener('DOMContentLoaded', function() {
 	});
 	calendar.render();
 });
+</script>
+
+</head>
+<body>
+ 
+<script type="text/javascript">
+
 
 //지역 선택시 글씨색 변경
 $("a.seoul").click(function(){
@@ -79,7 +84,7 @@ $(document).ready(function(){
 <div class="category-title">
   <span class="main-title">축제</span>
   <span class="sub-title">액티비티</span>
-  <hr class="title-line">
+  <hr class="festival-title-line">
 </div>
 
 <div class="festival-proceeding">
