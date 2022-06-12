@@ -26,11 +26,13 @@ div.bulletinBoard,div.bestBoard{
   flex-direction: column;
   position: relative;
   z-index: 1;
+  margin-top: 50px;
+  margin-bottom: 80px;
   width: 100%;
   height: 100%;
-  top: 250px;
   color: #212529;
   font-family: MinSans-Medium;
+  
 }
 
 
@@ -61,7 +63,7 @@ div.bulBoardHeader button.writeBul{
 	font-weight:normal;
 	color: #2bae66;
 	border: 1px solid #2bae66;
-	border-radius: 5px;
+	border-radius: 8px;
 	background-color: white;
 	margin-top: 5px;
 }
@@ -74,6 +76,7 @@ div.bulletinBoard hr.hr2{
 div.bulletinBoard table.bulBoard{
 	width: 880px;
 	margin-left: 5px;
+	font-size: 10pt;
 }
 
 div.bulletinBoard table.bulBoard thead *{
@@ -92,8 +95,16 @@ div.bulletinBoard table.bulBoard tbody td{
 	padding-bottom: 5px;
 }
 
+div.bulletinBoard table.bulBoard tbody tr:first-child{
+	padding-top: 50px;
+}
+
 div.bulletinBoard table.bulBoard thead tr td:first-child{
-	width: 100px;
+	width: 80px;
+}
+
+div.bulletinBoard table.bulBoard thead tr td.subject{
+	width: 500px;
 }
 
 div.bulletinBoard table.bulBoard tbody img{
@@ -101,13 +112,9 @@ div.bulletinBoard table.bulBoard tbody img{
 	height: 14px;
 	margin-bottom: 6px;
 }
-div.bulletinBoard table.bulBoard thead td.subject{
-	width: 500px;
-}
 
 div.bulletinBoard table.bulBoard tbody td.subject{
 	width: 500px;
-	float: left;
 	padding-top: 18px;
 	padding-left: 10px;
 	display: flex;
@@ -133,7 +140,7 @@ div.bulletinBoard div.myPagination{
 	justify-content: center;
 	color: #666;
 	font-family: MinSans-Light;
-	font-size: 12pt;
+	font-size: 11pt;
 }
 
 div.bulletinBoard ul.myPagination a{
