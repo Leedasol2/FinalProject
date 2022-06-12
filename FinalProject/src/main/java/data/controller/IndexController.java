@@ -13,6 +13,13 @@ public class IndexController {
 		return "/layout/main";
 	}
 	
+	@GetMapping("/html/festival")
+	public String festival() {
+		
+		return "/html/festival";
+	}
+	
+	
 	
 	
 	
