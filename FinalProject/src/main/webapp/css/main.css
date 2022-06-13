@@ -161,7 +161,7 @@ ul.gnb > li > a + ul {
     transition: all 0.3s ease;
 }
 
-ul.gnb > li:hover > a + ul{
+ul.gnb > li > a:hover + ul{
 	opacity: 1;
 }
 
