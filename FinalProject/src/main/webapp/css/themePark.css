@@ -1,8 +1,15 @@
 @charset "UTF-8";
 
 .theme-main{
-	margin-top: -202px;
-    margin-bottom: 200px;
+	font-family: 'MinSans-Medium' !important;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    color: #212529;
 }
 
 hr.theme-title-line{
@@ -10,20 +17,17 @@ hr.theme-title-line{
     margin-bottom: 20px;
     border: 0;
     border-top: 1px solid #eee;
-    width: 780px;
-    margin-left: -33px;
+    width: 750px;
+    margin-left: -7px;
 }
 
 div.theme-category{
 	width: 210px;
-	height: 230px;
-	background-color: #ffffea;
-	padding-left: 57px;
-	padding-top: 36px;
-	top: 209px;
-	left: 477px;
-	font-family: 'MinSans-Medium';
-    position: relative;
+    height: 230px;
+    background-color: #ffffea;
+    padding-left: 58px;
+    padding-top: 58px;
+    margin-right: 800px;
 }
 
 div.theme-category > a.themecategory{
@@ -41,25 +45,26 @@ div.theme-category > a:hover{
 	transition: 0.3s ease; 
 }
 
-div.category-title {
-	display: inline-block;
-	position: relative;
-	left: 730px;
-	top: 20px;
+div.theme-category-title {
+   	display: inline-block;
+    position: relative;
+    left: 87px;
+    top: -200px;
 }
 
-div.category-title > span.main-title{
+div.theme-category-title > span.main-title{
 	font-weight: bold;
 	font-size: 25px;
 	color: #212529;
+	margin-left: 20px;
 }
 
-div.category-title > span.sub-title{
+div.theme-category-title > span.sub-title{
 	font-size: 0.8em;
 	color: #afafaf;
 }
 
-div.category-title > span.title-content{
+div.theme-category-title > span.title-content{
 	float: right;
 	font-size: 0.8em;
 	padding-left: 218px;
@@ -67,15 +72,16 @@ div.category-title > span.title-content{
 }
 
 div.theme-content{
-	width: 245px;
-	height: 270px;
-	border: 1px solid #afafaf;
-	border-radius: 10px;
-	position: relative;
-	left: 720px;
-	top: 80px;
-	margin-left: 10px;
-	margin-bottom: 47px;
+	width: 230px;
+    height: 270px;
+    border: 1px solid #e6e6fa;
+    border-radius: 10px;
+    position: relative;
+    left: 78px;
+    top: -160px;
+    margin-left: 16px;
+    margin-bottom: 47px;
+    margin-top: 30px;
 }
 
 div.theme-content > img.theme-img{
@@ -87,73 +93,78 @@ div.theme-content > img.theme-img{
 }
 
 div.theme-content > span.theme-name{
-    position: relative;
+	position: relative;
     top: 11px;
+    padding-left: 75px;
     font-weight: bold;
-    cursor: pointer;
-    right: 50px;
-    font-size: 10pt;
+    right: 63px;
+    font-size: 14px;
 }
 
-div.theme-content > span.theme-explanation{
-	font-size: 0.8em;
-	padding-left: 45px;
-	position: relative;
-	top: 15px;
-	right: 29px;
-}
 
 div.theme-content > span.theme-region{
 	font-size: 0.8em;
     color: #2bae66;
-    padding-left: 33px;
     position: relative;
     top: 25px;
     cursor: pointer;
+    margin-left: 10px;
 }
 
 /* 별점 css */
-div.theme-content div.star-ratings {
-  color: #aaa9a9; 
-  position: relative;
-  unicode-bidi: bidi-override;
-  width: max-content;
-  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1.3px;
-  -webkit-text-stroke-color: #2b2a29;
-  float: left;
-  left: 170px;
-  top: 12.5px;
-  font-size: 12px;
+.theme-star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    padding: 0 0.2em;
+    text-align: center;
+    width: 5em;
+    margin-left: 160px;
+    font-size: 9pt;
+    margin-top: -2px;
 }
-div.theme-content div.star-ratings-fill {
-  color: #fff58c;
-  padding: 0;
-  position: absolute;
-  z-index: 1;
-  display: flex;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  -webkit-text-fill-color: gold;
+
+.theme-star-rating input {
+  display:none;
 }
-div.theme-content div.star-ratings-base {
-  z-index: 0;
-  padding: 0;
+
+.theme-star-rating label {
+  color:#FFEB46;
+  cursor:pointer;
+}
+
+.theme-star-rating :checked ~ label {
+  color:#f90;
+}
+
+/*.theme-star-rating label:hover,
+.theme-star-rating label:hover ~ label {
+  color: #FFA500;
+}*/
+
+/* explanation */
+
+article {
+  background-color:#ffe;
+  box-shadow:0 0 1em 1px rgba(0,0,0,.25);
+  color:#006;
+  font-family:cursive;
+  font-style:italic;
+  margin:4em;
+  max-width:30em;
+  padding:2em;
 }
 
 div.regionofkorea{
 	position: relative;
-	left: 700px;
-	top: 10px;
-	bottom: 25px;
+    left: 63px;
+    top: -180px;
 }
 
 div.regionofkorea > a.region{
 	margin-left: 33px;
 	font-size: 1.2em;
 	color: gray;
-	font-weight: bold;
 }
 
 div.regionofkorea > a:hover{
