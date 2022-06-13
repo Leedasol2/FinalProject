@@ -106,15 +106,14 @@ div.themaTripText div.trip-content > span.trip-name{
 	font-size: 1.1em;
 	font-weight: bold;
 	cursor: pointer;
-	right: 63px;
 }
 
 div.themaTripText div.trip-content > span.trip-explanation{
 	font-size: 0.8em;
 	padding-left: 57px;
 	position: relative;
-	top: 22px;
-    right: 41px;
+	top: 15px;
+    right: 39px
 }
 
 div.themaTripText div.trip-content > span.trip-region{
@@ -122,7 +121,7 @@ div.themaTripText div.trip-content > span.trip-region{
     color: #2bae66;
     padding-left: 17px;
     position: relative;
-    top: 32px;
+    top: 24px;
     cursor: pointer;
 }
 
@@ -132,34 +131,31 @@ div.themaTripText div.trip-content > span.trip-region > img{
     top: 1px;
 }
 
+
 /* 별점 css */
-div.themaTripText .star-ratings {
-  color: #aaa9a9; 
-  position: relative;
-  unicode-bidi: bidi-override;
-  width: max-content;
-  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1.3px;
-  -webkit-text-stroke-color: #2b2a29;
-  float: left;
-  left: 154px;
-  top: 11px;
-  font-size: 12px;
+div.themaTripText .thema-star-rating{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    padding: 0 0.2em;
+    text-align: center;
+    width: 5em;
+    font-size: 9pt;
+    margin-top: -2px;
+    margin-left: 160px;
 }
-div.themaTripText .star-ratings-fill {
-  color: #fff58c;
-  padding: 0;
-  position: absolute;
-  z-index: 1;
-  display: flex;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  -webkit-text-fill-color: gold;
+
+div.themaTripText .thema-star-rating input {
+   display:none;
 }
-div.themaTripText .star-ratings-base {
-  z-index: 0;
-  padding: 0;
+
+div.themaTripText .thema-star-rating label {
+   color:#FFEB46;
+   cursor:pointer;
+}
+
+div.themaTripText .thema-star-rating :checked ~ label {
+   color:#f90;
 }
 
 div.themaTripText > div.themeaofkorea{
@@ -183,7 +179,7 @@ div.themaTripText > div.themeaofkorea > a.unique-experience{
 	color: #2bae66;
 }
 
-div.themaTripText > div.selectbar{
+div.themaTripText div.sortselectbar{
 	position: relative;
     left: 391px;
     top: -157px;
