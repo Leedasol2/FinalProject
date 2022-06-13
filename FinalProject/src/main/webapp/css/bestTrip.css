@@ -11,7 +11,7 @@ div.bestTripText{
 	font-family: 'MinSans-Medium' !important;
 }
 
-div.bestTripText > div.trip-category{
+div.bestTripText div.trip-category{
 	width: 210px;
     height: 230px;
     background-color: #ffffea;
@@ -20,29 +20,30 @@ div.bestTripText > div.trip-category{
     margin-left: 437px;
 }
 
-div.bestTripText > div.trip-category > a.tripcategory{
+div.bestTripText div.trip-category a.tripcategory{
 	color: gray;
 	font-weight: 650;
 	font-size: 17px;
+	cursor: pointer;
 }
 
-div.bestTripText > div.trip-category > a.best-category {
+div.bestTripText div.trip-category a.best-category {
 	color: #212529;
 }
 
-div.bestTripText > div.trip-category > a:hover{
+div.bestTripText div.trip-category > a:hover{
 	color: #212529;
 	transition: 0.3s ease; 
 }
 
-div.bestTripText > div.category-title {
+div.bestTripText div.category-title {
 	display: inline-block;
     position: absolute;
     left: 670px;
     top: 233px;
 }
 
-div.bestTripText > div.category-title > hr.title-line{
+div.bestTripText div.category-title hr.title-line{
 	margin-top: 20px;
     margin-bottom: 20px;
     border: 0;
@@ -51,18 +52,18 @@ div.bestTripText > div.category-title > hr.title-line{
     margin-left: 0;
 }
 
-div.bestTripText > div.category-title > span.main-title{
+div.bestTripText div.category-title span.main-title{
 	font-weight: bold;
 	font-size: 25px;
 	color: #212529;
 }
 
-div.bestTripText > div.category-title > span.sub-title{
+div.bestTripText div.category-title span.sub-title{
 	font-size: 0.8em;
 	color: #afafaf;
 }
 
-div.bestTripText > div.category-title > span.title-content{
+div.bestTripText div.category-title span.title-content{
 	float: right;
 	font-size: 0.8em;
 	padding-left: 266px;
@@ -81,7 +82,7 @@ div.bestTripText div.trip-content{
     margin-bottom: 47px;
 }
 
-div.bestTripText div.trip-content > img.trip-img{
+div.bestTripText div.trip-content img.trip-img{
 	width: 100%;
 	height: 170px;
 	border-top-left-radius : 10px;
@@ -89,7 +90,7 @@ div.bestTripText div.trip-content > img.trip-img{
 	cursor: pointer;	
 }
 
-div.bestTripText div.trip-content > span.trip-name{
+div.bestTripText div.trip-content span.trip-name{
 	position: relative;
 	top: 11px;
 	padding-left: 17px;
@@ -99,7 +100,7 @@ div.bestTripText div.trip-content > span.trip-name{
 	right: 63px;
 }
 
-div.bestTripText div.trip-content > span.trip-explanation{
+div.bestTripText div.trip-content span.trip-explanation{
 	font-size: 0.8em;
     margin-left: 57px;
     position: relative;
@@ -107,7 +108,7 @@ div.bestTripText div.trip-content > span.trip-explanation{
     right: 41px;
 }
 
-div.bestTripText div.trip-content > span.trip-region{
+div.bestTripText div.trip-content span.trip-region{
 	font-size: 0.8em;
     color: #2bae66;
     padding-left: 17px;
@@ -116,7 +117,7 @@ div.bestTripText div.trip-content > span.trip-region{
     cursor: pointer;
 }
 
-div.bestTripText div.trip-content > span.trip-region > img{
+div.bestTripText div.trip-content span.trip-region > img{
 	width: 12px;
 	position: relative;
     top: 1px;

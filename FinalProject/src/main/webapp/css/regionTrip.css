@@ -24,6 +24,7 @@ div.regionTripText > div.trip-category > a.tripcategory{
 	color: gray;
 	font-weight: 650;
 	font-size: 17px;
+	cursor: pointer;
 }
 
 div.regionTripText > div.trip-category > a.region-category {
