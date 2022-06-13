@@ -1,71 +1,8 @@
-.img1{
-	width: 500px;
-	height: 300px;
-	float: left;
-	margin-left: 500px;
-	padding-right: 50px;
-}
-.sogae, .map, .image{
-	position: relative;
-	left: 500px;
-	top: 20px;
-	font-size: 1.7em;
-}
-span{
-	font-family: 'MinSans-Medium';
-}
-span.name{
-	position: relative;
-	left: 500px;
-	float: left;
-}
-span.edit{
-	position: relative;
-	left: 1150px;
-}
-span.date{
-	position: relative;
-	left: 1180px;
-	color: #afafaf;
-	font-size: 8pt;
-}
-.kakaomap, img.image{
-	width: 600px;
-	height: 400px;
-	left: 650px;
-	top: 10px;
-}
 div.smimage3 > img{
-	position: relative;
-	left: 650px;
-	width: 117px;
-	height: 80px;
-	padding-right: 5px;
+	width: 120px;
+	height: 120px;
 	cursor: pointer;
-}
-div.subject{
-	font-family:  'MinSans-Light';
-	font-size: 1.7em;
-	margin-left: 500px;
-}
-div.select span{
-	font-size: 1.2em;
-	margin-right: 50px;
-	color: gray;
-	cursor: pointer;
-}
-.btnadd{
-	background-color: #2bae66;
-	color: white;
-	border-radius: 30px;
-	width: 130px;
-	height: 40px;
-	font-size: 10pt;
-	border: 0;
-	position: relative;
-	left: 600px;
-	font-family: 'MinSans-Medium';
-}
-div.themeparkdetail{
-	height: 2300px;
+	margin-top: 10px;
+	border: 1px solid #afafaf;
+	margin-right: 5px;
 }

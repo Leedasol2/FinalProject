@@ -1,53 +1,107 @@
-.img1{
-	width: 500px;
-	height: 300px;
-	float: left;
-	margin-left: 500px;
-	padding-right: 50px;
+img.tripdetailimg{
+	width: 400px;
+	height: 250px;
+	margin-left: 5px;
 }
-.sogae, .map, .image, .madi{
-	position: relative;
-	left: 500px;
-	top: 20px;
+div.sogae, div.map, div.image, div.madi{
 	font-size: 1.7em;
+	width: 900px;
+	margin-bottom: 50px;
+	margin-top: 30px;
+}
+div.triptopcont{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+div.tripsubcontent{
+	font-size: 12pt;
+	margin-top: 30px;
+}
+div.subedit{
+	font-size: 12pt;
+	margin-top: 80px;
+}
+div.subcontent{
+	float: left;
+}
+div.subedit > img{
+	width: 21px;
+	height: 21px;	
+}
+div.tripsogae{
+	text-align: center;
+}
+div.tripimg1{
+	text-align: center;
+	margin-top: 50px;
+}
+div.tripimg2{
+	text-align: center;
+	margin-bottom: 50px;
+}
+div.tripimg > img{width: 70px;}
+div.tripcontent{
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+div.tripdetailname{
+	font-family: 'MinSans-Black';
+	font-size: 1.5em;
+	margin-right: 25px;
 }
 span{
 	font-family: 'MinSans-Medium';
 }
 span.name{
-	position: relative;
-	left: 500px;
-	float: left;
 }
 span.del, .update{
-	position: relative;
-	left: 1150px;
 	cursor: pointer;
 }
 span.date{
-	position: relative;
-	left: 1180px;
 	color: #afafaf;
 	font-size: 8pt;
 }
-.kakaomap, img.image{
+div.kakaomap, img.tripimage{
 	width: 600px;
 	height: 400px;
-	left: 650px;
-	top: 10px;
+	border: 1px solid #afafaf;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 div.smimage > img{
-	position: relative;
-	left: 650px;
-	width: 202px;
+	width: 196px;
 	height: 150px;
-	padding-right: 15px;
 	cursor: pointer;
+	margin-top: 10px;
+	border: 1px solid #afafaf;
+	margin-right: 5px;
 }
-div.subject{
+div.tripdetailsubject{
+	width:900px;
 	font-family:  'MinSans-Medium';
 	font-size: 1.7em;
-	margin-left: 500px;
+}
+div.tripdetailsubject > img{
+	width: 36px;	
+	height: 36px;
+}
+div.mytripdetail{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  margin-top: 30px;
+  margin-bottom: 80px;
+  width: 100%;
+  height: 100%;
+  color: #212529;
+  font-family: MinSans-Medium;
+  margin-bottom: 100px;
+}
+div.mytripdetail > hr{
+	width: 900px;
 }
 div.select span{
 	font-size: 1.2em;
@@ -55,7 +109,7 @@ div.select span{
 	color: gray;
 	cursor: pointer;
 }
-.btnadd{
+button.btnadd{
 	background-color: #2bae66;
 	color: white;
 	border-radius: 30px;
@@ -63,9 +117,18 @@ div.select span{
 	height: 40px;
 	font-size: 10pt;
 	border: 0;
-	position: relative;
-	left: 600px;
 	font-family: 'MinSans-Medium';
+	float: right;
+}
+div.madicontent{
+	width: 900px;	
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+span.madireview{width: 900px;}
+div.contentedit{
+	text-align: right;
+	margin-right: 20px;
 }
 
 /* modal 부분 */
@@ -109,9 +172,6 @@ div.select span{
 .star-ratings-base {
   z-index: 0;
   padding: 0;
-}
-div.mytripdetail{
-	height: 2700px;
 }
 
 /* 리뷰 동적 별점 */
