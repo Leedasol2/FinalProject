@@ -30,13 +30,13 @@
 						</tr>
 
 						<tr>
-							<th class="missidsubj">생년월일</th>						
-							<td><input type="text" name="birth" class="form-missid-input" placeholder="19900101" required="required"></td>
+							<th class="missidsubj">이메일</th>						
+							<td><input type="text" name="email" class="form-missid-input" placeholder="user@2runtip.com" required="required"></td>
 						</tr>
 						
 						<tr>
 							<th class="missidsubj">아이디</th>						
-							<td><input type="text" name="id" class="form-missid-id" placeholder="여기에 아이디가 뿅" readonly="readonly"></td>
+							<td><input type="text" name="id" class="form-missid-id" readonly="readonly"></td>
 						</tr>
 					</table>
 

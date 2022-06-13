@@ -29,8 +29,8 @@
 						</tr>
 
 						<tr>
-							<th class="misspasssubj">생년월일</th>						
-							<td><input type="text" name="birth" class="form-misspass-input" placeholder="19900101" required="required"></td>
+							<th class="misspasssubj">이메일</th>						
+							<td><input type="text" name="email" class="form-misspass-input" placeholder="user@2runtip.com" required="required"></td>
 						</tr>
 						
 						<tr>
