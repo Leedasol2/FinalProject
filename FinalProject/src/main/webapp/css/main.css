@@ -157,12 +157,12 @@ ul.gnb > li > a + ul {
     left: 0;
     width: 100%;
     background-color: rgba(43, 174, 102, 0.8);
-    opacity: 0;
+    display: none;
     transition: all 0.3s ease;
 }
 
-ul.gnb > li > a:hover + ul{
-	opacity: 1;
+ul.gnb > li:hover > a + ul{
+   display:block;
 }
 
 ul.gnb > li > ul > li {
