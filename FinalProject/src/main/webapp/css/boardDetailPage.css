@@ -7,36 +7,46 @@
     font-style: normal;
 }
 
-table.boardDetailPage{
-	width: 900px;
+div.boardDetailPage-main{
+	font-family: 'MinSans-Medium' !important;
+	align-items: center;
+  	display: flex;
+    flex-direction: column;
     position: relative;
-    top: 69px;
-    left: 500px;
-    font-family: 'MinSans-Medium';
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    color: #212529;
 }
 
-table.boardDetailPage span.boardtitle{
+div.boardDetailPage-main table.boardDetailPage{
+	margin-top: 45px;
+}
+
+div.boardDetailPage-main span.boardtitle{
 	font-size: 1.5em;
     font-weight: 550;
+    line-height: 1.3;
 }
 
-table.boardDetailPage span.boardwriter{
+div.boardDetailPage-main span.boardwriter{
 	font-weight: 550;
+	line-height: 1.3;
 }
 
-table.boardDetailPage span.boardinfo{
+div.boardDetailPage-main span.boardinfo{
 	color: #afafaf;
+	line-height: 1.3;
 }
 
-table.boardDetailPage span.likes{
-	position: relative;
-    right: -3px;
-    top: -50px;
-    float: right;
+div.boardDetailPage-main span.likes{
+	float: right;
     font-size: 10pt;
+    margin-top: -55px;
+    margin-right: 17px;
 }
 
-table.boardDetailPage span.likes-img{
+div.boardDetailPage-main span.likes-img{
 	cursor: pointer;
 	float: right;
     position: relative;
@@ -44,64 +54,58 @@ table.boardDetailPage span.likes-img{
     right: 38px;
 }
 
-table.boardDetailPage img.chuimage{
+div.boardDetailPage-main img.chuimage{
 	width: 14px;
 }
 
-table.boardDetailPage span.writer-id, span.boardowner-id, span.comment-writer{
+div.boardDetailPage-main span.writer-id, span.boardowner-id, span.comment-writer{
 	font-weight: 600;
 }
 
-table.boardDetailPage span.board-upd{
+div.boardDetailPage-main span.board-upd{
     font-weight: 550;
-    position: relative;
-    right: 49px;
-    top: -48px;
     font-size: 12pt;
     cursor: pointer;
     float: right;
+    margin-top: -51px;
+    margin-right: 42px;
 }
 
-table.boardDetailPage span.board-del{
+div.boardDetailPage-main span.board-del{
 	font-weight: 550;
-    position: relative;
-    right: -21px;
-    top: -48px;
     font-size: 12pt;
-    cursor: pointer;	
+    cursor: pointer;
     float: right;
+    margin-top: -51px;
+    margin-right: 9px;
 }
 
-table.boardDetailPage span.comment-del{
-	position: relative;
-    right: 169px;
-    top: -2px;
+div.boardDetailPage-main span.comment-del{
     font-size: 14px;
     cursor: pointer;
     float: right;
     font-weight: 550;
+    margin-right: 38px;
 }
 
-table.boardDetailPage span.comment-upd{
-	position: relative;
-    right: 108px;
-    top: -2px;
+div.boardDetailPage-main span.comment-upd{
     font-size: 14px;
     cursor: pointer;
     float: right;
     font-weight: 550;
+    margin-right: -61px;
 }
 
-table.boardDetailPage hr.underline{
+div.boardDetailPage-main hr.underline{
 	width: 895px;
 }
 
-table.boardDetailPage td.list hr.underline{
+div.boardDetailPage-main td.list hr.underline{
 	width: 895px;
-	margin-top: 533px;
+	margin-top: 21px;
 }
 
-table.boardDetailPage pre.content-body{
+div.boardDetailPage-main pre.content-body{
 	display: block;
     padding: 16px 9.5px 9.5px 9.5px;
     font-size: 13px;
@@ -115,61 +119,60 @@ table.boardDetailPage pre.content-body{
     background-color: #fff;
 }
 
-table.boardDetailPage span.comment-count{
+div.boardDetailPage-main span.comment-count{
 	color: #afafaf;
 }
 
-table.boardDetailPage span.comment-head{
+div.boardDetailPage-main span.comment-head{
 	padding-left: 17px;
     font-size: 1.3em;
 }
 
-table.boardDetailPage span.comment-day{
+div.boardDetailPage-main span.comment-day{
 	float: right;
-    left: 676px;
-    position: absolute;
+    margin-right: 10px;
     font-size: 0.8em;
     color: #afafaf;
 }
 
-table.boardDetailPage span.comment-content{
+div.boardDetailPage-main span.comment-content{
 	position: relative;
     top: 11px;
+    line-height: 1.2;
 }
 
-table.boardDetailPage td.comment{
-	position: absolute;
-    left: 45px;
-    top: 932px;
+div.boardDetailPage-main div.comment-group{
     width: 800px;
+    margin-left: 50px;
+    margin-top: 25px;
 }
 
-table.boardDetailPage span.boardowner-id{
+div.boardDetailPage-main span.boardowner-id{
     margin-left: 55px;
 }
 
-table.boardDetailPage span.boardowner-writer{
+div.boardDetailPage-main span.boardowner-writer{
 	color: red;
 	font-size: 0.9em;
 }
 
-table.boardDetailPage span.boardowner-content{
+div.boardDetailPage-main span.boardowner-content{
 	margin-left: 55px;
 	position: relative;
     top: 8px;
 }
 
-table.boardDetailPage span.comment-writer{
+div.boardDetailPage-main span.comment-writer{
 	margin-left: 5px;
 }
 
-table.boardDetailPage input.commentbox{
+div.boardDetailPage-main input.commentbox{
     width: 801px;
     height: 82px;
     border: 1px solid #afafaf;
 }
 
-table.boardDetailPage button.btnreply{
+div.boardDetailPage-main button.btnreply{
 	margin-top: 27px;
 	border: 1px solid #afafaf;
     background-color: #fff;
@@ -178,7 +181,7 @@ table.boardDetailPage button.btnreply{
     font-size: 10pt;
 }
 
-table.boardDetailPage button.comment-insertbtn{
+div.boardDetailPage-main button.comment-insertbtn{
 	float: right;
 	border: 1px solid #afafaf;
     background-color: #fff;
@@ -191,12 +194,12 @@ table.boardDetailPage button.comment-insertbtn{
 }
 
 
-table.boardDetailPage button.listbtn{
+div.boardDetailPage-main button.listbtn{
     float: right;
     border: 1px solid #afafaf;
     background-color: #fff;
     width: 70px;
     height: 40px;
   	font-size: 1.1em;
-  	margin-bottom: 100px;
+  	margin-bottom: 18px;
 }

@@ -46,7 +46,7 @@ $(document).ready(function(){
         <div class="trip-content">
           <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
           <span class="trip-name">신평 양조장</span>
-          <div class="theme-star-rating">
+          <div class="best-star-rating">
               <input type="radio" id="5-stars" name="rating" value="5" />
               <label for="5-stars" class="star">&#9733;</label>
               <input type="radio" id="4-stars" name="rating" value="4" />
@@ -70,14 +70,18 @@ $(document).ready(function(){
         <div class="trip-content">
           <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
           <span class="trip-name">신평 양조장</span>
-          <div class="star-ratings">
-		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
-		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-	      <div class="star-ratings-base space-x-2 text-lg">
-		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-        </div>
+          <div class="best-star-rating">
+              <input type="radio" id="5-stars" name="rating" value="5" />
+              <label for="5-stars" class="star">&#9733;</label>
+              <input type="radio" id="4-stars" name="rating" value="4" />
+              <label for="4-stars" class="star">&#9733;</label>
+              <input type="radio" id="3-stars" name="rating" value="3" />
+              <label for="3-stars" class="star">&#9733;</label>
+              <input type="radio" id="2-stars" name="rating" value="2" />
+              <label for="2-stars" class="star">&#9733;</label>
+              <input type="radio" id="1-star" name="rating" value="1" />
+              <label for="1-star" class="star">&#9733;</label>
+            </div>
   		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
  		  <span class="trip-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
@@ -86,18 +90,22 @@ $(document).ready(function(){
         </div>
       </td>
       
-      <td>
+     <td>
         <div class="trip-content">
           <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
           <span class="trip-name">신평 양조장</span>
-          <div class="star-ratings">
-		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
-		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-	      <div class="star-ratings-base space-x-2 text-lg">
-		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-        </div>
+          <div class="best-star-rating">
+              <input type="radio" id="5-stars" name="rating" value="5" />
+              <label for="5-stars" class="star">&#9733;</label>
+              <input type="radio" id="4-stars" name="rating" value="4" />
+              <label for="4-stars" class="star">&#9733;</label>
+              <input type="radio" id="3-stars" name="rating" value="3" />
+              <label for="3-stars" class="star">&#9733;</label>
+              <input type="radio" id="2-stars" name="rating" value="2" />
+              <label for="2-stars" class="star">&#9733;</label>
+              <input type="radio" id="1-star" name="rating" value="1" />
+              <label for="1-star" class="star">&#9733;</label>
+            </div>
   		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
  		  <span class="trip-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
@@ -114,14 +122,18 @@ $(document).ready(function(){
         <div class="trip-content">
           <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
           <span class="trip-name">신평 양조장</span>
-          <div class="star-ratings">
-		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
-		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-	      <div class="star-ratings-base space-x-2 text-lg">
-		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-        </div>
+          <div class="best-star-rating">
+              <input type="radio" id="5-stars" name="rating" value="5" />
+              <label for="5-stars" class="star">&#9733;</label>
+              <input type="radio" id="4-stars" name="rating" value="4" />
+              <label for="4-stars" class="star">&#9733;</label>
+              <input type="radio" id="3-stars" name="rating" value="3" />
+              <label for="3-stars" class="star">&#9733;</label>
+              <input type="radio" id="2-stars" name="rating" value="2" />
+              <label for="2-stars" class="star">&#9733;</label>
+              <input type="radio" id="1-star" name="rating" value="1" />
+              <label for="1-star" class="star">&#9733;</label>
+            </div>
   		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
  		  <span class="trip-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
@@ -134,14 +146,18 @@ $(document).ready(function(){
         <div class="trip-content">
           <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
           <span class="trip-name">신평 양조장</span>
-          <div class="star-ratings">
-		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
-		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-	      <div class="star-ratings-base space-x-2 text-lg">
-		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-        </div>
+          <div class="best-star-rating">
+              <input type="radio" id="5-stars" name="rating" value="5" />
+              <label for="5-stars" class="star">&#9733;</label>
+              <input type="radio" id="4-stars" name="rating" value="4" />
+              <label for="4-stars" class="star">&#9733;</label>
+              <input type="radio" id="3-stars" name="rating" value="3" />
+              <label for="3-stars" class="star">&#9733;</label>
+              <input type="radio" id="2-stars" name="rating" value="2" />
+              <label for="2-stars" class="star">&#9733;</label>
+              <input type="radio" id="1-star" name="rating" value="1" />
+              <label for="1-star" class="star">&#9733;</label>
+            </div>
   		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
  		  <span class="trip-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
@@ -150,18 +166,22 @@ $(document).ready(function(){
         </div>
       </td>
       
-      <td>
+     <td>
         <div class="trip-content">
           <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
           <span class="trip-name">신평 양조장</span>
-          <div class="star-ratings">
-		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
-		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-	      <div class="star-ratings-base space-x-2 text-lg">
-		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-        </div>
+          <div class="best-star-rating">
+              <input type="radio" id="5-stars" name="rating" value="5" />
+              <label for="5-stars" class="star">&#9733;</label>
+              <input type="radio" id="4-stars" name="rating" value="4" />
+              <label for="4-stars" class="star">&#9733;</label>
+              <input type="radio" id="3-stars" name="rating" value="3" />
+              <label for="3-stars" class="star">&#9733;</label>
+              <input type="radio" id="2-stars" name="rating" value="2" />
+              <label for="2-stars" class="star">&#9733;</label>
+              <input type="radio" id="1-star" name="rating" value="1" />
+              <label for="1-star" class="star">&#9733;</label>
+            </div>
   		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
  		  <span class="trip-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
@@ -178,14 +198,18 @@ $(document).ready(function(){
         <div class="trip-content">
           <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
           <span class="trip-name">신평 양조장</span>
-          <div class="star-ratings">
-		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
-		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-	      <div class="star-ratings-base space-x-2 text-lg">
-		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-        </div>
+          <div class="best-star-rating">
+              <input type="radio" id="5-stars" name="rating" value="5" />
+              <label for="5-stars" class="star">&#9733;</label>
+              <input type="radio" id="4-stars" name="rating" value="4" />
+              <label for="4-stars" class="star">&#9733;</label>
+              <input type="radio" id="3-stars" name="rating" value="3" />
+              <label for="3-stars" class="star">&#9733;</label>
+              <input type="radio" id="2-stars" name="rating" value="2" />
+              <label for="2-stars" class="star">&#9733;</label>
+              <input type="radio" id="1-star" name="rating" value="1" />
+              <label for="1-star" class="star">&#9733;</label>
+            </div>
   		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
  		  <span class="trip-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
@@ -198,14 +222,18 @@ $(document).ready(function(){
         <div class="trip-content">
           <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
           <span class="trip-name">신평 양조장</span>
-          <div class="star-ratings">
-		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
-		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-	      <div class="star-ratings-base space-x-2 text-lg">
-		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-        </div>
+          <div class="best-star-rating">
+              <input type="radio" id="5-stars" name="rating" value="5" />
+              <label for="5-stars" class="star">&#9733;</label>
+              <input type="radio" id="4-stars" name="rating" value="4" />
+              <label for="4-stars" class="star">&#9733;</label>
+              <input type="radio" id="3-stars" name="rating" value="3" />
+              <label for="3-stars" class="star">&#9733;</label>
+              <input type="radio" id="2-stars" name="rating" value="2" />
+              <label for="2-stars" class="star">&#9733;</label>
+              <input type="radio" id="1-star" name="rating" value="1" />
+              <label for="1-star" class="star">&#9733;</label>
+            </div>
   		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
  		  <span class="trip-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
@@ -214,18 +242,22 @@ $(document).ready(function(){
         </div>
       </td>
       
-      <td>
+     <td>
         <div class="trip-content">
           <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
           <span class="trip-name">신평 양조장</span>
-          <div class="star-ratings">
-		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
-		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-	      <div class="star-ratings-base space-x-2 text-lg">
-		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-        </div>
+          <div class="best-star-rating">
+              <input type="radio" id="5-stars" name="rating" value="5" />
+              <label for="5-stars" class="star">&#9733;</label>
+              <input type="radio" id="4-stars" name="rating" value="4" />
+              <label for="4-stars" class="star">&#9733;</label>
+              <input type="radio" id="3-stars" name="rating" value="3" />
+              <label for="3-stars" class="star">&#9733;</label>
+              <input type="radio" id="2-stars" name="rating" value="2" />
+              <label for="2-stars" class="star">&#9733;</label>
+              <input type="radio" id="1-star" name="rating" value="1" />
+              <label for="1-star" class="star">&#9733;</label>
+            </div>
   		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
  		  <span class="trip-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">

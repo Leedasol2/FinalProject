@@ -80,7 +80,7 @@ $("a.jeju").click(function(){
   <a href="#a" class="seoul region">서울</a>
   <a href="#b" class="incheon-Gyeonggi region">인천/경기</a>
   <a href="#c" class="daejeon-chungcheong region">대전/충청</a>
-  <a href="#d" class="daegu region">대전</a>
+  <a href="#d" class="daegu region">대구</a>
   <a href="#e" class="jeolla region">전라</a>
   <a href="#f" class="gyeongsang region">경상</a>
   <a href="#g" class="busan region">부산</a>
