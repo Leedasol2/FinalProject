@@ -11,10 +11,10 @@
 <body>
 
 		<!-- main 시작 -->
-		<div class="mypage-content">
+		<div class="mypage-review-content">
 
 			<div class="mypage-category">
-				<span class="mypage-title">마이페이지</span>
+				<span class="mypage-review-title">마이페이지</span>
 				<ul class="mypage">
 					<li class="mypage-editmember"><a href="#">회원정보수정</a></li>
 
@@ -24,21 +24,24 @@
 
 					<li class="mypage-review"><a href="#">리뷰</a></li>
 				</ul>
-				<hr class="title-line">
+				<hr class="review-title-line">
 			</div>
 
 			<div class="review-main">
 
 				<div class="review-main-content">
 					<b class="festival-name">남이섬 축제</b>
-					<div class="star-ratings">
-						<div class="star-ratings-fill space-x-2 text-lg"
-							:style="{ width: ratingToPercent + '%' }">
-							<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-						</div>
-						<div class="star-ratings-base space-x-2 text-lg">
-							<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-						</div>
+					<div class="review-star-rating">
+					  <input type="radio" id="5-stars" name="rating" value="5" />
+					  <label for="5-stars" class="star">&#9733;</label>
+					  <input type="radio" id="4-stars" name="rating" value="4" />
+					  <label for="4-stars" class="star">&#9733;</label>
+					  <input type="radio" id="3-stars" name="rating" value="3" />
+					  <label for="3-stars" class="star">&#9733;</label>
+					  <input type="radio" id="2-stars" name="rating" value="2" />
+					  <label for="2-stars" class="star">&#9733;</label>
+					  <input type="radio" id="1-star" name="rating" value="1" />
+					  <label for="1-star" class="star">&#9733;</label>
 					</div>
 					
 					<form id="btn-form" action="" class="btn-form">
@@ -56,15 +59,19 @@
 				
 				<div class="review-main-content">
 					<b class="festival-name">남이섬 축제</b>
-					<div class="star-ratings">
-						<div class="star-ratings-fill space-x-2 text-lg"
-							:style="{ width: ratingToPercent + '%' }">
-							<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-						</div>
-						<div class="star-ratings-base space-x-2 text-lg">
-							<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-						</div>
+					<div class="review-star-rating">
+					  <input type="radio" id="5-stars" name="rating" value="5" />
+					  <label for="5-stars" class="star">&#9733;</label>
+					  <input type="radio" id="4-stars" name="rating" value="4" />
+					  <label for="4-stars" class="star">&#9733;</label>
+					  <input type="radio" id="3-stars" name="rating" value="3" />
+					  <label for="3-stars" class="star">&#9733;</label>
+					  <input type="radio" id="2-stars" name="rating" value="2" />
+					  <label for="2-stars" class="star">&#9733;</label>
+					  <input type="radio" id="1-star" name="rating" value="1" />
+					  <label for="1-star" class="star">&#9733;</label>
 					</div>
+					
 					
 					<form id="btn-form" action="" class="btn-form">
 						<input type="button" onclick="" value="삭제" class="btn-delete">
@@ -81,15 +88,19 @@
 				
 				<div class="review-main-content">
 					<b class="festival-name">남이섬 축제</b>
-					<div class="star-ratings">
-						<div class="star-ratings-fill space-x-2 text-lg"
-							:style="{ width: ratingToPercent + '%' }">
-							<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-						</div>
-						<div class="star-ratings-base space-x-2 text-lg">
-							<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-						</div>
+				<div class="review-star-rating">
+					  <input type="radio" id="5-stars" name="rating" value="5" />
+					  <label for="5-stars" class="star">&#9733;</label>
+					  <input type="radio" id="4-stars" name="rating" value="4" />
+					  <label for="4-stars" class="star">&#9733;</label>
+					  <input type="radio" id="3-stars" name="rating" value="3" />
+					  <label for="3-stars" class="star">&#9733;</label>
+					  <input type="radio" id="2-stars" name="rating" value="2" />
+					  <label for="2-stars" class="star">&#9733;</label>
+					  <input type="radio" id="1-star" name="rating" value="1" />
+					  <label for="1-star" class="star">&#9733;</label>
 					</div>
+					
 					
 					<form id="btn-form" action="" class="btn-form">
 						<input type="button" onclick="" value="삭제" class="btn-delete">
