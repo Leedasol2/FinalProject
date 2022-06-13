@@ -21,9 +21,9 @@
 <body>
 
 		<!-- main 시작 -->
-		<div class="mypage-content">
+		<div class="mypage-modal-content">
 			<div class="mypage-category">
-				<span class="mypage-title">마이페이지</span>
+				<span class="mypage-modal-title">마이페이지</span>
 				<ul class="mypage">
 					<li class="mypage-editmember"><a href="#">회원정보수정</a></li>
 
@@ -76,7 +76,7 @@
 
 					<div class="form-color-group">
 						<label for="color">컬러선택</label> <br>
-						<div class="box">
+						<div class="modal-box">
 							<span class="box1"></span> <span class="box2"></span> <span
 								class="box3"></span> <span class="box4"></span> <span
 								class="box5"></span> <span class="box6"></span> <span
