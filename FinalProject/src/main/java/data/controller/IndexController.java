@@ -103,6 +103,8 @@ public class IndexController {
 	}
 	
 	
+	//강진
+	
 	@GetMapping("/html/mytripdetail")
 	public String mytripdetail() {
 		

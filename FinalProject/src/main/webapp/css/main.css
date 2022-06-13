@@ -124,7 +124,7 @@ ul.gnb > li > a::before {
 ul.gnb > li:nth-child(1) > a::after, ul.gnb > li:nth-child(2) > a::after {
 	content: '';
     position: absolute;
-    bottom: -7px;
+    bottom: -5px;
     left: 50px;
     width: 80px;
     height: 7px;
@@ -153,16 +153,16 @@ ul.gnb > li:nth-child(4) > a::before {
 
 ul.gnb > li > a + ul {
     position: absolute;
-    top: 90px;
+    top: 88px;
     left: 0;
     width: 100%;
     background-color: rgba(43, 174, 102, 0.8);
-    opacity: 0;
+    display: none;
     transition: all 0.3s ease;
 }
 
 ul.gnb > li:hover > a + ul{
-	opacity: 1;
+   display:block;
 }
 
 ul.gnb > li > ul > li {
@@ -462,8 +462,12 @@ ul.tripstory-list > li:last-child{
 	margin-bottom:0px;
 }
 
-.tripstory-list a:hover{color:#2bae66}
-a.fontgreen{color:#2bae66;} /* 여행이야기 끝 */
+.tripstory-list > li > a > span:hover {color:#2bae66}
+span.fontgreen{color:#2bae66;} /* 여행이야기 끝 */
+.tripstory-list > li > a > span::after{padding-left:5px;padding-right:5px;content:"|"}
+
+.tripstory-list > li > a > span:last-child::after{content:"";}
+
 
 /* 테마파크 */
 .slider-box {

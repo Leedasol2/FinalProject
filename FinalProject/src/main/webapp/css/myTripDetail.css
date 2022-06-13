@@ -110,8 +110,8 @@ div.select span{
   z-index: 0;
   padding: 0;
 }
-div.home{
-	height: 3500px;
+div.mytripdetail{
+	height: 2700px;
 }
 
 /* 리뷰 동적 별점 */
@@ -145,3 +145,4 @@ div.home{
 .star-rating label:hover ~ label {
   -webkit-text-fill-color: #fff58c;
 }
+span.modalsub{color: white;}

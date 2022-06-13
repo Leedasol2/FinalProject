@@ -15,7 +15,7 @@
 $(function(){
 	
 	<!-- image 클릭 이벤트 -->
-	$(".small").click(function(){
+	$(".small3").click(function(){
 		
 		var src=$(this).attr("src");
 		
@@ -47,7 +47,8 @@ $(function(){
 </script>
 
 	<!-- main 시작 -->
-	<div class="main">
+	<div class="themeparkdetail">
+	<br><br>
 		<div class="subject">
 		테마파크 <img alt="" src="${root }/image/asset/대관람차.png" width="50px;">
 		</div>
@@ -64,7 +65,7 @@ $(function(){
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<img alt="" src="${root }/image/asset/링크.png" width="20px;"><span> 홈페이지</span>
 	</div>
-	<br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br>
 	<hr width="970px">
 	<div align="center" class="select">
 	<a href="#sp1"><span>소개글</span></a>
@@ -116,12 +117,12 @@ $(function(){
 	</div>
 	<br><br>
 	<img alt="" src="${root }/image/asset/롯데월드.jpg" class="image"><br><br>
-	<div class="smimage">
-	<img alt="" src="${root }/image/asset/테마파크.jpg" class="small">
-	<img alt="" src="${root }/image/asset/테마파크2.jpg" class="small">
-	<img alt="" src="${root }/image/asset/테마파크3.jpg" class="small">
-	<img alt="" src="${root }/image/asset/테마파크4.jpg" class="small">
-	<img alt="" src="${root }/image/asset/테마파크5.jpg" class="small">
+	<div class="smimage3">
+	<img alt="" src="${root }/image/asset/테마파크.jpg" class="small3">
+	<img alt="" src="${root }/image/asset/테마파크2.jpg" class="small3">
+	<img alt="" src="${root }/image/asset/테마파크3.jpg" class="small3">
+	<img alt="" src="${root }/image/asset/테마파크4.jpg" class="small3">
+	<img alt="" src="${root }/image/asset/테마파크5.jpg" class="small3">
 	</div>
 	</div><!-- main 끝 -->
 

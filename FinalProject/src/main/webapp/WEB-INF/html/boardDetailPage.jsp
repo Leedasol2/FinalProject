@@ -17,7 +17,7 @@
     <td>
       <span class="boardtitle">게시글 제목</span><br>
       <span class="boardwriter">2runt***</span><br>
-      <span class="boardinfo">2022.06.02&nbsp;07:50&nbsp;조회 850</span>
+      <span class="boardinfo">2022.06.02&nbsp;&nbsp;07:50&nbsp;&nbsp;조회 850</span>
         <span class="likes-img"><img alt="" src="${root }/image/asset/추천.png" class="chuimage"></span><br>
         <span class="likes">추천수 22</span><br>
         <span class="board-upd">수정 |</span><span class="board-del"> 삭제</span>
