@@ -4,10 +4,14 @@ img.tripdetailimg{
 	margin-left: 5px;
 }
 div.sogae, div.map, div.image, div.madi{
+	font-family: 'MinSans-Black';
 	font-size: 1.7em;
 	width: 900px;
 	margin-bottom: 50px;
 	margin-top: 30px;
+}
+div.tripdetailsubject,div.tripdetailname,div.tripsubcontent,span.tripwhere,span.tripscrap,div.tripcontent,div.madireview{
+	color: #212529;
 }
 div.triptopcont{
 	margin-top: 30px;
@@ -55,7 +59,8 @@ div.tripdetailname{
 span{
 	font-family: 'MinSans-Medium';
 }
-span.name{
+span.detailname{
+	text-align: left;
 }
 span.del, .update{
 	cursor: pointer;
@@ -129,16 +134,20 @@ button.btnadd{
 }
 div.madicontent{
 	width: 900px;	
-	margin-top: 25px;
-	margin-bottom: 25px;
 }
-span.madireview{width: 900px;}
-div.contentedit{
+div.madireview{
+	width: 900px;
+	margin-top: 30px;
+}
+span.detailedit{
 	text-align: right;
-	margin-right: 20px;
+	float: right;
 }
-
 /* modal 부분 */
+div.myModal2 important! {
+	width: 600px;
+	height: 350px;
+}
 .modal-header{background-color: #2bae66;}
 .rbtn{
 	background-color: #2bae66;
@@ -150,66 +159,75 @@ div.contentedit{
 	border: 0;
 	font-family: 'MinSans-Medium';
 }
-#ucontent{height: 180px;}
+span.modalname{
+	margin-bottom: 20px;
+	font-family: 'MinSans-Medium';
+}
+#detailcontent{
+	height: 180px;
+	margin-top: 20px;
+}
 
 
 /* 별점 css */
-.star-ratings {
-  color: #aaa9a9; 
-  position: relative;
-  unicode-bidi: bidi-override;
-  width: max-content;
-  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1.3px;
-  -webkit-text-stroke-color: #2b2a29;
-  float: left;
-  left: 550px;
-}
-.star-ratings-fill {
-  color: #fff58c;
-  padding: 0;
-  position: absolute;
-  z-index: 1;
-  display: flex;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  -webkit-text-fill-color: gold;
-}
-.star-ratings-base {
-  z-index: 0;
-  padding: 0;
+.detail-star-rating {
+      display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    padding: 0 0.2em;
+    text-align: center;
+    width: 5em;
+    margin-left: 90px;
+    font-size: 15px;
+    margin-top: -17px;
 }
 
-/* 리뷰 동적 별점 */
-.star-rating {
-  display: flex;
-  flex-direction: row-reverse;
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  justify-content: space-around;
-  padding: 0 0.2em;
-  text-align: center;
-  width: 5em;
+.detail-star-rating input {
+  display:none;
 }
- 
-.star-rating input {
-  display: none;
+
+.detail-star-rating label {
+  color:#FFEB46;
+  cursor:pointer;
 }
- 
-.star-rating label {
-  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 2.3px;
-  -webkit-text-stroke-color: #2b2a29;
-  cursor: pointer;
+
+.detail-star-rating :checked ~ label {
+  color:#f90;
 }
- 
-.star-rating :checked ~ label {
-  -webkit-text-fill-color: gold;
+
+span.modalsub{
+	color: white;
+	font-weight: bold;
+	font-family: 'MinSans-Medium';
 }
- 
-.star-rating label:hover,
-.star-rating label:hover ~ label {
-  -webkit-text-fill-color: #fff58c;
+span.modalsub2{
+	font-weight: bold;
+	font-family: 'MinSans-Medium';
+	color: #212529;
 }
-span.modalsub{color: white;}
+
+/* Modal 별점 css */
+.modal-star-rating {
+      display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    padding: 0 0.2em;
+    text-align: center;
+    width: 5em;
+    margin-left: 90px;
+    font-size: 15px;
+    margin-top: -17px;
+}
+
+.modal-star-rating input {
+  display:none;
+}
+
+.modal-star-rating label {
+  color:#FFEB46;
+  cursor:pointer;
+}
+
+.modal-star-rating :checked ~ label {
+  color:#f90;
+}

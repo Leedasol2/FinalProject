@@ -64,11 +64,11 @@ $(function(){
 	<img alt="" src="${root }/image/asset/따옴표위.png">
 	</div>
 	<div class="tripcontent">
-	<span>최신 LED 기술의 조명으로 시시각각 색과 패턴이 변하는
+	최신 LED 기술의 조명으로 시시각각 색과 패턴이 변하는
 	<br>'빛의 예술'과의 어우러짐 속에서 다양한 미디어 아트와 함께<br>
 	색다른 문화예술을 경험하실 수 있습니다.
 	서울의 대표적인 복합문화 공간으로 새롭게 태어난 N서울타워,
-	<br>자랑스런 서울의 랜드마크가 될 것입니다.</span>
+	<br>자랑스런 서울의 랜드마크가 될 것입니다.
 	</div>
 	<div class="tripimg2">
 	<img alt="" src="${root }/image/asset/따옴표아래.png">
@@ -108,22 +108,23 @@ $(function(){
 	<b>여행자의 한마디</b><button class="btnadd" data-target="#myModal2" data-toggle="modal">등록하기</button>
 	</div>
 	<div class="madicontent">
-	<span class="name"><b>ga*****</b></span>
-	<div class="star-ratings star" >
-	<div 
-    class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
-		<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+	<span class="detailname">ga*****</span>
+	<span class="detailedit">삭제 | 수정  2022-06-07 15:53</span>
+	<div class="detail-star-rating">
+                      <input type="radio" id="5-stars" name="rating" value="5" />
+                      <label for="5-stars" class="star">&#9733;</label>
+                      <input type="radio" id="4-stars" name="rating" value="4" />
+                      <label for="4-stars" class="star">&#9733;</label>
+                      <input type="radio" id="3-stars" name="rating" value="3" />
+                      <label for="3-stars" class="star">&#9733;</label>
+                      <input type="radio" id="2-stars" name="rating" value="2" />
+                      <label for="2-stars" class="star">&#9733;</label>
+                      <input type="radio" id="1-star" name="rating" value="1" />
+                      <label for="1-star" class="star">&#9733;</label>
+    </div>
+	
+	<div class="madireview">연인들의 천국, 외국인이면 더욱 서울의 야경을 멋지게 즐길 수 있습니다. 20년만의 서울타워 방문이 아깝지 않았습니다.</div>
 	</div>
-	<div class="star-ratings-base space-x-2 text-lg">
-		<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	</div>
-	</div>
-	<div class="contentedit">
-	<span class="del">삭제 |</span><span class="update">수정</span>
-	<span class="date">2022-06-07 15:53</span>
-	</div>
-	</div>
-	<span class="madireview">연인들의 천국, 외국인이면 더욱 서울의 야경을 멋지게 즐길 수 있습니다.20년만의 서울타워 방문이 아깝지 않았습니다.</span>
 	</div>
 <!-- main 끝 -->
 	
@@ -132,26 +133,26 @@ $(function(){
     <div class="modal-dialog">
     
       <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
+      <div class="modal-content detailmodal">
+        <div class="modal-header detailheader">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <span class="modalsub"><b>2run trip&nbsp;&nbsp;</b></span><span><b>  리뷰 작성</b></span>
+          <span class="modalsub">2run trip&nbsp;&nbsp;</span><span class="modalsub2">리뷰 작성</span>
         </div>
         <div class="modal-body">
-        <span style="float: left;"><b>여행지 명&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
-        <div class="star-rating space-x-4 mx-auto">
-	<input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
-	<label for="5-stars" class="star pr-4">★</label>
-	<input type="radio" id="4-stars" name="rating" value="4" v-model="ratings"/>
-	<label for="4-stars" class="star">★</label>
-	<input type="radio" id="3-stars" name="rating" value="3" v-model="ratings"/>
-	<label for="3-stars" class="star">★</label>
-	<input type="radio" id="2-stars" name="rating" value="2" v-model="ratings"/>
-	<label for="2-stars" class="star">★</label>
-	<input type="radio" id="1-star" name="rating" value="1" v-model="ratings" />
-	<label for="1-star" class="star">★</label>
-		</div>     
-        <textarea id="ucontent" class="form-control" placeholder="별점과 리뷰를 작성해주세요!"></textarea>
+        <span class="modalname">N서울타워&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <div class="modal-star-rating">
+                      <input type="radio" id="5-stars" name="rating" value="5" />
+                      <label for="5-stars" class="star">&#9733;</label>
+                      <input type="radio" id="4-stars" name="rating" value="4" />
+                      <label for="4-stars" class="star">&#9733;</label>
+                      <input type="radio" id="3-stars" name="rating" value="3" />
+                      <label for="3-stars" class="star">&#9733;</label>
+                      <input type="radio" id="2-stars" name="rating" value="2" />
+                      <label for="2-stars" class="star">&#9733;</label>
+                      <input type="radio" id="1-star" name="rating" value="1" />
+                      <label for="1-star" class="star">&#9733;</label>
+    </div> 
+        <textarea id="detailcontent" class="form-control" placeholder="별점과 리뷰를 작성해주세요!"></textarea>
         </div>
         <div class="modal-footer">
           <button type="button" class="rbtn" data-dismiss="modal"
