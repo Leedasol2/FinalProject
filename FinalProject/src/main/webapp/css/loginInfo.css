@@ -1,6 +1,18 @@
 @charset "UTF-8";
 
 @font-face {
+    font-family: 'MinSans-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MinSans-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
     font-family: 'MinSans-Black';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Black.woff') format('woff');
     font-weight: normal;
@@ -8,11 +20,17 @@
 }
 
 div.login-info{
-	width: auto;
-    position: relative;
-    left: 630px;
-    top:60px;
-    height: 1200px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  margin-top: 50px;
+  margin-bottom: 80px;
+  width: 100%;
+  height: 100%;
+  color: #212529;
+  font-family: MinSans-Medium;
 }
 
 td.login-info-email{
@@ -21,7 +39,7 @@ td.login-info-email{
     color: #212529;
     font-family: 'MinSans-Medium';
     font-size: 16pt;
-    font-weight: bold;
+
 
 }
 
@@ -30,7 +48,7 @@ td.login-info-info{
     color: #2bae66;
     font-family: 'MinSans-Medium';
     font-size: 16pt;
-    font-weight: bold;    
+ 
 }
 
 td.login-info-end{
@@ -38,15 +56,15 @@ td.login-info-end{
     color: #212529;
     font-family: 'MinSans-Medium';
     font-size: 16pt;
-    font-weight: bold;
+
 
 }
 
 hr.login-info-line{	
 	width: 50px;
 	border: 0;
-	height: 2px;
-	background-color: #afafaf;
+	height: 1px;
+	background-color: #E6E6E6;
 	margin-left: 10px;
 	margin-right: 10px;	
 	margin-bottom: 7px;				
@@ -57,8 +75,7 @@ span.login-info-title{
 	font-weight: bold;
     font-size: 30pt;
     color: #212529;
-    margin-left: 215px;
-
+	
 }
 
 div.login-info-edong{
@@ -69,8 +86,7 @@ div.login-info-edong{
 
 table.login-info-table{
 	
-	margin-top: 80px;
-	margin-left: 70px;	
+	margin-top: 80px;		
 }
 
 img.login-info{
@@ -91,8 +107,7 @@ td.login-info-table-title{
 td.login-info-content{
     width: 400px;
     height: 50px;	
-	text-align: left;
-	border: 2px solid #afafaf;
+	border: 1px solid #E6E6E6;
 		
 }
 
@@ -115,7 +130,8 @@ input.form-logineinfo-input{
 	
 	border: none;
 	width: 300px;
-	height: 40px;
+	height: 50px;
+	padding-left: 25px;
 		
 }
 
@@ -126,17 +142,19 @@ input:focus {
 
 input.login-info-input-email1{
 	
-	width: 180px;
+	width: 182px;
 	height: 50px;
-	border: 2px solid #afafaf;	
+	border: 1px solid #E6E6E6;
+	padding-left: 25px;	
 	
 }
 
 input.login-info-input-email2{
 	
-	width: 181px;
+	width: 187px;
 	height: 50px;
-	border: 2px solid #afafaf;	
+	border: 1px solid #E6E6E6;
+	padding-left: 25px;	
 	
 }
 
@@ -146,13 +164,13 @@ div.login-info-btn-group1{
 }
 
 button.login-info-btn-check-all{
-	font-family: 'MinSans-Medium';
-	font-weight: bold;
+	font-family: 'MinSans-Black';
 	border: 0;
     outline: 0;
     background-color: #fff;
-    color: #696969;
-    margin-left: 180px;   
+    color: #696969;  
+    margin-top: 17px;
+    margin-bottom: 10px;		
 }
 
 button.login-info-btn-check{
@@ -161,16 +179,17 @@ button.login-info-btn-check{
     outline: 0;
     background-color: #fff;
     color: #696969;
-    margin-left: 180px;   
+    margin-top: 7px;
+  
 }
 
 button.login-info-btn-back{
 	font-family: 'MinSans-Medium';
-	border: 0;
+	border: 0;	
     outline: 0;
     background-color: #fff;
     color: #696969;
-    margin-left: 250px;    
+    
 }
 
 button.login-info-btn-next{
@@ -215,7 +234,7 @@ img.login-info-next{
 	
 }
 
-a.login-info-a-color{
+span.login-info-a-color{
 	color: #00BFFF;
 	
 }

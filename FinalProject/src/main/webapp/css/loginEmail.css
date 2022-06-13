@@ -1,6 +1,18 @@
 @charset "UTF-8";
 
 @font-face {
+    font-family: 'MinSans-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MinSans-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
     font-family: 'MinSans-Black';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Black.woff') format('woff');
     font-weight: normal;
@@ -8,11 +20,17 @@
 }
 
 div.login-email{
-	width: auto;
-	height: 1000px;
-    position: relative;
-    left: 630px;
-    top:60px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  margin-top: 50px;
+  margin-bottom: 80px;
+  width: 100%;
+  height: 100%;
+  color: #212529;
+  font-family: MinSans-Medium;
 }
 
 td.login-email-email{
@@ -21,7 +39,7 @@ td.login-email-email{
     color: #2bae66;
     font-family: 'MinSans-Medium';
     font-size: 16pt;
-    font-weight: bold;
+
 
 }
 
@@ -30,23 +48,23 @@ td.login-email-info{
     color: #212529;
     font-family: 'MinSans-Medium';
     font-size: 16pt;
-    font-weight: bold;    
+   
 }
 
 td.login-email-end{
     position: relative;
     color: #212529;
     font-family: 'MinSans-Medium';
-    font-size: 16pt;
-    font-weight: bold;
+    font-size: 16pt;	
+
 
 }
 
 hr.login-email-line{	
 	width: 50px;
 	border: 0;
-	height: 2px;
-	background-color: #afafaf;
+	height: 1px;
+	background-color: #E6E6E6;
 	margin-left: 10px;
 	margin-right: 10px;	
 	margin-bottom: 7px;		
@@ -57,7 +75,6 @@ span.login-email-title{
 	font-weight: bold;
     font-size: 30pt;
     color: #212529;
-    margin-left: 220px;
 
 }
 
@@ -69,8 +86,7 @@ div.login-email-edong{
 
 table.login-email-table{
 	
-	margin-top: 80px;
-	margin-left: 140px;	
+	margin-top: 80px;	
 }
 
 img.login-email{
@@ -96,7 +112,7 @@ td.login-email-content{
     width: 330px;
     height: 60px;	
 	text-align: left;
-	border: 2px solid #afafaf;
+	border: 1px solid #E6E6E6;
 }		
 
 
@@ -110,34 +126,35 @@ input.form-loginemail-input{
 	
 	border: none;
 	width: 230px;
+	padding-left: 25px;
 		
 }
 
 
 button.login-email-btn-email{
 	border-radius: 40px;
-    width: 80px;
-   	height: 45px;    
+    width: 100px;
+   	height: 50px;    
     color: #33b679;
     background-color: #fff;
  	border: 1px;
 	font-size: 14px;
-	font-weight: bold;
 	margin-left: 32px;
 	border-style: solid;
 	border-color: #33b679;
+
 }
 
 button.login-email-btn-code{
 	border-radius: 40px;
-    width: 80px;
-   	height: 45px;    
+    width: 100px;
+   	height: 50px;    
     color: #fff;
     background-color: #33b679;
  	border: 1px;
 	font-size: 14px;
-	font-weight: bold;
 	margin-left: 32px;
+
 }
 
 button.login-email-btn-back{
@@ -146,7 +163,7 @@ button.login-email-btn-back{
     outline: 0;
     background-color: #fff;
     color: #696969;
-    margin-left: 220px;    
+    margin-top:180px;    
 }
 
 button.login-email-btn-next{
@@ -154,8 +171,7 @@ button.login-email-btn-next{
 	border: 0;
     outline: 0;
     background-color: #fff;
-    color: #696969;
-    margin-top: 180px;  
+    color: #696969;  
 }
 
 
