@@ -25,17 +25,17 @@
 					<table class="login-misspass-table">
 						<tr>
 							<th class="misspasssubj">이름</th>						
-							<td><input type="text" name="name" class="form-misspass-input" placeholder="   실명을 입력해주세요" required="required"></td>
+							<td><input type="text" name="name" class="form-misspass-input" placeholder="실명을 입력해주세요" required="required"></td>
 						</tr>
 
 						<tr>
 							<th class="misspasssubj">생년월일</th>						
-							<td><input type="text" name="birth" class="form-misspass-input" placeholder="   19900101" required="required"></td>
+							<td><input type="text" name="birth" class="form-misspass-input" placeholder="19900101" required="required"></td>
 						</tr>
 						
 						<tr>
 							<th class="misspasssubj">아이디</th>						
-							<td><input type="text" name="id" class="form-misspass-input" placeholder="   id" required="required"></td>
+							<td><input type="text" name="id" class="form-misspass-input" placeholder="id" required="required"></td>
 						</tr>
 					</table>
 

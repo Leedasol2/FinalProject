@@ -36,7 +36,7 @@
 								
 					<tr>
 					<td class= "login-email-content"><input type="text" name="email" class="form-loginemail-input" 
-					placeholder="   이메일 주소를 입력해 주세요." required="required">
+					placeholder="이메일 주소를 입력해 주세요." required="required">
 					<img class="login-email-content1" src="${root }/image/asset/이메일아이콘.png" width = "25px">
 					</td>
 					<td><button type="submit" class= "login-email-btn-email" >인증 요청</button></td>
@@ -48,7 +48,7 @@
 					
 					<tr>
 					<td class= "login-email-content"><input type="text" name="code" class="form-loginemail-input" 
-					placeholder="   인증코드를 입력해 주세요" required="required">
+					placeholder="인증코드를 입력해 주세요" required="required">
 					<img class="login-email-content2" src="${root }/image/asset/x.png" width = "25px">
 					</td>
 					<td><button type="submit" class= "login-email-btn-code">인증 확인</button></td>
@@ -56,11 +56,10 @@
 						
 				</table>
 			
-
-				<button type="submit" class= "login-email-btn-back"><img class="login-email-back" src="${root }/image/asset/이전으로아이콘.png" width = "25px">이전으로</button>
-				&nbsp;
+		<div class = "login-email-btn-group1">
+				<button type="submit" class= "login-email-btn-back"><img class="login-email-back" src="${root }/image/asset/이전으로아이콘.png" width = "25px">이전으로</button> 
 				<button type="submit" class= "login-email-btn-next">다음으로<img class="login-email-next" src="${root }/image/asset/다음으로아이콘.png" width = "25px"></button>
-
+		</div>
 	</div><!-- main 끝 -->
 
 </body>
