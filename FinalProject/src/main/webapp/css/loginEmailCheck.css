@@ -51,8 +51,8 @@ table.login-emailcheck-table{
 hr.login-emailcheck-line-up{
 	width: 540px;
     border: 0; 
-    height: 2px;
-    background-color: #afafaf;
+    height: 1px;
+    background-color:  #E6E6E6;
     margin-top: 40px;
     margin-bottom: 60px;
 }
@@ -71,8 +71,8 @@ td.login-emailcheck-empty-table{
 }
 
 input.form-login-emailcheck-input{
-	border: 2px solid;
-	border-color: #afafaf;
+	border: 1px solid;
+	border-color:  #E6E6E6;
 	width: 190px;
     height: 40px;
     font-family: 'MinSans-Medium';
@@ -81,8 +81,8 @@ input.form-login-emailcheck-input{
 }
 
 select.login-emailcheck-sel-box{
-	border: 2px solid;
-	border-color: #afafaf;
+	border: 1px solid;
+	border-color:  #E6E6E6;
 	width: 100px;	
     height: 40px;
     font-family: 'MinSans-Medium';
