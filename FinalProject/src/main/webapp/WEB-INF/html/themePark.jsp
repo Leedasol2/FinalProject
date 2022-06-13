@@ -69,7 +69,7 @@ $("a.jeju").click(function(){
   <a href="#2" class="festival-category themecategory">축제</a><br><br><br>
 </div>
 
-<div class="category-title">
+<div class="theme-category-title">
   <span class="main-title">테마파크</span>
   <span class="sub-title">액티비티</span>
   <span class="title-content">가고 싶은 지역별 테마파크를 골라보세요!<br>실제 여행객들의 생생한 리뷰까지 만나보세요</span>
@@ -80,7 +80,7 @@ $("a.jeju").click(function(){
   <a href="#a" class="seoul region">서울</a>
   <a href="#b" class="incheon-Gyeonggi region">인천/경기</a>
   <a href="#c" class="daejeon-chungcheong region">대전/충청</a>
-  <a href="#d" class="daegu region">대전</a>
+  <a href="#d" class="daegu region">대구</a>
   <a href="#e" class="jeolla region">전라</a>
   <a href="#f" class="gyeongsang region">경상</a>
   <a href="#g" class="busan region">부산</a>
@@ -96,14 +96,19 @@ $("a.jeju").click(function(){
         <div class="theme-content">
           <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="theme-img">
           <span class="theme-name">제주 신화월드 테마파크</span>
-          <div class="star-ratings">
-		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
-		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-	      <div class="star-ratings-base space-x-2 text-lg">
-		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-        </div>
+   			<div class="theme-star-rating">
+			  <input type="radio" id="5-stars" name="rating" value="5" />
+			  <label for="5-stars" class="star">&#9733;</label>
+			  <input type="radio" id="4-stars" name="rating" value="4" />
+			  <label for="4-stars" class="star">&#9733;</label>
+			  <input type="radio" id="3-stars" name="rating" value="3" />
+			  <label for="3-stars" class="star">&#9733;</label>
+			  <input type="radio" id="2-stars" name="rating" value="2" />
+			  <label for="2-stars" class="star">&#9733;</label>
+			  <input type="radio" id="1-star" name="rating" value="1" />
+			  <label for="1-star" class="star">&#9733;</label>
+			</div>
+			
  		  <span class="theme-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
  		    제주도 서귀포시
@@ -112,36 +117,45 @@ $("a.jeju").click(function(){
       </td>
       
      <td>
-        <div class="theme-content">
+       <div class="theme-content">
           <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="theme-img">
           <span class="theme-name">제주 신화월드 테마파크</span>
-          <div class="star-ratings">
-		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
-		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-	      <div class="star-ratings-base space-x-2 text-lg">
-		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-        </div>
+   			<div class="theme-star-rating">
+			  <input type="radio" id="5-stars" name="rating" value="5" />
+			  <label for="5-stars" class="star">&#9733;</label>
+			  <input type="radio" id="4-stars" name="rating" value="4" />
+			  <label for="4-stars" class="star">&#9733;</label>
+			  <input type="radio" id="3-stars" name="rating" value="3" />
+			  <label for="3-stars" class="star">&#9733;</label>
+			  <input type="radio" id="2-stars" name="rating" value="2" />
+			  <label for="2-stars" class="star">&#9733;</label>
+			  <input type="radio" id="1-star" name="rating" value="1" />
+			  <label for="1-star" class="star">&#9733;</label>
+			</div>
+			
  		  <span class="theme-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
  		    제주도 서귀포시
  		  </span>
         </div>
-      </td>
-      
-     <td>
+        
+        <td>
         <div class="theme-content">
           <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="theme-img">
           <span class="theme-name">제주 신화월드 테마파크</span>
-          <div class="star-ratings">
-		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
-		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-	      <div class="star-ratings-base space-x-2 text-lg">
-		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-        </div>
+   			<div class="theme-star-rating">
+			  <input type="radio" id="5-stars" name="rating" value="5" />
+			  <label for="5-stars" class="star">&#9733;</label>
+			  <input type="radio" id="4-stars" name="rating" value="4" />
+			  <label for="4-stars" class="star">&#9733;</label>
+			  <input type="radio" id="3-stars" name="rating" value="3" />
+			  <label for="3-stars" class="star">&#9733;</label>
+			  <input type="radio" id="2-stars" name="rating" value="2" />
+			  <label for="2-stars" class="star">&#9733;</label>
+			  <input type="radio" id="1-star" name="rating" value="1" />
+			  <label for="1-star" class="star">&#9733;</label>
+			</div>
+			
  		  <span class="theme-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
  		    제주도 서귀포시
@@ -151,39 +165,24 @@ $("a.jeju").click(function(){
       
     </tr>
     
-    <tr>
-    
-     <td>
+    <tr>   
+    <td>
         <div class="theme-content">
           <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="theme-img">
           <span class="theme-name">제주 신화월드 테마파크</span>
-          <div class="star-ratings">
-		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
-		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-	      <div class="star-ratings-base space-x-2 text-lg">
-		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-        </div>
- 		  <span class="theme-region">
- 		    <img src="${root}/image/asset/여행지 위치아이콘.png">
- 		    제주도 서귀포시
- 		  </span>
-        </div>
-      </td>
-      
-        <td>
-        <div class="theme-content">
-          <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="theme-img">
-          <span class="theme-name">제주 신화월드 테마파크</span>
-          <div class="star-ratings">
-		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
-		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-	      <div class="star-ratings-base space-x-2 text-lg">
-		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-        </div>
+   			<div class="theme-star-rating">
+			  <input type="radio" id="5-stars" name="rating" value="5" />
+			  <label for="5-stars" class="star">&#9733;</label>
+			  <input type="radio" id="4-stars" name="rating" value="4" />
+			  <label for="4-stars" class="star">&#9733;</label>
+			  <input type="radio" id="3-stars" name="rating" value="3" />
+			  <label for="3-stars" class="star">&#9733;</label>
+			  <input type="radio" id="2-stars" name="rating" value="2" />
+			  <label for="2-stars" class="star">&#9733;</label>
+			  <input type="radio" id="1-star" name="rating" value="1" />
+			  <label for="1-star" class="star">&#9733;</label>
+			</div>
+			
  		  <span class="theme-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
  		    제주도 서귀포시
@@ -195,37 +194,19 @@ $("a.jeju").click(function(){
         <div class="theme-content">
           <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="theme-img">
           <span class="theme-name">제주 신화월드 테마파크</span>
-          <div class="star-ratings">
-		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
-		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-	      <div class="star-ratings-base space-x-2 text-lg">
-		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-        </div>
- 		  <span class="theme-region">
- 		    <img src="${root}/image/asset/여행지 위치아이콘.png">
- 		    제주도 서귀포시
- 		  </span>
-        </div>
-      </td>
-      
-    </tr>
-    
-    <tr>
-    
-    <td>
-        <div class="theme-content">
-          <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="theme-img">
-          <span class="theme-name">제주 신화월드 테마파크</span>
-          <div class="star-ratings">
-		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
-		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-	      <div class="star-ratings-base space-x-2 text-lg">
-		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-        </div>
+   			<div class="theme-star-rating">
+			  <input type="radio" id="5-stars" name="rating" value="5" />
+			  <label for="5-stars" class="star">&#9733;</label>
+			  <input type="radio" id="4-stars" name="rating" value="4" />
+			  <label for="4-stars" class="star">&#9733;</label>
+			  <input type="radio" id="3-stars" name="rating" value="3" />
+			  <label for="3-stars" class="star">&#9733;</label>
+			  <input type="radio" id="2-stars" name="rating" value="2" />
+			  <label for="2-stars" class="star">&#9733;</label>
+			  <input type="radio" id="1-star" name="rating" value="1" />
+			  <label for="1-star" class="star">&#9733;</label>
+			</div>
+			
  		  <span class="theme-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
  		    제주도 서귀포시
@@ -237,14 +218,19 @@ $("a.jeju").click(function(){
         <div class="theme-content">
           <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="theme-img">
           <span class="theme-name">제주 신화월드 테마파크</span>
-          <div class="star-ratings">
-		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
-		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-	      <div class="star-ratings-base space-x-2 text-lg">
-		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-        </div>
+   			<div class="theme-star-rating">
+			  <input type="radio" id="5-stars" name="rating" value="5" />
+			  <label for="5-stars" class="star">&#9733;</label>
+			  <input type="radio" id="4-stars" name="rating" value="4" />
+			  <label for="4-stars" class="star">&#9733;</label>
+			  <input type="radio" id="3-stars" name="rating" value="3" />
+			  <label for="3-stars" class="star">&#9733;</label>
+			  <input type="radio" id="2-stars" name="rating" value="2" />
+			  <label for="2-stars" class="star">&#9733;</label>
+			  <input type="radio" id="1-star" name="rating" value="1" />
+			  <label for="1-star" class="star">&#9733;</label>
+			</div>
+			
  		  <span class="theme-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
  		    제주도 서귀포시
@@ -252,18 +238,74 @@ $("a.jeju").click(function(){
         </div>
       </td>
       
-     <td>
+    </tr>
+    
+    <tr>   
+    <td>
         <div class="theme-content">
           <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="theme-img">
           <span class="theme-name">제주 신화월드 테마파크</span>
-          <div class="star-ratings">
-		    <div class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
-		      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
-	      <div class="star-ratings-base space-x-2 text-lg">
-		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	      </div>
+   			<div class="theme-star-rating">
+			  <input type="radio" id="5-stars" name="rating" value="5" />
+			  <label for="5-stars" class="star">&#9733;</label>
+			  <input type="radio" id="4-stars" name="rating" value="4" />
+			  <label for="4-stars" class="star">&#9733;</label>
+			  <input type="radio" id="3-stars" name="rating" value="3" />
+			  <label for="3-stars" class="star">&#9733;</label>
+			  <input type="radio" id="2-stars" name="rating" value="2" />
+			  <label for="2-stars" class="star">&#9733;</label>
+			  <input type="radio" id="1-star" name="rating" value="1" />
+			  <label for="1-star" class="star">&#9733;</label>
+			</div>
+			
+ 		  <span class="theme-region">
+ 		    <img src="${root}/image/asset/여행지 위치아이콘.png">
+ 		    제주도 서귀포시
+ 		  </span>
         </div>
+      </td>
+      
+      <td>
+        <div class="theme-content">
+          <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="theme-img">
+          <span class="theme-name">제주 신화월드 테마파크</span>
+   			<div class="theme-star-rating">
+			  <input type="radio" id="5-stars" name="rating" value="5" />
+			  <label for="5-stars" class="star">&#9733;</label>
+			  <input type="radio" id="4-stars" name="rating" value="4" />
+			  <label for="4-stars" class="star">&#9733;</label>
+			  <input type="radio" id="3-stars" name="rating" value="3" />
+			  <label for="3-stars" class="star">&#9733;</label>
+			  <input type="radio" id="2-stars" name="rating" value="2" />
+			  <label for="2-stars" class="star">&#9733;</label>
+			  <input type="radio" id="1-star" name="rating" value="1" />
+			  <label for="1-star" class="star">&#9733;</label>
+			</div>
+			
+ 		  <span class="theme-region">
+ 		    <img src="${root}/image/asset/여행지 위치아이콘.png">
+ 		    제주도 서귀포시
+ 		  </span>
+        </div>
+      </td>
+      
+       <td>
+        <div class="theme-content">
+          <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="theme-img">
+          <span class="theme-name">제주 신화월드 테마파크</span>
+   			<div class="theme-star-rating">
+			  <input type="radio" id="5-stars" name="rating" value="5" />
+			  <label for="5-stars" class="star">&#9733;</label>
+			  <input type="radio" id="4-stars" name="rating" value="4" />
+			  <label for="4-stars" class="star">&#9733;</label>
+			  <input type="radio" id="3-stars" name="rating" value="3" />
+			  <label for="3-stars" class="star">&#9733;</label>
+			  <input type="radio" id="2-stars" name="rating" value="2" />
+			  <label for="2-stars" class="star">&#9733;</label>
+			  <input type="radio" id="1-star" name="rating" value="1" />
+			  <label for="1-star" class="star">&#9733;</label>
+			</div>
+			
  		  <span class="theme-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
  		    제주도 서귀포시
