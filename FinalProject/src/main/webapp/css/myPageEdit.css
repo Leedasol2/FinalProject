@@ -12,17 +12,20 @@ form.form-memberform{
     margin-top: 50px;
 }
 
-div.mypage-content{
-	width: auto;
+div.mypage-edit-content{
+	align-items: center;
+    display: flex;
+    flex-direction: column;
     position: relative;
-  	left: 575px;
-    top: 30px;
+    z-index: 1;
+    top: 80px;
+    left: -50px;
 }
 
 
-span.mypage-title{
+span.mypage-edit-title{
 	font-weight: bold;
-    font-size: 35px;
+    font-size: 30px;
     color: #212529;
 }
 
@@ -81,34 +84,37 @@ li.mypage-review{
 }
 
 table.edit-content{
-	margin-left: 50px;
-    width: 800px;
+	width: 800px;
     height: 300px;
-    font-size: 15pt;
-	border-collapse: separate;
-    border-spacing: 0 40px;    
+    font-size: 10pt;
+    border-collapse: separate;
+    border-spacing: 0 20px;
+    font-weight: bold;
+    position: relative;
+    left: 220px;  
 }
 
 input.form-control-inputread{
-	width: 650px;
-    height: 70px;
+	width: 300px;
+    height: 40px;
     border: 1px;
-    background-color:#969696;
+    background-color:#dcdcdc;
 }
 
 input.form-control-inputbox{
-	width: 650px;
-    height: 70px;
+	width: 300px;
+    height: 40px;
 }
 
 input.form-control-inputmail{
-    height: 70px;
+    height: 40px;
+    width: 139px;
 }
 
 div.btn_group{
 	position: relative;
-    font-size: 18pt;
-    left: 170px;
+    font-size: 10pt;
+    left: 320px;
 	margin-top: 130px;
     margin-bottom: 120px;    
 }
@@ -118,11 +124,13 @@ button.btn-update-information{
     top: -60px;
     margin-bottom: 10px;	
 	border-radius: 40px;
-    width: 280px;
-   	height: 70px;    
+    width: 120px;
+   	height: 40px;    
     color: #fff;
     background-color: #33b679;
- 	border: 1px;    
+ 	border: 1px;  
+ 	margin-right: 5px;
+ 	  
 }
 
 button.btn-delete{
@@ -130,10 +138,11 @@ button.btn-delete{
     top: -60px;
     margin-bottom: 10px;	
 	border-radius: 40px;
-    width: 280px;
-   	height: 70px;
+    width: 120px;
+   	height: 40px;
     color: #33b679;
     border: 1px solid;
+    margin-left: 5px;
 }
 
 hr.memberedit-title-line{
@@ -141,7 +150,9 @@ hr.memberedit-title-line{
     margin-bottom: 20px;
     border: 0;
     border-top: 1px solid #eee;
-    width: 935px;
-    margin-left: -33px; 
+    position: relative;
+    width: 930px;
+    left: -455px;
+}
 }
 

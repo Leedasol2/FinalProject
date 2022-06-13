@@ -18,11 +18,11 @@
 				<form action="insert" method="post" class="form-loginhome">
 					<table class="login-home-table">
 						<tr>
-							<td><input type="text" name="id" class="form-loginhome-input" placeholder="   아이디" required="required"></td>
+							<td><input type="text" name="id" class="form-loginhome-input" placeholder="아이디" required="required"></td>
 						</tr>
 
 						<tr>
-							<td><input type="password" name="pass" class="form-loginhome-input" placeholder="   비밀번호" required="required"></td>
+							<td><input type="password" name="pass" class="form-loginhome-input" placeholder="비밀번호" required="required"></td>
 						</tr>
 					</table>
 

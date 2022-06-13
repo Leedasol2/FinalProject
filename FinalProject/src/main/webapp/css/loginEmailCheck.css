@@ -1,6 +1,18 @@
 @charset "UTF-8";
 
 @font-face {
+    font-family: 'MinSans-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MinSans-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
     font-family: 'MinSans-Black';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Black.woff') format('woff');
     font-weight: normal;
@@ -8,17 +20,24 @@
 }
 
 div.login-emailcheck{
-	width: auto;
-    position: relative;
-    left: 550px;
-    top: 60px;
-    height:800px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  margin-top: 50px;
+  margin-bottom: 80px;
+  width: 100%;
+  height: 100%;
+  color: #212529;
+  font-family: MinSans-Medium;
 }
 
 span.login-emailcheck-title{
 	font-weight: bold;
     font-size: 20pt;
     color: #212529;
+    margin-right: 320px;
 
 }
 
@@ -31,7 +50,6 @@ table.login-emailcheck-table{
 
 hr.login-emailcheck-line-up{
 	width: 540px;
-    margin-left: -15px; 
     border: 0; 
     height: 2px;
     background-color: #afafaf;
@@ -46,11 +64,6 @@ td.login-emailcheck-table-title{
 	
 }
 
-img.login-emailcheck-email-black{
-	
-	margin-bottom: 10px;
-	
-}
 
 td.login-emailcheck-empty-table{
 	
@@ -79,8 +92,7 @@ select.login-emailcheck-sel-box{
 
 span.login-emailcheck-message{
     font-size: 18pt;
-    color: #212529;
-    margin-left: 110px;   
+    color: #212529;  
     
 
 }
@@ -94,8 +106,7 @@ button.login-emailcheck-btn-check{
  	border: 1px;    
 	margin-top: 50px;
 	font-size: 13pt;
-	font-weight: bold;
-	margin-left: 70px;	
+	font-weight: bold;	
 	border-style: solid;
  	border-color: #33b679;
 }

@@ -13,7 +13,7 @@
 	<!-- main 시작 -->
 	<div class="login-join">
 		<p><span class="login-join-title">회원가입</span></p><br>
-		<span class="login-join-subtitle1"><a class="login-join-acolor">이런여행</a>(2RunTrip)에 오신것을 환영합니다.</span><br>
+		<span class="login-join-subtitle1"><span class="login-join-spancolor">이런여행</span>(2RunTrip)에 오신것을 환영합니다.</span><br>
 		<span class="login-join-subtitle2">이런여행 회원이 되어 더욱 다양한 혜택을 누려보세요.</span>
 
 					<table class="login-join-table">
@@ -28,7 +28,7 @@
 						<tr>
 							<td class="login-join-table-content1" rowspan="3"><button type="submit" class="login-join-btn-join">회원가입</button></td>
 							<td class="login-join-table-content2"><button type="submit" class="login-join-btn-sns"><img src="${root }/image/asset/카톡아이콘.png" class= "login-join-snsimg" width = "25px">
-							&nbsp;카카오 아이디로 가입하기</button></td>
+							<span class = login-join-text>카카오 아이디로 가입하기</span></button></td>
 						</tr>
 						
 						<tr>
@@ -37,7 +37,7 @@
 
 						<tr>
 							<td class="login-join-table-content3"><button type="submit" class="login-join-btn-sns"><img src="${root }/image/asset/네이버아이콘.png" class= "login-join-snsimg" width = "25px">
-							&nbsp;네이버 아이디로 가입하기</button></td>
+							<span class ="login-join-text">네이버 아이디로 가입하기</span></button></td>
 						</tr>
 						<tr>
 						<td class="login-join-table-empty2"></td>

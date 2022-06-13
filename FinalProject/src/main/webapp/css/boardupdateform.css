@@ -9,23 +9,24 @@
 
 div.updateform-main{
 	font-family: 'MinSans-Medium' !important;
+	align-items: center;
+  	display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    color: #212529;
 }
 
 div.updateform-main div.updateform-title{
 	width: 900px;
-    position: absolute;
-    top: 231px;
-    left: 506px;
+    margin-top: 35px;
 }
 
 div.updateform-main div.updateform-title h2.updatehead{
-	font-weight: bold;
-	font-size: 1.5em;
-}
-
-div.updateform-main div.updateform-body{
-	margin-top: 131px;
-    margin-left: 525px;
+	font-weight: 550;
+    font-size: 1.4em;
 }
 
 div.updateform-main input.updatetitle{
@@ -74,7 +75,6 @@ div.updateform-main button.btn-return{
     border: 1px solid;
     color: #2bae66;
     background-color: white;
-    font-size: 1.2em;
     margin-bottom: 120px;
 }
 
@@ -87,5 +87,5 @@ div.updateform-main button.btn-update{
     border: 1px solid;
     color: white;
     background-color: #2bae66;
-    font-size: 1.2em;
+    font-weight: 500;
 }
