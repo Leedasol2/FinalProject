@@ -21,30 +21,26 @@
 					<ul class="slidelist">
 						<li class="slideitem">
 							<div>
-								<label for="slide04" class="left"></label> <label for="slide02"
-									class="right"></label> <a><img
-									src="${root }/image/asset/banner1.png"></a>
+								<label for="slide04" class="left"></label> <label for="slide02" class="right"></label>
+								<a><img src="${root }/image/asset/banner1.png"></a>
 							</div>
 						</li>
 						<li class="slideitem">
 							<div>
-								<label for="slide01" class="left"></label> <label for="slide03"
-									class="right"></label> <a><img
-									src="${root }/image/asset/banner2.png"></a>
+								<label for="slide01" class="left"></label> <label for="slide03" class="right"></label>
+								<a><img src="${root }/image/asset/banner2.png"></a>
 							</div>
 						</li>
 						<li class="slideitem">
 							<div>
-								<label for="slide02" class="left"></label> <label for="slide04"
-									class="right"></label> <a><img
-									src="${root }/image/asset/banner3.png"></a>
+								<label for="slide02" class="left"></label> <label for="slide04" class="right"></label>
+								<a><img src="${root }/image/asset/banner3.png"></a>
 							</div>
 						</li>
 						<li class="slideitem">
 							<div>
-								<label for="slide03" class="left"></label> <label for="slide01"
-									class="right"></label> <a><img
-									src="${root }/image/asset/banner4.png"></a>
+								<label for="slide03" class="left"></label> <label for="slide01" class="right"></label>
+								<a><img src="${root }/image/asset/banner4.png"></a>
 							</div>
 						</li>
 					</ul>
@@ -63,8 +59,7 @@
 									<a>신평양조장</a>
 								</div>
 								<div class="tripstory-star-ratings">
-									<div class="tripstory-star-ratings-fill space-x-2 text-lg"
-										style="width: ratingToPercent+ '%'">
+									<div class="tripstory-star-ratings-fill space-x-2 text-lg" style="width: ratingToPercent+ '%'">
 										<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 									</div>
 									<div class="tripstory-star-ratings-base space-x-2 text-lg">
@@ -85,8 +80,7 @@
 									<a>신평양조장</a>
 								</div>
 								<div class="tripstory-star-ratings">
-									<div class="tripstory-star-ratings-fill space-x-2 text-lg"
-										style="width: ratingToPercent+ '%'">
+									<div class="tripstory-star-ratings-fill space-x-2 text-lg" style="width: ratingToPercent+ '%'">
 										<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 									</div>
 									<div class="tripstory-star-ratings-base space-x-2 text-lg">
@@ -107,8 +101,7 @@
 									<a>신평양조장</a>
 								</div>
 								<div class="tripstory-star-ratings">
-									<div class="tripstory-star-ratings-fill space-x-2 text-lg"
-										style="width: ratingToPercent+ '%'">
+									<div class="tripstory-star-ratings-fill space-x-2 text-lg" style="width: ratingToPercent+ '%'">
 										<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 									</div>
 									<div class="tripstory-star-ratings-base space-x-2 text-lg">
@@ -129,8 +122,7 @@
 									<a>신평양조장</a>
 								</div>
 								<div class="tripstory-star-ratings">
-									<div class="tripstory-star-ratings-fill space-x-2 text-lg"
-										style="width: ratingToPercent+ '%'">
+									<div class="tripstory-star-ratings-fill space-x-2 text-lg" style="width: ratingToPercent+ '%'">
 										<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 									</div>
 									<div class="tripstory-star-ratings-base space-x-2 text-lg">
@@ -152,13 +144,13 @@
 							<div class="tripstory-subject">
 								<a>오늘의 여행</a>
 							</div>
-							<ul class="tripstory-list"><!-- 수정하기 li span span /li로 바꾸고 |는 before로 -->
-								<li><a class="fontgreen">부산 | </a><a>여행 게시글 제목 여행 게시글 제목</a></li>
-								<li><a class="fontgreen">대전 | </a><a>여행 게시글 제목~</a></li>
-								<li><a class="fontgreen">경주 | </a><a>여행 게시글 제목입니다</a></li>
-								<li><a class="fontgreen">대구 | </a><a>추억의 대구 여행 게시글 제목!</a></li>
-								<li><a class="fontgreen">당진 | </a><a>오늘의 추천 여행 이야기,충청남도 당진 이야기</a></li>
-								<li><a class="fontgreen">제주 | </a><a>여행 게시글 제목 여행 게시글 제목 여행 게시글 제목입니다</a></li>
+							<ul class="tripstory-list">
+								<li><a href="#"><span class="fontgreen">부산</span><span>여행 게시글 제목 여행 게시글 제목</span></a></li> 
+								<li><a href="#"><span class="fontgreen">대전</span><span>여행 게시글 제목~</span></a></li>
+								<li><a href="#"><span class="fontgreen">경주</span><span>여행 게시글 제목입니다</span></a></li>
+								<li><a href="#"><span class="fontgreen">대구</span><span>추억의 대구 여행 게시글 제목!</span></a></li>
+								<li><a href="#"><span class="fontgreen">당진</span><span>오늘의 추천 여행 이야기,충청남도 당진 이야기</span></a></li>
+								<li><a href="#"><span class="fontgreen">제주</span><span>여행 게시글 제목 여행 게시글 제목 여행 게시글 제목입니다</span></a></li>
 							</ul>
 
 						</div>
@@ -184,8 +176,7 @@
 												<a>제주 신화월드 테마파크</a>
 											</div>
 											<div class="tripstory-star-ratings">
-												<div class="tripstory-star-ratings-fill space-x-2 text-lg"
-													style="width: ratingToPercent+ '%'">
+												<div class="tripstory-star-ratings-fill space-x-2 text-lg" style="width: ratingToPercent+ '%'">
 													<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 												</div>
 												<div class="tripstory-star-ratings-base space-x-2 text-lg">
@@ -207,8 +198,7 @@
 												<a>제주 신화월드 테마파크</a>
 											</div>
 											<div class="tripstory-star-ratings">
-												<div class="tripstory-star-ratings-fill space-x-2 text-lg"
-													style="width: ratingToPercent+ '%'">
+												<div class="tripstory-star-ratings-fill space-x-2 text-lg" style="width: ratingToPercent+ '%'">
 													<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 												</div>
 												<div class="tripstory-star-ratings-base space-x-2 text-lg">
@@ -230,8 +220,7 @@
 												<a>제주 신화월드 테마파크</a>
 											</div>
 											<div class="tripstory-star-ratings">
-												<div class="tripstory-star-ratings-fill space-x-2 text-lg"
-													style="width: ratingToPercent+ '%'">
+												<div class="tripstory-star-ratings-fill space-x-2 text-lg" style="width: ratingToPercent+ '%'">
 													<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 												</div>
 												<div class="tripstory-star-ratings-base space-x-2 text-lg">
@@ -253,8 +242,7 @@
 												<a>제주 신화월드 테마파크</a>
 											</div>
 											<div class="tripstory-star-ratings">
-												<div class="tripstory-star-ratings-fill space-x-2 text-lg"
-													style="width: ratingToPercent+ '%'">
+												<div class="tripstory-star-ratings-fill space-x-2 text-lg" style="width: ratingToPercent+ '%'">
 													<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 												</div>
 												<div class="tripstory-star-ratings-base space-x-2 text-lg">
@@ -276,8 +264,7 @@
 												<a>제주 신화월드 테마파크</a>
 											</div>
 											<div class="tripstory-star-ratings">
-												<div class="tripstory-star-ratings-fill space-x-2 text-lg"
-													style="width: ratingToPercent+ '%'">
+												<div class="tripstory-star-ratings-fill space-x-2 text-lg" style="width: ratingToPercent+ '%'">
 													<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 												</div>
 												<div class="tripstory-star-ratings-base space-x-2 text-lg">
@@ -335,8 +322,7 @@
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
 									<div class="newpark-content">
-										<img src="${root}/image/asset/축제예시.png"
-											class="tripstory-img">
+										<img src="${root}/image/asset/축제예시.png" class="tripstory-img">
 										<div class="name-box">
 											<div class="tripstory-name">
 												<a>제주 신화월드 테마파크</a>
@@ -349,8 +335,7 @@
 								</div>
 								<div class="swiper-slide">
 									<div class="newpark-content">
-										<img src="${root}/image/asset/축제예시.png"
-											class="tripstory-img">
+										<img src="${root}/image/asset/축제예시.png" class="tripstory-img">
 										<div class="name-box">
 											<div class="tripstory-name">
 												<a>제주 신화월드 테마파크</a>
@@ -363,8 +348,7 @@
 								</div>
 								<div class="swiper-slide">
 									<div class="newpark-content">
-										<img src="${root}/image/asset/축제예시.png"
-											class="tripstory-img">
+										<img src="${root}/image/asset/축제예시.png" class="tripstory-img">
 										<div class="name-box">
 											<div class="tripstory-name">
 												<a>제주 신화월드 테마파크</a>
@@ -377,8 +361,7 @@
 								</div>
 								<div class="swiper-slide">
 									<div class="newpark-content">
-										<img src="${root}/image/asset/축제예시.png"
-											class="tripstory-img">
+										<img src="${root}/image/asset/축제예시.png" class="tripstory-img">
 										<div class="name-box">
 											<div class="tripstory-name">
 												<a>제주 신화월드 테마파크</a>
@@ -391,8 +374,7 @@
 								</div>
 								<div class="swiper-slide">
 									<div class="newpark-content">
-										<img src="${root}/image/asset/축제예시.png"
-											class="tripstory-img">
+										<img src="${root}/image/asset/축제예시.png" class="tripstory-img">
 										<div class="name-box">
 											<div class="tripstory-name">
 												<a>제주 신화월드 테마파크</a>
