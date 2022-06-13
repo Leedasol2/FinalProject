@@ -19,7 +19,7 @@ $(function(){
 		
 		var src=$(this).attr("src");
 		
-		$(".image").attr("src",src);
+		$(".tripimage").attr("src",src);
 	});
 	
 });
@@ -27,55 +27,57 @@ $(function(){
 
 	<!-- main 시작 -->
 	<div class="mytripdetail">
-		<div class="subject">
-		<br>
-		여행을 떠나요 <img alt="" src="${root }/image/asset/자동차아이콘.png" width="50px;">
-		</div>
-	<hr width="970px"><br><br>
+	<div class="tripdetailsubject">여행을 떠나요 <img alt="" src="${root }/image/asset/자동차아이콘.png">
+	
+	<hr>
+	<div class="triptopcont">
 	<div class="subcontent">
-	<img alt="" src="${root }/image/asset/n서울타워.jpg" class="img1"> 
-	<div style="font-family: 'MinSans-Black'; font-size: 1.7em;">
-	<b>N서울타워</b>
+	<img alt="" src="${root }/image/asset/n서울타워.jpg" class="tripdetailimg">
 	</div>
-	<br><br><br>
-	<span>서울특별시 남산에 있는 송신탑이자 서울을 대표하는 랜드마크이다</span>
-	<br><br><br><br><br>
-	<img alt="" src="${root }/image/asset/위치아이콘.png" width="25px;"><span> 서울특별시 용산구 남산공원길 126</span>
+	<div class="tripsogae">
+	<div class="tripdetailname"><b>N서울타워</b></div>
+	<div class="tripsubcontent">
+	서울특별시 남산에 있는 송신탑이자 서울을 대표하는 랜드마크이다
+	</div>
+	<div class="subedit">
+	<img alt="" src="${root }/image/asset/위치아이콘.png"><span class="tripwhere"> 서울특별시 용산구 남산공원길 126</span>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<img alt="" src="${root }/image/asset/스크랩안함.png" width="20px;"><span> 스크랩 하기</span>
+	<img alt="" src="${root }/image/asset/스크랩안함.png"><span class="tripscrap"> 스크랩 하기</span>
 	</div>
-	<br><br><br><br><br><br><br><br>
-	<hr width="970px">
+	</div>
+	</div>
+	</div>
+	
+	<hr>
 	<div align="center" class="select">
 	<a href="#sp1"><span>소개글</span></a>
 	<a href="#sp2"><span>지도</span></a>
 	<a href="#sp3"><span>사진</span></a>
 	<a href="#sp4"><span>여행자의 한마디</span></a>
 	</div>
-	<hr width="970px">
+	<hr>
 	
 	<div class="sogae" id="sp1">
 	<b>소개글</b>
 	</div>
-	<br><br>
-	<div align="center">
-	<img alt="" src="${root }/image/asset/따옴표위.png" width="70px;">
-	<br><br><br><br>
-	<span>최신 LED 기술의 조명으로 시시각각 색과 패턴이 변하는
+	<div class="tripimg1">
+	<img alt="" src="${root }/image/asset/따옴표위.png">
+	</div>
+	<div class="tripcontent">
+	최신 LED 기술의 조명으로 시시각각 색과 패턴이 변하는
 	<br>'빛의 예술'과의 어우러짐 속에서 다양한 미디어 아트와 함께<br>
 	색다른 문화예술을 경험하실 수 있습니다.
 	서울의 대표적인 복합문화 공간으로 새롭게 태어난 N서울타워,
-	<br>자랑스런 서울의 랜드마크가 될 것입니다.</span>
-	<br><br><br>
-	<img alt="" src="${root }/image/asset/따옴표아래.png" width="70px;">
+	<br>자랑스런 서울의 랜드마크가 될 것입니다.
 	</div>
-	<br><br><br>
-	<hr width="970px"><br>
+	<div class="tripimg2">
+	<img alt="" src="${root }/image/asset/따옴표아래.png">
+	</div>
+	<hr>
 	
 	<div class="map" id="sp2">
 	<b>지도</b>
 	</div>
-	<br><br>
 	 
 	 <!-- KakaoMap -->
 	<div id="map" class="kakaomap"></div>
@@ -89,39 +91,39 @@ $(function(){
 		var map = new kakao.maps.Map(container, options);
 	</script>
 	
-	<br><br><br><br>
-	<hr width="970px"><br>
+	<hr>
 	
 	<div class="image" id="sp3">
 	<b>사진</b>
 	</div>
-	<br><br>
-	<img alt="" src="${root }/image/asset/n서울타워.jpg" class="image"><br><br>
+	<img alt="" src="${root }/image/asset/n서울타워.jpg" class="tripimage">
 	<div class="smimage">
 	<img alt="" src="${root }/image/asset/n서울타워.jpg" class="small">
 	<img alt="" src="${root }/image/asset/n서울타워2.jpg" class="small">
 	<img alt="" src="${root }/image/asset/n서울타워3.jpg" class="small">
 	</div>
-	<br><br>
-	<hr width="970px"><br>
+	<hr>
 	
 	<div class="madi" id="sp4">
 	<b>여행자의 한마디</b><button class="btnadd" data-target="#myModal2" data-toggle="modal">등록하기</button>
 	</div>
-	<br><br><br>
-	<div>
-	<span class="name"><b>ga*****</b></span><div class="star-ratings star" >
-	<div 
-    class="star-ratings-fill space-x-2 text-lg" style="{ width: ratingToPercent + '%' }">
-		<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	</div>
-	<div class="star-ratings-base space-x-2 text-lg">
-		<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-	</div>
-</div>
-	<span class="del">삭제 |</span><span class="update">수정</span>
-	<span class="date">2022-06-07 15:53</span><br><br>
-	<span class="name">연인들의 천국, 외국인이면 더욱 서울의 야경을 멋지게 즐길 수 있습니다.20년만의 서울타워 방문이 아깝지 않았습니다.</span>
+	<div class="madicontent">
+	<span class="detailname">ga*****</span>
+	<span class="detailedit">삭제 | 수정  2022-06-07 15:53</span>
+	<div class="detail-star-rating">
+                      <input type="radio" id="5-stars" name="rating" value="5" />
+                      <label for="5-stars" class="star">&#9733;</label>
+                      <input type="radio" id="4-stars" name="rating" value="4" />
+                      <label for="4-stars" class="star">&#9733;</label>
+                      <input type="radio" id="3-stars" name="rating" value="3" />
+                      <label for="3-stars" class="star">&#9733;</label>
+                      <input type="radio" id="2-stars" name="rating" value="2" />
+                      <label for="2-stars" class="star">&#9733;</label>
+                      <input type="radio" id="1-star" name="rating" value="1" />
+                      <label for="1-star" class="star">&#9733;</label>
+    </div>
+	
+	<div class="madireview">연인들의 천국, 외국인이면 더욱 서울의 야경을 멋지게 즐길 수 있습니다. 20년만의 서울타워 방문이 아깝지 않았습니다.</div>
 	</div>
 	</div>
 <!-- main 끝 -->
@@ -131,27 +133,26 @@ $(function(){
     <div class="modal-dialog">
     
       <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
+      <div class="modal-content detailmodal">
+        <div class="modal-header detailheader">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <span class="modalsub"><b>2run trip&nbsp;&nbsp;</b></span><span><b>  리뷰 작성</b></span>
+          <span class="modalsub">2run trip&nbsp;&nbsp;</span><span class="modalsub2">리뷰 작성</span>
         </div>
         <div class="modal-body">
-        <span style="float: left;"><b>여행지 명&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
-        <div class="star-rating space-x-4 mx-auto">
-	<input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
-	<label for="5-stars" class="star pr-4">★</label>
-	<input type="radio" id="4-stars" name="rating" value="4" v-model="ratings"/>
-	<label for="4-stars" class="star">★</label>
-	<input type="radio" id="3-stars" name="rating" value="3" v-model="ratings"/>
-	<label for="3-stars" class="star">★</label>
-	<input type="radio" id="2-stars" name="rating" value="2" v-model="ratings"/>
-	<label for="2-stars" class="star">★</label>
-	<input type="radio" id="1-star" name="rating" value="1" v-model="ratings" />
-	<label for="1-star" class="star">★</label>
-		</div>     
-        <br>
-        <textarea id="ucontent" class="form-control" placeholder="별점과 리뷰를 작성해주세요!"></textarea>
+        <span class="modalname">N서울타워&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <div class="modal-star-rating">
+                      <input type="radio" id="5-stars" name="rating" value="5" />
+                      <label for="5-stars" class="star">&#9733;</label>
+                      <input type="radio" id="4-stars" name="rating" value="4" />
+                      <label for="4-stars" class="star">&#9733;</label>
+                      <input type="radio" id="3-stars" name="rating" value="3" />
+                      <label for="3-stars" class="star">&#9733;</label>
+                      <input type="radio" id="2-stars" name="rating" value="2" />
+                      <label for="2-stars" class="star">&#9733;</label>
+                      <input type="radio" id="1-star" name="rating" value="1" />
+                      <label for="1-star" class="star">&#9733;</label>
+    </div> 
+        <textarea id="detailcontent" class="form-control" placeholder="별점과 리뷰를 작성해주세요!"></textarea>
         </div>
         <div class="modal-footer">
           <button type="button" class="rbtn" data-dismiss="modal"

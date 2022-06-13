@@ -105,20 +105,20 @@ public class IndexController {
 	
 	//강진
 	
-	@GetMapping("/html/mytripdetail")
-	public String mytripdetail() {
+	@GetMapping("/html/myTripDetail")
+	public String myTripDetail() {
 		
 		return "/html/myTripDetail";
 	}
 	
-	@GetMapping("/html/festivaldetail")
-	public String festivaldetail() {
+	@GetMapping("/html/festivalDetail")
+	public String festivalDetail() {
 		
 		return "/html/festivalDetail";
 	}
 	
-	@GetMapping("/html/themeparkdetail")
-	public String themeparkdetail() {
+	@GetMapping("/html/themeParkDetail")
+	public String themeParkDetail() {
 		
 		return "/html/themeParkDetail";
 	}
