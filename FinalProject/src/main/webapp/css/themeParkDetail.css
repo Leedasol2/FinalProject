@@ -35,7 +35,7 @@ span.date{
 	left: 650px;
 	top: 10px;
 }
-div.smimage > img{
+div.smimage3 > img{
 	position: relative;
 	left: 650px;
 	width: 117px;
@@ -66,6 +66,6 @@ div.select span{
 	left: 600px;
 	font-family: 'MinSans-Medium';
 }
-div.home{
-	height: 2500px;
+div.themeparkdetail{
+	height: 2300px;
 }

@@ -15,7 +15,7 @@
 $(function(){
 	
 	<!-- image 클릭 이벤트 -->
-	$(".small").click(function(){
+	$(".small2").click(function(){
 		
 		var src=$(this).attr("src");
 		
@@ -47,7 +47,8 @@ $(function(){
 </script>
 
 <!-- main 시작 -->
-	<div class="main">
+	<div class="festivaldetail">
+	<br><br>
 		<div class="subject">
 		축제 <img alt="" src="${root }/image/asset/대관람차.png" width="50px;">
 		</div>
@@ -64,7 +65,7 @@ $(function(){
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<img alt="" src="${root }/image/asset/링크.png" width="20px;"><span> 홈페이지</span>
 	</div>
-	<br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br>
 	<hr width="970px">
 	<div align="center" class="select">
 	<a href="#sp1"><span>소개글</span></a>
@@ -115,12 +116,12 @@ $(function(){
 	</div>
 	<br><br>
 	<img alt="" src="${root }/image/asset/페스티벌.jpg" class="image"><br><br>
-	<div class="smimage">
-	<img alt="" src="${root }/image/asset/축제1.jpg" class="small">
-	<img alt="" src="${root }/image/asset/축제2.jpg" class="small">
-	<img alt="" src="${root }/image/asset/축제3.jpg" class="small">
-	<img alt="" src="${root }/image/asset/축제4.jpg" class="small">
-	<img alt="" src="${root }/image/asset/축제5.jpg" class="small">
+	<div class="smimage2">
+	<img alt="" src="${root }/image/asset/축제1.jpg" class="small2">
+	<img alt="" src="${root }/image/asset/축제2.jpg" class="small2">
+	<img alt="" src="${root }/image/asset/축제3.jpg" class="small2">
+	<img alt="" src="${root }/image/asset/축제4.jpg" class="small2">
+	<img alt="" src="${root }/image/asset/축제5.jpg" class="small2">
 	</div>
 	<br><br><br>
 	<hr width="970px"><br>

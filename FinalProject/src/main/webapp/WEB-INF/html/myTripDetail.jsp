@@ -26,7 +26,7 @@ $(function(){
 </script>
 
 	<!-- main 시작 -->
-	<div class="main">
+	<div class="mytripdetail">
 		<div class="subject">
 		<br>
 		여행을 떠나요 <img alt="" src="${root }/image/asset/자동차아이콘.png" width="50px;">
@@ -44,7 +44,7 @@ $(function(){
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<img alt="" src="${root }/image/asset/스크랩안함.png" width="20px;"><span> 스크랩 하기</span>
 	</div>
-	<br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br>
 	<hr width="970px">
 	<div align="center" class="select">
 	<a href="#sp1"><span>소개글</span></a>
@@ -52,12 +52,12 @@ $(function(){
 	<a href="#sp3"><span>사진</span></a>
 	<a href="#sp4"><span>여행자의 한마디</span></a>
 	</div>
-	<hr width="970px"><br>
+	<hr width="970px">
 	
 	<div class="sogae" id="sp1">
 	<b>소개글</b>
 	</div>
-	<br><br><br>
+	<br><br>
 	<div align="center">
 	<img alt="" src="${root }/image/asset/따옴표위.png" width="70px;">
 	<br><br><br><br>
@@ -134,7 +134,7 @@ $(function(){
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <span style="color: white;"><b>2run trip&nbsp;&nbsp;</b></span><span><b>  리뷰 작성</b></span>
+          <span class="modalsub"><b>2run trip&nbsp;&nbsp;</b></span><span><b>  리뷰 작성</b></span>
         </div>
         <div class="modal-body">
         <span style="float: left;"><b>여행지 명&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
