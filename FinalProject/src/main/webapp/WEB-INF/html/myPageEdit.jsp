@@ -11,10 +11,10 @@
 <body>
 
 		<!-- main 시작 -->
-		<div class="mypage-content">
+		<div class="mypage-edit-content">
 
 			<div class="mypage-category">
-				<span class="mypage-title">마이페이지</span>
+				<span class="mypage-edit-title">마이페이지</span>
 				<ul class="mypage">
 					<li class="mypage-editmember"><a href="#">회원정보수정</a></li>
 
@@ -48,14 +48,8 @@
 							<td><input type="text" name="email1"
 								class="form-control-inputmail" required="required"> <b>@</b>
 								<input type="text" name="email2" id="email2"
-								class="form-control-inputmail" required="required"> <select
-								id="selemail">
-									<option value="_">직접입력</option>
-									<option value="naver.com">네이버</option>
-									<option value="gmail.com">구글</option>
-									<option value="daum.net">다음</option>
-									<option value="nate.com">네이트</option>
-							</select></td>
+								class="form-control-inputmail" required="required"> 
+							</td>
 						</tr>
 
 						<tr>
