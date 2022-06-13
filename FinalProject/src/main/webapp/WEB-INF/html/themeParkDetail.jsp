@@ -57,7 +57,7 @@ $(function(){
 	<div class="sogae" id="sp1">
 	<b>소개글</b>
 	</div>
-	<div class="tripimg">
+	<div class="tripimg1">
 	<img alt="" src="${root }/image/asset/따옴표위.png">
 	</div>
 	<div class="tripcontent">
@@ -67,7 +67,7 @@ $(function(){
 	민속박물관, 쇼핑몰, 호텔, 백화점, 아이스링크등으로 구성되어 있습니다.
 	<br>관광, 문화, 레저, 쇼핑을 원스톱으로 즐길 수 있는 대규모 복합 공간입니다.</span>
 	</div>
-	<div class="tripimg">
+	<div class="tripimg2">
 	<img alt="" src="${root }/image/asset/따옴표아래.png">
 	</div>
 	<hr>

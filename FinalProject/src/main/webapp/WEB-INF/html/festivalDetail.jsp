@@ -58,7 +58,7 @@ $(function(){
 	<div class="sogae" id="sp1">
 	<b>소개글</b>
 	</div>
-	<div class="tripimg">
+	<div class="tripimg1">
 	<img alt="" src="${root }/image/asset/따옴표위.png">
 	</div>
 	<div class="tripcontent">
@@ -66,7 +66,7 @@ $(function(){
 	<br>대중적 인지도 높은 국내 최정상의 아티스트와 함께 진행되며,<br>
 	다양한 컨셉의 이벤트,콘텐츠 존 구성으로 19세 이상 누구나 즐길 수 있는 페스티벌이다.</span>
 	</div>
-	<div class="tripimg">
+	<div class="tripimg2">
 	<img alt="" src="${root }/image/asset/따옴표아래.png">
 	</div>
 	<hr>
