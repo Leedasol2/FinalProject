@@ -26,6 +26,8 @@ div.regionTripText > div.trip-category{
     padding-left: 58px;
     padding-top: 58px;
     margin-right: 800px;
+    position: sticky;
+    top: 100px;
 }
 
 div.regionTripText > div.trip-category > a.tripcategory{
