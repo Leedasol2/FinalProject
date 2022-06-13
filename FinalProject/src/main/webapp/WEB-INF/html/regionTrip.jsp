@@ -70,7 +70,7 @@ $("a.jeju").click(function(){
 </div>
 
 <div class="category-title">
-  <span class="main-title">지역별 여행지</span>
+  <span class="main-title">지역별 여행지</span>&nbsp;
   <span class="sub-title">여행을 떠나요</span>
   <span class="title-content">가고 싶은 지역별 여행지를 골라보세요!<br>실제 여행객들의 생생한 리뷰까지 만나보세요</span>
   <hr class="title-line">

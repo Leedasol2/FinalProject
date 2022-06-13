@@ -61,7 +61,7 @@ $("a.other").click(function(){
 </div>
 
 <div class="category-title">
-  <span class="main-title">테마별 여행지</span>
+  <span class="main-title">테마별 여행지</span>&nbsp;
   <span class="sub-title">여행을 떠나요</span>
   <span class="title-content">자연부터 농촌체험,이색체험까지!<br>테마별 여행지를 사용자 리뷰와 함께 만나보세요</span>
   <hr class="title-line">

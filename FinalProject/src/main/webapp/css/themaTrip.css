@@ -9,6 +9,14 @@
 
 div.themaTripText{
 	font-family: 'MinSans-Medium' !important;
+	align-items: center;
+  	display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    color: #212529;
 }
 
 div.themaTripText > div.trip-category{
@@ -17,7 +25,7 @@ div.themaTripText > div.trip-category{
     background-color: #ffffea;
     padding-left: 58px;
     padding-top: 58px;
-    margin-left: 437px;
+    margin-right: 800px;
 }
 
 div.themaTripText > div.trip-category > a.tripcategory{
@@ -38,9 +46,9 @@ div.themaTripText > div.trip-category > a:hover{
 
 div.themaTripText > div.category-title {
 	display: inline-block;
-	position: absolute;
-    left: 670px;
-    top: 233px;
+	position: relative;
+    left: 87px;
+    top: -200px;
 }
 
 div.themaTripText > div.category-title > hr.title-line{
@@ -68,6 +76,7 @@ div.themaTripText > div.category-title > span.title-content{
 	font-size: 0.8em;
 	padding-left: 266px;
 	text-align: right;
+	line-height: 1.3;
 }
 
 div.themaTripText div.trip-content{
@@ -76,8 +85,8 @@ div.themaTripText div.trip-content{
     border: 1px solid #e6e6fa;
     border-radius: 10px;
     position: relative;
-    left: 663px;
-    top: 10px;
+    left: 78px;
+    top: -149px;
     margin-left: 16px;
     margin-bottom: 47px;
 }
@@ -154,16 +163,15 @@ div.themaTripText .star-ratings-base {
 }
 
 div.themaTripText > div.themeaofkorea{
-	position: absolute;
-    left: 662px;
-    top: 300px;
+	position: relative;
+    left: 63px;
+    top: -226px;
 }
 
 div.themaTripText > div.themeaofkorea > a.themea{
 	margin-left: 46px;
 	font-size: 1.2em;
 	color: gray;
-	font-weight: bold;
 }
 
 div.themaTripText > div.themeaofkorea > a:hover{
@@ -176,9 +184,9 @@ div.themaTripText > div.themeaofkorea > a.unique-experience{
 }
 
 div.themaTripText > div.selectbar{
-	position: absolute;
-    left: 1291px;
-    top: 366px;
+	position: relative;
+    left: 391px;
+    top: -157px;
 }
 
 div.themaTripText > select.sortselect{
