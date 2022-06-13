@@ -124,7 +124,7 @@ ul.gnb > li > a::before {
 ul.gnb > li:nth-child(1) > a::after, ul.gnb > li:nth-child(2) > a::after {
 	content: '';
     position: absolute;
-    bottom: -7px;
+    bottom: -5px;
     left: 50px;
     width: 80px;
     height: 7px;
@@ -153,7 +153,7 @@ ul.gnb > li:nth-child(4) > a::before {
 
 ul.gnb > li > a + ul {
     position: absolute;
-    top: 90px;
+    top: 88px;
     left: 0;
     width: 100%;
     background-color: rgba(43, 174, 102, 0.8);
