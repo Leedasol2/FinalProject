@@ -12,6 +12,7 @@
 
 	<!-- main 시작 -->
 	<div class="login-emailcheck">
+
 		<span class="login-emailcheck-title"><img src="${root }/image/asset/o.png" width = "25px">이메일 중복확인</span><br>
 		<form action="insert" method="post" class="form-loginemailcheck">
 				<table class="login-emailcheck-table">
@@ -47,7 +48,9 @@
 				<button type="submit" class="login-emailcheck-btn-use">사용하기</button>
 		</div>
 			
-	</div><!-- main 끝 -->
+
+	</div>
+	<!-- main 끝 -->
 
 </body>
 </html>
