@@ -462,8 +462,12 @@ ul.tripstory-list > li:last-child{
 	margin-bottom:0px;
 }
 
-.tripstory-list a:hover{color:#2bae66}
-a.fontgreen{color:#2bae66;} /* 여행이야기 끝 */
+.tripstory-list > li > a > span:hover {color:#2bae66}
+span.fontgreen{color:#2bae66;} /* 여행이야기 끝 */
+.tripstory-list > li > a > span::after{padding-left:5px;padding-right:5px;content:"|"}
+
+.tripstory-list > li > a > span:last-child::after{content:"";}
+
 
 /* 테마파크 */
 .slider-box {
