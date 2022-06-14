@@ -133,7 +133,7 @@ $(function(){
     <div class="modal-dialog">
     
       <!-- Modal content-->
-      <div class="modal-content detailmodal">
+      <div class="detailmodal">
         <div class="modal-header detailheader">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <span class="modalsub">2run trip&nbsp;&nbsp;</span><span class="modalsub2">리뷰 작성</span>
