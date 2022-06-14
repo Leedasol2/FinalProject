@@ -41,74 +41,18 @@
 						</div>
 						</div>
 						<div class="review-edit">
-							<span><a href="#">삭제</a></span>
-							<span><a href="#">수정</a></span>
 							<div class="review-day"><span>2020-06-01 04:25</span></div>
 						</div>
 					</div>
 					<div class="review-ment">
-						<span>연인들의 천국, 외국인이면 더욱 서울의 야경을 멋지게 즐길 수 있습니다. 20년만의 서울타워 방문이 아깝지 않았습니다.</span>
+						<textarea class="form-control">연인들의 천국, 외국인이면 더욱 서울의 야경을 멋지게 즐길 수 있습니다. 20년만의 서울타워 방문이 아깝지 않았습니다.</textarea>
 					</div>
 				</div>
 				
-				<div class="hr"><hr></div>
-				
-				<div class="review-contents">
-				
-					<div class="review-topbox">
-						<div class="review-title">
-							<a href="#">N서울타워</a>
-							<div class="tripstory-star-ratings">
-							<div class="tripstory-star-ratings-fill space-x-2 text-lg"
-								style="width: ratingToPercent+ '%'">
-								<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-							</div>
-							<div class="tripstory-star-ratings-base space-x-2 text-lg">
-								<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-							</div>
-						</div>
-						</div>
-						<div class="review-edit">
-							<span><a href="#">삭제</a></span>
-							<span><a href="#">수정</a></span>
-							<div class="review-day"><span>2020-06-01 04:25</span></div>
-						</div>
-					</div>
-					<div class="review-ment">
-						<span>연인들의 천국, 외국인이면 더욱 서울의 야경을 멋지게 즐길 수 있습니다. 20년만의 서울타워 방문이 아깝지 않았습니다.</span>
-					</div>
+				<div class="review-button">
+					<button type="button" onclick="">수정하기</button>
+					<button type="button" onclick="history.back()">취소</button>
 				</div>
-				
-				<div class="hr"><hr></div>
-				
-				<div class="review-contents">
-				
-					<div class="review-topbox">
-						<div class="review-title">
-							<a href="#">N서울타워</a>
-							<div class="tripstory-star-ratings">
-							<div class="tripstory-star-ratings-fill space-x-2 text-lg"
-								style="width: ratingToPercent+ '%'">
-								<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-							</div>
-							<div class="tripstory-star-ratings-base space-x-2 text-lg">
-								<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-							</div>
-						</div>
-						</div>
-						<div class="review-edit">
-							<span><a href="#">삭제</a></span>
-							<span><a href="#">수정</a></span>
-							<div class="review-day"><span>2020-06-01 04:25</span></div>
-						</div>
-					</div>
-					<div class="review-ment">
-						<span>연인들의 천국, 외국인이면 더욱 서울의 야경을 멋지게 즐길 수 있습니다. 20년만의 서울타워 방문이 아깝지 않았습니다.</span>
-					</div>
-				</div>
-				
-				<div class="hr"><hr></div>
-				
 			</div>
 		</div>
 	</div>
