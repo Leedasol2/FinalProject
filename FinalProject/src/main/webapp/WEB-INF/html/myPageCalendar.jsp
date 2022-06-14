@@ -21,7 +21,7 @@
 <body>
 <div class="container">
 	<div class="inner calendar">
-		<div class="mypage">
+		<div class="mypage mypage-calendar">
 			<div class="mypage-header">
 				<div class="mypage-title">마이페이지</div>
 				<div class="mypage-menu">
