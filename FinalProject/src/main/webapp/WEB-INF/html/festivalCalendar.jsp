@@ -23,47 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
 <body>
  
 <script type="text/javascript">
-
-
-//지역 선택시 글씨색 변경
-$("a.seoul").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
-});
-$("a.incheon-Gyeonggi").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
-});
-$("a.daejeon-chungcheong").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
-});
-$("a.daegu").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
-});
-$("a.jeolla").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
-});
-$("a.gyeongsang").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
-});
-$("a.busan").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
-});
-$("a.gangwon").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
-});
-$("a.jeju").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
-});
-});
-
 $(document).ready(function(){
 	  var currentPosition = parseInt($(".festival-category").css("top"));
 	  $(window).scroll(function() {
@@ -87,6 +46,7 @@ $(document).ready(function(){
   <hr class="festival-title-line">
 </div>
 
+<div class="festival-main-proceeding">
 <div class="festival-proceeding">
   <span class="proceeding-title">지금 진행중인 축제</span>
   <img class="title-img" alt="" src="${root }/image/asset/축제아이콘.png">
@@ -137,6 +97,7 @@ $(document).ready(function(){
 		</div> 	
  	</div> 	
  </div> 
+ </div>
 </div>
 <!-- 본문 끝 -->
 
