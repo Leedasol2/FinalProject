@@ -48,6 +48,7 @@ $("a.history").click(function(){
 $("a.other").click(function(){
 	$(this).css("color","#2bae66");
 	$(this).siblings().css("color","gray");	
+});
 
 </script> 
 
