@@ -8,10 +8,6 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
-<c:set var="root" value="<%=request.getContextPath() %>"/>
-<link rel="stylesheet" href="${root}/css/festival.css"/>
-<script src="${root}/js/festival.js"></script> 
-
 </head>
 <body>
 
@@ -126,17 +122,7 @@
 					<div class="festival-region">대구광역시 달성군</div>
 				</div>
 			</div>
-			<div class="festival-list-content">
-				<img src="${root}/image/asset/축제예시.png" class="festival-img">
-				<div class="name-box">
-					<div class="festival-name">
-						<a>네이처파크 플라워페스티벌</a>
-					</div>
-				</div>
-				<div class="explain-box">
-					<div class="festival-region">대구광역시 달성군</div>
-				</div>
-			</div>
+			
 		</div>
 	</div>
 </div>
