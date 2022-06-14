@@ -1,128 +1,116 @@
 @charset "UTF-8";
-
-.review-main{
-	margin-bottom: 350px;
+/* font */
+@font-face {
+    font-family: 'MinSans-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.mypage-review-title{
-	font-weight: bold;
+@font-face {
+    font-family: 'MinSans-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MinSans-Black';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.mypage {
+    margin: 120px 0;
+}
+
+.review{
+	padding: 0 20px;
+}
+
+.mypage-header {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.mypage-header .mypage-title{
+    font-family: 'MinSans-Black';
+    font-weight: bold;
     font-size: 30px;
     color: #212529;
+    margin-bottom: 55px;
 }
 
-.mypage-review-content{
-	align-items: center;
+.mypage-menu {
+    width: 100%;
+}
+
+ul.mypage-ul {
+    padding: 0 10px;
+}
+
+li.mypage-li {
+    display: inline-block;
+    color: #212529;
+    font-family: 'MinSans-Light';
+    font-size: 16pt;
+    padding-right: 60px;
+}
+li.mypage-li:last-child{
+    font-family: 'MinSans-Medium';
+	
+}
+
+li.mypage-li > a::after{padding: 0 5px;}
+
+.review-contents {
+    padding: 20px 0;
+}
+
+.review-topbox {
     display: flex;
-    flex-direction: column;
-    position: relative;
-    z-index: 1;
-    top: 80px;
-    left: -50px;
-    
-}
-
-.review-main-content{
-	position: relative;
-	font-size: 15px;
-    margin-top: 50px;
-    margin-left: 420px;
-    
-}
-
-.mypage-category{
-	width: 100%;
-    left: 500px;
-    position: relative;
-}
-
-b.festival-name{
-	font-weight: bold;
-	cursor: pointer;
-}
-
-div.review-main-content div.review-main-content {
-	font-size: 22pt;
-}
-
-/* 별점 css */
-.review-star-rating {
- 	 display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
-    padding: 0 0.2em;
-    text-align: center;
-    width: 5em;
-    margin-left: 90px;
-    font-size: 15px;
-    margin-top: -17px;
-}
-
-.review-star-rating input {
-  display:none;
-}
-
-.review-star-rating label {
-  color:#FFEB46;
-  cursor:pointer;
-}
-
-.review-star-rating :checked ~ label {
-  color:#f90;
-}
-
-/*.theme-star-rating label:hover,
-.theme-star-rating label:hover ~ label {
-  color: #FFA500;
-}*/
-
-/* explanation */
-
-
-.btn-form{
-	margin-left: 570px;
-    font-size: 12px;
-    position: relative;
-    top: -10px;
-}
-
-.btn-delete{
-	background-color: #fff;
-    border: 0px;
-    font-weight: bold;
-}
-
-.btn-update{
-	background-color: #fff;
-    border: 0px;
-    font-weight: bold;
-}
-
-span.form-date{
-	color: #dcdcdc;
-}
-
-span.review-contents{
-	font-size: 8pt;
-	margin-left: 2px;
-	cursor: pointer;
-}
-
-hr.content-line{
-    margin-left: -20px;
-    margin-bottom: 80px;
-    margin-top: 50px;
-    position: relative;
-    width: 930px;
-    left: -155px;
-}
-
-hr.review-title-line{
-	margin-top: 20px;
+    justify-content: space-between;
     margin-bottom: 20px;
-    border: 0;
-    border-top: 1px solid #eee;
-    position: relative;
-    left: px;
-    width: 930px;
-    left: -455px;
+}
+
+.review-list {
+    padding: 10px 30px;
+}
+
+.review-title {
+    display: inherit;
+}
+
+.review-title a{
+    font-family: 'MinSans-Medium';
+    font-size:13pt;
+    margin-right: 20px;
+}
+
+.review-edit > span{
+    font-family: 'MinSans-Medium';
+    font-size:13pt;
+}
+
+.review-day > span{
+    font-family: 'MinSans-Light';
+	font-size:10pt;
+	color:#afafaf;
+}
+
+.review-edit > span::after{
+	padding: 5px;
+	content:"|";
+	}
+.review-edit > span:nth-child(2)::after{content:"";}
+
+.review-edit {
+    display: inherit;
+}
+
+.review-ment{
+	
+    font-family: 'MinSans-Light';
+	font-size:12.5pt;
 }

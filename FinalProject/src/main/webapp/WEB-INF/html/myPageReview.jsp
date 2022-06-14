@@ -9,114 +9,109 @@
 <title>이런여행</title>
 </head>
 <body>
-
-		<!-- main 시작 -->
-		<div class="mypage-review-content">
-
-			<div class="mypage-category">
-				<span class="mypage-review-title">마이페이지</span>
-				<ul class="mypage">
-					<li class="mypage-editmember"><a href="#">회원정보수정</a></li>
-
-					<li class="mypage-scrap"><a href="#">스크랩</a></li>
-
-					<li class="mypage-mycalendar"><a href="#">마이캘린더</a></li>
-
-					<li class="mypage-review"><a href="#">리뷰</a></li>
-				</ul>
-				<hr class="review-title-line">
+<div class="container">
+	<div class="inner review">
+		<div class="mypage">
+			<div class="mypage-header">
+				<div class="mypage-title">마이페이지</div>
+				<div class="mypage-menu">
+					<ul class="mypage-ul">
+						<li class="mypage-li"><a href="#">회원정보수정</a></li>
+						<li class="mypage-li"><a href="#">스크랩</a></li>
+						<li class="mypage-li"><a href="#">마이캘린더</a></li>
+						<li class="mypage-li"><a href="#">리뷰</a></li>
+					</ul>
+				</div>
+				<div class="hr"><hr></div>
 			</div>
-
-			<div class="review-main">
-
-				<div class="review-main-content">
-					<b class="festival-name">남이섬 축제</b>
-					<div class="review-star-rating">
-					  <input type="radio" id="5-stars" name="rating" value="5" />
-					  <label for="5-stars" class="star">&#9733;</label>
-					  <input type="radio" id="4-stars" name="rating" value="4" />
-					  <label for="4-stars" class="star">&#9733;</label>
-					  <input type="radio" id="3-stars" name="rating" value="3" />
-					  <label for="3-stars" class="star">&#9733;</label>
-					  <input type="radio" id="2-stars" name="rating" value="2" />
-					  <label for="2-stars" class="star">&#9733;</label>
-					  <input type="radio" id="1-star" name="rating" value="1" />
-					  <label for="1-star" class="star">&#9733;</label>
+			
+			<div class="review-list">
+				<div class="review-contents">
+					<div class="review-topbox">
+						<div class="review-title">
+							<a href="#">N서울타워</a>
+							<div class="tripstory-star-ratings">
+							<div class="tripstory-star-ratings-fill space-x-2 text-lg"
+								style="width: ratingToPercent+ '%'">
+								<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+							</div>
+							<div class="tripstory-star-ratings-base space-x-2 text-lg">
+								<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+							</div>
+						</div>
+						</div>
+						<div class="review-edit">
+							<span><a href="#">삭제</a></span>
+							<span><a href="#">수정</a></span>
+							<div class="review-day"><span>2020-06-01 04:25</span></div>
+						</div>
 					</div>
-					
-					<form id="btn-form" action="" class="btn-form">
-						<input type="button" onclick="" value="삭제" class="btn-delete">
-						<b>|</b>
-						<input type="button" onclick="" value="수정" class="btn-update">
-						<span class="form-date"><b>  2020-06-01 04:25 </b></span>				
-					</form>
-					
-					<div class="review-content">
-						<span class="review-contents">좋은 취지의 페스티벌! 하루종일 힐링하는기분이였어요. 누워있어도 괜찮다는 메세지와 멋진 아티스트의 무대가 너무 행복한 하루였습니다.</span>
-						<hr class="content-line">
+					<div class="review-ment">
+						<span>연인들의 천국, 외국인이면 더욱 서울의 야경을 멋지게 즐길 수 있습니다. 20년만의 서울타워 방문이 아깝지 않았습니다.</span>
 					</div>
 				</div>
 				
-				<div class="review-main-content">
-					<b class="festival-name">남이섬 축제</b>
-					<div class="review-star-rating">
-					  <input type="radio" id="5-stars" name="rating" value="5" />
-					  <label for="5-stars" class="star">&#9733;</label>
-					  <input type="radio" id="4-stars" name="rating" value="4" />
-					  <label for="4-stars" class="star">&#9733;</label>
-					  <input type="radio" id="3-stars" name="rating" value="3" />
-					  <label for="3-stars" class="star">&#9733;</label>
-					  <input type="radio" id="2-stars" name="rating" value="2" />
-					  <label for="2-stars" class="star">&#9733;</label>
-					  <input type="radio" id="1-star" name="rating" value="1" />
-					  <label for="1-star" class="star">&#9733;</label>
+				<div class="hr"><hr></div>
+				
+				<div class="review-contents">
+				
+					<div class="review-topbox">
+						<div class="review-title">
+							<a href="#">N서울타워</a>
+							<div class="tripstory-star-ratings">
+							<div class="tripstory-star-ratings-fill space-x-2 text-lg"
+								style="width: ratingToPercent+ '%'">
+								<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+							</div>
+							<div class="tripstory-star-ratings-base space-x-2 text-lg">
+								<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+							</div>
+						</div>
+						</div>
+						<div class="review-edit">
+							<span><a href="#">삭제</a></span>
+							<span><a href="#">수정</a></span>
+							<div class="review-day"><span>2020-06-01 04:25</span></div>
+						</div>
 					</div>
-					
-					
-					<form id="btn-form" action="" class="btn-form">
-						<input type="button" onclick="" value="삭제" class="btn-delete">
-						<b>|</b>
-						<input type="button" onclick="" value="수정" class="btn-update">
-						<span class="form-date"><b>  2020-06-01 04:25 </b></span>				
-					</form>
-					
-					<div class="review-content">
-						<span class="review-contents">좋은 취지의 페스티벌! 하루종일 힐링하는기분이였어요. 누워있어도 괜찮다는 메세지와 멋진 아티스트의 무대가 너무 행복한 하루였습니다.</span>
-						<hr class="content-line">
+					<div class="review-ment">
+						<span>연인들의 천국, 외국인이면 더욱 서울의 야경을 멋지게 즐길 수 있습니다. 20년만의 서울타워 방문이 아깝지 않았습니다.</span>
 					</div>
 				</div>
 				
-				<div class="review-main-content">
-					<b class="festival-name">남이섬 축제</b>
-				<div class="review-star-rating">
-					  <input type="radio" id="5-stars" name="rating" value="5" />
-					  <label for="5-stars" class="star">&#9733;</label>
-					  <input type="radio" id="4-stars" name="rating" value="4" />
-					  <label for="4-stars" class="star">&#9733;</label>
-					  <input type="radio" id="3-stars" name="rating" value="3" />
-					  <label for="3-stars" class="star">&#9733;</label>
-					  <input type="radio" id="2-stars" name="rating" value="2" />
-					  <label for="2-stars" class="star">&#9733;</label>
-					  <input type="radio" id="1-star" name="rating" value="1" />
-					  <label for="1-star" class="star">&#9733;</label>
+				<div class="hr"><hr></div>
+				
+				<div class="review-contents">
+				
+					<div class="review-topbox">
+						<div class="review-title">
+							<a href="#">N서울타워</a>
+							<div class="tripstory-star-ratings">
+							<div class="tripstory-star-ratings-fill space-x-2 text-lg"
+								style="width: ratingToPercent+ '%'">
+								<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+							</div>
+							<div class="tripstory-star-ratings-base space-x-2 text-lg">
+								<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+							</div>
+						</div>
+						</div>
+						<div class="review-edit">
+							<span><a href="#">삭제</a></span>
+							<span><a href="#">수정</a></span>
+							<div class="review-day"><span>2020-06-01 04:25</span></div>
+						</div>
 					</div>
-					
-					
-					<form id="btn-form" action="" class="btn-form">
-						<input type="button" onclick="" value="삭제" class="btn-delete">
-						<b>|</b>
-						<input type="button" onclick="" value="수정" class="btn-update">
-						<span class="form-date"><b>  2020-06-01 04:25 </b></span>				
-					</form>
-					
-					<div class="review-content">
-						<span class="review-contents">좋은 취지의 페스티벌! 하루종일 힐링하는기분이였어요. 누워있어도 괜찮다는 메세지와 멋진 아티스트의 무대가 너무 행복한 하루였습니다.</span>
-						<hr class="content-line">
+					<div class="review-ment">
+						<span>연인들의 천국, 외국인이면 더욱 서울의 야경을 멋지게 즐길 수 있습니다. 20년만의 서울타워 방문이 아깝지 않았습니다.</span>
 					</div>
 				</div>
+				
+				<div class="hr"><hr></div>
+				
 			</div>
 		</div>
-		<!-- main 끝 -->
-
+	</div>
+</div>
 </body>
 </html>
