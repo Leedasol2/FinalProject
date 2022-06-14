@@ -144,7 +144,7 @@ span.detailedit{
 	float: right;
 }
 /* modal 부분 */
-div.myModal2 important! {
+div.myModal2 !important {
 	width: 600px;
 	height: 350px;
 }
@@ -167,7 +167,19 @@ span.modalname{
 	height: 180px;
 	margin-top: 20px;
 }
-
+div.detailmodal{
+	background-color: #fff;
+}
+span.modalsub{
+	color: white;
+	font-weight: bold;
+	font-family: 'MinSans-Medium';
+}
+span.modalsub2{
+	font-weight: bold;
+	font-family: 'MinSans-Medium';
+	color: #212529;
+}
 
 /* 별점 css */
 .detail-star-rating {
@@ -195,16 +207,6 @@ span.modalname{
   color:#f90;
 }
 
-span.modalsub{
-	color: white;
-	font-weight: bold;
-	font-family: 'MinSans-Medium';
-}
-span.modalsub2{
-	font-weight: bold;
-	font-family: 'MinSans-Medium';
-	color: #212529;
-}
 
 /* Modal 별점 css */
 .modal-star-rating {
@@ -228,6 +230,6 @@ span.modalsub2{
   cursor:pointer;
 }
 
-.modal-star-rating :checked ~ label {
+.modal-star-rating :checked ~  label {
   color:#f90;
 }
