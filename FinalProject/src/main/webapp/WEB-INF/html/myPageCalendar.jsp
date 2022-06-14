@@ -19,34 +19,27 @@
 </script>
 </head>
 <body>
-
-		<!-- header 시작 -->
-		
-		
-		<!-- header 끝 -->
-
-		<!-- main 시작 -->
-		<div class="mypage-content">
-			<div class="mypage-category">
-				<span class="mypage-title">마이페이지</span>
-				<ul class="mypage">
-					<li class="mypage-editmember"><a href="#">회원정보수정</a></li>
-
-					<li class="mypage-scrap"><a href="#">스크랩</a></li>
-
-					<li class="mypage-mycalendar"><a href="#">마이캘린더</a></li>
-
-					<li class="mypage-review"><a href="#">리뷰</a></li>
-				</ul>
-				<hr class="title-line">
+<div class="container">
+	<div class="inner calendar">
+		<div class="mypage">
+			<div class="mypage-header">
+				<div class="mypage-title">마이페이지</div>
+				<div class="mypage-menu">
+					<ul class="mypage-ul">
+						<li class="mypage-li"><a href="#">회원정보수정</a></li>
+						<li class="mypage-li"><a href="#">스크랩</a></li>
+						<li class="mypage-li"><a href="#">마이캘린더</a></li>
+						<li class="mypage-li"><a href="#">리뷰</a></li>
+					</ul>
+				</div>
+				<div class="hr"><hr></div>
 			</div>
+			
+			
 			<div id="calendar" class="calendar-main"></div>
 		</div>
-		<!-- main 끝 -->
-
-		<!-- footer 시작 -->
 		
-		<!-- footer 끝 -->
-
+	</div>
+</div>
 </body>
 </html>
