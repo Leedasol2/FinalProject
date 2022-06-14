@@ -39,7 +39,7 @@
 							<span class="subject">내 꿈속의 2번째 제주도 여행사진내 꿈속의 2번째 제주도 여행사진내 꿈속의 2번째 제주도 여행사진내 꿈속의 2번째 제주도 여행사진내 꿈속의 2번째 제주도 여행사진내 꿈속의 2번째 제주도 여행사진</span>
 							<span class="photo"><img src="${root }/image/asset/첨부이미지아이콘.png"></span>
 							<span class="cntComments">[16]</span>
-						
+							<span><img src="${root }/image/asset/새글아이콘.png"></span>
 						</td>
 						<td><c:out value="${fn:substring('dasolsol', 0, fn:length('dasolsol') - 4)}"/>****</td>
 						<td><fmt:formatDate value="" pattern="yyyy.MM.dd"/>2022.05.11</td>

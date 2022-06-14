@@ -56,6 +56,7 @@ div.tripHeader{
 div.tripHeader div.shareTrip{
 	
 	width: 900px;
+	cursor: pointer;
 }
 
 div.tripHeader div{
