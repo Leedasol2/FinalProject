@@ -51,6 +51,7 @@ $(function(){
 	<a href="#sp1"><span>소개글</span></a>
 	<a href="#sp2"><span>지도</span></a>
 	<a href="#sp3"><span>사진</span></a>
+	<a href="#sp4"><span>여행자의 한마디</span></a>
 	</div>
 	<hr>
 	
@@ -101,8 +102,64 @@ $(function(){
 	<img alt="" src="${root }/image/asset/테마파크4.jpg" class="small3">
 	<img alt="" src="${root }/image/asset/테마파크5.jpg" class="small3">
 	</div>
+	<hr>
+	
+	<div class="madi" id="sp4">
+	<b>여행자의 한마디</b><button class="btnadd" data-target="#myModal2" data-toggle="modal">등록하기</button>
+	</div>
+	<div class="madicontent">
+	<span class="detailname">sa*****</span>
+	<span class="detailedit">삭제 | 수정  2022-06-07 15:53</span>
+	<div class="detail-star-rating">
+                      <input type="radio" id="5-stars" name="rating" value="5" />
+                      <label for="5-stars" class="star">&#9733;</label>
+                      <input type="radio" id="4-stars" name="rating" value="4" />
+                      <label for="4-stars" class="star">&#9733;</label>
+                      <input type="radio" id="3-stars" name="rating" value="3" />
+                      <label for="3-stars" class="star">&#9733;</label>
+                      <input type="radio" id="2-stars" name="rating" value="2" />
+                      <label for="2-stars" class="star">&#9733;</label>
+                      <input type="radio" id="1-star" name="rating" value="1" />
+                      <label for="1-star" class="star">&#9733;</label>
+    </div>
+	
+	<div class="madireview">롯데월드에서만 만날 수 있는 몽환적인 분위기와 느낌! 너무 좋았습니다!</div>
+	</div>
 	</div>
 	<!-- main 끝 -->
   
+  	<!-- 리뷰 작성 모달창 -->
+	<div class="modal fade myModal2" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="detailmodal">
+        <div class="modal-header detailheader">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <span class="modalsub">2run trip&nbsp;&nbsp;</span><span class="modalsub2">리뷰 작성</span>
+        </div>
+        <div class="modal-body">
+        <span class="modalname">롯데월드&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <div class="modal-star-rating">
+                      <input type="radio" id="5-stars" name="rating" value="5" />
+                      <label for="5-stars" class="star">&#9733;</label>
+                      <input type="radio" id="4-stars" name="rating" value="4" />
+                      <label for="4-stars" class="star">&#9733;</label>
+                      <input type="radio" id="3-stars" name="rating" value="3" />
+                      <label for="3-stars" class="star">&#9733;</label>
+                      <input type="radio" id="2-stars" name="rating" value="2" />
+                      <label for="2-stars" class="star">&#9733;</label>
+                      <input type="radio" id="1-star" name="rating" value="1" />
+                      <label for="1-star" class="star">&#9733;</label>
+    </div> 
+        <textarea id="detailcontent" class="form-control" placeholder="별점과 리뷰를 작성해주세요!"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="rbtn" data-dismiss="modal"
+          id="=modaladd">작성</button> 
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
