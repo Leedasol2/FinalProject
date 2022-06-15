@@ -1,6 +1,20 @@
 @charset "UTF-8";
 
 @font-face {
+    font-family: 'MinSans-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MinSans-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'MinSans-Black';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Black.woff') format('woff');
     font-weight: normal;
@@ -94,6 +108,14 @@ table.edit-content{
     left: 220px;  
 }
 
+input{
+	border: 1px solid #afafaf;
+	border-radius: 5px;
+    font-family: 'MinSans-Light';
+    font-size:10.5pt;
+    padding: 10px 10px;
+}
+
 input.form-control-inputread{
 	width: 300px;
     height: 40px;
@@ -127,9 +149,11 @@ button.btn-update-information{
     width: 120px;
    	height: 40px;    
     color: #fff;
-    background-color: #33b679;
+    background-color: #2bae66;
  	border: 1px;  
  	margin-right: 5px;
+    font-family: 'MinSans-Medium';
+    font-size:11pt;
  	  
 }
 
@@ -140,9 +164,12 @@ button.btn-delete{
 	border-radius: 40px;
     width: 120px;
    	height: 40px;
-    color: #33b679;
-    border: 1px solid;
+    color: #2bae66;
+    background-color: #fff;
+    border: 1px solid #2bae66;
     margin-left: 5px;
+    font-family: 'MinSans-Medium';
+    font-size:11pt;
 }
 
 hr.memberedit-title-line{
@@ -154,5 +181,22 @@ hr.memberedit-title-line{
     width: 930px;
     left: -455px;
 }
+
+table.edit-content th{
+    font-family: 'MinSans-Light';
+    font-size:12pt;
+}
+
+.mypage-edit > .mypage-header > .mypage-menu > ul.mypage-ul > li.mypage-li {
+    display: inline-block;
+    color: #212529;
+    font-family: 'MinSans-Light';
+    font-size: 16pt;
+    padding-right: 60px;
+}
+
+.mypage-edit > .mypage-header > .mypage-menu > ul.mypage-ul > li.mypage-li:nth-child(1){
+    font-family: 'MinSans-Medium';
+	
 }
 
