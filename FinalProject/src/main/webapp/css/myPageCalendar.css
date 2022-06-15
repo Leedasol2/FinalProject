@@ -21,17 +21,19 @@
     font-style: normal;
 }
 
-.mypage-calendar {
-    /* margin: 120px 0; */
-}
-
 .calendar{
 	padding: 0 20px;
+}
+#calendarBox{text-align:center;}
+#calendar{
+	 width: 90%;
+	 display: inline-block;
 }
 
 .mypage-header {
     width: 100%;
     padding: 0 20px;
+    margin-bottom: 50px;
 }
 
 .mypage-header .mypage-title{
