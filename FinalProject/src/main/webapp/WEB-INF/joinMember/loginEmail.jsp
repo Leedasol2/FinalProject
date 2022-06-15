@@ -23,8 +23,15 @@ $(function(){
 
 	$(".login-emailcheck-btn-check").on("click",function(){
 		
-        var email = $("#email1").val(); //email값이 "email"인 입력란의 값을 저장
-       
+        //var email = $("#email1").val(); //email값이 "email"인 입력란의 값을 저장
+        
+        var email='';
+        $('input[name=email]').map(function(){
+        	
+        	email += $(this).val();
+        });
+        alert(email);
+        
         $.ajax({
         	dataType: "json",
             url:"/joinMember/emailCheck",
@@ -150,8 +157,10 @@ $(function(){
 					</tr>
 				
 					<tr>
-						<td><input type="text" name="email1" id="email1" class="form-login-emailcheck-input" > <a>@</a>
-							<input type="text" name="email2" id="email2" class="form-login-emailcheck-input" > 
+						<td><input type="text" name="email" id="email1" class="form-login-emailcheck-input" > 
+							<a>@</a>
+							<!--<input name="email" value="@" readonly="readonly">-->
+							<input type="text" name="email" id="email2" class="form-login-emailcheck-input" > 
 							<select id="selemail" class = "login-emailcheck-sel-box">
 								<option value="_">직접입력</option>
 								<option value="naver.com">네이버</option>
