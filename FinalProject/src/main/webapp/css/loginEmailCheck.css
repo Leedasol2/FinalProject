@@ -89,7 +89,14 @@ input.form-login-emailcheck-input{
     height: 40px;
     font-family: 'MinSans-Medium';
     font-size: 12pt;
+}
 
+input.form-login-emailcheck-connectinput{
+	border: 0;
+    width: 16px;
+    padding: 1px;
+    font-weight: bold;
+    font-size: 12pt;
 }
 
 select.login-emailcheck-sel-box{
