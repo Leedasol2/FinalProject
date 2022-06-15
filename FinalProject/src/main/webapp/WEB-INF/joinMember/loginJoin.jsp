@@ -26,8 +26,8 @@
 						<th class="login-join-table-title2">SNS 연동가입</th>
 						</tr>			
 						<tr>
-							<td class="login-join-table-content1" rowspan="3"><button type="submit" class="login-join-btn-join">회원가입</button></td>
-							<td class="login-join-table-content2"><button type="submit" class="login-join-btn-sns"><img src="${root }/image/asset/카톡아이콘.png" class= "login-join-snsimg" width = "25px">
+							<td class="login-join-table-content1" rowspan="3"><button type="button" class="login-join-btn-join" onclick="location.href='joinmember'">회원가입</button></td>
+							<td class="login-join-table-content2"><button type="button" class="login-join-btn-sns"><img src="${root }/image/asset/카톡아이콘.png" class= "login-join-snsimg" width = "25px">
 							<span class = login-join-text>카카오 아이디로 가입하기</span></button></td>
 						</tr>
 						
@@ -36,7 +36,7 @@
 						</tr>
 
 						<tr>
-							<td class="login-join-table-content3"><button type="submit" class="login-join-btn-sns"><img src="${root }/image/asset/네이버아이콘.png" class= "login-join-snsimg" width = "25px">
+							<td class="login-join-table-content3"><button type="button" class="login-join-btn-sns"><img src="${root }/image/asset/네이버아이콘.png" class= "login-join-snsimg" width = "25px">
 							<span class ="login-join-text">네이버 아이디로 가입하기</span></button></td>
 						</tr>
 						<tr>

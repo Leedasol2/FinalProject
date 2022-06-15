@@ -105,8 +105,13 @@ select.login-emailcheck-sel-box{
 span.login-emailcheck-message{
     font-size: 18pt;
     color: #212529;  
-    
+    display: none;
+}
 
+span.login-emailcheck-failmessage{
+	font-size: 18pt;
+    color: #212529;  
+    display: none;
 }
 
 button.login-emailcheck-btn-check{

@@ -16,7 +16,7 @@
 				<div class="inner">
 					<div class="search-box">
 						<div class="logo">
-							<a href="">
+							<a href="/">
 								<img alt="2runtrip" src="${root}/image/asset/로고.png">				
 							</a>
 						</div>
@@ -34,29 +34,29 @@
 				<div class="inner">
 					<ul class="gnb">
 						<li>
-							<a href="#">여행을 떠나요</a>
+							<a href="bestTrip">여행을 떠나요</a>
 							<ul>
-								<li>베스트 여행지</li>
-								<li>지역별 여행지</li>
-								<li>테마별 여행지</li>
+								<li onclick="location.href='bestTrip'">베스트 여행지</li>
+								<li onclick="location.href='regionTrip'">지역별 여행지</li>
+								<li onclick="location.href='themaTrip'">테마별 여행지</li>
 							</ul>
 						</li>
 						<li>
-							<a href="#">액티비티</a>
+							<a href="themePark">액티비티</a>
 							<ul>
-								<li>테마파크</li>
-								<li>축제</li>
+								<li onclick="location.href='themePark'">테마파크</li>
+								<li onclick="location.href='festival'">축제</li>
 							</ul>
 						</li>
 						<li>
-							<a href="#">여행 공유</a>
+							<a href="shareTripHome">여행 공유</a>
 						</li>
 						<li>
 							<a href="#">나만의 코스짜기</a>
 						</li>
 					</ul>
 					<div class="perfect-trip">
-						<button class="perfect-trip-btn">나에게 딱 맞는 여행지는?</button>
+						<button class="perfect-trip-btn" onclick="location.href='myTripStart'">나에게 딱 맞는 여행지는?</button>
 					</div>
 				</div>
 			</div>
