@@ -12,7 +12,7 @@
 
 $(function(){
 	
-	$("#selemail").change(function(){
+	$("#selemail").on("change",function(){
 		
 		if($(this).val()=='_'){
 			$("#email2").val(''); //지정된 메일 지우기
@@ -21,7 +21,7 @@ $(function(){
 		}
 	});
 
-	$(".login-emailcheck-btn-check").click(function(){
+	$(".login-emailcheck-btn-check").on("click",function(){
 		
         var email = $("#email1").val(); //email값이 "email"인 입력란의 값을 저장
        
