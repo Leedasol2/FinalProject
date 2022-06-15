@@ -1,6 +1,20 @@
 @charset "UTF-8";
 
 @font-face {
+    font-family: 'MinSans-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MinSans-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'MinSans-Black';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Black.woff') format('woff');
     font-weight: normal;
@@ -20,11 +34,17 @@ hr.title-line{
 }
 
 div.scrap-count{
-	font-size: 15pt;
+	font-size: 17pt;
     margin-top: 60px;
-    margin-left: 30px;
-	font-weight: bold;    
+    font-family: 'MinSans-Medium';
+	padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+	margin-bottom: 35px;
 }
+div.scrap-count-title > span:first-child{margin-right:30px;}
+div.scrap-count-title > span:last-child{color:#2bae66;}
 
 span.scrap-logo{
 	margin-left: 805px;
@@ -37,7 +57,37 @@ img.scrap-img{
 	margin-right: 135px;    
 }
 
-span.scrap-name{
-	margin-left: 11px;
-    color: #969696;
+.scrap-name {
+    padding: 20px 0;
+    font-family: 'MinSans-Medium';
+    font-size:12pt;
+}
+
+.scrap-content {
+    display: inline-block;
+    margin: 35px;
+}
+
+.scrap-img {
+    padding: 0 auto;
+    text-align: center;
+}
+
+.scrap-main {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.mypage-scrap > .mypage-header > .mypage-menu > ul.mypage-ul > li.mypage-li {
+    display: inline-block;
+    color: #212529;
+    font-family: 'MinSans-Light';
+    font-size: 16pt;
+    padding-right: 60px;
+}
+
+.mypage-scrap > .mypage-header > .mypage-menu > ul.mypage-ul > li.mypage-li:nth-child(2){
+    font-family: 'MinSans-Medium';
+	
 }

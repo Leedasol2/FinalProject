@@ -9,96 +9,59 @@
 <title>이런여행</title>
 </head>
 <body>
-
-		<!-- main 시작 -->
-		<div class="mypage-content">
-
-			<div class="mypage-category">
-				<span class="mypage-title">마이페이지</span>
-				<ul class="mypage">
-					<li class="mypage-editmember"><a href="#">회원정보수정</a></li>
-
-					<li class="mypage-scrap"><a href="#">스크랩</a></li>
-
-					<li class="mypage-mycalendar"><a href="#">마이캘린더</a></li>
-
-					<li class="mypage-review"><a href="#">리뷰</a></li>
-				</ul>
-				<hr class="title-line">
+<div class="container">
+	<div class="inner calendar">
+		<div class="mypage mypage-scrap">
+			<div class="mypage-header">
+				<div class="mypage-title">마이페이지</div>
+				<div class="mypage-menu">
+					<ul class="mypage-ul">
+						<li class="mypage-li"><a href="#">회원정보수정</a></li>
+						<li class="mypage-li"><a href="#">스크랩</a></li>
+						<li class="mypage-li"><a href="#">마이캘린더</a></li>
+						<li class="mypage-li"><a href="#">리뷰</a></li>
+					</ul>
+				</div>
+				<div class="hr"><hr></div>
+			</div>
+			
+			<div class="scrap-count">
+				<div class="scrap-count-title">
+					<span>총 스크랩 개수</span> 
+					<span>${totalCount}</span>
+				</div>
+				<div class="scrap-count-icon"><img src="${root}/image/asset/스크랩아이콘.png"></div>
 			</div>
 
-			<div class="scrp-main">
 
-				<div class="scrap-count" style="width: 800px;">
-					<b>총 스크랩 개수 ${totalCount }</b> <span class="scrap-logo"> <img
-						src="${root}/image/asset/스크랩아이콘.png">
-					</span>
+			<div class="scrap-main">
+				<div class="scrap-content">
+					<div class="scrap-img"><img src="${root}/image/asset/스크랩.png"></div>
+					<div class="scrap-name"><span>남이섬 어쿠스틱 청춘 페스티벌</span></div>
 				</div>
-
-				<div>
-					<table class="scarp-content">
-						<tr>
-							<td>
-								<div class="scrap-content">
-									<img src="${root}/image/asset/스크랩.png" class="scrap-img">
-									<br>
-									<br> <span class="scrap-name"><b>남이섬 어쿠스틱 청춘
-											페스티벌</b></span>
-								</div>
-							</td>
-
-							<td>
-								<div class="scrap-content">
-									<img src="${root}/image/asset/스크랩.png" class="scrap-img">
-									<br>
-									<br> <span class="scrap-name"><b>남이섬 어쿠스틱 청춘
-											페스티벌</b></span>
-								</div>
-							</td>
-
-							<td>
-								<div class="scrap-content">
-									<img src="${root}/image/asset/스크랩.png" class="scrap-img">
-									<br>
-									<br> <span class="scrap-name"><b>남이섬 어쿠스틱 청춘
-											페스티벌</b></span>
-								</div>
-							</td>
-						</tr>
-						
-						<tr>
-							<td>
-								<div class="scrap-content">
-									<img src="${root}/image/asset/스크랩.png" class="scrap-img">
-									<br>
-									<br> <span class="scrap-name"><b>남이섬 어쿠스틱 청춘
-											페스티벌</b></span>
-								</div>
-							</td>
-
-							<td>
-								<div class="scrap-content">
-									<img src="${root}/image/asset/스크랩.png" class="scrap-img">
-									<br>
-									<br> <span class="scrap-name"><b>남이섬 어쿠스틱 청춘
-											페스티벌</b></span>
-								</div>
-							</td>
-
-							<td>
-								<div class="scrap-content">
-									<img src="${root}/image/asset/스크랩.png" class="scrap-img">
-									<br>
-									<br> <span class="scrap-name"><b>남이섬 어쿠스틱 청춘
-											페스티벌</b></span>
-								</div>
-							</td>
-						</tr>
-					</table>
+				<div class="scrap-content">
+					<div class="scrap-img"><img src="${root}/image/asset/스크랩.png"></div>
+					<div class="scrap-name"><span>남이섬 어쿠스틱 청춘 페스티벌</span></div>
+				</div>
+				<div class="scrap-content">
+					<div class="scrap-img"><img src="${root}/image/asset/스크랩.png"></div>
+					<div class="scrap-name"><span>남이섬 어쿠스틱 청춘 페스티벌</span></div>
+				</div>
+				<div class="scrap-content">
+					<div class="scrap-img"><img src="${root}/image/asset/스크랩.png"></div>
+					<div class="scrap-name"><span>남이섬 어쿠스틱 청춘 페스티벌</span></div>
+				</div>
+				<div class="scrap-content">
+					<div class="scrap-img"><img src="${root}/image/asset/스크랩.png"></div>
+					<div class="scrap-name"><span>남이섬 어쿠스틱 청춘 페스티벌</span></div>
+				</div>
+				<div class="scrap-content">
+					<div class="scrap-img"><img src="${root}/image/asset/스크랩.png"></div>
+					<div class="scrap-name"><span>남이섬 어쿠스틱 청춘 페스티벌</span></div>
 				</div>
 			</div>
 		</div>
-		<!-- main 끝 -->
-
+	</div>
+</div>
 </body>
 </html>
