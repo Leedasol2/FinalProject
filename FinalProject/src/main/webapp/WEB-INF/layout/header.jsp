@@ -16,7 +16,7 @@
 				<div class="inner">
 					<div class="search-box">
 						<div class="logo">
-							<a href="">
+							<a href="/">
 								<img alt="2runtrip" src="${root}/image/asset/로고.png">				
 							</a>
 						</div>

@@ -37,13 +37,13 @@
 								
 					<tr>
 					<td class= "login-email-content"><input type="text" name="email" class="form-loginemail-input" 
-					placeholder="이메일 주소를 입력해 주세요." required="required">
+					placeholder="이메일 주소를 입력해 주세요." required="required" readonly="readonly" data-toggle="modal" data-target="#loginemail-modal">
 					<img class="login-email-content1" src="${root }/image/asset/이메일아이콘.png" width = "25px">
 					</td>
 					<td>
 
 					
-					<button class= "login-email-btn-email" data-toggle="modal" data-target="#loginemail-modal">인증 요청</button>
+					<button class= "login-email-btn-email">인증 요청</button>
 
 					
 					</td>

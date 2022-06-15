@@ -500,6 +500,7 @@ div.cosmap{
 	text-align: center;
 	font-family: 'MinSans-Medium';
 	font-size:30pt;
+	visibility: hidden;
 }
 div.cosmap div.content{
 	overflow: hidden;

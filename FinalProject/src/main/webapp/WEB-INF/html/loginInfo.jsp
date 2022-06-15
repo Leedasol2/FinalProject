@@ -10,7 +10,7 @@
 </head>
 <body>
 
-	<!-- main 시작 -->n">
+	<!-- main 시작 -->
 	<div class="login-info">
 		
 		<table class="login-info-header">
@@ -37,7 +37,7 @@
 					<tr>
 					<td class = "login-info-table-title">이름</td>
 					<td class= "login-info-content"><input type="text" name="name" class="form-logineinfo-input" 
-					placeholder="실명을 입력해 주세요.">
+					placeholder="실명을 입력해 주세요."  required="required">
 					</td>
 					</tr>
 	
@@ -48,9 +48,9 @@
 					<tr>
 					<td class = "login-info-table-title">이메일</td>
 					<td>
-						<input type="text" name="email1" class="login-info-input-email1" placeholder="2RunTrip">
+						<input type="text" name="email1" class="login-info-input-email1" placeholder="2RunTrip" readonly="readonly" required="required">
 						<b>&nbsp;@&nbsp;</b>
-						<input type="text" name="email2" id="email2" class="login-info-input-email2" placeholder="2RunTrip.com">
+						<input type="text" name="email2" id="email2" class="login-info-input-email2" placeholder="2RunTrip.com" readonly="readonly" required="required">
 					</td>
 					</tr>
 					
@@ -61,7 +61,7 @@
 					<tr>
 					<td class = "login-info-table-title">아이디</td>
 					<td class= "login-info-content"><input type="text" name="id" class="form-logineinfo-input" 
-					placeholder="ID" >
+					placeholder="ID" required="required">
 					</td>
 					</tr>
 					
@@ -72,7 +72,7 @@
 					<tr>
 					<td class = "login-info-table-title">비밀번호</td>
 					<td class= "login-info-content"><input type="password" name="pass" class="form-logineinfo-input" 
-					placeholder="비밀번호" >
+					placeholder="비밀번호" required="required">
 					</td>
 					</tr>
 					
@@ -83,7 +83,7 @@
 					<tr>
 					<td></td>
 					<td class= "login-info-content"><input type="password" name="code" class="form-logineinfo-input" 
-					placeholder="비밀번호를 다시 입력해 주세요">
+					placeholder="비밀번호를 다시 입력해 주세요" required="required">
 					</td>
 					</tr>
 					
@@ -103,7 +103,7 @@
 					<tr>
 					<td class = "login-info-table-title">휴대폰번호</td>
 					<td class= "login-info-content"><input type="text" name="code" class="form-logineinfo-input" 
-					placeholder="01012345678">
+					placeholder="01012345678" required="required">
 					</td>
 					</tr>
 											

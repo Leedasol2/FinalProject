@@ -27,6 +27,7 @@ div.bestTripText div.trip-category{
     padding-top: 58px;
     margin-right: 800px;
     position: sticky;
+    top: 100px;
 }
 
 div.bestTripText div.trip-category a.tripcategory{
