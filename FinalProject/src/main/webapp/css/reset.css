@@ -46,3 +46,5 @@ table {
 a:hover{
 	text-decoration:none;
 	color:#212529;}
+a:link { color:#212529; text-decoration: none;}
+a:visited { color: #212529; text-decoration: none;}
