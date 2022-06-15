@@ -178,47 +178,4 @@ public class IndexController {
 		return "/html/loginMissPass";
 	}	
 	
-	//동현
-	
-	@GetMapping("/html/themaTrip")
-	public String themaTrip() {
-		
-		return "/html/themaTrip";
-	}
-
-	@GetMapping("/html/bestTrip")
-	public String bestTrip() {
-		
-		return "/html/bestTrip";
-	}
-
-	@GetMapping("/html/regionTrip")
-	public String regionTrip() {
-		
-		return "/html/regionTrip";
-	}
-
-	@GetMapping("/html/boardDetailPage")
-	public String boardDetailPage() {
-		
-		return "/html/boardDetailPage";
-	}
-
-	@GetMapping("/html/boardupdateform")
-	public String boardupdateform() {
-		
-		return "/html/boardupdateform";
-	}
-
-	@GetMapping("/html/boardwriteform")
-	public String boardwriteform() {
-		
-		return "/html/boardwriteform";
-	}
-	
-	
-	
-	
-	
-	
 }
