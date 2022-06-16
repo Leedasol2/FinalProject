@@ -13,10 +13,10 @@ public class ThemeParkController {
 	ThemeParkMapperInter mapper;
 	
 	//이용기
-	@GetMapping("/html/themePark")
+	@GetMapping("/themePark/themePark")
 	public String themePark() {
 		
-		return "/html/themePark";
+		return "/themePark/themePark";
 	}
 	
 	

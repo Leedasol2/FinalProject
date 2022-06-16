@@ -25,14 +25,26 @@ $("a.seoul").click(function(){
 	$(this).css("color","#2bae66");
 	$(this).siblings().css("color","gray");
 });
-$("a.incheon-Gyeonggi").click(function(){
+$("a.incheon").click(function(){
 	$(this).css("color","#2bae66");
 	$(this).siblings().css("color","gray");
 });
-$("a.daejeon-chungcheong").click(function(){
+
+$("a.Gyeonggi").click(function(){
 	$(this).css("color","#2bae66");
 	$(this).siblings().css("color","gray");
 });
+
+$("a.daejeon").click(function(){
+	$(this).css("color","#2bae66");
+	$(this).siblings().css("color","gray");
+});
+
+$("a.chungcheong").click(function(){
+	$(this).css("color","#2bae66");
+	$(this).siblings().css("color","gray");
+});
+
 $("a.daegu").click(function(){
 	$(this).css("color","#2bae66");
 	$(this).siblings().css("color","gray");
@@ -78,14 +90,16 @@ $("a.jeju").click(function(){
 
 <div class="regionofkorea">
   <a href="#a" class="seoul region">서울</a>
-  <a href="#b" class="incheon-Gyeonggi region">인천/경기</a>
-  <a href="#c" class="daejeon-chungcheong region">대전/충청</a>
-  <a href="#d" class="daegu region">대구</a>
-  <a href="#e" class="jeolla region">전라</a>
-  <a href="#f" class="gyeongsang region">경상</a>
-  <a href="#g" class="busan region">부산</a>
-  <a href="#h" class="gangwon region">강원</a>
-  <a href="#i" class="jeju region">제주</a>
+  <a href="#b" class="incheon region">인천</a>
+  <a href="c" class="Gyeonggi region">경기</a> 
+  <a href="#d" class="daejeon region">대전</a>
+  <a href="#e" class="chungcheong region">충청</a>
+  <a href="#f" class="daegu region">대구</a>
+  <a href="#g" class="jeolla region">전라</a>
+  <a href="#h" class="gyeongsang region">경상</a>
+  <a href="#i" class="busan region">부산</a>
+  <a href="#j" class="gangwon region">강원</a>
+  <a href="#k" class="jeju region">제주</a>
 </div>
 
 <div>
