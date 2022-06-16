@@ -42,7 +42,7 @@
 									<a href="#">${r.title}</a>
 									<div class="tripstory-star-ratings">
 									<div class="tripstory-star-ratings-fill space-x-2 text-lg"
-										style="width: ratingToPercent+ '%'">
+										style="width: ${r.rstar*20}%">
 										<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 									</div>
 									<div class="tripstory-star-ratings-base space-x-2 text-lg">
@@ -51,9 +51,9 @@
 								</div>
 								</div>
 								<div class="review-edit">
-									<span><a href="#">삭제</a></span>
-									<span><a href="#">수정</a></span>
-									<div class="review-day"><span>2020-06-01 04:25</span></div>
+									<button type="button" onclick="location.href='delete?rnum=${r.rnum}&currentPage=${currentPage}'">삭제</button>
+									<button type="button" onclick="location.href='myPageReviewEdit?rnum=${r.rnum}$tnum=${r.tnum}&currentPage=${currentPage}'">수정</button>
+									<div class="review-day"><span>${r.rday }</span></div>
 								</div>
 							</div>
 							<div class="review-ment">
@@ -69,25 +69,25 @@
 			</div>
 			<!-- 페이징 -->
 		   <c:if test="${totalCount>0}">
-		      <div style="width: 800px;text-align: center;">
+		      <div style="text-align: center;">
 		         <ul class="pagination">   
 		         <!-- 이전 -->
 		         <c:if test="${startPage>1}">
-		            <li><a href="list?currentPage=${startPage-1}">이전</a></li>
+		            <li><a href="myPageReview?currentPage=${startPage-1}">이전</a></li>
 		         </c:if>
 		         
 		         <c:forEach var="pp" begin="${startPage}" end="${endPage}">
 		            <c:if test="${currentPage==pp}">
-		               <li class="active"><a href="list?currentPage=${pp}">${pp}</a></li>
+		               <li class="active"><a href="myPageReview?currentPage=${pp}">${pp}</a></li>
 		            </c:if>
 		            <c:if test="${currentPage!=pp}">
-		               <li><a href="list?currentPage=${pp}">${pp}</a></li>
+		               <li><a href="myPageReview?currentPage=${pp}">${pp}</a></li>
 		            </c:if>
 		         </c:forEach>
 		         
 		         <!-- 다음 -->
 		         <c:if test="${endPage<totalPage}">
-		            <li><a href="list?currentPage=${endPage+1}">다음</a></li>
+		            <li><a href="myPageReview?currentPage=${endPage+1}">다음</a></li>
 		         </c:if>
 		         </ul>
 		      </div>
