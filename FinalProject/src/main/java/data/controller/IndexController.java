@@ -18,19 +18,7 @@ public class IndexController {
 		
 		return "/html/myPageReviewEdit";
 	}
-	//용기
-	@GetMapping("/html/festival")
-	public String festival() {
-		
-		return "/html/festival";
-	}
-	
-	@GetMapping("/html/festivalCalendar")
-	public String festivalCalendar() {
-		
-		return "/html/festivalCalendar";
-	}
-	
+	//용기		
 	@GetMapping("/html/myPageEdit")
 	public String myPageEdit() {
 		
@@ -53,12 +41,6 @@ public class IndexController {
 	public String myPageCalendar() {
 		
 		return "/html/myPageCalendar";
-	}
-	
-	@GetMapping("/html/themePark")
-	public String themePark() {
-		
-		return "/html/themePark";
 	}
 	
 	@GetMapping("/html/modalCalendar")
@@ -89,18 +71,6 @@ public class IndexController {
 	
 	
 	//강진
-	
-	@GetMapping("/html/festivalDetail")
-	public String festivalDetail() {
-		
-		return "/html/festivalDetail";
-	}
-	
-	@GetMapping("/html/themeParkDetail")
-	public String themeParkDetail() {
-		
-		return "/html/themeParkDetail";
-	}
 	
 	
 //태민	
