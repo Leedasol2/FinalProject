@@ -7,6 +7,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
+
 <title>이런여행</title>
 </head>
 <body>
@@ -17,15 +18,14 @@
 		<hr class="hr1">
 		<!-- 게시판 -->
 		<div class="board">
-			<span>BEST 게시판</span>
-			<span>자유게시판&nbsp;&nbsp;<img src="${root }/image/asset/새글아이콘.png" class="newIcon"></span>
+			<span id="best">BEST 게시판</span>
+			<span onclick="location.href='/board/bulletinBoard'" id="bulletin">자유게시판&nbsp;&nbsp;<img src="${root }/image/asset/새글아이콘.png" class="newIcon"></span>
 		</div>
 		<div class="boardActive">
-			<img src="${root }/image/asset/보고있는게시판아이콘.png" class="bestboardActive">
-			<img src="${root }/image/asset/보고있는게시판아이콘.png" class="bulboardActive" >
+			<img src="${root }/image/asset/보고있는게시판아이콘.png" class="bestboardActive" id="bestImg">
+			<img src="${root }/image/asset/보고있는게시판아이콘.png" class="bulboardActive" id="bulImg">
 		</div>
 		<hr>
 	</div>
-		
 </body>
 </html>
