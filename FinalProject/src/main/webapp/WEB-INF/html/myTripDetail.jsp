@@ -35,12 +35,12 @@ $(function(){
 	<img alt="" src="${root }/image/asset/n서울타워.jpg" class="tripdetailimg">
 	</div>
 	<div class="tripsogae">
-	<div class="tripdetailname"><b>N서울타워</b></div>
+	<div class="tripdetailname"><b>${dto.title }</b></div>
 	<div class="tripsubcontent">
-	서울특별시 남산에 있는 송신탑이자 서울을 대표하는 랜드마크이다
+	${dto.intro }
 	</div>
 	<div class="subedit">
-	<img alt="" src="${root }/image/asset/위치아이콘.png"><span class="tripwhere"> 서울특별시 용산구 남산공원길 126</span>
+	<img alt="" src="${root }/image/asset/위치아이콘.png"><span class="tripwhere"> ${dto.location }</span>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<img alt="" src="${root }/image/asset/스크랩안함.png"><span class="tripscrap"> 스크랩 하기</span>
 	</div>
@@ -64,11 +64,7 @@ $(function(){
 	<img alt="" src="${root }/image/asset/따옴표위.png">
 	</div>
 	<div class="tripcontent">
-	최신 LED 기술의 조명으로 시시각각 색과 패턴이 변하는
-	<br>'빛의 예술'과의 어우러짐 속에서 다양한 미디어 아트와 함께<br>
-	색다른 문화예술을 경험하실 수 있습니다.
-	서울의 대표적인 복합문화 공간으로 새롭게 태어난 N서울타워,
-	<br>자랑스런 서울의 랜드마크가 될 것입니다.
+	${dto.contents }
 	</div>
 	<div class="tripimg2">
 	<img alt="" src="${root }/image/asset/따옴표아래.png">
@@ -85,7 +81,7 @@ $(function(){
 	<script>
 		var container = document.getElementById('map');
 		var options = {
-			center: new kakao.maps.LatLng(37.551399, 126.988259), <!--위도 / 경도 -->
+			center: new kakao.maps.LatLng(${dto.latitude}, ${dto.longitude}), <!--위도 / 경도 -->
 			level: 4
 		};
 		var map = new kakao.maps.Map(container, options);
@@ -139,7 +135,7 @@ $(function(){
           <span class="modalsub">2run trip&nbsp;&nbsp;</span><span class="modalsub2">리뷰 작성</span>
         </div>
         <div class="modal-body">
-        <span class="modalname">N서울타워&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span class="modalname">${dto.title }&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <div class="modal-star-rating">
                       <input type="radio" id="5-stars" name="rating" value="5" />
                       <label for="5-stars" class="star">&#9733;</label>
