@@ -65,6 +65,7 @@
 <script src="${root}/js/main.js"></script>
 <script src="${root}/js/calendar.js"></script>
 <script src="${root}/js/festival.js"></script>
+<script src="${root}/js/shareTripHeader.js"></script>
 
 </head>
 <body>
