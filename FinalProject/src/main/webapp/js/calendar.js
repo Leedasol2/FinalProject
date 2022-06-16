@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
                         // color 값을 추가해 색상도 변경 가능 자세한 내용은 하단의 사이트 참조
                     }
                 ], headerToolbar: {
-                    center: 'addEventButton' // headerToolbar에 버튼을 추가
+					left: 'addEventButton',
+                    center: 'title' // headerToolbar에 버튼을 추가
                 }, customButtons: {
                     addEventButton: { // 추가한 버튼 설정
                         text : "일정 추가",  // 버튼 내용
