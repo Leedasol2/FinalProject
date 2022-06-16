@@ -83,7 +83,8 @@ $(function(){
 	<script>
 		var container = document.getElementById('map');
 		var options = {
-			center: new kakao.maps.LatLng(37.520555375455, 127.11505129348), <!--위도 / 경도 -->
+// 			center: new kakao.maps.LatLng(37.520555375455, 127.11505129348), 
+			center: new kakao.maps.LatLng(34.7413386560623,127.753455294406), <!--위도 / 경도 -->
 			level: 4
 		};
 		var map = new kakao.maps.Map(container, options);
