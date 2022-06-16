@@ -13,11 +13,6 @@ public class IndexController {
 		
 		return "/layout/main";
 	}
-	@GetMapping("/html/myPageReviewEdit")
-	public String myPageReviewEdit() {
-		
-		return "/html/myPageReviewEdit";
-	}
 	//용기		
 	@GetMapping("/html/myPageEdit")
 	public String myPageEdit() {
@@ -25,11 +20,6 @@ public class IndexController {
 		return "/html/myPageEdit";
 	}
 	
-	@GetMapping("/html/myPageReview")
-	public String myPageReview() {
-		
-		return "/html/myPageReview";
-	}
 	
 	@GetMapping("/html/myPageScrap")
 	public String myPageScrap() {
