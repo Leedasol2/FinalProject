@@ -110,12 +110,6 @@ public class IndexController {
 	
 	//강진
 	
-	@GetMapping("/html/myTripDetail")
-	public String myTripDetail() {
-		
-		return "/html/myTripDetail";
-	}
-	
 	@GetMapping("/html/festivalDetail")
 	public String festivalDetail() {
 		
