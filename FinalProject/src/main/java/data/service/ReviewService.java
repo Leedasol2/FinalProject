@@ -43,4 +43,8 @@ public class ReviewService {
 	{
 		mapper.deleteReview(rnum);
 	}
+	public int getTnum()
+	{
+		return mapper.getTnum();
+	}
 }

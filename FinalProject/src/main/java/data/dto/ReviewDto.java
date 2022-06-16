@@ -15,4 +15,5 @@ public class ReviewDto {
 	private int rstar;
 	private String rcontents;
 	private Timestamp rday;
+	private String title;
 }

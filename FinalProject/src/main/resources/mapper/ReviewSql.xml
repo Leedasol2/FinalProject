@@ -8,7 +8,7 @@
 		select * from review where rnum=#{rnum}
 	</select>
 	<select id="getList" parameterType="HashMap" resultType="rdto">
-		select * from review order by num desc limit #{start},#{perpage}
+		select * from review order by rnum desc limit #{start},#{perpage}
 	</select>
 	<insert id="insertReview" parameterType="rdto">
 		insert into review (mnum,tnum,rstar,rcontents,rday) values(#{mnum},#{tnum},#{rstar},#{rcontents},now())
@@ -19,5 +19,8 @@
 	<delete id="deleteReview" parameterType="String">
 		delete from review where rnum=#{rnum}
 	</delete>
+	<select id="getTnum" resultType="int">
+		select tnum from review where rnum=#{rnum}
+	</select>
 	
 </mapper>

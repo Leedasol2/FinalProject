@@ -8,4 +8,5 @@ import data.dto.TripDto;
 public interface TripMapperInter {
 
 	public TripDto getData(String tnum);
+	public String getTitle(String tnum); //by은비
 }

@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import data.dto.ReviewDto;
-import data.mapper.MemberMapperInter;
+import data.dto.TripDto;
+import data.mapper.TripMapperInter;
 import data.service.ReviewService;
+import data.service.TripService;
 
 @Controller
 public class ReviewController {
@@ -19,14 +21,7 @@ public class ReviewController {
 	ReviewService service;
 	
 	@Autowired
-	MemberMapperInter memberMapper;
-	
-	
-	@GetMapping("/mypage/myPageReview")
-	public String myPageReview() {
-		
-		return "/mypage/myPageReview";
-	}
+	TripMapperInter tripMapper;
 	
 	@GetMapping("/mypage/myPageReviewEdit")
 	public String myPageReviewEdit() {
@@ -34,7 +29,7 @@ public class ReviewController {
 		return "/mypage/myPageReviewEdit";
 	}
 	
-	@GetMapping("/review/list")
+	@GetMapping("/mypage/myPageReview")
 	public ModelAndView list(
 		         @RequestParam (value = "currentPage",defaultValue = "1") int currentPage)
 
@@ -69,6 +64,13 @@ public class ReviewController {
 				//각페이지에서 필요한 게시글 가져오기
 				List<ReviewDto> list=service.getList(start, perPage);
 				
+				//list에 각 리뷰에 대한 여행지 이름 가져오기
+				for(ReviewDto r:list)
+				{
+					String title=tripMapper.getTitle(r.getTnum());
+					r.setTitle(title);
+				}
+				
 				//각 글앞에 붙일 시작번호 구하기
 				//총글이 20개면? 1페이지 20 2페이지 15부터 출력해서 1씩 감소
 				int no=totalCount-(currentPage-1)*perPage;
@@ -82,7 +84,7 @@ public class ReviewController {
 				mview.addObject("currentPage",currentPage);
 		
 		mview.addObject("totalCount",totalCount);
-		mview.setViewName("/review/reviewlist");
+		mview.setViewName("/mypage/myPageReview");
 		
 		return mview;
 	}
