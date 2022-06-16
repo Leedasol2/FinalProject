@@ -12,7 +12,7 @@ $(function(){
 	
 	$("span.photoimg").click(function(){
 		
-		$("#photo").trigger("click");
+		$("#upload").trigger("click");
 	});
 });
 </script>
@@ -29,7 +29,7 @@ $(function(){
       </div>
       
       <div class="writeform-body"> 
-        <form action="#" method="post" enctype="multipart/form-data">
+        <form action="/board/write" method="post" enctype="multipart/form-data">
           <table class="write-content">
             <tr>
               <td>
@@ -47,7 +47,7 @@ $(function(){
             
             <tr>
               <td>
-                <input type="file" name="photo" id="photo">
+                <input type="file" name="upload" id="upload">
                 <span class="filetitle">첨부파일</span>&nbsp;
                 <span class="glyphicon glyphicon-picture photoimg"></span>
               </td>
@@ -55,8 +55,8 @@ $(function(){
             
             <tr>
               <td colspan="2" align="center">
-                <button type="button" class="btn-cancel" onclick="location.href=''">취소하기</button>
-                <button type="submit" class="btn-insert" onclick="location.href=''">등록하기</button>
+                <button type="button" class="btn-cancel" onclick="history.back()">취소하기</button>
+                <button type="submit" class="btn-insert">등록하기</button>
               </td>
             </tr>
           </table>

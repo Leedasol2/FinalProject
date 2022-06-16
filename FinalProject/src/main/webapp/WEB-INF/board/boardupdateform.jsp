@@ -12,7 +12,7 @@ $(function(){
 	
 	$("span.photoimg").click(function(){
 		
-		$("#photo").trigger("click");
+		$("#upload").trigger("click");
 	});
 });
 </script>
@@ -59,7 +59,7 @@ $(function(){
 
 		  <tr>
 		    <td>
-		      <input type="file" name="photo" id="photo"> 
+		      <input type="file" name="upload" id="upload"> 
 		      <span class="filetitle">첨부파일</span>&nbsp; 
 		      <span class="glyphicon glyphicon-picture photoimg"></span></td>
 		  </tr>
