@@ -16,4 +16,5 @@ public interface ReviewMapperInter {
 	public void insertReview(ReviewDto dto);
 	public void updateReview(ReviewDto dto);
 	public void deleteReview(String rnum);
+	public int getTnum();
 }

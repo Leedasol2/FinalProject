@@ -4,4 +4,9 @@
 	<select id="getData" parameterType="String" resultType="tdto">
 	select * from trip where tnum=#{tnum}
 	</select>
+	
+	<!-- by 은비 -->
+	<select id="getTitle" parameterType="String" resultType="String">
+		select title from trip where tnum=#{tnum}
+	</select> <!-- 은비 -->
 </mapper>
