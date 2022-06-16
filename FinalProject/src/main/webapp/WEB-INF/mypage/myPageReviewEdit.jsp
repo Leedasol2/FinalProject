@@ -7,6 +7,21 @@
 <head>
 <meta charset="UTF-8">
 <title>이런여행</title>
+<script type="text/javascript">
+$(function(){
+	$("#btnUpdate").click(function(){
+		var rcontents=$("#rcontents").val();
+		if(rcontents.trim().length==0){
+				alert("내용을 입력해주세요");
+				$(this).prop("type","button");
+				return;
+			}
+		else if (rcontents.trim().length>0) {
+			$(this).prop("type","submit");
+		}
+	});
+});
+</script>
 </head>
 <body>
 	<div class="container">
@@ -47,12 +62,12 @@
 								</div>
 							</div>
 							<div class="review-ment">
-								<textarea name="rcontents" class="form-control">${dto.rcontents}</textarea>
+								<textarea name="rcontents" id="rcontents" class="form-control">${dto.rcontents}</textarea>
 							</div>
 						</div>
 						
 						<div class="review-button">
-							<button type="submit">수정하기</button>
+							<button type="submit" id="btnUpdate">수정하기</button>
 							<button type="button" onclick="history.back()">취소</button>
 						</div>
 					</div>
