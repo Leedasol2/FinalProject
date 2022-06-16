@@ -14,7 +14,21 @@ $(function(){
 		
 		$("#upload").trigger("click");
 	});
+	
+    $("input#upload").change(function () {
+        
+    	//alert("test");
+    	
+        var fileInput = document.getElementById("upload");
+          
+        var files = fileInput.files;
+        var fileCnt=files.length;
+       	//alert(fileCnt);
+        $("span#filenum").text("총 "+fileCnt+"개의 파일을 선택하셨습니다.");
+    });
+	
 });
+
 </script>
 
 </head>
@@ -33,7 +47,7 @@ $(function(){
           <table class="write-content">
             <tr>
               <td>
-                <input type="text" name="title" required="required" placeholder="제목을 입력해주세요"
+                <input type="text" name="subject" required="required" placeholder="제목을 입력해주세요"
                 class="writetitle">
               </td>
             </tr>
@@ -47,9 +61,11 @@ $(function(){
             
             <tr>
               <td>
-                <input type="file" name="upload" id="upload">
+                <input type="file" name="upload" id="upload" multiple="multiple">
                 <span class="filetitle">첨부파일</span>&nbsp;
                 <span class="glyphicon glyphicon-picture photoimg"></span>
+                <span id="filenum"></span>
+                
               </td>
             </tr>
             
