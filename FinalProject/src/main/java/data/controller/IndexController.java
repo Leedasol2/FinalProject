@@ -69,19 +69,6 @@ public class IndexController {
 
 	//다솔
 
-	@GetMapping("/html/bestBoard")
-	public String bestBoard() {
-		
-		return "/board/html/bestBoard";
-	}
-	
-	@GetMapping("/html/bulletinBoard")
-	public String bulletinBoard() {
-		
-		return "/board/html/bulletinBoard";
-	}
-	
-	
 	@GetMapping("/html/myTripResult")
 	public String myTripResult() {
 		
@@ -98,13 +85,6 @@ public class IndexController {
 	public String myTripTest() {
 		
 		return "/html/myTripTest";
-	}
-	
-	
-	@GetMapping("/html/shareTripHome")
-	public String shareTripHome() {
-		
-		return "/board/html/shareTripHome";
 	}
 	
 	
