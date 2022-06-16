@@ -21,6 +21,9 @@ div.tripsubcontent{
 	font-size: 12pt;
 	margin-top: 30px;
 }
+div.rstar{
+	text-align: right;
+}
 div.subedit{
 	font-size: 12pt;
 	margin-top: 80px;

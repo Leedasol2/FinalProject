@@ -35,7 +35,7 @@ $(function(){
 	<img alt="" src="${root }/image/asset/n서울타워.jpg" class="tripdetailimg">
 	</div>
 	<div class="tripsogae">
-	<div class="tripdetailname"><b>${dto.title }</b></div>
+	<div class="tripdetailname"><b>${dto.title }</b></div><div class="rstar">review 테이블 rstar</div>
 	<div class="tripsubcontent">
 	${dto.intro }
 	</div>
