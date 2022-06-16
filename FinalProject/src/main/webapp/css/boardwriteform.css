@@ -57,6 +57,11 @@ div.writeform-main input::placeholder , textarea::placeholder{
 div.writeform-main span.filetitle{
 	margin-left: 20px;
 }
+div.writeform-main span#filenum{
+	color: gray;
+	font-size: 10pt;
+	margin-left: 20px;
+}
 
 div.writeform-main #upload{
 	display: none;

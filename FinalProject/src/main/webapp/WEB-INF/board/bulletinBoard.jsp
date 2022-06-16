@@ -18,7 +18,7 @@
 		<div class="bulBoardHeader">
 			<span class="bulBoard">자유게시판</span>
 			<span class="writeBul">
-				<button class="writeBul">글쓰기</button>
+				<button class="writeBul" onclick="location.href='/board/boardwriteform'">글쓰기</button>
 			</span>
 		</div>
 		<hr class="hr2">

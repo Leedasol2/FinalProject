@@ -1,8 +1,10 @@
 package data.dto;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
 
 import org.apache.ibatis.type.Alias;
+import org.springframework.web.multipart.MultipartFile;
 
 import lombok.Data;
 
@@ -20,4 +22,7 @@ public class BoardDto {
 	private int views;
 	private Timestamp writeday;
 	
+	
+	//파일 업로드
+	private ArrayList<MultipartFile> upload;
 }
