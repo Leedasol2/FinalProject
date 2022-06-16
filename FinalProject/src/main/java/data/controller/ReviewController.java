@@ -2,17 +2,20 @@ package data.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import data.dto.ReviewDto;
-import data.dto.TripDto;
 import data.mapper.TripMapperInter;
 import data.service.ReviewService;
-import data.service.TripService;
 
 @Controller
 public class ReviewController {
@@ -22,12 +25,6 @@ public class ReviewController {
 	
 	@Autowired
 	TripMapperInter tripMapper;
-	
-	@GetMapping("/mypage/myPageReviewEdit")
-	public String myPageReviewEdit() {
-		
-		return "/mypage/myPageReviewEdit";
-	}
 	
 	@GetMapping("/mypage/myPageReview")
 	public ModelAndView list(
@@ -89,5 +86,47 @@ public class ReviewController {
 		return mview;
 	}
 	
+	// 수정버튼 누르면 수정폼 나오게
+	/*@GetMapping("/mypage/updateform")
+	public String updateform(Model model, @RequestParam String rnum) {
+		ReviewDto dto = service.getData(rnum);
+		model.addAttribute("dto", dto);
+		return "/mypage/myPageReviewEdit"; // 타일즈리졸버 1번레이아웃 경로 /폴더명/파일명
+	}*/
+	@GetMapping("/mypage/myPageReviewEdit")
+	public ModelAndView myPageReviewEdit(
+			@RequestParam String rnum,
+			@RequestParam String currentPage)
+	{
+		ModelAndView mview=new ModelAndView();
+		ReviewDto dto = service.getData(rnum);
+		String title=tripMapper.getTitle(dto.getTnum());
+		dto.setTitle(title);
+		
+		mview.addObject("dto", dto);
+		mview.addObject("currentPage", currentPage);
+		mview.setViewName("/mypage/myPageReviewEdit");
+		
+		return mview; 
+	}
+
+	//수정
+	@PostMapping("/mypage/update")
+	public String update(@ModelAttribute ReviewDto dto,
+			@RequestParam String currentPage, HttpSession session) 
+	{
+		service.updateReview(dto);
+		return "redirect:myPageReview?currentPage=" + currentPage;
+	}
+
+	//삭제
+	@GetMapping("/mypage/delete")
+	public String delete(@RequestParam String rnum,
+			@RequestParam String currentPage,
+			HttpSession session)
+	{
+		service.deleteReview(rnum);
+		return "redirect:myPageReview?currentPage="+currentPage;
+	}
 	
 }
