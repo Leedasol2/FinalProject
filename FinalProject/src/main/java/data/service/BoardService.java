@@ -20,8 +20,6 @@ public class BoardService {
 		return mapper.getMaxBnum();
 	}
 	
-	public String getMnum(String myid) {
-		return mapper.getMnum(myid);
-	}
+
 	
 }

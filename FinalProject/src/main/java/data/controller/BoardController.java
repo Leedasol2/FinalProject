@@ -14,12 +14,17 @@ import org.springframework.web.multipart.MultipartFile;
 
 import data.dto.BoardDto;
 import data.service.BoardService;
+import data.service.MemberService;
 
 @Controller
 public class BoardController {
 
 	@Autowired
 	BoardService service;
+	
+	@Autowired
+	MemberService memservice;
+	
 	
 	@GetMapping("/board/shareTripHome")
 	public String shareTripHome() {
@@ -42,10 +47,8 @@ public class BoardController {
 	@GetMapping("/board/boardwriteform")
 	public String boardwriteform(HttpSession session) {
 		
+		session.setAttribute("loginok", "yes");
 		session.setAttribute("myid", "testtest");
-		//session.setAttribute("loginok", "yes");
-		session.removeAttribute("loginok");
-		
 		return "/board/board/boardwriteform";
 	}
 	
@@ -73,12 +76,13 @@ public class BoardController {
 			HttpSession session) {
 		String loginok=(String)session.getAttribute("loginok");
 		//로그인중이 아닐 때
-		if(loginok==null) { 
+		if(loginok==null || loginok.equals("")) { 
 			return "/board/loginMiss"; //경고창 띄우고 main으로 가서 로그인 다시 시킴 
 		} 
 		
 		//업로드할 폴더 지정 
 		String path=session.getServletContext().getRealPath("/photo"); //webapp에있는거 
+		System.out.println(path); 
 		//파일 업로드 안한경우 no로 저장 
 		String photo="";
 		if (dto.getUpload().get(0).getOriginalFilename().equals("")) { 
@@ -90,7 +94,7 @@ public class BoardController {
 				
 				//실제 업로드 
 				try { 
-					f.transferTo(new File(path+"\\"+photo)); 
+					f.transferTo(new File(path+"\\"+f.getOriginalFilename())); 
 				} catch (IllegalStateException | IOException e) { 
 					// TODO Auto-generated catch block 
 					e.printStackTrace(); 
@@ -103,7 +107,7 @@ public class BoardController {
 		dto.setPhoto(photo); 
 		//세션에서 아이디를 얻어서 mnum값 구하기
 		String myid=(String)session.getAttribute("myid");
-		String mnum=service.getMnum(myid);
+		String mnum=memservice.getMnum(myid);
 		
 		//dto에 mnum값 넣기
 		dto.setMnum(mnum);
