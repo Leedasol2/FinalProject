@@ -46,33 +46,11 @@ public class JoinMemberController {
 		return "/joinMember/loginEnd";
 	}
 	
-	//베스트여행지 페이지
-	@GetMapping("bestTrip")
-	public String bestTrip() {
-		
-		return "/html/bestTrip";
-	}
-	
 	//테마파크 페이지
 	@GetMapping("themePark")
 	public String themePark() {
 		
 		return "/html/themePark";
-	}
-	
-	
-	//테마별여행지 페이지
-	@GetMapping("themaTrip")
-	public String themaTrip() {
-		
-		return "/html/themaTrip";
-	}
-	
-	//지역별여행지 페이지
-	@GetMapping("regionTrip")
-	public String regionTrip() {
-		
-		return "/html/regionTrip";
 	}
 	
 	//축제 페이지
