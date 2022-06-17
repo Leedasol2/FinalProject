@@ -25,7 +25,13 @@
 						</div>
 					</div>
 					<div class="member-box">
-						<button class="login" onclick="location.href='login'">로그인</button>
+						<c:if test="${empty sessionScope.loginok}">
+						<button class="login" onclick="location.href='${root}/login/loginHome'">로그인</button>
+						</c:if>
+						<c:if test="${not empty sessionScope.loginok}">
+						<b>${sessionScope.myid }님</b>
+						<button class="login" onclick="location.href='${root}/login/loginHome'">로그아웃</button>
+						</c:if>
 						<button class="join" onclick="location.href='singup'">회원가입</button>
 					</div>
 				</div>

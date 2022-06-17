@@ -83,12 +83,6 @@ public class IndexController {
 		return "/html/loginEnd";
 	}	
 	
-	@GetMapping("/html/loginHome")
-	public String loginHome() {
-		
-		return "/html/loginHome";
-	}	
-	
 	@GetMapping("/html/loginInfo")
 	public String loginInfo() {
 		
