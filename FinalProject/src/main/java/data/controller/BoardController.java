@@ -2,6 +2,8 @@ package data.controller;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
@@ -10,7 +12,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 
 import data.dto.BoardDto;
 import data.service.BoardService;
@@ -39,9 +43,64 @@ public class BoardController {
 	}
 	
 	@GetMapping("/board/bulletinBoard")
-	public String bulletinBoard() {
+	public ModelAndView bulletinBoard(@RequestParam (value = "currentPage",defaultValue = "1") int currentPage) {
 		
-		return "/board/board/bulletinBoard";
+		ModelAndView model=new ModelAndView();
+		int totalBoardCnt=service.getBoardCnt();
+		
+		//페이징
+		int totalPage; //총 페이지수
+		int startPage; //각블럭의 시작페이지
+		int endPage; //각블럭의 끝페이지
+		int start; //각페이지의 시작번호
+		int perPage=10; //한페이지에 보여질 글 갯수
+		int perBlock=10; //한블럭당 보여지는 페이지 개수
+		
+		//총페이지 개수구하기
+		totalPage=totalBoardCnt/perPage+(totalBoardCnt%perPage==0?0:1);
+
+		//각블럭의 시작페이지
+		startPage=(currentPage-1)/perBlock*perBlock+1;
+		endPage=startPage+perBlock-1;
+
+		//만약 총페이지가 8 -2번째블럭: 6-10 ..이럴경우는 endpage가 8로 수정되어야함
+		if(endPage>totalPage)
+			endPage=totalPage;
+
+		//각페이지에서 불러올 시작번호
+		start=(currentPage-1)*perPage;
+		
+		//각 글앞에 붙일 시작번호 구하기
+		int no=totalBoardCnt-(currentPage-1)*perPage;
+		
+		//게시글 가져오기
+		//List<BoardDto> list=service.getAllBoards();
+		
+		List<BoardDto> list=service.getList(start,perPage); 
+		
+		for (BoardDto b : list) {
+			b.setWriter(memservice.getUserId(b.getMnum()));
+		}
+		
+		
+		
+		//댓글개수
+		
+		
+		//model에 변수 추가
+		model.addObject("list", list);
+		model.addObject("startPage",startPage);
+		model.addObject("endPage",endPage);
+		model.addObject("totalPage",totalPage);
+		model.addObject("no",no);
+		model.addObject("currentPage",currentPage);
+		model.addObject("totalBoardCnt", totalBoardCnt);
+		
+		
+		model.setViewName("/board/board/bulletinBoard");
+		
+		return model;
+		
 	}
 	
 	@GetMapping("/board/boardwriteform")
@@ -118,6 +177,14 @@ public class BoardController {
 		//방금 쓴 글의 상세페이지로 이동
 		return "redirect:boardDetailPage?num="+num; 
 	}
+	
+
+	
+	
+	
+	
+	
+	
 	
 	
 	

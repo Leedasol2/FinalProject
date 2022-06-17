@@ -25,4 +25,5 @@ public class BoardDto {
 	
 	//파일 업로드
 	private ArrayList<MultipartFile> upload;
+	private String writer;
 }
