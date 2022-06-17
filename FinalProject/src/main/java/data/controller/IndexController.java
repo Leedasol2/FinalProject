@@ -95,15 +95,4 @@ public class IndexController {
 		return "/html/loginJoin";
 	}	
 	
-	@GetMapping("/html/loginMissId")
-	public String loginMissId() {
-		
-		return "/html/loginMissId";
-	}	
-	@GetMapping("/html/loginMissPass")
-	public String loginMissPass() {
-		
-		return "/html/loginMissPass";
-	}	
-	
 }
