@@ -25,14 +25,22 @@
 						</div>
 					</div>
 					<div class="member-box">
+						<!-- 로그아웃 상태 -->
 						<c:if test="${empty sessionScope.loginok}">
 						<button class="login" onclick="location.href='/loginHome'">로그인</button>
 						</c:if>
+						<c:if test="${empty sessionScope.loginok}">
+						<button class="join" onclick="location.href='/joinMember/loginJoin'">회원가입</button>
+						</c:if>
+						
+						<!-- 로그인 상태 -->
 						<c:if test="${not empty sessionScope.loginok}">
 						<b>${sessionScope.myid }님</b>
-						<button class="logout" onclick="location.href='logout'">로그아웃</button>
+						<button class="logout" onclick="location.href='/logout'">로그아웃</button>
 						</c:if>
-						<button class="join" onclick="location.href='/joinMember/loginJoin'">회원가입</button>
+						<c:if test="${not empty sessionScope.loginok}">
+						<button class="join" onclick="location.href='/html/myPageEdit'">마이페이지</button>
+						</c:if>
 					</div>
 				</div>
 			</div>
