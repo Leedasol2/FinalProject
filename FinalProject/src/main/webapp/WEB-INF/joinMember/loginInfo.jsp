@@ -166,8 +166,8 @@ function passDoublecheck(){
 				<button type="button" class= "login-info-btn-next" onclick="passCheck(); passDoublecheck(); location.href='loginend'">다음으로<img class="login-info-next" src="${root }/image/asset/다음으로아이콘.png" width = "25px"></button>
 				</div>
 
-				<span class="rewritepass">8~16자리의 문자와 숫자를 조합해서 만들어 주세요.</span>
-				<span class="donotmatchpass">비밀번호가 일치하지 않습니다.</span>
+				<span class="rewritepass">8~16자리의 문자와 숫자를 조합해서 만들어 주세요!</span>
+				<span class="donotmatchpass">비밀번호가 일치하지 않습니다!</span>
 		</div>
 <!-- main 끝 -->
 
