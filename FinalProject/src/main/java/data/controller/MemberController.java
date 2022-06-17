@@ -19,12 +19,6 @@ public class MemberController {
 	MemberMapperInter MemberInter;
 	
 	//강진_login
-	@GetMapping("/login/main")
-	public String loginhome() {
-		
-		return "/login/main";
-	}
-	
 	@GetMapping("/login/loginHome")
 	public String loginHome() {
 		
@@ -48,15 +42,20 @@ public class MemberController {
 			session.setAttribute("loginok", "yes");
 			session.setAttribute("saveok", cbsave);
 			
-			return "redirect:/login/main";
+			return "redirect:/";
 		}else {
 			return "redirect:/login/loginHome";
 		}
 		
 	}
 	
-	
-	
+	//로그아웃
+	@GetMapping("/logout")
+	public String logout(HttpSession session) {
+			
+		session.removeAttribute("loginok");
+		return "redirect:/login/loginHome";
+	}
 	
 	
 }
