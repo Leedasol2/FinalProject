@@ -10,4 +10,9 @@
   select count(*) from member where email=#{email}
 </select>
 
+<!-- 강진_login -->
+<select id="login" parameterType="HashMap" resultType="int">
+select count(*) from member where userid=#{userid} and password=#{password}
+</select>
+
 </mapper>
