@@ -238,3 +238,21 @@ span.login-info-a-color{
 	color: #00BFFF;
 	
 }
+
+span.rewritepass{
+	position: absolute;
+    top: 542px;
+    left: 1220px;
+    font-size: 12px;
+    color: red;
+    display: none;
+}
+
+span.donotmatchpass{
+	position: absolute;
+    top: 613px;
+    left: 1220px;
+    font-size: 12px;
+    color: red;
+    display: none;
+}

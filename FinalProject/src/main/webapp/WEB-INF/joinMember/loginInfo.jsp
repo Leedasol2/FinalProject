@@ -7,6 +7,43 @@
 <head>
 <meta charset="UTF-8">
 <title>이런여행</title>
+
+<script type="text/javascript">
+
+//비밀번호 8~16자리의 문자와 숫자를 조합했는지 확인
+function passCheck(){
+	
+	var passwd = $("#pass").val();	
+	var check1 = /^(?=.*[a-zA-Z])(?=.*[0-9]).{8,16}$/.test(passwd);   
+	
+	if(!check1){		
+		$("span.rewritepass").css("display","inline-block");
+		return false;	
+	} else{
+		$("span.rewritepass").css("display","none");
+		return true;
+	}
+}
+
+//작성한 비밀번호 일치확인
+function passDoublecheck(){
+	
+	 var p1 = $("#pass").val();
+     var p2 = $("#pass2").val();
+     if( p1 != p2 ) {
+       $("span.donotmatchpass").css("display","inline-block");
+       return false;
+     } else{
+       $("span.donotmatchpass").css("display","none");
+       return true;
+     }
+
+   }
+
+
+
+</script>
+
 </head>
 <body>
 
@@ -48,9 +85,9 @@
 					<tr>
 					<td class = "login-info-table-title">이메일</td>
 					<td>
-						<input type="text" name="email1" class="login-info-input-email1" placeholder="2RunTrip" readonly="readonly" required="required">
+						<input type="text" name="email1" class="login-info-input-email1" placeholder="2RunTrip" required="required">
 						<b>&nbsp;@&nbsp;</b>
-						<input type="text" name="email2" id="email2" class="login-info-input-email2" placeholder="2RunTrip.com" readonly="readonly" required="required">
+						<input type="text" name="email2" id="email2" class="login-info-input-email2" placeholder="2RunTrip.com" required="required">
 					</td>
 					</tr>
 					
@@ -71,8 +108,9 @@
 					
 					<tr>
 					<td class = "login-info-table-title">비밀번호</td>
-					<td class= "login-info-content"><input type="password" name="pass" class="form-logineinfo-input" 
-					placeholder="비밀번호" required="required">
+					<td class= "login-info-content">
+					  <input type="password" name="pass" id="pass" class="form-logineinfo-input" 
+					  placeholder="비밀번호" required="required">
 					</td>
 					</tr>
 					
@@ -82,8 +120,9 @@
 															
 					<tr>
 					<td></td>
-					<td class= "login-info-content"><input type="password" name="code" class="form-logineinfo-input" 
-					placeholder="비밀번호를 다시 입력해 주세요" required="required">
+					<td class= "login-info-content">
+					  <input type="password" name="code" id="pass2" class="form-logineinfo-input" 
+					  placeholder="비밀번호를 다시 입력해 주세요" required="required">
 					</td>
 					</tr>
 					
@@ -103,25 +142,32 @@
 					<tr>
 					<td class = "login-info-table-title">휴대폰번호</td>
 					<td class= "login-info-content"><input type="text" name="code" class="form-logineinfo-input" 
-					placeholder="01012345678" required="required">
+					placeholder="01012345678" required="required" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
 					</td>
 					</tr>
 											
 				</table>
 				
 				<div class = "login-info-btn-group1">
-				<button type="submit" class= "login-info-btn-check-all"><img class="login-info-check" src="${root }/image/asset/저장.png" width = "20px">&nbsp; 전체동의</button><br>
-				<button type="submit" class= "login-info-btn-check"><img class="login-info-check1" src="${root }/image/asset/저장.png" width = "17px">&nbsp; 개인정보 수집 및 이용에 대한 동의 
-				<span class="login-info-a-color">(필수)</span></button><br>
-				<button type="submit" class= "login-info-btn-check"><img class="login-info-check1" src="${root }/image/asset/저장.png" width = "17px">&nbsp; 개인정보 제 3자 제공에 대한 동의 
-				<span class="login-info-a-color">(필수)</span></button><br>
+				  <button type="button" class= "login-info-btn-check-all">
+				  <img class="login-info-check" src="${root }/image/asset/저장.png" width = "20px">&nbsp; 전체동의</button><br>
+				  
+				  <button type="button" class= "login-info-btn-check">
+				  <img class="login-info-check1" src="${root }/image/asset/저장.png" width = "17px">&nbsp; 개인정보 수집 및 이용에 대한 동의 
+				  <span class="login-info-a-color">(필수)</span></button><br>
+				  
+				  <button type="button" class= "login-info-btn-check">
+				  <img class="login-info-check1" src="${root }/image/asset/저장.png" width = "17px">&nbsp; 개인정보 제 3자 제공에 대한 동의 
+				  <span class="login-info-a-color">(필수)</span></button><br>
 				</div>
 			
 				<div class = "login-info-btn-group2">
-				<button type="submit" class= "login-info-btn-back"><img class="login-info-back" src="${root }/image/asset/이전으로아이콘.png" width = "25px">이전으로</button>
-				<button type="submit" class= "login-info-btn-next">다음으로<img class="login-info-next" src="${root }/image/asset/다음으로아이콘.png" width = "25px"></button>
+				<button type="button" class= "login-info-btn-back" onclick="location.href='joinmember'"><img class="login-info-back" src="${root }/image/asset/이전으로아이콘.png" width = "25px">이전으로</button>
+				<button type="button" class= "login-info-btn-next" onclick="passCheck(); passDoublecheck(); location.href='loginend'">다음으로<img class="login-info-next" src="${root }/image/asset/다음으로아이콘.png" width = "25px"></button>
 				</div>
 
+				<span class="rewritepass">8~16자리의 문자와 숫자를 조합해서 만들어 주세요.</span>
+				<span class="donotmatchpass">비밀번호가 일치하지 않습니다.</span>
 		</div>
 <!-- main 끝 -->
 

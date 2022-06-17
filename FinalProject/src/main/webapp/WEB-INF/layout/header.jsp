@@ -32,7 +32,7 @@
 						<b>${sessionScope.myid }님</b>
 						<button class="logout" onclick="location.href='logout'">로그아웃</button>
 						</c:if>
-						<button class="join" onclick="location.href='singup'">회원가입</button>
+						<button class="join" onclick="location.href='signup'">회원가입</button>
 					</div>
 				</div>
 			</div>
@@ -55,7 +55,7 @@
 							</ul>
 						</li>
 						<li>
-							<a href="shareTripHome">여행 공유</a>
+							<a href="/board/shareTripHome">여행 공유</a>
 						</li>
 						<li>
 							<a href="#">나만의 코스짜기</a>

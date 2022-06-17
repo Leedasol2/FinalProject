@@ -12,6 +12,7 @@
 
 $(function(){
 	
+	//이메일 셀렉트바
 	$("#selemail").on("change",function(){
 		
 		if($(this).val()=='_'){
@@ -21,6 +22,7 @@ $(function(){
 		}
 	});
 
+	//이메일 중복확인
 	$(".login-emailcheck-btn-check").on("click",function(){
 		        
         var email='';
@@ -30,7 +32,7 @@ $(function(){
         });
         
         $.ajax({
-        	dataType: "json",
+        	dataType: "json", 
             url:"/joinMember/emailCheck",
             type:"get",
             data:{"email":email},
@@ -42,12 +44,29 @@ $(function(){
             	$(".login-emailcheck-message").css("display","none"); 
                 $(".login-emailcheck-failmessage").css("display","inline-block");
                 $("#email1").val("");
+                $("#email2").val("");
 				$("#email1").focus();
-            }
-          }
-        });
+           }
+         }
+       });
     });
+	
+	
+	
 });
+
+//모달창 사용하기 버튼 클릭시 이메일 입력
+function modalClose()
+{
+	var email='';
+    $('input[name=email]').map(function(){
+    	
+    	email += $(this).val();
+    });
+  
+    $('input[name=uesemail]').val(email);
+	$("#loginemail-modal").modal('hide');
+}
 
 </script>
 
@@ -93,14 +112,14 @@ $(function(){
 			<table class="login-email-table">			
 			  <tr>
 			    <td class= "login-email-content">
-			      <input type="text" name="email" class="form-loginemail-input" 
+			      <input type="text" name="uesemail" class="form-loginemail-input" 
 				  placeholder="이메일 주소를 입력해 주세요." required="required" readonly="readonly" 
 				  data-toggle="modal" data-target="#loginemail-modal">
 			      <img class="login-email-content1" src="${root }/image/asset/이메일아이콘.png" width = "25px">
 				</td>
 				
 			    <td>
-                  <button class= "login-email-btn-email">인증 요청</button>
+                  <button type="button" class= "login-email-btn-email">인증 요청</button>
 				</td>
 			  </tr>
 	
@@ -116,16 +135,16 @@ $(function(){
 				</td>
 				
 				<td>
-				  <button type="submit" class= "login-email-btn-code" >인증 확인</button>
+				  <button type="button" class= "login-email-btn-code" >인증 확인</button>
 				</td>
 			  </tr>
 			</table>
 			
 		<div class = "login-email-btn-group1">
-		  <button type="submit" class= "login-email-btn-back">
+		  <button type="submit" class= "login-email-btn-back" onclick="location.href='signup'">
 		  <img class="login-email-back" src="${root }/image/asset/이전으로아이콘.png" width = "25px">이전으로</button> 
 		  
-		  <button type="submit" class= "login-email-btn-next">
+		  <button type="submit" class= "login-email-btn-next" onclick="location.href='logininfo'">
 		  다음으로<img class="login-email-next" src="${root }/image/asset/다음으로아이콘.png" width = "25px"></button>
 		</div>
 	</div><!-- main 끝 -->
@@ -178,7 +197,7 @@ $(function(){
 				
 		<div class="login-emailcheck-btn-login">
 				<button type="button" class="login-emailcheck-btn-check">중복확인</button>
-				<button type="submit" class="login-emailcheck-btn-use">사용하기</button>
+				<button type="button" class="login-emailcheck-btn-use" onclick="modalClose()">사용하기</button>
 		</div>
 	</div>		
 	</div>

@@ -37,7 +37,7 @@
 		<span class="login-end-subtitle">로그인하여 2RunTrip의 다양한 서비스를 즐겨보세요!</span><br>
 		</div>
 	
-		<button type="submit" class= "btn-login-end-login">로그인</button>
+		<button type="button" class= "btn-login-end-login" onclick="location.href='login'">로그인</button>
 	</div>
 <!-- main 끝 -->
 

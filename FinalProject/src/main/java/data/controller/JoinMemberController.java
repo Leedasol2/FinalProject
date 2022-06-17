@@ -6,11 +6,9 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import data.dto.MemberDto;
 import data.mapper.MemberMapperInter;
 
 @Controller
@@ -29,8 +27,8 @@ public class JoinMemberController {
 	}
 	
 	//회원가입 페이지
-	@GetMapping("singup")
-	public String singup() {
+	@GetMapping("signup")
+	public String signup() {
 		
 		return "/joinMember/loginJoin";
 	}
@@ -40,6 +38,12 @@ public class JoinMemberController {
 	public String joinmember() {
 		
 		return "/joinMember/loginEmail";
+	}
+	
+	@GetMapping("loginend")
+	public String loginend() {
+		
+		return "/joinMember/loginEnd";
 	}
 	
 	//베스트여행지 페이지
@@ -56,12 +60,6 @@ public class JoinMemberController {
 		return "/html/themePark";
 	}
 	
-	//여행공유 페이지
-	@GetMapping("shareTripHome")
-	public String shareTripHome() {
-		
-		return "/html/shareTripHome";
-	}
 	
 	//테마별여행지 페이지
 	@GetMapping("themaTrip")
@@ -104,5 +102,13 @@ public class JoinMemberController {
 	}
 }
 	
+	@GetMapping("logininfo")
+	public String logininfo() {
+		
+		return "/joinMember/loginInfo";
+	}
+
+
+
 	
 }

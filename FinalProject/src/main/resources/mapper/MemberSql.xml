@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTDMapper3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="data.mapper.MemberMapperInter">
 
-<select id="getAllMembers" resultType="member">
+<select id="getAllMembers" resultType="mdto">
   select * from member order by mnum asc
 </select>
 
