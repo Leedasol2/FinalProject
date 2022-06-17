@@ -15,4 +15,7 @@ public interface MemberMapperInter {
 	
 	//강진_login userid,password
 	public int login(HashMap<String,String> map);
+	
+	//이다솔 - id로 mnum 구하기
+	public String getMnum(String myid);
 }

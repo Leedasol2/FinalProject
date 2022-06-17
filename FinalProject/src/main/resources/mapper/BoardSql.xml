@@ -11,10 +11,6 @@
 	<select id="getMaxBnum" resultType="int">
 		select ifnull(max(bnum),0) from board
 	</select>
-	
-	<select id="getMnum" resultType="String" parameterType="String">
-		select mnum from member where userid=#{myid}
-	</select>
-	
+
 	
 </mapper>
