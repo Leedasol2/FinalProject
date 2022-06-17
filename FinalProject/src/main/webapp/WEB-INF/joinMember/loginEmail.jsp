@@ -141,10 +141,10 @@ function modalClose()
 			</table>
 			
 		<div class = "login-email-btn-group1">
-		  <button type="submit" class= "login-email-btn-back" onclick="location.href='signup'">
+		  <button type="submit" class= "login-email-btn-back" onclick="location.href='/joinMember/loginJoin'">
 		  <img class="login-email-back" src="${root }/image/asset/이전으로아이콘.png" width = "25px">이전으로</button> 
 		  
-		  <button type="submit" class= "login-email-btn-next" onclick="location.href='logininfo'">
+		  <button type="submit" class= "login-email-btn-next" onclick="location.href='/joinMember/logininfo'">
 		  다음으로<img class="login-email-next" src="${root }/image/asset/다음으로아이콘.png" width = "25px"></button>
 		</div>
 	</div><!-- main 끝 -->

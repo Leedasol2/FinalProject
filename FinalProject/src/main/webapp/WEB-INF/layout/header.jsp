@@ -26,13 +26,13 @@
 					</div>
 					<div class="member-box">
 						<c:if test="${empty sessionScope.loginok}">
-						<button class="login" onclick="location.href='loginHome'">로그인</button>
+						<button class="login" onclick="location.href='/loginHome'">로그인</button>
 						</c:if>
 						<c:if test="${not empty sessionScope.loginok}">
 						<b>${sessionScope.myid }님</b>
 						<button class="logout" onclick="location.href='logout'">로그아웃</button>
 						</c:if>
-						<button class="join" onclick="location.href='signup'">회원가입</button>
+						<button class="join" onclick="location.href='/joinMember/loginJoin'">회원가입</button>
 					</div>
 				</div>
 			</div>
@@ -62,7 +62,7 @@
 						</li>
 					</ul>
 					<div class="perfect-trip">
-						<button class="perfect-trip-btn" onclick="location.href='myTripStart'">나에게 딱 맞는 여행지는?</button>
+						<button class="perfect-trip-btn" onclick="location.href='/board/myTripStart'">나에게 딱 맞는 여행지는?</button>
 					</div>
 				</div>
 			</div>
