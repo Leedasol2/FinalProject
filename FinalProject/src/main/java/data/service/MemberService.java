@@ -14,7 +14,9 @@ public class MemberService {
 	public String getMnum(String myid) {
 		return mapper.getMnum(myid);
 	}
-	
+	public String getUserId(String mnum) {
+		return mapper.getUserId(mnum);
+	}
 	
 	
 }
