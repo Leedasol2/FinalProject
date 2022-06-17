@@ -39,13 +39,13 @@
 			</div>
 			
 		<div class="login-home-btn2">
-			<button type="submit" class="login-home-btn-find">아이디ㆍ비밀번호 찾기</button>
-			<button type="submit" class="login-home-btn-join">회원가입</button>
+			<button type="button" class="login-home-btn-find" onclick="location.href='loginMissId'">아이디ㆍ비밀번호 찾기</button>
+			<button type="button" class="login-home-btn-join" onclick="location.href='singup'">회원가입</button>
 		</div>
 		
 		<div class="login-home-btn3">
-			<button type="submit" class="btn-login-home-kakao"><img src="${root }/image/asset/카톡원형.png" width = "50px"></button>
-			<button type="submit" class="btn-login-home-naver"><img src="${root }/image/asset/네이버원형.png" width = "50px"></button>
+			<button type="button" class="btn-login-home-kakao"><img src="${root }/image/asset/카톡원형.png" width = "50px"></button>
+			<button type="button" class="btn-login-home-naver"><img src="${root }/image/asset/네이버원형.png" width = "50px"></button>
 		</div>
 		
 		<br><br><br>

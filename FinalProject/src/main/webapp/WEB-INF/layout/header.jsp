@@ -26,7 +26,7 @@
 					</div>
 					<div class="member-box">
 						<c:if test="${empty sessionScope.loginok}">
-						<button class="login" onclick="location.href='${root}/login/loginHome'">로그인</button>
+						<button class="login" onclick="location.href='loginHome'">로그인</button>
 						</c:if>
 						<c:if test="${not empty sessionScope.loginok}">
 						<b>${sessionScope.myid }님</b>
