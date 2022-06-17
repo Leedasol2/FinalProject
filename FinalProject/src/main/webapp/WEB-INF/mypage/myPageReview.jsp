@@ -32,43 +32,50 @@
 						<span class="alert alert-info">등록한 리뷰가 없습니다</span>
 					</div>
 				</c:if>
-				
-				<c:if test="${totalCount>0}">
-					<c:forEach var="r" items="${list}">
-					
-						<div class="review-contents">
-							<div class="review-topbox">
-								<div class="review-title">
-									<a href="#">${r.title}</a>
-									<div class="tripstory-star-ratings">
-									<div class="tripstory-star-ratings-fill space-x-2 text-lg"
-										style="width: ${r.rstar*20}%">
-										<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+
+					<c:if test="${totalCount>0}">
+						<c:forEach var="r" items="${list}">
+							<c:if test="${mnum==r.mnum2 }">
+								<div class="review-contents">
+									<div class="review-topbox">
+										<div class="review-title">
+											<a href="#">${r.title}</a>
+											<div class="tripstory-star-ratings">
+												<div class="tripstory-star-ratings-fill space-x-2 text-lg"
+													style="width: ${r.rstar*20}%">
+													<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+												</div>
+												<div class="tripstory-star-ratings-base space-x-2 text-lg">
+													<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+												</div>
+											</div>
+										</div>
+										<div class="review-edit">
+											<button type="button"
+												onclick="location.href='delete?rnum=${r.rnum}&currentPage=${currentPage}'"
+												id="btnDel">삭제</button>
+											<button type="button"
+												onclick="location.href='myPageReviewEdit?rnum=${r.rnum}$tnum=${r.tnum}&currentPage=${currentPage}'">수정</button>
+											<div class="review-day">
+												<span>${r.rday}</span>
+											</div>
+										</div>
 									</div>
-									<div class="tripstory-star-ratings-base space-x-2 text-lg">
-										<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+									<div class="review-ment">
+										<span>${r.rcontents}</span>
 									</div>
 								</div>
+
+								<div class="hr">
+									<hr>
 								</div>
-								<div class="review-edit">
-									<button type="button" onclick="location.href='delete?rnum=${r.rnum}&currentPage=${currentPage}'" id="btnDel">삭제</button>
-									<button type="button" onclick="location.href='myPageReviewEdit?rnum=${r.rnum}$tnum=${r.tnum}&currentPage=${currentPage}'">수정</button>
-									<div class="review-day"><span>${r.rday }</span></div>
-								</div>
-							</div>
-							<div class="review-ment">
-								<span>${r.rcontents}</span>
-							</div>
-						</div>
-						
-						<div class="hr"><hr></div>					
-					
-					</c:forEach>
-				</c:if>
-				
-			</div>
+
+							</c:if>
+						</c:forEach>
+					</c:if>
+				</div>
 			<!-- 페이징 -->
-		   <c:if test="${totalCount>0}">
+		   <%-- <c:if test="${totalCount>0}">
 		      <div style="text-align: center;">
 		         <ul class="pagination">   
 		         <!-- 이전 -->
@@ -91,7 +98,7 @@
 		         </c:if>
 		         </ul>
 		      </div>
-		   </c:if>
+		   </c:if> --%>
 		</div>
 	</div>
 </div>
