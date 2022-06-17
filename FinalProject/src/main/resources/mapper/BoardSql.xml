@@ -11,6 +11,19 @@
 	<select id="getMaxBnum" resultType="int">
 		select ifnull(max(bnum),0) from board
 	</select>
-
 	
+	<!-- 게시글 개수 -->
+	<select id="getBoardCnt" resultType="int">
+		select count(*) from board
+	</select>
+	
+	<!-- 모든 게시글 불러오기 -->
+	<select id="getAllBoards" resultType="bdto">
+		select * from board order by bnum desc
+	</select>
+	
+	<!-- 페이징 불러오기 -->
+	<select id="getList" parameterType="HashMap" resultType="bdto"> 
+		select * from board order by bnum desc limit #{start},#{perpage} 
+	</select> 
 </mapper>
