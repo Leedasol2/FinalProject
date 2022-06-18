@@ -22,11 +22,6 @@ public class IndexController {
 		return "/html/myPageScrap";
 	}
 	
-	@GetMapping("/html/myPageCalendar")
-	public String myPageCalendar() {
-		
-		return "/html/myPageCalendar";
-	}
 	
 	@GetMapping("/html/modalCalendar")
 	public String modalCalendar() {

@@ -1,17 +1,43 @@
+var calendar;
+var loadCalendarEvent = function(){
+				// 1. remove all events
+				calendar.removeAllEvents();
+				
+				// 2. init all events
+				$.ajax({
+						type: "get",
+						dataType: "json",
+						url: "/mypage/ScheList",
+						success: function(r) {
+							for(var i=0; i < r.length; i++) {
+								calendar.addEvent({
+									title: r[i]['content'],
+									start: r[i]['beginday'],
+									end: r[i]['endday'],
+								});
+							}
+						}
+					});
+			}
+
 document.addEventListener('DOMContentLoaded', function () {
+	/*$.ajax({
+		type: "get",
+		dataType: "json",
+		url: "/mypage/ScheList",
+		//contentType: 'application/json',
+		success: function(data) {
+			console.log(data);
+		}
+	});*/
+			
+			
             var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
+            calendar = new FullCalendar.Calendar(calendarEl, {
 				locale : 'ko',
                 timeZone: 'UTC',
                 initialView: 'dayGridMonth', // 홈페이지에서 다른 형태의 view를 확인할  수 있다.
-                events:[ // 일정 데이터 추가 , DB의 event를 가져오려면 JSON 형식으로 변환해 events에 넣어주면된다.
-                    {
-                        title:'일정',
-                        start:'2022-06-26 00:00:00',
-                        end:'2022-06-27 24:00:00'
-                        // color 값을 추가해 색상도 변경 가능 자세한 내용은 하단의 사이트 참조
-                    }
-                ], headerToolbar: {
+                headerToolbar: {
 					left: 'addEventButton',
                     center: 'title' // headerToolbar에 버튼을 추가
                 }, customButtons: {
@@ -34,12 +60,25 @@ document.addEventListener('DOMContentLoaded', function () {
                                     alert("종료일이 시작일보다 먼저입니다.");
                                 }else{ // 정상적인 입력 시
                                     var obj = {
-                                        "title" : content,
-                                        "start" : start_date,
-                                        "end" : end_date
+                                        "content" : content,
+                                        "beginday" : start_date,
+                                        "endday" : end_date
                                     }//전송할 객체 생성
 
                                     console.log(obj); //서버로 해당 객체를 전달해서 DB 연동 가능
+                                    
+                                    $.ajax({
+                                    	type:"post",
+                                    	dataType:"json",
+                                    	url:"/mypage/ScheInsert",
+                                    	contentType: 'application/json',
+                                    	data:JSON.stringify(obj),
+                                    	success:function(data){
+											$('#calendarModal [data-dismiss]').click();	
+											loadCalendarEvent();				
+										}
+									});
+                                    
                                 }
                             });
                         }
@@ -48,5 +87,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 editable: true, // false로 변경 시 draggable 작동 x 
                 displayEventTime: false // 시간 표시 x
             });
+            
             calendar.render();
+            loadCalendarEvent();
+            
         });
