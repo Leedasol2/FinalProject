@@ -17,4 +17,9 @@
 	<select id="getTitle" parameterType="String" resultType="String">
 		select title from trip where tnum=#{tnum}
 	</select> <!-- 은비 -->
+	
+	<!-- 동현 -->
+	<select id="getAllTrips" resultType="tdto">
+	  select * from trip order by tnum desc
+	</select>
 </mapper>
