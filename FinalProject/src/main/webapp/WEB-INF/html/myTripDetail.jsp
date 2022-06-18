@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,21 +27,22 @@ $(function(){
 </script>
 
 	<!-- main 시작 -->
+	<input type="hidden" id="tnum" value="${tdto.tnum }">
 	<div class="mytripdetail">
 	<div class="tripdetailsubject">여행을 떠나요 <img alt="" src="${root }/image/asset/자동차아이콘.png">
 	
 	<hr>
 	<div class="triptopcont">
 	<div class="subcontent">
-	<img alt="" src="${root }/image/asset/n서울타워.jpg" class="tripdetailimg">
+	<img src="${root}/image/tripspot/${fn:split(tdto.image,',')[0]}"  class="tripdetailimg">
 	</div>
 	<div class="tripsogae">
-	<div class="tripdetailname"><b>${dto.title }</b></div><div class="rstar">review 테이블 rstar</div>
+	<div class="tripdetailname"><b>${tdto.title }</b></div><div class="rstar">review 테이블 rstar</div>
 	<div class="tripsubcontent">
-	${dto.intro }
+	${tdto.intro }
 	</div>
 	<div class="subedit">
-	<img alt="" src="${root }/image/asset/위치아이콘.png"><span class="tripwhere"> ${dto.location }</span>
+	<img alt="" src="${root }/image/asset/위치아이콘.png"><span class="tripwhere"> ${tdto.location }</span>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<img alt="" src="${root }/image/asset/스크랩안함.png"><span class="tripscrap"> 스크랩 하기</span>
 	</div>
@@ -64,7 +66,7 @@ $(function(){
 	<img alt="" src="${root }/image/asset/따옴표위.png">
 	</div>
 	<div class="tripcontent">
-	${dto.contents }
+	${tdto.contents }
 	</div>
 	<div class="tripimg2">
 	<img alt="" src="${root }/image/asset/따옴표아래.png">
@@ -81,7 +83,7 @@ $(function(){
 	<script>
 		var container = document.getElementById('map');
 		var options = {
-			center: new kakao.maps.LatLng(${dto.latitude}, ${dto.longitude}), <!--위도 / 경도 -->
+			center: new kakao.maps.LatLng(${tdto.latitude}, ${tdto.longitude}), <!--위도 / 경도 -->
 			level: 4
 		};
 		var map = new kakao.maps.Map(container, options);
@@ -92,11 +94,11 @@ $(function(){
 	<div class="image" id="sp3">
 	<b>사진</b>
 	</div>
-	<img alt="" src="${root }/image/asset/n서울타워.jpg" class="tripimage">
+	<img src="${root}/image/tripspot/${fn:split(tdto.image,',')[0]}"  class="tripimage">
 	<div class="smimage">
-	<img alt="" src="${root }/image/asset/n서울타워.jpg" class="small">
-	<img alt="" src="${root }/image/asset/n서울타워2.jpg" class="small">
-	<img alt="" src="${root }/image/asset/n서울타워3.jpg" class="small">
+	<img src="${root}/image/tripspot/${fn:split(tdto.image,',')[0]}"  class="small">
+	<img src="${root}/image/tripspot/${fn:split(tdto.image,',')[1]}"  class="small">
+	<img src="${root}/image/tripspot/${fn:split(tdto.image,',')[2]}"  class="small">
 	</div>
 	<hr>
 	
@@ -135,7 +137,7 @@ $(function(){
           <span class="modalsub">2run trip&nbsp;&nbsp;</span><span class="modalsub2">리뷰 작성</span>
         </div>
         <div class="modal-body">
-        <span class="modalname">${dto.title }&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span class="modalname">${tdto.title }&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <div class="modal-star-rating">
                       <input type="radio" id="5-stars" name="rating" value="5" />
                       <label for="5-stars" class="star">&#9733;</label>

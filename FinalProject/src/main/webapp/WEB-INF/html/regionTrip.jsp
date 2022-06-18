@@ -64,9 +64,9 @@ $("a.jeju").click(function(){
 <div class="regionTripText">
 
 <div class="trip-category">
-  <a href="#1" class="best-category tripcategory">베스트 여행지</a><br><br><br>
-  <a href="#2" class="region-category tripcategory">지역별 여행지</a><br><br><br>
-  <a href="#3" class="themea-category tripcategory">테마별 여행지</a>
+  <a href="bestTrip" class="best-category tripcategory">베스트 여행지</a><br><br><br>
+  <a href="regionTrip" class="region-category tripcategory">지역별 여행지</a><br><br><br>
+  <a href="themaTrip" class="themea-category tripcategory">테마별 여행지</a>
 </div>
 
 <div class="category-title">

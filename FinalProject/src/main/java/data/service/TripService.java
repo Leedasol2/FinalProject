@@ -1,5 +1,8 @@
 package data.service;
 
+import java.util.HashMap;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,10 +13,23 @@ import data.mapper.TripMapperInter;
 public class TripService {
 
 	@Autowired
-	TripMapperInter TripMapper;
+	TripMapperInter tripMapper;
 	
 	public TripDto getData(String tnum) {
 		
-		return TripMapper.getData(tnum);
+		return tripMapper.getData(tnum);
+	}
+	
+	public void updateReadCount(String tnum) {
+		
+		tripMapper.updateReadCount(tnum);
+	}
+	
+	public List<TripDto> getList(int start, int perpage){
+		
+		HashMap<String, Integer> map=new HashMap<>();
+		map.put("start", start);
+		map.put("perpage", perpage);
+		return tripMapper.getList(map);
 	}
 }
