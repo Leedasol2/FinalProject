@@ -51,12 +51,16 @@
 					<div class="title">여행이야기</div>
 					<div class="content">
 					<div class="card-box">
+					
+					  <c:forEach var="tdto" items="${triplist}" begin="0" end="3">
 						<div class="tripstory-content">
-							<img src="${root}/image/asset/여행지이미지(예시).jpg"
-								class="tripstory-img">
+						  <c:forTokens var="img" items="${tdto.image }" |delims="," begin="0" end="0">
+						    <!-- 전체여행지인데 이미지 경로 어떡할건지?  -->
+							<img src="${root}/image/themepark/${img}" class="tripstory-img">
+						  </c:forTokens>
 							<div class="name-box">
 								<div class="tripstory-name">
-									<a>신평양조장</a>
+									<a>${tdto.title }</a>
 								</div>
 								<div class="tripstory-star-ratings">
 									<div class="tripstory-star-ratings-fill space-x-2 text-lg" style="width: ratingToPercent+ '%'">
@@ -68,73 +72,12 @@
 								</div>
 							</div>
 							<div class="explain-box">
-								<div class="tripstory-explanation">일상 탈출러를 위한 당진</div>
-								<div class="tripstory-region">충청남도 당진시</div>
-							</div>
+								<div class="tripstory-explanation">${tdto.intro }</div>
+								<div class="tripstory-region">${tdto.location }</div>
+							</div>  
 						</div>
-						<div class="tripstory-content">
-							<img src="${root}/image/asset/여행지이미지(예시).jpg"
-								class="tripstory-img">
-							<div class="name-box">
-								<div class="tripstory-name">
-									<a>신평양조장</a>
-								</div>
-								<div class="tripstory-star-ratings">
-									<div class="tripstory-star-ratings-fill space-x-2 text-lg" style="width: ratingToPercent+ '%'">
-										<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-									</div>
-									<div class="tripstory-star-ratings-base space-x-2 text-lg">
-										<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-									</div>
-								</div>
-							</div>
-							<div class="explain-box">
-								<div class="tripstory-explanation">일상 탈출러를 위한 당진</div>
-								<div class="tripstory-region">충청남도 당진시</div>
-							</div>
-						</div>
-						<div class="tripstory-content">
-							<img src="${root}/image/asset/여행지이미지(예시).jpg"
-								class="tripstory-img">
-							<div class="name-box">
-								<div class="tripstory-name">
-									<a>신평양조장</a>
-								</div>
-								<div class="tripstory-star-ratings">
-									<div class="tripstory-star-ratings-fill space-x-2 text-lg" style="width: ratingToPercent+ '%'">
-										<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-									</div>
-									<div class="tripstory-star-ratings-base space-x-2 text-lg">
-										<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-									</div>
-								</div>
-							</div>
-							<div class="explain-box">
-								<div class="tripstory-explanation">일상 탈출러를 위한 당진</div>
-								<div class="tripstory-region">충청남도 당진시</div>
-							</div>
-						</div>
-						<div class="tripstory-content">
-							<img src="${root}/image/asset/여행지이미지(예시).jpg"
-								class="tripstory-img">
-							<div class="name-box">
-								<div class="tripstory-name">
-									<a>신평양조장</a>
-								</div>
-								<div class="tripstory-star-ratings">
-									<div class="tripstory-star-ratings-fill space-x-2 text-lg" style="width: ratingToPercent+ '%'">
-										<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-									</div>
-									<div class="tripstory-star-ratings-base space-x-2 text-lg">
-										<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-									</div>
-								</div>
-							</div>
-							<div class="explain-box">
-								<div class="tripstory-explanation">일상 탈출러를 위한 당진</div>
-								<div class="tripstory-region">충청남도 당진시</div>
-							</div>
-						</div>
+					</c:forEach>
+									
 						</div>
 
 						<div class="banner-box">
@@ -145,12 +88,10 @@
 								<a>오늘의 여행</a>
 							</div>
 							<ul class="tripstory-list">
-								<li><a href="#"><span class="fontgreen">부산</span><span>여행 게시글 제목 여행 게시글 제목</span></a></li> 
-								<li><a href="#"><span class="fontgreen">대전</span><span>여행 게시글 제목~</span></a></li>
-								<li><a href="#"><span class="fontgreen">경주</span><span>여행 게시글 제목입니다</span></a></li>
-								<li><a href="#"><span class="fontgreen">대구</span><span>추억의 대구 여행 게시글 제목!</span></a></li>
-								<li><a href="#"><span class="fontgreen">당진</span><span>오늘의 추천 여행 이야기,충청남도 당진 이야기</span></a></li>
-								<li><a href="#"><span class="fontgreen">제주</span><span>여행 게시글 제목 여행 게시글 제목 여행 게시글 제목입니다</span></a></li>
+							  <c:forEach var="bdto" items="${boardlist}" begin="0" end="7">
+							  	<!-- 지역이 없어서 출력형태 수정필요 -->
+								<li><a href="#"><span class="fontgreen">지역</span><span>${bdto.subject }</span></a></li> 
+						      </c:forEach>
 							</ul>
 
 						</div>
@@ -168,6 +109,7 @@
 						<div class="swiper mySwiper">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
+									
 									<div class="newpark-content">
 										<img src="${root}/image/asset/메인-테마파크예시이미지.png"
 											class="tripstory-img">
@@ -188,96 +130,9 @@
 											<div class="tripstory-region">충청남도 당진시</div>
 										</div>
 									</div>
+									
+									
 								</div>
-								<div class="swiper-slide">
-									<div class="newpark-content">
-										<img src="${root}/image/asset/메인-테마파크예시이미지.png"
-											class="tripstory-img">
-										<div class="name-box">
-											<div class="tripstory-name">
-												<a>제주 신화월드 테마파크</a>
-											</div>
-											<div class="tripstory-star-ratings">
-												<div class="tripstory-star-ratings-fill space-x-2 text-lg" style="width: ratingToPercent+ '%'">
-													<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-												</div>
-												<div class="tripstory-star-ratings-base space-x-2 text-lg">
-													<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-												</div>
-											</div>
-										</div>
-										<div class="explain-box">
-											<div class="tripstory-region">충청남도 당진시</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="newpark-content">
-										<img src="${root}/image/asset/메인-테마파크예시이미지.png"
-											class="tripstory-img">
-										<div class="name-box">
-											<div class="tripstory-name">
-												<a>제주 신화월드 테마파크</a>
-											</div>
-											<div class="tripstory-star-ratings">
-												<div class="tripstory-star-ratings-fill space-x-2 text-lg" style="width: ratingToPercent+ '%'">
-													<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-												</div>
-												<div class="tripstory-star-ratings-base space-x-2 text-lg">
-													<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-												</div>
-											</div>
-										</div>
-										<div class="explain-box">
-											<div class="tripstory-region">충청남도 당진시</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="newpark-content">
-										<img src="${root}/image/asset/메인-테마파크예시이미지.png"
-											class="tripstory-img">
-										<div class="name-box">
-											<div class="tripstory-name">
-												<a>제주 신화월드 테마파크</a>
-											</div>
-											<div class="tripstory-star-ratings">
-												<div class="tripstory-star-ratings-fill space-x-2 text-lg" style="width: ratingToPercent+ '%'">
-													<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-												</div>
-												<div class="tripstory-star-ratings-base space-x-2 text-lg">
-													<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-												</div>
-											</div>
-										</div>
-										<div class="explain-box">
-											<div class="tripstory-region">충청남도 당진시</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="newpark-content">
-										<img src="${root}/image/asset/메인-테마파크예시이미지.png"
-											class="tripstory-img">
-										<div class="name-box">
-											<div class="tripstory-name">
-												<a>제주 신화월드 테마파크</a>
-											</div>
-											<div class="tripstory-star-ratings">
-												<div class="tripstory-star-ratings-fill space-x-2 text-lg" style="width: ratingToPercent+ '%'">
-													<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-												</div>
-												<div class="tripstory-star-ratings-base space-x-2 text-lg">
-													<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-												</div>
-											</div>
-										</div>
-										<div class="explain-box">
-											<div class="tripstory-region">충청남도 당진시</div>
-										</div>
-									</div>
-								</div>
-								
 							</div>
 						</div>
 						<div class="swiper-button-next"></div>
