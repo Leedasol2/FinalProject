@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,12 +41,21 @@ $(document).ready(function(){
 
 <div>
   <table class="bestTripTable">
-    <tr>
-    
+   
+   <c:set var="i" value="0" />
+   <c:set var="j" value="3" />
+   <c:forEach var="tdto" items="${list }">
+   <c:if test="${i%j==0 }">
+   <tr>
+   </c:if>
       <td>
         <div class="trip-content">
-          <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
-          <span class="trip-name">신평 양조장</span>
+        <input type="hidden" id="tnum" value="${tdto.tnum }">
+        <input type="hidden" id="currentPage" value="${currentPage}">
+          <img src="${root}/image/tripspot/${fn:split(tdto.image,',')[0]}" class="trip-img"
+          onclick="location.href='myTripDetail?tnum=${tdto.tnum}&currentPage=${currentPage }'">
+          
+          <span class="trip-name">${tdto.title }</span>
           <div class="best-star-rating">
               <input type="radio" id="5-stars" name="rating" value="5" />
               <label for="5-stars" class="star">&#9733;</label>
@@ -58,221 +68,57 @@ $(document).ready(function(){
               <input type="radio" id="1-star" name="rating" value="1" />
               <label for="1-star" class="star">&#9733;</label>
             </div>
-  		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
+  		  <span class="trip-explanation">${tdto.title }</span><br>
  		  <span class="trip-region">
- 		    <img src="${root}/image/asset/여행지 위치아이콘.png">
- 		    충청남도 당진시
+ 		    <img src="${root}/image/asset/여행지 위치아이콘.png">${tdto.location }
  		  </span>
         </div>
       </td>
-      
-      <td>
-        <div class="trip-content">
-          <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
-          <span class="trip-name">신평 양조장</span>
-          <div class="best-star-rating">
-              <input type="radio" id="5-stars" name="rating" value="5" />
-              <label for="5-stars" class="star">&#9733;</label>
-              <input type="radio" id="4-stars" name="rating" value="4" />
-              <label for="4-stars" class="star">&#9733;</label>
-              <input type="radio" id="3-stars" name="rating" value="3" />
-              <label for="3-stars" class="star">&#9733;</label>
-              <input type="radio" id="2-stars" name="rating" value="2" />
-              <label for="2-stars" class="star">&#9733;</label>
-              <input type="radio" id="1-star" name="rating" value="1" />
-              <label for="1-star" class="star">&#9733;</label>
-            </div>
-  		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
- 		  <span class="trip-region">
- 		    <img src="${root}/image/asset/여행지 위치아이콘.png">
- 		    충청남도 당진시
- 		  </span>
-        </div>
-      </td>
-      
-     <td>
-        <div class="trip-content">
-          <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
-          <span class="trip-name">신평 양조장</span>
-          <div class="best-star-rating">
-              <input type="radio" id="5-stars" name="rating" value="5" />
-              <label for="5-stars" class="star">&#9733;</label>
-              <input type="radio" id="4-stars" name="rating" value="4" />
-              <label for="4-stars" class="star">&#9733;</label>
-              <input type="radio" id="3-stars" name="rating" value="3" />
-              <label for="3-stars" class="star">&#9733;</label>
-              <input type="radio" id="2-stars" name="rating" value="2" />
-              <label for="2-stars" class="star">&#9733;</label>
-              <input type="radio" id="1-star" name="rating" value="1" />
-              <label for="1-star" class="star">&#9733;</label>
-            </div>
-  		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
- 		  <span class="trip-region">
- 		    <img src="${root}/image/asset/여행지 위치아이콘.png">
- 		    충청남도 당진시
- 		  </span>
-        </div>
-      </td>
-      
+    <c:if test="${i%j==j-1 }">
     </tr>
+    </c:if>
+	<c:set var="i" value="${i+1 }"/>
+	</c:forEach>
     
-    <tr>
-    
-      <td>
-        <div class="trip-content">
-          <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
-          <span class="trip-name">신평 양조장</span>
-          <div class="best-star-rating">
-              <input type="radio" id="5-stars" name="rating" value="5" />
-              <label for="5-stars" class="star">&#9733;</label>
-              <input type="radio" id="4-stars" name="rating" value="4" />
-              <label for="4-stars" class="star">&#9733;</label>
-              <input type="radio" id="3-stars" name="rating" value="3" />
-              <label for="3-stars" class="star">&#9733;</label>
-              <input type="radio" id="2-stars" name="rating" value="2" />
-              <label for="2-stars" class="star">&#9733;</label>
-              <input type="radio" id="1-star" name="rating" value="1" />
-              <label for="1-star" class="star">&#9733;</label>
-            </div>
-  		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
- 		  <span class="trip-region">
- 		    <img src="${root}/image/asset/여행지 위치아이콘.png">
- 		    충청남도 당진시
- 		  </span>
-        </div>
-      </td>
-      
-      <td>
-        <div class="trip-content">
-          <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
-          <span class="trip-name">신평 양조장</span>
-          <div class="best-star-rating">
-              <input type="radio" id="5-stars" name="rating" value="5" />
-              <label for="5-stars" class="star">&#9733;</label>
-              <input type="radio" id="4-stars" name="rating" value="4" />
-              <label for="4-stars" class="star">&#9733;</label>
-              <input type="radio" id="3-stars" name="rating" value="3" />
-              <label for="3-stars" class="star">&#9733;</label>
-              <input type="radio" id="2-stars" name="rating" value="2" />
-              <label for="2-stars" class="star">&#9733;</label>
-              <input type="radio" id="1-star" name="rating" value="1" />
-              <label for="1-star" class="star">&#9733;</label>
-            </div>
-  		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
- 		  <span class="trip-region">
- 		    <img src="${root}/image/asset/여행지 위치아이콘.png">
- 		    충청남도 당진시
- 		  </span>
-        </div>
-      </td>
-      
-     <td>
-        <div class="trip-content">
-          <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
-          <span class="trip-name">신평 양조장</span>
-          <div class="best-star-rating">
-              <input type="radio" id="5-stars" name="rating" value="5" />
-              <label for="5-stars" class="star">&#9733;</label>
-              <input type="radio" id="4-stars" name="rating" value="4" />
-              <label for="4-stars" class="star">&#9733;</label>
-              <input type="radio" id="3-stars" name="rating" value="3" />
-              <label for="3-stars" class="star">&#9733;</label>
-              <input type="radio" id="2-stars" name="rating" value="2" />
-              <label for="2-stars" class="star">&#9733;</label>
-              <input type="radio" id="1-star" name="rating" value="1" />
-              <label for="1-star" class="star">&#9733;</label>
-            </div>
-  		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
- 		  <span class="trip-region">
- 		    <img src="${root}/image/asset/여행지 위치아이콘.png">
- 		    충청남도 당진시
- 		  </span>
-        </div>
-      </td>
-      
-    </tr>
-    
-    <tr>
-    
-     <td>
-        <div class="trip-content">
-          <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
-          <span class="trip-name">신평 양조장</span>
-          <div class="best-star-rating">
-              <input type="radio" id="5-stars" name="rating" value="5" />
-              <label for="5-stars" class="star">&#9733;</label>
-              <input type="radio" id="4-stars" name="rating" value="4" />
-              <label for="4-stars" class="star">&#9733;</label>
-              <input type="radio" id="3-stars" name="rating" value="3" />
-              <label for="3-stars" class="star">&#9733;</label>
-              <input type="radio" id="2-stars" name="rating" value="2" />
-              <label for="2-stars" class="star">&#9733;</label>
-              <input type="radio" id="1-star" name="rating" value="1" />
-              <label for="1-star" class="star">&#9733;</label>
-            </div>
-  		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
- 		  <span class="trip-region">
- 		    <img src="${root}/image/asset/여행지 위치아이콘.png">
- 		    충청남도 당진시
- 		  </span>
-        </div>
-      </td>
-      
-      <td>
-        <div class="trip-content">
-          <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
-          <span class="trip-name">신평 양조장</span>
-          <div class="best-star-rating">
-              <input type="radio" id="5-stars" name="rating" value="5" />
-              <label for="5-stars" class="star">&#9733;</label>
-              <input type="radio" id="4-stars" name="rating" value="4" />
-              <label for="4-stars" class="star">&#9733;</label>
-              <input type="radio" id="3-stars" name="rating" value="3" />
-              <label for="3-stars" class="star">&#9733;</label>
-              <input type="radio" id="2-stars" name="rating" value="2" />
-              <label for="2-stars" class="star">&#9733;</label>
-              <input type="radio" id="1-star" name="rating" value="1" />
-              <label for="1-star" class="star">&#9733;</label>
-            </div>
-  		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
- 		  <span class="trip-region">
- 		    <img src="${root}/image/asset/여행지 위치아이콘.png">
- 		    충청남도 당진시
- 		  </span>
-        </div>
-      </td>
-      
-     <td>
-        <div class="trip-content">
-          <img src="${root}/image/asset/여행지이미지(예시).jpg" class="trip-img">
-          <span class="trip-name">신평 양조장</span>
-          <div class="best-star-rating">
-              <input type="radio" id="5-stars" name="rating" value="5" />
-              <label for="5-stars" class="star">&#9733;</label>
-              <input type="radio" id="4-stars" name="rating" value="4" />
-              <label for="4-stars" class="star">&#9733;</label>
-              <input type="radio" id="3-stars" name="rating" value="3" />
-              <label for="3-stars" class="star">&#9733;</label>
-              <input type="radio" id="2-stars" name="rating" value="2" />
-              <label for="2-stars" class="star">&#9733;</label>
-              <input type="radio" id="1-star" name="rating" value="1" />
-              <label for="1-star" class="star">&#9733;</label>
-            </div>
-  		  <span class="trip-explanation">일상 탈출러를 위한 당진</span><br>
- 		  <span class="trip-region">
- 		    <img src="${root}/image/asset/여행지 위치아이콘.png">
- 		    충청남도 당진시
- 		  </span>
-        </div>
-      </td>
-      
-    </tr>
-     
   </table>
 </div>
 
 </div>
 <!-- 본문 끝 -->
+
+<!-- 페이징 -->
+<c:if test="${totalCount>0 }">
+<div style="text-align: center">
+<ul class="pagination">
+	<!-- 이전 -->
+	<c:if test="${startPage>1 }">
+	<li>
+		<a href="bestTrip?currentPage=${startPage-1}">이전</a>
+	</li>
+	</c:if>
+	
+	<c:forEach var="pp" begin="${startPage }" end="${endPage }">
+	<c:if test="${currentPage==pp }">
+	<li class="active">
+	<a href="list?currentPage=${pp}">${pp }</a>
+	</li>
+	</c:if>
+	<c:if test="${currentPage!=pp }">
+	<li>
+		<a href="bestTrip?currentPage=${pp }">${pp }</a>
+	</li>
+	</c:if>
+	</c:forEach>
+	
+	<!-- 다음 -->
+	<c:if test="${endPage<totalPage }">
+	<li>
+		<a href="bestTrip?currentPage=${endPage+1}">다음</a>
+	</li>
+	</c:if>
+</ul>
+</div>
+</c:if>
 
 </body>
 </html>

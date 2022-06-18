@@ -16,7 +16,7 @@ public class TripDto {
 	private String intro;
 	private String location;
 	private String link;
-	private String content;
+	private String contents;
 	private String latitude;
 	private String longitude;
 	private String image;
