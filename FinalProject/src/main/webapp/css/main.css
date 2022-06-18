@@ -347,7 +347,7 @@ img.tripstory-img{
 .explain-box {
     overflow: hidden;
     font-size: 0;
-    padding: 0 0 10px 15px;
+    padding: 0 15px 10px 15px;
 }
 
 .name-box > div {display:inline-block;padding-right:30px;}
@@ -373,6 +373,10 @@ div.tripstory-explanation{
 	position: relative;
 	display: inline-block;
 	float: left;
+	width: 200px; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 div.tripstory-region{
@@ -387,8 +391,11 @@ div.tripstory-region{
 	background-position: 4px center;
     background-size: 13px;
     float: left;
-    padding: 10px 10px 10px 10px 10px;
     padding: 10px 0 10px 22px;
+    width: 200px; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 /* º°Á¡ css */
 .tripstory-star-ratings {
