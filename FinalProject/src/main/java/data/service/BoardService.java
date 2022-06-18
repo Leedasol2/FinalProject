@@ -1,5 +1,8 @@
 package data.service;
 
+import java.util.HashMap;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +22,18 @@ public class BoardService {
 	public int getMaxBnum() {
 		return mapper.getMaxBnum();
 	}
+	public int getBoardCnt() {
+		return mapper.getBoardCnt();
+		
+	}
+	public List<BoardDto> getAllBoards(){
+		return mapper.getAllBoards();
+	}
 	
-
-	
+	public List<BoardDto> getList(int start,int perpage){ 
+		HashMap<String, Integer> map=new HashMap<>(); 
+		map.put("start", start); 
+		map.put("perpage", perpage); 
+		return mapper.getList(map);
+	}
 }

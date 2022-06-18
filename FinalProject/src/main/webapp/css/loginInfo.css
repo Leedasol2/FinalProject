@@ -163,7 +163,7 @@ div.login-info-btn-group1{
 	margin-top: 20px;
 }
 
-button.login-info-btn-check-all{
+label.login-info-btn-check-all{
 	font-family: 'MinSans-Black';
 	border: 0;
     outline: 0;
@@ -173,14 +173,17 @@ button.login-info-btn-check-all{
     margin-bottom: 10px;		
 }
 
-button.login-info-btn-check{
+label.login-info-btn-check{
 	font-family: 'MinSans-Medium';
 	border: 0;
     outline: 0;
     background-color: #fff;
     color: #696969;
     margin-top: 7px;
-  
+}
+
+span.login-info-a-color{
+	color: #00BFFF;
 }
 
 button.login-info-btn-back{
@@ -234,11 +237,6 @@ img.login-info-next{
 	
 }
 
-span.login-info-a-color{
-	color: #00BFFF;
-	
-}
-
 span.rewritepass{
 	position: absolute;
     top: 542px;
@@ -255,4 +253,35 @@ span.donotmatchpass{
     font-size: 12px;
     color: red;
     display: none;
+}
+
+input[type="checkbox"] {
+    display:none;
+}
+
+
+input[type="checkbox"] + label span {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: -2px 10px 0 0;
+    vertical-align: middle;
+    background: url(https://t1.daumcdn.net/cfile/tistory/99B9D6455B6C0C330B) left top no-repeat;
+    cursor: pointer;
+    background-size: cover;
+}
+
+input[id="allCheck"]:checked + label span {
+    background:url(https://t1.daumcdn.net/cfile/tistory/99B9D6455B6C0C330B)  -26px top no-repeat;
+    background-size: cover;
+}
+
+input[id="check1"]:checked + label span {
+    background:url(https://t1.daumcdn.net/cfile/tistory/99B9D6455B6C0C330B)  -26px top no-repeat;
+    background-size: cover;
+}
+
+input[id="check2"]:checked + label span {
+    background:url(https://t1.daumcdn.net/cfile/tistory/99B9D6455B6C0C330B)  -26px top no-repeat;
+    background-size: cover;
 }

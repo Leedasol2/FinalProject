@@ -10,6 +10,24 @@
 
 <script type="text/javascript">
 
+$(function(){
+	
+	//전체 체크박스 선택/해제
+	$("#allCheck").click(function() {
+		if($("#allCheck").is(":checked")) $("input[name=RequiredCheck]").prop("checked", true);
+		else $("input[name=RequiredCheck]").prop("checked", false);
+	});
+	
+	$("input[name=RequiredCheck]").click(function() {
+		var total = $("input[name=RequiredCheck]").length;
+		var checked = $("input[name=RequiredCheck]:checked").length;
+		
+		if(total != checked) $("#allCheck").prop("checked", false);
+		else $("#allCheck").prop("checked", true); 
+	});
+});
+
+
 //비밀번호 8~16자리의 문자와 숫자를 조합했는지 확인
 function passCheck(){
 	
@@ -37,8 +55,30 @@ function passDoublecheck(){
        $("span.donotmatchpass").css("display","none");
        return true;
      }
+}
 
-   }
+//다음으로 - 빈칸 없고, 필수 체크박스 2개 클릭, 비밀번호 일치시, DB에 정보 insert후 loginEnd로 이동
+function signUpEnd(){
+	
+	var total = $("input[name=RequiredCheck]").length;
+	var checked = $("input[name=RequiredCheck]:checked").length;
+	var p1 = $("#pass").val();
+    var p2 = $("#pass2").val();
+    var passwd = $("#pass").val();	
+	var check1 = /^(?=.*[a-zA-Z])(?=.*[0-9]).{8,16}$/.test(passwd);   
+	
+	if( p1 != p2 ){
+		alert("비밀번호가 일치하지 않아요");
+		return false;
+	} else if(!check1){
+		alert("8~16자리의 문자와 숫자를 조합해서 만들어 주세요");
+		return false;	
+	} else if(total!=checked){
+		alert("필수항목체크가 안됐어요");
+		return false;
+	}
+	
+}
 
 
 
@@ -69,6 +109,7 @@ function passDoublecheck(){
 		<div class = "login-info-edong">	
 		<span class="login-info-title">회원 정보 입력</span>
 		</div>
+		<form action="insertMember" method="post">
 			<table class="login-info-table">
 								
 					<tr>
@@ -97,7 +138,7 @@ function passDoublecheck(){
 					
 					<tr>
 					<td class = "login-info-table-title">아이디</td>
-					<td class= "login-info-content"><input type="text" name="id" class="form-logineinfo-input" 
+					<td class= "login-info-content"><input type="text" name="userid" class="form-logineinfo-input" 
 					placeholder="ID" required="required">
 					</td>
 					</tr>
@@ -109,7 +150,7 @@ function passDoublecheck(){
 					<tr>
 					<td class = "login-info-table-title">비밀번호</td>
 					<td class= "login-info-content">
-					  <input type="password" name="pass" id="pass" class="form-logineinfo-input" 
+					  <input type="password" name="password" id="pass" class="form-logineinfo-input" 
 					  placeholder="비밀번호" required="required">
 					</td>
 					</tr>
@@ -141,30 +182,30 @@ function passDoublecheck(){
 					
 					<tr>
 					<td class = "login-info-table-title">휴대폰번호</td>
-					<td class= "login-info-content"><input type="text" name="code" class="form-logineinfo-input" 
+					<td class= "login-info-content"><input type="text" name="phone" class="form-logineinfo-input" 
 					placeholder="01012345678" required="required" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
 					</td>
 					</tr>
 											
 				</table>
 				
+				
 				<div class = "login-info-btn-group1">
-				  <button type="button" class= "login-info-btn-check-all">
-				  <img class="login-info-check" src="${root }/image/asset/저장.png" width = "20px">&nbsp; 전체동의</button><br>
+				   <input type="checkbox" id="allCheck"/> 
+                   <label for="allCheck" class="login-info-btn-check-all"><span></span>전체동의</label><br>
 				  
-				  <button type="button" class= "login-info-btn-check">
-				  <img class="login-info-check1" src="${root }/image/asset/저장.png" width = "17px">&nbsp; 개인정보 수집 및 이용에 대한 동의 
-				  <span class="login-info-a-color">(필수)</span></button><br>
+				   <input type="checkbox" id="check1" name="RequiredCheck" />
+				   <label for="check1" class="login-info-btn-check"><span></span>개인정보 수집 및 이용에 대한 동의</label><span class="login-info-a-color">(필수)</span><br>
 				  
-				  <button type="button" class= "login-info-btn-check">
-				  <img class="login-info-check1" src="${root }/image/asset/저장.png" width = "17px">&nbsp; 개인정보 제 3자 제공에 대한 동의 
-				  <span class="login-info-a-color">(필수)</span></button><br>
+				   <input type="checkbox" id="check2" name="RequiredCheck" />
+				   <label for="check2" class="login-info-btn-check"><span></span>개인정보 제 3자 제공에 대한 동의</label><span class="login-info-a-color">(필수)</span><br>
 				</div>
 			
 				<div class = "login-info-btn-group2">
-				<button type="button" class= "login-info-btn-back" onclick="location.href='joinmember'"><img class="login-info-back" src="${root }/image/asset/이전으로아이콘.png" width = "25px">이전으로</button>
-				<button type="button" class= "login-info-btn-next" onclick="passCheck(); passDoublecheck(); location.href='loginend'">다음으로<img class="login-info-next" src="${root }/image/asset/다음으로아이콘.png" width = "25px"></button>
+				<button type="button" class= "login-info-btn-back" onclick="location.href='/joinMember/loginEmail'"><img class="login-info-back" src="${root }/image/asset/이전으로아이콘.png" width = "25px">이전으로</button>
+				<button type="submit" class= "login-info-btn-next" onclick="passCheck(); passDoublecheck(); signUpEnd();">다음으로<img class="login-info-next" src="${root }/image/asset/다음으로아이콘.png" width = "25px"></button>
 				</div>
+			</form>
 
 				<span class="rewritepass">8~16자리의 문자와 숫자를 조합해서 만들어 주세요.</span>
 				<span class="donotmatchpass">비밀번호가 일치하지 않습니다.</span>

@@ -15,21 +15,25 @@ public class ReviewService {
 	@Autowired
 	ReviewMapperInter mapper;
 	
-	public int getTotalCount()
+	public int getTotalCount(String mnum)
 	{
-		return mapper.getTotalCount();
+		return mapper.getTotalCount(mnum);
 	}
 	public ReviewDto getData(String rnum)
 	{
 		return mapper.getData(rnum);
 	}
-	public List<ReviewDto> getList(int start,int perpage)
+	/*public List<ReviewDto> getList(int start,int perpage)
 	{
 		HashMap<String, Integer> map=new HashMap<>();
 		map.put("start",start);
 		map.put("perpage", perpage);
 		
 		return mapper.getList(map);
+	}*/
+	public List<ReviewDto> getList()
+	{
+		return mapper.getList();
 	}
 	public void insertReview(ReviewDto dto)
 	{
@@ -46,5 +50,9 @@ public class ReviewService {
 	public int getTnum()
 	{
 		return mapper.getTnum();
+	}
+	public String getMnum(String rnum)
+	{
+		return mapper.getMnum(rnum);
 	}
 }

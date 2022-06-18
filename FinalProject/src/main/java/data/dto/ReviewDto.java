@@ -16,4 +16,5 @@ public class ReviewDto {
 	private String rcontents;
 	private Timestamp rday;
 	private String title;
+	private String mnum2;
 }
