@@ -32,4 +32,8 @@ public class TripService {
 		map.put("perpage", perpage);
 		return tripMapper.getList(map);
 	}
+	
+	public List<TripDto> getAllTrips(){
+		return tripMapper.getAllTrips();
+	}
 }
