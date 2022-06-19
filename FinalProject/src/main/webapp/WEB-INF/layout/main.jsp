@@ -109,7 +109,7 @@
 							<div class="swiper-wrapper">
 							
 							
-							<c:forEach var="theme" items="${themeparklist}" begin="0" end="4">
+							<c:forEach var="theme" items="${themeparklist}" begin="0" end="7">
 								<div class="swiper-slide">
 									<div class="newpark-content">
 									  <c:forTokens var="img" items="${theme.image }" delims="," begin="0" end="0">
