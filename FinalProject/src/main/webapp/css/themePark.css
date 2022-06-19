@@ -82,6 +82,8 @@ div.theme-content{
     margin-left: 16px;
     margin-bottom: 47px;
     margin-top: 30px;
+    cursor: pointer;
+    
 }
 
 div.theme-content > img.theme-img{
