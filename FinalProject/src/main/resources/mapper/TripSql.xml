@@ -22,6 +22,9 @@
 	<select id="getAllTrips" resultType="tdto">
 	  select * from trip order by tnum desc
 	</select>
+	<select id="getAllThemeParks" resultType="tdto">
+      select * from trip where part=${part} order by tnum desc
+    </select> 
 	
 	<select id="regionList" parameterType="HashMap" resultType="tdto">
 	select * from trip order by readcount desc limit #{start},#{perpage}
