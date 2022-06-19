@@ -54,7 +54,7 @@
 					
 					  <c:forEach var="tdto" items="${triplist}" begin="0" end="3">
 						<div class="tripstory-content">
-						  <c:forTokens var="img" items="${tdto.image }" |delims="," begin="0" end="0">
+						  <c:forTokens var="img" items="${tdto.image }" delims="," begin="0" end="0">
 						    <!-- 전체여행지인데 이미지 경로 어떡할건지?  -->
 							<img src="${root}/image/themepark/${img}" class="tripstory-img">
 						  </c:forTokens>
