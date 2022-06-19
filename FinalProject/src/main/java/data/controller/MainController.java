@@ -27,13 +27,15 @@ public class MainController {
 	@GetMapping("/")
 	public String home(Model model) {
 		
+		String part="'themepark'";
+		
 		List<TripDto> triplist=tservice.getAllTrips();
-		//List<TripDto> themeparklist=tservice.getAllThemeParks();
+		List<TripDto> themeparklist=tservice.getAllThemeParks(part);
 		List<BoardDto> boardlist=bservice.getAllBoards();
 		
 		model.addAttribute("triplist",triplist);
 		model.addAttribute("boardlist",boardlist);
-		//model.addAttribute("themeparklist",themeparklist);
+		model.addAttribute("themeparklist",themeparklist);
 		
 		return "/layout/main";
 	}
