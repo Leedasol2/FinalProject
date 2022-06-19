@@ -50,8 +50,6 @@ $(document).ready(function(){
    </c:if>
       <td>
         <div class="trip-content">
-        <input type="hidden" id="tnum" value="${tdto.tnum }">
-        <input type="hidden" id="currentPage" value="${currentPage}">
           <img src="${root}/image/tripspot/${fn:split(tdto.image,',')[0]}" class="trip-img"
           onclick="location.href='myTripDetail?tnum=${tdto.tnum}&currentPage=${currentPage }'">
           
