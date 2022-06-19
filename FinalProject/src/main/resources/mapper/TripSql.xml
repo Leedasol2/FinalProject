@@ -22,4 +22,11 @@
 	<select id="getAllTrips" resultType="tdto">
 	  select * from trip order by tnum desc
 	</select>
+	
+	<select id="regionList" parameterType="HashMap" resultType="tdto">
+	select * from trip order by readcount desc limit #{start},#{perpage}
+	</select>
+	<select id="themeList" parameterType="HashMap" resultType="tdto">
+	select * from trip order by readcount desc limit #{start},#{perpage}
+	</select>
 </mapper>

@@ -36,4 +36,20 @@ public class TripService {
 	public List<TripDto> getAllTrips(){
 		return tripMapper.getAllTrips();
 	}
+	
+	public List<TripDto> regionList(int start, int perpage){
+		
+		HashMap<String, Integer> map2=new HashMap<>();
+		map2.put("start", start);
+		map2.put("perpage", perpage);
+		return tripMapper.regionList(map2);
+	}
+
+	public List<TripDto> themeList(int start, int perpage){
+	
+		HashMap<String, Integer> map3=new HashMap<>();
+		map3.put("start", start);
+		map3.put("perpage", perpage);
+		return tripMapper.themeList(map3);
+}
 }

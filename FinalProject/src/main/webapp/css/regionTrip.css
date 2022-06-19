@@ -159,23 +159,23 @@ div.regionTripText .region-star-rating :checked ~ label {
 }
 
 div.regionTripText > div.regionofkorea{
+	cursor: pointer;
 	position: relative;
     left: 65px;
     top: -226px;
 }
 
-div.regionTripText > div.regionofkorea > a.region{
+div.regionTripText > div.regionofkorea > .region{
 	margin-left: 32px;
 	font-size: 1.2em;
 	color: gray;
 }
 
-div.regionTripText > div.regionofkorea > a:hover{
+div.regionTripText > div.regionofkorea > span:hover{
 	color: #212529;
 	transition: 0.3s ease; 
 }
-
-div.regionTripText > div.regionofkorea > a.daejeon-chungcheong{
+div.regionTripText > div.regionofkorea > span.seoul{
 	color: #2bae66;
 }
 
