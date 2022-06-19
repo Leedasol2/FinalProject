@@ -53,8 +53,8 @@ public class TripService {
 		return tripMapper.themeList(map3);
 	}
 	
-	public List<TripDto> getAllThemeParks(String part){ 
-		return tripMapper.getAllThemeParks(part);
+	public List<TripDto> getAllActivitys(String part){ 
+		return tripMapper.getAllActivitys(part);
 	}
 	 
 	
