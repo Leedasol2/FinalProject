@@ -110,6 +110,7 @@ div.festival-list-content{
 	margin-right: 10px;
 	margin-bottom: 10px;
 	overflow: hidden;
+	cursor: pointer;
 }
 img.festival-img{
 	width: 100%;
