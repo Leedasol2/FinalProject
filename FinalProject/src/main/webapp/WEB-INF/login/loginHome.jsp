@@ -44,7 +44,8 @@
 		</div>
 		
 		<div class="login-home-btn3">
-			<button type="button" class="btn-login-home-kakao"><img src="${root }/image/asset/카톡원형.png" width = "50px"></button>
+			<button type="button" class="btn-login-home-kakao"><img src="${root }/image/asset/카톡원형.png" width = "50px"
+			onclick="location.href='KakaoLogin'"></button>
 			<button type="button" class="btn-login-home-naver"><img src="${root }/image/asset/네이버원형.png" width = "50px"></button>
 		</div>
 		

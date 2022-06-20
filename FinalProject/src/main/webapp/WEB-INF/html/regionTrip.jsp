@@ -26,9 +26,23 @@ $(document).ready(function(){
 //지역 선택시 글씨색 변경
 	$("div.regionofkorea > span").click(function(){
 		
+		var CurrentRegion=$(this).text();
+		
 		$("div.regionofkorea > span").css("color","gray");
 		$(this).css("color","#2bae66");
-// 		var currentRegion=$(this).text();
+		
+		$.ajax({
+			
+			type:"post",
+			dataType: "text",
+			url:"RegionChange",
+			data:{"CurrentRegion":CurrentRegion},
+			success:function(data){
+				
+			$('body').html(data);
+			
+			}
+		});
 	});
 
 });
@@ -76,8 +90,7 @@ $(document).ready(function(){
     
       <c:set var="i" value="0" />
    <c:set var="j" value="3" />
-   <c:forEach var="region" items="${regionlist }" varStatus="stauts">
-   <c:if test="${region.region=='서울'}">
+   <c:forEach var="region" items="${regionList }" varStatus="stauts">
    <c:if test="${i%j==0 }">
    <tr>
    </c:if>
@@ -111,9 +124,6 @@ $(document).ready(function(){
     </tr>
     </c:if>
 	<c:set var="i" value="${i+1 }"/>
-	
-	</c:if>
-	
 	</c:forEach>
      
   </table>

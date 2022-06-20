@@ -165,19 +165,16 @@ div.themaTripText > div.themeaofkorea{
     top: -226px;
 }
 
-div.themaTripText > div.themeaofkorea > a.themea{
+div.themaTripText > div.themeaofkorea > span.themea{
+	cursor: pointer;
 	margin-left: 46px;
 	font-size: 1.2em;
 	color: gray;
 }
 
-div.themaTripText > div.themeaofkorea > a:hover{
+div.themaTripText > div.themeaofkorea > span:hover{
 	color: #212529;
 	transition: 0.3s ease; 
-}
-
-div.themaTripText > div.themeaofkorea > a.unique-experience{
-	color: #2bae66;
 }
 
 div.themaTripText div.sortselectbar{
