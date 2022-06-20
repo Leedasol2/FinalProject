@@ -69,5 +69,19 @@ public class LoginController {
 		return "/html/loginMissPass";
 	}	
 	
+	//카카오 로그인
+	@GetMapping("/KakaoLogin")
+	public String KakaoLogin() {
+		
+		StringBuffer loginUrl = new StringBuffer();
+        loginUrl.append("https://kauth.kakao.com/oauth/authorize?client_id=");
+        loginUrl.append("ab610954ac33b0b98bd1acd54bf7f569"); 
+        loginUrl.append("&redirect_uri=");
+        loginUrl.append("http://localhost:9001"); 
+        loginUrl.append("&response_type=code");
+        
+        return "redirect:"+loginUrl.toString();
+	}
+	
 	
 }

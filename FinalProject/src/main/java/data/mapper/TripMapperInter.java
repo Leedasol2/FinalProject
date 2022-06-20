@@ -15,8 +15,8 @@ public interface TripMapperInter {
 	public List<TripDto> getList(HashMap<String, Integer> map);
 	public TripDto getData(String tnum);
 	public String getTitle(String tnum); //by은비
-	public List<TripDto> regionList(HashMap<String, Integer> map2);
-	public List<TripDto> themeList(HashMap<String, Integer> map3);
+	public List<TripDto> getRegionList(String region);
+	public List<TripDto> getThemeList(String theme);
 	
 	//동현
 	public List<TripDto> getAllTrips(); 
