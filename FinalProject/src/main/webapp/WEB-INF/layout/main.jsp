@@ -84,8 +84,8 @@
 							<div class="img-box">
 								<img src="${root}/image/asset/main-tripstorybanner.png">
 							</div>
-							<div class="tripstory-subject">
-								<a href="/board/shareTripHome">오늘의 여행</a>
+							<div class="tripstory-subject" onclick="location.href='/board/shareTripHome'">
+								<a >오늘의 여행</a>
 							</div>
 							<ul class="tripstory-list">
 							  <c:forEach var="bdto" items="${boardlist}" begin="0" end="7">
