@@ -36,4 +36,27 @@ public class BoardService {
 		map.put("perpage", perpage); 
 		return mapper.getList(map);
 	}
+	
+	public BoardDto getBoard(String bnum) {
+		return mapper.getBoard(bnum);
+	}
+	
+	public void viewUp(String bnum) {
+		mapper.viewUp(bnum);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

@@ -26,4 +26,21 @@
 	<select id="getList" parameterType="HashMap" resultType="bdto"> 
 		select * from board order by bnum desc limit #{start},#{perpage} 
 	</select> 
+	
+	<!-- bnum값으로 게시물 불러오기 -->
+	<select id="getBoard" parameterType="String" resultType="bdto">
+		select * from board where bnum=#{bnum}
+	</select>
+	
+	<!-- 조회수 증가 -->
+	<update id="viewUp" parameterType="String">
+		update board set views=views+1 where bnum=#{bnum}
+	</update>
+	
+	
+	
+	
+	
+	
+	
 </mapper>

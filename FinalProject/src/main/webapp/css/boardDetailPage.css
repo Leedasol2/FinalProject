@@ -108,14 +108,14 @@ div.boardDetailPage-main td.list hr.underline{
 div.boardDetailPage-main pre.content-body{
 	display: block;
     padding: 16px 9.5px 9.5px 9.5px;
-    font-size: 13px;
+    font-size: 13pt;
     line-height: 1.42857143;
     color: #333;
     word-break: break-all;
     word-wrap: break-word;
     border: 0px;
     width: 900px;
-    height: 700px;
+    margin-bottom: 50px;
     background-color: #fff;
 }
 

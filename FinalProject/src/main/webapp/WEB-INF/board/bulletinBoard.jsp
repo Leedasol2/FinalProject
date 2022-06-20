@@ -49,7 +49,7 @@
 						<c:set var="no" value="${no-1 }"></c:set>
 						<!-- 제목+첨부파일+댓글수+새글 -->
 						<td class="subject">
-							<a href="boardDetailPage?bnum=${dto.bnum }">
+							<a href="detail?bnum=${dto.bnum }&currentPage=${currentPage }">
 								<span class="subject">${dto.subject }</span>
 								
 								<c:if test="${dto.photo!='no' }">
