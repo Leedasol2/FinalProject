@@ -37,6 +37,10 @@ public class TripService {
 		return tripMapper.getAllTrips();
 	}
 	
+	public List<TripDto> getAllList(){
+		return tripMapper.getAllList();
+	}
+	
 	public List<TripDto> regionList(int start, int perpage){
 		
 		HashMap<String, Integer> map2=new HashMap<>();

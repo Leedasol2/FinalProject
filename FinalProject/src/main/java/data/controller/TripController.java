@@ -88,11 +88,28 @@ public class TripController {
 	}
 	
 	//테마별여행지 페이지
-	@GetMapping("themaTrip")
-	public String themaTrip() {
-			
-		return "/html/themaTrip";
+	//이용기
+	@GetMapping("/myTrip/themeParkList")
+	public ModelAndView themeParkList() {
+		
+		ModelAndView model=new ModelAndView();
+		
+		List<TripDto> list=tservice.getAllList();
+		
+		model.addObject("list", list);
+				
+		model.setViewName("/myTrip/themeParkList");
+		
+		return model;
 	}
+	
+	//이용기
+	@GetMapping("/festival/festivalList")
+	public String festival() {
+		
+		return "/festival/festivalList";
+	}
+	
 	
 	//지역별여행지 페이지
 	@GetMapping("regionTrip")
