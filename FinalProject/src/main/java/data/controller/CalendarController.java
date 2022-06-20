@@ -1,7 +1,5 @@
 package data.controller;
 
-import java.util.List;
-
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +9,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
 
 import data.dto.CalendarDto;
 import data.service.CalendarService;
@@ -46,13 +43,17 @@ public class CalendarController {
 		return "true";
 	}
 	
+	
 	//delete
-	@GetMapping("/mypage/ScheDelete")
+	@PostMapping("/mypage/ScheDelete")
 	public String delete(@RequestParam String schenum)
 	{
+		System.out.println(schenum);
 		service.deleteSchedule(schenum);
-		return "redirect:list";
+		return "true";
 	}
+	
+	
 	
 
 }
