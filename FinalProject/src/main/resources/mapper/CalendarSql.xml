@@ -10,4 +10,7 @@
 	<delete id="deleteSchedule" parameterType="cdto">
 		delete from schedule where schenum=#{schenum}
 	</delete>
+	<select id="getSnum" resultType="String">
+		select schenum from schedule where content=#{content}
+	</select>
 </mapper>

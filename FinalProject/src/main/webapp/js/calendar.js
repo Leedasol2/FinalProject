@@ -14,6 +14,7 @@ var loadCalendarEvent = function(){
 									title: r[i]['content'],
 									start: r[i]['beginday'],
 									end: r[i]['endday'],
+									id: r[i]['schenum'],
 								});
 							}
 						}
@@ -21,17 +22,7 @@ var loadCalendarEvent = function(){
 			}
 
 document.addEventListener('DOMContentLoaded', function () {
-	/*$.ajax({
-		type: "get",
-		dataType: "json",
-		url: "/mypage/ScheList",
-		//contentType: 'application/json',
-		success: function(data) {
-			console.log(data);
-		}
-	});*/
-			
-			
+
             var calendarEl = document.getElementById('calendar');
             calendar = new FullCalendar.Calendar(calendarEl, {
 				locale : 'ko',
@@ -85,10 +76,26 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 },
                 editable: true, // false로 변경 시 draggable 작동 x 
-                displayEventTime: false // 시간 표시 x
+                displayEventTime: false, // 시간 표시 x
+                eventClick: function(info) {
+					    if(confirm("'"+ info.event.title +"' 일정을 삭제하시겠습니까 ?")){
+                                // 확인 클릭 시
+                                $.ajax({
+									type:"post",
+									dataType:"text",
+									url:"/mypage/ScheDelete",
+									data : {'schenum':info.event.id},
+									success: function(data){
+										
+									}
+								});
+								loadCalendarEvent();
+						}
+			  }
             });
             
             calendar.render();
             loadCalendarEvent();
             
         });
+        

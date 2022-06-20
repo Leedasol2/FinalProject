@@ -27,4 +27,5 @@ public class CalendarService {
 		mapper.deleteSchedule(schenum);
 	}
 	
+	
 }
