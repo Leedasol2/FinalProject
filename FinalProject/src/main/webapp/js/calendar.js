@@ -15,6 +15,7 @@ var loadCalendarEvent = function(){
 									start: r[i]['beginday'],
 									end: r[i]['endday'],
 									id: r[i]['schenum'],
+									color: r[i]['schecolor']
 								});
 							}
 						}
@@ -50,10 +51,12 @@ document.addEventListener('DOMContentLoaded', function () {
                                 }else if(new Date(end_date)- new Date(start_date) < 0){ // date 타입으로 변경 후 확인
                                     alert("종료일이 시작일보다 먼저입니다.");
                                 }else{ // 정상적인 입력 시
+                                var color = $("input[type=radio][name=calendar_color]:checked").val();
                                     var obj = {
                                         "content" : content,
                                         "beginday" : start_date,
-                                        "endday" : end_date
+                                        "endday" : end_date,
+                                        "schecolor" : color,
                                     }//전송할 객체 생성
 
                                     console.log(obj); //서버로 해당 객체를 전달해서 DB 연동 가능

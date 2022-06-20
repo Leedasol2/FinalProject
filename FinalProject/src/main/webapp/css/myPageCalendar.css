@@ -88,3 +88,42 @@ input[type='radio']:nth-child(6) {background-color:#0b8043;}
 input[type='radio']:nth-child(7) {background-color:#039be5;}
 input[type='radio']:nth-child(8) {background-color:#3f51b5;}
 
+div.form-group {
+    margin-bottom: 7px;
+}
+label.col-form-label {
+    margin: 15px 0;
+}
+.modal-content-cal {
+	background-color:#fff;
+    width: 333px;
+    height: 483px;
+    border-radius:10px;
+}
+.modal-dialog-cal {
+    width: 333px;
+    margin: 100px auto;
+}
+.modal-header-cal {
+    background-color: #2bae66;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.modal-title-cal{
+	font-family: 'MinSans-Medium';
+	font-size:14pt;
+    color: #212529;
+    padding-left: 15px;
+}
+button.close {
+    padding-right: 15px;
+}
+.btn-warning {
+    color: #fff;
+    background-color: #2bae66;
+    border: none;
+}

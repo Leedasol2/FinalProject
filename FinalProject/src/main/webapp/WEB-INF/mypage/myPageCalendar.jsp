@@ -45,10 +45,10 @@
  <!-- modal 추가 -->
   <div class="modal" id="calendarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
-      <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">일정을 입력하세요.</h5>
+      <div class="modal-dialog-cal" role="document">
+            <div class="modal-content-cal">
+                <div class="modal-header-cal">
+                    <h5 class="modal-title-cal" id="exampleModalLabel">일정 등록</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -61,6 +61,17 @@
                         <input type="date" class="form-control" id="calendar_start_date" name="calendar_start_date">
                         <label for="taskId" class="col-form-label">종료 날짜</label>
                         <input type="date" class="form-control" id="calendar_end_date" name="calendar_end_date">
+                        <label for="taskId" class="col-form-label">색상 선택</label>
+                        <div class="radio-group">
+	                        <input type="radio" name="calendar_color" value="#d50000" id="calendar_color" checked="checked">
+	                        <input type="radio" name="calendar_color" value="#e67c73" id="calendar_color">
+	                        <input type="radio" name="calendar_color" value="#f4511e" id="calendar_color">
+	                        <input type="radio" name="calendar_color" value="#f6bf26" id="calendar_color">
+	                        <input type="radio" name="calendar_color" value="#33b679" id="calendar_color">
+	                        <input type="radio" name="calendar_color" value="#0b8043" id="calendar_color">
+	                        <input type="radio" name="calendar_color" value="#039be5" id="calendar_color">
+	                        <input type="radio" name="calendar_color" value="#3f51b5" id="calendar_color">
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
