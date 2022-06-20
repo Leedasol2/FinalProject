@@ -48,7 +48,7 @@ public class CalendarController {
 	@PostMapping("/mypage/ScheDelete")
 	public String delete(@RequestParam String schenum)
 	{
-		System.out.println(schenum);
+		//System.out.println(schenum);
 		service.deleteSchedule(schenum);
 		return "true";
 	}

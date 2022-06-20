@@ -11,11 +11,12 @@ var loadCalendarEvent = function(){
 						success: function(r) {
 							for(var i=0; i < r.length; i++) {
 								calendar.addEvent({
+									
 									title: r[i]['content'],
 									start: r[i]['beginday'],
 									end: r[i]['endday'],
 									id: r[i]['schenum'],
-									color: r[i]['schecolor']
+									color: r[i]['schecolor'],
 								});
 							}
 						}
@@ -27,7 +28,8 @@ document.addEventListener('DOMContentLoaded', function () {
             var calendarEl = document.getElementById('calendar');
             calendar = new FullCalendar.Calendar(calendarEl, {
 				locale : 'ko',
-                timeZone: 'UTC',
+                timeZone: 'UTC', //UTC로 하면 일정이 전부 하루씩 당겨짐, local이나 Asia/Seoul로 하면 마지막 날짜 짤림
+                allDay:true,
                 initialView: 'dayGridMonth', // 홈페이지에서 다른 형태의 view를 확인할  수 있다.
                 headerToolbar: {
 					left: 'addEventButton',
@@ -78,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         }
                     }
                 },
-                editable: true, // false로 변경 시 draggable 작동 x 
+                editable: false, // false로 변경 시 draggable 작동 x 
                 displayEventTime: false, // 시간 표시 x
                 eventClick: function(info) {
 					    if(confirm("'"+ info.event.title +"' 일정을 삭제하시겠습니까 ?")){
@@ -94,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
 								});
 								loadCalendarEvent();
 						}
-			  }
+			  },
             });
             
             calendar.render();

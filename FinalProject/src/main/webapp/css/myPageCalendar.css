@@ -127,3 +127,37 @@ button.close {
     background-color: #2bae66;
     border: none;
 }
+.fc-h-event .fc-event-title-container {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    cursor: pointer;
+}
+.fc .fc-toolbar-title {
+    font-family: 'MinSans-Black';
+    font-size: 1.75em;
+    margin: 0;
+}
+button.fc-addEventButton-button.fc-button.fc-button-primary, button.fc-prev-button.fc-button.fc-button-primary,button.fc-next-button.fc-button.fc-button-primary {
+    color: #fff;
+    color: var(--fc-button-text-color,#fff);
+    background-color: #2bae66;
+    background-color: var(--fc-button-bg-color,#2bae66);
+    border-color: #2bae66;
+    border-color: var(--fc-button-border-color,#2bae66);
+}
+.fc-icon-chevron-left:before {
+    content: "\e900";
+    color: white;
+}
+.fc-icon-chevron-right:before {
+    content: "\e901";
+    color: white;
+}
+.fc .fc-button-primary:focus, .fc .fc-button-primary:not(:disabled).fc-button-active:focus, .fc .fc-button-primary:not(:disabled):active:focus {
+    box-shadow: 0 0 0 0rem rgb(76 91 106 / 0%);
+}
+.fc .fc-button:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0rem rgb(44 62 80 / 5%);
+}
