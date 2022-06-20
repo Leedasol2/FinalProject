@@ -37,7 +37,7 @@ $(function(){
 	<img src="${root}/image/tripspot/${fn:split(tdto.image,',')[0]}"  class="tripdetailimg">
 	</div>
 	<div class="tripsogae">
-	<div class="tripdetailname"><b>${tdto.title }</b></div><div class="rstar">review 테이블 rstar</div>
+	<div class="tripdetailname"><b>${tdto.title }</b></div><div class="rstar">${dto.rstar }</div>
 	<div class="tripsubcontent">
 	${tdto.intro }
 	</div>

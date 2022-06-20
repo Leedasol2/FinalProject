@@ -26,4 +26,13 @@
 	<select id="getMnum" parameterType="String" resultType="String">
 		select mnum from review where rnum=#{rnum}
 	</select>
+	<select id="getRstar" parameterType="String" resultType="rdto">
+	select * from review where tnum=#{tnum}
+	</select>
+	<select id="getRData" parameterType="String" resultType="rdto">
+	select * from review where tnum=#{tnum}
+	</select>
+	<select id="getrstar" parameterType="String" resultType="String">
+	select rstar from review where tnum=#{tnum}
+	</select>
 </mapper>

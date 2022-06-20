@@ -19,4 +19,9 @@ public interface ReviewMapperInter {
 	public void deleteReview(String rnum);
 	public int getTnum();
 	public String getMnum(String rnum);
+	
+	//강진
+	public List<ReviewDto> getRstar(String tnum);
+	public ReviewDto getRData(String tnum);
+	public String getrstar(String tnum);
 }

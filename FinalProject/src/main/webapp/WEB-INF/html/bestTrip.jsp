@@ -40,6 +40,7 @@ $(document).ready(function(){
 </div>
 
 <div>
+<input type="hidden" id="tnum" value="${tdto.tnum }">
   <table class="bestTripTable">
    
    <c:set var="i" value="0" />
@@ -55,16 +56,17 @@ $(document).ready(function(){
           
           <span class="trip-name">${tdto.title }</span>
           <div class="best-star-rating">
-              <input type="radio" id="5-stars" name="rating" value="5" />
-              <label for="5-stars" class="star">&#9733;</label>
-              <input type="radio" id="4-stars" name="rating" value="4" />
-              <label for="4-stars" class="star">&#9733;</label>
-              <input type="radio" id="3-stars" name="rating" value="3" />
-              <label for="3-stars" class="star">&#9733;</label>
-              <input type="radio" id="2-stars" name="rating" value="2" />
-              <label for="2-stars" class="star">&#9733;</label>
-              <input type="radio" id="1-star" name="rating" value="1" />
-              <label for="1-star" class="star">&#9733;</label>
+				${tdto.rstar }
+<!--               <input type="radio" id="5-stars" name="rating" value="5" /> -->
+<!--               <label for="5-stars" class="star">&#9733;</label> -->
+<!--               <input type="radio" id="4-stars" name="rating" value="4" /> -->
+<!--               <label for="4-stars" class="star">&#9733;</label> -->
+<!--               <input type="radio" id="3-stars" name="rating" value="3" /> -->
+<!--               <label for="3-stars" class="star">&#9733;</label> -->
+<!--               <input type="radio" id="2-stars" name="rating" value="2" /> -->
+<!--               <label for="2-stars" class="star">&#9733;</label> -->
+<!--               <input type="radio" id="1-star" name="rating" value="1" /> -->
+<!--               <label for="1-star" class="star">&#9733;</label> -->
             </div>
   		  <span class="trip-explanation">${tdto.title }</span><br>
  		  <span class="trip-region">
