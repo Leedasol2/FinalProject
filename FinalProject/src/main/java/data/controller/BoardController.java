@@ -178,8 +178,35 @@ public class BoardController {
 		return "redirect:boardDetailPage?num="+num; 
 	}
 	
-
-	
+	// 게시글 상세페이지
+	@GetMapping("/board/detail")
+	public ModelAndView boardDetail(String bnum, int currentPage) {
+		
+		ModelAndView model=new ModelAndView();
+		
+		//조회수 증가
+		service.viewUp(bnum);
+		
+		BoardDto dto=service.getBoard(bnum);
+		
+		//작성자 dto에 넣기
+		dto.setWriter(memservice.getUserId(dto.getMnum()));
+		
+		
+		
+		
+		
+		
+		
+		
+		model.addObject("dto", dto);
+		model.addObject("currentPage", currentPage);
+		
+		
+		model.setViewName("/board/board/boardDetailPage");
+		
+		return model;
+	}
 	
 	
 	

@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,54 +17,23 @@
  <table class="boardDetailPage">
   <tr>
     <td>
-      <span class="boardtitle">게시글 제목</span><br>
-      <span class="boardwriter">2runt***</span><br>
-      <span class="boardinfo">2022.06.02&nbsp;&nbsp;07:50&nbsp;&nbsp;조회 850</span>
+      <span class="boardtitle">${dto.subject }</span><br>
+      <span class="boardwriter"><c:out value="${fn:substring(dto.writer, 0, fn:length(dto.writer) - 2)}"/>**</span><br>
+      <span class="boardinfo"><fmt:formatDate value="${dto.writeday }" pattern="yyyy.MM.dd  HH:mm"/>&nbsp;&nbsp;조회 ${dto.views }</span>
         <span class="likes-img"><img alt="" src="${root }/image/asset/추천.png" class="chuimage"></span><br>
-        <span class="likes">추천수 22</span><br>
-        <span class="board-upd">수정 |</span><span class="board-del"> 삭제</span>
+        <span class="likes">추천수 ${dto.likes }</span><br>
+        <!-- 로그인중인 아이디=글쓴이 아이디 -->
+        <c:if test="">
+        	<span class="board-upd">수정 |</span><span class="board-del"> 삭제</span>
+        </c:if>
+        
       <hr class="underline">
     </td>
   </tr>
   
   <tr>
     <td>
-      <pre class="content-body">
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      게시글 내용
-      </pre>
+      <pre class="content-body">${dto.content }</pre>
    </td>
   </tr>
   

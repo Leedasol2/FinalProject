@@ -17,6 +17,17 @@ public interface BoardMapperInter {
 	//페이징 리스트
 	public List<BoardDto> getList(HashMap<String, Integer> map); 
 	
+	//디테일 페이지
+	public BoardDto getBoard(String bnum);
+	public void viewUp(String bnum);
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
