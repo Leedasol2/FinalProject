@@ -27,13 +27,18 @@ public class MainController {
 	@GetMapping("/")
 	public String home(Model model) {
 		
+		String theme="'themepark'";
+		String festival="'festival'";
+		
 		List<TripDto> triplist=tservice.getAllTrips();
-		//List<TripDto> themeparklist=tservice.getAllThemeParks();
+		List<TripDto> themeparklist=tservice.getAllActivitys(theme);
+		List<TripDto> festivallist=tservice.getAllActivitys(festival);
 		List<BoardDto> boardlist=bservice.getAllBoards();
 		
 		model.addAttribute("triplist",triplist);
 		model.addAttribute("boardlist",boardlist);
-		//model.addAttribute("themeparklist",themeparklist);
+		model.addAttribute("themeparklist",themeparklist);
+		model.addAttribute("festivallist",festivallist);
 		
 		return "/layout/main";
 	}

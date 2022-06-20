@@ -84,13 +84,13 @@
 							<div class="img-box">
 								<img src="${root}/image/asset/main-tripstorybanner.png">
 							</div>
-							<div class="tripstory-subject">
-								<a>오늘의 여행</a>
+							<div class="tripstory-subject" onclick="location.href='/board/shareTripHome'">
+								<a >오늘의 여행</a>
 							</div>
 							<ul class="tripstory-list">
 							  <c:forEach var="bdto" items="${boardlist}" begin="0" end="7">
 							  	<!-- 지역이 없어서 출력형태 수정필요 -->
-								<li><a href="#"><span class="fontgreen">지역</span><span>${bdto.subject }</span></a></li> 
+								<li><a href="#"><span class="fontgreen">좋아요 ${bdto.likes }</span><span>${bdto.subject }</span></a></li> 
 						      </c:forEach>
 							</ul>
 
@@ -105,17 +105,18 @@
 				<div class="section newpark">
 					<div class="title">새로 오픈한 테마파크</div>
 					<div class="content">
-
 						<div class="swiper mySwiper">
 							<div class="swiper-wrapper">
+	
+							<c:forEach var="theme" items="${themeparklist}" begin="0" end="7">
 								<div class="swiper-slide">
-									
 									<div class="newpark-content">
-										<img src="${root}/image/asset/메인-테마파크예시이미지.png"
-											class="tripstory-img">
+									  <c:forTokens var="img" items="${theme.image }" delims="," begin="0" end="0">
+						            	<img src="${root}/image/themepark/${img}" class="tripstory-img">
+						              </c:forTokens>
 										<div class="name-box">
 											<div class="tripstory-name">
-												<a>제주 신화월드 테마파크</a>
+												<a>${theme.title }</a>
 											</div>
 											<div class="tripstory-star-ratings">
 												<div class="tripstory-star-ratings-fill space-x-2 text-lg" style="width: ratingToPercent+ '%'">
@@ -127,18 +128,16 @@
 											</div>
 										</div>
 										<div class="explain-box">
-											<div class="tripstory-region">충청남도 당진시</div>
+											<div class="tripstory-region">${theme.location }</div>
 										</div>
 									</div>
-									
-									
 								</div>
+							</c:forEach>	
+						
 							</div>
 						</div>
 						<div class="swiper-button-next"></div>
     						<div class="swiper-button-prev"></div>
-
-
 					</div>
 				</div>
 				<!-- 테마파크끝 -->
@@ -175,77 +174,29 @@
 
 						<div class="swiper mySwiper">
 							<div class="swiper-wrapper">
+							
+							<c:forEach var="festival" items="${festivallist}" begin="0" end="7">
 								<div class="swiper-slide">
 									<div class="newpark-content">
-										<img src="${root}/image/asset/축제예시.png" class="tripstory-img">
+									  <c:forTokens var="img" items="${festival.image}" delims="," begin="0" end="0">
+						            	<img src="${root}/image/festival/${img}" class="tripstory-img">
+						              </c:forTokens>
 										<div class="name-box">
 											<div class="tripstory-name">
-												<a>제주 신화월드 테마파크</a>
+												<a>${festival.title}</a>
 											</div>
 										</div>
 										<div class="explain-box">
-											<div class="tripstory-region">강원도 춘천시</div>
+											<div class="tripstory-region">${festival.location}</div>
 										</div>
 									</div>
 								</div>
-								<div class="swiper-slide">
-									<div class="newpark-content">
-										<img src="${root}/image/asset/축제예시.png" class="tripstory-img">
-										<div class="name-box">
-											<div class="tripstory-name">
-												<a>제주 신화월드 테마파크</a>
-											</div>
-										</div>
-										<div class="explain-box">
-											<div class="tripstory-region">강원도 춘천시</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="newpark-content">
-										<img src="${root}/image/asset/축제예시.png" class="tripstory-img">
-										<div class="name-box">
-											<div class="tripstory-name">
-												<a>제주 신화월드 테마파크</a>
-											</div>
-										</div>
-										<div class="explain-box">
-											<div class="tripstory-region">강원도 춘천시</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="newpark-content">
-										<img src="${root}/image/asset/축제예시.png" class="tripstory-img">
-										<div class="name-box">
-											<div class="tripstory-name">
-												<a>제주 신화월드 테마파크</a>
-											</div>
-										</div>
-										<div class="explain-box">
-											<div class="tripstory-region">강원도 춘천시</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="newpark-content">
-										<img src="${root}/image/asset/축제예시.png" class="tripstory-img">
-										<div class="name-box">
-											<div class="tripstory-name">
-												<a>제주 신화월드 테마파크</a>
-											</div>
-										</div>
-										<div class="explain-box">
-											<div class="tripstory-region">강원도 춘천시</div>
-										</div>
-									</div>
-								</div>
-								
+							</c:forEach>
+			
 							</div>
 						</div>
 						<div class="swiper-button-next"></div>
     						<div class="swiper-button-prev"></div>
-
 
 					</div>
 				</div>

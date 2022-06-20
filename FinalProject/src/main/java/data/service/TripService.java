@@ -55,5 +55,11 @@ public class TripService {
 		map3.put("start", start);
 		map3.put("perpage", perpage);
 		return tripMapper.themeList(map3);
-}
+	}
+	
+	public List<TripDto> getAllActivitys(String part){ 
+		return tripMapper.getAllActivitys(part);
+	}
+	 
+	
 }

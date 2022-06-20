@@ -1,49 +1,49 @@
 /* font */
 @font-face {
-    font-family: 'MinSans-Light';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Light.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+font-family: 'MinSans-Light';
+src: url('[https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Light.woff](https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Light.woff)') format('woff');
+font-weight: normal;
+font-style: normal;
 }
 
 @font-face {
-    font-family: 'MinSans-Medium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+font-family: 'MinSans-Medium';
+src: url('[https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff](https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff)') format('woff');
+font-weight: normal;
+font-style: normal;
 }
 
 @font-face {
-    font-family: 'MinSans-Black';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Black.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+font-family: 'MinSans-Black';
+src: url('[https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Black.woff](https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Black.woff)') format('woff');
+font-weight: normal;
+font-style: normal;
 }
 
 /* common */
 .layout {
-	position: relative;
-	width: 100%;
-	min-height:100vh;
-	padding-bottom: 400px; /* footer height */
+position: relative;
+width: 100%;
+min-height:100vh;
+padding-bottom: 400px; /* footer height */
 }
 
 .inner{
-	max-width:970px; 
-	margin:0px auto; 
-	overflow: hidden;
+max-width:970px;
+margin:0px auto;
+overflow: hidden;
 }
 
 /* header */
 .header{}
 .header .inner {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
 .header .top-box {
-	border-bottom: 1px solid #e3e3e3; 
-	box-shadow: 0px 2px 10px rgb(0 0 0 / 10%);
+border-bottom: 1px solid #e3e3e3;
+box-shadow: 0px 2px 10px rgb(0 0 0 / 10%);
 }
 .header .top-box .inner {padding: 20px;}
 .top-box{font-family: 'MinSans-Medium';}
@@ -51,124 +51,124 @@
 
 .search-box{overflow:hidden; font-size:0;}
 .search-box > div {display:inline-block; vertical-align:middle; padding-right:30px;}
-.search-box > div:last-child{padding-right:0;} 
+.search-box > div:last-child{padding-right:0;}
 
 .search input{
-	width: 340px;
-	height: 50px;
-	background-color: #f2f2f2;
-	border-radius: 5px;
-	border: none;
-    outline: none;
-	background-image: url("/image/asset/searchicon.png");
-    background-repeat: no-repeat;
-    background-position: 5% center;
-    padding-left:15%;
-    font-size: 13pt;
-    color: #212529;
+width: 340px;
+height: 50px;
+background-color: #f2f2f2;
+border-radius: 5px;
+border: none;
+outline: none;
+background-image: url("/image/asset/searchicon.png");
+background-repeat: no-repeat;
+background-position: 5% center;
+padding-left:15%;
+font-size: 13pt;
+color: #212529;
 }
 
 .member-box button{
-	width: 150px;
-	height: 45px;
- 	font-size: 13pt;
- 	background-color: #ffffff;
-	border-radius: 10px;
+width: 150px;
+height: 45px;
+font-size: 13pt;
+background-color: #ffffff;
+border-radius: 10px;
 }
 .member-box button.login{
- 	color: #666d75;
-    border: none;
+color: #666d75;
+border: none;
 }
 .member-box button.join{
- 	color: #2bae66;
-    border: 1px solid #2bae66;
+color: #2bae66;
+border: 1px solid #2bae66;
 }
 
 .header .bottom-box .inner {overflow:unset;}
 ul.gnb {
-    font-size: 0;
-    width: 100%;
-    font-family: 'MinSans-Medium';
+font-size: 0;
+width: 100%;
+font-family: 'MinSans-Medium';
 }
 
 ul.gnb > li {
-	z-index:9;
-	position: relative;
-    display: inline-block;
-    vertical-align: top;
-    width: 25%;
-    text-align: center;
+z-index:9;
+position: relative;
+display: inline-block;
+vertical-align: top;
+width: 25%;
+text-align: center;
 }
 
 ul.gnb > li > a {
-	display: inline-block;
-	width: 100%;
-	position: relative;
-	padding: 35px 20px 35px 25px;
-    font-size: 15pt;
-	color: #495056;
-    text-decoration-line: none;
+display: inline-block;
+width: 100%;
+position: relative;
+padding: 35px 20px 35px 25px;
+font-size: 15pt;
+color: #495056;
+text-decoration-line: none;
 }
 
 ul.gnb > li > a::before {
-	content:'';
-	position:absolute;
-	top: 50%;
-	width:20px;
-	height: 100%;
-	transform: translateY(-50%);
-	background-repeat: no-repeat;
-	background-position: left center;
+content:'';
+position:absolute;
+top: 50%;
+width:20px;
+height: 100%;
+transform: translateY(-50%);
+background-repeat: no-repeat;
+background-position: left center;
 }
 
 ul.gnb > li:nth-child(1) > a::after, ul.gnb > li:nth-child(2) > a::after {
-	content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 50px;
-    width: 80px;
-    height: 7px;
-    background-color: #2bae66;
+content: '';
+position: absolute;
+bottom: -5px;
+left: 50px;
+width: 80px;
+height: 7px;
+background-color: #2bae66;
 }
 
 ul.gnb > li:nth-child(1) > a::before {
-	left: 10px;
-	background-image: url("/image/asset/headericon1.png");
+left: 10px;
+background-image: url("/image/asset/headericon1.png");
 }
 
 ul.gnb > li:nth-child(2) > a::before {
-	left: 29px;
-	background-image: url("/image/asset/headericon2.png");
+left: 29px;
+background-image: url("/image/asset/headericon2.png");
 }
 
 ul.gnb > li:nth-child(3) > a::before {
-	left: 29px;
-	background-image: url("/image/asset/headericon3.png");
+left: 29px;
+background-image: url("/image/asset/headericon3.png");
 }
 
 ul.gnb > li:nth-child(4) > a::before {
-	left: 4px;
-	background-image: url("/image/asset/headericon4.png");
+left: 4px;
+background-image: url("/image/asset/headericon4.png");
 }
 
 ul.gnb > li > a + ul {
-    position: absolute;
-    top: 88px;
-    left: 0;
-    width: 100%;
-    background-color: rgba(43, 174, 102, 0.8);
-    display: none;
-    transition: all 0.3s ease;
+position: absolute;
+top: 88px;
+left: 0;
+width: 100%;
+background-color: rgba(43, 174, 102, 0.8);
+display: none;
+transition: all 0.3s ease;
 }
 
 ul.gnb > li:hover > a + ul{
-   display:block;
+display:block;
 }
 
 ul.gnb > li > ul > li {
-    font-size: 15px;
-    color: #fff;
-    padding: 30px;
+font-size: 15px;
+color: #fff;
+padding: 30px;
 }
 
 ul.gnb > li > ul > li:hover{font-size:13pt;}
@@ -176,15 +176,15 @@ ul.gnb > li > ul > li:hover{font-size:13pt;}
 .perfect-trip{width:350px;}
 
 .perfect-trip-btn {
-    font-family: 'MinSans-Medium';
-	font-size:11pt;
-	width: 200px;
-	height: 40px;
- 	color: #ffffff;
- 	background-color: #2bae66;
-	border-radius: 10px;
-	border: none;
-	margin-left:30px;
+font-family: 'MinSans-Medium';
+font-size:11pt;
+width: 200px;
+height: 40px;
+color: #ffffff;
+background-color: #2bae66;
+border-radius: 10px;
+border: none;
+margin-left:30px;
 }
 
 /* content */
@@ -200,36 +200,36 @@ ul.gnb > li > ul > li:hover{font-size:13pt;}
 .slidebox {max-width:1000px;width:100%;margin:0 auto;text-align:center;}
 .slidebox img {max-width:100%;}
 .slidebox .slidelist {
-	padding-top:5px;
-    white-space:nowrap;
-    font-size:0;
-    overflow:hidden;
+padding-top:5px;
+white-space:nowrap;
+font-size:0;
+overflow:hidden;
 }
 .slidebox .slideitem {
-   z-index:7;
-   position:relative;
-   display:inline-block;
-   vertical-align:middle;
-   width:100%;
-   transition:all 0.5s;
+z-index:7;
+position:relative;
+display:inline-block;
+vertical-align:middle;
+width:100%;
+transition:all 0.5s;
 }
 .slidebox .slideitem label {
-   position:absolute;
-   z-index:2;
-   top:50%;
-   transform:translateY(-50%);
-   padding:20px;
-   border-radius:50%;
-   cursor:pointer;
+position:absolute;
+z-index:2;
+top:50%;
+transform:translateY(-50%);
+padding:20px;
+border-radius:50%;
+cursor:pointer;
 }
 .slidebox .slideitem img{
-	cursor:pointer;
+cursor:pointer;
 }
 
 label.left {left:20px;background-image: url("/image/asset/arrowleft.png");background-position: center center;background-size: 50%;background-repeat: no-repeat;}
 label.right {right:20px;background-image: url("/image/asset/arrowright.png");background-position: center center;background-size: 50%;background-repeat: no-repeat;}
 
- /* 페이징 스타일 */
+/* 페이징 스타일 */
 .paginglist {text-align:center;padding:30px 0;}
 .paginglist > li {/* display:inline-block; */vertical-align:middle;margin:0 10px;}	
 .paginglist > li > label {display:block;padding:10px 30px;cursor:pointer;}
@@ -240,229 +240,232 @@ label.right {right:20px;background-image: url("/image/asset/arrowright.png");bac
 [id="slide04"]:checked ~ .slidelist .slideitem {transform:translateX(-300%);animation:slide04 15s infinite;}
 
 @keyframes slide01 {
-   0% {left:0%;}
-   23% {left:0%;}
-   25% {left:-100%;}
-   48% {left:-100%;}
-   50% {left:-200%;}
-   73% {left:-200%;}
-   75% {left:-300%;}
-   98% {left:-300%;}
-   100% {left:0%;}
+0% {left:0%;}
+23% {left:0%;}
+25% {left:-100%;}
+48% {left:-100%;}
+50% {left:-200%;}
+73% {left:-200%;}
+75% {left:-300%;}
+98% {left:-300%;}
+100% {left:0%;}
 }
 @keyframes slide02 {
-   0% {left:0%;}
-   23% {left:0%;}
-   25% {left:-100%;}
-   48% {left:-100%;}
-   50% {left:-200%;}
-   73% {left:-200%;}
-   75% {left:100%;}
-   98% {left:100%;}
-   100% {left:0%;}
+0% {left:0%;}
+23% {left:0%;}
+25% {left:-100%;}
+48% {left:-100%;}
+50% {left:-200%;}
+73% {left:-200%;}
+75% {left:100%;}
+98% {left:100%;}
+100% {left:0%;}
 }
 @keyframes slide03 {
-   0% {left:0%;}
-   23% {left:0%;}
-   25% {left:-100%;}
-   48% {left:-100%;}
-   50% {left:200%;}
-   73% {left:200%;}
-   75% {left:100%;}
-   98% {left:100%;}
-   100% {left:0%;}
+0% {left:0%;}
+23% {left:0%;}
+25% {left:-100%;}
+48% {left:-100%;}
+50% {left:200%;}
+73% {left:200%;}
+75% {left:100%;}
+98% {left:100%;}
+100% {left:0%;}
 }
 @keyframes slide04 {
-   0% {left:0%;}
-   23% {left:0%;}
-   25% {left:300%;}
-   48% {left:300%;}
-   50% {left:200%;}
-   73% {left:200%;}
-   75% {left:100%;}
-   98% {left:100%;}
-   100% {left:0%;}
+0% {left:0%;}
+23% {left:0%;}
+25% {left:300%;}
+48% {left:300%;}
+50% {left:200%;}
+73% {left:200%;}
+75% {left:100%;}
+98% {left:100%;}
+100% {left:0%;}
 }/* 배너끝 */
 
 /* 여행이야기 */
 div.tripstory,div.newpark,div.festival{
-	width:100%;
-	float:left;
-	font-family: 'MinSans-Medium';
-	margin: 0 auto;
+width:100%;
+float:left;
+font-family: 'MinSans-Medium';
+margin: 0 auto;
 }
 
 div.title{
-	text-align: center;
-	font-size:30pt;
-    background-repeat: no-repeat;
-	background-size: 38px;
-	margin-bottom:5px;
+text-align: center;
+font-size:30pt;
+background-repeat: no-repeat;
+background-size: 38px;
+margin-bottom:5px;
 }
 div.title-explain{
-	font-size:15pt;
+font-size:15pt;
 }
 
 div.tripstory div.title{
-	background-image: url("/image/asset/main-tripstoryicon.png");
-	background-position: 585px center;
+background-image: url("/image/asset/main-tripstoryicon.png");
+background-position: 585px center;
 }
 div.tripstory div.content{}
 div.tripstory div.card-box{
-	width:55%;
-	overflow:hidden;
-    float: left;
+width:55%;
+overflow:hidden;
+float: left;
 }
 div.tripstory div.banner-box{
-	width: 45%;
-	overflow:hidden;
+width: 45%;
+overflow:hidden;
 }
 div.tripstory div.banner-box div.img-box{
-	margin-bottom:30px;
+margin-bottom:30px;
 }
 div.tripstory div.banner-box div.img-box > img{
-	width:100%;
+width:100%;
 }
 div.tripstory-content{
-	width: 48%;
-	float: left;
-	border: 1px solid #afafaf;
-	border-radius: 10px;
-	margin-right: 10px;
-	margin-bottom: 10px;
+width: 48%;
+float: left;
+border: 1px solid #afafaf;
+border-radius: 10px;
+margin-right: 10px;
+margin-bottom: 10px;
 }
 img.tripstory-img{
-	width: 100%;
-	height: 230px;
-	border-top-left-radius : 10px;
-	border-top-right-radius : 10px;
-	cursor: pointer;	
+width: 100%;
+height: 230px;
+border-top-left-radius : 10px;
+border-top-right-radius : 10px;
+cursor: pointer;	
 }
 
 .name-box{
-    overflow: hidden;
-    font-size: 0;
-    padding: 15px;
+overflow: hidden;
+font-size: 0;
+padding: 15px;
 }
 .explain-box {
-    overflow: hidden;
-    font-size: 0;
-    padding: 0 15px 10px 15px;
+overflow: hidden;
+font-size: 0;
+padding: 0 15px 10px 15px;
 }
 
 .name-box > div {display:inline-block;padding-right:30px;}
 .explain-box > div {display:inline-block;/* padding-right:30px; */}
 
 .tripstory-name a{display:inline-block;}
-.name-box > div:last-child{padding-right:0;float: right;} 
+.name-box > div:last-child{padding-right:0;float: right;}
 
 div.name-box > div.tripstory-name{
-    font-family: 'MinSans-Medium';
-	font-size: 12pt;
-	font-weight:bold;
-	cursor: pointer;
-    position: relative;
-    display: inline-block;
-    float: left;
-	
+font-family: 'MinSans-Medium';
+font-size: 12pt;
+font-weight:bold;
+cursor: pointer;
+position: relative;
+display: inline-block;
+float: left;
+width: 159px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
 }
 
 div.tripstory-explanation{
-	font-size: 11pt;
-	font-family: 'MinSans-Medium';
-	position: relative;
-	display: inline-block;
-	float: left;
-	width: 200px; 
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+font-size: 11pt;
+font-family: 'MinSans-Medium';
+position: relative;
+display: inline-block;
+float: left;
+width: 200px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
 }
 
 div.tripstory-region{
-	font-size: 11pt;
-	color: #2bae66;
-	cursor: pointer;
-	font-family: 'MinSans-Medium';
-	position: relative;
-	display: inline-block;
-	background-image: url("/image/asset/positionicon.png");
-	background-repeat: no-repeat;
-	background-position: 4px center;
-    background-size: 13px;
-    float: left;
-    padding: 10px 0 10px 22px;
-    width: 200px; 
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+font-size: 11pt;
+color: #2bae66;
+cursor: pointer;
+font-family: 'MinSans-Medium';
+position: relative;
+display: inline-block;
+background-image: url("/image/asset/positionicon.png");
+background-repeat: no-repeat;
+background-position: 4px center;
+background-size: 13px;
+float: left;
+padding: 10px 0 10px 22px;
+width: 200px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
 }
 /* 별점 css */
 .tripstory-star-ratings {
-  color: #aaa9a9; 
-  position: relative;
-  unicode-bidi: bidi-override;
-  width: max-content;
-  -webkit-text-fill-color: #dedede; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 0.1px;
-  -webkit-text-stroke-color: #afafaf;
-  font-size: 12px;
+color: #aaa9a9;
+position: relative;
+unicode-bidi: bidi-override;
+width: max-content;
+-webkit-text-fill-color: #dedede; /* Will override color (regardless of order) */
+-webkit-text-stroke-width: 0.1px;
+-webkit-text-stroke-color: #afafaf;
+font-size: 12px;
 }
 .tripstory-star-ratings-fill {
-  color: #fff58c;
-  padding: 0;
-  position: absolute;
-  z-index: 1;
-  display: flex;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  -webkit-text-fill-color: gold;
+color: #fff58c;
+padding: 0;
+position: absolute;
+z-index: 1;
+display: flex;
+top: 0;
+left: 0;
+overflow: hidden;
+-webkit-text-fill-color: gold;
 }
 .tripstory-star-ratings-base {
-  z-index: 0;
-  padding: 0;
+z-index: 0;
+padding: 0;
 }
 div.tripstory-banner > img{
-	width:100%;
-	cursor: pointer;
+width:100%;
+cursor: pointer;
 }
 div.tripstory-subject{
-	font-family: 'MinSans-Black';
-	font-size:17pt;
-	cursor: pointer;
-	width: 100%;
-	background-image: url("/image/asset/plusicon.png");
-	background-repeat: no-repeat;
-	background-position: right center;
-	position: relative;
-	display: inline-block;
-	vertical-align: middle;
-    padding: 0 15px;
-    margin-bottom:20px;
+font-family: 'MinSans-Black';
+font-size:17pt;
+cursor: pointer;
+width: 100%;
+background-image: url("/image/asset/plusicon.png");
+background-repeat: no-repeat;
+background-position: right center;
+position: relative;
+display: inline-block;
+vertical-align: middle;
+padding: 0 15px;
+margin-bottom:20px;
 }
 div.tripstory-subject > a {
-    float: left;
+float: left;
 }
 ul.tripstory-list {
 }
 
 ul.tripstory-list > li {
-	display: inline-block;
-	width:100%;
-	margin-bottom:15px;
-	padding: 0px 15px;
-	font-family: 'MinSans-Light';
-    font-size: 14pt;
-    line-height: 1.5;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    cursor: pointer;	
+display: inline-block;
+width:100%;
+margin-bottom:15px;
+padding: 0px 15px;
+font-family: 'MinSans-Light';
+font-size: 14pt;
+line-height: 1.5;
+white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
+cursor: pointer;	
 }
 
 ul.tripstory-list > li:last-child{
-	margin-bottom:0px;
+margin-bottom:0px;
 }
 
 .tripstory-list > li > a > span:hover {color:#2bae66}
@@ -471,24 +474,23 @@ span.fontgreen{color:#2bae66;} /* 여행이야기 끝 */
 
 .tripstory-list > li > a > span:last-child::after{content:"";}
 
-
 /* 테마파크 */
 .slider-box {
 }
 div.newpark div.title{
-	background-image: url("/image/asset/main-parkicon.png");
-	background-position: 660px center;
+background-image: url("/image/asset/main-parkicon.png");
+background-position: 660px center;
 }
 
 div.newpark div.content{
-	width:100%;
-	overflow:hidden;
-	position: relative;
-	padding: 0 50px;
+width:100%;
+overflow:hidden;
+position: relative;
+padding: 0 50px;
 }
 div.newpark-content{
-	border: 1px solid #afafaf;
-	border-radius: 10px;
+border: 1px solid #afafaf;
+border-radius: 10px;
 }
 
 div.newpark div.mySwiper {}
@@ -497,70 +499,69 @@ div.newpark div.swiper-button-next{right:0;}
 
 div.newpark div.swiper-button-prev:after, div.newpark div.swiper-button-next:after {font-size:30px; color: #2bae66;}
 
-
 /* 테마파크끝 */
 /* 코스지도 */
 div.cosmap{
-	width:100%;
-	float:left;
-    display: inherit;
-	text-align: center;
-	font-family: 'MinSans-Medium';
-	font-size:30pt;
-	visibility: hidden;
+width:100%;
+float:left;
+display: inherit;
+text-align: center;
+font-family: 'MinSans-Medium';
+font-size:30pt;
+visibility: hidden;
 }
 div.cosmap div.content{
-	overflow: hidden;
-    margin: 0 auto;
+overflow: hidden;
+margin: 0 auto;
 }
 div.cosmap div.title-box{
-	margin-bottom:35px;
+margin-bottom:35px;
 }
 div.cosmap div.cos-box {
-    width: 50%;
-    float: left;
-    padding-right:50px;
+width: 50%;
+float: left;
+padding-right:50px;
 }
 
 div.cosmap div.img-box > a {display:inline-block; position:relative;}
 div.cosmap div.img-box > a > img {width:100%;}
 div.cosmap div.img-box > a > img:first-child {width:80%;}
 div.cosmap div.img-box > a:after {
-	content:"";
-	width: 120px;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 50%;
-	background: no-repeat center url("/image/asset/btn_go.png");
-	background-size: contain;
-	transform: translateX(-50%);
-	opacity:0;
-	transition: opacity 0.2s ease; 
+content:"";
+width: 120px;
+height: 100%;
+position: absolute;
+top: 0;
+left: 50%;
+background: no-repeat center url("/image/asset/btn_go.png");
+background-size: contain;
+transform: translateX(-50%);
+opacity:0;
+transition: opacity 0.2s ease;
 }
 div.cosmap div.img-box > a:hover:after {
-	opacity:1;
+opacity:1;
 }
 
 div.cosmap div.cos-box div.img-box{}
 div.cosmap div.map-box div.img-box{}
 div.cosmap .map-box {
-    width: 50%;
-    float: left;
-    padding-left:50px;
+width: 50%;
+float: left;
+padding-left:50px;
 }
 
 /* 축제 */
 div.festival div.title{
-	background-image: url("/image/asset/main-fesicon.png");
-	background-position: 646px center;
+background-image: url("/image/asset/main-fesicon.png");
+background-position: 646px center;
 }
 
 div.festival div.content{
-	width:100%;
-	overflow:hidden;
-	position: relative;
-	padding: 0 50px;
+width:100%;
+overflow:hidden;
+position: relative;
+padding: 0 50px;
 }
 
 div.festival div.mySwiper {}
@@ -573,43 +574,43 @@ div.festival div.swiper-button-prev:after, div.festival div.swiper-button-next:a
 
 /* footer */
 .footer{
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    background-color: #2bae66;
+width: 100%;
+position: absolute;
+bottom: 0;
+background-color: #2bae66;
 }
 .footer > .inner {
-	height:400px;
-    padding-top: 40px;
+height:400px;
+padding-top: 40px;
 }
 .footer li{
-    font-family: 'MinSans-Medium';
-    color:white;
-    margin-bottom: 15px;
+font-family: 'MinSans-Medium';
+color:white;
+margin-bottom: 15px;
 }
 
 .top-info {
-    display: inline-block;
-    width: 100%;
-    padding: 0 70px;
+display: inline-block;
+width: 100%;
+padding: 0 70px;
 }
 
 .bottom-info {
-    display: flex;
-    width: 100%;
-    padding: 0 70px;
-    overflow: hidden;
-    align-items: flex-end;
+display: flex;
+width: 100%;
+padding: 0 70px;
+overflow: hidden;
+align-items: flex-end;
 }
 .top-info .logo a {
-    float: left;
-    vertical-align: middle;
+float: left;
+vertical-align: middle;
 }
 
 .name {
-    float: right;
-    display: inline-block;
-    vertical-align: middle;
+float: right;
+display: inline-block;
+vertical-align: middle;
 }
 
 .company-info {width: 51%;}
