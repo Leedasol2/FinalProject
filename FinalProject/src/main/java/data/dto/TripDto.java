@@ -24,5 +24,6 @@ public class TripDto {
 	private Timestamp endday;
 	private String part;
 	private String theme;
+	private String rstar;
 	
 }

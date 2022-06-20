@@ -11,8 +11,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import data.dto.ReviewDto;
 import data.dto.TripDto;
+import data.mapper.ReviewMapperInter;
 import data.mapper.TripMapperInter;
+import data.service.ReviewService;
 import data.service.TripService;
 
 @Controller
@@ -24,6 +27,12 @@ public class TripController {
 	@Autowired
 	TripService tservice;
 	
+	@Autowired
+	ReviewMapperInter reviewMapper;
+	
+	@Autowired
+	ReviewService rservice;
+	
 	@GetMapping("/myTripDetail")
 	public ModelAndView myTripDetail(@RequestParam("tnum") String tnum) {
 		
@@ -32,15 +41,26 @@ public class TripController {
 		tripMapper.updateReadCount(tnum);
 		TripDto tdto=tripMapper.getData(tnum);
 		
+		reviewMapper.getRstar(tnum);
+		ReviewDto rdto=rservice.getRData(tnum);
+		TripDto dto=new TripDto();
+		String rstar=rservice.getrstar(tnum);
+		dto.setRstar(rstar);
+		
 		mview.addObject("tdto",tdto);
 		mview.setViewName("/html/myTripDetail");
+		
+		mview.addObject("rstar",rstar);
+		mview.addObject("rdto",rdto);
+		mview.addObject("dto",dto);
+		
 
 		return mview;
 	}
 	
 	//베스트여행지 페이지
 	@GetMapping("bestTrip")
-	public ModelAndView bestTrip(@RequestParam(value = "currentPage",defaultValue = "1") int currentPage) {
+	public ModelAndView bestTrip(@RequestParam(value = "currentPage",defaultValue = "1") int currentPage,@RequestParam(value =  "tnum",required = false) String tnum) {
 			
 		ModelAndView mview=new ModelAndView();
 		int totalCount=30;
@@ -72,7 +92,11 @@ public class TripController {
 
 		//각페이지에서 필요한 게시글 가져오기
 		List<TripDto> list=tservice.getList(start,perpage);
-		
+		ReviewDto rdto=rservice.getRData(tnum);
+		TripDto tdto=new TripDto();
+		String rstar=rservice.getrstar(tnum);
+		tdto.setRstar(rstar);
+		List<ReviewDto> rlist=rservice.getRstar(tnum);
 		//각 글앞에 붙일 시작번호 구하기
 		//총글이 20개면? 1페이지 20 2페이지 15부터 출력해서 1씩 감소
 		int no=totalCount-(currentPage-1)*perpage;
@@ -84,6 +108,10 @@ public class TripController {
 		mview.addObject("totalPage",totalPage);
 		mview.addObject("no",no);
 		mview.addObject("totalCount",totalCount);
+		mview.addObject("rlist",rlist);
+		mview.addObject("rdto",rdto);
+		mview.addObject("rstar",rstar);
+		mview.addObject("tdto",tdto);
 		
 		mview.setViewName("/html/bestTrip");
 		
