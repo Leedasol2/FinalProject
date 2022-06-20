@@ -22,4 +22,10 @@ public interface TripMapperInter {
 	//동현
 	public List<TripDto> getAllTrips(); 
 	public List<TripDto> getAllActivitys(String part);
+	
+	//용기
+	public List<TripDto> getAllList(); 
+	public List<TripDto> getAllThemePark(String part, String region);
+
+
 }
