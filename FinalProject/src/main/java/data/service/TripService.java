@@ -49,6 +49,10 @@ public class TripService {
 	public List<TripDto> getAllActivitys(String part){ 
 		return tripMapper.getAllActivitys(part);
 	}
+	
+	public List<TripDto> getAllList(){
+		return tripMapper.getAllList();
+	}
 	 
 	
 }
