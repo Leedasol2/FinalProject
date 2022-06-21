@@ -57,5 +57,17 @@ public class TripService {
 	public List<TripDto> getAllThemePark(String part, String region){ 
 		return tripMapper.getAllThemePark(part, region);
 	}
+	public List<TripDto> getReadCountList(){
+		return tripMapper.getReadCountList();
+	}
+	public List<TripDto> getReviewList(){
+		return tripMapper.getReviewList();
+	}
+	public List<TripDto> getHighRstarList(){
+		return tripMapper.getHighRstarList();
+	}
+	public List<TripDto> getLowRstarList(){
+		return tripMapper.getLowRstarList();
+	}
 	
 }

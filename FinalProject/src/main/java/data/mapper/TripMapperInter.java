@@ -17,6 +17,10 @@ public interface TripMapperInter {
 	public String getTitle(String tnum); //by은비
 	public List<TripDto> getRegionList(String region);
 	public List<TripDto> getThemeList(String theme);
+	public List<TripDto> getReadCountList();
+	public List<TripDto> getReviewList();
+	public List<TripDto> getHighRstarList();
+	public List<TripDto> getLowRstarList();
 	
 	//동현
 	public List<TripDto> getAllTrips(); 

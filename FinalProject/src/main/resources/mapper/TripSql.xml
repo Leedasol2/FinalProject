@@ -12,7 +12,25 @@
 	</update>
 	<select id="getList" parameterType="HashMap" resultType="tdto">
 	select * from trip order by readcount desc limit #{start},#{perpage}
-	</select> <!-- readcount순으로 30개 select (bestTrip) -->
+	</select>
+	<select id="getRegionList" resultType="tdto">
+	select * from trip where region=#{region} order by readcount desc
+	</select>
+	<select id="getThemeList" resultType="tdto">
+	select * from trip where theme=#{theme} order by readcount desc
+	</select>
+	<select id="getReadCountList" resultType="tdto">
+	 select * from trip order by readcount desc
+	</select>
+	<select id="getReviewList" resultType="tdto">
+	 select * from trip order by reviewcount desc
+	</select>
+	<select id="getHighRstarList" resultType="tdto">
+	 select * from trip order by avgrstar desc
+	</select>
+	<select id="getLowRstarList" resultType="tdto">
+	 select * from trip order by avgrstar asc
+	</select>
 	<!-- by 은비 -->
 	<select id="getTitle" parameterType="String" resultType="String">
 		select title from trip where tnum=#{tnum}
@@ -25,14 +43,6 @@
 	<select id="getAllActivitys" resultType="tdto">
       select * from trip where part=${part} order by tnum desc
     </select> 
-	
-	<!-- 강진 -->
-	<select id="getRegionList" resultType="tdto">
-	select * from trip where region=#{region} order by readcount desc
-	</select>
-	<select id="getThemeList" resultType="tdto">
-	select * from trip where theme=#{theme} order by readcount desc
-	</select>
 	
 	<!-- 용기 -->
 		<select id="getAllThemePark" resultType="tdto">

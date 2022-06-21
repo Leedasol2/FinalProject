@@ -52,17 +52,13 @@ public class ReviewService {
 	{
 		return mapper.getMnum(rnum);
 	}
-	public List<ReviewDto> getRstar(String tnum) //강진
+	public double getAvgRstar(String tnum) //강진
 	{
-		return mapper.getRstar(tnum);
+		return mapper.getAvgRstar(tnum);
 	}
-	public ReviewDto getRData(String tnum)
+	public double getReviewCount(String tnum)
 	{
-		return mapper.getRData(tnum);
-	}
-	public String getrstar(String tnum)
-	{
-		return mapper.getrstar(tnum);
+		return mapper.getReviewCount(tnum);
 	}
 	
 }

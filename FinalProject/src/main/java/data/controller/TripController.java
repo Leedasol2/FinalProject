@@ -39,22 +39,14 @@ public class TripController {
 		ModelAndView mview=new ModelAndView();
 		//조회수 증가
 		tripMapper.updateReadCount(tnum);
-		TripDto tdto=tripMapper.getData(tnum);
+		TripDto dto=tripMapper.getData(tnum);
+		double avgrstar=(double)rservice.getAvgRstar(tnum);
+		dto.setAvgrstar(avgrstar);
 		
-		reviewMapper.getRstar(tnum);
-		ReviewDto rdto=rservice.getRData(tnum);
-		TripDto dto=new TripDto();
-		String rstar=rservice.getrstar(tnum);
-		dto.setRstar(rstar);
-		
-		mview.addObject("tdto",tdto);
-		mview.setViewName("/html/myTripDetail");
-		
-		mview.addObject("rstar",rstar);
-		mview.addObject("rdto",rdto);
+		mview.addObject("avgrstar",avgrstar);
 		mview.addObject("dto",dto);
 		
-
+		mview.setViewName("/html/myTripDetail");
 		return mview;
 	}
 	
@@ -92,11 +84,9 @@ public class TripController {
 
 		//각페이지에서 필요한 게시글 가져오기
 		List<TripDto> list=tservice.getList(start,perpage);
-		ReviewDto rdto=rservice.getRData(tnum);
-		TripDto tdto=new TripDto();
-		String rstar=rservice.getrstar(tnum);
-		tdto.setRstar(rstar);
-		List<ReviewDto> rlist=rservice.getRstar(tnum);
+		TripDto dto=new TripDto();
+		double avgrstar=(double)rservice.getAvgRstar(tnum);
+		dto.setAvgrstar(avgrstar);
 		//각 글앞에 붙일 시작번호 구하기
 		//총글이 20개면? 1페이지 20 2페이지 15부터 출력해서 1씩 감소
 		int no=totalCount-(currentPage-1)*perpage;
@@ -108,10 +98,8 @@ public class TripController {
 		mview.addObject("totalPage",totalPage);
 		mview.addObject("no",no);
 		mview.addObject("totalCount",totalCount);
-		mview.addObject("rlist",rlist);
-		mview.addObject("rdto",rdto);
-		mview.addObject("rstar",rstar);
-		mview.addObject("tdto",tdto);
+		mview.addObject("avgrstar",avgrstar);
+		mview.addObject("dto",dto);
 		
 		mview.setViewName("/html/bestTrip");
 		
@@ -171,13 +159,28 @@ public class TripController {
 //	}
 	
 	@GetMapping("regionTrip")
-	public String regionTrip(Model model) {
+	public String regionTrip(Model model,@RequestParam String tnum) {
 		
 		String CurrentRegion="서울";
 		
 		List<TripDto> regionList=tservice.getRegionList(CurrentRegion);
+		List<TripDto> orderReadCount=tservice.getReadCountList();
+		List<TripDto> orderReview=tservice.getReviewList();
+		List<TripDto> orderHighRstar=tservice.getHighRstarList();
+		List<TripDto> orderLowRstar=tservice.getLowRstarList();
+		
+		TripDto dto=new TripDto();
+		double avgrstar=(double)rservice.getAvgRstar(tnum);
+		dto.setAvgrstar(avgrstar);
 		
 		model.addAttribute("regionList",regionList);
+		model.addAttribute("avgrstar",avgrstar);
+		model.addAttribute("dto",dto);
+		model.addAttribute("orderReadCount",orderReadCount);
+		model.addAttribute("orderReview",orderReview);
+		model.addAttribute("orderHighRstar",orderHighRstar);
+		model.addAttribute("orderLowRstar",orderLowRstar);
+		
 		
 		return "/html/regionTrip";
 	}
@@ -194,13 +197,19 @@ public class TripController {
 		
 	//테마별여행지 페이지
 	@GetMapping("themaTrip")
-	public String themaTrip(Model model) {
+	public String themaTrip(Model model,@RequestParam String tnum) {
 		
 		String CurrentTheme="바다";
 		
 		List<TripDto> themeList=tservice.getThemeList(CurrentTheme);
 		
+		TripDto dto=new TripDto();
+		double avgrstar=(double)rservice.getAvgRstar(tnum);
+		dto.setAvgrstar(avgrstar);
+		
 		model.addAttribute("themeList",themeList);
+		model.addAttribute("avgrstar",avgrstar);
+		model.addAttribute("dto",dto);
 				
 		return "/html/themaTrip";
 	}
