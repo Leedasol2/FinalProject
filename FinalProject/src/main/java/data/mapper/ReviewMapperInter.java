@@ -12,8 +12,7 @@ public interface ReviewMapperInter {
 
 	public int getTotalCount(String mnum);
 	public ReviewDto getData(String rnum);
-	//public List<ReviewDto> getList(HashMap<String, Integer> map);
-	public List<ReviewDto> getList();
+	public List<ReviewDto> getList(HashMap<String, Object> map);
 	public void insertReview(ReviewDto dto);
 	public void updateReview(ReviewDto dto);
 	public void deleteReview(String rnum);

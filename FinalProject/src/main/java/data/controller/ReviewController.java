@@ -30,32 +30,6 @@ public class ReviewController {
 	MemberService memService;
 	
 	@GetMapping("/mypage/myPageReview")
-	public ModelAndView list(HttpSession session)
-	{
-		ModelAndView mview=new ModelAndView();
-		String myid=(String)session.getAttribute("myid");
-		String mnum=memService.getMnum(myid);
-		int totalCount=service.getTotalCount(mnum);
-		List<ReviewDto> list=service.getList();
-		for(ReviewDto r:list)
-		{
-			String title=tripMapper.getTitle(r.getTnum());
-			r.setTitle(title);
-
-			String mnum2=service.getMnum(r.getRnum());
-			r.setMnum2(mnum2);
-		}
-		mview.addObject("list",list);
-		mview.addObject("mnum",mnum);
-		mview.addObject("myid",myid);
-		mview.addObject("totalCount",totalCount);
-		mview.setViewName("/mypage/myPageReview");
-		
-		return mview;
-	}
-	
-	
-	/*@GetMapping("/mypage/myPageReview")
 	public ModelAndView list(
 		         @RequestParam (value = "currentPage",defaultValue = "1") int currentPage,
 		         HttpSession session)
@@ -71,7 +45,7 @@ public class ReviewController {
 		int startPage; //각블럭의 시작페이지
 		int endPage; //각블럭의 끝페이지
 		int start; //각페이지의 시작번호
-		int perPage=3; //한페이지에 보여질 글 갯수
+		int perPage=5; //한페이지에 보여질 글 갯수
 		int perBlock=5; //한블럭당 보여지는 페이지 개수
 
 		//총페이지 개수구하기
@@ -92,7 +66,7 @@ public class ReviewController {
 		start=(currentPage-1)*perPage;
 
 		//각페이지에서 필요한 게시글 가져오기
-		List<ReviewDto> list=service.getList(start, perPage);
+		List<ReviewDto> list=service.getList(start, perPage, mnum);
 		
 		//list에 각 리뷰에 대한 여행지 이름 가져오기
 		for(ReviewDto r:list)
@@ -122,15 +96,8 @@ public class ReviewController {
 		mview.setViewName("/mypage/myPageReview");
 		
 		return mview;
-	}*/
+	}
 	
-	// 수정버튼 누르면 수정폼 나오게
-	/*@GetMapping("/mypage/updateform")
-	public String updateform(Model model, @RequestParam String rnum) {
-		ReviewDto dto = service.getData(rnum);
-		model.addAttribute("dto", dto);
-		return "/mypage/myPageReviewEdit"; // 타일즈리졸버 1번레이아웃 경로 /폴더명/파일명
-	}*/
 	
 	@GetMapping("/mypage/myPageReviewEdit")
 	public ModelAndView myPageReviewEdit(
