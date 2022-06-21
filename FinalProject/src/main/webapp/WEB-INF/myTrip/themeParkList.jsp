@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,14 +13,17 @@
 <body>
  
 <script type="text/javascript">
+function () {
+	
 
 $(document).ready(function(){
-	  var currentPosition = parseInt($(".theme-category").css("top"));
+	  var currentPosition = parseInt($(".trip-category").css("top"));
 	  $(window).scroll(function() {
 	    var position = $(window).scrollTop(); 
-	    $(".theme-category").stop().animate({"top":position+currentPosition+"px"},1000);
+	    $(".trip-category").stop().animate({"top":position+currentPosition+"px"},1000);
 	  });
 	});
+	
 	
 //지역 선택시 글씨색 변경
 $("a.seoul").click(function(){
@@ -73,6 +78,8 @@ $("a.jeju").click(function(){
 
 </script> 
 
+
+
 <!-- 본문 시작 -->
 <div class="theme-main">
 
@@ -89,7 +96,7 @@ $("a.jeju").click(function(){
 </div>
 
 <div class="regionofkorea">
-  <a href="#a" onclick="location.href=''" class="seoul region">서울</a>
+  <a href="location.href=themeParkList?region=${dto.region }" class="seoul region">서울</a> 
   <a href="#b" class="incheon region">인천</a>
   <a href="#c" class="Gyeonggi region">경기</a> 
   <a href="#d" class="daejeon region">대전</a>
@@ -105,38 +112,46 @@ $("a.jeju").click(function(){
 <div>
   <table class="theme-content">
   
-  <c:forEach var="dto" items="${list }">
-  
-    <tr>
-    
+  <c:set var="i" value="0" />
+   <c:set var="j" value="3" />
+   <c:set var="selectregion" value="서울"/>
+   <c:forEach var="dto" items="${themeparklist }" varStatus="stauts">
+   <c:if test="${dto.region== selectregion }">
+   <c:if test="${i%j==0 }">
+   <tr>
+   </c:if>
+   
+
       <td>
         <div class="theme-content">
-          <img src="${root}/image/themepark/${dto.image}" class="theme-img">
+          <img src="${root}/image/themepark/${fn:split(dto.image,',')[0]}" class="theme-img"
+          onclick="location.href='themeParkDetail?tnum=${dto.tnum}&currentPage=${currentPage }'">
+          
           <span class="theme-name">${dto.title }</span>
-   			<div class="theme-star-rating">
-			  <input type="radio" id="5-stars" name="rating" value="5" />
-			  <label for="5-stars" class="star">&#9733;</label>
-			  <input type="radio" id="4-stars" name="rating" value="4" />
-			  <label for="4-stars" class="star">&#9733;</label>
-			  <input type="radio" id="3-stars" name="rating" value="3" />
-			  <label for="3-stars" class="star">&#9733;</label>
-			  <input type="radio" id="2-stars" name="rating" value="2" />
-			  <label for="2-stars" class="star">&#9733;</label>
-			  <input type="radio" id="1-star" name="rating" value="1" />
-			  <label for="1-star" class="star">&#9733;</label>
-			</div>
-			
+          <div class="theme-star-rating">
+              <input type="radio" id="5-stars" name="rating" value="5" />
+              <label for="5-stars" class="star">&#9733;</label>
+              <input type="radio" id="4-stars" name="rating" value="4" />
+              <label for="4-stars" class="star">&#9733;</label>
+              <input type="radio" id="3-stars" name="rating" value="3" />
+              <label for="3-stars" class="star">&#9733;</label>
+              <input type="radio" id="2-stars" name="rating" value="2" />
+              <label for="2-stars" class="star">&#9733;</label>
+              <input type="radio" id="1-star" name="rating" value="1" />
+              <label for="1-star" class="star">&#9733;</label>
+            </div>
  		  <span class="theme-region">
- 		    <img src="${root}/image/asset/여행지 위치아이콘.png">
- 		  		${dto.location }
+ 		    <img src="${root}/image/asset/여행지 위치아이콘.png">${dto.location }
  		  </span>
         </div>
       </td>
+      </c:if>
       
-    
-      
+    <c:if test="${i%j==j-1 }">
     </tr>
-      </c:forEach>
+    </c:if>
+	<c:set var="i" value="${i+1 }"/>
+	</c:forEach>
   </table>
 </div>
 
