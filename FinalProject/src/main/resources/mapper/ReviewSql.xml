@@ -4,13 +4,13 @@
 	<select id="getTotalCount" parameterType="String" resultType="int">
 		select count(*) from review where mnum=#{mnum}
 	</select>
-	<select id="getList" parameterType="HashMap" resultType="rdto">
-		select * from review order by rnum desc
-	</select>
 	<select id="getData" parameterType="String" resultType="rdto">
 		select * from review where rnum=#{rnum}
-		<!--  limit #{start},#{perpage} -->
 	</select>
+	<select id="getList" parameterType="HashMap" resultType="rdto">
+		select * from review where mnum=#{mnum} order by rnum desc limit #{start},#{perpage}
+	</select>
+	
 	<insert id="insertReview" parameterType="rdto">
 		insert into review (mnum,tnum,rstar,rcontents,rday) values(#{mnum},#{tnum},#{rstar},#{rcontents},now())
 	</insert>
