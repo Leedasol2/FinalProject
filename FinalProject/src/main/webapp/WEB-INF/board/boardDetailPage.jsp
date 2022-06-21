@@ -9,6 +9,14 @@
 <head>
 <meta charset="UTF-8">
 <title>이런여행</title>
+<script type="text/javascript">
+function() {
+	$("button.btnreply").click(function() {
+		
+	})
+}
+
+</script>
 </head>
 <body>
 
@@ -40,38 +48,80 @@
   
   <tr>
     <td>
-      <span class="comment-count">댓글 3</span>
+      <span class="comment-count">댓글 ${commentCnt }</span>
       <hr class="underline">
       <span class="comment-head">댓글</span>
     </td>
   </tr>
     
   <tr>
-  <!-- 댓글출력 -->
-    <td class="comment">
-     <div class="comment-group">
-      <span class="writer-id">asdfdg**</span>
-      <span class="comment-day">2020-06-01 04:25</span>
-      <span class="comment-del">삭제 |</span>
-      <span class="comment-upd"> 수정</span><br>
-      <span class="comment-content">댓글내용 댓글내용 댓글내용 댓글내용 댓글내용 댓글내용 댓글내용 댓글내용 댓글내용
-      댓글내용 댓글내용 댓글내용 댓글내용 댓글내용 댓글내용 댓글내용 댓글내용 댓글내용</span><br>
-      <button type="button" class="btnreply">답글</button>
-      <hr class="comment-underline">
+    <!-- 댓글출력 -->
+	<td class="comment">
+      <div class="comment-group">
+      	<!-- 댓글이 없을 때 -->
+	    <c:if test="${commentCnt==0 }">
+	    	첫 댓글을 작성해보세요!<br>
+		    <hr class="comment-underline">
+	    </c:if>
+	    <!-- 댓글이 있을 때 -->
+	    <c:if test="${commentCnt!=0 }">
+	    	<c:forEach var="cdto" items="${clist }" >
+	    	
+	    	  <!-- 답글이 아닐 때 -->
+	    	  <c:if test="${cdto.renum==0 }">
+	    	  	  <span class="writer-id"><c:out value="${fn:substring(cdto.cwriter, 0, fn:length(cdto.cwriter) - 2)}"/>**</span>
+	    	  	  <!-- 작성자일 때 -->
+	    	  	  <c:if test="${cdto.cwriter.equals(dto.writer) }">
+	    	  	  	<span class="boardowner-writer">작성자</span>
+	    	  	  </c:if>
+			      <span class="comment-day"><fmt:formatDate value="${cdto.writeday }" pattern="yyyy-MM-dd HH:mm"/></span>
+			      <!-- 댓글작성자로 로그인중일때 -->
+			      <c:if test="${cdto.cwriter.equals(sessionScope.myid) }">
+			      	<span class="comment-del">삭제 |</span><span class="comment-upd"> 수정</span><br>
+			      </c:if>
+			      <span class="comment-content">${cdto.content }</span><br>
+			      <button type="button" class="btnreply">답글</button>
+
+			      <hr class="comment-underline">
+	    	  </c:if>
+	    	  
+	    	  	<!-- 답글 리스트 - 나중에 -->
+		    	  <c:if test="${cdto.renum==cdto.cnum }">
+		    	  
+		    	  	<div class="replyComment">
+				      <span class="writer-id"><c:out value="${fn:substring(cdto.cwriter, 0, fn:length(cdto.cwriter) - 2)}"/>**</span>&nbsp;
+		    	  	  <!-- 작성자일 때 -->
+		    	  	  <c:if test="${cdto.cwriter.equals(dto.writer) }">
+		    	  	  	<span class="boardowner-writer">작성자</span>
+		    	  	  </c:if>
+				      <span class="comment-day"><fmt:formatDate value="${cdto.writeday }" pattern="yyyy-MM-dd HH:mm"/></span>
+				      
+				      <!-- 댓글작성자로 로그인중일때 -->
+				      <c:if test="${cdto.cwriter.equals(sessionScope.myid) }">
+				      	<span class="comment-del">삭제 |</span><span class="comment-upd"> 수정</span><br>
+				      </c:if>
+					  <span class="comment-content">${cdto.content }</span><br>
+				      <hr class="comment-underline">
+					    <!-- 답글작성 form-로그인 일때만 -->
+					    <div class="replyform">
+					      <c:if test="${sessionScope.loginok=='yes' }">
+						      <form action="/comments/insert" method="post">
+						      	<input type="hidden" name="bnum" value="${dto.bnum }">
+						      	<input type="hidden" name="renum" value="0">
+						      	<input type="hidden" name="currentPage" value="${currentPage }">
+							      <span class="comment-writer"><c:out value="${fn:substring(sessionScope.myid, 0, fn:length(sessionScope.myid) - 2)}"/>**</span>
+							      <span class="noReply">답글작성취소</span>
+							      <button type="submit" class="comment-insertbtn">등록</button><br>
+							      <input type="text" name="content" class="commentbox reply" required="required">
+						      </form>
+					      </c:if>
+					    </div>
+				    </div>
+		    	  </c:if>
+	    	</c:forEach>
       
-      <span class="writer-id">nnn34**</span>
-      <span class="comment-day">2020-06-01 04:25</span><br>
-      <span class="comment-content">댓글내용 댓글내용 댓글내용 댓글내용 댓글내용 댓글내용 댓글내용 댓글내용 댓글내용
-      댓글내용 댓글내용 댓글내용 댓글내용 댓글내용 댓글내용 댓글내용 댓글내용 댓글내용</span><br>
-      <button type="button" class="btnreply">답글</button>
-      <hr class="comment-underline">
-      
-      <span class="boardowner-id">bnn1**</span>&nbsp;
-      <span class="boardowner-writer">작성자</span>
-      <span class="comment-day">2020-06-01 04:25</span><br>
-      <span class="boardowner-content">감사합니다</span><br>
-      <hr class="comment-underline">
-      
+	    </c:if>
+
       <!-- 댓글작성 form-로그인 일때만 -->
       <c:if test="${sessionScope.loginok=='yes' }">
 	      <form action="/comments/insert" method="post">
