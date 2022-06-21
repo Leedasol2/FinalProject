@@ -173,9 +173,9 @@ public class BoardController {
 		
 		//insert 
 		service.insertOfBoard(dto); 
-		int num=service.getMaxBnum();  
+		int bnum=service.getMaxBnum();  
 		//방금 쓴 글의 상세페이지로 이동
-		return "redirect:boardDetailPage?num="+num; 
+		return "redirect:boardDetailPage?bnum="+bnum; 
 	}
 	
 	// 게시글 상세페이지

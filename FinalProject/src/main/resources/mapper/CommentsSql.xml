@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTDMapper3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="data.mapper.CommentsMapperInter">
+
+	<insert id="insertOfComments" parameterType="comdto">
+		insert into comments(mnum, bnum, content, writeday, renum) values(#{mnum}, #{bnum}, #{content}, now(), #{renum})
+	</insert>
+	
+	<select id="getComments" parameterType="String" >
+		select * from comments where bnum=#{bnum}
+	</select>
+	
+	
+	
+</mapper>
