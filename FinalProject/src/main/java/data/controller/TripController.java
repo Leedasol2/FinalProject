@@ -248,5 +248,21 @@ public class TripController {
 			
 			return "/festival/festivalList";
 		}
+		
+		@GetMapping("/myTrip/themeParkDetail")
+		public ModelAndView themeParkDetail(@RequestParam("tnum") String tnum) {
+			
+			ModelAndView model=new ModelAndView();
+			
+			//조회수 ㅡ증가
+			tripMapper.updateReadCount(tnum);
+			TripDto tdto=tripMapper.getData(tnum);
+			
+			model.addObject("tdto",tdto);
+			
+			model.setViewName("/myTrip/themeParkDetail");
+			
+			return model;
+		}
 	
 }
