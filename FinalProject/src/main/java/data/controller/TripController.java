@@ -217,18 +217,30 @@ public class TripController {
 	
 	//이용기
 		@GetMapping("/myTrip/themeParkList")
-		public ModelAndView themeParkList() {
+		public String themeParkList(Model model) {
 			
-			ModelAndView model=new ModelAndView();
+			String theme="'themepark'";
 			
-			List<TripDto> list=tservice.getAllList();
+			List<TripDto> themeparklist=tservice.getAllActivitys(theme);
 			
-			model.addObject("list", list);
+			model.addAttribute("themeparklist",themeparklist);
 					
-			model.setViewName("/myTrip/themeParkList");
 			
-			return model;
+			return "/myTrip/themeParkList";
 		}
+		
+		@PostMapping("themeChange")
+		public String themeChange(@RequestParam String themeregion,Model model) {
+			
+			String selectregion=themeregion;
+			
+			List<TripDto> themeparklist=tservice.getAllActivitys(selectregion);
+	
+			model.addAttribute("themeparklist", themeparklist);						
+						
+			return "/myTrip/themeParkList";
+		}
+		
 		
 		//이용기
 		@GetMapping("/festival/festivalList")
