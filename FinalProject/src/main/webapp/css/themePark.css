@@ -165,18 +165,18 @@ div.regionofkorea{
     
 }
 
-div.regionofkorea > a.region{
+div.regionofkorea > span.region{
 	margin-left: 33px;
 	font-size: 1.2em;
 	color: gray;
 }
 
-div.regionofkorea > a:hover{
+div.regionofkorea > span:hover{
 	color: #212529;
 	transition: 0.3s ease; 
 }
 
-div.regionofkorea > a.daejeon-chungcheong{
+div.regionofkorea > span.daejeon-chungcheong{
 	color: #2bae66;
 }
 
