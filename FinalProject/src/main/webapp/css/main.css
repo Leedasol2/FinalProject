@@ -195,7 +195,7 @@ ul.gnb > li > ul > li:hover{font-size:13pt;}
 .container .section .title{margin-bottom:45px;}
 .container .section.cosmap .title{margin-bottom:20px;}
 
-/* ¹è³Ê */
+/* ï¿½ï¿½ï¿½ */
 .slidebox ul,li{margin:0;padding:0;}
 [name="slide"] {display:none;}
 .slidebox {max-width:1000px;width:100%;margin:0 auto;text-align:center;}
@@ -230,7 +230,7 @@ ul.gnb > li > ul > li:hover{font-size:13pt;}
 label.left {left:20px;background-image: url("/image/asset/arrowleft.png");background-position: center center;background-size: 50%;background-repeat: no-repeat;}
 label.right {right:20px;background-image: url("/image/asset/arrowright.png");background-position: center center;background-size: 50%;background-repeat: no-repeat;}
 
- /* ÆäÀÌÂ¡ ½ºÅ¸ÀÏ */
+ /* ï¿½ï¿½ï¿½ï¿½Â¡ ï¿½ï¿½Å¸ï¿½ï¿½ */
 .paginglist {text-align:center;padding:30px 0;}
 .paginglist > li {/* display:inline-block; */vertical-align:middle;margin:0 10px;}	
 .paginglist > li > label {display:block;padding:10px 30px;cursor:pointer;}
@@ -283,9 +283,9 @@ label.right {right:20px;background-image: url("/image/asset/arrowright.png");bac
    75% {left:100%;}
    98% {left:100%;}
    100% {left:0%;}
-}/* ¹è³Ê³¡ */
+}/* ï¿½ï¿½Ê³ï¿½ */
 
-/* ¿©ÇàÀÌ¾ß±â */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½Ì¾ß±ï¿½ */
 div.tripstory,div.newpark,div.festival{
 	width:100%;
 	float:left;
@@ -365,7 +365,10 @@ div.name-box > div.tripstory-name{
     position: relative;
     display: inline-block;
     float: left;
-	
+	width: 160px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 div.tripstory-explanation{
@@ -392,13 +395,13 @@ div.tripstory-region{
 	background-position: 4px center;
     background-size: 13px;
     float: left;
-    padding: 10px 0 10px 22px;
+    padding: 10px 17px 10px 22px;
     width: 200px; 
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-/* º°Á¡ css */
+/* ï¿½ï¿½ï¿½ï¿½ css */
 .tripstory-star-ratings {
   color: #aaa9a9; 
   position: relative;
@@ -467,13 +470,13 @@ ul.tripstory-list > li:last-child{
 }
 
 .tripstory-list > li > a > span:hover {color:#2bae66}
-span.fontgreen{color:#2bae66;} /* ¿©ÇàÀÌ¾ß±â ³¡ */
+span.fontgreen{color:#2bae66;} /* ï¿½ï¿½ï¿½ï¿½ï¿½Ì¾ß±ï¿½ ï¿½ï¿½ */
 .tripstory-list > li > a > span::after{padding-left:5px;padding-right:5px;content:"|"}
 
 .tripstory-list > li > a > span:last-child::after{content:"";}
 
 
-/* Å×¸¶ÆÄÅ© */
+/* ï¿½×¸ï¿½ï¿½ï¿½Å© */
 .slider-box {
 }
 div.newpark div.title{
@@ -499,8 +502,8 @@ div.newpark div.swiper-button-next{right:0;}
 div.newpark div.swiper-button-prev:after, div.newpark div.swiper-button-next:after {font-size:30px; color: #2bae66;}
 
 
-/* Å×¸¶ÆÄÅ©³¡ */
-/* ÄÚ½ºÁöµµ */
+/* ï¿½×¸ï¿½ï¿½ï¿½Å©ï¿½ï¿½ */
+/* ï¿½Ú½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 div.cosmap{
 	width:100%;
 	float:left;
@@ -551,7 +554,7 @@ div.cosmap .map-box {
     padding-left:50px;
 }
 
-/* ÃàÁ¦ */
+/* ï¿½ï¿½ï¿½ï¿½ */
 div.festival div.title{
 	background-image: url("/image/asset/main-fesicon.png");
 	background-position: 646px center;
@@ -569,8 +572,8 @@ div.festival div.swiper-button-prev{left:0;}
 div.festival div.swiper-button-next{right:0;}
 
 div.festival div.swiper-button-prev:after, div.festival div.swiper-button-next:after {font-size:30px; color: #2bae66;}
-/* ÃàÁ¦ ³¡ */
-/* ¸ÞÀÎ ³¡ */
+/* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ */
+/* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ */
 
 /* footer */
 .footer{
