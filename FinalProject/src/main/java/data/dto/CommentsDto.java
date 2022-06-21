@@ -13,7 +13,8 @@ public class CommentsDto {
 	private String mnum;
 	private String bnum;
 	private String content;
+	private int renum;
 	private Timestamp writeday;
-	private String renum;
 	
+	private String cwriter;
 }

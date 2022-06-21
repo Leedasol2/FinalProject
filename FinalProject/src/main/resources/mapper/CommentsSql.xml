@@ -6,8 +6,17 @@
 		insert into comments(mnum, bnum, content, writeday, renum) values(#{mnum}, #{bnum}, #{content}, now(), #{renum})
 	</insert>
 	
-	<select id="getComments" parameterType="String" >
+	<select id="getComments" parameterType="String" resultType="comdto">
 		select * from comments where bnum=#{bnum}
+	</select>
+	
+	<select id="getCommentsCnt" parameterType="String" resultType="int">
+		select count(*) from comments where bnum=#{bnum}
+	</select>
+	
+	<!-- 답글 반환 -->
+	<select id="getReplyComments" parameterType="String" resultType="comdto">
+		select * from comments where cnum=#{cnum}
 	</select>
 	
 	

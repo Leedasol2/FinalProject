@@ -13,6 +13,12 @@ public interface CommentsMapperInter {
 	public void insertOfComments(CommentsDto dto);
 	public List<CommentsDto> getComments(String bnum);
 	
+	public int getCommentsCnt(String bnum);
+	
+	//답글 리스트
+	public List<CommentsDto> getReplyComments(String cnum);
+	
+	
 	
 	
 	

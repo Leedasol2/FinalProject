@@ -203,3 +203,30 @@ div.boardDetailPage-main button.listbtn{
   	font-size: 1.1em;
   	margin-bottom: 18px;
 }
+
+div.boardDetailPage-main div.replyComment{
+	margin-left: 50px;
+	margin-bottom: 30px;
+}
+div.boardDetailPage-main div.replyform{
+	
+	margin-bottom: 30px;
+}
+
+div.boardDetailPage-main input.reply{
+	width: 750px;
+}
+div.boardDetailPage-main span.noReply{
+	font-size: 10pt;
+	margin-left: 10px;
+	color: gray;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+

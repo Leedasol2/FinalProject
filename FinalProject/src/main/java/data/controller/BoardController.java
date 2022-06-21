@@ -17,7 +17,9 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import data.dto.BoardDto;
+import data.dto.CommentsDto;
 import data.service.BoardService;
+import data.service.CommentsService;
 import data.service.MemberService;
 
 @Controller
@@ -28,6 +30,11 @@ public class BoardController {
 	
 	@Autowired
 	MemberService memservice;
+	
+	@Autowired
+	CommentsService comservice;
+	
+	
 	
 	
 	@GetMapping("/board/shareTripHome")
@@ -192,15 +199,21 @@ public class BoardController {
 		//작성자 dto에 넣기
 		dto.setWriter(memservice.getUserId(dto.getMnum()));
 		
+		int commentCnt=comservice.getCommentsCnt(bnum);
 		
+		//댓글
+		List<CommentsDto> clist=comservice.getComments(bnum);
 		
-		
-		
-		
+		for (CommentsDto c : clist) {
+			c.setCwriter(memservice.getUserId(c.getMnum()));
+		}
 		
 		
 		model.addObject("dto", dto);
 		model.addObject("currentPage", currentPage);
+		model.addObject("commentCnt", commentCnt);
+		model.addObject("clist", clist);
+		
 		
 		
 		model.setViewName("/board/board/boardDetailPage");
