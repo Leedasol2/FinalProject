@@ -26,54 +26,73 @@ $(document).ready(function(){
 	
 	
 //지역 선택시 글씨색 변경
-$("a.seoul").click(function(){
+$("span.seoul").click(function(){
 	$(this).css("color","#2bae66");
 	$(this).siblings().css("color","gray");
 });
-$("a.incheon").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
-});
-
-$("a.Gyeonggi").click(function(){
+$("span.incheon").click(function(){
 	$(this).css("color","#2bae66");
 	$(this).siblings().css("color","gray");
 });
 
-$("a.daejeon").click(function(){
+$("span.Gyeonggi").click(function(){
 	$(this).css("color","#2bae66");
 	$(this).siblings().css("color","gray");
 });
 
-$("a.chungcheong").click(function(){
+$("span.daejeon").click(function(){
 	$(this).css("color","#2bae66");
 	$(this).siblings().css("color","gray");
 });
 
-$("a.daegu").click(function(){
+$("span.chungcheong").click(function(){
 	$(this).css("color","#2bae66");
 	$(this).siblings().css("color","gray");
 });
-$("a.jeolla").click(function(){
+
+$("span.daegu").click(function(){
 	$(this).css("color","#2bae66");
 	$(this).siblings().css("color","gray");
 });
-$("a.gyeongsang").click(function(){
+$("span.jeolla").click(function(){
 	$(this).css("color","#2bae66");
 	$(this).siblings().css("color","gray");
 });
-$("a.busan").click(function(){
+$("span.gyeongsang").click(function(){
 	$(this).css("color","#2bae66");
 	$(this).siblings().css("color","gray");
 });
-$("a.gangwon").click(function(){
+$("span.busan").click(function(){
 	$(this).css("color","#2bae66");
 	$(this).siblings().css("color","gray");
 });
-$("a.jeju").click(function(){
+$("span.gangwon").click(function(){
 	$(this).css("color","#2bae66");
 	$(this).siblings().css("color","gray");
 });
+$("span.jeju").click(function(){
+	$(this).css("color","#2bae66");
+	$(this).siblings().css("color","gray");
+});
+
+$("div.regionofkorea > span").click(function(){
+	
+	var CurrentRegion=$(this).text();
+			
+	$.ajax({
+		
+		type:"post",
+		dataType: "text",
+		url:"RegionChange",
+		data:{"CurrentRegion":CurrentRegion},
+		success:function(data){
+			
+		$('body').html(data);
+		
+		}
+	});
+});
+
 });
 
 </script> 
@@ -96,17 +115,17 @@ $("a.jeju").click(function(){
 </div>
 
 <div class="regionofkorea">
-  <a href="location.href=themeParkList?region=${dto.region }" class="seoul region">서울</a> 
-  <a href="#b" class="incheon region">인천</a>
-  <a href="#c" class="Gyeonggi region">경기</a> 
-  <a href="#d" class="daejeon region">대전</a>
-  <a href="#e" class="chungcheong region">충청</a>
-  <a href="#f" class="daegu region">대구</a>
-  <a href="#g" class="jeolla region">전라</a>
-  <a href="#h" class="gyeongsang region">경상</a>
-  <a href="#i" class="busan region">부산</a>
-  <a href="#j" class="gangwon region">강원</a>
-  <a href="#k" class="jeju region">제주</a>
+  <span class="seoul region">서울</span> 
+  <span  class="incheon region">인천</span>
+  <span  class="Gyeonggi region">경기</span> 
+  <span  class="daejeon region">대전</span>
+  <span  class="chungcheong region">충청</span>
+  <span  class="daegu region">대구</span>
+  <span  class="jeolla region">전라</span>
+  <span  class="gyeongsang region">경상</span>
+  <span  class="busan region">부산</span>
+  <span  class="gangwon region">강원</span>
+  <span  class="jeju region">제주</span>
 </div>
 
 <div>
@@ -114,7 +133,7 @@ $("a.jeju").click(function(){
   
   <c:set var="i" value="0" />
    <c:set var="j" value="3" />
-   <c:set var="selectregion" value="서울"/>
+   <c:set var="selectregion" value="서울" />
    <c:forEach var="dto" items="${themeparklist }" varStatus="stauts">
    <c:if test="${dto.region== selectregion }">
    <c:if test="${i%j==0 }">
