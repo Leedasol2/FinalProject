@@ -26,10 +26,16 @@
       select * from trip where part=${part} order by tnum desc
     </select> 
 	
+	<!-- 강진 -->
 	<select id="getRegionList" resultType="tdto">
 	select * from trip where region=#{region} order by readcount desc
 	</select>
 	<select id="getThemeList" resultType="tdto">
 	select * from trip where theme=#{theme} order by readcount desc
 	</select>
+	
+	<!-- 용기 -->
+		<select id="getAllThemePark" resultType="tdto">
+      select * from trip where part=#{part} and region=#{region} order by tnum desc
+    </select> 
 </mapper>
