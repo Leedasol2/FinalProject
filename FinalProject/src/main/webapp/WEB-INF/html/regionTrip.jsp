@@ -66,8 +66,10 @@ $(document).ready(function(){
 
 <div class="regionofkorea">
   <span class="seoul region">서울</span>
-  <span class="incheon-Gyeonggi region">인천/경기</span>
-  <span class="daejeon-chungcheong region">대전/충청</span>
+  <span class="incheon region">인천</span>
+  <span class="Gyeonggi region">경기</span>
+  <span class="daejeon region">대전</span>
+  <span class="chungcheong region">충청</span>
   <span class="daegu region">대구</span>
   <span class="jeolla region">전라</span>
   <span class="gyeongsang region">경상</span>
@@ -102,16 +104,10 @@ $(document).ready(function(){
           
           <span class="trip-name">${region.title }</span>
           <div class="region-star-rating">
-              <input type="radio" id="5-stars" name="rating" value="5" />
-              <label for="5-stars" class="star">&#9733;</label>
-              <input type="radio" id="4-stars" name="rating" value="4" />
-              <label for="4-stars" class="star">&#9733;</label>
-              <input type="radio" id="3-stars" name="rating" value="3" />
-              <label for="3-stars" class="star">&#9733;</label>
-              <input type="radio" id="2-stars" name="rating" value="2" />
-              <label for="2-stars" class="star">&#9733;</label>
-              <input type="radio" id="1-star" name="rating" value="1" />
-              <label for="1-star" class="star">&#9733;</label>
+          ${region.tnum }
+          <c:forEach var="rdto" items="${rlist[status.index]}">
+          ${rlist.rstar}
+          </c:forEach>
             </div>
   		  <span class="trip-explanation">${region.title }</span><br>
  		  <span class="trip-region">
