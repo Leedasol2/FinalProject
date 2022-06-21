@@ -71,19 +71,22 @@ div.theme-category-title > span.title-content{
 	text-align: right;
 }
 
+div.theme-allcontent{
+	width: 750px;
+    margin-left: 180px;
+    margin-top: -125px;
+    margin-bottom: 29px;
+}
+
 div.theme-content{
 	width: 230px;
     height: 270px;
     border: 1px solid #e6e6fa;
     border-radius: 10px;
-    position: relative;
-    left: 78px;
-    top: -160px;
     margin-left: 16px;
     margin-bottom: 47px;
-    margin-top: 30px;
     cursor: pointer;
-    
+    float: left;
 }
 
 div.theme-content > img.theme-img{
@@ -111,6 +114,10 @@ div.theme-content > span.theme-region{
     top: 25px;
     cursor: pointer;
     margin-left: 10px;
+}
+
+div.theme-content > span.theme-region > img{
+	width: 11px;
 }
 
 /* 별점 css */
@@ -157,43 +164,24 @@ article {
   padding:2em;
 }
 
-div.regionofkorea{
+div.theme-main div.regionofkorea{
 	position: relative;
     left: 63px;
     top: -180px;
    	cursor: pointer;	
-    
 }
 
-div.regionofkorea > span.region{
+div.theme-main div.regionofkorea span.region{
 	margin-left: 33px;
 	font-size: 1.2em;
 	color: gray;
 }
 
-div.regionofkorea > span:hover{
+div.theme-main div.regionofkorea > span:hover{
 	color: #212529;
 	transition: 0.3s ease; 
 }
 
-div.regionofkorea > span.daejeon-chungcheong{
+div.theme-main div.regionofkorea > span.daejeon-chungcheong{
 	color: #2bae66;
 }
-
-div.selectbar{
-	position: relative;
-	left: 1310px;
-	top: 65px;
-}
-
-select.sortselect{
-	border-color: #afafaf;
-	border-radius: 5px;	
-	padding: 7px;
-	font-family: 'MinSans-Medium';
-}
-
-select.sortselect > option {
-	font-family: 'MinSans-Medium';
-	font-size: 0.9em;
-	text-align: center;

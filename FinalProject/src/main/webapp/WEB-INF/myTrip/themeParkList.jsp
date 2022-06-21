@@ -13,9 +13,7 @@
 <body>
  
 <script type="text/javascript">
-function () {
 	
-
 $(document).ready(function(){
 	  var currentPosition = parseInt($(".trip-category").css("top"));
 	  $(window).scroll(function() {
@@ -75,26 +73,6 @@ $("span.jeju").click(function(){
 	$(this).siblings().css("color","gray");
 });
 
-$("div.regionofkorea > span").click(function(){
-	
-	var CurrentRegion=$(this).text();
-			
-	$.ajax({
-		
-		type:"post",
-		dataType: "text",
-		url:"RegionChange",
-		data:{"CurrentRegion":CurrentRegion},
-		success:function(data){
-			
-		$('body').html(data);
-		
-		}
-	});
-});
-
-});
-
 </script> 
 
 
@@ -128,50 +106,31 @@ $("div.regionofkorea > span").click(function(){
   <span  class="jeju region">제주</span>
 </div>
 
-<div>
-  <table class="theme-content">
-  
-  <c:set var="i" value="0" />
-   <c:set var="j" value="3" />
-   <c:set var="selectregion" value="서울" />
-   <c:forEach var="dto" items="${themeparklist }" varStatus="stauts">
-   <c:if test="${dto.region== selectregion }">
-   <c:if test="${i%j==0 }">
-   <tr>
-   </c:if>
-   
+<div class="theme-allcontent">
 
-      <td>
-        <div class="theme-content">
-          <img src="${root}/image/themepark/${fn:split(dto.image,',')[0]}" class="theme-img"
-          onclick="location.href='themeParkDetail?tnum=${dto.tnum}&currentPage=${currentPage }'">
-          
-          <span class="theme-name">${dto.title }</span>
-          <div class="theme-star-rating">
-              <input type="radio" id="5-stars" name="rating" value="5" />
-              <label for="5-stars" class="star">&#9733;</label>
-              <input type="radio" id="4-stars" name="rating" value="4" />
-              <label for="4-stars" class="star">&#9733;</label>
-              <input type="radio" id="3-stars" name="rating" value="3" />
-              <label for="3-stars" class="star">&#9733;</label>
-              <input type="radio" id="2-stars" name="rating" value="2" />
-              <label for="2-stars" class="star">&#9733;</label>
-              <input type="radio" id="1-star" name="rating" value="1" />
-              <label for="1-star" class="star">&#9733;</label>
-            </div>
- 		  <span class="theme-region">
- 		    <img src="${root}/image/asset/여행지 위치아이콘.png">${dto.location }
- 		  </span>
-        </div>
-      </td>
-      </c:if>
-      
-    <c:if test="${i%j==j-1 }">
-    </tr>
-    </c:if>
-	<c:set var="i" value="${i+1 }"/>
-	</c:forEach>
-  </table>
+<c:forEach var="theme" items="${themeparklist}">
+    <div class="theme-content">
+      <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="theme-img">
+        <span class="theme-name">${theme.title }</span>
+   	   <div class="theme-star-rating">
+	     <input type="radio" id="5-stars" name="rating" value="5" />
+		 <label for="5-stars" class="star">&#9733;</label>
+	     <input type="radio" id="4-stars" name="rating" value="4" />
+		 <label for="4-stars" class="star">&#9733;</label>
+		 <input type="radio" id="3-stars" name="rating" value="3" />
+		 <label for="3-stars" class="star">&#9733;</label>
+	 	 <input type="radio" id="2-stars" name="rating" value="2" />
+	 	 <label for="2-stars" class="star">&#9733;</label>
+		 <input type="radio" id="1-star" name="rating" value="1" />
+		 <label for="1-star" class="star">&#9733;</label>
+	   </div>
+		 <span class="theme-region">
+ 		    <img src="${root}/image/asset/여행지 위치아이콘.png">
+ 		    제주도 서귀포시
+ 		 </span>
+     </div>    
+</c:forEach>    
+     
 </div>
 
 </div>
