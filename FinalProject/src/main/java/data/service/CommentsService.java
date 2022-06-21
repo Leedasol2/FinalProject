@@ -1,5 +1,8 @@
 package data.service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +20,17 @@ public class CommentsService {
 		mapper.insertOfComments(dto);
 	}
 	
+	public List<CommentsDto> getComments(String bnum){
+		
+		return mapper.getComments(bnum);
+	}
 	
+	public int getCommentsCnt(String bnum) {
+		return mapper.getCommentsCnt(bnum);
+	}
 	
+	public List<CommentsDto> getReplyComments(String cnum){
+		return mapper.getReplyComments(cnum);
+	}
 	
 }
