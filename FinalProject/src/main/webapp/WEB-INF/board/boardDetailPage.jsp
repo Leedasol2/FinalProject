@@ -3,6 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +14,7 @@
 
 <!-- 본문 시작 -->
 <div class="boardDetailPage-main">
-<form action="#" method="post">
+
  <table class="boardDetailPage">
   <tr>
     <td>
@@ -46,6 +47,7 @@
   </tr>
     
   <tr>
+  <!-- 댓글출력 -->
     <td class="comment">
      <div class="comment-group">
       <span class="writer-id">asdfdg**</span>
@@ -70,9 +72,17 @@
       <span class="boardowner-content">감사합니다</span><br>
       <hr class="comment-underline">
       
-      <span class="comment-writer">nnn34**</span>
-      <button type="submit" class="comment-insertbtn">등록</button><br>
-      <input type="text" name="comment" class="commentbox" required="required">
+      <!-- 댓글작성 form-로그인 일때만 -->
+      <c:if test="${sessionScope.loginok=='yes' }">
+	      <form action="/comments/insert" method="post">
+	      	<input type="hidden" name="bnum" value="${dto.bnum }">
+	      	<input type="hidden" name="renum" value="0">
+	      	<input type="hidden" name="currentPage" value="${currentPage }">
+		      <span class="comment-writer"><c:out value="${fn:substring(sessionScope.myid, 0, fn:length(sessionScope.myid) - 2)}"/>**</span>
+		      <button type="submit" class="comment-insertbtn">등록</button><br>
+		      <input type="text" name="content" class="commentbox" required="required">
+	      </form>
+      </c:if>
      </div>
     </td>
   </tr>
@@ -84,7 +94,7 @@
     </td>
   </tr>
  </table>
-</form>
+
 </div>
 <!-- 본문 끝 -->
 
