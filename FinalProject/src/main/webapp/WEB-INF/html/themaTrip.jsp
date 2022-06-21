@@ -66,7 +66,8 @@ $(document).ready(function(){
 
 <div class="themeaofkorea">
   <span class="sea themea">바다</span>
-  <span class="mountain-valley themea">산/계곡</span>
+  <span class="mountain themea">산</span>
+  <span class="valley themea">계곡</span>
   <span class="citytour themea">도시관광</span>
   <span class="rural-experience themea">농촌체험</span>
   <span class="unique-experience themea">이색체험</span>

@@ -175,9 +175,9 @@ div.regionTripText > div.regionofkorea > span:hover{
 	color: #212529;
 	transition: 0.3s ease; 
 }
-div.regionTripText > div.regionofkorea > span.seoul{
-	color: #2bae66;
-}
+/* div.regionTripText > div.regionofkorea > span.seoul{ */
+/* 	color: #2bae66; */
+/* } */
 
 div.regionTripText div.sortselectbar{
 	position: relative;
