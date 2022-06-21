@@ -26,13 +26,10 @@
 	<select id="getMnum" parameterType="String" resultType="String">
 		select mnum from review where rnum=#{rnum}
 	</select>
-	<select id="getRstar" parameterType="String" resultType="rdto">
-	select * from review where tnum=#{tnum}
+	<select id="getAvgRstar" parameterType="String" resultType="double">
+	select avg(rstar) from review where tnum=#{tnum}
 	</select>
-	<select id="getRData" parameterType="String" resultType="rdto">
-	select * from review where tnum=#{tnum}
-	</select>
-	<select id="getrstar" parameterType="String" resultType="String">
-	select rstar from review where tnum=#{tnum}
+	<select id="getReviewCount" parameterType="String" resultType="int">
+	select count(*) from review where tnum=#{tnum}
 	</select>
 </mapper>
