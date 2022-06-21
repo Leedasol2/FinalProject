@@ -161,6 +161,8 @@ div.regionofkorea{
 	position: relative;
     left: 63px;
     top: -180px;
+   	cursor: pointer;	
+    
 }
 
 div.regionofkorea > a.region{
