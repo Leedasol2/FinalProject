@@ -24,15 +24,17 @@
 						<li class="slideitem">
 							<div>
 								<label for="slide04" class="left"></label> <label for="slide02" class="right"></label>
+
 								<a href=""><img src="${root }/image/asset/banner1.png"></a>
 							</div>
+
 						</li>
 						
 						<!-- 경주 안압지 -->
 						<li class="slideitem">
 							<div>
 								<label for="slide01" class="left"></label> <label for="slide03" class="right"></label>
-								<a href="#"><img src="${root }/image/asset/banner2.png"></a>
+								<a href="myTripDetail?tnum=168"><img src="${root }/image/asset/banner2.png"></a>
 							</div>
 						</li>
 						
@@ -40,7 +42,7 @@
 						<li class="slideitem">
 							<div>
 								<label for="slide02" class="left"></label> <label for="slide04" class="right"></label>
-								<a href="#"><img src="${root }/image/asset/banner3.png"></a>
+								<a href="myTripDetail?tnum=155"><img src="${root }/image/asset/banner3.png"></a>
 							</div>
 						</li>
 						
@@ -48,7 +50,7 @@
 						<li class="slideitem">
 							<div>
 								<label for="slide03" class="left"></label> <label for="slide01" class="right"></label>
-								<a href="#"><img src="${root }/image/asset/banner4.png"></a>
+								<a href="myTripDetail?tnum=24"><img src="${root }/image/asset/banner4.png"></a>
 							</div>
 						</li>
 						
@@ -65,11 +67,11 @@
 						<div class="tripstory-content">
 						  <c:forTokens var="img" items="${tdto.image }" delims="," begin="0" end="0">
 						    <!-- 전체여행지인데 이미지 경로 어떡할건지?  -->
-							<img src="${root}/image/themepark/${img}" class="tripstory-img">
+							<img src="${root}/image/themepark/${img}" class="tripstory-img" onclick="location.href='myTripDetail?tnum=${tdto.tnum}'">
 						  </c:forTokens>
 							<div class="name-box">
 								<div class="tripstory-name">
-									<a>${tdto.title }</a>
+									<a href="myTripDetail?tnum=${tdto.tnum}">${tdto.title }</a>
 								</div>
 								<div class="tripstory-star-ratings">
 									<div class="tripstory-star-ratings-fill space-x-2 text-lg" style="width: ratingToPercent+ '%'">
@@ -99,7 +101,7 @@
 							<ul class="tripstory-list">
 							  <c:forEach var="bdto" items="${boardlist}" begin="0" end="7">
 							  	<!-- 지역이 없어서 출력형태 수정필요 -->
-								<li><a href="#"><span class="fontgreen">좋아요 ${bdto.likes }</span><span>${bdto.subject }</span></a></li> 
+								<li><a href="/board/detail?bnum=${bdto.bnum}&currentPage=1"><span class="fontgreen">좋아요 ${bdto.likes }</span><span>${bdto.subject }</span></a></li> 
 						      </c:forEach>
 							</ul>
 
@@ -121,11 +123,12 @@
 								<div class="swiper-slide">
 									<div class="newpark-content">
 									  <c:forTokens var="img" items="${theme.image }" delims="," begin="0" end="0">
-						            	<img src="${root}/image/themepark/${img}" class="tripstory-img">
+						            	<img src="${root}/image/themepark/${img}" class="tripstory-img"
+						            	onclick="location.href='/myTrip/themeParkDetail?tnum=${theme.tnum}'">
 						              </c:forTokens>
 										<div class="name-box">
 											<div class="tripstory-name">
-												<a>${theme.title }</a>
+												<a href="/myTrip/themeParkDetail?tnum=${theme.tnum}">${theme.title }</a>
 											</div>
 											<div class="tripstory-star-ratings">
 												<div class="tripstory-star-ratings-fill space-x-2 text-lg" style="width: ratingToPercent+ '%'">
@@ -188,11 +191,12 @@
 								<div class="swiper-slide">
 									<div class="newpark-content">
 									  <c:forTokens var="img" items="${festival.image}" delims="," begin="0" end="0">
-						            	<img src="${root}/image/festival/${img}" class="tripstory-img">
+						            	<img src="${root}/image/festival/${img}" class="tripstory-img"
+						            	onclick="location.href='festivalDetail?tnum=${theme.tnum}'">
 						              </c:forTokens>
 										<div class="name-box">
 											<div class="tripstory-name">
-												<a>${festival.title}</a>
+												<a href="festivalDetail?tnum=${theme.tnum}">${festival.title}</a>
 											</div>
 										</div>
 										<div class="explain-box">
