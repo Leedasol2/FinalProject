@@ -57,10 +57,8 @@ $(document).ready(function(){
           <span class="trip-name">${tdto.title }</span>
           <div class="best-star-rating">
 <%--           <c:forEach var="rdto" items="${rlist[status.index]}"> --%>
-<%--           ${rdto.tnum } --%>
-<%--           </c:forEach> --%>
-<%-- 			${status.index } --%>
-			${tdto.tnum }
+<%-- 			${dto.rstar} --%>
+<%-- 			</c:forEach> --%>
             </div>
   		  <span class="trip-explanation">${tdto.title }</span><br>
  		  <span class="trip-region">
