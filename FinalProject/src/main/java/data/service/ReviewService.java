@@ -23,17 +23,14 @@ public class ReviewService {
 	{
 		return mapper.getData(rnum);
 	}
-	/*public List<ReviewDto> getList(int start,int perpage)
+	public List<ReviewDto> getList(int start,int perpage, String mnum)
 	{
-		HashMap<String, Integer> map=new HashMap<>();
+		HashMap<String, Object> map=new HashMap<>();
 		map.put("start",start);
 		map.put("perpage", perpage);
+		map.put("mnum", mnum);
 		
 		return mapper.getList(map);
-	}*/
-	public List<ReviewDto> getList()
-	{
-		return mapper.getList();
 	}
 	public void insertReview(ReviewDto dto)
 	{
