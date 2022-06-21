@@ -24,8 +24,7 @@
 						<li class="slideitem">
 							<div>
 								<label for="slide04" class="left"></label> <label for="slide02" class="right"></label>
-
-								<a href=""><img src="${root }/image/asset/banner1.png"></a>
+								<a href="myTripDetail?tnum=98"><img src="${root }/image/asset/banner1.png"></a>
 							</div>
 
 						</li>
