@@ -25,6 +25,7 @@ public interface TripMapperInter {
 	//동현
 	public List<TripDto> getAllTrips(); 
 	public List<TripDto> getAllActivitys(String part);
+	public List<TripDto> getSearch(String title);
 	
 	//용기
 	public List<TripDto> getAllList(); 

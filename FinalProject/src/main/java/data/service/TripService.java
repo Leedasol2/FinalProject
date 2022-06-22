@@ -70,4 +70,8 @@ public class TripService {
 		return tripMapper.getLowRstarList();
 	}
 	
+	public List<TripDto> getSearch(String title){
+		return tripMapper.getSearch(title);
+	}
+	
 }
