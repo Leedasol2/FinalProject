@@ -50,9 +50,9 @@
 .top-box{font-family: 'MinSans-Medium';}
 .logo a{display:inline-block;}
 
-div.container .search-box{overflow:hidden; font-size:0;}
-div.container .search-box > div {display:inline-block; vertical-align:middle; padding-right:30px;}
-div.container .search-box > div:last-child{padding-right:0;} 
+.search-box{overflow:hidden; font-size:0;}
+.search-box > div {display:inline-block; vertical-align:middle; padding-right:30px;}
+.search-box > div:last-child{padding-right:0;} 
 
 .search input{
 	width: 340px;
