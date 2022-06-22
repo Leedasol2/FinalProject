@@ -299,4 +299,17 @@ public class TripController {
 			return model;
 		}
 	
+		@GetMapping("/search/searchTrip")
+		public ModelAndView searchTrip(@RequestParam String searchtext)
+		{
+		  ModelAndView model=new ModelAndView();
+		
+		  List<TripDto> searchlist=tservice.getSearch(searchtext);
+
+		  model.addObject("searchlist",searchlist);
+
+		  model.setViewName("/search/searchResult");
+		  return model;
+		}
+
 }
