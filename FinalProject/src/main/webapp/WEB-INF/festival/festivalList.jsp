@@ -1,12 +1,19 @@
+<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+
+<!-- 현재날짜 -->
+<c:set var="today" value="<%=new java.util.Date()%>" />
+
+<title>이런여행</title>
 
 </head>
 <body>
@@ -15,7 +22,7 @@
 <div class="festival-list-main">
 	<div class="festival-list-category">
 		<ul class="sidebar">
-			<li><a href="${root }/themePark/themeParkList">테마파크</a></li>
+			<li><a href="${root }/myTrip/themeParkList">테마파크</a></li>
 			<li><a href="${root }/festival/festivalList">축제</a></li>
 		</ul>
 	</div>
@@ -30,109 +37,35 @@
 		
 		<div class="festival-proceeding">
 			<div class="title">지금 진행중인 축제</div>
-			<div class="festival-calendar"><a href="#">달력으로 보기 ></a></div>
+			<div class="festival-calendar"><a href="${root }/festival/festivalCalendar">달력으로 보기 ></a></div>
 		</div>
 		
 		<div class="festival-list">
+		
+		<c:forEach var="festival" items="${festivallist }">
+			<c:if test="${festival.endday>=today }">
 			<div class="festival-list-content">
-				<img src="${root}/image/asset/축제예시.png" class="festival-img">
+		
+				<img src="${root}/image/festival/${fn:split(festival.image,',')[0]}" class="festival-img"
+				 onclick="location.href='festivalDetail?tnum=${festival.tnum}&currentPage=${currentPage }'">
+				
 				<div class="name-box">
 					<div class="festival-name">
-						<a href="#">네이처파크 플라워페스티벌</a>
+						<a href="#">${festival.title }</a>
 					</div>
 				</div>
 				<div class="explain-box">
-					<div class="festival-region">대구광역시 달성군</div>
+					<div class="festival-region">${festival.location }</div>
 				</div>
+			
 			</div>
-			<div class="festival-list-content">
-				<img src="${root}/image/asset/축제예시.png" class="festival-img">
-				<div class="name-box">
-					<div class="festival-name">
-						<a>네이처파크 플라워페스티벌</a>
-					</div>
-				</div>
-				<div class="explain-box">
-					<div class="festival-region">대구광역시 달성군</div>
-				</div>
-			</div>
-			<div class="festival-list-content">
-				<img src="${root}/image/asset/축제예시.png" class="festival-img">
-				<div class="name-box">
-					<div class="festival-name">
-						<a>네이처파크 플라워페스티벌</a>
-					</div>
-				</div>
-				<div class="explain-box">
-					<div class="festival-region">대구광역시 달성군</div>
-				</div>
-			</div>
-			<div class="festival-list-content">
-				<img src="${root}/image/asset/축제예시.png" class="festival-img">
-				<div class="name-box">
-					<div class="festival-name">
-						<a>네이처파크 플라워페스티벌</a>
-					</div>
-				</div>
-				<div class="explain-box">
-					<div class="festival-region">대구광역시 달성군</div>
-				</div>
-			</div>
-			<div class="festival-list-content">
-				<img src="${root}/image/asset/축제예시.png" class="festival-img">
-				<div class="name-box">
-					<div class="festival-name">
-						<a>네이처파크 플라워페스티벌</a>
-					</div>
-				</div>
-				<div class="explain-box">
-					<div class="festival-region">대구광역시 달성군</div>
-				</div>
-			</div>
-			<div class="festival-list-content">
-				<img src="${root}/image/asset/축제예시.png" class="festival-img">
-				<div class="name-box">
-					<div class="festival-name">
-						<a>네이처파크 플라워페스티벌</a>
-					</div>
-				</div>
-				<div class="explain-box">
-					<div class="festival-region">대구광역시 달성군</div>
-				</div>
-			</div>
-			<div class="festival-list-content">
-				<img src="${root}/image/asset/축제예시.png" class="festival-img">
-				<div class="name-box">
-					<div class="festival-name">
-						<a>네이처파크 플라워페스티벌</a>
-					</div>
-				</div>
-				<div class="explain-box">
-					<div class="festival-region">대구광역시 달성군</div>
-				</div>
-			</div>
-			<div class="festival-list-content">
-				<img src="${root}/image/asset/축제예시.png" class="festival-img">
-				<div class="name-box">
-					<div class="festival-name">
-						<a>네이처파크 플라워페스티벌</a>
-					</div>
-				</div>
-				<div class="explain-box">
-					<div class="festival-region">대구광역시 달성군</div>
-				</div>
-			</div>
-			<div class="festival-list-content">
-				<img src="${root}/image/asset/축제예시.png" class="festival-img">
-				<div class="name-box">
-					<div class="festival-name">
-						<a>네이처파크 플라워페스티벌</a>
-					</div>
-				</div>
-				<div class="explain-box">
-					<div class="festival-region">대구광역시 달성군</div>
-				</div>
-			</div>
+				</c:if>
+			</c:forEach>
+			
+			
+		
+				
+			
 		</div>
 	</div>
 </div>
