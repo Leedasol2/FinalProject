@@ -7,6 +7,16 @@
 <head>
 <meta charset="UTF-8">
 <title>이런여행</title>
+<script type="text/javascript">
+$(function(){
+	$(".searchtext").on("keyup",function(key) {
+		if( key.keyCode == 13 ){
+			var searchtext = $(this).val(); 
+			location.href='/search/searchTrip?searchtext='+searchtext;
+		}
+	});
+});
+</script>
 </head>
 <body>
 
@@ -21,7 +31,7 @@
 							</a>
 						</div>
 						<div class="search">
-							<input type="text" placeholder="이런 여행 없을까? 검색해보세요.">	
+							<input type="text" placeholder="이런 여행 없을까? 검색해보세요." class="searchtext">	
 						</div>
 					</div>
 					<div class="member-box">

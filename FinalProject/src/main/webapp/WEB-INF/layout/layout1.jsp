@@ -39,6 +39,7 @@
 <link rel="stylesheet" href="${root}/css/boardDetailPage.css"/>
 <link rel="stylesheet" href="${root}/css/boardupdateform.css"/>
 <link rel="stylesheet" href="${root}/css/boardwriteform.css"/>
+<link rel="stylesheet" href="${root}/css/searchResult.css"/>
 
 <!-- 이강진 -->
 <link rel="stylesheet" href="${root}/css/themeParkDetail.css"/>
