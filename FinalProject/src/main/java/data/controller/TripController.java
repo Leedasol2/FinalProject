@@ -278,11 +278,18 @@ public class TripController {
 		
 		//이용기
 		@GetMapping("/festival/festivalList")
-		public String festival() {
-			
+		public String festivalList(Model model) {
+				
+			String festival="'festival'";
+					
+			List<TripDto> festivallist=tservice.getAllActivitys(festival);
+				
+			model.addAttribute("festivallist",festivallist);
+					
 			return "/festival/festivalList";
 		}
-		
+						
+		//이용기
 		@GetMapping("/myTrip/themeParkDetail")
 		public ModelAndView themeParkDetail(@RequestParam("tnum") String tnum) {
 			
@@ -299,6 +306,30 @@ public class TripController {
 			return model;
 		}
 	
+		//이용기
+		@GetMapping("/festival/festivalDetail")
+		public ModelAndView festivalDetail(@RequestParam("tnum") String tnum) {
+					
+			ModelAndView model=new ModelAndView();
+					
+			//조회수 ㅡ증가
+			tripMapper.updateReadCount(tnum);
+			TripDto tdto=tripMapper.getData(tnum);
+					
+			model.addObject("tdto",tdto);
+					
+			model.setViewName("/festival/festivalDetail");
+					
+			return model;
+		}
+		
+		//이용기
+		@GetMapping("/festival/festivalCalendar")
+		public String festivalCalendar() {
+			
+			return "/festival/festivalCalendar";
+		}
+		
 		@GetMapping("/search/searchTrip")
 		public ModelAndView searchTrip(@RequestParam String searchtext)
 		{
