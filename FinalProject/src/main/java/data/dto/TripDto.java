@@ -25,7 +25,8 @@ public class TripDto {
 	private String part;
 	private String theme;
 	private String rstar;
+	private int sumrstar;
 	private double avgrstar;
-	private String reviewcount;
+	private int reviewcount;
 	
 }

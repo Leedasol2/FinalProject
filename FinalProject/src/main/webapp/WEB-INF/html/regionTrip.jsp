@@ -104,10 +104,7 @@ $(document).ready(function(){
           
           <span class="trip-name">${region.title }</span>
           <div class="region-star-rating">
-          ${region.tnum }
-          <c:forEach var="rdto" items="${rlist[status.index]}">
-          ${rlist.rstar}
-          </c:forEach>
+          ${region.avgrstar }
             </div>
   		  <span class="trip-explanation">${region.title }</span><br>
  		  <span class="trip-region">
