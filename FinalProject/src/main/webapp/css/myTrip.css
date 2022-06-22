@@ -77,6 +77,39 @@ div.myTripStart span.myTripBody{
 
 /* 나만의 여행지 테스트 */
 
+
+#myTrip-qna{
+	
+	display: none;
+	
+}
+
+#myTrip-result{
+	
+	display: none;
+	
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@-webkit-keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
 div.myTripStart div.myTripTest{
 	align-items: center;
   	display: flex;
@@ -106,7 +139,14 @@ div.myTripStart div.myTripTest div.answer button{
 	margin: 10px;
 	text-align: center;
 	cursor: pointer;
-	padding: 50px;
+	background-color: white;
+	color: #2bae66;
+	line-height: 37px;
+}
+
+div.myTripStart div.myTripTest div.answer button:hover{
+	background-color: #2bae66;
+	color: white;
 }
 
 div.myTripStart div.myTripTest button.noActive{
@@ -155,9 +195,15 @@ div.myTripStart div.myTripResult span{
 	font-family: MinSans-Medium;
 }
 
-div.myTripStart div.myTripResult span.green{
+div.myTripStart div.myTripResult span.result2{
+	
+	color:white;	
+}
+
+div.myTripStart div.myTripResult div.resultname{
 	color: #2bae66;
 	font-family: MinSans-Black;
+	font-size: 16pt;	
 }
 
 div.myTripStart div.myTripResult button.result{
@@ -171,10 +217,20 @@ div.myTripStart div.myTripResult button.result{
 	border-radius: 30px;
 }
 
+div.myTripStart div.myTripResult button.result2{
+	
+	margin-left: 20px;
+	font-family: MinSans-Black;
+	width: 190px;
+	height: 60px;
+	border: 1px solid #2bae66;
+	background-color: #2bae66;
+	border-radius: 30px;
+}
+
 
 div.myTripStart div.myTripResult button.result>span{
 
 	color: #2bae66;
 }
-
 
