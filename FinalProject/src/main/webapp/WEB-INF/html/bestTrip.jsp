@@ -45,7 +45,7 @@ $(document).ready(function(){
    
    <c:set var="i" value="0" />
    <c:set var="j" value="3" />
-   <c:forEach var="tdto" items="${list }" varStatus="status">
+   <c:forEach var="tdto" items="${list}" varStatus="status">
    <c:if test="${i%j==0 }">
    <tr>
    </c:if>
@@ -56,9 +56,7 @@ $(document).ready(function(){
           
           <span class="trip-name">${tdto.title }</span>
           <div class="best-star-rating">
-<%--           <c:forEach var="rdto" items="${rlist[status.index]}"> --%>
-<%-- 			${dto.rstar} --%>
-<%-- 			</c:forEach> --%>
+          ${tdto.avgrstar }
             </div>
   		  <span class="trip-explanation">${tdto.title }</span><br>
  		  <span class="trip-region">

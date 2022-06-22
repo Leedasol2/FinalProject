@@ -4,6 +4,7 @@ import java.util.List;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.bind.DefaultValue;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -39,13 +40,18 @@ public class TripController {
 		ModelAndView mview=new ModelAndView();
 		//조회수 증가
 		tripMapper.updateReadCount(tnum);
-		TripDto dto=tripMapper.getData(tnum);
-//		double avgrstar=(double)rservice.getAvgRstar(tnum);
-//		dto.setAvgrstar(avgrstar);
+		TripDto tdto=tripMapper.getData(tnum);
 		
-//		mview.addObject("avgrstar",avgrstar);
-		mview.addObject("dto",dto);
-		
+		if(rservice.getReviewcount(tnum)>0) {
+			double avgrstar=rservice.getAvgrstar(tnum);
+			int reviewcount=rservice.getReviewcount(tnum);
+			tdto.setAvgrstar(avgrstar);
+			tdto.setReviewcount(reviewcount);
+		}else {
+			double avgrstar=0;
+			tdto.setAvgrstar(avgrstar);
+		}
+		mview.addObject("tdto",tdto);
 		mview.setViewName("/html/myTripDetail");
 		return mview;
 	}
@@ -84,22 +90,35 @@ public class TripController {
 
 		//각페이지에서 필요한 게시글 가져오기
 		List<TripDto> list=tservice.getList(start,perpage);
-		TripDto dto=new TripDto();
-//		double avgrstar=(double)rservice.getAvgRstar(tnum);
-//		dto.setAvgrstar(avgrstar);
+		
 		//각 글앞에 붙일 시작번호 구하기
 		//총글이 20개면? 1페이지 20 2페이지 15부터 출력해서 1씩 감소
 		int no=totalCount-(currentPage-1)*perpage;
 		
+//		TripDto tdto=tripMapper.getData(tnum);
+		TripDto tdto=new TripDto();
+		
+		if(rservice.getReviewcount(tnum)>0) {
+			double avgrstar=rservice.getAvgrstar(tnum);
+			int reviewcount=rservice.getReviewcount(tnum);
+			tdto.setAvgrstar(avgrstar);
+			tdto.setReviewcount(reviewcount);
+		}else {
+			tdto.setAvgrstar(0);
+			tdto.setReviewcount(0);
+		}
+		
+		list.add(tdto);
+		
 		//출력에 필요한 변수들을 request에 저장
 		mview.addObject("list",list); //댓글개수 포함후 전달
+		mview.addObject("tdto",tdto);
 		mview.addObject("startPage",startPage);
 		mview.addObject("endPage",endPage);
 		mview.addObject("totalPage",totalPage);
 		mview.addObject("no",no);
 		mview.addObject("totalCount",totalCount);
-//		mview.addObject("avgrstar",avgrstar);
-		mview.addObject("dto",dto);
+		
 		
 		mview.setViewName("/html/bestTrip");
 		
@@ -164,24 +183,30 @@ public class TripController {
 		String CurrentRegion="서울";
 		
 		List<TripDto> regionList=tservice.getRegionList(CurrentRegion);
-		List<TripDto> orderReadCount=tservice.getReadCountList();
-		List<TripDto> orderReview=tservice.getReviewList();
-		List<TripDto> orderHighRstar=tservice.getHighRstarList();
-		List<TripDto> orderLowRstar=tservice.getLowRstarList();
-		
-		TripDto dto=new TripDto();
-//		double avgrstar=(double)rservice.getAvgRstar(tnum);
-//		dto.setAvgrstar(avgrstar);
+//		List<TripDto> orderReadCount=tservice.getReadCountList();
+//		List<TripDto> orderReview=tservice.getReviewList();
+//		List<TripDto> orderHighRstar=tservice.getHighRstarList();
+//		List<TripDto> orderLowRstar=tservice.getLowRstarList();
 		
 		model.addAttribute("regionList",regionList);
-//		model.addAttribute("avgrstar",avgrstar);
-		model.addAttribute("dto",dto);
-		model.addAttribute("orderReadCount",orderReadCount);
-		model.addAttribute("orderReview",orderReview);
-		model.addAttribute("orderHighRstar",orderHighRstar);
-		model.addAttribute("orderLowRstar",orderLowRstar);
+//		model.addAttribute("orderReadCount",orderReadCount);
+//		model.addAttribute("orderReview",orderReview);
+//		model.addAttribute("orderHighRstar",orderHighRstar);
+//		model.addAttribute("orderLowRstar",orderLowRstar);
 		
+//		TripDto tdto=tripMapper.getData(tnum);
+		TripDto tdto=new TripDto();
 		
+		if(rservice.getReviewcount(tnum)>0) {
+			double avgrstar=rservice.getAvgrstar(tnum);
+			int reviewcount=rservice.getReviewcount(tnum);
+			tdto.setAvgrstar(avgrstar);
+			tdto.setReviewcount(reviewcount);
+		}else {
+			double avgrstar=0;
+			tdto.setAvgrstar(avgrstar);
+		}
+		model.addAttribute("tdto",tdto);
 		return "/html/regionTrip";
 	}
 	

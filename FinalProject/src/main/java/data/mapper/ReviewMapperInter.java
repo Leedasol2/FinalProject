@@ -20,6 +20,6 @@ public interface ReviewMapperInter {
 	public String getMnum(String rnum);
 	
 	//강진
-//	public Integer getAvgRstar(String tnum);
-//	public Integer getReviewCount(String tnum);
+	public double getAvgrstar(String tnum);
+	public int getReviewcount(String tnum);
 }
