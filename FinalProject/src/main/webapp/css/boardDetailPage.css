@@ -51,12 +51,10 @@ div.boardDetailPage-main span.likes-img{
 	float: right;
     position: relative;
     top: -58px;
-    right: 38px;
+    right: 30px;
+    font-size: 14pt;
 }
 
-div.boardDetailPage-main img.chuimage{
-	width: 14px;
-}
 
 div.boardDetailPage-main span.writer-id, span.boardowner-id, span.comment-writer{
 	font-weight: 600;
@@ -117,6 +115,7 @@ div.boardDetailPage-main pre.content-body{
     width: 900px;
     margin-bottom: 50px;
     background-color: #fff;
+    white-space: pre-wrap;
 }
 
 div.boardDetailPage-main span.comment-count{
@@ -223,10 +222,41 @@ div.boardDetailPage-main span.noReply{
 	cursor: pointer;
 }
 
+.likes-imgAfter{
+	color: blue;
+    font-weight: bold;
+}
+
+div.boardDetailPage-main div.imagelist{
+	width: 800px;
+	height: 100px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+}
+div.boardDetailPage-main img.imagelist{
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+}
 
 
-
-
-
-
-
+div.boardDetailPage-main .imagemodal {
+    display: none;
+    z-index: 500;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+div.boardDetailPage-main .modalBox {
+    position: relative;
+    text-align: center;
+    top : 25%;
+    left : 50%;
+    position : sticky;
+}
+div.boardDetailPage-main p img:hover{
+    cursor: -webkit-zoom-in;
+}

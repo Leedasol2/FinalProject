@@ -9,12 +9,73 @@
 <head>
 <meta charset="UTF-8">
 <title>이런여행</title>
+
 <script type="text/javascript">
-function() {
+$(function() {
 	$("button.btnreply").click(function() {
 		
 	})
-}
+	$("span#likes-img").click(function() {
+		//alert("test"); 
+ 		
+		/* 로그인중인 사용자가 추천을 했는지 안했는지 */
+   		if(${mylike}){
+			var a=confirm("추천을 취소하시겠습니까?");
+		}else{
+			var b=confirm("게시글을 추천하시겠습니까?");
+		} 
+		
+		var sendBnum="bnum:"+${dto.bnum };
+		
+ 		if(a){
+			$(this).removeClass("likes-imgAfter");
+			/* ajax로 likeuser에서 사용자 제거 */
+		    $.ajax({
+		        type : "post",
+		        url : "/board/likeDel",
+		        dataType: "json",
+		        data: sendBnum,
+		        success : function (data) {
+		        	alert("해당 게시글을 추천하였습니다.")
+		        	location.reload();
+		        }
+		     });
+			
+		}
+		if(b){
+			$(this).addClass("likes-imgAfter");
+			/* ajax로 likeuser에서 사용자 추가 */
+		    $.ajax({
+		        type : "post",
+		        url : "/board/likesUp",
+		        dataType: "json",
+		        data: sendBnum,
+		        success : function (data) {
+		        	alert("해당 게시글을 추천하였습니다.")
+		        	location.reload();
+		        }
+		     });
+			
+		}   
+		
+		
+	})
+	
+	
+	//이미지 클릭시 해당 이미지 모달
+    $("img.imagelist").on("click",function(){
+        let img = new Image();
+        img.src = $(this).attr("src")
+        $('.modalBox').html(img);
+        $(".imagemodal").show();
+    });
+	// 모달 클릭할때 이미지 닫음
+    $(".imagemodal").on("click",function (e) {
+	    $(".imagemodal").toggle();
+  	});
+	
+	
+})
 
 </script>
 </head>
@@ -29,7 +90,13 @@ function() {
       <span class="boardtitle">${dto.subject }</span><br>
       <span class="boardwriter"><c:out value="${fn:substring(dto.writer, 0, fn:length(dto.writer) - 2)}"/>**</span><br>
       <span class="boardinfo"><fmt:formatDate value="${dto.writeday }" pattern="yyyy.MM.dd  HH:mm"/>&nbsp;&nbsp;조회 ${dto.views }</span>
-        <span class="likes-img"><img alt="" src="${root }/image/asset/추천.png" class="chuimage"></span><br>
+        
+        <c:if test="${mylike==true }">
+        	<span class="likes-img glyphicon glyphicon-thumbs-up likes-imgAfter" id="likes-img"></span><br>
+        </c:if>
+        <c:if test="${mylike==false }">
+        	<span class="likes-img glyphicon glyphicon-thumbs-up" id="likes-img"></span><br>
+        </c:if>
         <span class="likes">추천수 ${dto.likes }</span><br>
         <!-- 로그인중인 아이디=글쓴이 아이디 -->
         <c:if test="">
@@ -43,6 +110,22 @@ function() {
   <tr>
     <td>
       <pre class="content-body">${dto.content }</pre>
+      <div class="imagelist">
+      	<c:if test="${dto.photo!='no' }">
+      		<!-- photo 분리 -->
+      		<c:set var="photolist" value="${fn:split(dto.photo,',') }" />
+      		<c:forEach var="image" items="${photolist }">
+      			<img src="${root }/photo/${image }" class="imagelist">
+      		</c:forEach>
+      	</c:if>
+      </div>
+      
+		<!-- 이미지 모달 -->
+		<div class="imagemodal">
+		    <div class="modalBox">
+		    </div>
+		</div>
+     
    </td>
   </tr>
   
@@ -77,9 +160,9 @@ function() {
 			      <span class="comment-day"><fmt:formatDate value="${cdto.writeday }" pattern="yyyy-MM-dd HH:mm"/></span>
 			      <!-- 댓글작성자로 로그인중일때 -->
 			      <c:if test="${cdto.cwriter.equals(sessionScope.myid) }">
-			      	<span class="comment-del">삭제 |</span><span class="comment-upd"> 수정</span><br>
+			      	<span class="comment-del">삭제 |</span><span class="comment-upd"> 수정</span>
 			      </c:if>
-			      <span class="comment-content">${cdto.content }</span><br>
+			      <br><span class="comment-content">${cdto.content }</span><br>
 			      <button type="button" class="btnreply">답글</button>
 
 			      <hr class="comment-underline">
@@ -147,6 +230,8 @@ function() {
 
 </div>
 <!-- 본문 끝 -->
+
+
 
 </body>
 </html>
