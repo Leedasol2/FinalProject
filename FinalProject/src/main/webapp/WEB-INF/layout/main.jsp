@@ -69,7 +69,7 @@
 	      					   <img src="${root}/image/tripspot/${img}" class="tripstory-img" onclick="location.href='myTripDetail?tnum=${search.tnum}'">
 	      					 </c:if>
 	     				   	 <c:if test="${tdto.part=='themepark'}">
-						       <img src="${root}/image/themepark/${img}" class="tripstoryimg" onclick="location.href='myTripDetail?tnum=${search.tnum}'">
+						       <img src="${root}/image/themepark/${img}" class="tripstory-img" onclick="location.href='myTripDetail?tnum=${search.tnum}'">
 						     </c:if>
 						     <c:if test="${tdto.part=='festival'}">
 						       <img src="${root}/image/festival/${img}" class="tripstory-img" onclick="location.href='myTripDetail?tnum=${search.tnum}'">
