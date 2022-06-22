@@ -99,7 +99,7 @@ $(function() {
         </c:if>
         <span class="likes">추천수 ${dto.likes }</span><br>
         <!-- 로그인중인 아이디=글쓴이 아이디 -->
-        <c:if test="">
+        <c:if test="${sessionScope.loginok=='yes' && sessionScope.myid==dto.writer}">
         	<span class="board-upd">수정 |</span><span class="board-del"> 삭제</span>
         </c:if>
         
@@ -159,7 +159,7 @@ $(function() {
 	    	  	  </c:if>
 			      <span class="comment-day"><fmt:formatDate value="${cdto.writeday }" pattern="yyyy-MM-dd HH:mm"/></span>
 			      <!-- 댓글작성자로 로그인중일때 -->
-			      <c:if test="${cdto.cwriter.equals(sessionScope.myid) }">
+			      <c:if test="${sessionScope.loginok=='yes' && sessionScope.myid==cdto.cwriter }">
 			      	<span class="comment-del">삭제 |</span><span class="comment-upd"> 수정</span>
 			      </c:if>
 			      <br><span class="comment-content">${cdto.content }</span><br>
