@@ -50,9 +50,9 @@
 .top-box{font-family: 'MinSans-Medium';}
 .logo a{display:inline-block;}
 
-.search-box{overflow:hidden; font-size:0;}
-.search-box > div {display:inline-block; vertical-align:middle; padding-right:30px;}
-.search-box > div:last-child{padding-right:0;} 
+div.container .search-box{overflow:hidden; font-size:0;}
+div.container .search-box > div {display:inline-block; vertical-align:middle; padding-right:30px;}
+div.container .search-box > div:last-child{padding-right:0;} 
 
 .search input{
 	width: 340px;
@@ -195,7 +195,7 @@ ul.gnb > li > ul > li:hover{font-size:13pt;}
 .container .section .title{margin-bottom:45px;}
 .container .section.cosmap .title{margin-bottom:20px;}
 
-/* ��� */
+/* 占쏙옙占� */
 .slidebox ul,li{margin:0;padding:0;}
 [name="slide"] {display:none;}
 .slidebox {max-width:1000px;width:100%;margin:0 auto;text-align:center;}
@@ -230,7 +230,7 @@ ul.gnb > li > ul > li:hover{font-size:13pt;}
 label.left {left:20px;background-image: url("/image/asset/arrowleft.png");background-position: center center;background-size: 50%;background-repeat: no-repeat;}
 label.right {right:20px;background-image: url("/image/asset/arrowright.png");background-position: center center;background-size: 50%;background-repeat: no-repeat;}
 
- /* ����¡ ��Ÿ�� */
+ /* 占쏙옙占쏙옙징 占쏙옙타占쏙옙 */
 .paginglist {text-align:center;padding:30px 0;}
 .paginglist > li {/* display:inline-block; */vertical-align:middle;margin:0 10px;}	
 .paginglist > li > label {display:block;padding:10px 30px;cursor:pointer;}
@@ -283,9 +283,9 @@ label.right {right:20px;background-image: url("/image/asset/arrowright.png");bac
    75% {left:100%;}
    98% {left:100%;}
    100% {left:0%;}
-}/* ��ʳ� */
+}/* 占쏙옙稼占� */
 
-/* �����̾߱� */
+/* 占쏙옙占쏙옙占싱야깍옙 */
 div.tripstory,div.newpark,div.festival{
 	width:100%;
 	float:left;
@@ -401,7 +401,7 @@ div.tripstory-region{
     overflow: hidden;
     text-overflow: ellipsis;
 }
-/* ���� css */
+/* 占쏙옙占쏙옙 css */
 .tripstory-star-ratings {
   color: #aaa9a9; 
   position: relative;
@@ -470,13 +470,13 @@ ul.tripstory-list > li:last-child{
 }
 
 .tripstory-list > li > a > span:hover {color:#2bae66}
-span.fontgreen{color:#2bae66;} /* �����̾߱� �� */
+span.fontgreen{color:#2bae66;} /* 占쏙옙占쏙옙占싱야깍옙 占쏙옙 */
 .tripstory-list > li > a > span::after{padding-left:5px;padding-right:5px;content:"|"}
 
 .tripstory-list > li > a > span:last-child::after{content:"";}
 
 
-/* �׸���ũ */
+/* 占쌓몌옙占쏙옙크 */
 .slider-box {
 }
 div.newpark div.title{
@@ -502,8 +502,8 @@ div.newpark div.swiper-button-next{right:0;}
 div.newpark div.swiper-button-prev:after, div.newpark div.swiper-button-next:after {font-size:30px; color: #2bae66;}
 
 
-/* �׸���ũ�� */
-/* �ڽ����� */
+/* 占쌓몌옙占쏙옙크占쏙옙 */
+/* 占쌘쏙옙占쏙옙占쏙옙 */
 div.cosmap{
 	width:100%;
 	float:left;
@@ -554,7 +554,7 @@ div.cosmap .map-box {
     padding-left:50px;
 }
 
-/* ���� */
+/* 占쏙옙占쏙옙 */
 div.festival div.title{
 	background-image: url("/image/asset/main-fesicon.png");
 	background-position: 646px center;
@@ -572,8 +572,8 @@ div.festival div.swiper-button-prev{left:0;}
 div.festival div.swiper-button-next{right:0;}
 
 div.festival div.swiper-button-prev:after, div.festival div.swiper-button-next:after {font-size:30px; color: #2bae66;}
-/* ���� �� */
-/* ���� �� */
+/* 占쏙옙占쏙옙 占쏙옙 */
+/* 占쏙옙占쏙옙 占쏙옙 */
 
 /* footer */
 .footer{

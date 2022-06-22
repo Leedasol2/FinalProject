@@ -65,8 +65,15 @@
 					  <c:forEach var="tdto" items="${triplist}" begin="0" end="3">
 						<div class="tripstory-content">
 						  <c:forTokens var="img" items="${tdto.image }" delims="," begin="0" end="0">
-						    <!-- 전체여행지인데 이미지 경로 어떡할건지?  -->
-							<img src="${root}/image/themepark/${img}" class="tripstory-img" onclick="location.href='myTripDetail?tnum=${tdto.tnum}'">
+						     <c:if test="${tdto.part=='trip'}">
+	      					   <img src="${root}/image/tripspot/${img}" class="tripstory-img" onclick="location.href='myTripDetail?tnum=${search.tnum}'">
+	      					 </c:if>
+	     				   	 <c:if test="${tdto.part=='themepark'}">
+						       <img src="${root}/image/themepark/${img}" class="tripstoryimg" onclick="location.href='myTripDetail?tnum=${search.tnum}'">
+						     </c:if>
+						     <c:if test="${tdto.part=='festival'}">
+						       <img src="${root}/image/festival/${img}" class="tripstory-img" onclick="location.href='myTripDetail?tnum=${search.tnum}'">
+						     </c:if>
 						  </c:forTokens>
 							<div class="name-box">
 								<div class="tripstory-name">
