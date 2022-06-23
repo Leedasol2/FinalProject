@@ -67,8 +67,8 @@ ul.mypage-ul {
 
 li.mypage-li > a::after{padding: 0 5px;}
 
-input[type='radio'],
-input[type='radio']:checked {
+.radio-group > input[name='calendar_color'],
+.radio-group > input[name='calendar_color']:checked {
   appearance: none;
   width: 1.4rem;
   height: 1.4rem;
@@ -76,17 +76,17 @@ input[type='radio']:checked {
   margin-right: 0.1rem;
 }
 
-input[type='radio'] {
+.radio-group > [name='calendar_color'] {
   border: none;
 }
-input[type='radio']:nth-child(1) {background-color:#d50000;}
-input[type='radio']:nth-child(2) {background-color:#e67c73;}
-input[type='radio']:nth-child(3) {background-color:#f4511e;}
-input[type='radio']:nth-child(4) {background-color:#f6bf26;}
-input[type='radio']:nth-child(5) {background-color:#33b679;}
-input[type='radio']:nth-child(6) {background-color:#0b8043;}
-input[type='radio']:nth-child(7) {background-color:#039be5;}
-input[type='radio']:nth-child(8) {background-color:#3f51b5;}
+.radio-group > [name='calendar_color']:nth-child(1) {background-color:#d50000;}
+.radio-group > [name='calendar_color']:nth-child(2) {background-color:#e67c73;}
+.radio-group > [name='calendar_color']:nth-child(3) {background-color:#f4511e;}
+.radio-group > [name='calendar_color']:nth-child(4) {background-color:#f6bf26;}
+.radio-group > [name='calendar_color']:nth-child(5) {background-color:#33b679;}
+.radio-group > [name='calendar_color']:nth-child(6) {background-color:#0b8043;}
+.radio-group > [name='calendar_color']:nth-child(7) {background-color:#039be5;}
+.radio-group > [name='calendar_color']:nth-child(8) {background-color:#3f51b5;}
 
 div.form-group {
     margin-bottom: 7px;

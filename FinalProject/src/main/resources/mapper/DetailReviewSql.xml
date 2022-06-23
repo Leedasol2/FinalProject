@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTDMapper3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="data.mapper.DetailReviewMapper">
+	<select id="getTotalCount" parameterType="String" resultType="int">
+		select count(*) from review where tnum=#{tnum}
+	</select>
+	<select id="getList" parameterType="String" resultType="drdto">
+		select * from review where tnum=#{tnum} order by rnum desc
+	</select>
+	<delete id="deleteDetailReview" parameterType="String">
+		delete from review where rnum=#{rnum}
+	</delete>
+	<select id="getReview" parameterType="String" resultType="drdto">
+		select * from review where rnum=#{rnum}
+	</select>
+	<update id="updateDetailReview" parameterType="drdto">
+		update review set rcontents=#{rcontents} where rnum=#{rnum}
+	</update>
+	<insert id="insertDetailReview" parameterType="drdto">
+		insert into review (mnum,tnum,rstar,rcontents,rday) values(#{mnum},#{tnum},#{rstar},#{rcontents},now())
+	</insert>
+</mapper>
