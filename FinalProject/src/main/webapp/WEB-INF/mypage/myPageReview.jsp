@@ -39,7 +39,7 @@
 								<div class="review-contents">
 									<div class="review-topbox">
 										<div class="review-title">
-											<a href="#">${r.title}</a>
+											<a href="/myTrip/myTripDetail?tnum=${r.tnum}">${r.title}</a>
 											<div class="tripstory-star-ratings">
 												<div class="tripstory-star-ratings-fill space-x-2 text-lg"
 													style="width: ${r.rstar*20}%">
