@@ -56,7 +56,12 @@ $(document).ready(function(){
           
           <span class="trip-name">${tdto.title }</span>
           <div class="best-star-rating">
+          <c:if test="${empty tdto.reviewcount}">
+          ${tdto.avgrstar==0}
+          </c:if>
+          <c:if test="${not empty tdto.reviewcount}">
           ${tdto.avgrstar }
+          </c:if>
             </div>
   		  <span class="trip-explanation">${tdto.title }</span><br>
  		  <span class="trip-region">
