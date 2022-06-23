@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import data.dto.ReviewDto;
 import data.dto.TripDto;
 import data.mapper.TripMapperInter;
 
@@ -54,8 +55,8 @@ public class TripService {
 		return tripMapper.getAllList();
 	}
 	
-	public List<TripDto> getAllThemePark(String part, String region){ 
-		return tripMapper.getAllThemePark(part, region);
+	public List<TripDto> getRegionThemeList(String part, String region){ 
+		return tripMapper.getRegionThemeList(part, region);
 	}
 	public List<TripDto> getReadCountList(){
 		return tripMapper.getReadCountList();
@@ -73,5 +74,6 @@ public class TripService {
 	public List<TripDto> getSearch(String title){
 		return tripMapper.getSearch(title);
 	}
+		
 	
 }

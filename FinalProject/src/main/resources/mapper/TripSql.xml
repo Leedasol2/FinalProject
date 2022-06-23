@@ -48,7 +48,10 @@
 	</select>
 	
 	<!-- 용기 -->
-		<select id="getAllThemePark" resultType="tdto">
-      select * from trip where part=#{part} and region=#{region} order by tnum desc
+	<select id="getRegionThemeList" resultType="tdto" parameterType="tdto">
+      select * from trip where part=#{part} and region=#{region} order by readcount desc
     </select> 
+    
+   
+    
 </mapper>
