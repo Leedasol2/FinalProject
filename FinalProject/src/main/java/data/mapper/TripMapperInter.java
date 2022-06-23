@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
+import data.dto.ReviewDto;
 import data.dto.TripDto;
 
 @Mapper
@@ -29,5 +30,5 @@ public interface TripMapperInter {
 	
 	//용기
 	public List<TripDto> getAllList(); 
-	public List<TripDto> getAllThemePark(String part, String region);
+	public List<TripDto> getRegionThemeList(String part, String region);
 }

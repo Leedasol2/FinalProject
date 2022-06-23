@@ -8,7 +8,9 @@ import org.springframework.boot.context.properties.bind.DefaultValue;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -19,7 +21,9 @@ import data.mapper.TripMapperInter;
 import data.service.ReviewService;
 import data.service.TripService;
 
+
 @Controller
+@RequestMapping("/myTrip")
 public class TripController {
 	
 	@Autowired
@@ -57,7 +61,7 @@ public class TripController {
 	}
 	
 	//베스트여행지 페이지
-	@GetMapping("bestTrip")
+	@GetMapping("/bestTrip")
 	public ModelAndView bestTrip(@RequestParam(value = "currentPage",defaultValue = "1") int currentPage,@RequestParam(value =  "tnum",required = false) String tnum) {
 			
 		ModelAndView mview=new ModelAndView();
@@ -177,7 +181,7 @@ public class TripController {
 //		return mview;
 //	}
 	
-	@GetMapping("regionTrip")
+	@GetMapping("/regionTrip")
 	public String regionTrip(Model model,@RequestParam(value =  "tnum",required = false) String tnum) {
 		
 		String CurrentRegion="서울";
@@ -210,18 +214,18 @@ public class TripController {
 		return "/html/regionTrip";
 	}
 	
-	@PostMapping("RegionChange")
+	@PostMapping("/RegionChange")
 	public String RegionChange(@RequestParam String CurrentRegion ,Model model) {
 		
 		List<TripDto> regionList=tservice.getRegionList(CurrentRegion);
-		
+				
 		model.addAttribute("regionList",regionList);
 		
 		return "/html/regionTrip";
 	}
 		
 	//테마별여행지 페이지
-	@GetMapping("themaTrip")
+	@GetMapping("/themaTrip")
 	public String themaTrip(Model model,@RequestParam(value =  "tnum",required = false) String tnum) {
 		
 		String CurrentTheme="바다";
@@ -239,7 +243,7 @@ public class TripController {
 		return "/html/themaTrip";
 	}
 		
-	@PostMapping("ThemeChange")
+	@PostMapping("/ThemeChange")
 	public String ThemeChange(@RequestParam String CurrentTheme,Model model) {
 		
 		List<TripDto> themeList=tservice.getThemeList(CurrentTheme);
@@ -250,12 +254,13 @@ public class TripController {
 	}
 	
 	//이용기
-		@GetMapping("/myTrip/themeParkList")
-		public String themeParkList(Model model) {
+		@GetMapping("/themeParkList")
+		public String themeParkList(Model model, @RequestParam(value = "tnum", required = false) String tnum) {
 			
-			String theme="'themepark'";
 			
-			List<TripDto> themeparklist=tservice.getAllActivitys(theme);
+			String CurrentRegion="서울";
+			
+			List<TripDto> themeparklist=tservice.getRegionList(CurrentRegion);
 			
 			model.addAttribute("themeparklist",themeparklist);
 					
@@ -263,13 +268,11 @@ public class TripController {
 			return "/myTrip/themeParkList";
 		}
 		
-		@PostMapping("themeChange")
-		public String themeChange(@RequestParam String themeregion,Model model) {
-			
-			String selectregion=themeregion;
-			
-			List<TripDto> themeparklist=tservice.getAllActivitys(selectregion);
-	
+		@PostMapping("/themeChange")
+		public String themeChange(@RequestParam String CurrentRegion,  Model model) {
+						
+			List<TripDto> themeparklist=tservice.getRegionList(CurrentRegion);
+						
 			model.addAttribute("themeparklist", themeparklist);						
 						
 			return "/myTrip/themeParkList";
@@ -290,7 +293,7 @@ public class TripController {
 		}
 						
 		//이용기
-		@GetMapping("/myTrip/themeParkDetail")
+		@GetMapping("/themeParkDetail")
 		public ModelAndView themeParkDetail(@RequestParam("tnum") String tnum) {
 			
 			ModelAndView model=new ModelAndView();
@@ -342,5 +345,6 @@ public class TripController {
 		  model.setViewName("/search/searchResult");
 		  return model;
 		}
+
 
 }
