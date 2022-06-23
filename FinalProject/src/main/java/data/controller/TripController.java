@@ -280,7 +280,7 @@ public class TripController {
 		
 		
 		//이용기
-		@GetMapping("/festival/festivalList")
+		@GetMapping("/festivalList")
 		public String festivalList(Model model) {
 				
 			String festival="'festival'";
@@ -310,7 +310,7 @@ public class TripController {
 		}
 	
 		//이용기
-		@GetMapping("/festival/festivalDetail")
+		@GetMapping("/festivalDetail")
 		public ModelAndView festivalDetail(@RequestParam("tnum") String tnum) {
 					
 			ModelAndView model=new ModelAndView();
@@ -327,13 +327,13 @@ public class TripController {
 		}
 		
 		//이용기
-		@GetMapping("/festival/festivalCalendar")
+		@GetMapping("/festivalCalendar")
 		public String festivalCalendar() {
 			
 			return "/festival/festivalCalendar";
 		}
 		
-		@GetMapping("/search/searchTrip")
+		@GetMapping("/searchTrip")
 		public ModelAndView searchTrip(@RequestParam String searchtext)
 		{
 		  ModelAndView model=new ModelAndView();

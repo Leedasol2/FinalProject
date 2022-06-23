@@ -69,7 +69,7 @@ $(function(){
 							<a href="themePark">액티비티</a>
 							<ul>
 								<li onclick="location.href='/myTrip/themeParkList'">테마파크</li>
-								<li onclick="location.href='/festival/festivalList'">축제</li>
+								<li onclick="location.href='/myTrip/festivalList'">축제</li>
 							</ul>
 						</li>
 						<li>
