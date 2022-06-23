@@ -55,8 +55,10 @@
 								<c:if test="${dto.photo!='no' }">
 									<span class="photo">&nbsp;<img src="${root }/image/asset/첨부이미지아이콘.png"></span>
 								</c:if>
-								<!-- detail 후 나중에 추가 -->
-								<span class="cntComments">[16]</span>
+								
+								<c:if test="${dto.commentCnt>0 }">
+									<span class="cntComments">[${dto.commentCnt }]</span>
+								</c:if>
 								
 								<!-- 현재 시간으로부터 하루이내에 쓰인 글인지 검사 -->
 								<c:if test="${dto.writeday>yesterday }">

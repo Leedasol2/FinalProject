@@ -68,7 +68,7 @@ public class BoardService {
 		HashMap<String, Integer> map=new HashMap<>(); 
 		map.put("start", start); 
 		map.put("perpage", perpage); 
-		return mapper.getList(map);
+		return mapper.getBestList(map);
 	}
 	
 	

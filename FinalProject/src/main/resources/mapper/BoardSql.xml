@@ -51,9 +51,8 @@
 	
 	<!-- best 게시판 -->
 	<select id="getBestList" parameterType="HashMap" resultType="bdto"> 
-		select * from board order by likes desc limit #{start},#{perpage} 
+		select * from board  order by likes desc limit #{start},#{perpage} 
 	</select> 
-	
 	
 	
 	
