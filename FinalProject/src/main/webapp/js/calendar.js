@@ -1,5 +1,6 @@
 var calendar;
 var loadCalendarEvent = function(){
+				
 				// 1. remove all events
 				calendar.removeAllEvents();
 				
@@ -28,8 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
             var calendarEl = document.getElementById('calendar');
             calendar = new FullCalendar.Calendar(calendarEl, {
 				locale : 'ko',
-                timeZone: 'UTC', //UTC로 하면 일정이 전부 하루씩 당겨짐, local이나 Asia/Seoul로 하면 마지막 날짜 짤림
-                allDay:true,
+                timeZone: 'Asia/Seoul', //UTC로 하면 일정이 전부 하루씩 당겨짐, local이나 Asia/Seoul로 하면 마지막 날짜 짤림
                 initialView: 'dayGridMonth', // 홈페이지에서 다른 형태의 view를 확인할  수 있다.
                 headerToolbar: {
 					left: 'addEventButton',
@@ -71,7 +71,13 @@ document.addEventListener('DOMContentLoaded', function () {
                                     	data:JSON.stringify(obj),
                                     	success:function(data){
 											$('#calendarModal [data-dismiss]').click();	
-											loadCalendarEvent();				
+											$("#calendar_content").val("");
+											$("#calendar_start_date").val("");
+											$("#calendar_end_date").val("");
+											loadCalendarEvent();
+											window.location.reload();
+															
+											
 										}
 									});
                                     
@@ -94,13 +100,16 @@ document.addEventListener('DOMContentLoaded', function () {
 										
 									}
 								});
+								//window.location.reload();
 								loadCalendarEvent();
 						}
 			  },
             });
             
             calendar.render();
+            //window.location.reload();
             loadCalendarEvent();
+            
             
         });
         

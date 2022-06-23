@@ -14,6 +14,11 @@
 
 <script type="text/javascript">
 $(function(){
+
+	loginok="${sessionScope.loginok}";
+	myid="${sessionScope.myid}";
+	
+	rlist();
 	
 	<!-- image 클릭 이벤트 -->
 	$(".small").click(function(){
@@ -23,7 +28,152 @@ $(function(){
 		$(".tripimage").attr("src",src);
 	});
 	
+	
+	//insert
+	$("#rbtn").click(function(){
+		var tnum=$(this).attr("tnum");
+		var rstar = $('input[name="rating"]:checked').val();
+		var rcontents = $('#detailcontent').val();
+		//alert("tnum:"+tnum+"rstar:"+rstar+"rcontents:"+rcontents);
+		//alert(myid);
+		$.ajax({
+			
+			type:"post",
+			dataType:"text",
+			url:"/myTripDetail/rinsert",
+			data:{"tnum":tnum,
+			"rstar":rstar,
+			"rcontents":rcontents},
+			success:function(data){
+				
+				rlist();
+			}
+		});
+		
+	});
+	
+	
+	//delete
+	$(document).on("click","button.rdel",function(){
+		var rnum=$(this).attr("rnum");
+		//alert(rnum);
+		var a=confirm("해당 리뷰를 삭제할까요?");
+		
+		if(a){
+			$.ajax({
+				
+				type:"get",
+				dataType:"text", //return값 없으니까 text
+				url:"/myTripDetail/rdelete",
+				data:{"rnum":rnum},
+				success:function(data){
+					$('#myModal3 [data-dismiss]').click();	
+					rlist();
+				}
+			});	
+		}
+	});
+	
+	//update
+	$(document).on("click","button.rmod",function(){
+
+		var rnum=$(this).attr("rnum");
+		
+		$.ajax({
+			
+			type:"get",
+			dataType:"json",
+			url:"/myTripDetail/rdata",
+			data:{"rnum":rnum},
+			success:function(data){
+				//모달에 idx값을 가진 content띄우기
+				$("#ucontent").val(data.rcontents);
+			}
+		});
+		
+		$("#myModal3").modal();
+	});
+	$(document).on("click","#btnaupdate",function(){
+		
+		var rnum=$("button.rmod").attr("rnum");
+		var rcontents=$("#ucontent").val();
+		
+		$.ajax({
+			
+			type:"post",
+			dataType:"text",
+			url:"/myTripDetail/rupdate",
+			data:{"rnum":rnum,"rcontents":rcontents},
+			success:function(data){
+				rlist();
+			}
+		});
+	});
+	
 });
+
+function rlist()
+{
+	var tnum=$(':hidden#tnum').val();
+	
+	$.ajax({
+		type:"get",
+		dataType:"json",
+		url:"/myTripDetail/rlist",
+		data:{"tnum":tnum},
+		success:function(data){
+			 //console.log(data);
+			var r="";
+			
+			$.each(data,function(i,drdto){
+				r+="<div class='review-contents'>";
+				r+="<div class='review-topbox'>";
+				r+="<div class='review-title' style='display: flex;align-items: center;'>";
+				r+="<a>"+drdto.userid+"</a>";
+				r+="<div class='tripstory-star-ratings'>";
+				r+="<div class='tripstory-star-ratings-fill space-x-2 text-lg' style='width:"+drdto.rstar*20+"%'>";
+				r+="<span>★</span>";
+				r+="<span>★</span>";
+				r+="<span>★</span>";
+				r+="<span>★</span>";
+				r+="<span>★</span>";
+				r+="</div>";
+				r+="<div class='tripstory-star-ratings-base space-x-2 text-lg'>";
+				r+="<span>★</span>";
+				r+="<span>★</span>";
+				r+="<span>★</span>";
+				r+="<span>★</span>";
+				r+="<span>★</span>";
+				r+="</div>";
+				r+="</div>";
+				r+="</div>";
+				
+				if (loginok=="yes" && myid==drdto.userid) {
+					r+="<div class='review-edit'>";
+					r+="<button type='button' class='rdel' rnum='"+drdto.rnum+"'>삭제</button>";
+					r+="<button type='button' class='rmod' rnum='"+drdto.rnum+"'>수정</button>";
+				}
+				
+				
+				r+="<div class='review-day'>";
+				r+="<span>"+drdto.rday+"</span>";
+				r+="</div>";
+				r+="</div>";
+				r+="</div>";
+				r+="<div class='review-ment'>";
+				r+="<span>"+drdto.rcontents+"</span>";
+				r+="</div>";
+				r+="</div>";
+				r+="</div>";
+				r+="<div class='hr'>";
+				r+="<hr>";
+				r+="</div>";
+			});
+			
+			$("div.detailreview").html(r);
+		}
+	});
+}
 </script>
 
 	<!-- main 시작 -->
@@ -37,9 +187,9 @@ $(function(){
 	<img src="${root}/image/tripspot/${fn:split(tdto.image,',')[0]}"  class="tripdetailimg">
 	</div>
 	<div class="tripsogae">
-	<div class="tripdetailname"><b>${tdto.title }</b></div><div class="rstar">${tdto.avgrstar }</div>
+	<div class="tripdetailname"><b>${tdto.title }</b></div><div class="rstar">${rdto.rstar }</div>
 	<div class="tripsubcontent">
-	${tdto.intro }
+	${tdto.title }
 	</div>
 	<div class="subedit">
 	<img alt="" src="${root }/image/asset/위치아이콘.png"><span class="tripwhere"> ${tdto.location }</span>
@@ -103,26 +253,13 @@ $(function(){
 	<hr>
 	
 	<div class="madi" id="sp4">
-	<b>여행자의 한마디</b><button class="btnadd" data-target="#myModal2" data-toggle="modal">등록하기</button>
+	<b>여행자의 한마디</b>
+	<c:if test="${sessionScope.loginok!=null}"> <!-- 로그인중일때만 리뷰 작성하기 -->
+	<button class="btnadd" data-target="#myModal2" data-toggle="modal">등록하기</button>
+	</c:if>
 	</div>
-	<div class="madicontent">
-	<span class="detailname">ga*****</span>
-	<span class="detailedit">삭제 | 수정  2022-06-07 15:53</span>
-	<div class="detail-star-rating">
-                      <input type="radio" id="5-stars" name="rating" value="5" />
-                      <label for="5-stars" class="star">&#9733;</label>
-                      <input type="radio" id="4-stars" name="rating" value="4" />
-                      <label for="4-stars" class="star">&#9733;</label>
-                      <input type="radio" id="3-stars" name="rating" value="3" />
-                      <label for="3-stars" class="star">&#9733;</label>
-                      <input type="radio" id="2-stars" name="rating" value="2" />
-                      <label for="2-stars" class="star">&#9733;</label>
-                      <input type="radio" id="1-star" name="rating" value="1" />
-                      <label for="1-star" class="star">&#9733;</label>
-    </div>
-	
-	<div class="madireview">연인들의 천국, 외국인이면 더욱 서울의 야경을 멋지게 즐길 수 있습니다. 20년만의 서울타워 방문이 아깝지 않았습니다.</div>
-	</div>
+	<div class="detailreview" style="width:850px;"></div>
+	<input type="hidden" id="tnum" value=${tdto.tnum}>
 	</div>
 <!-- main 끝 -->
 	
@@ -137,8 +274,9 @@ $(function(){
           <span class="modalsub">2run trip&nbsp;&nbsp;</span><span class="modalsub2">리뷰 작성</span>
         </div>
         <div class="modal-body">
+        <div class="modal-body-top">
         <span class="modalname">${tdto.title }&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <div class="modal-star-rating">
+        <div class="modal-star-rating-review-write">
                       <input type="radio" id="5-stars" name="rating" value="5" />
                       <label for="5-stars" class="star">&#9733;</label>
                       <input type="radio" id="4-stars" name="rating" value="4" />
@@ -149,16 +287,38 @@ $(function(){
                       <label for="2-stars" class="star">&#9733;</label>
                       <input type="radio" id="1-star" name="rating" value="1" />
                       <label for="1-star" class="star">&#9733;</label>
-    </div> 
+   		</div>
+   		</div> 
         <textarea id="detailcontent" class="form-control" placeholder="별점과 리뷰를 작성해주세요!"></textarea>
         </div>
         <div class="modal-footer">
-          <button type="button" class="rbtn" data-dismiss="modal"
-          id="=modaladd">작성</button> 
+          <button type="button" class="rbtn" id="rbtn" tnum=${tdto.tnum} data-dismiss="modal">작성</button> 
         </div>
       </div>
     </div>
   </div>
-  
+
+<!-- 수정다이얼로그 -->
+<!-- Modal -->
+  <div class="modal fade" id="myModal3" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content" style="height: 253px;margin: 0 auto;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">리뷰 수정</h4>
+        </div>
+        <div class="modal-body">
+        	<textarea id="ucontent" class="form-control" style="width: 366px;height: 101px;"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal"
+          id="btnaupdate">수정</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 </body>
 </html>

@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.6.0/main.min.css">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/fullcalendar@5.6.0/main.min.js"></script>
 
+<link rel="stylesheet" href="${root}/css/myPageCalendar.css"/>
 <!-- js -->
 <script src="${root}/js/calendar.js"></script>
 
@@ -27,7 +28,7 @@
 					<ul class="mypage-ul">
 						<li class="mypage-li"><a href="${root}/html/myPageEdit">회원정보수정</a></li> <!-- 추후에 맵핑주소 보고 바꾸기 -->
 						<li class="mypage-li"><a href="${root}/html/myPageScrap">스크랩</a></li> 
-						<li class="mypage-li"><a href="${root}/html/myPageCalendar">마이캘린더</a></li>
+						<li class="mypage-li"><a href="${root}/mypage/myPageCalendar">마이캘린더</a></li>
 						<li class="mypage-li"><a href="${root}/mypage/myPageReview">리뷰</a></li>
 					</ul>
 				</div>
