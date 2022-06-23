@@ -110,8 +110,10 @@ $("span.jeju").click(function(){
 
 <c:forEach var="theme" items="${themeparklist}">
     <div class="theme-content">
-      <img src="${root}/image/asset/메인-테마파크예시이미지.png" class="theme-img">
-        <span class="theme-name">${theme.title }</span>
+      <img src="${root}/image/themepark/${fn:split(theme.image,',')[0]}" class="theme-img"
+       onclick="location.href='themeParkDetail?tnum=${theme.tnum}&currentPage=${currentPage }'">
+       
+       <span class="theme-name">${theme.title }</span>
    	   <div class="theme-star-rating">
 	     <input type="radio" id="5-stars" name="rating" value="5" />
 		 <label for="5-stars" class="star">&#9733;</label>
@@ -126,7 +128,7 @@ $("span.jeju").click(function(){
 	   </div>
 		 <span class="theme-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
- 		    제주도 서귀포시
+ 		    ${theme.location }
  		 </span>
      </div>    
 </c:forEach>    
