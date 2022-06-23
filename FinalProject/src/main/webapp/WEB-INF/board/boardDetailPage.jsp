@@ -146,7 +146,7 @@ $(function() {
 	    	첫 댓글을 작성해보세요!<br>
 		    <hr class="comment-underline">
 	    </c:if>
-	    <!-- 댓글이 있을 때 -->
+	    <!-- 댓글이 있을 때 --> 
 	    <c:if test="${commentCnt!=0 }">
 	    	<c:forEach var="cdto" items="${clist }" >
 	    	
