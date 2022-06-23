@@ -48,45 +48,31 @@ public class BoardController {
 		@RequestParam(value = "currentPage", defaultValue = "1") int currentPage) {
 
 			ModelAndView model = new ModelAndView();
-			int totalBoardCnt = service.getBoardCnt();
+			int totalBoardCnt = 30;
 
 			// 페이징
 			int totalPage=3; // 총 페이지수
-			int startPage; // 각블럭의 시작페이지
-			int endPage; // 각블럭의 끝페이지
 			int start; // 각페이지의 시작번호
 			int perPage = 10; // 한페이지에 보여질 글 갯수
-			int perBlock = 10; // 한블럭당 보여지는 페이지 개수
 
-			// 각블럭의 시작페이지
-			startPage = (currentPage - 1) / perBlock * perBlock + 1;
-			endPage = startPage + perBlock - 1;
-
-			// 만약 총페이지가 8 -2번째블럭: 6-10 ..이럴경우는 endpage가 8로 수정되어야함
-			if (endPage > totalPage)
-				endPage = totalPage;
 
 			// 각페이지에서 불러올 시작번호
 			start = (currentPage - 1) * perPage;
 
 			// 각 글앞에 붙일 시작번호 구하기
-			int no = totalBoardCnt - (currentPage - 1) * perPage;
+			int no = 30 - (currentPage - 1) * perPage;
 
-			// 게시글 가져오기
-			// List<BoardDto> list=service.getAllBoards();
+			List<BoardDto> bestlist = service.getBestList(start, perPage);
 
-			List<BoardDto> list = service.getBestList(start, perPage);
-
-			for (BoardDto b : list) {
+			for (BoardDto b : bestlist) {
 				b.setWriter(memservice.getUserId(b.getMnum()));
+				b.setCommentCnt(comservice.getCommentsCnt(b.getBnum()));
 			}
 
 			// 댓글개수
 
 			// model에 변수 추가
-			model.addObject("list", list);
-			model.addObject("startPage", startPage);
-			model.addObject("endPage", endPage);
+			model.addObject("bestlist", bestlist);
 			model.addObject("totalPage", totalPage);
 			model.addObject("no", no);
 			model.addObject("currentPage", currentPage);
@@ -135,6 +121,7 @@ public class BoardController {
 
 		for (BoardDto b : list) {
 			b.setWriter(memservice.getUserId(b.getMnum()));
+			b.setCommentCnt(comservice.getCommentsCnt(b.getBnum()));
 		}
 
 		// 댓글개수
