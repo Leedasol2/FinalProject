@@ -27,7 +27,7 @@
 		select mnum from review where rnum=#{rnum}
 	</select>
 	<select id="getAvgrstar" parameterType="String" resultType="double">
-	select avg(ifnull(rstar,0)) as rstar from review where tnum=#{tnum}
+	select ifnull(avg(rstar),0) from review where tnum=#{tnum}
 	</select>
 	<select id="getReviewcount" parameterType="String" resultType="int">
 	select count(ifnull(rnum,0)) from review where tnum=#{tnum}
