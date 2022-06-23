@@ -45,13 +45,31 @@ public class BoardService {
 		mapper.viewUp(bnum);
 	}
 	
+	public void likeUp(String bnum, String likesuser) {
+		HashMap<String, String> map=new HashMap<>(); 
+		map.put("bnum", bnum); 
+		map.put("likesuser", likesuser); 
+		
+		mapper.likeUp(map);
+	}
+	public void likeDown(String bnum, String likesuser) {
+		HashMap<String, String> map=new HashMap<>(); 
+		map.put("bnum", bnum); 
+		map.put("likesuser", likesuser); 
+		
+		mapper.likeUp(map);
+	}
 	
+	public String getLikesUser(String bnum) {
+		return mapper.getLikesUser(bnum);
+	}
 	
-	
-	
-	
-	
-	
+	public List<BoardDto> getBestList(int start,int perpage){ 
+		HashMap<String, Integer> map=new HashMap<>(); 
+		map.put("start", start); 
+		map.put("perpage", perpage); 
+		return mapper.getList(map);
+	}
 	
 	
 	
