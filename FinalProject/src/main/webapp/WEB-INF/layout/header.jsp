@@ -80,7 +80,7 @@ $(function(){
 						</li>
 					</ul>
 					<div class="perfect-trip">
-						<button class="perfect-trip-btn" onclick="location.href='/board/myTripStart'">나에게 딱 맞는 여행지는?</button>
+						<button class="perfect-trip-btn" onclick="location.href='/myTrip/myTripStart'">나에게 딱 맞는 여행지는?</button>
 					</div>
 				</div>
 			</div>
