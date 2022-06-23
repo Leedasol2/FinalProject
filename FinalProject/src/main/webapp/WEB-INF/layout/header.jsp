@@ -58,15 +58,15 @@ $(function(){
 				<div class="inner">
 					<ul class="gnb">
 						<li>
-							<a href="bestTrip">여행을 떠나요</a>
+							<a href="/myTrip/bestTrip">여행을 떠나요</a>
 							<ul>
-								<li onclick="location.href='bestTrip'">베스트 여행지</li>
-								<li onclick="location.href='regionTrip'">지역별 여행지</li>
-								<li onclick="location.href='themaTrip'">테마별 여행지</li>
+								<li onclick="location.href='/myTrip/bestTrip'">베스트 여행지</li>
+								<li onclick="location.href='/myTrip/regionTrip'">지역별 여행지</li>
+								<li onclick="location.href='/myTrip/themaTrip'">테마별 여행지</li>
 							</ul>
 						</li>
 						<li>
-							<a href="themePark">액티비티</a>
+							<a href="/myTrip/themeParkList">액티비티</a>
 							<ul>
 								<li onclick="location.href='/myTrip/themeParkList'">테마파크</li>
 								<li onclick="location.href='/festival/festivalList'">축제</li>
