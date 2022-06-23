@@ -4,7 +4,7 @@
 
 	<!-- 게시글 insert -->
 	<insert id="insertOfBoard" parameterType="bdto">
-		insert into board(mnum, subject, content, photo, writeday) values(3,#{subject},#{content},#{photo},now())
+		insert into board(mnum, subject, content, photo, writeday) values(#{mnum},#{subject},#{content},#{photo},now())
 	</insert>
 	
 	<!-- 가장 최신 게시글 bnum -->
