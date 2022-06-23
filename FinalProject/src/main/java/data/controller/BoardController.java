@@ -38,9 +38,32 @@ public class BoardController {
 	CommentsService comservice;
 
 	@GetMapping("/board/shareTripHome")
-	public String shareTripHome() {
+	public ModelAndView shareTripHome() {
+		
+		ModelAndView model = new ModelAndView();
+		
+		//best 목록 5개
+		List<BoardDto> bestlist = service.getBestList(0, 5);
 
-		return "/board/board/shareTripHome";
+		for (BoardDto b : bestlist) {
+			b.setWriter(memservice.getUserId(b.getMnum()));
+		}
+		
+		//전체글 목록 5개
+		List<BoardDto> bullist = service.getList(0, 5);
+
+		for (BoardDto b : bullist) {
+			b.setWriter(memservice.getUserId(b.getMnum()));
+		}
+		
+		model.addObject("bestlist", bestlist);
+		model.addObject("bullist", bullist);
+		
+		
+		model.setViewName("/board/board/shareTripHome");
+		
+		
+		return model;
 	}
 
 	@GetMapping("/board/bestBoard")
@@ -143,9 +166,7 @@ public class BoardController {
 
 	@GetMapping("/board/boardwriteform")
 	public String boardwriteform(HttpSession session) {
-
-		session.setAttribute("loginok", "yes");
-		session.setAttribute("myid", "testtest");
+			
 		return "/board/board/boardwriteform";
 	}
 
@@ -217,7 +238,7 @@ public class BoardController {
 
 	// 게시글 상세페이지
 	@GetMapping("/board/detail")
-	public ModelAndView boardDetail(String bnum, int currentPage, HttpSession session) {
+	public ModelAndView boardDetail(String bnum,@RequestParam(value = "currentPage", defaultValue = "1") int currentPage, HttpSession session) {
 
 		ModelAndView model = new ModelAndView();
 

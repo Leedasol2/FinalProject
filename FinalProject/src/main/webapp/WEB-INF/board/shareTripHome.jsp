@@ -25,26 +25,14 @@
 					<div><span class="bestboard">BEST&nbsp;</span>게시판</div>
 				</caption>
 				<tbody>
-					<tr>
-						<td><span id="boardSubject">5월의 여행지 추천 포천 산정호수 둘레길 오리배 with 튤립축제</span></td>
-						<td class="boardId"><span><c:out value="${fn:substring('dasolsol', 0, fn:length('dasolsol') - 4)}"/>****</span></td>
-					</tr>
-					<tr>
-						<td><span id="boardSubject">5월의 여행지 추천 포천 산정호수 둘레길 오리배 with 튤립축제</span></td>
-						<td class="boardId"><span><c:out value="${fn:substring('dasolsol', 0, fn:length('dasolsol') - 4)}"/>****</span></td>
-					</tr>
-					<tr>
-						<td><span id="boardSubject">5월의 여행지 추천 포천 산정호수 둘레길 오리배 with 튤립축제</span></td>
-						<td class="boardId"><span><c:out value="${fn:substring('dasolsol', 0, fn:length('dasolsol') - 4)}"/>****</span></td>
-					</tr>
-					<tr>
-						<td><span id="boardSubject">5월의 여행지 추천 포천 산정호수 둘레길 오리배 with 튤립축제</span></td>
-						<td class="boardId"><span><c:out value="${fn:substring('dasolsol', 0, fn:length('dasolsol') - 4)}"/>****</span></td>
-					</tr>
-					<tr>
-						<td><span id="boardSubject">5월의 여행지 추천 포천 산정호수 둘레길 오리배 with 튤립축제</span></td>
-						<td class="boardId"><span><c:out value="${fn:substring('dasolsol', 0, fn:length('dasolsol') - 4)}"/>****</span></td>
-					</tr>
+					<c:forEach var="best" items="${bestlist }">
+						<tr>
+						  
+							<td><a href="detail?bnum=${best.bnum }"><span id="boardSubject">${best.subject }</span> </a></td>
+							<td class="boardId"><span><c:out value="${fn:substring(best.writer, 0, fn:length(best.writer) - 2)}"/>**</span></td>
+						 
+						</tr>
+					</c:forEach>
 				</tbody>
 			</table>
 
@@ -53,26 +41,12 @@
 					<div>자유게시판</div>
 				</caption>
 				<tbody>
-					<tr>
-						<td><span id="boardSubject">5월의 여행지 추천 포천 산정호수 둘레길 오리배 with 튤립축제</span></td>
-						<td class="boardId"><span><c:out value="${fn:substring('dasolsol', 0, fn:length('dasolsol') - 4)}"/>****</span></td>
-					</tr>
-					<tr>
-						<td><span id="boardSubject">5월의 여행지 추천 포천 산정호수 둘레길 오리배 with 튤립축제</span></td>
-						<td class="boardId"><span><c:out value="${fn:substring('dasolsol', 0, fn:length('dasolsol') - 4)}"/>****</span></td>
-					</tr>
-					<tr>
-						<td><span id="boardSubject">5월의 여행지 추천 포천 산정호수 둘레길 오리배 with 튤립축제</span></td>
-						<td class="boardId"><span><c:out value="${fn:substring('dasolsol', 0, fn:length('dasolsol') - 4)}"/>****</span></td>
-					</tr>
-					<tr>
-						<td><span id="boardSubject">5월의 여행지 추천 포천 산정호수 둘레길 오리배 with 튤립축제</span></td>
-						<td class="boardId"><span><c:out value="${fn:substring('dasolsol', 0, fn:length('dasolsol') - 4)}"/>****</span></td>
-					</tr>
-					<tr>
-						<td><span id="boardSubject">5월의 여행지 추천 포천 산정호수 둘레길 오리배 with 튤립축제</span></td>
-						<td class="boardId"><span><c:out value="${fn:substring('dasolsol', 0, fn:length('dasolsol') - 4)}"/>****</span></td>
-					</tr>
+					<c:forEach var="bul" items="${bullist }">
+						<tr>
+							<td><a href="detail?bnum=${bul.bnum }"><span id="boardSubject">${bul.subject }</span></a></td>
+							<td class="boardId"><span><c:out value="${fn:substring(bul.writer, 0, fn:length(bul.writer) - 2)}"/>**</span></td>
+						</tr>
+					</c:forEach>
 				</tbody>
 			</table>
 
