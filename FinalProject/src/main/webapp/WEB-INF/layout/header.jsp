@@ -12,7 +12,7 @@ $(function(){
 	$(".searchtext").on("keyup",function(key) {
 		if( key.keyCode == 13 ){
 			var searchtext = $(this).val(); 
-			location.href='/search/searchTrip?searchtext='+searchtext;
+			location.href='/myTrip/searchTrip?searchtext='+searchtext;
 		}
 	});
 });
