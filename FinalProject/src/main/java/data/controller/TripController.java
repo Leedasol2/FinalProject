@@ -24,6 +24,7 @@ import data.service.TripService;
 
 @Controller
 @RequestMapping("/myTrip")
+
 public class TripController {
 	
 	@Autowired
@@ -101,15 +102,18 @@ public class TripController {
 		
 //		TripDto tdto=tripMapper.getData(tnum);
 		TripDto tdto=new TripDto();
-		
-		if(rservice.getReviewcount(tnum)>0) {
-			double avgrstar=rservice.getAvgrstar(tnum);
-			int reviewcount=rservice.getReviewcount(tnum);
-			tdto.setAvgrstar(avgrstar);
-			tdto.setReviewcount(reviewcount);
-		}else {
-			tdto.setAvgrstar(0);
-			tdto.setReviewcount(0);
+		for(TripDto t:list) {
+			if(rservice.getReviewcount(t.getTnum())>0) {
+				double avgrstar=rservice.getAvgrstar(t.getTnum());
+				int reviewcount=rservice.getReviewcount(t.getTnum());
+				t.setAvgrstar(avgrstar);
+				t.setReviewcount(reviewcount);
+			}else {
+				double avgrstar=0;
+				int reviewcount=0;
+				t.setAvgrstar(avgrstar);
+				t.setReviewcount(reviewcount);
+			}
 		}
 		
 		list.add(tdto);
