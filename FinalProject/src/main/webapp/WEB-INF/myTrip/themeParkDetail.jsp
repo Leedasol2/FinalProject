@@ -154,6 +154,7 @@ $(function(){
                       <input type="radio" id="1-star" name="rating" value="1" />
                       <label for="1-star" class="star">&#9733;</label>
     </div> 
+    
         <textarea id="detailcontent" class="form-control" placeholder="별점과 리뷰를 작성해주세요!"></textarea>
         </div>
         <div class="modal-footer">
