@@ -44,7 +44,7 @@ $(function(){
 	<div class="subedit">
 	<img alt="" src="${root }/image/asset/위치아이콘.png"><span class="tripwhere"> ${tdto.location }</span>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<img alt="" src="${root }/image/asset/링크.png"><span class="tripscrap"> 홈페이지</span>
+	<img alt="" src="${root }/image/asset/링크.png"><a href="${tdto.link }"><span class="tripscrap"> 홈페이지</span></a>
 	</div>
 	</div>
 	</div>
@@ -129,6 +129,8 @@ $(function(){
 	<!-- main 끝 -->
   
   	<!-- 리뷰 작성 모달창 -->
+  	<form action="insert" method="post" enctype="multipart/form-data">
+  	
 	<div class="modal fade myModal2" id="myModal2" role="dialog">
     <div class="modal-dialog">
     
@@ -152,6 +154,7 @@ $(function(){
                       <input type="radio" id="1-star" name="rating" value="1" />
                       <label for="1-star" class="star">&#9733;</label>
     </div> 
+    
         <textarea id="detailcontent" class="form-control" placeholder="별점과 리뷰를 작성해주세요!"></textarea>
         </div>
         <div class="modal-footer">
@@ -161,5 +164,6 @@ $(function(){
       </div>
     </div>
   </div>
+  </form>
 </body>
 </html>
