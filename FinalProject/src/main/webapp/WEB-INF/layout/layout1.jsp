@@ -24,7 +24,6 @@
 
 <!-- 이용기 -->
 <link rel="stylesheet" href="${root}/css/modalCalendar.css"/>
-<link rel="stylesheet" href="${root}/css/myPageCalendar.css"/>
 <link rel="stylesheet" href="${root}/css/myPageEdit.css"/>
 <link rel="stylesheet" href="${root}/css/myPageReview.css"/>
 <link rel="stylesheet" href="${root}/css/myPageScrap.css"/>
