@@ -14,7 +14,7 @@
 <body>
 
 <script type="text/javascript">
-$(function(){
+
 	
 	<!-- image 클릭 이벤트 -->
 	$(".small3").click(function(){
@@ -24,7 +24,9 @@ $(function(){
 		$(".tripimage").attr("src",src);
 	});
 	
-});
+	
+
+
 </script>
 
 	<!-- main 시작 -->
@@ -129,12 +131,18 @@ $(function(){
 	<!-- main 끝 -->
   
   	<!-- 리뷰 작성 모달창 -->
-  	<form action="insert" method="post" enctype="multipart/form-data">
+  	<form action="/myTrip/insert" method="post" enctype="multipart/form-data">
+  	<input type="hidden" name="tnum" value="${tdto.tnum }">
+  	
+  	<input type="hidden" name="mnum" value="1">
+  	<input type="hidden" name="currentPage" value="${currentPage }">
+  	
   	
 	<div class="modal fade myModal2" id="myModal2" role="dialog">
     <div class="modal-dialog">
     
       <!-- Modal content-->
+      
       <div class="detailmodal">
         <div class="modal-header detailheader">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -155,10 +163,10 @@ $(function(){
                       <label for="1-star" class="star">&#9733;</label>
     </div> 
     
-        <textarea id="detailcontent" class="form-control" placeholder="별점과 리뷰를 작성해주세요!"></textarea>
+        <textarea id=rcontents class="form-control" placeholder="별점과 리뷰를 작성해주세요!"></textarea>
         </div>
         <div class="modal-footer">
-          <button type="button" class="rbtn" data-dismiss="modal"
+          <button type="submit" class="rbtn" 
           id="=modaladd">작성</button> 
         </div>
       </div>
