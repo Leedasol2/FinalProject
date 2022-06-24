@@ -21,18 +21,26 @@
       <div class="search-content">
         <c:forTokens var="img" items="${search.image }" delims="," begin="0" end="0">
           <c:if test="${search.part=='trip'}">
-	        <img src="${root}/image/tripspot/${img}" class="search-img" onclick="location.href='myTripDetail?tnum=${search.tnum}'">
+	        <img src="${root}/image/tripspot/${img}" class="search-img" onclick="location.href='/myTrip/myTripDetail?tnum=${search.tnum}'">
 	      </c:if>
 	      <c:if test="${search.part=='themepark'}">
-	        <img src="${root}/image/themepark/${img}" class="search-img" onclick="location.href='myTripDetail?tnum=${search.tnum}'">
+	        <img src="${root}/image/themepark/${img}" class="search-img" onclick="location.href='/myTrip/themeParkDetail?tnum=${search.tnum}'">
 	      </c:if>
 	      <c:if test="${search.part=='festival'}">
-	        <img src="${root}/image/festival/${img}" class="search-img" onclick="location.href='myTripDetail?tnum=${search.tnum}'">
+	        <img src="${root}/image/festival/${img}" class="search-img" onclick="location.href='/myTrip/festivalDetail?tnum=${search.tnum}'">
 	      </c:if>
 		</c:forTokens> 
 	    <div class="search-box"> 
 	      <div class="search-name">
-	        <a href="myTripDetail?tnum=${search.tnum}">${search.title }</a>
+	        <c:if test="${search.part=='trip'}">
+		      <a href="/myTrip/myTripDetail?tnum=${search.tnum}">${search.title }</a>
+		    </c:if>
+		    <c:if test="${search.part=='themepark'}">
+			  <a href="/myTrip/themeParkDetail?tnum=${search.tnum}">${search.title }</a>
+		    </c:if>
+			<c:if test="${search.part=='festival'}">
+			  <a href="/myTrip/festivalDetail?tnum=${search.tnum}">${search.title }</a>
+			</c:if>
 		  </div>
 	         <div class="search-star-rating">
               <input type="radio" id="5-stars" name="rating" value="5" />
