@@ -187,9 +187,71 @@ function rlist()
 	<img src="${root}/image/tripspot/${fn:split(tdto.image,',')[0]}"  class="tripdetailimg">
 	</div>
 	<div class="tripsogae">
-	<div class="tripdetailname"><b>${tdto.title }</b></div><div class="rstar">${rdto.rstar }</div>
+	<div class="tripdetailname"><b>${tdto.title }</b></div>
+	<div class="rstar">
+	<c:if test="${tdto.avgrstar==0 }">
+	<div class="tripDetail0-reviewstar">
+ 	<span>★</span>
+	<span>★</span>
+	<span>★</span>
+	<span>★</span>
+	<span>★</span>
+	</div>
+	</c:if>
+	
+	<c:if test="${tdto.avgrstar==1 }">
+	<div class="tripDetail1-reviewstar">
+    <span>★</span>
+	<span>★</span>
+	<span>★</span>
+	<span>★</span>
+	<span>★</span>
+	</div>
+	</c:if>
+	
+	<c:if test="${tdto.avgrstar==2 }">
+	<div class="tripDetail2-reviewstar">
+ 	<span>★</span>
+	<span>★</span>
+	<span>★</span>
+	<span>★</span>
+	<span>★</span>
+	</div>
+	</c:if>
+	
+	<c:if test="${tdto.avgrstar==3 }">
+	<div class="tripDetail3-reviewstar">
+ 	<span>★</span>
+	<span>★</span>
+	<span>★</span>
+	<span>★</span>
+	<span>★</span>
+	</div>
+	</c:if>
+	
+	<c:if test="${tdto.avgrstar==4 }">
+	<div class="tripDetail4-reviewstar">
+	<span>★</span>
+	<span>★</span>
+	<span>★</span>
+	<span>★</span>
+	<span>★</span>
+	</div>
+	</c:if>
+	
+	<c:if test="${tdto.avgrstar==5 }">
+	<div class="tripDetail5-reviewstar">
+ 	<span>★</span>
+	<span>★</span>
+	<span>★</span>
+	<span>★</span>
+	<span>★</span>
+	</div>
+	</c:if>
+	</div>
+	
 	<div class="tripsubcontent">
-	${tdto.title }
+	${tdto.intro }
 	</div>
 	<div class="subedit">
 	<img alt="" src="${root }/image/asset/위치아이콘.png"><span class="tripwhere"> ${tdto.location }</span>

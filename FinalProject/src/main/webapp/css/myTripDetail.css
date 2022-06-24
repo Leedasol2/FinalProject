@@ -19,14 +19,14 @@ div.triptopcont{
 }
 div.tripsubcontent{
 	font-size: 12pt;
-	margin-top: 30px;
+	margin-top: 70px;
 }
 div.rstar{
 	text-align: right;
 }
 div.subedit{
 	font-size: 12pt;
-	margin-top: 80px;
+	margin-top: 50px;
 }
 div.subcontent{
 	float: left;
@@ -50,6 +50,7 @@ div.tripimg2{
 }
 div.tripimg > img{width: 70px;}
 div.tripcontent{
+	width: 900px;
 	text-align: center;
 	margin-top: 15px;
 	margin-bottom: 15px;
@@ -146,11 +147,11 @@ span.detailedit{
 	text-align: right;
 	float: right;
 }
-/* modal ºÎºÐ */
-div.myModal2 !important {
-	width: 600px;
-	height: 350px;
-}
+/* modal ï¿½Îºï¿½ */
+/* div.myModal2 !important { */
+/* 	width: 600px; */
+/* 	height: 350px; */
+/* } */
 .modal-header{background-color: #2bae66;}
 .rbtn{
 	background-color: #2bae66;
@@ -183,7 +184,7 @@ span.modalsub2{
 	color: #212529;
 }
 
-/* º°Á¡ css */
+/* ï¿½ï¿½ï¿½ï¿½ css */
 .detail-star-rating {
       display: flex;
     flex-direction: row-reverse;
@@ -210,7 +211,7 @@ span.modalsub2{
 } */
 
 
-/* Modal º°Á¡ css */
+/* Modal ï¿½ï¿½ï¿½ï¿½ css */
 .modal-body-top {
     display: flex;
     align-items: center;
@@ -241,5 +242,105 @@ span.modalsub2{
  
 .modal-star-rating-review-write :checked ~ label {
   -webkit-text-fill-color: gold;
+}
+
+.tripDetail0-reviewstar{
+	float:right;
+	border:solid 0px #ccc;
+  display:flex;
+  flex-direction: row-reverse;
+  font-size:0.7em;
+  justify-content:space-around;
+  padding:0 .2em;
+  text-align:center;
+  width:5em;
+}
+.tripDetail0-reviewstar span{
+	color:#ccc;
+}
+
+.tripDetail1-reviewstar{
+	float:right;
+	border:solid 0px #ccc;
+  display:flex;
+  flex-direction: row-reverse;
+  font-size:0.7em;
+  justify-content:space-around;
+  padding:0 .2em;
+  text-align:center;
+  width:5em;
+}
+div.tripDetail1-reviewstar > span{
+	color: gold
+}
+div.tripDetail1-reviewstar > span:nth-child(-n+4){
+	color: #ccc
+}
+
+.tripDetail2-reviewstar{
+	float:right;
+	border:solid 0px #ccc;
+  display:flex;
+  flex-direction: row-reverse;
+  font-size:0.7em;
+  justify-content:space-around;
+  padding:0 .2em;
+  text-align:center;
+  width:5em;
+}
+div.tripDetail2-reviewstar > span{
+	color: gold
+}
+div.tripDetail2-reviewstar > span:nth-child(-n+3){
+	color: #ccc
+}
+.tripDetail3-reviewstar{
+	float:right;
+	border:solid 0px #ccc;
+  display:flex;
+  flex-direction: row-reverse;
+  font-size:0.7em;
+  justify-content:space-around;
+  padding:0 .2em; 
+  text-align:center;
+  width:5em;
+}
+div.tripDetail3-reviewstar > span{
+	color: gold
+}
+div.tripDetail3-reviewstar > span:nth-child(-n+2){
+	color: #ccc
+}
+
+.tripDetail4-reviewstar{
+	float:right;
+	border:solid 0px #ccc;
+  display:flex;
+  flex-direction: row-reverse;
+  font-size:0.7em;
+  justify-content:space-around;
+  padding:0 .2em;
+  text-align:center;
+  width:5em;
+}
+div.tripDetail4-reviewstar > span{
+	color: gold
+}
+div.tripDetail4-reviewstar > span:nth-child(-n+1){
+	color: #ccc
+}
+.tripDetail5-reviewstar{
+	float:right;
+	border:solid 0px #ccc;
+  display:flex;
+  flex-direction: row-reverse;
+  font-size:0.7em;
+  justify-content:space-around;
+  padding:0 .2em;
+  text-align:center;
+  width:5em;
+}
+.tripDetail5-reviewstar span{
+	color: gold;
 }
 

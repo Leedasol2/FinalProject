@@ -26,12 +26,9 @@ public class TripService {
 		tripMapper.updateReadCount(tnum);
 	}
 
-	public List<TripDto> getList(int start, int perpage) {
+	public List<TripDto> getList() {
 
-		HashMap<String, Integer> map = new HashMap<>();
-		map.put("start", start);
-		map.put("perpage", perpage);
-		return tripMapper.getList(map);
+		return tripMapper.getList();
 	}
 
 	public List<TripDto> getAllTrips() {
@@ -79,6 +76,9 @@ public class TripService {
 
 	public List<TripDto> getSearch(String title) {
 		return tripMapper.getSearch(title);
+	}
+	public List<TripDto> getBestList(String tnum){
+		return tripMapper.getBestList(tnum);
 	}
 
 }

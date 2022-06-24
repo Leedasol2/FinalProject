@@ -13,7 +13,7 @@ public interface TripMapperInter {
 
 	public int getTotalCount();
 	public void updateReadCount(String tnum);
-	public List<TripDto> getList(HashMap<String, Integer> map);
+	public List<TripDto> getList();
 	public TripDto getData(String tnum);
 	public String getTitle(String tnum); //by은비
 	public List<TripDto> getRegionList(String region);
@@ -22,6 +22,7 @@ public interface TripMapperInter {
 	public List<TripDto> getReviewList();
 	public List<TripDto> getHighRstarList();
 	public List<TripDto> getLowRstarList();
+	public List<TripDto> getBestList(String tnum);
 	
 	//동현
 	public List<TripDto> getAllTrips(); 
