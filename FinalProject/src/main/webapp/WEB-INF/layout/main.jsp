@@ -24,7 +24,7 @@
 						<li class="slideitem">
 							<div>
 								<label for="slide04" class="left"></label> <label for="slide02" class="right"></label>
-								<a href="myTripDetail?tnum=98"><img src="${root }/image/asset/banner1.png"></a>
+								<a href="/myTrip/myTripDetail?tnum=98"><img src="${root }/image/asset/banner1.png"></a>
 							</div>
 
 						</li>
@@ -33,7 +33,7 @@
 						<li class="slideitem">
 							<div>
 								<label for="slide01" class="left"></label> <label for="slide03" class="right"></label>
-								<a href="myTripDetail?tnum=168"><img src="${root }/image/asset/banner2.png"></a>
+								<a href="/myTrip/myTripDetail?tnum=168"><img src="${root }/image/asset/banner2.png"></a>
 							</div>
 						</li>
 						
@@ -41,7 +41,7 @@
 						<li class="slideitem">
 							<div>
 								<label for="slide02" class="left"></label> <label for="slide04" class="right"></label>
-								<a href="myTripDetail?tnum=155"><img src="${root }/image/asset/banner3.png"></a>
+								<a href="/myTrip/myTripDetail?tnum=155"><img src="${root }/image/asset/banner3.png"></a>
 							</div>
 						</li>
 						
@@ -49,7 +49,7 @@
 						<li class="slideitem">
 							<div>
 								<label for="slide03" class="left"></label> <label for="slide01" class="right"></label>
-								<a href="myTripDetail?tnum=24"><img src="${root }/image/asset/banner4.png"></a>
+								<a href="/myTrip/myTripDetail?tnum=24"><img src="${root }/image/asset/banner4.png"></a>
 							</div>
 						</li>
 						
@@ -66,18 +66,26 @@
 						<div class="tripstory-content">
 						  <c:forTokens var="img" items="${tdto.image }" delims="," begin="0" end="0">
 						     <c:if test="${tdto.part=='trip'}">
-	      					   <img src="${root}/image/tripspot/${img}" class="tripstory-img" onclick="location.href='myTripDetail?tnum=${search.tnum}'">
+	      					   <img src="${root}/image/tripspot/${img}" class="tripstory-img" onclick="location.href='/myTrip/myTripDetail?tnum=${tdto.tnum}'">
 	      					 </c:if>
 	     				   	 <c:if test="${tdto.part=='themepark'}">
-						       <img src="${root}/image/themepark/${img}" class="tripstory-img" onclick="location.href='myTripDetail?tnum=${search.tnum}'">
+						       <img src="${root}/image/themepark/${img}" class="tripstory-img" onclick="location.href='/myTrip/themeParkDetail?tnum=${tdto.tnum}'">
 						     </c:if>
 						     <c:if test="${tdto.part=='festival'}">
-						       <img src="${root}/image/festival/${img}" class="tripstory-img" onclick="location.href='myTripDetail?tnum=${search.tnum}'">
+						       <img src="${root}/image/festival/${img}" class="tripstory-img" onclick="location.href='/myTrip/festivalDetail?tnum=${tdto.tnum}'">
 						     </c:if>
 						  </c:forTokens>
 							<div class="name-box">
 								<div class="tripstory-name">
-									<a href="myTripDetail?tnum=${tdto.tnum}">${tdto.title }</a>
+								  <c:if test="${tdto.part=='trip'}">
+									<a href="/myTrip/myTripDetail?tnum=${tdto.tnum}">${tdto.title }</a>
+								  </c:if>
+								  <c:if test="${tdto.part=='themepark'}">
+								    <a href="/myTrip/themeParkDetail?tnum=${tdto.tnum}">${tdto.title }</a>
+						          </c:if>
+						          <c:if test="${tdto.part=='festival'}">
+						            <a href="/myTrip/festivalDetail?tnum=${tdto.tnum}">${tdto.title }</a>
+						          </c:if>
 								</div>
 								<div class="tripstory-star-ratings">
 									<div class="tripstory-star-ratings-fill space-x-2 text-lg" style="width: ratingToPercent+ '%'">
@@ -198,11 +206,11 @@
 									<div class="newpark-content">
 									  <c:forTokens var="img" items="${festival.image}" delims="," begin="0" end="0">
 						            	<img src="${root}/image/festival/${img}" class="tripstory-img"
-						            	onclick="location.href='festivalDetail?tnum=${theme.tnum}'">
+						            	onclick="location.href='/myTrip/festivalDetail?tnum=${festival.tnum}'">
 						              </c:forTokens>
 										<div class="name-box">
 											<div class="tripstory-name">
-												<a href="festivalDetail?tnum=${theme.tnum}">${festival.title}</a>
+												<a href="/myTrip/festivalDetail?tnum=${festival.tnum}">${festival.title}</a>
 											</div>
 										</div>
 										<div class="explain-box">
