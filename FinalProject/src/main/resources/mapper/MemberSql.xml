@@ -11,6 +11,10 @@
   select count(*) from member where email=#{email}
 </select>
 
+<select id="getIdCheck" parameterType="String" resultType="int">
+select count(*) from member where userid=#{userid}
+</select>
+
 <insert id="insertMember" parameterType="mdto">
   insert into member (name,email,userid,password,phone,gaipday) values (#{name},#{email},#{userid},#{password},#{phone},now())
 </insert>

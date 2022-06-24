@@ -146,7 +146,7 @@ input.login-info-input-email1{
 	height: 50px;
 	border: 1px solid #E6E6E6;
 	padding-left: 25px;	
-	
+	background-color: gainsboro;
 }
 
 input.login-info-input-email2{
@@ -155,12 +155,16 @@ input.login-info-input-email2{
 	height: 50px;
 	border: 1px solid #E6E6E6;
 	padding-left: 25px;	
-	
+	background-color: gainsboro;
 }
 
 div.login-info-btn-group1{
-	
+	margin-left: 120px;
 	margin-top: 20px;
+}
+
+div.login-info-btn-group2{
+	margin-left: 152px;
 }
 
 label.login-info-btn-check-all{
@@ -284,4 +288,67 @@ input[id="check1"]:checked + label span {
 input[id="check2"]:checked + label span {
     background:url(https://t1.daumcdn.net/cfile/tistory/99B9D6455B6C0C330B)  -26px top no-repeat;
     background-size: cover;
+}
+
+span.hangulName{
+	position: absolute;
+	top: 286px;
+	right: 500px;
+	font-size: 13px;
+	color: red;
+	display: none;
+}
+
+span.checkuserid{
+	position: absolute;
+	top: 457px;
+	right: 381px;
+	font-size: 13px;
+	color: red;
+	display: none;
+}
+
+span.duplicateid{
+	position: absolute;
+	top: 439px;
+	right: 574px;
+	font-size: 13px;
+	color: red;
+	display: none;
+}
+
+span.availableid{
+	position: absolute;
+	top: 439px;
+	right: 548px;
+	font-size: 13px;
+	color: #33b679;
+	display: none;
+}
+
+span.userphonenumber{
+	position: absolute;
+	top: 706px;
+	right: 421px;
+	font-size: 13px;
+	color: red;
+	display: none;
+}
+
+span.allnochecklist{
+	position: absolute;
+	top: 905px;
+	left: 853px;
+	font-size: 13px;
+	color: red;
+	display: none;
+}
+
+span.allnocheckbtn{
+	position: absolute;
+	top: 860px;
+	left: 850px;
+	font-size: 13px;
+	color: red;
+	display: none;
 }
