@@ -88,6 +88,7 @@ $(function(){
 	$(".userpasswd").blur(function(){
 
 		var passwd = $("#pass").val();
+		
 		var check1 = /^(?=.*[a-zA-Z])(?=.*[0-9]).{8,16}$/.test(passwd);
 
 		if(!check1){
@@ -104,6 +105,7 @@ $(function(){
 
 		var p1 = $("#pass").val();
 	    var p2 = $("#pass2").val();
+	    
 	    if( p1 != p2 ) {
 	        $(".donotmatchpass").css("display","inline-block");
 	        allchecklist=false;
@@ -115,9 +117,10 @@ $(function(){
 
 	//핸드폰번호 숫자만 입력
 	$(".userhp").blur(function(){
-		var hp_pattern =  /^\\d{3}\\d{3,4}\\d{4}$/;
+		
 		var hp = $(".userhp").val();
-
+		var hp_pattern =  /^\d{3}\d{3,4}\d{4}$/;
+		
 		if(!hp_pattern.test(hp)) {
 			$(".userphonenumber").css("display","inline-block");
 			allchecklist=false;
@@ -251,7 +254,7 @@ $(function(){
 				<tr>
 				<td class = "login-info-table-title">휴대폰번호</td>
 				<td class= "login-info-content"><input type="text" name="phone" class="form-logineinfo-input userhp"
-				placeholder="01012345678" required="required" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\\..*)\\./g, '$1');">
+				placeholder="01012345678" required="required">
 				</td>
 				</tr>
 
