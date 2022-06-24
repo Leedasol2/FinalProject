@@ -57,7 +57,7 @@ public class TripController {
 			tdto.setAvgrstar(avgrstar);
 		}
 		mview.addObject("tdto",tdto);
-		mview.setViewName("/html/myTripDetail");
+		mview.setViewName("/trip/myTripDetail");
 		return mview;
 	}
 	
@@ -128,7 +128,7 @@ public class TripController {
 		mview.addObject("totalCount",totalCount);
 		
 		
-		mview.setViewName("/html/bestTrip");
+		mview.setViewName("/trip/bestTrip");
 		
 		return mview;
 	}
@@ -215,7 +215,7 @@ public class TripController {
 			tdto.setAvgrstar(avgrstar);
 		}
 		model.addAttribute("tdto",tdto);
-		return "/html/regionTrip";
+		return "/trip/regionTrip";
 	}
 	
 	@PostMapping("/RegionChange")
@@ -225,7 +225,7 @@ public class TripController {
 				
 		model.addAttribute("regionList",regionList);
 		
-		return "/html/regionTrip";
+		return "/trip/regionTrip";
 	}
 		
 	//테마별여행지 페이지
@@ -244,7 +244,7 @@ public class TripController {
 //		model.addAttribute("avgrstar",avgrstar);
 		model.addAttribute("dto",dto);
 				
-		return "/html/themaTrip";
+		return "/trip/themaTrip";
 	}
 		
 	@PostMapping("/ThemeChange")
@@ -254,7 +254,7 @@ public class TripController {
 		
 		model.addAttribute("themeList",themeList);
 		
-		return "/html/themaTrip";
+		return "/trip/themaTrip";
 	}
 	
 	//이용기
