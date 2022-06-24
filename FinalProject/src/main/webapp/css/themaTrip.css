@@ -132,33 +132,6 @@ div.themaTripText div.trip-content > span.trip-region > img{
     top: 1px;
 }
 
-
-/* 별점 css */
-div.themaTripText .thema-star-rating{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
-    padding: 0 0.2em;
-    text-align: center;
-    width: 5em;
-    font-size: 9pt;
-    margin-top: -2px;
-    margin-left: 160px;
-}
-
-div.themaTripText .thema-star-rating input {
-   display:none;
-}
-
-div.themaTripText .thema-star-rating label {
-   color:#FFEB46;
-   cursor:pointer;
-}
-
-div.themaTripText .thema-star-rating :checked ~ label {
-   color:#f90;
-}
-
 div.themaTripText > div.themeaofkorea{
 	position: relative;
     left: 63px;

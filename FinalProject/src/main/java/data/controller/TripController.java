@@ -66,41 +66,10 @@ public class TripController {
 	public ModelAndView bestTrip(@RequestParam(value = "currentPage",defaultValue = "1") int currentPage,@RequestParam(value =  "tnum",required = false) String tnum) {
 			
 		ModelAndView mview=new ModelAndView();
-		int totalCount=30;
 		
-		//페이징처리에 필요한 변수
-		int totalPage; //총 페이지수
-		int startPage; //각블럭의 시작페이지
-		int endPage; //각블럭의 끝페이지
-		int start; //각페이지의 시작번호
-		int perpage=9; //한페이지에 보여질 글 갯수
-		int perBlock=3; //한블럭당 보여지는 페이지 개수
-
-
-		//총페이지 개수구하기
-		totalPage=totalCount/perpage+(totalCount%perpage==0?0:1);
-
-		//각블럭의 시작페이지
-		//예:현재페이지가 3인경우 startpage=1,endpage= 5
-		//현재페이지가 6인경우 startpage=6,endpage= 10
-		startPage=(currentPage-1)/perBlock*perBlock+1;
-		endPage=startPage+perBlock-1;
-
-		//만약 총페이지가 8 -2번째블럭: 6-10 ..이럴경우는 endpage가 8로 수정되어야함
-		if(endPage>totalPage)
-		   endPage=totalPage;
-
-		//각페이지에서 불러올 시작번호 
-		start=(currentPage-1)*perpage;
-
-		//각페이지에서 필요한 게시글 가져오기
-		List<TripDto> list=tservice.getList(start,perpage);
+		List<TripDto> list=tservice.getList();
+//		List<TripDto> bestlist=tservice.getBestList(tnum);
 		
-		//각 글앞에 붙일 시작번호 구하기
-		//총글이 20개면? 1페이지 20 2페이지 15부터 출력해서 1씩 감소
-		int no=totalCount-(currentPage-1)*perpage;
-		
-//		TripDto tdto=tripMapper.getData(tnum);
 		TripDto tdto=new TripDto();
 		for(TripDto t:list) {
 			if(rservice.getReviewcount(t.getTnum())>0) {
@@ -115,75 +84,18 @@ public class TripController {
 				t.setReviewcount(reviewcount);
 			}
 		}
-		
 		list.add(tdto);
 		
 		//출력에 필요한 변수들을 request에 저장
 		mview.addObject("list",list); //댓글개수 포함후 전달
 		mview.addObject("tdto",tdto);
-		mview.addObject("startPage",startPage);
-		mview.addObject("endPage",endPage);
-		mview.addObject("totalPage",totalPage);
-		mview.addObject("no",no);
-		mview.addObject("totalCount",totalCount);
 		
+//		mview.addObject("bestlist",bestlist);
 		
 		mview.setViewName("/trip/bestTrip");
 		
 		return mview;
 	}
-	
-	//지역별여행지 페이지
-//	@GetMapping("regionTrip")
-//	public ModelAndView regionTrip(@RequestParam(value = "currentPage",defaultValue = "1") int currentPage) {
-//		
-//		ModelAndView mview=new ModelAndView();
-//		int totalCount=tripMapper.getTotalCount();
-//		
-//		//페이징처리에 필요한 변수
-//		int totalPage; //총 페이지수
-//		int startPage; //각블럭의 시작페이지
-//		int endPage; //각블럭의 끝페이지
-//		int start; //각페이지의 시작번호
-//		int perpage=9; //한페이지에 보여질 글 갯수
-//		int perBlock=3; //한블럭당 보여지는 페이지 개수
-//
-//
-//		//총페이지 개수구하기
-//		totalPage=totalCount/perpage+(totalCount%perpage==0?0:1);
-//
-//		//각블럭의 시작페이지
-//		//예:현재페이지가 3인경우 startpage=1,endpage= 5
-//		//현재페이지가 6인경우 startpage=6,endpage= 10
-//		startPage=(currentPage-1)/perBlock*perBlock+1;
-//		endPage=startPage+perBlock-1;
-//
-//		//만약 총페이지가 8 -2번째블럭: 6-10 ..이럴경우는 endpage가 8로 수정되어야함
-//		if(endPage>totalPage)
-//		   endPage=totalPage;
-//
-//		//각페이지에서 불러올 시작번호 
-//		start=(currentPage-1)*perpage;
-//
-//		//각페이지에서 필요한 게시글 가져오기
-//		List<TripDto> regionlist=tservice.regionList(start,perpage);
-//		
-//		//각 글앞에 붙일 시작번호 구하기
-//		//총글이 20개면? 1페이지 20 2페이지 15부터 출력해서 1씩 감소
-//		int no=totalCount-(currentPage-1)*perpage;
-//		
-//		//출력에 필요한 변수들을 request에 저장
-//		mview.addObject("regionlist",regionlist); //댓글개수 포함후 전달
-//		mview.addObject("startPage",startPage);
-//		mview.addObject("endPage",endPage);
-//		mview.addObject("totalPage",totalPage);
-//		mview.addObject("no",no);
-//		mview.addObject("totalCount",totalCount);
-//		
-//		mview.setViewName("/html/regionTrip");
-//		
-//		return mview;
-//	}
 	
 	@GetMapping("/regionTrip")
 	public String regionTrip(Model model,@RequestParam(value =  "tnum",required = false) String tnum) {
@@ -202,19 +114,24 @@ public class TripController {
 //		model.addAttribute("orderHighRstar",orderHighRstar);
 //		model.addAttribute("orderLowRstar",orderLowRstar);
 		
-//		TripDto tdto=tripMapper.getData(tnum);
 		TripDto tdto=new TripDto();
-		
-		if(rservice.getReviewcount(tnum)>0) {
-			double avgrstar=rservice.getAvgrstar(tnum);
-			int reviewcount=rservice.getReviewcount(tnum);
-			tdto.setAvgrstar(avgrstar);
-			tdto.setReviewcount(reviewcount);
-		}else {
-			double avgrstar=0;
-			tdto.setAvgrstar(avgrstar);
+		for(TripDto r:regionList) {
+			if(rservice.getReviewcount(r.getTnum())>0) {
+				double avgrstar=rservice.getAvgrstar(r.getTnum());
+				int reviewcount=rservice.getReviewcount(r.getTnum());
+				r.setAvgrstar(avgrstar);
+				r.setReviewcount(reviewcount);
+			}else {
+				double avgrstar=0;
+				int reviewcount=0;
+				r.setAvgrstar(avgrstar);
+				r.setReviewcount(reviewcount);
+			}
 		}
+		
+		regionList.add(tdto);
 		model.addAttribute("tdto",tdto);
+		model.addAttribute("regionList",regionList);
 		return "/trip/regionTrip";
 	}
 	
@@ -236,13 +153,23 @@ public class TripController {
 		
 		List<TripDto> themeList=tservice.getThemeList(CurrentTheme);
 		
-		TripDto dto=new TripDto();
-//		Integer avgrstar=(Integer)rservice.getAvgRstar(tnum);
-//		dto.setAvgrstar(avgrstar);
-		
+		TripDto tdto=new TripDto();
+		for(TripDto r:themeList) {
+			if(rservice.getReviewcount(r.getTnum())>0) {
+				double avgrstar=rservice.getAvgrstar(r.getTnum());
+				int reviewcount=rservice.getReviewcount(r.getTnum());
+				r.setAvgrstar(avgrstar);
+				r.setReviewcount(reviewcount);
+			}else {
+				double avgrstar=0;
+				int reviewcount=0;
+				r.setAvgrstar(avgrstar);
+				r.setReviewcount(reviewcount);
+			}
+		}
+		themeList.add(tdto);
 		model.addAttribute("themeList",themeList);
-//		model.addAttribute("avgrstar",avgrstar);
-		model.addAttribute("dto",dto);
+		model.addAttribute("tdto",tdto);
 				
 		return "/trip/themaTrip";
 	}

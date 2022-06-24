@@ -100,17 +100,63 @@ $(document).ready(function(){
           onclick="location.href='myTripDetail?tnum=${theme.tnum}&currentPage=${currentPage }'">
           
           <span class="trip-name">${theme.title }</span>
-          <div class="thema-star-rating">
-              <input type="radio" id="5-stars" name="rating" value="5" />
-              <label for="5-stars" class="star">&#9733;</label>
-              <input type="radio" id="4-stars" name="rating" value="4" />
-              <label for="4-stars" class="star">&#9733;</label>
-              <input type="radio" id="3-stars" name="rating" value="3" />
-              <label for="3-stars" class="star">&#9733;</label>
-              <input type="radio" id="2-stars" name="rating" value="2" />
-              <label for="2-stars" class="star">&#9733;</label>
-              <input type="radio" id="1-star" name="rating" value="1" />
-              <label for="1-star" class="star">&#9733;</label>
+          <div class="best-star-rating">
+			<div class="besttrip-reviewstar">
+		 	 <c:if test="${theme.avgrstar==0 }">
+			<div class="tripDetail0-reviewstar">
+		 	<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			</div>
+			</c:if>
+			<c:if test="${theme.avgrstar==1 }">
+			<div class="tripDetail1-reviewstar">
+		 	<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			</div>
+			</c:if>
+			<c:if test="${theme.avgrstar==2 }">
+			<div class="tripDetail2-reviewstar">
+		 	<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			</div>
+			</c:if>
+			<c:if test="${theme.avgrstar==3 }">
+			<div class="tripDetail3-reviewstar">
+		 	<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			</div>
+			</c:if>
+			 <c:if test="${theme.avgrstar==4 }">
+			<div class="tripDetail4-reviewstar">
+		 	<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			</div>
+			</c:if>
+			 <c:if test="${theme.avgrstar==5 }">
+			<div class="tripDetail5-reviewstar">
+		 	<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			</div>
+			</c:if>
+			</div>
             </div>
   		  <span class="trip-explanation">${theme.title }</span><br>
  		  <span class="trip-region">

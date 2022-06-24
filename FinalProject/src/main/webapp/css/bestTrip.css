@@ -125,6 +125,7 @@ div.bestTripText div.trip-content span.trip-region{
     position: relative;
     top: 24px;
     cursor: pointer;
+    width: 220px;
 }
 
 div.bestTripText div.trip-content span.trip-region > img{
@@ -132,28 +133,21 @@ div.bestTripText div.trip-content span.trip-region > img{
 	position: relative;
     top: 1px;
 }
-/* 별점 css */
-div.bestTripText .best-star-rating{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
-    padding: 0 0.2em;
-    text-align: center;
-    width: 5em;
-    font-size: 9pt;
-    margin-top: -2px;
-    margin-left: 160px;
+.besttrip-reviewstar{
+	float:right;
+	border:solid 0px #ccc;
+  display:flex;
+  flex-direction: row-reverse;
+  font-size:0.7em;
+  justify-content:space-around;
+  padding:0 .2em;
+  text-align:center;
+  width:5em;
 }
 
-div.bestTripText .best-star-rating input {
-   display:none;
+.besttrip-reviewstar input{
+	display:none;
 }
-
-div.bestTripText .best-star-rating label {
-   color:#FFEB46;
-   cursor:pointer;
-}
-
-div.bestTripText .best-star-rating :checked ~ label {
-   color:#f90;
+.besttrip-reviewstar label{
+	color:#ccc;
 }

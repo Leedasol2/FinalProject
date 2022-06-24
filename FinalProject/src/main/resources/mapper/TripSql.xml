@@ -10,8 +10,15 @@
 	<update id="updateReadCount" parameterType="String">
 	update trip set readcount=readcount+1 where tnum=#{tnum}
 	</update>
-	<select id="getList" parameterType="HashMap" resultType="tdto">
-	select * from trip order by readcount desc limit #{start},#{perpage}
+	<select id="getList" resultType="tdto">
+	select * from trip order by readcount desc
+	</select>
+	<select id="getBestList" resultType="tdto">
+	select t.image, t.title,t.location,t.readcount,avg(r.rstar) as avgrstar ,count(r.rnum) as reviewcount
+	from trip t
+	INNER JOIN review r
+	ON t.tnum=r.tnum and t.tnum=#{tnum}
+	order by readcount,reviewcount
 	</select>
 	<select id="getRegionList" resultType="tdto">
 	select * from trip where region=#{region} order by readcount desc

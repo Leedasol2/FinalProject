@@ -45,7 +45,7 @@ $(document).ready(function(){
    
    <c:set var="i" value="0" />
    <c:set var="j" value="3" />
-   <c:forEach var="tdto" items="${list}" varStatus="status">
+   <c:forEach var="tdto" items="${list}" varStatus="status" begin="0" end="29">
    <c:if test="${i%j==0 }">
    <tr>
    </c:if>
@@ -55,15 +55,66 @@ $(document).ready(function(){
           onclick="location.href='myTripDetail?tnum=${tdto.tnum}&currentPage=${currentPage }'">
           
           <span class="trip-name">${tdto.title }</span>
+          
           <div class="best-star-rating">
-          <c:if test="${empty tdto.reviewcount}">
-          ${tdto.avgrstar==0}
-          </c:if>
-          <c:if test="${not empty tdto.reviewcount}">
-          ${tdto.avgrstar }
-          </c:if>
+			<div class="besttrip-reviewstar">
+		 	 <c:if test="${tdto.avgrstar==0 }">
+			<div class="tripDetail0-reviewstar">
+		 	<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			</div>
+			</c:if>
+			<c:if test="${tdto.avgrstar==1 }">
+			<div class="tripDetail1-reviewstar">
+		 	<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			</div>
+			</c:if>
+			<c:if test="${tdto.avgrstar==2 }">
+			<div class="tripDetail2-reviewstar">
+		 	<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			</div>
+			</c:if>
+			<c:if test="${tdto.avgrstar==3 }">
+			<div class="tripDetail3-reviewstar">
+		 	<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			</div>
+			</c:if>
+			 <c:if test="${tdto.avgrstar==4 }">
+			<div class="tripDetail4-reviewstar">
+		 	<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			</div>
+			</c:if>
+			 <c:if test="${tdto.avgrstar==5 }">
+			<div class="tripDetail5-reviewstar">
+		 	<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			<span>★</span>
+			</div>
+			</c:if>
+			</div>
             </div>
-  		  <span class="trip-explanation">${tdto.title }</span><br>
+            
  		  <span class="trip-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">${tdto.location }
  		  </span>
