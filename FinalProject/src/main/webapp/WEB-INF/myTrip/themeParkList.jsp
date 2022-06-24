@@ -3,16 +3,17 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+
 <title>Insert title here</title>
 </head>
 <body>
  
 <script type="text/javascript">
+$(function(){
 	
 $(document).ready(function(){
 	  var currentPosition = parseInt($(".trip-category").css("top"));
@@ -22,66 +23,39 @@ $(document).ready(function(){
 	  });
 	});
 	
-	
 //지역 선택시 글씨색 변경
-$("span.seoul").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
+	$("div.regionofkorea > span").click(function(){
+		
+		var CurrentRegion=$(this).text();
+			
+		$.ajax({
+			
+			type:"post",
+			dataType: "text",
+			url:"themeChange",
+			data:{"CurrentRegion":CurrentRegion},
+			success:function(data){
+				
+			$('body').html(data);
+			
+			
+			}
+	
+		});
+				
+		$("div.regionofkorea > span").css("color","#2bae66");
+		$(this).siblings().css("color","gray");
+	});
+	
 });
-$("span.incheon").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
-});
-
-$("span.Gyeonggi").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
-});
-
-$("span.daejeon").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
-});
-
-$("span.chungcheong").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
-});
-
-$("span.daegu").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
-});
-$("span.jeolla").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
-});
-$("span.gyeongsang").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
-});
-$("span.busan").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
-});
-$("span.gangwon").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
-});
-$("span.jeju").click(function(){
-	$(this).css("color","#2bae66");
-	$(this).siblings().css("color","gray");
-});
-
 </script> 
-
-
+ 
 <!-- 본문 시작 -->
 <div class="theme-main">
 
 <div class="theme-category">
   <a href="${root }/myTrip/themeParkList" class="themepark-category themecategory">테마파크</a><br><br><br>
-  <a href="${root }/festival/festivalList" class="festival-category themecategory">축제</a><br><br><br>
+  <a href="${root }/myTrip/festivalList" class="festival-category themecategory">축제</a><br><br><br>
 </div>
 
 <div class="theme-category-title">
@@ -92,18 +66,20 @@ $("span.jeju").click(function(){
 </div>
 
 <div class="regionofkorea">
-  <span class="seoul region">서울</span> 
-  <span  class="incheon region">인천</span>
-  <span  class="Gyeonggi region">경기</span> 
-  <span  class="daejeon region">대전</span>
-  <span  class="chungcheong region">충청</span>
-  <span  class="daegu region">대구</span>
-  <span  class="jeolla region">전라</span>
-  <span  class="gyeongsang region">경상</span>
-  <span  class="busan region">부산</span>
-  <span  class="gangwon region">강원</span>
-  <span  class="jeju region">제주</span>
+  <span class="seoul region">서울</span>
+  <span class="incheon region">인천</span>
+  <span class="Gyeonggi region">경기</span>
+  <span class="daejeon region">대전</span>
+  <span class="chungcheong region">충청</span>
+  <span class="daegu region">대구</span>
+  <span class="jeolla region">전라</span>
+  <span class="gyeongsang region">경상</span>
+  <span class="busan region">부산</span>
+  <span class="gangwon region">강원</span>
+  <span class="jeju region">제주</span>
 </div>
+
+
 
 <div class="theme-allcontent">
 
@@ -129,13 +105,46 @@ $("span.jeju").click(function(){
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
  		    ${theme.location }
  		 </span>
-     </div>    
+     </div>  
 </c:forEach>    
-     
 </div>
 
 </div>
 <!-- 본문 끝 -->
+
+<!-- 페이징 -->
+<c:if test="${totalCount>0 }">
+<div style="text-align: center">
+<ul class="pagination">
+	<!-- 이전 -->
+	<c:if test="${startPage>1 }">
+	<li>
+		<a href="regionTrip?currentPage=${startPage-1}">이전</a>
+	</li>
+	</c:if>
+	
+	<c:forEach var="pp" begin="${startPage }" end="${endPage }">
+	<c:if test="${currentPage==pp }">
+	<li class="active">
+	<a href="regionTrip?currentPage=${pp}">${pp }</a>
+	</li>
+	</c:if>
+	<c:if test="${currentPage!=pp }">
+	<li>
+		<a href="regionTrip?currentPage=${pp }">${pp }</a>
+	</li>
+	</c:if>
+	</c:forEach>
+	
+	<!-- 다음 -->
+	<c:if test="${endPage<totalPage }">
+	<li>
+		<a href="regionTrip?currentPage=${endPage+1}">다음</a>
+	</li>
+	</c:if>
+</ul>
+</div>
+</c:if>
 
 </body>
 </html>
