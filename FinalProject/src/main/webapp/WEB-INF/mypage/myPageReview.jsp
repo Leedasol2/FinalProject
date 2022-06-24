@@ -17,8 +17,8 @@
 				<div class="mypage-title">마이페이지</div>
 				<div class="mypage-menu">
 					<ul class="mypage-ul">
-						<li class="mypage-li"><a href="${root}/html/myPageEdit">회원정보수정</a></li> <!-- 추후에 맵핑주소 보고 바꾸기 -->
-						<li class="mypage-li"><a href="${root}/html/myPageScrap">스크랩</a></li> 
+						<li class="mypage-li"><a href="${root}/mypage/myPageEdit">회원정보수정</a></li>
+						<li class="mypage-li"><a href="${root}/mypage/myPageScrap">스크랩</a></li> 
 						<li class="mypage-li"><a href="${root}/mypage/myPageCalendar">마이캘린더</a></li>
 						<li class="mypage-li"><a href="${root}/mypage/myPageReview">리뷰</a></li>
 					</ul>
