@@ -259,12 +259,15 @@ public class TripController {
 	
 	//이용기
 		@GetMapping("/themeParkList")
-		public String themeParkList(Model model, @RequestParam(value = "tnum", required = false) String tnum) {
+		public String themeParkList(Model model) {
 			
 			
-			String CurrentRegion="서울";
+			//String CurrentRegion="서울";
+			String themepark="'themepark'";
 			
-			List<TripDto> themeparklist=tservice.getRegionList(CurrentRegion);
+			List<TripDto> themeparklist=tservice.getAllActivitys(themepark);
+			
+			System.out.println(themeparklist);
 			
 			model.addAttribute("themeparklist",themeparklist);
 					
@@ -272,11 +275,16 @@ public class TripController {
 			return "/myTrip/themeParkList";
 		}
 		
+		
 		@PostMapping("/themeChange")
 		public String themeChange(@RequestParam String CurrentRegion,  Model model) {
 						
-			List<TripDto> themeparklist=tservice.getRegionList(CurrentRegion);
+			String themepark="themepark";
+			
+			List<TripDto> themeparklist=tservice.getRegionThemeList(themepark, CurrentRegion);
 						
+			System.out.println(themeparklist);
+			
 			model.addAttribute("themeparklist", themeparklist);						
 						
 			return "/myTrip/themeParkList";

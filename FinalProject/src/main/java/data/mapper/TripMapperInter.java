@@ -29,6 +29,5 @@ public interface TripMapperInter {
 	public List<TripDto> getSearch(String title);
 	
 	//용기
-	public List<TripDto> getAllList(); 
-	public List<TripDto> getRegionThemeList(String part, String region);
+	public List<TripDto> getRegionThemeList(TripDto tdto);
 }
