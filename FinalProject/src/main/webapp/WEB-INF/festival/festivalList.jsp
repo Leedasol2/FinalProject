@@ -23,7 +23,7 @@
 	<div class="festival-list-category">
 		<ul class="sidebar">
 			<li><a href="${root }/myTrip/themeParkList">테마파크</a></li>
-			<li><a href="${root }/festival/festivalList">축제</a></li>
+			<li><a href="${root }/myTrip/festivalList">축제</a></li>
 		</ul>
 	</div>
 	
@@ -37,7 +37,7 @@
 		
 		<div class="festival-proceeding">
 			<div class="title">지금 진행중인 축제</div>
-			<div class="festival-calendar"><a href="${root }/festival/festivalCalendar">달력으로 보기 ></a></div>
+			<div class="festival-calendar"><a href="${root }/myTrip/festivalCalendar">달력으로 보기 ></a></div>
 		</div>
 		
 		<div class="festival-list">
