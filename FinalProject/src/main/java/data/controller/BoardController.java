@@ -271,15 +271,21 @@ public class BoardController {
 		//추천
 		int likesCnt=service.getLikeCount(bnum);
 		
-		//로그인 중인 사용자
-		String myid=(String)session.getAttribute("myid");
-		
+		String loginok = (String) session.getAttribute("loginok");
+		String myid;
+		boolean mylike;
+			
+		// 로그인중이 아닐 때
+		if (loginok == null || loginok.equals("")) {
+			mylike=false;
+		}else {
+			myid=(String)session.getAttribute("myid");
+			mylike= service.isMyLike(bnum, memservice.getMnum(myid))==1?true:false;
+		}
 		
 		int commentCnt = comservice.getCommentsCnt(bnum);
 		//로그인한 id가 추천했으면 true, 아니면 false
-		boolean mylike = service.isMyLike(bnum, memservice.getMnum(myid))==1?true:false;
-		
-
+		 
 		// 댓글
 		List<CommentsDto> clist = comservice.getComments(bnum);
 
