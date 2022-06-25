@@ -37,6 +37,7 @@
 						<td>작성자</td>
 						<td>작성일</td>
 						<td>조회수</td>
+						<td>추천수</td>
 					</tr>
 				</thead>
 				<tbody>
@@ -67,6 +68,7 @@
 						<td><c:out value="${fn:substring(dto.writer, 0, fn:length(dto.writer) - 2)}"/>**</td>
 						<td><fmt:formatDate value="${dto.writeday }" pattern="yyyy.MM.dd"/></td>
 						<td><fmt:formatNumber value="${dto.views }"/></td>
+						<td><fmt:formatNumber value="${dto.likes }"/></td>
 						</tr>
 					</c:forEach>
 				</tbody>

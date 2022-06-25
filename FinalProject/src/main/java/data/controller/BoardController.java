@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.StringTokenizer;
 
 import javax.servlet.http.HttpSession;
@@ -14,7 +15,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -90,8 +93,11 @@ public class BoardController {
 			for (BoardDto b : bestlist) {
 				b.setWriter(memservice.getUserId(b.getMnum()));
 				b.setCommentCnt(comservice.getCommentsCnt(b.getBnum()));
+				b.setLikes(service.getLikeCount(b.getBnum()));
 			}
 
+			
+			
 			// 댓글개수
 
 			// model에 변수 추가
@@ -145,6 +151,7 @@ public class BoardController {
 		for (BoardDto b : list) {
 			b.setWriter(memservice.getUserId(b.getMnum()));
 			b.setCommentCnt(comservice.getCommentsCnt(b.getBnum()));
+			b.setLikes(service.getLikeCount(b.getBnum()));
 		}
 
 		// 댓글개수
@@ -261,28 +268,17 @@ public class BoardController {
 		dto.setWriter(memservice.getUserId(dto.getMnum()));
 
 		
+		//추천
+		int likesCnt=service.getLikeCount(bnum);
 		
+		//로그인 중인 사용자
+		String myid=(String)session.getAttribute("myid");
 		
 		
 		int commentCnt = comservice.getCommentsCnt(bnum);
-		boolean mylike = false;
-		// 로그인중인 사용자의 mnum
-		String myMnum = memservice.getMnum((String) session.getAttribute("myid"));
+		//로그인한 id가 추천했으면 true, 아니면 false
+		boolean mylike = service.isMyLike(bnum, memservice.getMnum(myid))==1?true:false;
 		
-		// 로그인중인 사용자가 추천을 눌렀는지 확인
-		if (session.getAttribute("loginok")=="yes" && dto.getLikes() > 0) {
-			StringTokenizer tokenizer = new StringTokenizer(dto.getLikesuser(), ",");
-			// System.out.println("testetsetset");
-
-			 do { 
-				 if(tokenizer.nextToken().equals(myMnum) || tokenizer.nextToken()==myMnum) {
-					 mylike=true; 
-				 } 
-				 //System.out.println(mylike);
-			 } while (tokenizer.hasMoreTokens());
-			 
-
-		}
 
 		// 댓글
 		List<CommentsDto> clist = comservice.getComments(bnum);
@@ -295,6 +291,7 @@ public class BoardController {
 		model.addObject("currentPage", currentPage);
 		model.addObject("commentCnt", commentCnt);
 		model.addObject("clist", clist);
+		model.addObject("likesCnt", likesCnt);
 		model.addObject("mylike", mylike);
 
 		model.setViewName("/board/board/boardDetailPage");
@@ -302,28 +299,6 @@ public class BoardController {
 		return model;
 	}
 
-	@PostMapping("/board/likesUp")
-	public String likesUp(String bnum) {
-		
-		String userlist=service.getLikesUser(bnum);
-		
-		StringTokenizer tokenizer = new StringTokenizer(userlist, ",");
-
-		 do { 
-			 
-			 
-		 } while (tokenizer.hasMoreTokens());
-		
-		service.likeUp(bnum, userlist);
-		
-		
-		return "";
-	}
-	@PostMapping("/board/likeDel")
-	public String likesDel() {
-
-		return "";
-	}
 	
 	@PostMapping("/board/updateboard")
 	public String updateboard(@ModelAttribute BoardDto dto,
@@ -379,6 +354,44 @@ public class BoardController {
 		
 		return "redirect:/board/detail?bnum="+dto.getBnum();
 	}
+	
+	@PostMapping("/board/likeAdd")
+	@ResponseBody
+	public boolean addlike(@RequestBody Map<String, String> vo) {
+		
+		String bnum=(String)vo.get("bnum");
+		String mnum=memservice.getMnum(vo.get("myid"));
+	
+
+		System.out.println(bnum+","+mnum);
+		
+		service.addLike(bnum, mnum);
+		boolean result=true;
+		
+		//return "redirect:/board/detail?bnum="+bnum;
+		return result;
+	}
+	
+	@PostMapping("/board/likeDel")
+	@ResponseBody
+	public boolean dellike(@RequestBody Map<String, String> vo) {
+		
+		String bnum=vo.get("bnum");
+		String mnum=memservice.getMnum(vo.get("myid"));
+		
+		
+		System.out.println(bnum+","+mnum);
+		
+		service.delLike(bnum, mnum);
+		
+		boolean result=true;
+		
+		//return "redirect:/board/detail?bnum="+bnum;
+		return result;
+	}
+	
+	
+	
 	
 	
 	

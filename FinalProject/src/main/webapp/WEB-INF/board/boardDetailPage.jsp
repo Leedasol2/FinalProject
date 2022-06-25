@@ -16,51 +16,38 @@ $(function() {
 		
 	})
 	$("span#likes-img").click(function() {
-		//alert("test"); 
- 		
-		/* 로그인중인 사용자가 추천을 했는지 안했는지 */
-   		if(${mylike}){
-			var a=confirm("추천을 취소하시겠습니까?");
+		
+		var loginok='<%=(String)session.getAttribute("loginok") %>';
+		
+		
+		//alert(loginok!="null")
+		
+		//로그인 했는지 검사
+		if(loginok=="null"){
+			
+			alert("로그인이 필요한 서비스입니다")
+			return
+			
 		}else{
-			var b=confirm("게시글을 추천하시겠습니까?");
-		} 
-		
-		var sendBnum="bnum:"+${dto.bnum };
-		
- 		if(a){
-			$(this).removeClass("likes-imgAfter");
-			/* ajax로 likeuser에서 사용자 제거 */
-		    $.ajax({
-		        type : "post",
-		        url : "/board/likeDel",
-		        dataType: "json",
-		        data: sendBnum,
-		        success : function (data) {
-		        	alert("해당 게시글을 추천하였습니다.")
-		        	location.reload();
-		        }
-		     });
+			//alert("test"); 
+	 		
+			/* 로그인중인 사용자가 추천을 했는지 안했는지 */
+	   		if(${mylike}){
+				var a=confirm("추천을 취소하시겠습니까?");
+			}else{
+				var b=confirm("게시글을 추천하시겠습니까?");
+			} 
 			
+	 		if(a){
+	 			dellike()
+			}
+			if(b){
+				addlike()
+				
+			}    
 		}
-		if(b){
-			$(this).addClass("likes-imgAfter");
-			/* ajax로 likeuser에서 사용자 추가 */
-		    $.ajax({
-		        type : "post",
-		        url : "/board/likesUp",
-		        dataType: "json",
-		        data: sendBnum,
-		        success : function (data) {
-		        	alert("해당 게시글을 추천하였습니다.")
-		        	location.reload();
-		        }
-		     });
-			
-		}   
-		
 		
 	})
-	
 	
 	//이미지 클릭시 해당 이미지 모달
     $("img.imagelist").on("click",function(){
@@ -77,6 +64,54 @@ $(function() {
 	
 })
 
+function addlike() {
+	
+	var myid='<%=(String)session.getAttribute("myid") %>';
+	var vo='{"bnum":"'+${dto.bnum}+'","myid":"'+myid+'"}';
+	//alert(vo);
+
+		/* ajax로 likeuser에서 사용자 추가*/
+	    $.ajax({
+	        type : "post",
+	        url : "/board/likeAdd",
+	        contentType: 'application/json',
+	        dataType: "json",
+	        data: vo,
+	        success : function (data) {
+	        	if(data){
+	        		alert("해당 게시글을 추천하였습니다.")
+		        	location.reload();
+	        	}
+	        	
+	        }
+	     }); 
+}
+
+
+function dellike() {
+
+	var myid='<%=(String)session.getAttribute("myid") %>';
+	var vo='{"bnum":"'+${dto.bnum}+'","myid":"'+myid+'"}';
+	//alert(vo);
+	/*ajax로 likeuser에서 사용자 제거*/
+    $.ajax({
+        type : "post",
+        url : "/board/likeDel",
+        contentType: 'application/json',
+        dataType: "json",
+        data: vo,
+        success : function (data) {
+        	if(data){
+	        	alert("게시글 추천을 취소하였습니다.")
+	        	location.reload();
+        	}
+        }
+     }); 
+}
+
+
+
+
 </script>
 </head>
 <body>
@@ -90,14 +125,14 @@ $(function() {
       <span class="boardtitle">${dto.subject }</span><br>
       <span class="boardwriter"><c:out value="${fn:substring(dto.writer, 0, fn:length(dto.writer) - 2)}"/>**</span><br>
       <span class="boardinfo"><fmt:formatDate value="${dto.writeday }" pattern="yyyy.MM.dd  HH:mm"/>&nbsp;&nbsp;조회 ${dto.views }</span>
-        
         <c:if test="${mylike==true }">
         	<span class="likes-img glyphicon glyphicon-thumbs-up likes-imgAfter" id="likes-img"></span><br>
         </c:if>
         <c:if test="${mylike==false }">
         	<span class="likes-img glyphicon glyphicon-thumbs-up" id="likes-img"></span><br>
         </c:if>
-        <span class="likes">추천수 ${dto.likes }</span><br>
+         
+        <span class="likes">추천수 ${likesCnt }</span><br>
         <!-- 로그인중인 아이디=글쓴이 아이디 -->
         <c:if test="${sessionScope.loginok=='yes' && sessionScope.myid==dto.writer}">
         	<a href="boardupdateform?bnum=${dto.bnum }"><span class="board-upd">수정 |</span></a><span class="board-del"> 삭제</span>

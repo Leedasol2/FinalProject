@@ -17,8 +17,6 @@ public class BoardDto {
 	private String subject;
 	private String content;
 	private String photo;
-	private int likes;
-	private String likesuser;
 	private int views;
 	private Timestamp writeday;
 	
@@ -27,5 +25,6 @@ public class BoardDto {
 	private ArrayList<MultipartFile> upload;
 	private String writer;
 	private int commentCnt;
+	private int likes;
 	
 }
