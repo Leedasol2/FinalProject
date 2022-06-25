@@ -37,21 +37,15 @@
 		update board set views=views+1 where bnum=#{bnum}
 	</update>
 	
-	<!-- 추천 기능 -->
-	<update id="likeUp" parameterType="HashMap">
-		update board set likes=like+1, likesuser=#{likesuser} where bnum=#{bnum}
-	</update>
-	<update id="likeDown" parameterType="HashMap">
-		update board set likes=like-1, likesuser=#{likesuser} where bnum=#{bnum}
-	</update>
-	
-	<select id="getLikesUser" parameterType="String" resultType="String">
-		select likesuser from board where bnum=#{bnum}
-	</select>
-	
 	<!-- best 게시판 -->
 	<select id="getBestList" parameterType="HashMap" resultType="bdto"> 
-		select * from board  order by likes desc limit #{start},#{perpage} 
+		SELECT b.* 
+		FROM board b 
+			left outer JOIN likes l
+   			on b.bnum=l.bnum
+		group by bnum
+		order by count(l.bnum) desc, b.bnum desc 
+		limit #{start},#{perpage} 
 	</select> 
 	
 	<!-- 게시글 수정 -->
@@ -62,6 +56,35 @@
 		</if>
 		where bnum=#{bnum}
 	</update>
+	
+	<!-- 추천 기능 -->
+	<select id="getLikeCount" parameterType="String" resultType="int">
+		select count(*) from likes where bnum=#{bnum}
+	</select>
+	<select id="isMyLike" resultType="int" parameterType="HashMap">
+		select count(*) from likes where bnum=#{bnum} and mnum=#{mnum}
+	</select>
+	
+	<insert id="addLike" parameterType="HashMap">
+		insert into likes(bnum,mnum) values(#{bnum},#{mnum})
+	</insert>
+	<delete id="delLike" parameterType="HashMap">
+		delete from likes where bnum=#{bnum} and mnum=#{mnum}
+	</delete>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

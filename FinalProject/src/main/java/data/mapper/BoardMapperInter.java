@@ -20,16 +20,22 @@ public interface BoardMapperInter {
 	//디테일 페이지
 	public BoardDto getBoard(String bnum);
 	public void viewUp(String bnum);
-	
-	//추천기능
-	public void likeUp(HashMap<String, String> map);
-	public void likeDown(HashMap<String, String> map);
-	public String getLikesUser(String bnum);
-	
+
 	public List<BoardDto> getBestList(HashMap<String, Integer> map); 
 	
 	//수정
 	public void updateBoard(BoardDto dto);
+	
+	//추천
+	public int getLikeCount(String bnum);
+	public int isMyLike(HashMap<String, String> map);
+	public void addLike(HashMap<String, String> map);
+	public void delLike(HashMap<String, String> map);
+	
+	
+	
+	
+	
 	
 	
 }

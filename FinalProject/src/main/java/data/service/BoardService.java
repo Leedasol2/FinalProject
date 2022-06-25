@@ -45,24 +45,6 @@ public class BoardService {
 		mapper.viewUp(bnum);
 	}
 	
-	public void likeUp(String bnum, String likesuser) {
-		HashMap<String, String> map=new HashMap<>(); 
-		map.put("bnum", bnum); 
-		map.put("likesuser", likesuser); 
-		
-		mapper.likeUp(map);
-	}
-	public void likeDown(String bnum, String likesuser) {
-		HashMap<String, String> map=new HashMap<>(); 
-		map.put("bnum", bnum); 
-		map.put("likesuser", likesuser); 
-		
-		mapper.likeUp(map);
-	}
-	
-	public String getLikesUser(String bnum) {
-		return mapper.getLikesUser(bnum);
-	}
 	
 	public List<BoardDto> getBestList(int start,int perpage){ 
 		HashMap<String, Integer> map=new HashMap<>(); 
@@ -74,6 +56,37 @@ public class BoardService {
 	public void updateBoard(BoardDto dto) {
 		mapper.updateBoard(dto);
 	}
+	
+	public int getLikeCount(String bnum) {
+		return mapper.getLikeCount(bnum);
+	}
+	
+	public int isMyLike(String bnum, String mnum) {
+		HashMap<String, String> map=new HashMap<>(); 
+		map.put("bnum", bnum); 
+		map.put("mnum", mnum); 
+		return mapper.isMyLike(map);
+	}
+	
+	
+	public void addLike(String bnum, String mnum) {
+		HashMap<String, String> map=new HashMap<>(); 
+		map.put("bnum", bnum); 
+		map.put("mnum", mnum); 
+		mapper.addLike(map);
+	}
+	
+	public void delLike(String bnum, String mnum) {
+		HashMap<String, String> map=new HashMap<>(); 
+		map.put("bnum", bnum); 
+		map.put("mnum", mnum); 
+		mapper.delLike(map);
+	}
+	
+	
+	
+	
+	
 	
 	
 	
