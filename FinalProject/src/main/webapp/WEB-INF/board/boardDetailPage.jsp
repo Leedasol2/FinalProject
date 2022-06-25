@@ -100,9 +100,9 @@ $(function() {
         <span class="likes">추천수 ${dto.likes }</span><br>
         <!-- 로그인중인 아이디=글쓴이 아이디 -->
         <c:if test="${sessionScope.loginok=='yes' && sessionScope.myid==dto.writer}">
-        	<span class="board-upd">수정 |</span><span class="board-del"> 삭제</span>
+        	<a href="boardupdateform?bnum=${dto.bnum }"><span class="board-upd">수정 |</span></a><span class="board-del"> 삭제</span>
         </c:if>
-        
+       
       <hr class="underline">
     </td>
   </tr>

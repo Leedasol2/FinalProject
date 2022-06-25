@@ -28,7 +28,8 @@ public interface BoardMapperInter {
 	
 	public List<BoardDto> getBestList(HashMap<String, Integer> map); 
 	
-	
+	//수정
+	public void updateBoard(BoardDto dto);
 	
 	
 }

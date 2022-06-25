@@ -14,6 +14,21 @@ $(function(){
 		
 		$("#upload").trigger("click");
 	});
+	
+    $("input#upload").change(function () {
+        
+    	//alert("test");
+    	
+        var fileInput = document.getElementById("upload");
+          
+        var files = fileInput.files;
+        var fileCnt=files.length;
+       	//alert(fileCnt);
+        $("span#filenum").text("총 "+fileCnt+"개의 파일을 선택하셨습니다.");
+    });
+	
+	
+	
 });
 </script>
 
@@ -29,45 +44,38 @@ $(function(){
 	</div>
 
 	<div class="updateform-body">
-	  <form action="#" method="post" enctype="multipart/form-data">
+	  <form action="/board/updateboard" method="post" enctype="multipart/form-data">
+	  <input type="hidden" name="bnum" value="${dto.bnum }">
 	    <table class="update-content">
 		  <tr>
 		    <td>
-		      <input type="text" name="title" required="required"
+		      <input type="text" name="subject" required="required"
 			  placeholder="제목을 입력해주세요" class="updatetitle"
-			  value="제목불러오기제목불러오기제목불러오기제목불러오기제목불러오기">
+			  value="${dto.subject }">
 			</td>
 		  </tr>
 
 		  <tr>
 			<td>
 			  <textarea name="content" required="required"
-			  placeholder="내용을 입력해주세요" class="textfield">등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기
-등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기
-등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기
-등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기
-등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기
-등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기
-등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기
-등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기
-등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기
-등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기
-등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기등록된 내용 불러오기
-              </textarea>
+			  placeholder="내용을 입력해주세요" class="textfield">${dto.content }</textarea>
 		    </td>
 		  </tr>
 
 		  <tr>
-		    <td>
-		      <input type="file" name="upload" id="upload"> 
-		      <span class="filetitle">첨부파일</span>&nbsp; 
-		      <span class="glyphicon glyphicon-picture photoimg"></span></td>
+              <td>
+                <input type="file" name="upload" id="upload" multiple="multiple">
+                <span class="filetitle">첨부파일</span>&nbsp;
+                <span class="glyphicon glyphicon-picture photoimg"></span>
+                <span id="filenum"></span>
+                
+              </td>
 		  </tr>
 						
 		  <tr>
 		    <td colspan="2" align="center">
-			  <button type="button" class="btn-return" onclick="location.href=''">이전으로</button>
-		      <button type="submit" class="btn-update" onclick="location.href=''">수정하기</button>
+			  <button type="button" class="btn-return" onclick="history.back()">이전으로</button>
+		      <button type="submit" class="btn-update">수정하기</button>
 			</td>
 		  </tr>
 		</table>

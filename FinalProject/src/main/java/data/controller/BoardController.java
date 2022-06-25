@@ -177,9 +177,19 @@ public class BoardController {
 	}
 
 	@GetMapping("/board/boardupdateform")
-	public String boardupdateform() {
-
-		return "/board/board/boardupdateform";
+	public ModelAndView boardupdateform(@RequestParam String bnum) {
+		
+		ModelAndView model=new ModelAndView();
+		
+		BoardDto dto=service.getBoard(bnum);
+		
+		
+		model.addObject("dto", dto);
+		
+		
+		model.setViewName("/board/board/boardupdateform");
+		
+		return model;
 	}
 
 	@GetMapping("/board/loginMiss")
@@ -233,7 +243,7 @@ public class BoardController {
 		service.insertOfBoard(dto);
 		int bnum = service.getMaxBnum();
 		// 방금 쓴 글의 상세페이지로 이동
-		return "redirect:boardDetailPage?bnum=" + bnum;
+		return "redirect:/board/detail?bnum="+bnum;
 	}
 
 	// 게시글 상세페이지
@@ -304,13 +314,6 @@ public class BoardController {
 			 
 		 } while (tokenizer.hasMoreTokens());
 		
-		
-		
-		
-		
-		
-		
-		
 		service.likeUp(bnum, userlist);
 		
 		
@@ -321,4 +324,73 @@ public class BoardController {
 
 		return "";
 	}
+	
+	@PostMapping("/board/updateboard")
+	public String updateboard(@ModelAttribute BoardDto dto,
+			HttpSession session) {
+		
+
+		// 업로드할 폴더 지정
+		String path = session.getServletContext().getRealPath("/photo"); // webapp에있는거
+		System.out.println(path);
+		
+		// 파일 업로드 안한경우 업데이트 X
+		String photo = "";
+		if (dto.getUpload().get(0).getOriginalFilename().equals("")) {
+			photo = "no"; // 업데이트 X
+		} else {
+			//기존 파일 삭제
+			String beforePhoto=service.getBoard(dto.getBnum()).getPhoto();
+			
+			if(!beforePhoto.equals("no")) {
+				// ,로 분리
+				String []fName=beforePhoto.split(",");
+				
+				//여러개 사진 전부 삭제
+				for(String f:fName) {
+					File file=new File(path+"\\"+f);
+					System.out.println(file);
+					file.delete();
+				}
+			}
+			
+			//새로운 파일 업로드
+			for (MultipartFile f : dto.getUpload()) {
+
+				photo += f.getOriginalFilename() + ",";
+
+				// 실제 업로드
+				try {
+					f.transferTo(new File(path + "\\" + f.getOriginalFilename()));
+				} catch (IllegalStateException | IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			// 마지막 , 제거
+			photo = photo.substring(0, photo.length() - 1);
+		}
+
+		dto.setPhoto(photo);
+		
+		
+		service.updateBoard(dto);
+		
+		
+		return "redirect:/board/detail?bnum="+dto.getBnum();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
