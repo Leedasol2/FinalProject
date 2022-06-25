@@ -54,8 +54,14 @@
 		select * from board  order by likes desc limit #{start},#{perpage} 
 	</select> 
 	
-	
-	
+	<!-- 게시글 수정 -->
+	<update id="updateBoard" parameterType="bdto">
+		update board set subject=#{subject}, content=#{content} 
+		<if test="photo!='no'">
+			,photo=#{photo} 
+		</if>
+		where bnum=#{bnum}
+	</update>
 	
 	
 	

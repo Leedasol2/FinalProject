@@ -71,7 +71,9 @@ public class BoardService {
 		return mapper.getBestList(map);
 	}
 	
-	
+	public void updateBoard(BoardDto dto) {
+		mapper.updateBoard(dto);
+	}
 	
 	
 	
