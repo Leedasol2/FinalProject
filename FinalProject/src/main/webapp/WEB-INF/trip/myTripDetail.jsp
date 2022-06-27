@@ -110,6 +110,21 @@ $(function(){
 		});
 	});
 	
+	$("span.tripscrap").click(function(){
+		var tnum=$(':hidden#tnum').val();
+		$("img.scrapImg").attr("src","../image/asset/스크랩아이콘.png");
+		$.ajax({
+			
+			type:"post",
+			dataType: "text",
+			url:"/scrapInsert",
+			data:{"tnum":tnum},
+			success:function(data){
+				
+			}
+		});
+	});
+	
 });
 
 function rlist()
@@ -256,7 +271,7 @@ function rlist()
 	<div class="subedit">
 	<img alt="" src="${root }/image/asset/위치아이콘.png"><span class="tripwhere"> ${tdto.location }</span>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<img alt="" src="${root }/image/asset/스크랩안함.png"><span class="tripscrap"> 스크랩 하기</span>
+	<img alt="" src="${root }/image/asset/스크랩안함.png" class="scrapImg"><span class="tripscrap"> 스크랩 하기</span>
 	</div>
 	</div>
 	</div>

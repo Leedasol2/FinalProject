@@ -27,8 +27,8 @@ $(document).ready(function(){
 		
 		var CurrentTheme=$(this).text();
 		
-		$(this).css("color","#2bae66");
 		$("div.themeaofkorea > span").css("color","gray");
+		$(this).css("color","#2bae66");
 		
 		$.ajax({
 			
@@ -42,6 +42,80 @@ $(document).ready(function(){
 			
 			}
 		});
+	});
+	
+	//select 클릭시 이벤트
+	$("select.sortselect").change(function(){
+		var SelectSort=$(this).val();
+		
+		//조건이 리뷰많은순일때
+		if(SelectSort=="lotsofreviews"){
+			
+		$.ajax({
+			
+			type:"post",
+			dataType: "text",
+			url:"themereviewCountSelect",
+			data:{"SelectSort":SelectSort},
+			success:function(data){
+				
+			$('body').html(data);
+			
+			}
+		});
+		}
+		
+		//조건이 별점높은순일때
+		if(SelectSort=="highstarscore"){
+			
+		$.ajax({
+			
+			type:"post",
+			dataType: "text",
+			url:"themehighstarSelect",
+			data:{"SelectSort":SelectSort},
+			success:function(data){
+				
+			$('body').html(data);
+			
+			}
+		});
+		}
+		
+		//조건이 별점낮은순일때
+		if(SelectSort=="lowstarscore"){
+			
+		$.ajax({
+			
+			type:"post",
+			dataType: "text",
+			url:"themelowstarSelect",
+			data:{"SelectSort":SelectSort},
+			success:function(data){
+				
+			$('body').html(data);
+			
+			}
+		});
+		}
+		
+		//조건이 추천순일때
+		if(SelectSort=="topview"){
+			
+		$.ajax({
+			
+			type:"post",
+			dataType: "text",
+			url:"themetopviewSelect",
+			data:{"SelectSort":SelectSort},
+			success:function(data){
+				
+			$('body').html(data);
+			
+			}
+		});
+		}
+		
 	});
 
 });
@@ -158,7 +232,7 @@ $(document).ready(function(){
 			</c:if>
 			</div>
             </div>
-  		  <span class="trip-explanation">${theme.title }</span><br>
+<%--   		  <span class="trip-explanation">${theme.title }</span><br> --%>
  		  <span class="trip-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">${theme.location }
  		  </span>
