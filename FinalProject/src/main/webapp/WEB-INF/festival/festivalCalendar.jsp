@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -62,44 +64,27 @@ $(document).ready(function(){
  <hr class="middle-line">
  
  <div class="festivalcalendar-content">
- 	<span class="festivalcalendar-information">6월1일축제정보</span>
- 	<br>
+ 	<div class="festivalcalendar-information">6월1일축제정보</div>
+ 	
+ 	<c:forEach var="calendar" items="${calendarlist }">
+	<c:if test="${calendar.endday>=today }">
+ 	<br> 	
  	<div class="festivalcalendar-content-inner">
- 	<img src="${root}/image/asset/festivalcalendar.png" class="festivalcalendar-img">
+ 	
+ 	<img src="${root}/image/festival/${fn:split(calendar.image,',')[0]}" class="festivalcalendar-img"
+ 	onclick="location.href='festivalDetail?tnum=${calendar.tnum}&currentPage=${currentPage }'">
+ 	
 		<div class="festivalcalendar-contents">
-		<span class="festivalcalendar-first">여름 수국 축제</span>  <span class="festivalcalendar-day">[2022-06-01-2022-07-03]<br><br></span>
-		<span class="festivalcalendar-two">화당숲이 6월 1일부터 7월 초까지 한달여 간 <여름 수국 축제>를 진행한다.<br></span>
-		<span class="festivalcalendar-three">산록이 푸르름을 더해가며 초여름에 가장 아름다움을 뿜내는 '여름 수국 축제'를 통해<br></span>
-		<span class="festivalcalendar-four">100여 품종의 7만여 본의 다채롭고 화려한 수국의 향연을 만끽할 수 있다.<br><br></span>
-		<span class="festivalcalendar-five">화당숲 입구를 시작으로 수국원을 비롯한 원내 곳곳에서 100여종 7만여 본의<br></span>
-		<span class="festivalcalendar-six">다채로운 수국 무리가 저마다의 빛깔로 물결을 이루며 나들이 객을 반긴다.</span>
+		<div class="festivalcalendar-first">${calendar.title }</div>  <div class="festivalcalendar-day">[${calendar.beginday}-${calendar.endday}]<br><br></div>
+		<div class="festivalcalendar-two">${calendar.intro}<br></div>
+
 		</div> 	
  	</div>
  	
- 	 
- 	<div class="festivalcalendar-content-inner">
- 	<img src="${root}/image/asset/festivalcalendar.png" class="festivalcalendar-img">
-		<div class="festivalcalendar-contents">
-		<span class="festivalcalendar-first">여름 수국 축제</span>  <span class="festivalcalendar-day">[2022-06-01-2022-07-03]<br><br></span>
-		<span class="festivalcalendar-two">화당숲이 6월 1일부터 7월 초까지 한달여 간 <여름 수국 축제>를 진행한다.<br></span>
-		<span class="festivalcalendar-three">산록이 푸르름을 더해가며 초여름에 가장 아름다움을 뿜내는 '여름 수국 축제'를 통해<br></span>
-		<span class="festivalcalendar-four">100여 품종의 7만여 본의 다채롭고 화려한 수국의 향연을 만끽할 수 있다.<br><br></span>
-		<span class="festivalcalendar-five">화당숲 입구를 시작으로 수국원을 비롯한 원내 곳곳에서 100여종 7만여 본의<br></span>
-		<span class="festivalcalendar-six">다채로운 수국 무리가 저마다의 빛깔로 물결을 이루며 나들이 객을 반긴다.</span>
-		</div> 	
- 	</div>
- 	
-	<div class="festivalcalendar-content-inner">
- 	<img src="${root}/image/asset/festivalcalendar.png" class="festivalcalendar-img">
-		<div class="festivalcalendar-contents">
-		<span class="festivalcalendar-first">여름 수국 축제</span>  <span class="festivalcalendar-day">[2022-06-01-2022-07-03]<br><br></span>
-		<span class="festivalcalendar-two">화당숲이 6월 1일부터 7월 초까지 한달여 간 <여름 수국 축제>를 진행한다.<br></span>
-		<span class="festivalcalendar-three">산록이 푸르름을 더해가며 초여름에 가장 아름다움을 뿜내는 '여름 수국 축제'를 통해<br></span>
-		<span class="festivalcalendar-four">100여 품종의 7만여 본의 다채롭고 화려한 수국의 향연을 만끽할 수 있다.<br><br></span>
-		<span class="festivalcalendar-five">화당숲 입구를 시작으로 수국원을 비롯한 원내 곳곳에서 100여종 7만여 본의<br></span>
-		<span class="festivalcalendar-six">다채로운 수국 무리가 저마다의 빛깔로 물결을 이루며 나들이 객을 반긴다.</span>
-		</div> 	
- 	</div> 	
+ 		</c:if>
+	</c:forEach>
+			
+	
  </div> 
  </div>
 </div>
