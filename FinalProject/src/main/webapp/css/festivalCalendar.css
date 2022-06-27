@@ -25,8 +25,8 @@
 	text-align: center;
     width: 70%;
     padding-left: 15%;
-    margin-left: 480px;
-    margin-top: 30px;
+    margin-left: 360px;
+    margin-top: 85px;
 }
 
 
@@ -62,7 +62,7 @@ hr.middle-line{
     margin-bottom: 20px;
     border: 0;
     border-top: 1px solid #eee;
-    width: 760px;
+    width: 943px;
     margin-left: 700px;
     
 }
@@ -70,17 +70,19 @@ hr.middle-line{
 
 }
 
-span.festivalcalendar-information{
+div.festivalcalendar-information{
 	margin-left: 1000px;
     font-size: 20pt;
 }
 
-span.festivalcalendar-first{
+div.festivalcalendar-first{
 	font-size: 20pt;
     font-weight: bold;
+    margin-bottom: 20px;
+    
 }
 
-span.festivalcalendar-day{
+div.festivalcalendar-day{
 	margin-left: 20px;
 	color: #dcdcdc;
 	
@@ -88,17 +90,19 @@ span.festivalcalendar-day{
 
 .festivalcalendar-contents{
 	margin-left: 940px;
-    margin-top: -220px;
+    margin-top: -150px;
+    position: relative;
+    top: -80px;
 	
 }
 
 .festivalcalendar-content-inner{
-	margin-bottom: 70px
 }
 
 img.festivalcalendar-img{
 	margin-left: 700px;
     margin-top: 40px;
+    margin-bottom: 50px;
     width: 10%
     
 }
@@ -111,7 +115,7 @@ span.proceeding-title{
 
 div.festival-main-title{
 	position: relative;
-    left: 900px;
+    left: 1110px;
 }
 
 a.festival-calendar{
