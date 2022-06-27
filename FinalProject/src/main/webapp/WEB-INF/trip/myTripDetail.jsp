@@ -127,6 +127,14 @@ $(function(){
 	
 });
 
+function maskingCar(userid) {
+    if (userid == undefined || userid === '') {
+        return '';
+    }
+    var pattern = /.{3}$/; // 정규식
+    return userid.replace(pattern, "***");
+}
+
 function rlist()
 {
 	var tnum=$(':hidden#tnum').val();
@@ -144,7 +152,8 @@ function rlist()
 				r+="<div class='review-contents'>";
 				r+="<div class='review-topbox'>";
 				r+="<div class='review-title' style='display: flex;align-items: center;'>";
-				r+="<a>"+drdto.userid+"</a>";
+				r+="<a>"+maskingCar(drdto.userid);
+				r+="</a>";
 				r+="<div class='tripstory-star-ratings'>";
 				r+="<div class='tripstory-star-ratings-fill space-x-2 text-lg' style='width:"+drdto.rstar*20+"%'>";
 				r+="<span>★</span>";
