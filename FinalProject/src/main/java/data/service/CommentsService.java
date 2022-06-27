@@ -33,4 +33,9 @@ public class CommentsService {
 		return mapper.getReplyComments(cnum);
 	}
 	
+	public void deleteComment(String cnum) {
+		mapper.deleteComment(cnum);
+	}
+	
+	
 }

@@ -18,7 +18,8 @@ public interface CommentsMapperInter {
 	//답글 리스트
 	public List<CommentsDto> getReplyComments(String cnum);
 	
-	
+	//댓글 삭제
+	public void deleteComment(String cnum);
 	
 	
 	

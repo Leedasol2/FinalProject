@@ -129,7 +129,7 @@ function golist(){
 function reply(cnum,bwriter,e) {
 	//alert(cnum)=
 	var myid='<%=(String)session.getAttribute("myid") %>';
-	
+	var loginok='<%=(String)session.getAttribute("loginok") %>';
 
 	var rehtml="";
 	
@@ -159,21 +159,16 @@ function reply(cnum,bwriter,e) {
             		var date=moment(this.writeday).format("YYYY-MM-DD HH:mm");
             		rehtml+="<span class='comment-day'>"+date+"</span>";
 
-            		if (this.cwriter==myid) {
-                    	rehtml+="<span class='comment-del'>삭제</span><br>";
+            		if (this.cwriter==myid && loginok=='yes') {
+                    	rehtml+="<span class='comment-del' onclick='deleteComment("+this.cnum+")'>삭제</span>";
                     }
-
-            		rehtml+="<span class='comment-content'>"+this.content+"</span><br>";
+            		rehtml+="<br><span class='comment-content'>"+this.content+"</span><br>";
             		rehtml+="<hr class='comment-underline'>";
-            		
     			});	
-        		
         	}
-        	
         	
         }
      });  
-	
 	
 	var loginok='<%=(String)session.getAttribute("loginok") %>';
 	//alert(loginok)
@@ -196,7 +191,32 @@ function reply(cnum,bwriter,e) {
 
 }
 
+function deleteComment(cnum) {
+	
+	var ans=confirm("댓글을 삭제하시겠습니까?")
+	
+	if(ans){
+		var type='${type}';
+		var vo='{"bnum":"'+${dto.bnum}+'","cnum":"'+cnum+'","currentPage":"'+${currentPage}+'","type":"'+type+'"}';
+		//alert(vo);
+		/*ajax로 likeuser에서 사용자 제거*/
+	    $.ajax({
+	        type : "post",
+	        url : "/comments/delete",
+	        contentType: 'application/json',
+	        dataType: "json",
+	        data: vo,
+	        success : function (data) {
+	        	if(data){
+	        		alert("댓글을 삭제하였습니다.")
+	    	        location.reload();
+	        	}
+		        
+	        }
+	     }); 
+	}
 
+} 
 
 
 
@@ -284,7 +304,7 @@ function reply(cnum,bwriter,e) {
 				    <span class="comment-day"><fmt:formatDate value="${cdto.writeday }" pattern="yyyy-MM-dd HH:mm"/></span>
 				    <!-- 댓글작성자로 로그인중일때 -->
 				    <c:if test="${sessionScope.loginok=='yes' && sessionScope.myid==cdto.cwriter }">
-				    	<span class="comment-del">삭제 |</span><span class="comment-upd"> 수정</span>
+				    	<span class="comment-del" onclick="deleteComment(${cdto.cnum})">삭제 |</span><span class="comment-upd"> 수정</span>
 				    </c:if>
 				    <br><span class="comment-content">${cdto.content }</span><br>
 				    <button type="button" class="btnreply" onclick="reply(${cdto.cnum},'${dto.writer }',this)">답글</button>

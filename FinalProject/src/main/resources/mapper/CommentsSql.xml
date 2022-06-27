@@ -19,7 +19,9 @@
 		select * from comments where renum=#{cnum}
 	</select>
 	
-	
+	<delete id="deleteComment" parameterType="String">
+		delete from comments where cnum=#{cnum}
+	</delete>
 	
 	
 </mapper>

@@ -62,6 +62,25 @@ public class CommentsController {
 		
 	}
 
+	@PostMapping("/comments/delete")
+	@ResponseBody
+	public boolean deleteComment(@RequestBody Map<String, String> vo) {
+		String cnum=(String)vo.get("cnum");
+		
+		service.deleteComment(cnum);
+		
+		boolean result=true;
+		
+		
+		
+		return result;
+	}
+	
+	
+	
+	
+	
+	
 	
 	
 }
