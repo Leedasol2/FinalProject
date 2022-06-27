@@ -129,7 +129,7 @@ function golist(){
 function reply(cnum,bwriter,e) {
 	//alert(cnum)=
 	var myid='<%=(String)session.getAttribute("myid") %>';
-	
+	var loginok='<%=(String)session.getAttribute("loginok") %>';
 
 	var rehtml="";
 	
@@ -159,10 +159,10 @@ function reply(cnum,bwriter,e) {
             		var date=moment(this.writeday).format("YYYY-MM-DD HH:mm");
             		rehtml+="<span class='comment-day'>"+date+"</span>";
 
-            		if (this.cwriter==myid) {
-                    	rehtml+="<span class='comment-del' onclick='deleteComment("+this.cnum+")'>삭제</span><br>";
+            		if (this.cwriter==myid && loginok=='yes') {
+                    	rehtml+="<span class='comment-del' onclick='deleteComment("+this.cnum+")'>삭제</span>";
                     }
-            		rehtml+="<span class='comment-content'>"+this.content+"</span><br>";
+            		rehtml+="<br><span class='comment-content'>"+this.content+"</span><br>";
             		rehtml+="<hr class='comment-underline'>";
     			});	
         	}
@@ -193,24 +193,29 @@ function reply(cnum,bwriter,e) {
 
 function deleteComment(cnum) {
 	
-	var type='${type}';
-	var vo='{"bnum":"'+${dto.bnum}+'","cnum":"'+cnum+'","currentPage":"'+${currentPage}+'","type":"'+type+'"}';
-	//alert(vo);
-	/*ajax로 likeuser에서 사용자 제거*/
-    $.ajax({
-        type : "post",
-        url : "/comments/delete",
-        contentType: 'application/json',
-        dataType: "json",
-        data: vo,
-        success : function (data) {
-        	if(data){
-        		alert("댓글을 삭제하였습니다.")
-    	        location.reload();
-        	}
-	        
-        }
-     }); 
+	var ans=confirm("댓글을 삭제하시겠습니까?")
+	
+	if(ans){
+		var type='${type}';
+		var vo='{"bnum":"'+${dto.bnum}+'","cnum":"'+cnum+'","currentPage":"'+${currentPage}+'","type":"'+type+'"}';
+		//alert(vo);
+		/*ajax로 likeuser에서 사용자 제거*/
+	    $.ajax({
+	        type : "post",
+	        url : "/comments/delete",
+	        contentType: 'application/json',
+	        dataType: "json",
+	        data: vo,
+	        success : function (data) {
+	        	if(data){
+	        		alert("댓글을 삭제하였습니다.")
+	    	        location.reload();
+	        	}
+		        
+	        }
+	     }); 
+	}
+
 } 
 
 
