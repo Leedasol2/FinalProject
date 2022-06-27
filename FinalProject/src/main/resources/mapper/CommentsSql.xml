@@ -16,7 +16,7 @@
 	
 	<!-- 답글 반환 -->
 	<select id="getReplyComments" parameterType="String" resultType="comdto">
-		select * from comments where cnum=#{cnum}
+		select * from comments where renum=#{cnum}
 	</select>
 	
 	
