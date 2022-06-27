@@ -595,7 +595,13 @@ public class TripController {
 		
 		//이용기
 		@GetMapping("/festivalCalendar")
-		public String festivalCalendar() {
+		public String festivalCalendarList(Model model) {
+			
+			String festival="'festival'";
+			
+			List<TripDto> calendarlist=tservice.getAllActivitys(festival);
+				
+			model.addAttribute("calendarlist",calendarlist);
 			
 			return "/festival/festivalCalendar";
 		}
