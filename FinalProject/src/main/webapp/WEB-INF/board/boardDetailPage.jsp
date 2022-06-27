@@ -9,12 +9,10 @@
 <head>
 <meta charset="UTF-8">
 <title>이런여행</title>
-
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script type="text/javascript">
 $(function() {
-	$("button.btnreply").click(function() {
-		
-	})
+
 	$("span#likes-img").click(function() {
 		
 		var loginok='<%=(String)session.getAttribute("loginok") %>';
@@ -61,7 +59,8 @@ $(function() {
 	    $(".imagemodal").toggle();
   	});
 	
-	
+	//처음에 안보이게
+	$(".replyComment").hide()
 })
 
 function addlike() {
@@ -111,7 +110,7 @@ function dellike() {
 
 function golist(){
 	
-	var type=${type};
+	var type=${type };
 	var currentPage=${currentPage};
 	
 	
@@ -127,6 +126,78 @@ function golist(){
 	
 	
 }
+function reply(cnum,bwriter,e) {
+	//alert(cnum)=
+	var myid='<%=(String)session.getAttribute("myid") %>';
+	
+
+	var rehtml="";
+	
+	//ajax-답글 목록
+	var vo={"cnum":cnum};
+     $.ajax({
+        type : "get",
+        url : "/board/getReply",
+        contentType: 'application/json; charset=UTF-8',
+        async:false,
+        dataType: "json",
+        data: vo,
+        success : function (data) {
+        	//alert(data)
+        	
+        	if(data.length>0){
+             	$(data).each(function(){
+    				//alert(this.content + " " + this.cnum + " " + this.renum);
+    				
+    				var rewriter=this.cwriter.substring(0,this.cwriter.length-2);
+            		rehtml+="<span class='writer-id'>"+rewriter+"**</span>&nbsp;";
+            		
+                    if (this.cwriter==bwriter) {
+                    	rehtml+="<span class='boardowner-writer'>작성자</span>";
+                    }
+                    
+            		var date=moment(this.writeday).format("YYYY-MM-DD HH:mm");
+            		rehtml+="<span class='comment-day'>"+date+"</span>";
+
+            		if (this.cwriter==myid) {
+                    	rehtml+="<span class='comment-del'>삭제</span><br>";
+                    }
+
+            		rehtml+="<span class='comment-content'>"+this.content+"</span><br>";
+            		rehtml+="<hr class='comment-underline'>";
+            		
+    			});	
+        		
+        	}
+        	
+        	
+        }
+     });  
+	
+	
+	var loginok='<%=(String)session.getAttribute("loginok") %>';
+	//alert(loginok)
+	<!-- 답글작성 form-로그인 일때만 -->
+	if(loginok=="yes"){
+		rehtml+="<form action='/comments/insert' method='post'>";
+ 		rehtml+="<input type='hidden' name='bnum' value='${dto.bnum }'>";
+		rehtml+="<input type='hidden' name='currentPage' value='${currentPage }'>";
+		rehtml+="<input type='hidden' name='type' value='${type}'>";
+		rehtml+="<input type='hidden' name='renum' value='"+cnum+"'>";
+		rehtml+="<span class='comment-writer'><c:out value='${fn:substring(sessionScope.myid, 0, fn:length(sessionScope.myid) - 2)}'/>**</span>";
+		rehtml+="<button type='submit' class='comment-insertbtn'>등록</button><br>";
+		rehtml+="<input type='text' name='content' class='commentbox reply' required='required'>";
+		rehtml+="</form>";
+		//alert(loginok)
+	}
+	$(e).siblings("div.replyComment").html(rehtml)
+	$(e).siblings("div.replyComment").toggle()
+	
+
+}
+
+
+
 
 
 </script>
@@ -201,58 +272,27 @@ function golist(){
 	    <!-- 댓글이 있을 때 --> 
 	    <c:if test="${commentCnt!=0 }">
 	    	<c:forEach var="cdto" items="${clist }" >
-	    	
-	    	  <!-- 답글이 아닐 때 -->
-	    	  <c:if test="${cdto.renum==0 }">
-	    	  	  <span class="writer-id"><c:out value="${fn:substring(cdto.cwriter, 0, fn:length(cdto.cwriter) - 2)}"/>**</span>
-	    	  	  <!-- 작성자일 때 -->
-	    	  	  <c:if test="${cdto.cwriter.equals(dto.writer) }">
-	    	  	  	<span class="boardowner-writer">작성자</span>
-	    	  	  </c:if>
-			      <span class="comment-day"><fmt:formatDate value="${cdto.writeday }" pattern="yyyy-MM-dd HH:mm"/></span>
-			      <!-- 댓글작성자로 로그인중일때 -->
-			      <c:if test="${sessionScope.loginok=='yes' && sessionScope.myid==cdto.cwriter }">
-			      	<span class="comment-del">삭제 |</span><span class="comment-upd"> 수정</span>
-			      </c:if>
-			      <br><span class="comment-content">${cdto.content }</span><br>
-			      <button type="button" class="btnreply">답글</button>
-
-			      <hr class="comment-underline">
-	    	  </c:if>
-	    	  
-	    	  	<!-- 답글 리스트 - 나중에 -->
-		    	  <c:if test="${cdto.renum==cdto.cnum }">
-		    	  
-		    	  	<div class="replyComment">
-				      <span class="writer-id"><c:out value="${fn:substring(cdto.cwriter, 0, fn:length(cdto.cwriter) - 2)}"/>**</span>&nbsp;
-		    	  	  <!-- 작성자일 때 -->
-		    	  	  <c:if test="${cdto.cwriter.equals(dto.writer) }">
-		    	  	  	<span class="boardowner-writer">작성자</span>
-		    	  	  </c:if>
-				      <span class="comment-day"><fmt:formatDate value="${cdto.writeday }" pattern="yyyy-MM-dd HH:mm"/></span>
-				      
-				      <!-- 댓글작성자로 로그인중일때 -->
-				      <c:if test="${cdto.cwriter.equals(sessionScope.myid) }">
-				      	<span class="comment-del">삭제 |</span><span class="comment-upd"> 수정</span><br>
-				      </c:if>
-					  <span class="comment-content">${cdto.content }</span><br>
-				      <hr class="comment-underline">
-					    <!-- 답글작성 form-로그인 일때만 -->
-					    <div class="replyform">
-					      <c:if test="${sessionScope.loginok=='yes' }">
-						      <form action="/comments/insert" method="post">
-						      	<input type="hidden" name="bnum" value="${dto.bnum }">
-						      	<input type="hidden" name="renum" value="0">
-						      	<input type="hidden" name="currentPage" value="${currentPage }">
-							      <span class="comment-writer"><c:out value="${fn:substring(sessionScope.myid, 0, fn:length(sessionScope.myid) - 2)}"/>**</span>
-							      <span class="noReply">답글작성취소</span>
-							      <button type="submit" class="comment-insertbtn">등록</button><br>
-							      <input type="text" name="content" class="commentbox reply" required="required">
-						      </form>
-					      </c:if>
-					    </div>
-				    </div>
-		    	  </c:if>
+	    	  <div>
+		    	  <!-- 답글이 아닐 때 -->
+		    	  <c:if test="${cdto.renum==0 }">
+		    	  	
+		    	  	<span class="writer-id"><c:out value="${fn:substring(cdto.cwriter, 0, fn:length(cdto.cwriter) - 2)}"/>**</span>
+		    	  	<!-- 작성자일 때 -->
+		    	  	<c:if test="${cdto.cwriter.equals(dto.writer) }">
+		    	  		<span class="boardowner-writer">작성자</span>
+		    	  	</c:if>
+				    <span class="comment-day"><fmt:formatDate value="${cdto.writeday }" pattern="yyyy-MM-dd HH:mm"/></span>
+				    <!-- 댓글작성자로 로그인중일때 -->
+				    <c:if test="${sessionScope.loginok=='yes' && sessionScope.myid==cdto.cwriter }">
+				    	<span class="comment-del">삭제 |</span><span class="comment-upd"> 수정</span>
+				    </c:if>
+				    <br><span class="comment-content">${cdto.content }</span><br>
+				    <button type="button" class="btnreply" onclick="reply(${cdto.cnum},'${dto.writer }',this)">답글</button>
+					<hr class="comment-underline">
+		    	  	<!-- 답글 리스트 - 나중에 -->
+					<div class="replyComment"></div>
+				 </c:if>
+			  </div>  
 	    	</c:forEach>
       
 	    </c:if>
@@ -263,9 +303,10 @@ function golist(){
 	      	<input type="hidden" name="bnum" value="${dto.bnum }">
 	      	<input type="hidden" name="renum" value="0">
 	      	<input type="hidden" name="currentPage" value="${currentPage }">
-		      <span class="comment-writer"><c:out value="${fn:substring(sessionScope.myid, 0, fn:length(sessionScope.myid) - 2)}"/>**</span>
-		      <button type="submit" class="comment-insertbtn">등록</button><br>
-		      <input type="text" name="content" class="commentbox" required="required">
+	      	<input type="hidden" name="type" value="${type }">
+		    <span class="comment-writer"><c:out value="${fn:substring(sessionScope.myid, 0, fn:length(sessionScope.myid) - 2)}"/>**</span>
+		    <button type="submit" class="comment-insertbtn">등록</button><br>
+		    <input type="text" name="content" class="commentbox" required="required">
 	      </form>
       </c:if>
      </div>
