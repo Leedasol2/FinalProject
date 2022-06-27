@@ -44,6 +44,80 @@ $(document).ready(function(){
 			}
 		});
 	});
+	
+	//select 클릭시 이벤트
+	$("select.sortselect").change(function(){
+		var SelectSort=$(this).val();
+		
+		//조건이 리뷰많은순일때
+		if(SelectSort=="lotsofreviews"){
+			
+		$.ajax({
+			
+			type:"post",
+			dataType: "text",
+			url:"reviewCountSelect",
+			data:{"SelectSort":SelectSort},
+			success:function(data){
+				
+			$('body').html(data);
+			
+			}
+		});
+		}
+		
+		//조건이 별점높은순일때
+		if(SelectSort=="highstarscore"){
+			
+		$.ajax({
+			
+			type:"post",
+			dataType: "text",
+			url:"highstarSelect",
+			data:{"SelectSort":SelectSort},
+			success:function(data){
+				
+			$('body').html(data);
+			
+			}
+		});
+		}
+		
+		//조건이 별점낮은순일때
+		if(SelectSort=="lowstarscore"){
+			
+		$.ajax({
+			
+			type:"post",
+			dataType: "text",
+			url:"lowstarSelect",
+			data:{"SelectSort":SelectSort},
+			success:function(data){
+				
+			$('body').html(data);
+			
+			}
+		});
+		}
+		
+		//조건이 추천순일때
+		if(SelectSort=="topview"){
+			
+		$.ajax({
+			
+			type:"post",
+			dataType: "text",
+			url:"topviewSelect",
+			data:{"SelectSort":SelectSort},
+			success:function(data){
+				
+			$('body').html(data);
+			
+			}
+		});
+		}
+		
+	});
 
 });
 </script> 
@@ -162,7 +236,7 @@ $(document).ready(function(){
 			</div>
             </div>
             
-  		  <span class="trip-explanation">${region.title }</span><br>
+<%--   		  <span class="trip-explanation">${region.title }</span><br> --%>
  		  <span class="trip-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">${region.location }
  		  </span>
@@ -180,40 +254,6 @@ $(document).ready(function(){
 
 </div>
 <!-- 본문 끝 -->
-
-<!-- 페이징 -->
-<c:if test="${totalCount>0 }">
-<div style="text-align: center">
-<ul class="pagination">
-	<!-- 이전 -->
-	<c:if test="${startPage>1 }">
-	<li>
-		<a href="regionTrip?currentPage=${startPage-1}">이전</a>
-	</li>
-	</c:if>
-	
-	<c:forEach var="pp" begin="${startPage }" end="${endPage }">
-	<c:if test="${currentPage==pp }">
-	<li class="active">
-	<a href="regionTrip?currentPage=${pp}">${pp }</a>
-	</li>
-	</c:if>
-	<c:if test="${currentPage!=pp }">
-	<li>
-		<a href="regionTrip?currentPage=${pp }">${pp }</a>
-	</li>
-	</c:if>
-	</c:forEach>
-	
-	<!-- 다음 -->
-	<c:if test="${endPage<totalPage }">
-	<li>
-		<a href="regionTrip?currentPage=${endPage+1}">다음</a>
-	</li>
-	</c:if>
-</ul>
-</div>
-</c:if>
 
 </body>
 </html>

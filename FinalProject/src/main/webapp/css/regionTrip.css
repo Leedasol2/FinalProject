@@ -120,10 +120,10 @@ div.regionTripText div.trip-content > span.trip-explanation{
 div.regionTripText div.trip-content > span.trip-region{
 	font-size: 0.8em;
 	color: #2bae66;
-	padding-left: 17px;
 	position: relative;
-    top: 24px;
+    top: 30px;
     cursor: pointer;
+    left: 25px;
 }
 
 div.regionTripText div.trip-content > span.trip-region > img{
@@ -162,7 +162,7 @@ div.regionTripText > div.regionofkorea{
 	cursor: pointer;
 	position: relative;
     left: 65px;
-    top: -226px;
+    top: -215px;
 }
 
 div.regionTripText > div.regionofkorea > .region{
