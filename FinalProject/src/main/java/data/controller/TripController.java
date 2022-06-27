@@ -62,6 +62,8 @@ public class TripController {
 		return mview;
 	}
 	
+	
+	
 	//베스트여행지 페이지
 	@GetMapping("/bestTrip")
 	public ModelAndView bestTrip(@RequestParam(value = "currentPage",defaultValue = "1") int currentPage,
@@ -522,8 +524,27 @@ public class TripController {
 			
 			List<TripDto> themeparklist=tservice.getAllActivitys(themepark);
 			
+			TripDto tdto=new TripDto();
+			for(TripDto r:themeparklist) {
+				if(rservice.getReviewcount(r.getTnum())>0) {
+					double avgrstar=rservice.getAvgrstar(r.getTnum());
+					int reviewcount=rservice.getReviewcount(r.getTnum());
+					r.setAvgrstar(avgrstar);
+					r.setReviewcount(reviewcount);
+				}else {
+					double avgrstar=0;
+					int reviewcount=0;
+					r.setAvgrstar(avgrstar);
+					r.setReviewcount(reviewcount);
+				}
+			}
+			
+			themeparklist.add(tdto);
+			
+			
 			System.out.println(themeparklist);
 			
+			model.addAttribute("tdto",tdto);
 			model.addAttribute("themeparklist",themeparklist);
 					
 			
@@ -540,8 +561,28 @@ public class TripController {
 						
 			System.out.println(themeparklist);
 			
+			
+			//list에 여행지 별점 추가하기
+			TripDto tdto=new TripDto();
+			for(TripDto t:themeparklist) {
+				if(rservice.getReviewcount(t.getTnum())>0) {
+					double avgrstar=rservice.getAvgrstar(t.getTnum());
+					int reviewcount=rservice.getReviewcount(t.getTnum());
+					t.setAvgrstar(avgrstar);
+					t.setReviewcount(reviewcount);
+				}else {
+					double avgrstar=0;
+					int reviewcount=0;
+					t.setAvgrstar(avgrstar);
+					t.setReviewcount(reviewcount);
+				}
+			    
+			}
+			
 			model.addAttribute("themeparklist", themeparklist);						
-						
+			model.addAttribute("tdto",tdto);
+
+			
 			return "/myTrip/themeParkList";
 		}
 		
@@ -568,6 +609,16 @@ public class TripController {
 			//조회수 ㅡ증가
 			tripMapper.updateReadCount(tnum);
 			TripDto tdto=tripMapper.getData(tnum);
+			
+			if(rservice.getReviewcount(tnum)>0) {
+				double avgrstar=rservice.getAvgrstar(tnum);
+				int reviewcount=rservice.getReviewcount(tnum);
+				tdto.setAvgrstar(avgrstar);
+				tdto.setReviewcount(reviewcount);
+			}else {
+				double avgrstar=0;
+				tdto.setAvgrstar(avgrstar);
+			}
 			
 			model.addObject("tdto",tdto);
 			
