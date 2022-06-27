@@ -14,7 +14,7 @@
 <body>
 
 <script type="text/javascript">
-
+$(function(){
 	
 	<!-- image 클릭 이벤트 -->
 	$(".small3").click(function(){
@@ -24,7 +24,7 @@
 		$(".tripimage").attr("src",src);
 	});
 	
-	
+});	
 
 
 </script>

@@ -1,4 +1,34 @@
 @charset "UTF-8";
+/* font */
+@font-face {
+    font-family: 'MinSans-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MinSans-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MinSans-Black';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#calBox{
+	text-align: center;
+    width: 70%;
+    padding-left: 15%;
+    margin-left: 480px;
+    margin-top: 30px;
+}
+
 
 .festival-main-proceeding{
 	margin-left: -480px;
@@ -37,9 +67,7 @@ hr.middle-line{
     
 }
 .festivalcalendar-main{
-	width: 755px;
-    margin-left: 700px;
-    margin-top: 40px;
+
 }
 
 span.festivalcalendar-information{
@@ -71,24 +99,26 @@ span.festivalcalendar-day{
 img.festivalcalendar-img{
 	margin-left: 700px;
     margin-top: 40px;
+    width: 10%
+    
 }
 
 span.proceeding-title{
 	font-size: 30pt;
-    margin-left: 880px;
-	
+    position: relative;
+    
 }
 
-img.title-img{
-	width: 60px;
-    margin-top: -30px;
+div.festival-main-title{
+	position: relative;
+    left: 900px;
 }
+
 a.festival-calendar{
-	margin-left: 35px;
-    position: relative;
-    top: -45px;
-	
-}
+	position: relative;
+    left: 30px;
+    top: -50px;
+}	
 
 div.festival-category{
 	width: 210px;

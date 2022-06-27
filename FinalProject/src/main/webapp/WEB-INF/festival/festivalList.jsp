@@ -37,7 +37,7 @@
 		
 		<div class="festival-proceeding">
 			<div class="title">지금 진행중인 축제</div>
-			<div class="festival-calendar"><a href="${root }/myTrip/festivalCalendar">달력으로 보기 ></a></div>
+			<div class="festival-calendar"><a href="${root }/myTrip/festivalCalendar">달력으로 보기 </a></div>
 		</div>
 		
 		<div class="festival-list">
