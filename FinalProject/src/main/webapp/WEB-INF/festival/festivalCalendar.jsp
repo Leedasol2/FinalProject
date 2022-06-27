@@ -6,27 +6,22 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
 
-<script type="text/javascript">
-$(function(){
-	
+<!-- 현재날짜 -->
+<c:set var="today" value="<%=new java.util.Date()%>" />
 
-document.addEventListener('DOMContentLoaded', function() {
-	var calendarEl = document.getElementById('calendar');
-	var calendar = new FullCalendar.Calendar(calendarEl, {
-		locale : 'ko',
-		initialView : 'dayGridMonth'
-	});
-	calendar.render();
-});
-});
-</script>
+<title>이런여행</title>
 
+
+ <!-- fullcalendar -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.6.0/main.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/fullcalendar@5.6.0/main.min.js"></script>
+ 
+<link rel="stylesheet" href="${root}/css/myPageCalendar.css"/> 
+<script src="${root}/js/fescalendar.js"></script>
 
 </head>
 <body>
- 
 <script type="text/javascript">
 $(document).ready(function(){
 	  var currentPosition = parseInt($(".festival-category").css("top"));
@@ -41,8 +36,8 @@ $(document).ready(function(){
 <div class="festival-main">
 
 <div class="festival-category">
-  <a href="#1" class="themepark-category themecategory">테마파크</a><br><br><br>
-  <a href="#2" class="festivals-category themecategory">축제</a><br><br><br>
+  <a href="${root }/myTrip/themeParkList" class="themepark-category themecategory">테마파크</a><br><br><br>
+  <a href="${root }/myTrip/festivalList" class="festivals-category themecategory">축제</a><br><br><br>
 </div>
 
 <div class="category-title">
@@ -53,12 +48,16 @@ $(document).ready(function(){
 
 <div class="festival-main-proceeding">
 <div class="festival-proceeding">
+<div class="festival-main-title">
   <span class="proceeding-title">지금 진행중인 축제</span>
   <img class="title-img" alt="" src="${root }/image/asset/축제아이콘.png">
-  <a href="#" class="festival-calendar">리스트로 보기></a>
+  <a href="${root }/myTrip/festivalList" class="festival-calendar">리스트로 보기></a>
+</div>
 </div>
 
+<div id="calBox">
 <div id="calendar" class="festivalcalendar-main"></div>
+</div>
 
  <hr class="middle-line">
  
