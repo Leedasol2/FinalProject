@@ -109,7 +109,24 @@ function dellike() {
      }); 
 }
 
-
+function golist(){
+	
+	var type=${type};
+	var currentPage=${currentPage};
+	
+	
+	if(type=="home") {
+		location.href="/board/shareTripHome";
+	}else if(type=="best") {
+		location.href="/board/bestBoard?currentPage="+currentPage;
+	}else{
+		location.href="/board/bulletinBoard?currentPage="+currentPage;
+	}
+	
+	
+	
+	
+}
 
 
 </script>
@@ -135,7 +152,7 @@ function dellike() {
         <span class="likes">추천수 ${likesCnt }</span><br>
         <!-- 로그인중인 아이디=글쓴이 아이디 -->
         <c:if test="${sessionScope.loginok=='yes' && sessionScope.myid==dto.writer}">
-        	<a href="boardupdateform?bnum=${dto.bnum }"><span class="board-upd">수정 |</span></a><span class="board-del"> 삭제</span>
+        	<a href="boardupdateform?bnum=${dto.bnum }"><span class="board-upd">수정 |</span></a><a href="deleteboard?bnum=${dto.bnum }&type=${type}"><span class="board-del"> 삭제</span></a>
         </c:if>
        
       <hr class="underline">
@@ -258,7 +275,7 @@ function dellike() {
   <tr>
     <td class="list">
       <hr class="underline">
-      <button type="button" class="listbtn">목록</button>
+      <button type="button" class="listbtn" onclick="golist()">목록</button>
     </td>
   </tr>
  </table>

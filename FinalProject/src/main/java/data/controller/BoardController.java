@@ -106,6 +106,7 @@ public class BoardController {
 			model.addObject("no", no);
 			model.addObject("currentPage", currentPage);
 			model.addObject("totalBoardCnt", totalBoardCnt);
+			model.addObject("best", "best");
 
 			model.setViewName("/board/board/bestBoard");
 
@@ -164,6 +165,7 @@ public class BoardController {
 		model.addObject("no", no);
 		model.addObject("currentPage", currentPage);
 		model.addObject("totalBoardCnt", totalBoardCnt);
+		model.addObject("type", "bul");
 
 		model.setViewName("/board/board/bulletinBoard");
 
@@ -255,7 +257,10 @@ public class BoardController {
 
 	// 게시글 상세페이지
 	@GetMapping("/board/detail")
-	public ModelAndView boardDetail(String bnum,@RequestParam(value = "currentPage", defaultValue = "1") int currentPage, HttpSession session) {
+	public ModelAndView boardDetail(String bnum,
+			@RequestParam(value = "currentPage", defaultValue = "1") int currentPage, 
+			HttpSession session,
+			String type) {
 
 		ModelAndView model = new ModelAndView();
 
@@ -292,14 +297,17 @@ public class BoardController {
 		for (CommentsDto c : clist) {
 			c.setCwriter(memservice.getUserId(c.getMnum()));
 		}
-
+		
 		model.addObject("dto", dto);
 		model.addObject("currentPage", currentPage);
 		model.addObject("commentCnt", commentCnt);
 		model.addObject("clist", clist);
 		model.addObject("likesCnt", likesCnt);
 		model.addObject("mylike", mylike);
-
+		model.addObject("type", type);
+		
+		
+		
 		model.setViewName("/board/board/boardDetailPage");
 
 		return model;
@@ -374,7 +382,6 @@ public class BoardController {
 		service.addLike(bnum, mnum);
 		boolean result=true;
 		
-		//return "redirect:/board/detail?bnum="+bnum;
 		return result;
 	}
 	
@@ -392,13 +399,28 @@ public class BoardController {
 		
 		boolean result=true;
 		
-		//return "redirect:/board/detail?bnum="+bnum;
 		return result;
 	}
 	
-	
-	
-	
+	//삭제
+	@GetMapping("/board/deleteboard")
+	public String deleteboard(@RequestParam String bnum, @RequestParam String type) {
+		
+		service.deleteBoard(bnum);
+		
+		if(type.equals("home")) {
+			System.out.println("home으로");
+			return "redirect:/board/shareTripHome";
+		}else if(type.equals("best")) {
+			System.out.println("best로");
+			return "redirect:/board/bestBoard";
+		}else{
+			System.out.println("bul로");
+			return "redirect:/board/bulletinBoard";
+		}
+		
+		
+	}
 	
 	
 	

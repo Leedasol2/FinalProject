@@ -26,6 +26,9 @@ public interface BoardMapperInter {
 	//수정
 	public void updateBoard(BoardDto dto);
 	
+	//삭제
+	public void deleteBoard(String bnum);
+	
 	//추천
 	public int getLikeCount(String bnum);
 	public int isMyLike(HashMap<String, String> map);

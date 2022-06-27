@@ -57,6 +57,13 @@ public class BoardService {
 		mapper.updateBoard(dto);
 	}
 	
+	public void deleteBoard(String bnum) {
+		mapper.deleteBoard(bnum);
+	}
+	
+	
+	
+	
 	public int getLikeCount(String bnum) {
 		return mapper.getLikeCount(bnum);
 	}
