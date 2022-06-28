@@ -23,5 +23,14 @@
 		delete from comments where cnum=#{cnum}
 	</delete>
 	
+	<delete id="deleteCommentReply" parameterType="String">
+		delete from comments where renum=#{cnum}
+	</delete>
+	
+	<!-- 댓글 수정 -->
+	<update id="updateComment" parameterType="comdto">
+		update comments set content=#{content} where cnum=#{cnum}
+	</update>
+	
 	
 </mapper>

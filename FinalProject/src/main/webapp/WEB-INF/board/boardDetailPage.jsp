@@ -165,6 +165,9 @@ function reply(cnum,bwriter,e) {
             		rehtml+="<br><span class='comment-content'>"+this.content+"</span><br>";
             		rehtml+="<hr class='comment-underline'>";
     			});	
+        	}else{
+        		rehtml+="<br><span class='comment-content'>등록된 답글이 없습니다</span><br>";
+        		rehtml+="<hr class='comment-underline'>";
         	}
         	
         }
@@ -216,6 +219,35 @@ function deleteComment(cnum) {
 	     }); 
 	}
 
+} 
+
+//댓글수정 폼으로 변경
+function updateform(content,cnum,e) {
+	
+	//alert("test")
+	
+	$(e).siblings(".comment-content").hide();
+	
+	var currentPage=${currentPage};
+	var bnum='${dto.bnum}';
+	var type='${type}';
+	
+	var updateformMsg="";
+	
+	updateformMsg+='<form action="/comments/updatecom" method="post">';
+	updateformMsg+='<input type="text" name="content" class="commentbox" required="required" value="'+content+'"><br>';
+	updateformMsg+='<input type="hidden" name="cnum" value="'+cnum+'">';
+	updateformMsg+='<input type="hidden" name="bnum" value="'+bnum+'">';
+	updateformMsg+='<input type="hidden" name="currentPage" value="'+currentPage+'">';
+	updateformMsg+='<input type="hidden" name="type" value="'+type+'">';
+	
+	updateformMsg+='<br><button type="submit" class="comment-insertbtn">수정</button>';
+	
+	
+	updateformMsg+='</form>';
+	
+	$(e).siblings(".comUpdateform").html(updateformMsg);
+	
 } 
 
 
@@ -292,7 +324,7 @@ function deleteComment(cnum) {
 	    <!-- 댓글이 있을 때 --> 
 	    <c:if test="${commentCnt!=0 }">
 	    	<c:forEach var="cdto" items="${clist }" >
-	    	  <div>
+	    	  <div class="commentdiv">
 		    	  <!-- 답글이 아닐 때 -->
 		    	  <c:if test="${cdto.renum==0 }">
 		    	  	
@@ -304,8 +336,9 @@ function deleteComment(cnum) {
 				    <span class="comment-day"><fmt:formatDate value="${cdto.writeday }" pattern="yyyy-MM-dd HH:mm"/></span>
 				    <!-- 댓글작성자로 로그인중일때 -->
 				    <c:if test="${sessionScope.loginok=='yes' && sessionScope.myid==cdto.cwriter }">
-				    	<span class="comment-del" onclick="deleteComment(${cdto.cnum})">삭제 |</span><span class="comment-upd"> 수정</span>
+				    	<span class="comment-del" onclick="deleteComment(${cdto.cnum})">삭제 |</span><span class="comment-upd" onclick="updateform('${cdto.content }',${cdto.cnum },this)"> 수정</span>
 				    </c:if>
+				    <div class="comUpdateform"></div>
 				    <br><span class="comment-content">${cdto.content }</span><br>
 				    <button type="button" class="btnreply" onclick="reply(${cdto.cnum},'${dto.writer }',this)">답글</button>
 					<hr class="comment-underline">
