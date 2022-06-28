@@ -82,9 +82,9 @@ public class TripService {
 		return tripMapper.getBestList(tnum);
 	}
 
-	public int getTotalCount() {
+	public int getTotalCount(String fesday) {
 		      
-		return tripMapper.getTotalCount();
+		return tripMapper.getTotalCount(fesday);
     }
 	
 	

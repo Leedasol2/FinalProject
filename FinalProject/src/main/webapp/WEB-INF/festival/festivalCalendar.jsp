@@ -66,7 +66,7 @@ $(document).ready(function(){
  <div id="festivalcalendar-content" class="festivalcalendar-content">
  	<div class="festivalcalendar-information">축제정보</div>
  	
- 	<input type="hidden" id="festotalCount" value="${festotalCount }">
+ 	<%-- <input type="hidden" id="festotalCount" value="${festotalCount }"> --%>
  	<c:forEach var="calendar" items="${calendarlist }">
 	<c:if test="${calendar.endday>=today }">
  	<br> 	

@@ -1,5 +1,24 @@
 var calendar;
-			
+	
+var fesAjax = function(day){
+	var vo='{"day":"'+day+'"}';
+	//alert(day)
+	$.ajax({
+	        type : "post",
+	        url : "/myTrip/getfescount",
+	        contentType: 'application/json',
+	        dataType: "json",
+	        data: vo,
+	        success : function (data) {
+	        	//alert("test")
+	        	calendar.addEvent({
+					title: data+"개의 축제",
+					start:day,
+					end:day
+				});
+	        }
+     	});
+}		
 var roadData = function(){
 	
 				
@@ -11,21 +30,20 @@ var roadData = function(){
 			day='2022-06-'+i;
 		}
 		
+		//alert(day)
+		//var festotalCount=document.getElementById('festotalCount').value;
 		
-		var festotalCount=document.getElementById('festotalCount').value;
-		calendar.addEvent({
-					title: festotalCount+"개의 축제",
-					start:day,
-					end:day
-				});
-		
+		fesAjax(day);
 		
 	}
 }
+
+
+
 			
 
 document.addEventListener('DOMContentLoaded', function () {
-	var festotalCount=document.getElementById('festotalCount').value;
+	//var festotalCount=document.getElementById('festotalCount').value;
 
             var calendarEl = document.getElementById('calendar');
             calendar = new FullCalendar.Calendar(calendarEl, {
@@ -51,6 +69,8 @@ document.addEventListener('DOMContentLoaded', function () {
             
             calendar.render();
             roadData();
+            
+            
             
         });
         
