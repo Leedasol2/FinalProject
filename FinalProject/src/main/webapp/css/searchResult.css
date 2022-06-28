@@ -122,11 +122,11 @@ div.search-region{
 }
 
 div.searchFailText{
-   font-size: 21pt;
+    font-size: 21pt;
     font-weight: 550;
-    margin-left: 610px;
-    margin-top: 255px;
-    margin-bottom: 296px;
+    margin-left: 736px;
+    margin-top: 297px;
+    margin-bottom: 435px;
 }
 
 .searchtripDetail0-reviewstar{
@@ -236,9 +236,9 @@ div.searchtripDetail4-reviewstar > span:nth-child(-n+1){
 }
 
 .searchnoresult{
-   font-size: 21pt;
+    font-size: 21pt;
     font-weight: 550;
     margin-left: 285px;
-    margin-top: 129px;
-    margin-bottom: 275px;
+    margin-top: 195px;
+    margin-bottom: 392px;
 }
