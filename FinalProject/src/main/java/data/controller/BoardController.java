@@ -63,6 +63,7 @@ public class BoardController {
 		
 		model.addObject("bestlist", bestlist);
 		model.addObject("bullist", bullist);
+		model.addObject("type", "home");
 		
 		
 		model.setViewName("/board/board/shareTripHome");
@@ -109,7 +110,8 @@ public class BoardController {
 			model.addObject("currentPage", currentPage);
 			model.addObject("totalBoardCnt", totalBoardCnt);
 			model.addObject("best", "best");
-
+			model.addObject("type", "best");
+			
 			model.setViewName("/board/board/bestBoard");
 
 			return model;
