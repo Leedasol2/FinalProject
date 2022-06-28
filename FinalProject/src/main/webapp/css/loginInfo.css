@@ -259,7 +259,7 @@ span.donotmatchpass{
     display: none;
 }
 
-input[type="checkbox"] {
+div.login-info-btn-group1 input[type="checkbox"] {
     display:none;
 }
 

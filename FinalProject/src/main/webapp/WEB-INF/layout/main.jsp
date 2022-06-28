@@ -89,43 +89,41 @@
 								<div class="trip-star-rating">
 								  <div class="trip-reviewstar">
 		 					        <c:if test="${tdto.avgrstar==0 }">
-									  <div class="tripDetail0-reviewstar">
+									  <div class="maintripDetail0-reviewstar">
 		 							    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 			                          </div>
 			                        </c:if>
 			                        <c:if test="${tdto.avgrstar==1 }">
-			                          <div class="tripDetail1-reviewstar">
+			                          <div class="maintripDetail1-reviewstar">
 		                              	<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 			                          </div>
 									</c:if>
 									<c:if test="${tdto.avgrstar==2 }">
-									  <div class="tripDetail2-reviewstar">
+									  <div class="maintripDetail2-reviewstar">
 								        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 									  </div>
 									</c:if>
 									<c:if test="${tdto.avgrstar==3 }">
-									  <div class="tripDetail3-reviewstar">
+									  <div class="maintripDetail3-reviewstar">
 								 	    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 									  </div>
 									</c:if>
 									<c:if test="${tdto.avgrstar==4 }">
-									  <div class="tripDetail4-reviewstar">
+									  <div class="maintripDetail4-reviewstar">
 								 	    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 									  </div>
 									</c:if>
 									<c:if test="${tdto.avgrstar==5 }">
-									  <div class="tripDetail5-reviewstar">
+									  <div class="maintripDetail5-reviewstar">
 								 	    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 									  </div>
 									</c:if>
 								  </div>
 						       </div>
-						       
-						
-							<div class="explain-box">
-								<div class="tripstory-explanation">${tdto.intro }</div>
-								<div class="tripstory-region">${tdto.location }</div>
-							</div>  
+		
+								<div class="maintripstory-explanation">${tdto.intro }</div>
+								<div class="maintripstory-region">${tdto.location }</div>
+							
 						</div>
 					</c:forEach>
 									
@@ -180,10 +178,10 @@
 											</div>
 										</div>
 										<div class="explain-box">
-											<div class="tripstory-region">${theme.location }</div>
+											<div class="themetripstory-region">${theme.location }</div>
 										</div>
 									</div>
-								</div>
+								</div>	
 							</c:forEach>	
 						
 							</div>
