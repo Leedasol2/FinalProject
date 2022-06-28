@@ -92,7 +92,6 @@ public class TripController {
 			}
 		    
 		}
-		list.add(tdto);
 		
 		//정렬
 		list.sort(new AvgrstarComparator().reversed()); //별점 높은순 정렬
@@ -161,7 +160,6 @@ public class TripController {
 			}
 		}
 		
-		regionList.add(tdto);
 		
 		
 		model.addAttribute("tdto",tdto);
@@ -198,7 +196,6 @@ public class TripController {
 	
 			regionList.sort(new ReviewCountComparator().reversed());
 		
-		regionList.add(tdto);
 		model.addAttribute("regionList",regionList);
 		
 		return "/trip/regionTrip";
@@ -230,7 +227,6 @@ public class TripController {
 		
 		regionList.sort(new AvgrstarComparator().reversed());
 		
-		regionList.add(tdto);
 		model.addAttribute("tdto",tdto);
 		model.addAttribute("regionList",regionList);
 		
@@ -260,7 +256,6 @@ public class TripController {
 		    
 		}
 		
-		regionList.add(tdto);
 		model.addAttribute("tdto",tdto);
 		model.addAttribute("regionList",regionList);
 		
@@ -292,7 +287,6 @@ public class TripController {
 		
 		regionList.sort(new AvgrstarComparator());
 		
-		regionList.add(tdto);
 		model.addAttribute("tdto",tdto);
 		model.addAttribute("regionList",regionList);
 		
@@ -326,7 +320,6 @@ public class TripController {
 		
 		themeList.sort(new AvgrstarComparator().reversed());
 		
-		themeList.add(tdto);
 		model.addAttribute("tdto",tdto);
 		model.addAttribute("themeList",themeList);
 		
@@ -360,7 +353,6 @@ public class TripController {
 	
 		themeList.sort(new ReviewCountComparator().reversed());
 		
-		themeList.add(tdto);
 		model.addAttribute("themeList",themeList);
 		
 		return "/trip/themaTrip";
@@ -391,7 +383,6 @@ public class TripController {
 		
 		themeList.sort(new AvgrstarComparator());
 		
-		themeList.add(tdto);
 		model.addAttribute("tdto",tdto);
 		model.addAttribute("themeList",themeList);
 		
@@ -421,7 +412,6 @@ public class TripController {
 		    
 		}
 		
-		themeList.add(tdto);
 		model.addAttribute("tdto",tdto);
 		model.addAttribute("regionList",themeList);
 		
@@ -481,7 +471,6 @@ public class TripController {
 				r.setReviewcount(reviewcount);
 			}
 		}
-		themeList.add(tdto);
 		model.addAttribute("themeList",themeList);
 		model.addAttribute("tdto",tdto);
 				
@@ -542,7 +531,6 @@ public class TripController {
 				}
 			}
 			
-			themeparklist.add(tdto);
 			
 			
 			System.out.println(themeparklist);
@@ -674,19 +662,42 @@ public class TripController {
 		
 		
 		@GetMapping("/searchTrip")
-		public ModelAndView searchTrip(@RequestParam String searchtext)
-		{
-		  ModelAndView model=new ModelAndView();
-		
-		  List<TripDto> searchlist=tservice.getSearch(searchtext);
+        public ModelAndView searchTrip(@RequestParam String searchtext)
+        {
+          ModelAndView model=new ModelAndView();
 
-		  model.addObject("searchlist",searchlist);
+          List<TripDto> searchlist=tservice.getSearch(searchtext);
 
-		  model.setViewName("/search/searchResult");
-		  return model;
-		}
+          TripDto tdto=new TripDto();
+          for(TripDto t:searchlist) {
+                if(rservice.getReviewcount(t.getTnum())>0) {
+                    double avgrstar=rservice.getAvgrstar(t.getTnum());
+                    int reviewcount=rservice.getReviewcount(t.getTnum());
+                    t.setAvgrstar(avgrstar);
+                    t.setReviewcount(reviewcount);
+                }else {
+                    double avgrstar=0;
+                    int reviewcount=0;
+                    t.setAvgrstar(avgrstar);
+                    t.setReviewcount(reviewcount);
+                }
+            }
+          int sizz=searchlist.size();
+
+          model.addObject("searchlist",searchlist);
+          model.addObject("sizz",sizz);
+          model.setViewName("/search/searchResult");
+          return model;
+        }
+
+        @GetMapping("/searchFail")
+        public String searchFail()
+        {
+            return "/search/searchFail";
+        }
 		
 		@PostMapping("/getfescount")
+		
 		@ResponseBody
 		public int getfescount(@RequestBody Map<String, String> vo) {
 			//System.out.println("컨트롤러 실행");
