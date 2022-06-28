@@ -63,9 +63,10 @@ $(document).ready(function(){
 
  <hr class="middle-line">
  
- <div class="festivalcalendar-content">
- 	<div class="festivalcalendar-information">6월1일축제정보</div>
+ <div id="festivalcalendar-content" class="festivalcalendar-content">
+ 	<div class="festivalcalendar-information">축제정보</div>
  	
+ 	<input type="hidden" id="festotalCount" value="${festotalCount }">
  	<c:forEach var="calendar" items="${calendarlist }">
 	<c:if test="${calendar.endday>=today }">
  	<br> 	

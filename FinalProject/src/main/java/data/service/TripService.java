@@ -1,5 +1,6 @@
 package data.service;
 
+import java.sql.Timestamp;
 import java.util.HashMap;
 import java.util.List;
 
@@ -85,5 +86,9 @@ public class TripService {
 		      
 		return tripMapper.getTotalCount();
     }
+	
+	
+	 //public String getEndday() { return tripMapper.getEndday(); }
+	 
 	
 }
