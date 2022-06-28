@@ -81,4 +81,9 @@ public class TripService {
 		return tripMapper.getBestList(tnum);
 	}
 
+	public int getTotalCount() {
+		      
+		return tripMapper.getTotalCount();
+    }
+	
 }

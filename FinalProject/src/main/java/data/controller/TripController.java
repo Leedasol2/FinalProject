@@ -648,14 +648,19 @@ public class TripController {
 		@GetMapping("/festivalCalendar")
 		public String festivalCalendarList(Model model) {
 			
+			int totalCount=tservice.getTotalCount();
+			
 			String festival="'festival'";
 			
 			List<TripDto> calendarlist=tservice.getAllActivitys(festival);
-				
+							
+			model.addAttribute("totalCount", totalCount);
+
 			model.addAttribute("calendarlist",calendarlist);
 			
 			return "/festival/festivalCalendar";
 		}
+		
 		
 		@GetMapping("/searchTrip")
 		public ModelAndView searchTrip(@RequestParam String searchtext)
