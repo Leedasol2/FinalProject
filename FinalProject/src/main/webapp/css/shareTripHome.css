@@ -194,3 +194,13 @@ div.boardpreview span#boardSubject{
 font-family: MinSans-Medium;
 	cursor: pointer;
 }
+
+div.boardpreview table tbody img{
+	width: 14px;
+	height: 14px;
+	margin-top: 2px;
+}
+
+
+
+

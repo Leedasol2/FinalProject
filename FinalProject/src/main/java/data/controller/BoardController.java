@@ -50,6 +50,7 @@ public class BoardController {
 
 		for (BoardDto b : bestlist) {
 			b.setWriter(memservice.getUserId(b.getMnum()));
+			b.setCommentCnt(comservice.getCommentsCnt(b.getBnum()));
 		}
 		
 		//전체글 목록 5개
@@ -57,6 +58,7 @@ public class BoardController {
 
 		for (BoardDto b : bullist) {
 			b.setWriter(memservice.getUserId(b.getMnum()));
+			b.setCommentCnt(comservice.getCommentsCnt(b.getBnum()));
 		}
 		
 		model.addObject("bestlist", bestlist);
@@ -260,7 +262,7 @@ public class BoardController {
 	public ModelAndView boardDetail(String bnum,
 			@RequestParam(value = "currentPage", defaultValue = "1") int currentPage, 
 			HttpSession session,
-			String type) {
+			@RequestParam(value = "type", defaultValue = "bul") String type) {
 
 		ModelAndView model = new ModelAndView();
 
