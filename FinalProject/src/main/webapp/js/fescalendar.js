@@ -11,31 +11,47 @@ var fesAjax = function(day){
 	        data: vo,
 	        success : function (data) {
 	        	//alert("test")
+	        	if(data>0){
 	        	calendar.addEvent({
 					title: data+"개의 축제",
 					start:day,
 					end:day
 				});
+				}
 	        }
      	});
 }		
 var roadData = function(){
 	
-				
-	for(var i=1; i<31;i++){
-		var day='';
-		if(i<10){
-			day='2022-06-0'+i;
+   for(var j=1; j<=12; j++){
+	
+		var dayCount=new Date(2022,j,0).getDate();
+		//console.log(dayCount)
+		
+		var month='';
+		if(j<10){
+			month='0'+j;
 		}else{
-			day='2022-06-'+i;
+			month=j;
 		}
 		
-		//alert(day)
-		//var festotalCount=document.getElementById('festotalCount').value;
-		
-		fesAjax(day);
-		
+		for(var i=1; i<=dayCount; i++){
+			var day='';
+			
+			if(i<10){
+				day='2022-'+month+'-0'+i;
+			}else{
+				day='2022-'+month+'-'+i;
+			}
+			
+			//console.log(day)
+			//alert(day)
+			fesAjax(day);
 	}
+	
+	}
+   			
+	
 }
 
 
@@ -54,13 +70,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 headerToolbar: {
 					left: 'addEventButton',
                     center: 'title' // headerToolbar에 버튼을 추가
-                }, customButtons: {
                 },
                 editable: false, // false로 변경 시 draggable 작동 x 
                 displayEventTime: false, // 시간 표시 x
                 eventClick: function(info) {
 					    $("#festivalcalendar-content").attr('style',"visibility: visible;");
 			  },
+			  eventColor: '#00ff0000',
 			 
 			  
 			  

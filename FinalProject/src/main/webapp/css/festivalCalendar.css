@@ -21,6 +21,22 @@
     font-style: normal;
 }
 
+
+.fc-event-title{
+    font-size: 1.1em;
+    font-family: 'MinSans-Black';
+
+}
+
+.fc-h-event .fc-event-title-container {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    cursor: pointer;
+    margin: 0 auto;
+    padding: 22px 30px;
+}
+
 #calBox{
 	text-align: center;
     width: 70%;
