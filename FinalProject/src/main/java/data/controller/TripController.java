@@ -3,7 +3,7 @@ package data.controller;
 import java.sql.Timestamp;
 import java.util.Comparator;
 import java.util.List;
-
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.bind.DefaultValue;
@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -655,7 +656,7 @@ public class TripController {
 			//String fesday=model.getAttribute("")
 			
 			
-			int festotalCount=tservice.getTotalCount();
+			//int festotalCount=tservice.getTotalCount();
 			
 			//System.out.println("festotalCount:"+festotalCount);
 			
@@ -664,7 +665,7 @@ public class TripController {
 			
 			model.addAttribute("festival", festival);
 							
-			model.addAttribute("festotalCount", festotalCount);
+			//model.addAttribute("festotalCount", festotalCount);
 
 			model.addAttribute("calendarlist",calendarlist);
 			
@@ -684,6 +685,29 @@ public class TripController {
 		  model.setViewName("/search/searchResult");
 		  return model;
 		}
+		
+		@PostMapping("/getfescount")
+		@ResponseBody
+		public int getfescount(@RequestBody Map<String, String> vo) {
+			//System.out.println("컨트롤러 실행");
+			
+			 String day=(String)vo.get("day");
+			 
+			 //System.out.println(day);
+			 
+			 
+			 int festotalCount=tservice.getTotalCount(day);
+			 //System.out.println(festotalCount);
+			 
+			
+			return festotalCount;
+		}
+		
+		
+		
+		
+		
+		
 
 
 }

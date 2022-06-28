@@ -9,7 +9,7 @@ import data.dto.TripDto;
 @Mapper
 public interface TripMapperInter {
 
-	public int getTotalCount();
+	public int getTotalCount(String fesday);
 	//public String getEndday();
 	
 	

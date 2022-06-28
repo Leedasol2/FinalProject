@@ -10,6 +10,7 @@
 <head>
 <meta charset="UTF-8">
 
+
 <!-- 현재날짜 -->
 <c:set var="today" value="<%=new java.util.Date()%>" />
 
@@ -17,6 +18,7 @@
 
 </head>
 <body>
+
 
 <!-- 본문 시작 -->
 <div class="festival-list-main">
@@ -42,7 +44,11 @@
 		
 		<div class="festival-list">
 		
+		
 		<c:forEach var="festival" items="${festivallist }">
+		
+		
+		
 			<c:if test="${festival.endday>=today }">
 			<div class="festival-list-content">
 		
