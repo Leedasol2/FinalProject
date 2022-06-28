@@ -401,32 +401,26 @@ div.tripstory-region{
     overflow: hidden;
     text-overflow: ellipsis;
 }
-/* 占쏙옙占쏙옙 css */
-.tripstory-star-ratings {
-  color: #aaa9a9; 
-  position: relative;
-  unicode-bidi: bidi-override;
-  width: max-content;
-  -webkit-text-fill-color: #dedede; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 0.1px;
-  -webkit-text-stroke-color: #afafaf;
-  font-size: 12px;
+
+div.trip-reviewstar{
+	float:right;
+	border:solid 0px #ccc;
+    display:flex;
+    flex-direction: row-reverse;
+    font-size:0.7em;
+    justify-content:space-around;
+    padding:0 .2em;
+    text-align:center;
+    width:5em;
 }
-.tripstory-star-ratings-fill {
-  color: #fff58c;
-  padding: 0;
-  position: absolute;
-  z-index: 1;
-  display: flex;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  -webkit-text-fill-color: gold;
+
+div.trip-reviewstar input{
+	display:none;
 }
-.tripstory-star-ratings-base {
-  z-index: 0;
-  padding: 0;
+div.trip-reviewstar label{
+	color:#ccc;
 }
+
 div.tripstory-banner > img{
 	width:100%;
 	cursor: pointer;

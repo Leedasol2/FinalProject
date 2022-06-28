@@ -75,27 +75,53 @@
 						       <img src="${root}/image/festival/${img}" class="tripstory-img" onclick="location.href='/myTrip/festivalDetail?tnum=${tdto.tnum}'">
 						     </c:if>
 						  </c:forTokens>
-							<div class="name-box">
-								<div class="tripstory-name">
-								  <c:if test="${tdto.part=='trip'}">
-									<a href="/myTrip/myTripDetail?tnum=${tdto.tnum}">${tdto.title }</a>
-								  </c:if>
-								  <c:if test="${tdto.part=='themepark'}">
-								    <a href="/myTrip/themeParkDetail?tnum=${tdto.tnum}">${tdto.title }</a>
-						          </c:if>
-						          <c:if test="${tdto.part=='festival'}">
-						            <a href="/myTrip/festivalDetail?tnum=${tdto.tnum}">${tdto.title }</a>
-						          </c:if>
-								</div>
-								<div class="tripstory-star-ratings">
-									<div class="tripstory-star-ratings-fill space-x-2 text-lg" style="width: ratingToPercent+ '%'">
-										<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-									</div>
-									<div class="tripstory-star-ratings-base space-x-2 text-lg">
-										<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-									</div>
-								</div>
-							</div>
+							
+								<c:if test="${tdto.part=='trip'}">
+								  <span class="maintriptitle" onclick="location.href='/myTrip/myTripDetail?tnum=${tdto.tnum}'">${tdto.title }</span>
+								</c:if>
+								<c:if test="${tdto.part=='themepark'}">
+								  <span class="maintriptitle" onclick="location.href='/myTrip/themeParkDetail?tnum=${tdto.tnum}'">${tdto.title }</span>
+						        </c:if>
+						        <c:if test="${tdto.part=='festival'}">
+						          <span class="maintriptitle" onclick="location.href='/myTrip/festivalDetail?tnum=${tdto.tnum}'">${tdto.title }</span>
+						        </c:if>
+								
+								<div class="trip-star-rating">
+								  <div class="trip-reviewstar">
+		 					        <c:if test="${tdto.avgrstar==0 }">
+									  <div class="tripDetail0-reviewstar">
+		 							    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+			                          </div>
+			                        </c:if>
+			                        <c:if test="${tdto.avgrstar==1 }">
+			                          <div class="tripDetail1-reviewstar">
+		                              	<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+			                          </div>
+									</c:if>
+									<c:if test="${tdto.avgrstar==2 }">
+									  <div class="tripDetail2-reviewstar">
+								        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+									  </div>
+									</c:if>
+									<c:if test="${tdto.avgrstar==3 }">
+									  <div class="tripDetail3-reviewstar">
+								 	    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+									  </div>
+									</c:if>
+									<c:if test="${tdto.avgrstar==4 }">
+									  <div class="tripDetail4-reviewstar">
+								 	    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+									  </div>
+									</c:if>
+									<c:if test="${tdto.avgrstar==5 }">
+									  <div class="tripDetail5-reviewstar">
+								 	    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+									  </div>
+									</c:if>
+								  </div>
+						       </div>
+						       
+						
 							<div class="explain-box">
 								<div class="tripstory-explanation">${tdto.intro }</div>
 								<div class="tripstory-region">${tdto.location }</div>
