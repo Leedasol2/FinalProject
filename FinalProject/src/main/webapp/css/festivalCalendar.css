@@ -99,6 +99,10 @@ div.festivalcalendar-day{
 .festivalcalendar-content-inner{
 }
 
+.festivalcalendar-content {
+    visibility: hidden;
+}
+
 img.festivalcalendar-img{
 	margin-left: 700px;
     margin-top: 40px;

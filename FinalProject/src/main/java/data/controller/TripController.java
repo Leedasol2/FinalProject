@@ -1,5 +1,6 @@
 package data.controller;
 
+import java.sql.Timestamp;
 import java.util.Comparator;
 import java.util.List;
 
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import data.dto.ReviewDto;
@@ -648,13 +650,21 @@ public class TripController {
 		@GetMapping("/festivalCalendar")
 		public String festivalCalendarList(Model model) {
 			
-			int totalCount=tservice.getTotalCount();
-			
+
 			String festival="'festival'";
+			//String fesday=model.getAttribute("")
+			
+			
+			int festotalCount=tservice.getTotalCount();
+			
+			//System.out.println("festotalCount:"+festotalCount);
+			
 			
 			List<TripDto> calendarlist=tservice.getAllActivitys(festival);
+			
+			model.addAttribute("festival", festival);
 							
-			model.addAttribute("totalCount", totalCount);
+			model.addAttribute("festotalCount", festotalCount);
 
 			model.addAttribute("calendarlist",calendarlist);
 			

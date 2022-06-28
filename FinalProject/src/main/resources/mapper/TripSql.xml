@@ -4,8 +4,8 @@
 	<select id="getData" parameterType="String" resultType="tdto">
 	select * from trip where tnum=#{tnum}
 	</select>
-	<select id="getTotalCount" resultType="int">
-	select count(*) from trip where part=#{part} and endday=#{endday}>=CURDATE()
+	<select id="getTotalCount" resultType="int" parameterType="String">
+	select count(*) from trip where part='festival' and endday>=CURDATE()
 	</select>
 	<update id="updateReadCount" parameterType="String">
 	update trip set readcount=readcount+1 where tnum=#{tnum}
