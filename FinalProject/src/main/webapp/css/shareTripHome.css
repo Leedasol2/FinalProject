@@ -107,22 +107,9 @@ div.tripHeader .bestboardActive{
 }
 div.tripHeader .bulboardActive{
 	width: 120px;
-	margin-left: 325px;
+	margin-left: 605px;
 	vertical-align: top;
 }
-div.tripHeader .bestboardActive{
-	visibility: visible;
-}
-div.tripHeader .bulboardActive{
-	visibility: visible;
-}
-div.tripHeader .bestboardNoActive{
-	visibility: hidden;
-}
-div.tripHeader .bulboardNoActive{
-	visibility: hidden;
-}
-
 div.tripHeader hr{
 	margin: 0px;
 	width: 900px;
