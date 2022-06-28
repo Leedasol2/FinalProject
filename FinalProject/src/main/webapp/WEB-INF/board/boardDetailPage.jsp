@@ -110,7 +110,7 @@ function dellike() {
 
 function golist(){
 	
-	var type=${type };
+	var type='${type }';
 	var currentPage=${currentPage};
 	
 	
