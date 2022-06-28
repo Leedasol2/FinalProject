@@ -365,7 +365,7 @@ div.name-box > div.tripstory-name{
     position: relative;
     display: inline-block;
     float: left;
-	width: 160px;
+	width: 250px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -386,7 +386,6 @@ div.tripstory-explanation{
 div.tripstory-region{
 	font-size: 11pt;
 	color: #2bae66;
-	cursor: pointer;
 	font-family: 'MinSans-Medium';
 	position: relative;
 	display: inline-block;
@@ -402,7 +401,68 @@ div.tripstory-region{
     text-overflow: ellipsis;
 }
 
-div.trip-reviewstar{
+div.themetripstory-region{
+	font-size: 11pt;
+	color: #2bae66;
+	font-family: 'MinSans-Medium';
+	position: relative;
+	display: inline-block;
+	background-image: url("/image/asset/positionicon.png");
+	background-repeat: no-repeat;
+	background-position: 4px center;
+    background-size: 13px;
+    float: left;
+    padding: 10px 17px 10px 22px;
+    width: 269px; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+div.maintripstory-explanation{
+	font-size: 11pt;
+    font-family: 'MinSans-Medium';
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 223px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 8px;
+    margin-left: 14px;
+    padding-top: 7px;
+}
+
+div.maintripstory-region{
+    font-size: 11pt;
+    color: #2bae66;
+    font-family: 'MinSans-Medium';
+    position: relative;
+    display: inline-block;
+    background-image: url(/image/asset/positionicon.png);
+    background-repeat: no-repeat;
+    background-position: 4px center;
+    background-size: 13px;
+    float: left;
+    padding: 4px 17px 3px 22px;
+    width: 238px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 5px;
+    margin-left: 11px;
+    margin-bottom: 8px;
+}
+
+span.maintriptitle{
+	display: inline-block;
+    margin-top: 14px;
+    margin-left: 14px;
+    font-weight: bold;
+}
+
+div.maintrip-reviewstar{
 	float:right;
 	border:solid 0px #ccc;
     display:flex;
@@ -613,3 +673,115 @@ div.festival div.swiper-button-prev:after, div.festival div.swiper-button-next:a
 .company-info {width: 51%;}
 .tools {width: 49%;}
 .tools img {width: 100%;}
+
+.maintripDetail0-reviewstar{
+	float:right;
+	border:solid 0px #ccc;
+    display:flex;
+    flex-direction: row-reverse;
+    font-size:0.7em;
+    justify-content:space-around;
+    padding:0 .2em;
+    text-align:center;
+    width:5em;
+    margin-top: -16px;
+    margin-right: 11px;
+}
+.maintripDetail0-reviewstar span{
+	color:#ccc;
+}
+
+.maintripDetail1-reviewstar{
+	float:right;
+	border:solid 0px #ccc;
+	display:flex;
+	flex-direction: row-reverse;
+	font-size:0.7em;
+	justify-content:space-around;
+	padding:0 .2em;
+	text-align:center;
+	width:5em;
+	margin-top: -16px;
+	margin-right: 11px;
+}
+div.maintripDetail1-reviewstar > span{
+	color: gold
+}
+div.maintripDetail1-reviewstar > span:nth-child(-n+4){
+	color: #ccc
+}
+
+.maintripDetail2-reviewstar{
+	float:right;
+	border:solid 0px #ccc;
+	display:flex;
+	flex-direction: row-reverse;
+    font-size:0.7em;
+    justify-content:space-around;
+	padding:0 .2em;
+	text-align:center;
+	width:5em;
+	margin-top: -16px;
+    margin-right: 11px;
+}
+div.maintripDetail2-reviewstar > span{
+	color: gold
+}
+div.maintripDetail2-reviewstar > span:nth-child(-n+3){
+	color: #ccc
+}
+.maintripDetail3-reviewstar{
+	float:right;
+	border:solid 0px #ccc;
+	display:flex;
+	flex-direction: row-reverse;
+	font-size:0.7em;
+    justify-content:space-around;
+    padding:0 .2em; 
+    text-align:center;
+    width:5em;
+    margin-top: -16px;
+    margin-right: 11px;
+}
+div.maintripDetail3-reviewstar > span{
+	color: gold
+}
+div.maintripDetail3-reviewstar > span:nth-child(-n+2){
+	color: #ccc
+}
+
+.maintripDetail4-reviewstar{
+  float:right;
+  border:solid 0px #ccc;
+  display:flex;
+  flex-direction: row-reverse;
+  font-size:0.7em;
+  justify-content:space-around;
+  padding:0 .2em;
+  text-align:center;
+  width:5em;
+  margin-top: -16px;
+  margin-right: 11px;
+}
+div.maintripDetail4-reviewstar > span{
+	color: gold
+}
+div.maintripDetail4-reviewstar > span:nth-child(-n+1){
+	color: #ccc
+}
+.maintripDetail5-reviewstar{
+	float:right;
+	border:solid 0px #ccc;
+  display:flex;
+  flex-direction: row-reverse;
+  font-size:0.7em;
+  justify-content:space-around;
+  padding:0 .2em;
+  text-align:center;
+  width:5em;
+  margin-top: -16px;
+  margin-right: 11px;
+}
+.maintripDetail5-reviewstar span{
+	color: gold;
+}
