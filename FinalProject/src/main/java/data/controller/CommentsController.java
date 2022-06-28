@@ -68,6 +68,8 @@ public class CommentsController {
 		String cnum=(String)vo.get("cnum");
 		
 		service.deleteComment(cnum);
+		service.deleteCommentReply(cnum);
+		
 		
 		boolean result=true;
 		
@@ -75,8 +77,16 @@ public class CommentsController {
 		
 		return result;
 	}
-	
-	
+
+	@PostMapping("/comments/updatecom")
+	public String updateComment(@ModelAttribute CommentsDto dto,
+			@RequestParam int currentPage,@RequestParam String bnum, @RequestParam String type) {
+		
+		service.updateComment(dto);
+		
+		System.out.println("bnum="+bnum);
+		return "redirect:../board/detail?bnum="+bnum+"&currentPage="+currentPage+"&type="+type;
+	}
 	
 	
 	

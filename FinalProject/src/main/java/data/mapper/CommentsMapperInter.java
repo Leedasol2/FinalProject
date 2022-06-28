@@ -20,6 +20,10 @@ public interface CommentsMapperInter {
 	
 	//댓글 삭제
 	public void deleteComment(String cnum);
+	public void deleteCommentReply(String cnum);
+	
+	//댓글수정
+	public void updateComment(CommentsDto dto);
 	
 	
 	

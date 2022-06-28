@@ -36,6 +36,13 @@ public class CommentsService {
 	public void deleteComment(String cnum) {
 		mapper.deleteComment(cnum);
 	}
+	public void deleteCommentReply(String cnum) {
+		mapper.deleteCommentReply(cnum);
+	}
+	
+	public void updateComment(CommentsDto dto) {
+		mapper.updateComment(dto);
+	}
 	
 	
 }
