@@ -68,8 +68,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 timeZone: 'Asia/Seoul', //UTC로 하면 일정이 전부 하루씩 당겨짐, local이나 Asia/Seoul로 하면 마지막 날짜 짤림
                 initialView: 'dayGridMonth', // 홈페이지에서 다른 형태의 view를 확인할  수 있다.
                 headerToolbar: {
-					left: 'addEventButton',
-                    center: 'title' // headerToolbar에 버튼을 추가
+					left: 'today',
+                    center: 'title', // headerToolbar에 버튼을 추가
+                    right: 'prev,next'
                 },
                 editable: false, // false로 변경 시 draggable 작동 x 
                 displayEventTime: false, // 시간 표시 x
