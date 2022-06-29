@@ -8,7 +8,7 @@
 	select count(*) from trip where part='festival' and endday>=CURDATE()
 	</select> -->
 	<select id="getTotalCount" resultType="int" parameterType="String">
-	select count(*) from trip where part='festival' and endday>=#{day}
+	select count(*) from trip where part='festival' and endday>=#{day} and beginday <![CDATA[ <= ]]> #{day}
 	</select>
 	<update id="updateReadCount" parameterType="String">
 	update trip set readcount=readcount+1 where tnum=#{tnum}

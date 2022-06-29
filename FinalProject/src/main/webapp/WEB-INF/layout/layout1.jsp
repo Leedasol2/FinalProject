@@ -29,7 +29,6 @@
 <link rel="stylesheet" href="${root}/css/myPageScrap.css"/>
 <link rel="stylesheet" href="${root}/css/themePark.css"/>
 <link rel="stylesheet" href="${root}/css/festival.css"/>
-<link rel="stylesheet" href="${root}/css/festivalCalendar.css"/>
 
 <!-- 차동현 -->
 <link rel="stylesheet" href="${root}/css/bestTrip.css"/>
