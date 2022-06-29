@@ -49,7 +49,6 @@
 		
 		
 		
-			<c:if test="${festival.endday>=today }">
 			<div class="festival-list-content">
 		
 				<img src="${root}/image/festival/${fn:split(festival.image,',')[0]}" class="festival-img"
@@ -65,7 +64,6 @@
 				</div>
 			
 			</div>
-				</c:if>
 			</c:forEach>
 			
 			

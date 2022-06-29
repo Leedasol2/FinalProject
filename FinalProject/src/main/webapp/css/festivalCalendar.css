@@ -39,6 +39,10 @@
     padding: 16px 0;
 }
 
+a.fc-daygrid-day-number{
+	cursor: pointer;
+}
+
 #calBox{
 	text-align: center;
     width: 70%;
@@ -67,7 +71,7 @@
 }
 
 hr.festival-title-line{
-		margin-top: 20px;
+	margin-top: 20px;
     margin-bottom: 20px;
     border: 0;
     border-top: 1px solid #eee;
@@ -98,13 +102,26 @@ div.festivalcalendar-first{
 	font-size: 20pt;
     font-weight: bold;
     margin-bottom: 20px;
+    position: relative;
+    left: 900px;
+    top: -230px;
     
 }
 
 div.festivalcalendar-day{
 	margin-left: 20px;
 	color: #dcdcdc;
-	
+	position: relative;
+    left: 880px;
+    top: -230px;
+}
+
+div.festivalcalendar-two{
+	position: relative;
+    left: 900px;
+    top: -230px;
+    width: 44%;
+    
 }
 
 .festivalcalendar-contents{
@@ -116,6 +133,8 @@ div.festivalcalendar-day{
 }
 
 .festivalcalendar-content-inner{
+ 	margin-bottom: -150px;
+	
 }
 
 .festivalcalendar-content {
@@ -138,7 +157,8 @@ span.proceeding-title{
 
 div.festival-main-title{
 	position: relative;
-    left: 1110px;
+    left: 990px;
+
 }
 
 a.festival-calendar{
@@ -156,18 +176,18 @@ div.festival-category{
     margin-right: 800px;
 }
 
-div.festival-category > a.themecategory{
+div.festival-category {
 	color: gray;
 	font-weight: 650;
 	font-size: 17px;
 }
 
 
-div.festival-category > a.festivals-category {
+div.festival-category  {
 	color: #212529;
 }
 
-div.festival-category > a:hover{
+div.festival-category {
 	color: #212529;
 	transition: 0.3s ease; 
 }
@@ -255,7 +275,7 @@ button.fc-addEventButton-button.fc-button.fc-button-primary, button.fc-prev-butt
 
 div#calendarBox {
     position: relative;
-    left: 929px;
+    left: 810px;
     padding-top: 60px;
 }
 

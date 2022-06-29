@@ -8,8 +8,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
+<script class="cssdesk" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.0/moment.min.js" type="text/javascript"></script>
 <script src="${root}/js/fescalendar.js"></script>
+
 <link rel="stylesheet" href="${root}/css/festivalCalendar.css"/>
 
 <!-- 현재날짜 -->
@@ -21,7 +22,10 @@
  <!-- fullcalendar -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.6.0/main.min.css">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/fullcalendar@5.6.0/main.min.js"></script>
- 
+<script src='http://fullcalendar.io/js/fullcalendar-2.1.1/lib/moment.min.js'></script>
+<script src='http://fullcalendar.io/js/fullcalendar-2.1.1/lib/jquery.min.js'></script>
+<script src="http://fullcalendar.io/js/fullcalendar-2.1.1/lib/jquery-ui.custom.min.js"></script>
+<script src='http://fullcalendar.io/js/fullcalendar-2.1.1/fullcalendar.min.js'></script> 
 
 </head>
 <body>
@@ -68,24 +72,7 @@ $(document).ready(function(){
  <div id="festivalcalendar-content" class="festivalcalendar-content">
  	<div class="festivalcalendar-information">축제정보</div>
  	
- 	<%-- <input type="hidden" id="festotalCount" value="${festotalCount }"> --%>
- 	<c:forEach var="calendar" items="${calendarlist }">
-	<c:if test="${calendar.endday>=today }">
- 	<br> 	
- 	<div class="festivalcalendar-content-inner">
- 	
- 	<img src="${root}/image/festival/${fn:split(calendar.image,',')[0]}" class="festivalcalendar-img"
- 	onclick="location.href='festivalDetail?tnum=${calendar.tnum}&currentPage=${currentPage }'">
- 	
-		<div class="festivalcalendar-contents">
-		<div class="festivalcalendar-first">${calendar.title }</div>  <div class="festivalcalendar-day">[${calendar.beginday}-${calendar.endday}]<br><br></div>
-		<div class="festivalcalendar-two">${calendar.intro}<br></div>
-
-		</div> 	
- 	</div>
- 	
- 		</c:if>
-	</c:forEach>
+ 	<div class="fesList"></div>
 			
 	
  </div> 
