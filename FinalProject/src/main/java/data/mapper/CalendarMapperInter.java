@@ -12,4 +12,6 @@ public interface CalendarMapperInter {
 	public void insertSchedule(CalendarDto dto);
 	public List<CalendarDto> getScheList(String mnum);
 	public void deleteSchedule(String schenum);
+	public void updateSchedule(CalendarDto dto);
+	public CalendarDto getSchedule(String schenum);
 }

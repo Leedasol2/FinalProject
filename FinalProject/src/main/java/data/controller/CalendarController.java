@@ -5,6 +5,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -53,7 +54,22 @@ public class CalendarController {
 		return "true";
 	}
 	
-	
+	@PostMapping("/mypage/ScheGet")
+	@ResponseBody
+	public CalendarDto ScheGet(@RequestBody String schenum)
+	{
+		//System.out.println("컨트롤러 실행"+schenum);
+		return service.getSchedule(schenum);
+	}
+
+	//update
+	@PostMapping("/mypage/ScheUpdate")
+	@ResponseBody
+	public void updateSchedule(@RequestBody CalendarDto dto)
+	{
+		//System.out.println("컨트롤러 실행");
+		service.updateSchedule(dto);
+	}
 	
 
 }

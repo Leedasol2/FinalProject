@@ -13,4 +13,11 @@
 	<select id="getSnum" resultType="String">
 		select schenum from schedule where content=#{content}
 	</select>
+	<update id="updateSchedule" parameterType="cdto">
+		update schedule set content=#{content},beginday=#{beginday},endday=#{endday},
+		schecolor=#{schecolor} where schenum=#{schenum}
+	</update>
+	<select id="getSchedule" parameterType="String" resultType="cdto">
+		select * from schedule where schenum=#{schenum}
+	</select>
 </mapper>

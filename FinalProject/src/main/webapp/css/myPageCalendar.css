@@ -20,6 +20,31 @@
     font-weight: normal;
     font-style: normal;
 }
+.scheGet {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.scheColor {
+    height: 7px;
+    margin-top: 35px;
+}
+.scheduleEdit {
+    font-family: 'MinSans-Medium';
+}
+.scheduleEdit {
+    display: flex;
+    height: 50px;
+    justify-content: space-around;
+    align-items: center;
+}
+button.UpdateBtn,button.DeleteBtn{
+	border:none;
+    background: none;
+}
+.scheDate > span:first-child::after{padding-left:7px;padding-right:4px;content:"~"}
+ 
+
 
 .calendar{
 	padding: 0 20px;
@@ -87,6 +112,28 @@ li.mypage-li > a::after{padding: 0 5px;}
 .radio-group > [name='calendar_color']:nth-child(6) {background-color:#0b8043;}
 .radio-group > [name='calendar_color']:nth-child(7) {background-color:#039be5;}
 .radio-group > [name='calendar_color']:nth-child(8) {background-color:#3f51b5;}
+
+.radio-group > input[name='calendar_color_update'],
+.radio-group > input[name='calendar_color_update']:checked {
+  appearance: none;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 100%;
+  margin-right: 0.1rem;
+}
+
+.radio-group > [name='calendar_color_update'] {
+  border: none;
+}
+.radio-group > [name='calendar_color_update']:nth-child(1) {background-color:#d50000;}
+.radio-group > [name='calendar_color_update']:nth-child(2) {background-color:#e67c73;}
+.radio-group > [name='calendar_color_update']:nth-child(3) {background-color:#f4511e;}
+.radio-group > [name='calendar_color_update']:nth-child(4) {background-color:#f6bf26;}
+.radio-group > [name='calendar_color_update']:nth-child(5) {background-color:#33b679;}
+.radio-group > [name='calendar_color_update']:nth-child(6) {background-color:#0b8043;}
+.radio-group > [name='calendar_color_update']:nth-child(7) {background-color:#039be5;}
+.radio-group > [name='calendar_color_update']:nth-child(8) {background-color:#3f51b5;}
+
 
 div.form-group {
     margin-bottom: 7px;

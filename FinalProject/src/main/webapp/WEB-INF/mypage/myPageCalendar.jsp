@@ -39,6 +39,9 @@
 				<div id="calendarBox">
 					<div id="calendar"></div>
 				</div>
+				
+				<div class="scheGet">
+				</div>
 			</div>
 	</div>
 </div>
@@ -84,6 +87,46 @@
             </div>
         </div>
     </div>
+ <!-- 수정 Modal  -->
+ <div class="modal" id="calendarModal-update" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+      <div class="modal-dialog-cal" role="document">
+            <div class="modal-content-cal">
+                <div class="modal-header-cal">
+                    <h5 class="modal-title-cal" id="exampleModalLabel">일정 수정</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="updateModalClose">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="taskId" class="col-form-label">일정 내용</label>
+                        <input type="text" class="form-control" id="calendar_content_update" name="calendar_content_update">
+                        <label for="taskId" class="col-form-label">시작 날짜</label>
+                        <input type="date" class="form-control" id="calendar_start_date_update" name="calendar_start_date_update">
+                        <label for="taskId" class="col-form-label">종료 날짜</label>
+                        <input type="date" class="form-control" id="calendar_end_date_update" name="calendar_end_date_update">
+                        <label for="taskId" class="col-form-label">색상 선택</label>
+                        <div class="radio-group">
+	                        <input type="radio" name="calendar_color_update" value="#d50000" id="calendar_color_update" checked="checked">
+	                        <input type="radio" name="calendar_color_update" value="#e67c73" id="calendar_color_update">
+	                        <input type="radio" name="calendar_color_update" value="#f4511e" id="calendar_color_update">
+	                        <input type="radio" name="calendar_color_update" value="#f6bf26" id="calendar_color_update">
+	                        <input type="radio" name="calendar_color_update" value="#33b679" id="calendar_color_update">
+	                        <input type="radio" name="calendar_color_update" value="#0b8043" id="calendar_color_update">
+	                        <input type="radio" name="calendar_color_update" value="#039be5" id="calendar_color_update">
+	                        <input type="radio" name="calendar_color_update" value="#3f51b5" id="calendar_color_update">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" id="updateCalendar">수정</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                        id="sprintSettingModalClose">취소</button>
+                </div>
     
+            </div>
+        </div>
+    </div>  
 </body>
 </html>
