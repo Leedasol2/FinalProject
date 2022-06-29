@@ -65,8 +65,6 @@ public class TripController {
 		return mview;
 	}
 	
-	
-	
 	//베스트여행지 페이지
 	@GetMapping("/bestTrip")
 	public ModelAndView bestTrip(@RequestParam(value = "currentPage",defaultValue = "1") int currentPage,
@@ -92,7 +90,6 @@ public class TripController {
 			}
 		    
 		}
-		
 		
 		//정렬
 		list.sort(new AvgrstarComparator().reversed()); //별점 높은순 정렬
@@ -144,374 +141,187 @@ public class TripController {
 		
 		String CurrentRegion="서울";
 		
-//		List<TripDto> regionList=tservice.getRegionList(CurrentRegion);
-		
-//		TripDto tdto=new TripDto();
-//		for(TripDto r:regionList) {
-//			if(rservice.getReviewcount(r.getTnum())>0) {
-//				double avgrstar=rservice.getAvgrstar(r.getTnum());
-//				int reviewcount=rservice.getReviewcount(r.getTnum());
-//				r.setAvgrstar(avgrstar);
-//				r.setReviewcount(reviewcount);
-//			}else {
-//				double avgrstar=0;
-//				int reviewcount=0;
-//				r.setAvgrstar(avgrstar);
-//				r.setReviewcount(reviewcount);
-//			}
-//		}
-		
-//		model.addAttribute("tdto",tdto);
-//		model.addAttribute("regionList",regionList);
-		
 		List<TripDto> regionList=tservice.getRegionSortList(CurrentRegion);
-		TripDto tdto=new TripDto();
-		for(TripDto r:regionList) {
-			
-		}
 		
-		
-		
-		model.addAttribute("tdto",tdto);
 		model.addAttribute("regionList",regionList);
+		model.addAttribute("SelectSort",SelectSort);
 		return "/trip/regionTrip";
 	}
+	
+	//retionTrip 카테고리 클릭 이벤트
+		@PostMapping("/RegionChange")
+		public String RegionChange(@RequestParam String CurrentRegion ,Model model) {
+			
+			List<TripDto> regionList=tservice.getRegionSortList(CurrentRegion);
+			
+			String regiontest=CurrentRegion;
+			model.addAttribute("regionList",regionList);
+			model.addAttribute("regiontest",regiontest);
+			
+			return "/trip/regionTrip";
+		}
 	
 	@PostMapping("/reviewCountSelect")
 	public String reviewCountSelect(@RequestParam String SelectSort,@RequestParam(value =  "tnum",required = false) String tnum,
-			Model model) {
+			Model model,@RequestParam String regiontest) {
 		
-		List<TripDto> regionList=tservice.getList();
-		
-		
-		//list에 여행지 별점 추가하기
-		TripDto tdto=new TripDto();
-		for(TripDto t:regionList) {
-			if(rservice.getReviewcount(t.getTnum())>0) {
-				double avgrstar=rservice.getAvgrstar(t.getTnum());
-				int reviewcount=rservice.getReviewcount(t.getTnum());
-				t.setAvgrstar(avgrstar);
-				t.setReviewcount(reviewcount);
-			}else {
-				double avgrstar=0;
-				int reviewcount=0;
-				t.setAvgrstar(avgrstar);
-				t.setReviewcount(reviewcount);
-			}
-		    
+		if(regiontest=="") {
+			regiontest="서울";
 		}
 		
-		model.addAttribute("tdto",tdto);
-		
-	
-			regionList.sort(new ReviewCountComparator().reversed());
-		
+		List<TripDto> regionList=tservice.getRegionCountList(regiontest);
+		System.out.println(regiontest);
 		model.addAttribute("regionList",regionList);
+		model.addAttribute("regiontest",regiontest);
+		model.addAttribute("SelectSort",SelectSort);
 		
 		return "/trip/regionTrip";
 	}
 	
-	
 	@PostMapping("/highstarSelect")
 	public String highstarSelect(@RequestParam String SelectSort,@RequestParam(value =  "tnum",required = false) String tnum,
-			Model model) {
+			Model model,@RequestParam String regiontest) {
 		
-		List<TripDto> regionList=tservice.getList();
-		
-		//list에 여행지 별점 추가하기
-		TripDto tdto=new TripDto();
-		for(TripDto t:regionList) {
-			if(rservice.getReviewcount(t.getTnum())>0) {
-				double avgrstar=rservice.getAvgrstar(t.getTnum());
-				int reviewcount=rservice.getReviewcount(t.getTnum());
-				t.setAvgrstar(avgrstar);
-				t.setReviewcount(reviewcount);
-			}else {
-				double avgrstar=0;
-				int reviewcount=0;
-				t.setAvgrstar(avgrstar);
-				t.setReviewcount(reviewcount);
-			}
-		    
+		if(regiontest=="") {
+			regiontest="서울";
 		}
 		
-		regionList.sort(new AvgrstarComparator().reversed());
-		
-		model.addAttribute("tdto",tdto);
+		List<TripDto> regionList=tservice.getRegionhrstarList(regiontest);
+		System.out.println(regiontest);
 		model.addAttribute("regionList",regionList);
+		model.addAttribute("regiontest",regiontest);
+		model.addAttribute("SelectSort",SelectSort);
 		
 		return "/trip/regionTrip";
 	}
 	
 	@PostMapping("/topviewSelect")
 	public String topviewSelect(@RequestParam String SelectSort,@RequestParam(value =  "tnum",required = false) String tnum,
-			Model model) {
+			Model model,@RequestParam String regiontest) {
 		
-		List<TripDto> regionList=tservice.getList();
-		
-		//list에 여행지 별점 추가하기
-		TripDto tdto=new TripDto();
-		for(TripDto t:regionList) {
-			if(rservice.getReviewcount(t.getTnum())>0) {
-				double avgrstar=rservice.getAvgrstar(t.getTnum());
-				int reviewcount=rservice.getReviewcount(t.getTnum());
-				t.setAvgrstar(avgrstar);
-				t.setReviewcount(reviewcount);
-			}else {
-				double avgrstar=0;
-				int reviewcount=0;
-				t.setAvgrstar(avgrstar);
-				t.setReviewcount(reviewcount);
-			}
-		    
+		if(regiontest=="") {
+			regiontest="서울";
 		}
 		
-		model.addAttribute("tdto",tdto);
+		List<TripDto> regionList=tservice.getRegionSortList(regiontest);
+		System.out.println(regiontest);
 		model.addAttribute("regionList",regionList);
+		model.addAttribute("regiontest",regiontest);
+		model.addAttribute("SelectSort",SelectSort);
 		
 		return "/trip/regionTrip";
 	}
 	
 	@PostMapping("/lowstarSelect")
 	public String lowstarSelect(@RequestParam String SelectSort,@RequestParam(value =  "tnum",required = false) String tnum,
-			Model model) {
+			Model model,@RequestParam String regiontest) {
 		
-		List<TripDto> regionList=tservice.getList();
-		
-		//list에 여행지 별점 추가하기
-		TripDto tdto=new TripDto();
-		for(TripDto t:regionList) {
-			if(rservice.getReviewcount(t.getTnum())>0) {
-				double avgrstar=rservice.getAvgrstar(t.getTnum());
-				int reviewcount=rservice.getReviewcount(t.getTnum());
-				t.setAvgrstar(avgrstar);
-				t.setReviewcount(reviewcount);
-			}else {
-				double avgrstar=0;
-				int reviewcount=0;
-				t.setAvgrstar(avgrstar);
-				t.setReviewcount(reviewcount);
-			}
-		    
+		if(regiontest=="") {
+			regiontest="서울";
 		}
 		
-		regionList.sort(new AvgrstarComparator());
-		
-		model.addAttribute("tdto",tdto);
+		List<TripDto> regionList=tservice.getRegionlrstarList(regiontest);
+		System.out.println(regiontest);
 		model.addAttribute("regionList",regionList);
+		model.addAttribute("regiontest",regiontest);
+		model.addAttribute("SelectSort",SelectSort);
 		
 		return "/trip/regionTrip";
 	}
 	
+	//테마별여행지 페이지
+		@GetMapping("/themaTrip")
+		public String themaTrip(Model model,@RequestParam(value =  "tnum",required = false) String tnum,
+				@RequestParam(value = "SelectSort",required = false) String SelectSort) {
+			
+			String CurrentTheme="바다";
+			
+			List<TripDto> themeList=tservice.getThemeSortList(CurrentTheme);
+			
+			model.addAttribute("themeList",themeList);
+			model.addAttribute("SelectSort",SelectSort);
+					
+			return "/trip/themaTrip";
+		}
+			
+		//themaTrip 카테고리 클릭 이벤트
+		@PostMapping("/ThemeChange")
+		public String ThemeChange(@RequestParam String CurrentTheme,Model model) {
+			
+			List<TripDto> themeList=tservice.getThemeList(CurrentTheme);
+			String themetest=CurrentTheme;
+			
+			model.addAttribute("themeList",themeList);
+			model.addAttribute("themetest",themetest);
+			
+			return "/trip/themaTrip";
+		}
+	
 	//themaTrip Select 선택이벤트
-	@PostMapping("/themahighstarSelect")
+	@PostMapping("/themehighstarSelect")
 	public String themahighstarSelect(@RequestParam String SelectSort,@RequestParam(value =  "tnum",required = false) String tnum,
-			Model model) {
+			Model model,@RequestParam String themetest) {
 		
-		List<TripDto> themeList=tservice.getList();
-		
-		//list에 여행지 별점 추가하기
-		TripDto tdto=new TripDto();
-		for(TripDto t:themeList) {
-			if(rservice.getReviewcount(t.getTnum())>0) {
-				double avgrstar=rservice.getAvgrstar(t.getTnum());
-				int reviewcount=rservice.getReviewcount(t.getTnum());
-				t.setAvgrstar(avgrstar);
-				t.setReviewcount(reviewcount);
-			}else {
-				double avgrstar=0;
-				int reviewcount=0;
-				t.setAvgrstar(avgrstar);
-				t.setReviewcount(reviewcount);
-			}
-		    
+		if(themetest=="") {
+			themetest="바다";
 		}
 		
+		List<TripDto> themeList=tservice.getThemehrstarList(themetest);
 		
-		themeList.sort(new AvgrstarComparator().reversed());
-		
-		model.addAttribute("tdto",tdto);
 		model.addAttribute("themeList",themeList);
+		model.addAttribute("themetest",themetest);
+		model.addAttribute("SelectSort",SelectSort);
 		
 		return "/trip/themaTrip";
 	}
 	
 	@PostMapping("/themereviewCountSelect")
 	public String themereviewCountSelect(@RequestParam String SelectSort,@RequestParam(value =  "tnum",required = false) String tnum,
-			Model model) {
+			Model model,@RequestParam String themetest) {
 		
-		List<TripDto> themeList=tservice.getList();
-		
-		//list에 여행지 별점 추가하기
-		TripDto tdto=new TripDto();
-		for(TripDto t:themeList) {
-			if(rservice.getReviewcount(t.getTnum())>0) {
-				double avgrstar=rservice.getAvgrstar(t.getTnum());
-				int reviewcount=rservice.getReviewcount(t.getTnum());
-				t.setAvgrstar(avgrstar);
-				t.setReviewcount(reviewcount);
-			}else {
-				double avgrstar=0;
-				int reviewcount=0;
-				t.setAvgrstar(avgrstar);
-				t.setReviewcount(reviewcount);
-			}
-		    
+		if(themetest=="") {
+			themetest="바다";
 		}
 		
-		model.addAttribute("tdto",tdto);
-	
-		themeList.sort(new ReviewCountComparator().reversed());
+		List<TripDto> themeList=tservice.getThemeCountList(themetest);
 		
 		model.addAttribute("themeList",themeList);
+		model.addAttribute("themetest",themetest);
+		model.addAttribute("SelectSort",SelectSort);
 		
 		return "/trip/themaTrip";
 	}
 	
 	@PostMapping("/themelowstarSelect")
 	public String themelowstarSelect(@RequestParam String SelectSort,@RequestParam(value =  "tnum",required = false) String tnum,
-			Model model) {
+			Model model,@RequestParam String themetest) {
 		
-		List<TripDto> themeList=tservice.getList();
-		
-		//list에 여행지 별점 추가하기
-		TripDto tdto=new TripDto();
-		for(TripDto t:themeList) {
-			if(rservice.getReviewcount(t.getTnum())>0) {
-				double avgrstar=rservice.getAvgrstar(t.getTnum());
-				int reviewcount=rservice.getReviewcount(t.getTnum());
-				t.setAvgrstar(avgrstar);
-				t.setReviewcount(reviewcount);
-			}else {
-				double avgrstar=0;
-				int reviewcount=0;
-				t.setAvgrstar(avgrstar);
-				t.setReviewcount(reviewcount);
-			}
-		    
+		if(themetest=="") {
+			themetest="바다";
 		}
 		
-		themeList.sort(new AvgrstarComparator());
+		List<TripDto> themeList=tservice.getThemelrstarList(themetest);
 		
-		model.addAttribute("tdto",tdto);
 		model.addAttribute("themeList",themeList);
+		model.addAttribute("themetest",themetest);
+		model.addAttribute("SelectSort",SelectSort);
 		
 		return "/trip/themaTrip";
 	}
 	
 	@PostMapping("/themetopviewSelect")
 	public String themetopviewSelect(@RequestParam String SelectSort,@RequestParam(value =  "tnum",required = false) String tnum,
-			Model model) {
+			Model model,@RequestParam String themetest) {
 		
-		List<TripDto> themeList=tservice.getList();
-		
-		//list에 여행지 별점 추가하기
-		TripDto tdto=new TripDto();
-		for(TripDto t:themeList) {
-			if(rservice.getReviewcount(t.getTnum())>0) {
-				double avgrstar=rservice.getAvgrstar(t.getTnum());
-				int reviewcount=rservice.getReviewcount(t.getTnum());
-				t.setAvgrstar(avgrstar);
-				t.setReviewcount(reviewcount);
-			}else {
-				double avgrstar=0;
-				int reviewcount=0;
-				t.setAvgrstar(avgrstar);
-				t.setReviewcount(reviewcount);
-			}
-		    
+		if(themetest=="") {
+			themetest="바다";
 		}
 		
-		model.addAttribute("tdto",tdto);
-		model.addAttribute("regionList",themeList);
-		
-		return "/trip/themaTrip";
-	}
-	
-	
-	//retionTrip 카테고리 클릭 이벤트
-	@PostMapping("/RegionChange")
-	public String RegionChange(@RequestParam String CurrentRegion ,Model model) {
-		
-		List<TripDto> regionList=tservice.getRegionList(CurrentRegion);
-		
-		//list에 여행지 별점 추가하기
-				TripDto tdto=new TripDto();
-				for(TripDto t:regionList) {
-					if(rservice.getReviewcount(t.getTnum())>0) {
-						double avgrstar=rservice.getAvgrstar(t.getTnum());
-						int reviewcount=rservice.getReviewcount(t.getTnum());
-						t.setAvgrstar(avgrstar);
-						t.setReviewcount(reviewcount);
-					}else {
-						double avgrstar=0;
-						int reviewcount=0;
-						t.setAvgrstar(avgrstar);
-						t.setReviewcount(reviewcount);
-					}
-				    
-				}
-				
-		model.addAttribute("regionList",regionList);
-		model.addAttribute("tdto",tdto);
-		
-		return "/trip/regionTrip";
-	}
-		
-	
-	//테마별여행지 페이지
-	@GetMapping("/themaTrip")
-	public String themaTrip(Model model,@RequestParam(value =  "tnum",required = false) String tnum) {
-		
-		String CurrentTheme="바다";
-		
-		List<TripDto> themeList=tservice.getThemeList(CurrentTheme);
-		
-		TripDto tdto=new TripDto();
-		for(TripDto r:themeList) {
-			if(rservice.getReviewcount(r.getTnum())>0) {
-				double avgrstar=rservice.getAvgrstar(r.getTnum());
-				int reviewcount=rservice.getReviewcount(r.getTnum());
-				r.setAvgrstar(avgrstar);
-				r.setReviewcount(reviewcount);
-			}else {
-				double avgrstar=0;
-				int reviewcount=0;
-				r.setAvgrstar(avgrstar);
-				r.setReviewcount(reviewcount);
-			}
-		}
-		model.addAttribute("themeList",themeList);
-		model.addAttribute("tdto",tdto);
-				
-		return "/trip/themaTrip";
-	}
-		
-	//themaTrip 카테고리 클릭 이벤트
-	@PostMapping("/ThemeChange")
-	public String ThemeChange(@RequestParam String CurrentTheme,Model model) {
-		
-		List<TripDto> themeList=tservice.getThemeList(CurrentTheme);
-		
-		//list에 여행지 별점 추가하기
-				TripDto tdto=new TripDto();
-				for(TripDto t:themeList) {
-					if(rservice.getReviewcount(t.getTnum())>0) {
-						double avgrstar=rservice.getAvgrstar(t.getTnum());
-						int reviewcount=rservice.getReviewcount(t.getTnum());
-						t.setAvgrstar(avgrstar);
-						t.setReviewcount(reviewcount);
-					}else {
-						double avgrstar=0;
-						int reviewcount=0;
-						t.setAvgrstar(avgrstar);
-						t.setReviewcount(reviewcount);
-					}
-				    
-				}
+		List<TripDto> themeList=tservice.getThemeSortList(themetest);
 		
 		model.addAttribute("themeList",themeList);
-		model.addAttribute("tdto",tdto);
+		model.addAttribute("themetest",themetest);
+		model.addAttribute("SelectSort",SelectSort);
 		
 		return "/trip/themaTrip";
 	}

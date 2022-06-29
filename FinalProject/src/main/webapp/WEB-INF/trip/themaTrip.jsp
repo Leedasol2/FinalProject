@@ -21,16 +21,12 @@ $(document).ready(function(){
 	    $(".trip-category").stop().animate({"top":position+currentPosition+"px"},1000);
 	  });
 	});
-	
-//지역 선택시 글씨색 변경
+	//지역 선택시 글씨색 변경
 	$("div.themeaofkorea > span").click(function(){
 		
 		var CurrentTheme=$(this).text();
-		
-		$("div.themeaofkorea > span").css("color","gray");
+		$("div.regionofkorea > span").css("color","gray");
 		$(this).css("color","#2bae66");
-		
-		
 		
 		$.ajax({
 			
@@ -46,9 +42,10 @@ $(document).ready(function(){
 		});
 	});
 	
-	//select 클릭시 이벤트
-	if($("select.sortselect").change(function(){
+// 	select 클릭시 이벤트
+	$("select.sortselect").change(function(){
 		var SelectSort=$(this).val();
+		var themetest='${themetest}';
 		
 		//조건이 리뷰많은순일때
 		if(SelectSort=="lotsofreviews"){
@@ -58,11 +55,11 @@ $(document).ready(function(){
 			type:"post",
 			dataType: "text",
 			url:"themereviewCountSelect",
-			data:{"SelectSort":SelectSort},
+			data:{"SelectSort":SelectSort,"themetest":themetest},	
 			success:function(data){
 				
 			$('body').html(data);
-			
+			initSort();
 			}
 		});
 		}
@@ -75,11 +72,11 @@ $(document).ready(function(){
 			type:"post",
 			dataType: "text",
 			url:"themehighstarSelect",
-			data:{"SelectSort":SelectSort},
+			data:{"SelectSort":SelectSort,"themetest":themetest},
 			success:function(data){
 				
 			$('body').html(data);
-			
+			initSort();
 			}
 		});
 		}
@@ -92,11 +89,11 @@ $(document).ready(function(){
 			type:"post",
 			dataType: "text",
 			url:"themelowstarSelect",
-			data:{"SelectSort":SelectSort},
+			data:{"SelectSort":SelectSort,"themetest":themetest},
 			success:function(data){
 				
 			$('body').html(data);
-			
+			initSort();
 			}
 		});
 		}
@@ -109,19 +106,35 @@ $(document).ready(function(){
 			type:"post",
 			dataType: "text",
 			url:"themetopviewSelect",
-			data:{"SelectSort":SelectSort},
+			data:{"SelectSort":SelectSort,"themetest":themetest},
 			success:function(data){
 				
 			$('body').html(data);
-			
+			initSort();
 			}
 		});
 		}
 		
 	});
-
 });
 
+function initSort() {
+
+	var opt='${SelectSort}';
+	
+	
+    $("#selectopt option").removeAttr('selected');
+
+    if (opt == "topview") {
+        $("#selectopt > option[value='topview']").attr("selected","selected");
+    } else if (opt == "lotsofreviews") {
+        $("#selectopt > option[value='lotsofreviews']").attr("selected","selected");
+    } else if (opt == "highstarscore") {
+        $("#selectopt > option[value='highstarscore']").attr("selected","selected");
+    } else if (opt == "lowstarscore") {
+        $("#selectopt > option[value='lowstarscore']").attr("selected","selected");
+    }
+}
 </script> 
 
 <!-- 본문 시작 -->
@@ -152,7 +165,7 @@ $(document).ready(function(){
 </div>
 
 <div class="sortselectbar">
-  <select class="sortselect">
+  <select class="sortselect" id="selectopt">
     <option value="topview">추천순</option>
     <option value="lotsofreviews">리뷰많은순</option>
     <option value="highstarscore">별점높은순</option>
