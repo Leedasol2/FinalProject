@@ -50,7 +50,7 @@ $(function(){
 						<!-- 로그인 상태 -->
 						<c:if test="${not empty sessionScope.loginok }">
 						<b>${sessionScope.myid }님</b>
-						<button class="logout" onclick="location.href='/logout'">로그아웃</button>
+						<button class="logout" onclick="location.href='/login/logout'">로그아웃</button>
 						</c:if>
 						<c:if test="${not empty sessionScope.loggedIn }">
 						<b>${sessionScope.loginName }님</b>
