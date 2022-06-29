@@ -26,6 +26,13 @@ public class CalendarService {
 	{
 		mapper.deleteSchedule(schenum);
 	}
-	
+	public void updateSchedule(CalendarDto dto)
+	{
+		mapper.updateSchedule(dto);
+	}
+	public CalendarDto getSchedule(String schenum)
+	{ 
+		return mapper.getSchedule(schenum);
+	}
 	
 }
