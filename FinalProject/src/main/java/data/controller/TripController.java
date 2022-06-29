@@ -94,6 +94,7 @@ public class TripController {
 		}
 		list.add(tdto);
 		
+		
 		//정렬
 		list.sort(new AvgrstarComparator().reversed()); //별점 높은순 정렬
 //		list.sort(new ReviewCountComparator().reversed()); //리뷰 많은순으로 정렬
@@ -144,27 +145,32 @@ public class TripController {
 		
 		String CurrentRegion="서울";
 		
-		List<TripDto> regionList=tservice.getRegionList(CurrentRegion);
+//		List<TripDto> regionList=tservice.getRegionList(CurrentRegion);
 		
+//		TripDto tdto=new TripDto();
+//		for(TripDto r:regionList) {
+//			if(rservice.getReviewcount(r.getTnum())>0) {
+//				double avgrstar=rservice.getAvgrstar(r.getTnum());
+//				int reviewcount=rservice.getReviewcount(r.getTnum());
+//				r.setAvgrstar(avgrstar);
+//				r.setReviewcount(reviewcount);
+//			}else {
+//				double avgrstar=0;
+//				int reviewcount=0;
+//				r.setAvgrstar(avgrstar);
+//				r.setReviewcount(reviewcount);
+//			}
+//		}
+		
+//		model.addAttribute("tdto",tdto);
+//		model.addAttribute("regionList",regionList);
+		
+		List<TripDto> regionList=tservice.getRegionSortList(CurrentRegion);
 		TripDto tdto=new TripDto();
 		for(TripDto r:regionList) {
-			if(rservice.getReviewcount(r.getTnum())>0) {
-				double avgrstar=rservice.getAvgrstar(r.getTnum());
-				int reviewcount=rservice.getReviewcount(r.getTnum());
-				r.setAvgrstar(avgrstar);
-				r.setReviewcount(reviewcount);
-			}else {
-				double avgrstar=0;
-				int reviewcount=0;
-				r.setAvgrstar(avgrstar);
-				r.setReviewcount(reviewcount);
-			}
+			
 		}
 		
-		regionList.add(tdto);
-		
-		
-		model.addAttribute("tdto",tdto);
 		model.addAttribute("regionList",regionList);
 		return "/trip/regionTrip";
 	}

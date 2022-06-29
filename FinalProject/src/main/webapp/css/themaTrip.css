@@ -121,9 +121,9 @@ div.themaTripText div.trip-content > span.trip-region{
 	font-size: 0.8em;
     color: #2bae66;
     position: relative;
-    top: 30px;
+    top: 10px;
     cursor: pointer;
-    left: 25px;
+    left: 15px;
 }
 
 div.themaTripText div.trip-content > span.trip-region > img{

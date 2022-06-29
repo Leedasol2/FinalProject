@@ -23,6 +23,12 @@ select count(*) from member where userid=#{userid}
 <select id="login" parameterType="HashMap" resultType="int">
 select count(*) from member where userid=#{userid} and password=#{password}
 </select>
+<insert id="insertKMember" parameterType="mdto">
+insert into member (name,email,userid) values(#{name},#{email},#{userid})
+</insert>
+<select id="getCheckKMember" parameterType="String" resultType="int">
+select count(*) from member where userid=#{userid}
+</select>
 
 <!-- 이다솔 -->
 <select id="getMnum" resultType="String" parameterType="String">

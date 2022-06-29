@@ -16,31 +16,13 @@
 	<select id="getList" resultType="tdto">
 	select * from trip order by readcount desc
 	</select>
-	<select id="getBestList" resultType="tdto">
-	select t.image, t.title,t.location,t.readcount,avg(r.rstar) as avgrstar ,count(r.rnum) as reviewcount
-	from trip t
-	INNER JOIN review r
-	ON t.tnum=r.tnum and t.tnum=#{tnum}
-	order by readcount,reviewcount
-	</select>
 	<select id="getRegionList" resultType="tdto">
 	select * from trip where region=#{region} order by readcount desc
 	</select>
 	<select id="getThemeList" resultType="tdto">
 	select * from trip where theme=#{theme} order by readcount desc
 	</select>
-	<select id="getReadCountList" resultType="tdto">
-	 select * from trip order by readcount desc
-	</select>
-	<select id="getReviewList" resultType="tdto">
-	 select * from trip order by reviewcount desc
-	</select>
-	<select id="getHighRstarList" resultType="tdto">
-	 select * from trip order by avgrstar desc
-	</select>
-	<select id="getLowRstarList" resultType="tdto">
-	 select * from trip order by avgrstar asc
-	</select>
+		
 	<!-- by 은비 -->
 	<select id="getTitle" parameterType="String" resultType="String">
 		select title from trip where tnum=#{tnum}
@@ -61,6 +43,81 @@
     <select id="getRegionThemeList" resultType="tdto" parameterType="tdto">
        select * from trip where part=#{part} and region=#{region} order by readcount desc
     </select>
+    
+    <!-- region 정렬 -->
+   <select id="getRegionSortList" parameterType="String" resultType="tdto" >
+   SELECT t.tnum,t.title,t.intro,t.location,count(r.tnum),ifnull(avg(r.rstar),0)
+	FROM trip t
+	    left outer JOIN review r
+	   on r.tnum=t.tnum 
+	where t.part=#{trip} and region=#{region}
+	group by tnum
+	order by t.readcount desc
+   </select>
+    <select id="getRegionhrstarList" parameterType="String" resultType="tdto" >
+   SELECT t.tnum,t.title,t.intro,t.location,count(r.tnum),ifnull(avg(r.rstar),0)
+	FROM trip t
+	    left outer JOIN review r
+	   on r.tnum=t.tnum 
+	where t.part=#{trip} and region=#{region}
+	group by tnum
+	order by avg(rstar) desc
+   </select>
+    <select id="getRegionlrstarList" parameterType="String" resultType="tdto" >
+   SELECT t.tnum,t.title,t.intro,t.location,count(r.tnum),ifnull(avg(r.rstar),0)
+	FROM trip t
+	    left outer JOIN review r
+	   on r.tnum=t.tnum 
+	where t.part=#{trip} and region=#{region}
+	group by tnum
+	order by avg(rstar) asc
+   </select>
+    <select id="getRegionCountList" parameterType="String" resultType="tdto" >
+   SELECT t.tnum,t.title,t.intro,t.location,count(r.tnum),ifnull(avg(r.rstar),0)
+	FROM trip t
+	    left outer JOIN review r
+	   on r.tnum=t.tnum 
+	where t.part=#{trip} and region=#{region}
+	group by tnum
+	order by count(tnum) desc
+   </select>
    
+   <!-- theme 정렬 -->
+     <select id="getThemeSortList" parameterType="String" resultType="tdto" >
+   SELECT t.tnum,t.title,t.intro,t.location,count(r.tnum),ifnull(avg(r.rstar),0)
+	FROM trip t
+	    left outer JOIN review r
+	   on r.tnum=t.tnum 
+	where t.part=#{trip} and theme=#{theme}
+	group by tnum
+	order by t.readcount desc
+   </select>
+   <select id="getThemehrstarList" parameterType="String" resultType="tdto" >
+   SELECT t.tnum,t.title,t.intro,t.location,count(r.tnum),ifnull(avg(r.rstar),0)
+	FROM trip t
+	    left outer JOIN review r
+	   on r.tnum=t.tnum 
+	where t.part=#{trip} and theme=#{theme}
+	group by tnum
+	order by avg(rstar) desc
+   </select>
+   <select id="getThemelrstarList" parameterType="String" resultType="tdto" >
+   SELECT t.tnum,t.title,t.intro,t.location,count(r.tnum),ifnull(avg(r.rstar),0)
+	FROM trip t
+	    left outer JOIN review r
+	   on r.tnum=t.tnum 
+	where t.part=#{trip} and theme=#{theme}
+	group by tnum
+	order by avg(rstar) asc
+   </select>
+   <select id="getThemeCountList" parameterType="String" resultType="tdto" >
+   SELECT t.tnum,t.title,t.intro,t.location,count(r.tnum),ifnull(avg(r.rstar),0)
+	FROM trip t
+	    left outer JOIN review r
+	   on r.tnum=t.tnum 
+	where t.part=#{trip} and theme=#{theme}
+	group by tnum
+	order by count(tnum) desc
+   </select>
     
 </mapper>

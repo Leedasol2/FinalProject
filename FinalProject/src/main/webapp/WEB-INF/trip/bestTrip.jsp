@@ -115,6 +115,7 @@ $(document).ready(function(){
 			</div>
             </div>
             
+            <div class="trip-explanation">${tdto.intro }</div>
  		  <span class="trip-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">${tdto.location }
  		  </span>
