@@ -9,6 +9,9 @@
 <head>
 <meta charset="UTF-8">
 
+<script src="${root}/js/fescalendar.js"></script>
+<link rel="stylesheet" href="${root}/css/festivalCalendar.css"/>
+
 <!-- 현재날짜 -->
 <c:set var="today" value="<%=new java.util.Date()%>" />
 
@@ -19,8 +22,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.6.0/main.min.css">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/fullcalendar@5.6.0/main.min.js"></script>
  
-<link rel="stylesheet" href="${root}/css/myPageCalendar.css"/> 
-<script src="${root}/js/fescalendar.js"></script>
 
 </head>
 <body>
@@ -47,19 +48,20 @@ $(document).ready(function(){
   <span class="sub-title">액티비티</span>
   <hr class="festival-title-line">
 </div>
-
 <div class="festival-main-proceeding">
 <div class="festival-proceeding">
+
 <div class="festival-main-title">
   <span class="proceeding-title">지금 진행중인 축제</span>
   <img class="title-img" alt="" src="${root }/image/asset/축제아이콘.png">
   <a href="${root }/myTrip/festivalList" class="festival-calendar">리스트로 보기></a>
 </div>
-</div>
-
-<div id="calBox">
+<div id="calendarBox">
 <div id="calendar" class="festivalcalendar-main"></div>
 </div>
+</div>
+
+
 
  <hr class="middle-line">
  
