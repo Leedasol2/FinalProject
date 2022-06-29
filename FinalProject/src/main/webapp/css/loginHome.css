@@ -102,6 +102,10 @@ button.btn-save-text{
     vertical-align: 2px;
 }
 
+.btn-save {
+    margin-top: 15px;
+}
+
 button.login-home-btn-find{
 	border: 0;
     outline: 0;
