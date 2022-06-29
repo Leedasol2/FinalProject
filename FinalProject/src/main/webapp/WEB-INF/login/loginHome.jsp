@@ -40,7 +40,7 @@
 			
 		<div class="login-home-btn2">
 			<button type="button" class="login-home-btn-find" onclick="location.href='loginMissId'">아이디ㆍ비밀번호 찾기</button>
-			<button type="button" class="login-home-btn-join" onclick="location.href='singup'">회원가입</button>
+			<button type="button" class="login-home-btn-join" onclick="location.href='/joinMember/loginJoin'">회원가입</button>
 		</div>
 		
 		<div class="login-home-btn3">
