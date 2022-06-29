@@ -58,28 +58,9 @@ public class TripService {
 
 		return tripMapper.getRegionThemeList(tdto);
 	}
-
-	public List<TripDto> getReadCountList() {
-		return tripMapper.getReadCountList();
-	}
-
-	public List<TripDto> getReviewList() {
-		return tripMapper.getReviewList();
-	}
-
-	public List<TripDto> getHighRstarList() {
-		return tripMapper.getHighRstarList();
-	}
-
-	public List<TripDto> getLowRstarList() {
-		return tripMapper.getLowRstarList();
-	}
-
+	
 	public List<TripDto> getSearch(String title) {
 		return tripMapper.getSearch(title);
-	}
-	public List<TripDto> getBestList(String tnum){
-		return tripMapper.getBestList(tnum);
 	}
 
 	public int getTotalCount(String fesday) {
@@ -87,6 +68,42 @@ public class TripService {
 		return tripMapper.getTotalCount(fesday);
     }
 	
+	//region 정렬
+	public List<TripDto> getRegionSortList(String region){
+		
+		return tripMapper.getRegionSortList(region);
+	}
+	public List<TripDto> getRegionhrstarList(String region){
+			
+			return tripMapper.getRegionhrstarList(region);
+		}
+	public List<TripDto> getRegionlrstarList(String region){
+		
+		return tripMapper.getRegionlrstarList(region);
+	}
+	public List<TripDto> getRegionCountList(String region){
+		
+		return tripMapper.getRegionCountList(region);
+	}
+	
+	//theme 정렬
+	public List<TripDto> getThemeSortList(String theme){
+		
+		return tripMapper.getThemeSortList(theme);
+	}
+	public List<TripDto> getThemehrstarList(String theme){
+			
+			return tripMapper.getThemehrstarList(theme);
+		}
+	public List<TripDto> getThemelrstarList(String theme){
+		
+		return tripMapper.getThemelrstarList(theme);
+	}
+	public List<TripDto> getThemeCountList(String theme){
+		
+		return tripMapper.getThemeCountList(theme);
+	}
+
 	
 	 //public String getEndday() { return tripMapper.getEndday(); }
 	 

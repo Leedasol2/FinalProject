@@ -30,6 +30,8 @@ $(document).ready(function(){
 		$("div.themeaofkorea > span").css("color","gray");
 		$(this).css("color","#2bae66");
 		
+		
+		
 		$.ajax({
 			
 			type:"post",
@@ -45,7 +47,7 @@ $(document).ready(function(){
 	});
 	
 	//select 클릭시 이벤트
-	$("select.sortselect").change(function(){
+	if($("select.sortselect").change(function(){
 		var SelectSort=$(this).val();
 		
 		//조건이 리뷰많은순일때
@@ -232,7 +234,8 @@ $(document).ready(function(){
 			</c:if>
 			</div>
             </div>
-<%--   		  <span class="trip-explanation">${theme.title }</span><br> --%>
+            
+            <div class="trip-explanation">${theme.intro }</div>
  		  <span class="trip-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">${theme.location }
  		  </span>

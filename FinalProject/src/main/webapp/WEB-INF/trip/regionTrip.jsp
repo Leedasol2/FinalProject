@@ -236,7 +236,7 @@ $(document).ready(function(){
 			</div>
             </div>
             
-<%--   		  <span class="trip-explanation">${region.title }</span><br> --%>
+            <div class="trip-explanation">${region.intro }</div>
  		  <span class="trip-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">${region.location }
  		  </span>

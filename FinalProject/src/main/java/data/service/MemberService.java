@@ -33,4 +33,10 @@ public class MemberService {
 	public void insertMember(MemberDto dto){
 		mapper.insertMember(dto);
 	}
+	public void insertKMember(MemberDto dto) {
+		mapper.insertKMember(dto);
+	}
+	public int getCheckKMember(String userid) {
+		return mapper.getCheckKMember(userid);
+	}
 }
