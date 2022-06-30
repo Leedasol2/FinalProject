@@ -59,9 +59,9 @@
 						<a href="#">${festival.title }</a>
 					</div>
 				</div>
-				<div class="explain-box">
+			
 					<div class="festival-region">${festival.location }</div>
-				</div>
+		
 			
 			</div>
 			</c:forEach>

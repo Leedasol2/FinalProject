@@ -97,23 +97,30 @@ div.theme-content > img.theme-img{
 	cursor: pointer;	
 }
 
-div.theme-content > span.theme-name{
+div.theme-content > div.theme-name{
 	position: relative;
     top: 11px;
     padding-left: 75px;
     font-weight: bold;
     right: 63px;
     font-size: 14px;
+    width: 220px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 
-div.theme-content > span.theme-region{
+div.theme-content > div.theme-region{
 	font-size: 0.8em;
     color: #2bae66;
     position: relative;
     top: 25px;
     cursor: pointer;
     margin-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 div.theme-content > span.theme-region > img{
