@@ -236,67 +236,21 @@ function colorChange(){
         <div class="trip-content">
           <img src="${root}/image/tripspot/${fn:split(region.image,',')[0]}" class="trip-img"
           onclick="location.href='myTripDetail?tnum=${region.tnum}&currentPage=${currentPage }'">
-          
+          <div class="listtop">
           <span class="trip-name">${region.title }</span>
           <div class="best-star-rating">
-			<div class="besttrip-reviewstar">
-		 	 <c:if test="${region.avgrstar==0 }">
-			<div class="tripDetail0-reviewstar">
-		 	<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			</div>
-			</c:if>
-			<c:if test="${region.avgrstar==1 }">
-			<div class="tripDetail1-reviewstar">
-		 	<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			</div>
-			</c:if>
-			<c:if test="${region.avgrstar==2 }">
-			<div class="tripDetail2-reviewstar">
-		 	<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			</div>
-			</c:if>
-			<c:if test="${region.avgrstar==3 }">
-			<div class="tripDetail3-reviewstar">
-		 	<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			</div>
-			</c:if>
-			 <c:if test="${region.avgrstar==4 }">
-			<div class="tripDetail4-reviewstar">
-		 	<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			</div>
-			</c:if>
-			 <c:if test="${region.avgrstar==5 }">
-			<div class="tripDetail5-reviewstar">
-		 	<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			</div>
-			</c:if>
-			</div>
-            </div>
-            
+
+									<div class="tripstory-star-ratings">
+										<div class="tripstory-star-ratings-fill space-x-2 text-lg"
+											style="width: ${region.avgrstar*20+1.5}%">
+											<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+										</div>
+										<div class="tripstory-star-ratings-base space-x-2 text-lg">
+											<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+										</div>
+									</div>
+								</div>
+								</div>
             <div class="trip-explanation">${region.intro }</div>
  		  <span class="trip-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">${region.location }
