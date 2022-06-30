@@ -48,39 +48,20 @@ public class MyPageController {
 	}
 	
 	
-	//패스워드 확인
+	//정보수정
 	@PostMapping("/mypage/updateedit")
-	public String updateedit(@ModelAttribute MemberDto dto,							
-			@RequestParam String password,
-			@RequestParam String passcheck){
-			
-		
-		if(password != passcheck){
-			
-			return "redirect:/mypage/myPageEditFalse";
-		}
-		
-		else {
+	public String updateedit(@ModelAttribute MemberDto dto){
 									
 			service.updateMember(dto);
 			return "redirect:/mypage/myPageEdit";
-	}
 	}		
 	
-	@GetMapping("/mypage/myPageEditFalse")
-	public ModelAndView myPageEditFalse(
-			HttpSession session, Model model) {	
+	@GetMapping("/mypage/myPageEditSuccess")
+	public String myPageEditSuccess() {
 			
-		String myid=(String)session.getAttribute("myid");
-		String mnum = service.getMnum(myid);
-		ModelAndView mview = new ModelAndView();
-		MemberDto dto = service.getData(mnum);
-			
-		mview.addObject("dto",dto);
-		mview.setViewName("/mypage/myPageEditFalse");
-			
-		return mview;
+		return "/mypage/myPageEditSuccess";
 	}
+	
 	
 	
 	//삭제
