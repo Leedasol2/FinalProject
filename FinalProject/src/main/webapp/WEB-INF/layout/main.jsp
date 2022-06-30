@@ -76,51 +76,29 @@
                        </c:if>
                     </c:forTokens>
                      
+                     <div class="titleandstar">
                         <c:if test="${tdto.part=='trip'}">
-                          <span class="maintriptitle" onclick="location.href='/myTrip/myTripDetail?tnum=${tdto.tnum}'">${tdto.title }</span>
+                          <div class="maintriptitle" onclick="location.href='/myTrip/myTripDetail?tnum=${tdto.tnum}'">${tdto.title }</div>
                         </c:if>
                         <c:if test="${tdto.part=='themepark'}">
-                          <span class="maintriptitle" onclick="location.href='/myTrip/themeParkDetail?tnum=${tdto.tnum}'">${tdto.title }</span>
-                          </c:if>
-                          <c:if test="${tdto.part=='festival'}">
-                            <span class="maintriptitle" onclick="location.href='/myTrip/festivalDetail?tnum=${tdto.tnum}'">${tdto.title }</span>
-                          </c:if>
+                          <div class="maintriptitle" onclick="location.href='/myTrip/themeParkDetail?tnum=${tdto.tnum}'">${tdto.title }</div>
+                        </c:if>
+                        <c:if test="${tdto.part=='festival'}">
+                          <div class="maintriptitle" onclick="location.href='/myTrip/festivalDetail?tnum=${tdto.tnum}'">${tdto.title }</div>
+                        </c:if>
                         
-                        <div class="trip-star-rating">
-                          <div class="trip-reviewstar">
-                              <c:if test="${tdto.avgrstar==0 }">
-                             <div class="maintripDetail0-reviewstar">
-                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                                   </div>
-                                 </c:if>
-                                 <c:if test="${tdto.avgrstar==1 }">
-                                   <div class="maintripDetail1-reviewstar">
-                                       <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                                   </div>
-                           </c:if>
-                           <c:if test="${tdto.avgrstar==2 }">
-                             <div class="maintripDetail2-reviewstar">
-                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                             </div>
-                           </c:if>
-                           <c:if test="${tdto.avgrstar==3 }">
-                             <div class="maintripDetail3-reviewstar">
-                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                             </div>
-                           </c:if>
-                           <c:if test="${tdto.avgrstar==4 }">
-                             <div class="maintripDetail4-reviewstar">
-                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                             </div>
-                           </c:if>
-                           <c:if test="${tdto.avgrstar==5 }">
-                             <div class="maintripDetail5-reviewstar">
-                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                             </div>
-                           </c:if>
-                          </div>
-                         </div>
-      
+                        <div class="best-star-rating">
+							<div class="tripstory-star-ratings">
+								<div class="tripstory-star-ratings-fill space-x-2 text-lg"
+									style="width: ${tdto.avgrstar*20+1.5}%">
+									<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+								</div>
+								<div class="tripstory-star-ratings-base space-x-2 text-lg">
+									<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+								</div>
+							</div>
+						</div>
+        			 </div>
                         <div class="maintripstory-explanation">${tdto.intro }</div>
                         <div class="maintripstory-region">${tdto.location }</div>
                      

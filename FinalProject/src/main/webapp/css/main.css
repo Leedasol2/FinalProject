@@ -198,7 +198,7 @@ ul.gnb > li > ul > li:hover{font-size:13pt;}
 .container .section .title{margin-bottom:45px;}
 .container .section.cosmap .title{margin-bottom:20px;}
 
-/* �뜝�룞�삕�뜝占� */
+/* 占쎈쐻占쎈짗占쎌굲占쎈쐻�뜝占� */
 .slidebox ul,li{margin:0;padding:0;}
 [name="slide"] {display:none;}
 .slidebox {max-width:1000px;width:100%;margin:0 auto;text-align:center;}
@@ -233,7 +233,7 @@ ul.gnb > li > ul > li:hover{font-size:13pt;}
 label.left {left:20px;background-image: url("/image/asset/arrowleft.png");background-position: center center;background-size: 50%;background-repeat: no-repeat;}
 label.right {right:20px;background-image: url("/image/asset/arrowright.png");background-position: center center;background-size: 50%;background-repeat: no-repeat;}
 
- /* �뜝�룞�삕�뜝�룞�삕吏� �뜝�룞�삕���뜝�룞�삕 */
+ /* 占쎈쐻占쎈짗占쎌굲占쎈쐻占쎈짗占쎌굲筌욑옙 占쎈쐻占쎈짗占쎌굲占쏙옙占쎈쐻占쎈짗占쎌굲 */
 .paginglist {text-align:center;padding:30px 0;}
 .paginglist > li {/* display:inline-block; */vertical-align:middle;margin:0 10px;}	
 .paginglist > li > label {display:block;padding:10px 30px;cursor:pointer;}
@@ -286,9 +286,9 @@ label.right {right:20px;background-image: url("/image/asset/arrowright.png");bac
    75% {left:100%;}
    98% {left:100%;}
    100% {left:0%;}
-}/* �뜝�룞�삕葉쇔뜝占� */
+}/* 占쎈쐻占쎈짗占쎌굲�몛�뇯�쐻�뜝占� */
 
-/* �뜝�룞�삕�뜝�룞�삕�뜝�떛�빞源띿삕 */
+/* 占쎈쐻占쎈짗占쎌굲占쎈쐻占쎈짗占쎌굲占쎈쐻占쎈뼓占쎈튊繹먮씮�굲 */
 div.tripstory,div.newpark,div.festival{
 	width:100%;
 	float:left;
@@ -432,7 +432,6 @@ div.maintripstory-explanation{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-top: 8px;
     margin-left: 14px;
     padding-top: 7px;
 }
@@ -458,11 +457,20 @@ div.maintripstory-region{
     margin-bottom: 8px;
 }
 
-span.maintriptitle{
-	display: inline-block;
-    margin-top: 14px;
+div.maintriptitle{
     margin-left: 14px;
     font-weight: bold;
+    width: 179px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+div.titleandstar {
+    display: flex;
+    align-items: center;
+    margin-top: 11px;
+    margin-bottom: 4px;
 }
 
 div.maintrip-reviewstar{
@@ -527,13 +535,13 @@ ul.tripstory-list > li:last-child{
 }
 
 .tripstory-list > li > a > span:hover {color:#2bae66}
-span.fontgreen{color:#2bae66;} /* �뜝�룞�삕�뜝�룞�삕�뜝�떛�빞源띿삕 �뜝�룞�삕 */
+span.fontgreen{color:#2bae66;} /* 占쎈쐻占쎈짗占쎌굲占쎈쐻占쎈짗占쎌굲占쎈쐻占쎈뼓占쎈튊繹먮씮�굲 占쎈쐻占쎈짗占쎌굲 */
 .tripstory-list > li > a > span::after{padding-left:5px;padding-right:5px;content:"|"}
 
 .tripstory-list > li > a > span:last-child::after{content:"";}
 
 
-/* �뜝�뙎紐뚯삕�뜝�룞�삕�겕 */
+/* 占쎈쐻占쎈솊筌뤿슣�굲占쎈쐻占쎈짗占쎌굲占쎄쾿 */
 .slider-box {
 }
 div.newpark div.title{
@@ -559,8 +567,8 @@ div.newpark div.swiper-button-next{right:0;}
 div.newpark div.swiper-button-prev:after, div.newpark div.swiper-button-next:after {font-size:30px; color: #2bae66;}
 
 
-/* �뜝�뙎紐뚯삕�뜝�룞�삕�겕�뜝�룞�삕 */
-/* �뜝�뙓�룞�삕�뜝�룞�삕�뜝�룞�삕 */
+/* 占쎈쐻占쎈솊筌뤿슣�굲占쎈쐻占쎈짗占쎌굲占쎄쾿占쎈쐻占쎈짗占쎌굲 */
+/* 占쎈쐻占쎈솓占쎈짗占쎌굲占쎈쐻占쎈짗占쎌굲占쎈쐻占쎈짗占쎌굲 */
 div.cosmap{
 	width:100%;
 	float:left;
@@ -611,7 +619,7 @@ div.cosmap .map-box {
     padding-left:50px;
 }
 
-/* �뜝�룞�삕�뜝�룞�삕 */
+/* 占쎈쐻占쎈짗占쎌굲占쎈쐻占쎈짗占쎌굲 */
 div.festival div.title{
 	background-image: url("/image/asset/main-fesicon.png");
 	background-position: 646px center;
@@ -629,8 +637,8 @@ div.festival div.swiper-button-prev{left:0;}
 div.festival div.swiper-button-next{right:0;}
 
 div.festival div.swiper-button-prev:after, div.festival div.swiper-button-next:after {font-size:30px; color: #2bae66;}
-/* �뜝�룞�삕�뜝�룞�삕 �뜝�룞�삕 */
-/* �뜝�룞�삕�뜝�룞�삕 �뜝�룞�삕 */
+/* 占쎈쐻占쎈짗占쎌굲占쎈쐻占쎈짗占쎌굲 占쎈쐻占쎈짗占쎌굲 */
+/* 占쎈쐻占쎈짗占쎌굲占쎈쐻占쎈짗占쎌굲 占쎈쐻占쎈짗占쎌굲 */
 
 /* footer */
 .footer{
@@ -676,118 +684,6 @@ div.festival div.swiper-button-prev:after, div.festival div.swiper-button-next:a
 .company-info {width: 51%;}
 .tools {width: 49%;}
 .tools img {width: 100%;}
-
-.maintripDetail0-reviewstar{
-	float:right;
-	border:solid 0px #ccc;
-    display:flex;
-    flex-direction: row-reverse;
-    font-size:0.7em;
-    justify-content:space-around;
-    padding:0 .2em;
-    text-align:center;
-    width:5em;
-    margin-top: -16px;
-    margin-right: 11px;
-}
-.maintripDetail0-reviewstar span{
-	color:#ccc;
-}
-
-.maintripDetail1-reviewstar{
-	float:right;
-	border:solid 0px #ccc;
-	display:flex;
-	flex-direction: row-reverse;
-	font-size:0.7em;
-	justify-content:space-around;
-	padding:0 .2em;
-	text-align:center;
-	width:5em;
-	margin-top: -16px;
-	margin-right: 11px;
-}
-div.maintripDetail1-reviewstar > span{
-	color: gold
-}
-div.maintripDetail1-reviewstar > span:nth-child(-n+4){
-	color: #ccc
-}
-
-.maintripDetail2-reviewstar{
-	float:right;
-	border:solid 0px #ccc;
-	display:flex;
-	flex-direction: row-reverse;
-    font-size:0.7em;
-    justify-content:space-around;
-	padding:0 .2em;
-	text-align:center;
-	width:5em;
-	margin-top: -16px;
-    margin-right: 11px;
-}
-div.maintripDetail2-reviewstar > span{
-	color: gold
-}
-div.maintripDetail2-reviewstar > span:nth-child(-n+3){
-	color: #ccc
-}
-.maintripDetail3-reviewstar{
-	float:right;
-	border:solid 0px #ccc;
-	display:flex;
-	flex-direction: row-reverse;
-	font-size:0.7em;
-    justify-content:space-around;
-    padding:0 .2em; 
-    text-align:center;
-    width:5em;
-    margin-top: -16px;
-    margin-right: 11px;
-}
-div.maintripDetail3-reviewstar > span{
-	color: gold
-}
-div.maintripDetail3-reviewstar > span:nth-child(-n+2){
-	color: #ccc
-}
-
-.maintripDetail4-reviewstar{
-  float:right;
-  border:solid 0px #ccc;
-  display:flex;
-  flex-direction: row-reverse;
-  font-size:0.7em;
-  justify-content:space-around;
-  padding:0 .2em;
-  text-align:center;
-  width:5em;
-  margin-top: -16px;
-  margin-right: 11px;
-}
-div.maintripDetail4-reviewstar > span{
-	color: gold
-}
-div.maintripDetail4-reviewstar > span:nth-child(-n+1){
-	color: #ccc
-}
-.maintripDetail5-reviewstar{
-	float:right;
-	border:solid 0px #ccc;
-  display:flex;
-  flex-direction: row-reverse;
-  font-size:0.7em;
-  justify-content:space-around;
-  padding:0 .2em;
-  text-align:center;
-  width:5em;
-  margin-top: -16px;
-  margin-right: 11px;
-}
-.maintripDetail5-reviewstar span{
-	color: gold;
-}
 
 .tripstory-star-ratings {
   color: #aaa9a9; 
