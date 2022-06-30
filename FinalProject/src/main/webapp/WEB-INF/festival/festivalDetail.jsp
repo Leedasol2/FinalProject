@@ -114,7 +114,8 @@ $(function(){
 	</div>
 	<div class="datecontent">
 	${tdto.beginday } ~ ${tdto.endday }
-	<br>${end-start }일동안 페스티벌 진행!</div>
+	<br><br>
+	<div class="dateprocess">(${end-start }일동안 페스티벌 진행)</div>
 	</div>
 	<!-- main 끝 -->
   
