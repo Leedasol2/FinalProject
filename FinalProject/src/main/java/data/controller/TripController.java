@@ -471,17 +471,33 @@ public class TripController {
 		
 		
 		@GetMapping("/searchTrip")
-		public ModelAndView searchTrip(@RequestParam String searchtext)
-		{
-		  ModelAndView model=new ModelAndView();
-		
-		  List<TripDto> searchlist=tservice.getSearch(searchtext);
+	      public ModelAndView searchTrip(@RequestParam String searchtext)
+	      {
+	          ModelAndView model=new ModelAndView();
 
-		  model.addObject("searchlist",searchlist);
+	             List<TripDto> searchlist=tservice.getSearch(searchtext);
 
-		  model.setViewName("/search/searchResult");
-		  return model;
-		}
+	             TripDto tdto=new TripDto();
+	             for(TripDto t:searchlist) {
+	                   if(rservice.getReviewcount(t.getTnum())>0) {
+	                       double avgrstar=rservice.getAvgrstar(t.getTnum());
+	                       int reviewcount=rservice.getReviewcount(t.getTnum());
+	                       t.setAvgrstar(avgrstar);
+	                       t.setReviewcount(reviewcount);
+	                   }else {
+	                       double avgrstar=0;
+	                       int reviewcount=0;
+	                       t.setAvgrstar(avgrstar);
+	                       t.setReviewcount(reviewcount);
+	                   }
+	               }
+	             int size=searchlist.size();
+
+	         model.addObject("searchlist",searchlist);
+	         model.addObject("size",size);
+	         model.setViewName("/search/searchResult");
+	        return model;
+	    }
 		
 		@GetMapping("/searchFail")
 		public String searchFail()
