@@ -57,7 +57,7 @@ $(function(){
 						<button class="kakaologout" onclick="kakaoLogout();">로그아웃</button>
 						</c:if>
 						<c:if test="${not empty sessionScope.loginok}">
-						<button class="join" onclick="location.href='/html/myPageEdit'">마이페이지</button>
+						<button class="join" onclick="location.href='/mypage/myPageEdit'">마이페이지</button>
 						</c:if>
 						<c:if test="${not empty sessionScope.loggedIn}">
 						<button class="join" onclick="location.href='/html/myPageEdit'">마이페이지</button>
