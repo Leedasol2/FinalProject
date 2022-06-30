@@ -14,7 +14,7 @@
 	update trip set readcount=readcount+1 where tnum=#{tnum}
 	</update>
 	<select id="getList" resultType="tdto">
-	select * from trip order by readcount desc
+	select * from trip where part='trip' order by readcount desc
 	</select>
 	<select id="getBestList" resultType="tdto">
 	select t.image, t.title,t.location,t.readcount,avg(r.rstar) as avgrstar ,count(r.rnum) as reviewcount
@@ -61,8 +61,83 @@
     <select id="getRegionThemeList" resultType="tdto" parameterType="tdto">
        select * from trip where part=#{part} and region=#{region} order by readcount desc
     </select>
-   <select id="getFesList" resultType="tdto" parameterType="String">
-	select * from trip where part='festival' and endday>=#{day} and beginday <![CDATA[ <= ]]> #{day}
+    <select id="getFesList" resultType="tdto" parameterType="String">
+	   select * from trip where part='festival' and endday>=#{day} and beginday <![CDATA[ <= ]]> #{day}
 	</select>
-    
+	
+	    <!-- region 정렬 -->
+   <select id="getRegionSortList" resultType="tdto">
+   SELECT t.tnum,t.title,t.intro,t.location,t.image,count(r.tnum) as reviewcount,ifnull(avg(r.rstar),0) as avgrstar
+	FROM trip t
+	    left outer JOIN review r
+	   on r.tnum=t.tnum 
+	where t.part='trip' and region=#{region}
+	group by tnum
+	order by t.readcount desc
+   </select>
+    <select id="getRegionhrstarList" resultType="tdto">
+   SELECT t.tnum,t.title,t.intro,t.location,t.image,count(r.tnum) as reviewcount,ifnull(avg(r.rstar),0) as avgrstar
+	FROM trip t
+	    left outer JOIN review r
+	   on r.tnum=t.tnum 
+	where t.part='trip' and region=#{region}
+	group by tnum
+	order by avgrstar desc
+   </select>
+    <select id="getRegionlrstarList"  resultType="tdto" >
+   SELECT t.tnum,t.title,t.intro,t.location,t.image,count(r.tnum) as reviewcount,ifnull(avg(r.rstar),0) as avgrstar
+	FROM trip t
+	    left outer JOIN review r
+	   on r.tnum=t.tnum 
+	where t.part='trip' and region=#{region}
+	group by tnum
+	order by avgrstar asc
+   </select>
+    <select id="getRegionCountList" resultType="tdto" >
+   SELECT t.tnum,t.title,t.intro,t.location,t.image,count(r.tnum) as reviewcount,ifnull(avg(r.rstar),0) as avgrstar
+	FROM trip t
+	    left outer JOIN review r
+	   on r.tnum=t.tnum 
+	where t.part='trip' and region=#{region}
+	group by tnum
+	order by count(tnum) desc
+   </select>
+
+   <!-- theme 정렬 -->
+     <select id="getThemeSortList" resultType="tdto" >
+   SELECT t.tnum,t.title,t.intro,t.location,t.image,count(r.tnum) as reviewcount,ifnull(avg(r.rstar),0) as avgrstar
+	FROM trip t
+	    left outer JOIN review r
+	   on r.tnum=t.tnum 
+	where t.part='trip' and theme=#{theme}
+	group by tnum
+	order by t.readcount desc
+   </select>
+   <select id="getThemehrstarList" resultType="tdto" >
+   SELECT t.tnum,t.title,t.intro,t.location,t.image,count(r.tnum) as reviewcount,ifnull(avg(r.rstar),0) as avgrstar
+	FROM trip t
+	    left outer JOIN review r
+	   on r.tnum=t.tnum 
+	where t.part='trip' and theme=#{theme}
+	group by tnum
+	order by avgrstar desc
+   </select>
+   <select id="getThemelrstarList" resultType="tdto" >
+   SELECT t.tnum,t.title,t.intro,t.location,t.image,count(r.tnum) as reviewcount,ifnull(avg(r.rstar),0) as avgrstar
+	FROM trip t
+	    left outer JOIN review r
+	   on r.tnum=t.tnum 
+	where t.part='trip' and theme=#{theme}
+	group by tnum
+	order by avgrstar asc
+   </select>
+   <select id="getThemeCountList" resultType="tdto" >
+   SELECT t.tnum,t.title,t.intro,t.location,t.image,count(r.tnum) as reviewcount,ifnull(avg(r.rstar),0) as avgrstar
+	FROM trip t
+	    left outer JOIN review r
+	   on r.tnum=t.tnum 
+	where t.part='trip' and theme=#{theme}
+	group by tnum
+	order by count(tnum) desc
+   </select>   
 </mapper>
