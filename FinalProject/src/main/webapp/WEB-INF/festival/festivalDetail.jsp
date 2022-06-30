@@ -36,21 +36,29 @@ $(function(){
 	<!-- main 시작 -->
 	<input type="hidden" id="tnum" value="${tdto.tnum }">	
 	<div class="mytripdetail">
-	<div class="tripdetailsubject">축제 <img alt="" src="${root }/image/asset/대관람차.png">
-	
+	<div class="tripdetailsubject">
+	<div class="mainmenutitle">
+	<span>축제</span>
+	<img alt="" src="${root }/image/asset/대관람차.png">
+	</div>
 	<hr>
-	<div class="subcontent">
-	<img alt="" src="${root }/image/festival/${fn:split(tdto.image,',')[0]}" class="tripdetailimg">
+	<div class="triptopcont" style="flex-direction: row;max-width: 100%;">
+	<div class="subcontent fes" style="width: 30%;">
+	<img src="${root}/image/festival/${fn:split(tdto.image,',')[0]}" 
+	class="tripdetailimg" style="width: auto;height: 251px;margin: 0 50px;">
 	</div>
-	<div class="tripsogae">
+	<div class="tripsogae" style="width: 70%;">
+	<div class="namestar">
 	<div class="tripdetailname"><b>${tdto.title }</b></div>
-	<div class="tripsubcontent">
-	${tdto.intro }
 	</div>
-	<div class="subedit">
+	<div class="tripsubcontent">
+	<span class="tripsubcontent-span">${tdto.intro }</span>
+	</div>
+	<div class="subedit fes">
 	<img alt="" src="${root }/image/asset/위치아이콘.png"><span class="tripwhere"> ${tdto.location }</span>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<img alt="" src="${root }/image/asset/링크.png"><a href="${tdto.link }"><span class="tripscrap"> 홈페이지</span></a>
+	<img alt="" src="${root }/image/asset/스크랩안함.png" class="scrapImg"><span class="tripscrap"> 스크랩 하기</span>
+	</div>
 	</div>
 	</div>
 	</div>
@@ -113,9 +121,12 @@ $(function(){
 	<b>기간</b>
 	</div>
 	<div class="datecontent">
-	${tdto.beginday } ~ ${tdto.endday }
-	<br><br>
+	<div class="fesdate">
+	<div><span class="begin">${tdto.beginday }</span></div>
+	<div><span class="end">${tdto.endday }</span></div>
+	</div>
 	<div class="dateprocess">(${end-start }일동안 페스티벌 진행)</div>
+	</div>
 	</div>
 	<!-- main 끝 -->
   

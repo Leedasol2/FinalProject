@@ -14,7 +14,6 @@ div.date{
     margin-top: 30px;
 }
 div.datecontent{
-	margin-top: 80px;
 	margin-bottom: 30px;
 }
 div.dateprocess{
@@ -23,4 +22,28 @@ div.dateprocess{
 
 span.tripscrap{
 	cursor: pointer;
+}
+.subedit.fes {
+    margin-bottom: 0;
+    margin-top: 49px;
+}
+.datecontent > div > div::after{
+	content: "~";
+    font-size: 13pt;
+    padding-right: 10px;
+    padding: 0 10px;
+}
+.datecontent > div> div:nth-child(2)::after{
+	content: "";
+	padding: 0 0;
+}
+.datecontent > div > div > span {
+    width: 95px;
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+}
+.fesdate {
+    display: flex;
+    margin-bottom: 10px;
 }
