@@ -143,5 +143,12 @@ public class LoginController {
 			session.setAttribute("loginId", kemail);
 			session.setAttribute("loggedIn", "yes");
 		}
+		
+		//네이버 로그인
+		@GetMapping("callBack")
+		public String callBack()
+		{
+			return "redirect:/";
+		}
 	
 }
