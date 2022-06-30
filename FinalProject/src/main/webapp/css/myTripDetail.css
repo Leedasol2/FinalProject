@@ -74,10 +74,11 @@ div.tripimg2{
 }
 div.tripimg > img{width: 70px;}
 div.tripcontent{
-	width: 900px;
+	width: 598px;
 	text-align: center;
 	margin-top: 15px;
 	margin-bottom: 15px;
+    line-height: 30px;
 }
 div.tripdetailname{
 	font-family: 'MinSans-Black';

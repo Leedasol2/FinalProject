@@ -191,82 +191,49 @@ function rlist()
 	<!-- main 시작 -->
 	<input type="hidden" id="tnum" value="${tdto.tnum }">
 	<div class="mytripdetail">
-	<div class="tripdetailsubject">테마파크 <img alt="" src="${root }/image/asset/대관람차.png">
-	
+	<div class="tripdetailsubject">
+	<div class="mainmenutitle">
+	<span>테마파크</span>
+	<img alt="" src="${root }/image/asset/대관람차.png">
+	</div>
 	<hr>
+	<div class="triptopcont">
 	<div class="subcontent">
-	<img src="${root}/image/themepark/${fn:split(tdto.image,',')[0]}" class="tripdetailimg">
+	<img src="${root}/image/themepark/${fn:split(tdto.image,',')[0]}"  class="tripdetailimg">
 	</div>
 	<div class="tripsogae">
+	<div class="namestar">
 	<div class="tripdetailname"><b>${tdto.title }</b></div>
 	<div class="rstar">
-	<c:if test="${tdto.avgrstar==0 }">
-	<div class="tripDetail0-reviewstar">
- 	<span>★</span>
-	<span>★</span>
-	<span>★</span>
-	<span>★</span>
-	<span>★</span>
-	</div>
-	</c:if>
 	
-	<c:if test="${tdto.avgrstar==1 }">
-	<div class="tripDetail1-reviewstar">
-    <span>★</span>
-	<span>★</span>
-	<span>★</span>
-	<span>★</span>
-	<span>★</span>
-	</div>
-	</c:if>
+		<div class="tripstory-star-ratings" style="font-size: 12pt;padding-right: 3.5px;">
+			<div class="tripstory-star-ratings-fill space-x-2 text-lg"
+			style="width: ${tdto.avgrstar*20+1.5}%">
+				<span style="margin-right: 3.5px;">★</span>
+				<span style="margin-right: 3.5px;">★</span>
+				<span style="margin-right: 3.5px;">★</span>
+				<span style="margin-right: 3.5px;">★</span>
+				<span style="margin-right: 3.5px;">★</span>
+			</div>
+			<div class="tripstory-star-ratings-base space-x-2 text-lg">
+				<span>★</span>
+				<span>★</span>
+				<span>★</span>
+				<span>★</span>
+				<span>★</span>
+			</div>
+		</div>
 	
-	<c:if test="${tdto.avgrstar==2 }">
-	<div class="tripDetail2-reviewstar">
- 	<span>★</span>
-	<span>★</span>
-	<span>★</span>
-	<span>★</span>
-	<span>★</span>
 	</div>
-	</c:if>
-	
-	<c:if test="${tdto.avgrstar==3 }">
-	<div class="tripDetail3-reviewstar">
- 	<span>★</span>
-	<span>★</span>
-	<span>★</span>
-	<span>★</span>
-	<span>★</span>
-	</div>
-	</c:if>
-	
-	<c:if test="${tdto.avgrstar==4 }">
-	<div class="tripDetail4-reviewstar">
-	<span>★</span>
-	<span>★</span>
-	<span>★</span>
-	<span>★</span>
-	<span>★</span>
-	</div>
-	</c:if>
-	
-	<c:if test="${tdto.avgrstar==5 }">
-	<div class="tripDetail5-reviewstar">
- 	<span>★</span>
-	<span>★</span>
-	<span>★</span>
-	<span>★</span>
-	<span>★</span>
-	</div>
-	</c:if>
 	</div>
 	<div class="tripsubcontent">
-	${tdto.intro }
+	<span class="tripsubcontent-span">${tdto.intro }</span>
 	</div>
 	<div class="subedit">
 	<img alt="" src="${root }/image/asset/위치아이콘.png"><span class="tripwhere"> ${tdto.location }</span>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<img alt="" src="${root }/image/asset/링크.png"><a href="${tdto.link }"><span class="tripscrap"> 홈페이지</span></a>
+	<img alt="" src="${root }/image/asset/스크랩안함.png" class="scrapImg"><span class="tripscrap"> 스크랩 하기</span>
+	</div>
 	</div>
 	</div>
 	</div>
@@ -287,7 +254,7 @@ function rlist()
 	<img alt="" src="${root }/image/asset/따옴표위.png">
 	</div>
 	<div class="tripcontent">
-	${tdto.contents }	
+	${tdto.contents }
 	</div>
 	<div class="tripimg2">
 	<img alt="" src="${root }/image/asset/따옴표아래.png">
@@ -304,7 +271,6 @@ function rlist()
 	<script>
 		var container = document.getElementById('map');
 		var options = {
-// 			center: new kakao.maps.LatLng(37.520555375455, 127.11505129348), 
 			center: new kakao.maps.LatLng(${tdto.latitude}, ${tdto.longitude}), <!--위도 / 경도 -->
 			level: 4
 		};
@@ -335,14 +301,14 @@ function rlist()
 	<div class="detailreview" style="width:850px;"></div>
 	<input type="hidden" id="tnum" value=${tdto.tnum}>
 	</div>
-	<!-- main 끝 -->
-  
-  	<!-- 리뷰 작성 모달창 -->
-    <div class="modal fade myModal2" id="myModal2" role="dialog">
+<!-- main 끝 -->
+	
+<!-- 리뷰 작성 모달창 -->
+	<div class="modal fade myModal2" id="myModal2" role="dialog">
     <div class="modal-dialog">
-  	  
-    <!-- Modal content-->     
-   <div class="detailmodal">
+    
+      <!-- Modal content-->
+      <div class="detailmodal">
         <div class="modal-header detailheader">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <span class="modalsub">2run trip&nbsp;&nbsp;</span><span class="modalsub2">리뷰 작성</span>
@@ -371,8 +337,8 @@ function rlist()
       </div>
     </div>
   </div>
-  
-  <!-- 수정다이얼로그 -->
+
+<!-- 수정다이얼로그 -->
 <!-- Modal -->
   <div class="modal fade" id="myModal3" role="dialog">
     <div class="modal-dialog">
