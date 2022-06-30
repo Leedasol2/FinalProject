@@ -133,12 +133,21 @@ input.form-control-inputmail{
     width: 139px;
 }
 
-div.btn_group{
+div.btn-edit-group{
 	position: relative;
     font-size: 10pt;
     left: 320px;
-	margin-top: 130px;
-    margin-bottom: 120px;    
+	margin-top: 100px;
+    margin-bottom: 100px;    
+}
+
+
+div.btn-editsuccess-group{
+	position: relative;
+    font-size: 10pt;
+    left: 320px;
+	margin-top: 150px;
+    margin-bottom: 80px;    
 }
 
 button.btn-update-information{
@@ -199,6 +208,21 @@ table.edit-content th{
 
 .mypage-edit > .mypage-header > .mypage-menu > ul.mypage-ul > li.mypage-li:nth-child(1){
     font-family: 'MinSans-Medium';
+	
+}
+
+span.mypage-editsuccess-title{
+	position: relative;
+	font-weight: bold;
+    font-size: 20pt;
+    color: #212529;
+    margin-left: 320px;
+
+}
+
+div.mypage-editsuccess-edong{
+	
+	margin-top: 130px;
 	
 }
 
