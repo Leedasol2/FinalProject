@@ -193,7 +193,7 @@ ul.gnb > li > ul > li:hover{font-size:13pt;}
 
 /* content */
 
-.container{}
+.container{ font-family: 'MinSans-Medium'; }
 .container .section {margin-bottom:90px;}
 .container .section .title{margin-bottom:45px;}
 .container .section.cosmap .title{margin-bottom:20px;}
@@ -329,15 +329,16 @@ div.tripstory div.banner-box div.img-box > img{
 }
 div.tripstory-content{
 	width: 48%;
-	float: left;
-	border: 1px solid #afafaf;
-	border-radius: 10px;
-	margin-right: 10px;
-	margin-bottom: 10px;
+    float: left;
+    border: 1px solid #afafaf;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
 }
 img.tripstory-img{
 	width: 100%;
-	height: 230px;
+	height: 222px;
 	border-top-left-radius : 10px;
 	border-top-right-radius : 10px;
 	cursor: pointer;	
@@ -423,54 +424,43 @@ div.themetripstory-region{
 }
 
 div.maintripstory-explanation{
-	font-size: 11pt;
-    font-family: 'MinSans-Medium';
-    position: relative;
-    display: inline-block;
-    float: left;
-    width: 223px;
-    white-space: nowrap;
+	white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-left: 14px;
-    padding-top: 7px;
+    margin: 0 auto;	
+    padding: 15px 10px;
+    width: 245px;
+    font-size: 10pt;
 }
 
-div.maintripstory-region{
-    font-size: 11pt;
+span.maintripstory-region{
+    font-size: 0.8em;
     color: #2bae66;
-    font-family: 'MinSans-Medium';
-    position: relative;
-    display: inline-block;
-    background-image: url(/image/asset/positionicon.png);
-    background-repeat: no-repeat;
-    background-position: 4px center;
-    background-size: 13px;
-    float: left;
-    padding: 4px 17px 3px 22px;
-    width: 238px;
-    white-space: nowrap;
+    cursor: pointer;
+    width: 220px;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-top: 5px;
-    margin-left: 11px;
-    margin-bottom: 8px;
+    white-space: nowrap;
+    padding-right: 15px;
 }
 
 div.maintriptitle{
-    margin-left: 14px;
+    font-size: 11pt;
     font-weight: bold;
-    width: 179px;
-    white-space: nowrap;
+    cursor: pointer;
+    margin-left: 15px;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 10px;
 }
 
 div.titleandstar {
     display: flex;
     align-items: center;
-    margin-top: 11px;
+    margin-top: 10px;
     margin-bottom: 4px;
+    justify-content: space-between;
 }
 
 div.maintrip-reviewstar{
@@ -497,7 +487,7 @@ div.tripstory-banner > img{
 	cursor: pointer;
 }
 div.tripstory-subject{
-	font-family: 'MinSans-Black';
+	font-family: 'MinSans-Black' !important; 
 	font-size:17pt;
 	cursor: pointer;
 	width: 100%;
@@ -510,7 +500,7 @@ div.tripstory-subject{
     padding: 0 15px;
     margin-bottom:20px;
 }
-div.tripstory-subject > a {
+div.-subject > a {
     float: left;
 }
 ul.tripstory-list {
@@ -521,7 +511,7 @@ ul.tripstory-list > li {
 	width:100%;
 	margin-bottom:15px;
 	padding: 0px 15px;
-	font-family: 'MinSans-Light';
+	font-family: 'MinSans-Light' !important;
     font-size: 14pt;
     line-height: 1.5;
     white-space: nowrap;
