@@ -93,6 +93,9 @@ table.login-missid-table{
     height: 270px;    
 }
 
+table.login-missidfalse-table{
+    height: 100px;    
+}
 
 th.missidsubj{	
 	font-family: 'MinSans-Medium';
@@ -100,6 +103,14 @@ th.missidsubj{
 	text-align: center;
 	vertical-align: center;
 
+}
+
+
+th.missidfalsesubj{	
+	font-family: 'MinSans-Medium';
+	font-size: 22pt;
+	text-align: center;
+	vertical-align: center;
 }
 
 input.form-missid-input{
@@ -151,6 +162,19 @@ button.login-missid-btn-login{
  	border-color: #33b679;
  	margin-left: 40px;
 	margin-top: 25px;
+	font-size: 17px;
+	font-family: MinSans-Black;
+}
+
+button.login-missid-btn-loginfalse{
+	border-radius: 40px;
+    width: 200px;
+   	height: 60px;    
+    color: #33b679;
+    background-color: #fff;  
+    border-style: solid;
+ 	border-color: #33b679;
+ 	margin-left: 50px;
 	font-size: 17px;
 	font-family: MinSans-Black;
 }

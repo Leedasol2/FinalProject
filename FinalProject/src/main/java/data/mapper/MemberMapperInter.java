@@ -26,4 +26,10 @@ public interface MemberMapperInter {
 	// mnum으로 id 구하기
 	public String getUserId(String mnum);
 	
+	//김태민
+	public int missId(HashMap<String,String> map);
+	public String getFindId(String email);
+	public MemberDto getData(String mnum);
+	public void updateMember(MemberDto dto);
+	public void deleteMember(String mnum);
 }
