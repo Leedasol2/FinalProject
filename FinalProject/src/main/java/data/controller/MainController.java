@@ -31,10 +31,11 @@ public class MainController {
     ReviewService rservice;
     
     @GetMapping("/")
-    public String home(Model model,
+    public ModelAndView home(String bnum,
             @RequestParam(value = "currentPage",defaultValue = "1") int currentPage,
             @RequestParam(value =  "tnum",required = false) String tnum) 
     {
+    		ModelAndView model=new ModelAndView();
             
             String theme="'themepark'";
             String festival="'festival'";
@@ -43,6 +44,12 @@ public class MainController {
             List<TripDto> themeparklist=tservice.getAllActivitys(theme);
             List<TripDto> festivallist=tservice.getAllActivitys(festival);
             List<BoardDto> boardlist=bservice.getAllBoards();
+            
+          
+
+    		for (BoardDto b : boardlist) {
+    			b.setLikes(bservice.getLikeCount(b.getBnum()));
+    		}
             
             //list에 여행지 별점 추가하기
             TripDto tdto=new TripDto();
@@ -77,14 +84,14 @@ public class MainController {
             themeparklist.add(tdto);
             
             //출력에 필요한 변수들을 request에 저장
-            model.addAttribute("tdto",tdto);
+            model.addObject("tdto",tdto);
+            model.addObject("triplist",triplist);
+            model.addObject("boardlist",boardlist);
+            model.addObject("themeparklist",themeparklist);
+            model.addObject("festivallist",festivallist);
             
-            model.addAttribute("triplist",triplist);
-            model.addAttribute("boardlist",boardlist);
-            model.addAttribute("themeparklist",themeparklist);
-            model.addAttribute("festivallist",festivallist);
-            
-            return "/layout/main";
+            model.setViewName("/layout/main");
+            return model;
     }
 }
 

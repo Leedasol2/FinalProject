@@ -98,6 +98,7 @@
 								</div>
 							</div>
 						</div>
+						
         			 </div>
                         <div class="maintripstory-explanation">${tdto.intro }</div>
                         
@@ -120,9 +121,12 @@
                      </div>
                      <ul class="tripstory-list">
                        <c:forEach var="bdto" items="${boardlist}" begin="0" end="7">
-                          <!-- 지역이 없어서 출력형태 수정필요 -->
-                        <li><a href="/board/detail?bnum=${bdto.bnum}&currentPage=1"><span class="fontgreen">좋아요 ${bdto.likes }</span><span>${bdto.subject }</span></a></li> 
-                        </c:forEach>
+                        <li>
+                          <a href="/board/detail?bnum=${bdto.bnum}&currentPage=1">
+                            <span class="fontgreen">좋아요 ${bdto.likes }</span><span>${bdto.subject }</span>
+                          </a>
+                        </li> 
+                       </c:forEach>
                      </ul>
 
                   </div>
@@ -146,45 +150,22 @@
                                  <img src="${root}/image/themepark/${img}" class="tripstory-img"
                                  onclick="location.href='/myTrip/themeParkDetail?tnum=${theme.tnum}'">
                                 </c:forTokens>
-                              <div class="name-box">
+                              <div class="titleandstar">
                                  <div class="tripstory-name">
-                                    <a href="/myTrip/themeParkDetail?tnum=${theme.tnum}">${theme.title }</a>
+                                    <a class="themehead" href="/myTrip/themeParkDetail?tnum=${theme.tnum}">${theme.title }</a>
                                  </div>
                                  
-                        <div class="trip-star-rating">
-                          <div class="trip-reviewstar">
-                              <c:if test="${theme.avgrstar==0 }">
-                             <div class="themetripDetail0-reviewstar">
-                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                                   </div>
-                                 </c:if>
-                                 <c:if test="${theme.avgrstar==1 }">
-                                   <div class="themetripDetail1-reviewstar">
-                                       <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                                   </div>
-                           </c:if>
-                           <c:if test="${theme.avgrstar==2 }">
-                             <div class="themetripDetail2-reviewstar">
-                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                             </div>
-                           </c:if>
-                           <c:if test="${theme.avgrstar==3 }">
-                             <div class="themetripDetail3-reviewstar">
-                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                             </div>
-                           </c:if>
-                           <c:if test="${theme.avgrstar==4 }">
-                             <div class="themetripDetail4-reviewstar">
-                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                             </div>
-                           </c:if>
-                           <c:if test="${theme.avgrstar==5 }">
-                             <div class="themetripDetail5-reviewstar">
-                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                             </div>
-                           </c:if>
-                          </div>
-                         </div>
+                        <div class="best-star-rating">
+						  <div class="tripstory-star-ratings">
+							<div class="tripstory-star-ratings-fill space-x-2 text-lg"
+								style="width: ${theme.avgrstar*20+1.5}%">
+								<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+							</div>
+						    <div class="tripstory-star-ratings-base space-x-2 text-lg">
+								<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+						    </div>
+						  </div>
+						</div>
                                  
                               </div>
                               <div class="explain-box">
