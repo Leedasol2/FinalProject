@@ -87,66 +87,23 @@ $(document).ready(function(){
     <div class="theme-content">
       <img src="${root}/image/themepark/${fn:split(theme.image,',')[0]}" class="theme-img"
        onclick="location.href='themeParkDetail?tnum=${theme.tnum}&currentPage=${currentPage }'">
-       
+       <div class="listtop">
        <div class="theme-name">${theme.title }</div>
-   	   <div class="theme-star-rating">
-	   <div class="themepark-reviewstar">
-	    <c:if test="${theme.avgrstar==0 }">
-	    <div class="tripDetail0-reviewstar">
-		 	<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
+       
+   		<div class="best-star-rating themepark">
+
+			<div class="tripstory-star-ratings">
+				<div class="tripstory-star-ratings-fill space-x-2 text-lg"
+					style="width: ${theme.avgrstar*20+1.5}%">
+					<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+				</div>
+				<div class="tripstory-star-ratings-base space-x-2 text-lg">
+					<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+				</div>
+			</div>
+		
 		</div>
-	    </c:if>
-	     <c:if test="${theme.avgrstar==1 }">
-	    <div class="tripDetail1-reviewstar">
-		 	<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-		</div>
-	    </c:if>
-	     <c:if test="${theme.avgrstar==2 }">
-	    <div class="tripDetail2-reviewstar">
-		 	<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-		</div>
-	    </c:if>
-	     <c:if test="${theme.avgrstar==3 }">
-	    <div class="tripDetail3-reviewstar">
-		 	<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-		</div>
-	    </c:if>
-	     <c:if test="${theme.avgrstar==4 }">
-	    <div class="tripDetail4-reviewstar">
-		 	<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-		</div>
-	    </c:if>
-	     <c:if test="${theme.avgrstar==5 }">
-	    <div class="tripDetail5-reviewstar">
-		 	<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-		</div>
-	    </c:if>
-	   </div>
-	   </div>
+	</div>
 		 <div class="theme-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
  		    ${theme.location }

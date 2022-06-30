@@ -97,17 +97,16 @@ div.theme-content > img.theme-img{
 	cursor: pointer;	
 }
 
-div.theme-content > div.theme-name{
-	position: relative;
-    top: 11px;
-    padding-left: 75px;
+div.listtop > div.theme-name{
+	font-size: 11pt;
     font-weight: bold;
-    right: 63px;
-    font-size: 14px;
-    width: 220px;
-    white-space: nowrap;
+    cursor: pointer;
+    margin-left: 15px;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+    top: 10px;
 }
 
 
@@ -192,3 +191,14 @@ div.theme-main div.regionofkorea > span:hover{
 div.theme-main div.regionofkorea > span.daejeon-chungcheong{
 	color: #2bae66;
 }
+
+div.best-star-rating.themepark{
+	position: relative;
+	margin-left: 10px;
+	top: 10px;
+}
+
+
+
+
+
