@@ -6,7 +6,16 @@
     font-weight: normal;
     font-style: normal;
 }
-
+span.themetrip-name{
+	font-size: 11pt;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 10px;
+}
 div.themaTripText{
 	font-family: 'MinSans-Medium' !important;
 	align-items: center;
@@ -97,9 +106,19 @@ div.themaTripText div.trip-content > img.trip-img{
 	height: 170px;
 	border-top-left-radius : 10px;
 	border-top-right-radius : 10px;
-	cursor: pointer;	
+	cursor: pointer;
+    margin-bottom: 10px;	
 }
-
+span.themetrip-region{
+	font-size: 0.8em;
+    color: #2bae66;
+    cursor: pointer;
+    width: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 15px;
+}
 div.themaTripText div.trip-content > span.trip-name{
 	position: relative;
 	top: 11px;
