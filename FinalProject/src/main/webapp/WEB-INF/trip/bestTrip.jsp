@@ -1,171 +1,126 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>  
+<title>Insert title here</title>
 </head>
 <body>
 
-<script type="text/javascript">
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var currentPosition = parseInt($(".trip-category").css("top"));
+			$(window).scroll(function() {
+				var position = $(window).scrollTop();
+				$(".trip-category").stop().animate({
+					"top" : position + currentPosition + "px"
+				}, 1000);
+			});
+		});
+	</script>
 
-$(document).ready(function(){
-	  var currentPosition = parseInt($(".trip-category").css("top"));
-	  $(window).scroll(function() {
-	    var position = $(window).scrollTop(); 
-	    $(".trip-category").stop().animate({"top":position+currentPosition+"px"},1000);
-	  });
-	});
+	<!-- 본문 시작 -->
+	<div class="bestTripText">
 
-</script> 
+		<div class="trip-category">
+			<a href="bestTrip" class="best-category tripcategory">베스트 여행지</a><br>
+			<br>
+			<br> <a href="regionTrip" class="region-category tripcategory">지역별
+				여행지</a><br>
+			<br>
+			<br> <a href="themaTrip" class="themea-category tripcategory">테마별
+				여행지</a>
+		</div>
 
-<!-- 본문 시작 -->
-<div class="bestTripText">
+		<div class="category-title">
+			<span class="main-title">베스트 여행지</span>&nbsp; <span class="sub-title">여행을
+				떠나요</span> <span class="title-content">국내 최고 여행지만 골랐다!<br>실제
+				여행객들의 생생한 리뷰까지 만나보세요
+			</span>
+			<hr class="title-line">
+		</div>
 
-<div class="trip-category">
-  <a href="bestTrip" class="best-category tripcategory">베스트 여행지</a><br><br><br>
-  <a href="regionTrip" class="region-category tripcategory">지역별 여행지</a><br><br><br>
-  <a href="themaTrip" class="themea-category tripcategory">테마별 여행지</a>
-</div>
+		<div>
+			<input type="hidden" id="tnum" value="${tdto.tnum }">
+			<table class="bestTripTable">
 
-<div class="category-title">
-  <span class="main-title">베스트 여행지</span>&nbsp;
-  <span class="sub-title">여행을 떠나요</span>
-  <span class="title-content">국내 최고 여행지만 골랐다!<br>실제 여행객들의 생생한 리뷰까지 만나보세요</span>
-  <hr class="title-line">
-</div>
+				<c:set var="i" value="0" />
+				<c:set var="j" value="3" />
+				<c:forEach var="tdto" items="${list}" varStatus="status" begin="0"
+					end="29">
+					<c:if test="${i%j==0 }">
+						<tr>
+					</c:if>
+					<td>
+						<div class="trip-content">
+							<img src="${root}/image/tripspot/${fn:split(tdto.image,',')[0]}"
+								class="trip-img"
+								onclick="location.href='myTripDetail?tnum=${tdto.tnum}&currentPage=${currentPage }'">
+							<div class="listtop">
+								<span class="trip-name">${tdto.title }</span>
 
-<div>
-<input type="hidden" id="tnum" value="${tdto.tnum }">
-  <table class="bestTripTable">
-   
-   <c:set var="i" value="0" />
-   <c:set var="j" value="3" />
-   <c:forEach var="tdto" items="${list}" varStatus="status" begin="0" end="29">
-   <c:if test="${i%j==0 }">
-   <tr>
-   </c:if>
-      <td>
-        <div class="trip-content">
-          <img src="${root}/image/tripspot/${fn:split(tdto.image,',')[0]}" class="trip-img"
-          onclick="location.href='myTripDetail?tnum=${tdto.tnum}&currentPage=${currentPage }'">
-          
-          <span class="trip-name">${tdto.title }</span>
-          
-          <div class="best-star-rating">
-			<div class="besttrip-reviewstar">
-		 	 <c:if test="${tdto.avgrstar==0 }">
-			<div class="tripDetail0-reviewstar">
-		 	<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			</div>
-			</c:if>
-			<c:if test="${tdto.avgrstar==1 }">
-			<div class="tripDetail1-reviewstar">
-		 	<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			</div>
-			</c:if>
-			<c:if test="${tdto.avgrstar==2 }">
-			<div class="tripDetail2-reviewstar">
-		 	<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			</div>
-			</c:if>
-			<c:if test="${tdto.avgrstar==3 }">
-			<div class="tripDetail3-reviewstar">
-		 	<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			</div>
-			</c:if>
-			 <c:if test="${tdto.avgrstar==4 }">
-			<div class="tripDetail4-reviewstar">
-		 	<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			</div>
-			</c:if>
-			 <c:if test="${tdto.avgrstar==5 }">
-			<div class="tripDetail5-reviewstar">
-		 	<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			<span>★</span>
-			</div>
-			</c:if>
-			</div>
-            </div>
-            
-            <div class="trip-explanation">${tdto.intro }</div>
- 		  <span class="trip-region">
- 		    <img src="${root}/image/asset/여행지 위치아이콘.png">${tdto.location }
- 		  </span>
-        </div>
-      </td>
-    <c:if test="${i%j==j-1 }">
-    </tr>
-    </c:if>
-	<c:set var="i" value="${i+1 }"/>
-	</c:forEach>
-    
-  </table>
-</div>
+								<div class="best-star-rating">
 
-</div>
-<!-- 본문 끝 -->
+									<div class="tripstory-star-ratings">
+										<div class="tripstory-star-ratings-fill space-x-2 text-lg"
+											style="width: ${tdto.avgrstar*20+1.5}%">
+											<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+										</div>
+										<div class="tripstory-star-ratings-base space-x-2 text-lg">
+											<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+										</div>
+									</div>
 
-<!-- 페이징 -->
-<c:if test="${totalCount>0 }">
-<div style="text-align: center">
-<ul class="pagination">
-	<!-- 이전 -->
-	<c:if test="${startPage>1 }">
-	<li>
-		<a href="bestTrip?currentPage=${startPage-1}">이전</a>
-	</li>
+								</div>
+							</div>
+							<div class="trip-explanation">${tdto.intro }</div>
+							<div class="listbtm">
+								<img src="${root}/image/asset/여행지 위치아이콘.png"> 
+								<span class="trip-region">${tdto.location }</span>
+							</div>
+						</div>
+					</td>
+					<c:if test="${i%j==j-1 }">
+					</c:if>
+					<c:set var="i" value="${i+1 }" />
+				</c:forEach>
+
+			</table>
+		</div>
+
+	</div>
+	<!-- 본문 끝 -->
+
+	<!-- 페이징 -->
+	<c:if test="${totalCount>0 }">
+		<div style="text-align: center">
+			<ul class="pagination">
+				<!-- 이전 -->
+				<c:if test="${startPage>1 }">
+					<li><a href="bestTrip?currentPage=${startPage-1}">이전</a></li>
+				</c:if>
+
+				<c:forEach var="pp" begin="${startPage }" end="${endPage }">
+					<c:if test="${currentPage==pp }">
+						<li class="active"><a href="list?currentPage=${pp}">${pp }</a>
+						</li>
+					</c:if>
+					<c:if test="${currentPage!=pp }">
+						<li><a href="bestTrip?currentPage=${pp }">${pp }</a></li>
+					</c:if>
+				</c:forEach>
+
+				<!-- 다음 -->
+				<c:if test="${endPage<totalPage }">
+					<li><a href="bestTrip?currentPage=${endPage+1}">다음</a></li>
+				</c:if>
+			</ul>
+		</div>
 	</c:if>
-	
-	<c:forEach var="pp" begin="${startPage }" end="${endPage }">
-	<c:if test="${currentPage==pp }">
-	<li class="active">
-	<a href="list?currentPage=${pp}">${pp }</a>
-	</li>
-	</c:if>
-	<c:if test="${currentPage!=pp }">
-	<li>
-		<a href="bestTrip?currentPage=${pp }">${pp }</a>
-	</li>
-	</c:if>
-	</c:forEach>
-	
-	<!-- 다음 -->
-	<c:if test="${endPage<totalPage }">
-	<li>
-		<a href="bestTrip?currentPage=${endPage+1}">다음</a>
-	</li>
-	</c:if>
-</ul>
-</div>
-</c:if>
 
 </body>
 </html>

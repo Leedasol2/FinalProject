@@ -99,17 +99,28 @@ div.bestTripText div.trip-content img.trip-img{
 	border-top-left-radius : 10px;
 	border-top-right-radius : 10px;
 	cursor: pointer;	
+	margin-bottom: 10px;
+}
+
+.listtop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 div.bestTripText div.trip-content span.trip-name{
-	position: relative;
-	top: 11px;
-	padding-left: 17px;
-	font-size: 1.1em;
-	font-weight: bold;
-	cursor: pointer;
+	font-size: 11pt;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 10px;
 }
-
+.best-star-rating {
+    margin-right: 10px;
+}
 div.bestTripText div.trip-content span.trip-explanation{
 	font-size: 0.8em;
     margin-left: 57px;
@@ -121,11 +132,12 @@ div.bestTripText div.trip-content span.trip-explanation{
 div.bestTripText div.trip-content span.trip-region{
 	font-size: 0.8em;
     color: #2bae66;
-    position: relative;
-    top: 10px;
     cursor: pointer;
     width: 220px;
-    left: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 15px;
 }
 
 div.bestTripText div.trip-content span.trip-region > img{
@@ -137,9 +149,12 @@ div.trip-explanation{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding-top: 20px;
-    padding-left: 10px;
+    /* padding-top: 20px; */
+    /* padding-left: 15px; */
+    margin: 0 auto;
+    padding: 15px 10px;
     width: 220px;
+    font-size: 10pt;
 }
 .besttrip-reviewstar{
 	float:right;
@@ -158,4 +173,13 @@ div.trip-explanation{
 }
 .besttrip-reviewstar label{
 	color:#ccc;
+}
+.listbtm {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+.listbtm > img {
+    margin-right: 5px;
+    width: 13px;
 }
