@@ -21,6 +21,9 @@ var fesAjax = function(day){
 	        }
      	});
 }		
+
+
+
 var feslistAjax = function(day){
 	var vo='{"day":"'+day+'"}';
 	//alert(day)
@@ -48,16 +51,20 @@ var feslistAjax = function(day){
 					
 					var startdate=moment(this.beginday).format("YYYY-MM-DD ");
 					var enddate=moment(this.endday).format("YYYY-MM-DD ");
-
+	
+					feshtml+='<a href="festivalDetail?tnum='+this.tnum+'">';
 					feshtml+='<img src="../image/festival/'+imgfirst[0]+'" class="festivalcalendar-img">';								
+					feshtml+='</a>';
 					feshtml+='<div class="festivalcalendar-first">'+this.title+'</div>';
 					feshtml+='<div class="festivalcalendar-day">['+startdate+'-'+enddate+']<br><br></div>';
 					feshtml+='<div class="festivalcalendar-two">'+this.intro+'<br></div>';
 					feshtml+='</div> 	';
 					feshtml+='</div> 	';
 				
+					
 				});
 			}
+									
 			      	$("div.fesList").html(feshtml);
 		}
 	       
@@ -66,8 +73,6 @@ var feslistAjax = function(day){
     
      	
 }	
-
-
 
 
 

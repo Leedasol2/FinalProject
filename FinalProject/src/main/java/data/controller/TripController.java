@@ -344,7 +344,6 @@ public class TripController {
 			
 			List<TripDto> themeparklist=tservice.getAllActivitys(themepark);
 			
-			TripDto tdto=new TripDto();
 			for(TripDto r:themeparklist) {
 				if(rservice.getReviewcount(r.getTnum())>0) {
 					double avgrstar=rservice.getAvgrstar(r.getTnum());
@@ -359,7 +358,6 @@ public class TripController {
 				}
 			}
 				
-			model.addAttribute("tdto",tdto);
 			model.addAttribute("themeparklist",themeparklist);
 					
 			return "/myTrip/themeParkList";

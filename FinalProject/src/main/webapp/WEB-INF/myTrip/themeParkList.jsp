@@ -88,7 +88,7 @@ $(document).ready(function(){
       <img src="${root}/image/themepark/${fn:split(theme.image,',')[0]}" class="theme-img"
        onclick="location.href='themeParkDetail?tnum=${theme.tnum}&currentPage=${currentPage }'">
        
-       <span class="theme-name">${theme.title }</span>
+       <div class="theme-name">${theme.title }</div>
    	   <div class="theme-star-rating">
 	   <div class="themepark-reviewstar">
 	    <c:if test="${theme.avgrstar==0 }">
@@ -147,10 +147,10 @@ $(document).ready(function(){
 	    </c:if>
 	   </div>
 	   </div>
-		 <span class="theme-region">
+		 <div class="theme-region">
  		    <img src="${root}/image/asset/여행지 위치아이콘.png">
  		    ${theme.location }
- 		 </span>
+ 		 </div>
      </div>  
 </c:forEach>    
 </div>
