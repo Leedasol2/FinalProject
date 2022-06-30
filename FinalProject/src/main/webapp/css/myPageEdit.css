@@ -98,7 +98,7 @@ li.mypage-review{
 }
 
 table.edit-content{
-	width: 800px;
+	width: 600px;
     height: 300px;
     font-size: 10pt;
     border-collapse: separate;
@@ -154,6 +154,7 @@ button.btn-update-information{
  	margin-right: 5px;
     font-family: 'MinSans-Medium';
     font-size:11pt;
+    float:left;
  	  
 }
 
@@ -170,6 +171,7 @@ button.btn-delete{
     margin-left: 5px;
     font-family: 'MinSans-Medium';
     font-size:11pt;
+    left: 340px;
 }
 
 hr.memberedit-title-line{
