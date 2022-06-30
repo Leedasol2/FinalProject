@@ -7,6 +7,21 @@
 <head>
 <meta charset="UTF-8">
 <title>이런여행</title>
+<script type="text/javascript">
+$(function(){
+	$(document).ready(function(){
+		
+	var searchcount=${size};
+	
+	if(searchcount<=2){
+		$("span.sresult").css('margin-left','21px');
+		$("div.search-allcontent").css('display','flex');
+		$("div.search-allcontent").css('align-items','center');		
+		$("div.search-allcontent").css('justify-content','center');		
+	}
+	});
+});	
+</script>
 </head>
 <body>
 
@@ -16,9 +31,8 @@
 
 <span class="sresult">검색결과</span>
   
-  
-  <div class="search-allcontent">
-  
+    <div class="search-allcontent">
+    
      <c:if test="${size==0}">
        <div class="searchnoresult">검색결과가 없습니다</div>
      </c:if>
@@ -38,7 +52,7 @@
            <img src="${root}/image/festival/${img}" class="search-img" onclick="location.href='/myTrip/festivalDetail?tnum=${search.tnum}'">
          </c:if>
       </c:forTokens> 
-       <div class="search-box"> 
+       <div class="searchResult-box"> 
          <div class="search-name">
            <c:if test="${search.part=='trip'}">
             <a href="/myTrip/myTripDetail?tnum=${search.tnum}">${search.title }</a>
@@ -51,45 +65,25 @@
          </c:if>
         </div>
            
-          <div class="trip-star-rating">
-          <div class="trip-reviewstar">
-            <c:if test="${search.avgrstar==0 }">
-             <div class="searchtripDetail0-reviewstar">
-               <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-               </div>
-             </c:if>
-             <c:if test="${search.avgrstar==1 }">
-               <div class="searchtripDetail1-reviewstar">
-                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-               </div>
-             </c:if>
-             <c:if test="${search.avgrstar==2 }">
-             <div class="searchtripDetail2-reviewstar">
-              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-             </div>
-           </c:if>
-           <c:if test="${search.avgrstar==3 }">
-             <div class="searchtripDetail3-reviewstar">
-              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-             </div>
-           </c:if>
-           <c:if test="${search.avgrstar==4 }">
-             <div class="searchtripDetail4-reviewstar">
-              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-            </div>
-           </c:if>
-           <c:if test="${search.avgrstar==5 }">
-             <div class="searchtripDetail5-reviewstar">
-              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-             </div>
-           </c:if>
-         </div>
-         </div>
+      <div class="best-star-rating">
+		<div class="tripstory-star-ratings">
+		  <div class="tripstory-star-ratings-fill space-x-2 text-lg"
+				style="width: ${search.avgrstar*20+1.5}%">
+			<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+		  </div>
+		  <div class="tripstory-star-ratings-base space-x-2 text-lg">
+			<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+		  </div>
+		</div>
+	  </div>
             
       </div>
-      <div class="explain-box">
-        <div class="search-region">${search.location }</div>
-      </div>  
+      
+      <div class="listbtm">
+        <img src="${root}/image/asset/여행지 위치아이콘.png"> 
+	    <span class="search-region">${search.location }</span>
+	  </div>
+      
       </div>
      
     </c:forEach>

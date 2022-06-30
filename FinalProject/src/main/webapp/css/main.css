@@ -478,25 +478,6 @@ div.titleandstar {
     justify-content: space-between;
 }
 
-div.maintrip-reviewstar{
-	float:right;
-	border:solid 0px #ccc;
-    display:flex;
-    flex-direction: row-reverse;
-    font-size:0.7em;
-    justify-content:space-around;
-    padding:0 .2em;
-    text-align:center;
-    width:5em;
-}
-
-div.trip-reviewstar input{
-	display:none;
-}
-div.trip-reviewstar label{
-	color:#ccc;
-}
-
 div.tripstory-banner > img{
 	width:100%;
 	cursor: pointer;
