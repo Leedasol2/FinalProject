@@ -38,4 +38,25 @@ select count(*) from member where userid=#{userid}
 	select userid from member where mnum=#{mnum}
 </select>
 	
+	
+<!-- 태민 -->	
+<select id="missId" parameterType="HashMap" resultType="int">
+select count(*) from member where name=#{name} and email=#{email}
+</select>
+
+<select id="getFindId" resultType="String" parameterType="String">
+	select userid from member where email=#{email}
+</select>
+
+<select id="getData" resultType="mdto" parameterType="String">
+	select * from member where mnum=#{mnum}
+</select>
+
+<update id="updateMember" parameterType="mdto">
+  update member set userid=#{userid}, name=#{name}, email=#{email}, phone=#{phone}, password=#{password} where mnum=#{mnum}
+</update>
+
+<delete id="deleteMember" parameterType="String">
+	delete from member where mnum=#{mnum}
+</delete>
 </mapper>

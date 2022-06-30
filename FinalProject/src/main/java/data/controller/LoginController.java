@@ -9,6 +9,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -70,17 +71,52 @@ public class LoginController {
 		return "redirect:/loginHome";
 	}
 	
-	//아이디 찾기
+	//아이디 찾기 관련
 	@GetMapping("/loginMissId")
 	public String loginMissId() {
 		
-		return "/html/loginMissId";
+		return "/login/loginMissId";
 	}	
+	
+	@GetMapping("/loginMissIdFalse")
+	public String loginMissIdFalse() {
+		
+		return "/login/loginMissIdFalse";
+	}
+	
+	@GetMapping("/loginMissIdSuccess")
+	public String loginMissIdSuccess() {
+		
+		return "/login/loginMissIdSuccess";
+	}
+	
+	 
+	@PostMapping("missId")
+	public String missId(
+			@RequestParam String name,
+			@RequestParam String email,
+			@RequestParam String findid,
+			HttpSession session,Model model) {
+		
+		HashMap<String, String> map=new HashMap<>();
+		map.put("name", name);
+		map.put("email", email);
+		
+		int check=MemberInter.missId(map);
+		if(check==1) {	
+			model.addAttribute("findid",MemberInter.getFindId(email));						
+
+			return "/login/loginMissIdSuccess";
+		}else {
+			return "redirect:/loginMissIdFalse";
+		}
+	}
+	
 	//비밀번호 찾기
 	@GetMapping("/loginMissPass")
 	public String loginMissPass() {
 		
-		return "/html/loginMissPass";
+		return "/login/loginMissPass";
 	}	
 	
 	// 카카오 로그인

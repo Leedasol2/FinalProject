@@ -39,4 +39,19 @@ public class MemberService {
 	public int getCheckKMember(String userid) {
 		return mapper.getCheckKMember(userid);
 	}
+	
+	public String getFindId(String email) {
+		return mapper.getMnum(email);
+	}	
+	
+	public MemberDto getData(String mnum) {
+		return mapper.getData(mnum);
+	}
+	
+	public void updateMember(MemberDto dto){
+		mapper.updateMember(dto);
+	}
+	public void deleteMember(String mnum){
+		mapper.deleteMember(mnum);
+	}	
 }

@@ -1,5 +1,7 @@
 package data.controller;
 
+import java.util.HashMap;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +30,10 @@ public class ScrapController {
 	public void scrapInsert(@ModelAttribute ScrapDto sdto,HttpSession session,
 			@RequestParam(value =  "tnum",required = false) String tnum) {
 		
+		String loginok = (String) session.getAttribute("loginok");
+		
+		if (loginok != null) {
+		
 		//세션에 로그인한 아이디
 		String myid=(String)session.getAttribute("myid");
 		String mnum=mmapper.getMnum(myid);
@@ -36,8 +42,22 @@ public class ScrapController {
 //		System.out.println(mnum);
 //		System.out.println(tnum);
 		
+		HashMap<String, String> map = new HashMap<>();
+		map.put("mnum", mnum);
+		map.put("tnum", tnum);
+		
+		int check=smapper.getFindScrap(map);
+		String snum = smapper.getSnum(map);
+		
+		if(check ==1) {
+		smapper.deleteScrap(snum);
+			
+		}else {
 		//insert
 		smapper.InsertScrap(sdto);
+		}
 	}
+
+}
 
 }
