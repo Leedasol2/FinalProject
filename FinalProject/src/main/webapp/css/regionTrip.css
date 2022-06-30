@@ -100,30 +100,40 @@ div.regionTripText div.trip-content > img.trip-img{
 	cursor: pointer;	
 }
 
-div.regionTripText div.trip-content > span.trip-name{
-	position: relative;
-	top: 11px;
-	padding-left: 17px;
-	font-size: 1.1em;
-	font-weight: bold;
-	cursor: pointer;
-}
-
-div.regionTripText div.trip-content > span.trip-explanation{
-	font-size: 0.8em;
-	padding-left: 57px;
-	position: relative;
-	top: 15px;
-    right: 39px
-}
-
-div.regionTripText div.trip-content > span.trip-region{
-	font-size: 0.8em;
-	color: #2bae66;
-	position: relative;
-    top: 10px;
+div.regionTripText div.trip-content  span.trip-name{
+	  font-size: 11pt;
+    font-weight: bold;
     cursor: pointer;
-    left: 15px;
+    margin-left: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 10px;
+	margin-top: 10px;
+}
+
+div.regionTripText div.trip-content  span.trip-explanation{
+	 white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* padding-top: 20px; */
+    /* padding-left: 15px; */
+    margin: 0 auto;
+    padding: 15px 10px;
+    width: 220px;
+    font-size: 10pt;
+}
+
+div.regionTripText div.trip-content  span.trip-region{
+	 font-size: 0.8em;
+    color: #2bae66;
+    cursor: pointer;
+    width: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 15px;
+    margin-left: 10px;
 }
 
 div.regionTripText div.trip-content > span.trip-region > img{
