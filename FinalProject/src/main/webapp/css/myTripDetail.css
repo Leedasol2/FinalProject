@@ -1,3 +1,7 @@
+.tripsogae > div {
+    margin-bottom: 46px;
+}
+
 img.tripdetailimg{
 	width: 400px;
 	height: 250px;
@@ -15,30 +19,50 @@ div.tripdetailsubject,div.tripdetailname,div.tripsubcontent,span.tripwhere,span.
 }
 div.triptopcont{
 	margin-top: 30px;
-	margin-bottom: 30px;
+	/* margin-bottom: 30px; */
+	display: flex;
+	/* flex-direction: column; */
 }
 div.tripsubcontent{
 	font-size: 12pt;
-	margin-top: 70px;
+	/* margin-top: 39px; */
+	/* margin-bottom: 65px; */
+	line-height: 31px;
+	width: 88%;
 }
 div.rstar{
 	text-align: right;
 }
-div.subedit{
-	font-size: 12pt;
-	margin-top: 50px;
+
+div.subedit {
+    font-size: 12pt;
+    display: flex;
+    align-items: center;
 }
 div.subcontent{
-	float: left;
+	/* float: left; */
+	/* height: 0; */
+	/* height: 200px; */
+}
+span.tripsubcontent-span::before {
+    content: "|";
+    font-size: 13pt;
+    color: #afafaf;
+    padding-right: 10px;
+    font-family: MinSans-black;
 }
 div.subedit > img{
 	width: 21px;
-	height: 21px;	
+	height: 21px;
+	margin-right: 10px;	
 }
 div.tripsogae{
-	text-align: center;
-	margin-top: 50px;
-	margin-bottom: 90px;
+	text-align: left;
+	margin-top: 10px;
+	/* margin-bottom: 90px; */
+	margin-left: 30px;
+	display: flex;
+	flex-direction: column;
 }
 div.tripimg1{
 	text-align: center;
@@ -57,7 +81,7 @@ div.tripcontent{
 }
 div.tripdetailname{
 	font-family: 'MinSans-Black';
-	font-size: 1.5em;
+	font-size: 21pt;
 	margin-right: 25px;
 }
 span{
@@ -98,9 +122,16 @@ div.tripdetailsubject{
 	font-family:  'MinSans-Medium';
 	font-size: 1.7em;
 }
-div.tripdetailsubject > img{
+div.tripdetailsubject > .mainmenutitle > img{
 	width: 36px;	
 	height: 36px;
+}
+.mainmenutitle {
+    display: flex;
+    align-items: center;
+}
+.mainmenutitle > span {
+    padding-right:10px;
 }
 div.mytripdetail{
   align-items: center;
@@ -244,103 +275,35 @@ span.modalsub2{
   -webkit-text-fill-color: gold;
 }
 
-.tripDetail0-reviewstar{
-	float:right;
-	border:solid 0px #ccc;
-  display:flex;
-  flex-direction: row-reverse;
-  font-size:0.7em;
-  justify-content:space-around;
-  padding:0 .2em;
-  text-align:center;
-  width:5em;
+.tripdetail-star-ratings {
+  color: #aaa9a9; 
+  position: relative;
+  unicode-bidi: bidi-override;
+  width: max-content;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1.3px;
+  -webkit-text-stroke-color: #2b2a29;
 }
-.tripDetail0-reviewstar span{
-	color:#ccc;
+ 
+.tripdetail-star-ratings-fill {
+  color: #fff58c;
+  padding: 0;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  -webkit-text-fill-color: gold;
 }
-
-.tripDetail1-reviewstar{
-	float:right;
-	border:solid 0px #ccc;
-  display:flex;
-  flex-direction: row-reverse;
-  font-size:0.7em;
-  justify-content:space-around;
-  padding:0 .2em;
-  text-align:center;
-  width:5em;
-}
-div.tripDetail1-reviewstar > span{
-	color: gold
-}
-div.tripDetail1-reviewstar > span:nth-child(-n+4){
-	color: #ccc
+ 
+.tripdetail-star-ratings-base {
+  z-index: 0;
+  padding: 0;
 }
 
-.tripDetail2-reviewstar{
-	float:right;
-	border:solid 0px #ccc;
-  display:flex;
-  flex-direction: row-reverse;
-  font-size:0.7em;
-  justify-content:space-around;
-  padding:0 .2em;
-  text-align:center;
-  width:5em;
+.namestar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-div.tripDetail2-reviewstar > span{
-	color: gold
-}
-div.tripDetail2-reviewstar > span:nth-child(-n+3){
-	color: #ccc
-}
-.tripDetail3-reviewstar{
-	float:right;
-	border:solid 0px #ccc;
-  display:flex;
-  flex-direction: row-reverse;
-  font-size:0.7em;
-  justify-content:space-around;
-  padding:0 .2em; 
-  text-align:center;
-  width:5em;
-}
-div.tripDetail3-reviewstar > span{
-	color: gold
-}
-div.tripDetail3-reviewstar > span:nth-child(-n+2){
-	color: #ccc
-}
-
-.tripDetail4-reviewstar{
-	float:right;
-	border:solid 0px #ccc;
-  display:flex;
-  flex-direction: row-reverse;
-  font-size:0.7em;
-  justify-content:space-around;
-  padding:0 .2em;
-  text-align:center;
-  width:5em;
-}
-div.tripDetail4-reviewstar > span{
-	color: gold
-}
-div.tripDetail4-reviewstar > span:nth-child(-n+1){
-	color: #ccc
-}
-.tripDetail5-reviewstar{
-	float:right;
-	border:solid 0px #ccc;
-  display:flex;
-  flex-direction: row-reverse;
-  font-size:0.7em;
-  justify-content:space-around;
-  padding:0 .2em;
-  text-align:center;
-  width:5em;
-}
-.tripDetail5-reviewstar span{
-	color: gold;
-}
-
