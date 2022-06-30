@@ -12,7 +12,7 @@ $(function(){
 	$(document).ready(function(){
 		
 	var searchcount=${size};
-	
+	//검색결과 2개이하면 검색결과가 가운데로 오게
 	if(searchcount<=2){
 		$("span.sresult").css('margin-left','21px');
 		$("div.search-allcontent").css('display','flex');
