@@ -238,7 +238,7 @@ div.searchtripDetail4-reviewstar > span:nth-child(-n+1){
 .searchnoresult{
     font-size: 21pt;
     font-weight: 550;
-    margin-left: 285px;
     margin-top: 195px;
     margin-bottom: 392px;
+    text-align: center;
 }

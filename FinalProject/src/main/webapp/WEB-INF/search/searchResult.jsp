@@ -15,14 +15,15 @@
 <div class="mainofsearch">
 
 <span class="sresult">검색결과</span>
-
+  
+  
   <div class="search-allcontent">
   
-       <c:if test="${sizz==0}">
-         <div class="searchnoresult">검색결과가 없습니다</div>
-       </c:if>
+     <c:if test="${size==0}">
+       <div class="searchnoresult">검색결과가 없습니다</div>
+     </c:if>
        
-     <c:if test="${sizz!=0}">
+     <c:if test="${size!=0}">
        <c:forEach var="search" items="${searchlist}">
 
       <div class="search-content">
