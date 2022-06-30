@@ -70,8 +70,9 @@ document.addEventListener('DOMContentLoaded', function () {
                                     	contentType: 'application/json',
                                     	data:JSON.stringify(obj),
                                     	success:function(data){
-											$('#calendarModal [data-dismiss]').click();	
-											loadCalendarEvent();				
+											$('#calendarModal [data-dismiss]').click();
+											window.location.reload();
+											//loadCalendarEvent();				
 										}
 									});
                                     
@@ -161,6 +162,11 @@ document.addEventListener('DOMContentLoaded', function () {
 														//loadCalendarEvent();				
 													}
 												});
+												
+												$("#calendar_content_update").val("");
+				                                $("#calendar_start_date_update").val("");
+				                                $("#calendar_end_date_update").val("");
+	                                			
 												window.location.reload();
 			                                }
 										});
