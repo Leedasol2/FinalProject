@@ -100,7 +100,11 @@
 						</div>
         			 </div>
                         <div class="maintripstory-explanation">${tdto.intro }</div>
-                        <div class="maintripstory-region">${tdto.location }</div>
+                        
+                        <div class="listbtm">
+						  <img src="${root}/image/asset/여행지 위치아이콘.png"> 
+						  <span class="maintripstory-region">${tdto.location }</span>
+						</div>
                      
                   </div>
                </c:forEach>
