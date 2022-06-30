@@ -20,7 +20,7 @@ div.mainofsearch{
 }
 
 div.search-allcontent{
-   width: 788px;
+    width: 788px;
     margin-top: 25px;
     margin-bottom: 50px;
 }
@@ -46,199 +46,57 @@ img.search-img{
    border-top-left-radius : 10px;
    border-top-right-radius : 10px;
    cursor: pointer;   
+   margin-bottom: 14px;
 }
 
-div.search-box > div.search-name{
+div.searchResult-box > div.search-name{
     font-family: 'MinSans-Medium';
-   font-size: 12pt;
-   font-weight:bold;
-   cursor: pointer;
-    position: relative;
-    display: inline-block;
-    float: left;
+    font-size: 11pt;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 15px;
 }
 
-div.search-box > div.search-name > a{
+div.searchResult-box > div.search-name > a{
    width: 135px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.search-box > div {display:inline-block;}
-.explain-box > div {display:inline-block;}
-
+.searchResult-box > div {display:inline-block;}
 .search-name a{display:inline-block;}
-.search-box > div:last-child{padding-right:0;float: right;} 
+.searchResult-box > div:last-child{padding-right:0;float: right;} 
 
-.explain-box {
-    overflow: hidden;
-    font-size: 0;
-    padding: 0 10px 10px 10px;
-    margin-top: -8px;
+.searchResult-box{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
 }
 
-.search-box{
-    overflow: hidden;
-    font-size: 0;
-    padding: 15px;
-}
-
-div.search-region{
-   font-size: 11pt;
-   color: #2bae66;
-   cursor: pointer;
-   font-family: 'MinSans-Medium';
-   position: relative;
-   display: inline-block;
-   background-image: url("/image/asset/positionicon.png");
-   background-repeat: no-repeat;
-   background-position: 4px center;
-    background-size: 13px;
-    float: left;
-    padding: 10px 17px 10px 22px;
-    width: 200px; 
+span.search-region{
+    font-size: 11pt;
+    color: #2bae66;
+    font-family: 'MinSans-Medium';
+    width: 181px; 
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.trip-reviewstar{
-   float:right;
-   border:solid 0px #ccc;
-    display:flex;
-    flex-direction: row-reverse;
-    font-size:0.7em;
-    justify-content:space-around;
-    padding:0 .2em;
-    text-align:center;
-    width:5em;
-}
-.trip-reviewstar input{
-   display:none;
-}
-.trip-reviewstar label{
-   color:#ccc;
-}
-
 div.searchFailText{
     font-size: 21pt;
     font-weight: 550;
-    margin-top: 297px;
-    margin-bottom: 368px;
+    margin-top: 300px;
+    margin-bottom: 460px;
     text-align: center;
-}
-
-.searchtripDetail0-reviewstar{
-   float: right;
-    border: solid 0px #ccc;
-    display: flex;
-    flex-direction: row-reverse;
-    font-size: 12px;
-    justify-content: space-around;
-    padding: 0 0.2em;
-    text-align: center;
-    width: 5em;
-    margin-right: 44px;
-}
-.searchtripDetail0-reviewstar span{
-   color:#ccc;
-}
-
-.searchtripDetail1-reviewstar{
-   float: right;
-    border: solid 0px #ccc;
-    display: flex;
-    flex-direction: row-reverse;
-    font-size: 12px;
-    justify-content: space-around;
-    padding: 0 0.2em;
-    text-align: center;
-    width: 5em;
-    margin-right: 44px;
-}
-div.searchtripDetail1-reviewstar > span{
-   color: gold
-}
-div.searchtripDetail1-reviewstar > span:nth-child(-n+4){
-   color: #ccc
-}
-
-.searchtripDetail2-reviewstar{
-   float: right;
-    border: solid 0px #ccc;
-    display: flex;
-    flex-direction: row-reverse;
-    font-size: 12px;
-    justify-content: space-around;
-    padding: 0 0.2em;
-    text-align: center;
-    width: 5em;
-    margin-right: 44px;
-}
-div.searchtripDetail2-reviewstar > span{
-   color: gold
-}
-div.searchtripDetail2-reviewstar > span:nth-child(-n+3){
-   color: #ccc
-}
-.searchtripDetail3-reviewstar{
-   float: right;
-    border: solid 0px #ccc;
-    display: flex;
-    flex-direction: row-reverse;
-    font-size: 12px;
-    justify-content: space-around;
-    padding: 0 0.2em;
-    text-align: center;
-    width: 5em;
-    margin-right: 44px;
-}
-div.searchtripDetail3-reviewstar > span{
-   color: gold
-}
-div.searchtripDetail3-reviewstar > span:nth-child(-n+2){
-   color: #ccc
-}
-
-.searchtripDetail4-reviewstar{
-   float: right;
-    border: solid 0px #ccc;
-    display: flex;
-    flex-direction: row-reverse;
-    font-size: 12px;
-    justify-content: space-around;
-    padding: 0 0.2em;
-    text-align: center;
-    width: 5em;
-    margin-right: 44px;
-}
-div.searchtripDetail4-reviewstar > span{
-   color: gold
-}
-div.searchtripDetail4-reviewstar > span:nth-child(-n+1){
-   color: #ccc
-}
-.searchtripDetail5-reviewstar{
-   float: right;
-    border: solid 0px #ccc;
-    display: flex;
-    flex-direction: row-reverse;
-    font-size: 12px;
-    justify-content: space-around;
-    padding: 0 0.2em;
-    text-align: center;
-    width: 5em;
-    margin-right: 44px;
-}
-.searchtripDetail5-reviewstar span{
-   color: gold;
 }
 
 .searchnoresult{
-    font-size: 21pt;
+    font-size: 28pt;
     font-weight: 550;
-    margin-top: 195px;
-    margin-bottom: 392px;
+    margin-top: 200px;
+    margin-bottom: 416px;
     text-align: center;
 }
+
