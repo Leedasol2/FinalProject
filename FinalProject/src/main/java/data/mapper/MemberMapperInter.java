@@ -32,4 +32,8 @@ public interface MemberMapperInter {
 	public MemberDto getData(String mnum);
 	public void updateMember(MemberDto dto);
 	public void deleteMember(String mnum);
+	public void updatePass(MemberDto dto);
+	public String Findmnum(String email);
+	
+	public String Findpass(String mnum);
 }

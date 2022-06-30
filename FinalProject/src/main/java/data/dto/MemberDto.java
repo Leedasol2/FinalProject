@@ -18,4 +18,8 @@ public class MemberDto {
 	private String phone;
 	private String type;
 	private Timestamp gaipday;
+	
+	public void setPassword(String password) {
+		this.password = password;
+	}
 }

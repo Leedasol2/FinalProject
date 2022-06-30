@@ -6,17 +6,26 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.google.gson.Gson;
+
+import data.dto.MemberDto;
+import data.service.MemberService;
+
 
 @Controller
 public class MailController {
   
   @Autowired
   private JavaMailSender javaMailSender;
+  
+  @Autowired
+  MemberService service;
   
   // 인증메일 보내기
   @RequestMapping(value="/member/CheckMail", method = {RequestMethod.POST})
@@ -42,4 +51,47 @@ public class MailController {
 		
 		return gson.toJson(key);
 	}
+  
+  
+  //비밀번호 찾기용 메일 보내기
+  @RequestMapping(value="/login/misspass", method = {RequestMethod.POST})
+	public String passMail(@RequestParam String userid, @RequestParam String email,
+			@RequestParam String name,@ModelAttribute MemberDto dto) {
+
+	 // 임시 비밀번호 만든 뒤 해당 아이디에 대한 비밀번호 DB값 변경하기
+	  Random random = new Random();
+	  String newpass = "";
+	  
+	  int idcheck = service.getIdCheck(userid); // 등록된 아이디인지 아닌지 체크
+	  int emailcheck = service.getSearchEmail(email); // 등록된 메일인지 아닌지 체크
+	  System.out.println(idcheck + " , " + emailcheck);
+	  String mnum = service.Findmnum(email); // 엠넘 찾기
+	  
+	  if(emailcheck + idcheck == 2) {
+		  // 임시 비밀번호 만들기
+		  for (int i = 0; i < 3; i++) {
+			  int index = random.nextInt(25) + 65; // A~Z까지 랜덤 알파벳 생성
+			  newpass += (char) index;
+		  }
+		  int numIndex = random.nextInt(100000) + 1000; 
+		  newpass += numIndex;
+		  
+		  // 기존 비밀번호 변경	
+		  dto.setPassword(newpass);	  
+		  service.updatePass(dto);
+		  String password = service.Findpass(mnum);
+		  System.out.println(password);
+		  System.out.println(newpass);
+		  
+		  SimpleMailMessage message = new SimpleMailMessage();
+		  message.setTo(email); // 스크립트에서 보낸 메일을 받을 사용자 이메일 주소
+		  message.setSubject("2RUN TRIP에서 " + userid + "회원님의 임시 비밀번호를 알려드립니다.");
+		  message.setText("임시 비밀번호 : " + newpass + "\n임시 비밀번호를 이용해 로그인 한 뒤, 비밀번호를 바꿔주세요.");
+		  javaMailSender.send(message);
+
+		  return "/login/loginMissPassSuccess";
+	  } else {
+		  return "/login/loginMissPassFalse";
+	  }
+  	}	  
 }
