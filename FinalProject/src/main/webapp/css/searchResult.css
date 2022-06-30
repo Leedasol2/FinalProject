@@ -124,9 +124,9 @@ div.search-region{
 div.searchFailText{
     font-size: 21pt;
     font-weight: 550;
-    margin-left: 736px;
     margin-top: 297px;
-    margin-bottom: 435px;
+    margin-bottom: 368px;
+    text-align: center;
 }
 
 .searchtripDetail0-reviewstar{

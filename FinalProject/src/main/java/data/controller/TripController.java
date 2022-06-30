@@ -485,6 +485,12 @@ public class TripController {
 		  return model;
 		}
 		
+		@GetMapping("/searchFail")
+		public String searchFail()
+		{
+			return "/search/searchFail";
+		}
+		
 		@PostMapping("/getfescount")
 		@ResponseBody
 		public int getfescount(@RequestBody Map<String, String> vo) {
