@@ -21,6 +21,57 @@ var fesAjax = function(day){
 	        }
      	});
 }		
+var feslistAjax = function(day){
+	var vo='{"day":"'+day+'"}';
+	//alert(day)
+	
+	
+	$.ajax({
+	        type : "post",
+	        url : "/myTrip/feslist",
+	        contentType: 'application/json',
+	        dataType: "json",
+	        data: vo,
+	        success : function (data) {
+				var feshtml='';
+	        	//alert(data.length);
+	        	
+	        	
+	  
+	        	if(data.length>0){
+				$(data).each(function(){
+					feshtml+='<div class="festivalcalendar-content-inner">';
+					
+					var imgstr=this.image;
+					
+					var imgfirst=imgstr.split(",");
+					
+					var startdate=moment(this.beginday).format("YYYY-MM-DD ");
+					var enddate=moment(this.endday).format("YYYY-MM-DD ");
+
+					feshtml+='<img src="../image/festival/'+imgfirst[0]+'" class="festivalcalendar-img">';								
+					feshtml+='<div class="festivalcalendar-first">'+this.title+'</div>';
+					feshtml+='<div class="festivalcalendar-day">['+startdate+'-'+enddate+']<br><br></div>';
+					feshtml+='<div class="festivalcalendar-two">'+this.intro+'<br></div>';
+					feshtml+='</div> 	';
+					feshtml+='</div> 	';
+				
+				});
+			}
+			      	$("div.fesList").html(feshtml);
+		}
+	       
+     	});
+     	 $("#festivalcalendar-content").attr('style',"visibility: visible;");
+    
+     	
+}	
+
+
+
+
+
+
 var roadData = function(){
 	
    for(var j=1; j<=12; j++){
@@ -74,16 +125,25 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
                 editable: false, // false로 변경 시 draggable 작동 x 
                 displayEventTime: false, // 시간 표시 x
-                eventClick: function(info) {
-					    $("#festivalcalendar-content").attr('style',"visibility: visible;");
-			  },
+               dateClick: function(info) {
+	  		      //alert('clicked ' + info.dateStr);
+	  		      
+	  		      feslistAjax(info.dateStr)
+	  		      
+	  		      
+	  		    },
+	   		    /*select: function(info) {
+	    		    alert('selected ' + info.startStr + ' to ' + info.endStr);
+	  		    },*/
+	 		   
+                //eventClick: function(info) {
+					 //   $("#festivalcalendar-content").attr('style',"visibility: visible;");
+					    
+			  //	},
 			  eventColor: '#00ff0000',
-			 
-			  
-			  
-            });
-            
-            
+			  });
+			
+			      
             calendar.render();
             roadData();
             
