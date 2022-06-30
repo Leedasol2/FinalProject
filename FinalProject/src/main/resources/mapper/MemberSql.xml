@@ -59,4 +59,16 @@ select count(*) from member where name=#{name} and email=#{email}
 <delete id="deleteMember" parameterType="String">
 	delete from member where mnum=#{mnum}
 </delete>
+
+<update id="updatePass" parameterType="mdto">
+  update member set password=#{password} where mnum=#{mnum}
+</update>
+
+<select id="Findmnum" resultType="String" parameterType="String">
+	select mnum from member where email=#{email}
+</select>
+
+<select id="Findpass" resultType="String" parameterType="String">
+	select password from member where mnum=#{mnum}
+</select>
 </mapper>

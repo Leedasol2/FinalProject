@@ -119,6 +119,18 @@ public class LoginController {
 		return "/login/loginMissPass";
 	}	
 	
+	@GetMapping("/loginMissPassFalse")
+	public String loginMissPassFalse() {
+		
+		return "/login/loginMissPassFalse";
+	}
+	
+	@GetMapping("/loginMissPassSuccess")
+	public String loginMissPassSuccess() {
+		
+		return "/login/loginMissPassSuccess";
+	}
+	
 	// 카카오 로그인
 		@GetMapping("/login/kakao")
 		public void kakaoLogin(

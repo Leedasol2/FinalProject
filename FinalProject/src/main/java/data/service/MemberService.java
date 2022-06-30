@@ -53,5 +53,15 @@ public class MemberService {
 	}
 	public void deleteMember(String mnum){
 		mapper.deleteMember(mnum);
-	}	
+	}
+	public void updatePass(MemberDto dto){
+		mapper.updatePass(dto);
+	}
+	public String Findmnum(String email){
+		return mapper.Findmnum(email);
+	}
+	
+	public String Findpass(String mnum){
+		return mapper.Findpass(mnum);
+	}
 }

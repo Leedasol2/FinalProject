@@ -179,4 +179,16 @@ button.login-missid-btn-loginfalse{
 	font-family: MinSans-Black;
 }
 
+button.login-missid-btn-passsuccess{
+	border-radius: 40px;
+    width: 200px;
+   	height: 60px;    
+    color: #33b679;
+    background-color: #fff;  
+    border-style: solid;
+ 	border-color: #33b679;
+ 	margin-left: 200px;
+	font-size: 17px;
+	font-family: MinSans-Black;
+}
 
