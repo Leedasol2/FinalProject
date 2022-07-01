@@ -203,7 +203,9 @@ function nextInfo()
 		  </tr>
 
 		  <tr>
-			<td class="login-email-empty"></td>
+			<td class="login-email-empty">
+			  <div class="email-code">이메일로 인증코드를 발송했습니다.</div>
+			</td>
 		  </tr>
 
 		  <tr>
@@ -217,11 +219,15 @@ function nextInfo()
 			  <button type="button" class= "login-email-btn-code" >인증 확인</button>
 			</td>
 		  </tr>
+		  
+		  <tr>
+			<td class="login-email-empty">
+			  <div class="email-codeok">인증이 완료되었습니다.</div>
+			  <div class="email-codefail">인증코드가 일치하지 않습니다.</div>
+			</td>
+		  </tr>
 		</table>
 
-		<span class="email-code">이메일로 인증코드를 발송했습니다.</span>
-		<span class="email-codeok">인증이 완료되었습니다.</span>
-		<span class="email-codefail">인증코드가 일치하지 않습니다.</span>
 		<span class="email-notyet">이메일 인증이 완료되지 않았습니다.</span>
 
 	<div class = "login-email-btn-group1">
