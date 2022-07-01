@@ -258,7 +258,12 @@ function updateform(content,cnum,e) {
 
 <!-- 본문 시작 -->
 <div class="boardDetailPage-main">
-
+      
+		<!-- 이미지 모달 -->
+		<div class="imagemodal">
+		    <div class="modalBox">
+		    </div>
+		</div>
  <table class="boardDetailPage">
   <tr>
     <td>
@@ -294,12 +299,7 @@ function updateform(content,cnum,e) {
       		</c:forEach>
       	</c:if>
       </div>
-      
-		<!-- 이미지 모달 -->
-		<div class="imagemodal">
-		    <div class="modalBox">
-		    </div>
-		</div>
+
      
    </td>
   </tr>
