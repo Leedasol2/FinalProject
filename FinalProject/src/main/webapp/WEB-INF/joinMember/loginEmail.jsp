@@ -25,6 +25,11 @@ $(function(){
 	//이메일 중복확인
 	$(".login-emailcheck-btn-check").on("click",function(){
 
+		var frontemail=$('input[id=email1]').val();
+		var backemail=$('input[id=email2]').val();
+	
+		if( frontemail != "" && backemail != "" )  {
+			
 	    var email='';
 	    $('input[name=email]').map(function(){
 
@@ -38,9 +43,11 @@ $(function(){
 	        data:{"email":email},
 	        success:function(data){
 	          if(data.check==0){
+	        	$(".login-emailcheck-failemailmessage").css("display","none");
 	        	$(".login-emailcheck-message").css("display","inline-block");
 	            $(".login-emailcheck-failmessage").css("display","none");
 	        } else{
+	        	$(".login-emailcheck-failemailmessage").css("display","none");
 	        	$(".login-emailcheck-message").css("display","none");
 	            $(".login-emailcheck-failmessage").css("display","inline-block");
 	            $("#email1").val("");
@@ -49,11 +56,19 @@ $(function(){
 	       }
 	     }
 	   });
+	}else{
+			$(".login-emailcheck-failemailmessage").css("display","inline-block");
+			$(".login-emailcheck-message").css("display","none");
+			$(".login-emailcheck-failmessage").css("display","none");
+			return false;
+		}
+
 	});
 
 	// 인증메일 전송 버튼
 	$("#sendMail").click(function() {
 
+		alert("인증요청 완료! 잠시만 기다려주세요.");
 		var mail = $("#email").val(); //사용자의 이메일 입력값.
 
 		$.ajax({
@@ -87,6 +102,10 @@ $(function(){
 //모달창 사용하기 버튼 클릭시 이메일 입력
 function modalClose()
 {
+	var frontemail=$('input[id=email1]').val();
+	var backemail=$('input[id=email2]').val();
+
+	if( frontemail != "" && backemail != "" )  {
 	var email='';
     $('input[name=email]').map(function(){
     	
@@ -96,6 +115,12 @@ function modalClose()
     $('input[name=uesemail]').val(email);
     $("#loginemail-modal").modal('hide');
     $(".login-email-content1").attr("src","${root}/image/asset/이메일black.png")
+	} else{
+		$(".login-emailcheck-failemailmessage").css("display","inline-block");
+		$(".login-emailcheck-message").css("display","none");
+		$(".login-emailcheck-failmessage").css("display","none");
+		return false;
+	}
 }
 
 function nextInfoFail()
@@ -248,12 +273,10 @@ function nextInfo()
 	</form>
 
 	<hr class="login-emailcheck-line-up">
-
-
+	
 	  <span class = "login-emailcheck-message">사용 가능한 이메일입니다.</span>
 	  <span class = "login-emailcheck-failmessage">중복된 이메일입니다.</span>
-
-
+      <span class = "login-emailcheck-failemailmessage">이메일 형식을 확인해 주세요.</span>
 
 	<div class="login-emailcheck-btn-login">
 			<button type="button" class="login-emailcheck-btn-check">중복확인</button>
