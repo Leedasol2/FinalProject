@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.google.gson.Gson;
 
 import data.dto.MemberDto;
+import data.mapper.MemberMapperInter;
 import data.service.MemberService;
 
 
@@ -27,6 +28,8 @@ public class MailController {
   @Autowired
   MemberService service;
   
+  @Autowired
+  MemberMapperInter mapper;
   // 인증메일 보내기
   @RequestMapping(value="/member/CheckMail", method = {RequestMethod.POST})
 	@ResponseBody
@@ -56,7 +59,7 @@ public class MailController {
   //비밀번호 찾기용 메일 보내기
   @RequestMapping(value="/login/misspass", method = {RequestMethod.POST})
 	public String passMail(@RequestParam String userid, @RequestParam String email,
-			@RequestParam String name,@ModelAttribute MemberDto dto) {
+			@RequestParam String name) {
 
 	 // 임시 비밀번호 만든 뒤 해당 아이디에 대한 비밀번호 DB값 변경하기
 	  Random random = new Random();
@@ -76,9 +79,11 @@ public class MailController {
 		  int numIndex = random.nextInt(100000) + 1000; 
 		  newpass += numIndex;
 		  
-		  // 기존 비밀번호 변경	
-		  dto.setPassword(newpass);	  
-		  service.updatePass(dto);
+		  // 기존 비밀번호 변경
+		  MemberDto dto = service.getData(mnum);
+		  dto.setPassword(	newpass);
+		  System.out.println(dto);
+		  mapper.updatePass(dto);
 		  String password = service.Findpass(mnum);
 		  System.out.println(password);
 		  System.out.println(newpass);
