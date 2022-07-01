@@ -123,7 +123,7 @@ td.login-info-empty-small{
 
 td.login-info-empty-small2{
 	
-    height: 10px;			
+    height: 18px;			
 }
 
 input.form-logineinfo-input{
@@ -165,6 +165,7 @@ div.login-info-btn-group1{
 
 div.login-info-btn-group2{
 	margin-left: 152px;
+	margin-top: 70px;
 }
 
 label.login-info-btn-check-all{
@@ -173,7 +174,6 @@ label.login-info-btn-check-all{
     outline: 0;
     background-color: #fff;
     color: #696969;  
-    margin-top: 17px;
     margin-bottom: 10px;		
 }
 
@@ -205,7 +205,6 @@ button.login-info-btn-next{
     outline: 0;
     background-color: #fff;
     color: #696969;
-    margin-top: 70px;  
 }
 
 div.login-info-btn-group1{
@@ -241,24 +240,6 @@ img.login-info-next{
 	
 }
 
-span.rewritepass{
-	position: absolute;
-    top: 542px;
-    left: 1220px;
-    font-size: 12px;
-    color: red;
-    display: none;
-}
-
-span.donotmatchpass{
-	position: absolute;
-    top: 613px;
-    left: 1220px;
-    font-size: 12px;
-    color: red;
-    display: none;
-}
-
 div.login-info-btn-group1 input[type="checkbox"] {
     display:none;
 }
@@ -290,65 +271,67 @@ input[id="check2"]:checked + label span {
     background-size: cover;
 }
 
-span.hangulName{
-	position: absolute;
-	top: 286px;
-	right: 500px;
-	font-size: 13px;
+div.hangulName{
+	font-size: 12px;
 	color: red;
-	display: none;
+	margin-top: 5px;
+    margin-left: 5px;
+    display: none;
 }
 
-span.checkuserid{
-	position: absolute;
-	top: 457px;
-	right: 381px;
-	font-size: 13px;
+div.checkuserid{
+	font-size: 12px;
 	color: red;
-	display: none;
+	margin-top: 5px;
+    margin-left: 5px;
+    display: none;
 }
 
-span.duplicateid{
-	position: absolute;
-	top: 439px;
-	right: 574px;
-	font-size: 13px;
+div.duplicateid{
+	font-size: 12px;
 	color: red;
-	display: none;
+	margin-top: 5px;
+    margin-left: 5px;
+    display: none;
 }
 
-span.availableid{
-	position: absolute;
-	top: 439px;
-	right: 548px;
-	font-size: 13px;
-	color: #33b679;
-	display: none;
+div.userphonenumber{
+	font-size: 12px;
+	color: red;
+	margin-top: 5px;
+    margin-left: 5px;
+    display: none;
 }
 
-span.userphonenumber{
-	position: absolute;
-	top: 706px;
-	right: 421px;
-	font-size: 13px;
-	color: red;
-	display: none;
+div.allnochecklist{
+	font-size: 12px;
+    color: red;
+    text-align: center;
+    margin-right: 158px;
+    padding-bottom: 5px;
+    display: none;
 }
 
-span.allnochecklist{
-	position: absolute;
-	top: 905px;
-	left: 853px;
-	font-size: 13px;
+div.allnocheckbtn{
+	font-size: 12px;
 	color: red;
-	display: none;
+	margin-top: 5px;
+    margin-left: 35px;
+    display: none;
+} 
+
+div.rewritepass{
+    font-size: 12px;
+    color: red;
+    margin-top: 4px;
+    margin-left: 5px;
+    display: none;
 }
 
-span.allnocheckbtn{
-	position: absolute;
-	top: 860px;
-	left: 850px;
-	font-size: 13px;
-	color: red;
-	display: none;
+div.donotmatchpass{
+    font-size: 12px;
+    color: red;
+    margin-top: 3px;
+    margin-left: 5px;
+    display: none;
 }
