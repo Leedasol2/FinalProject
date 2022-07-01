@@ -12,12 +12,12 @@
 
 $(function(){
 	
-	var allchecklist=true;
-
 	//전체 체크박스 선택/해제
 	$("#allCheck").click(function() {
-		if($("#allCheck").is(":checked"))
+		if($("#allCheck").is(":checked")){
 			$("input[name=RequiredCheck]").prop("checked", true);
+			$(".allnocheckbtn").css("display","none");
+		}
 		else
 			$("input[name=RequiredCheck]").prop("checked", false);
 	});
@@ -32,6 +32,14 @@ $(function(){
 			$("#allCheck").prop("checked", true);
 	});
 
+	var userinfoname=false;
+	var userinfoid=false;
+	var userinfoid2=false;
+	var userinfopwd1=false;
+	var userinfopwd2=false;
+	var userinfohp=false;
+	var userinfobtn=false;
+
 	//이름 2글자 이상 16글자 이하, 한글만
 	$(".username").blur(function(){
 
@@ -41,10 +49,10 @@ $(function(){
 
 		if(!checkname.test(uname) || uname.length<2 || uname.length>16 ){
 			$(".hangulName").css("display","inline-block");
-			allchecklist=false;
+			userinfoname=false;
 		} else{
 			$(".hangulName").css("display","none");
-			allchecklist=true;
+			userinfoname=true;
 		}
 	});
 
@@ -59,10 +67,10 @@ $(function(){
 
 	    if( !pattern1.test(i) || i.length<6 || !pattern1.test(i) && !pattern2.test(i) && i.length<6 ) {
 	    	$(".checkuserid").css("display","inline-block"); //6자리 이상 영문 또는 영문과 숫자 조합으로 작성해 주세요.
-	    	allchecklist=false;
+	    	userinfoid=false;
 	    }else {
 	    	$(".checkuserid").css("display","none");
-	    	allchecklist=true;
+	    	userinfoid=true;
 	    }
 
 	    $.ajax({
@@ -73,10 +81,10 @@ $(function(){
 	        success:function(data){
 	           if(data.check!=0){
 	        	   $(".duplicateid").css("display","inline-block"); //중복된 아이디입니다.
-	        	   allchecklist=false;
+	        	   userinfoid2=false;
 	           }else{
 	        	   $(".duplicateid").css("display","none");
-	        	   allchecklist=true;
+	        	   userinfoid2=true;
 	           }
 	        }
 	     });
@@ -91,10 +99,10 @@ $(function(){
 
 		if(!check1){
 			$(".rewritepass").css("display","inline-block");
-			allchecklist=false;
+			userinfopwd1=false;
 		} else{
 			$(".rewritepass").css("display","none");
-			allchecklist=true;
+			userinfopwd1=true;
 		}
 	});
 
@@ -106,10 +114,10 @@ $(function(){
 	    
 	    if( p1 != p2 ) {
 	        $(".donotmatchpass").css("display","inline-block");
-	        allchecklist=false;
+	        userinfopwd2=false;
 	    } else{
 	        $(".donotmatchpass").css("display","none");
-	        allchecklist=true;
+	        userinfopwd2=true;
 	    }
 	});
 
@@ -121,10 +129,10 @@ $(function(){
 		
 		if(!hp_pattern.test(hp)) {
 			$(".userphonenumber").css("display","inline-block");
-			allchecklist=false;
+			userinfohp=false;
 	    } else {
 	    	$(".userphonenumber").css("display","none");
-	    	allchecklist=true;
+	    	userinfohp=true;
 	    }
 	});
 
@@ -136,13 +144,14 @@ $(function(){
 
 		if(total!=checked){
 			$(".allnocheckbtn").css("display","inline-block");
-			allchecklist=false;
+			userinfobtn=false;
 		} else{
 			$(".allnocheckbtn").css("display","none");
-			allchecklist=true;
+			userinfobtn=true;
 		}
 
-		if(allchecklist == false) {
+		if(userinfoname == false || userinfoid == false || userinfoid2 == false ||userinfopwd1 == false || 
+		   userinfopwd2 == false || userinfohp == false || userinfobtn == false) {
 
 			$(".allnochecklist").fadeIn(500).delay(4000).fadeOut(500);
 			return false;
