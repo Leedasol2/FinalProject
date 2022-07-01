@@ -47,8 +47,21 @@
 						<c:if test="${dto.part.equals('themepark') }">
 							<div class="scrap-img"><img src="${root}/image/themepark/${dto.image}" class="scrap-img"></div>
 						</c:if>
+						<div class="scrap-name">
 						
-						<div class="scrap-name"><span>${dto.title }</span></div>
+						
+							<c:if test="${dto.part.equals('trip') }">
+								<span class="part">[여행지]</span>
+							</c:if>
+							<c:if test="${dto.part.equals('festival') }">
+								<span class="part">[축제]</span>
+							</c:if>
+							<c:if test="${dto.part.equals('themepark') }">
+								<span class="part">[테마파크]</span>
+							</c:if>
+						
+						
+						<span>${dto.title }</span></div>
 					</div>
 				</c:forEach>
 			

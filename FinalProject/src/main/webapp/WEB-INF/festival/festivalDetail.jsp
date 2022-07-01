@@ -29,8 +29,7 @@ $(function(){
 		
 		$(".tripimage").attr("src",src);
 	});
-	
-	<!-- scrap -->
+
 	$("span.tripscrap").click(function(){
 		var tnum=$(':hidden#tnum').val();
 		$("img.scrapImg").attr("src","../image/asset/스크랩아이콘.png");
@@ -44,8 +43,7 @@ $(function(){
 				
 			}
 		});
-	});	
-	
+
 });
 
 </script>
