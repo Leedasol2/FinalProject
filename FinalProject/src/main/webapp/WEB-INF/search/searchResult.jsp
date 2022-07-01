@@ -64,18 +64,20 @@ $(function(){
            <a href="/myTrip/festivalDetail?tnum=${search.tnum}">${search.title }</a>
          </c:if>
         </div>
-           
-      <div class="best-star-rating">
-		<div class="tripstory-star-ratings">
-		  <div class="tripstory-star-ratings-fill space-x-2 text-lg"
-				style="width: ${search.avgrstar*20+1.5}%">
-			<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      
+        <c:if test="${search.part=='themepark' || search.part=='trip'}">     
+	      <div class="best-star-rating">
+			<div class="tripstory-star-ratings">
+			  <div class="tripstory-star-ratings-fill space-x-2 text-lg"
+					style="width: ${search.avgrstar*20+1.5}%">
+				<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+			  </div>
+			  <div class="tripstory-star-ratings-base space-x-2 text-lg">
+				<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+			  </div>
+			</div>
 		  </div>
-		  <div class="tripstory-star-ratings-base space-x-2 text-lg">
-			<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-		  </div>
-		</div>
-	  </div>
+        </c:if>
             
       </div>
       
