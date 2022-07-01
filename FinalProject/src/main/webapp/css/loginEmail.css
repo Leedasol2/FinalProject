@@ -194,36 +194,33 @@ img.login-email-next{
 	
 }
 
-span.email-code{
-	position: absolute;
-	top: 296px;
-	left: 1190px;
+div.email-code{
 	font-size: 12px;
-	color: red;
-	display: none;
+    color: red;
+    margin-top: 5px;
+    margin-left: 5px;
+    display: none;
 }
 
-span.email-codeok{
+div.email-codeok{
 	color: #33b679;
-	font-size: 13px;
-	position: absolute;
-	top: 424px;
-	left: 723px;
-	display: none;
+	font-size: 12px;
+	margin-top: 5px;
+    margin-left: 5px;
+    display: none;
 }
 
-span.email-codefail{
+div.email-codefail{
 	color: red;
-	font-size: 13px;
-	position: absolute;
-	top: 424px;
-	left: 723px;
-	display: none;
+	font-size: 12px;
+	margin-top: 5px;
+    margin-left: 5px;
+    display: none;
 }
 
 span.email-notyet{
 	position: absolute;
-	top: 575px;
+	top: 600px;
 	font-size: 14px;
 	color: red;
 	display: none;
