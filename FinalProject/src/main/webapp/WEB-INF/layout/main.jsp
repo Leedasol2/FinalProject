@@ -65,27 +65,12 @@
                  <c:forEach var="tdto" items="${triplist}" begin="0" end="3">
                   <div class="tripstory-content">
                     <c:forTokens var="img" items="${tdto.image }" delims="," begin="0" end="0">
-                       <c:if test="${tdto.part=='trip'}">
                            <img src="${root}/image/tripspot/${img}" class="tripstory-img" onclick="location.href='/myTrip/myTripDetail?tnum=${tdto.tnum}'">
-                         </c:if>
-                           <c:if test="${tdto.part=='themepark'}">
-                         <img src="${root}/image/themepark/${img}" class="tripstory-img" onclick="location.href='/myTrip/themeParkDetail?tnum=${tdto.tnum}'">
-                       </c:if>
-                       <c:if test="${tdto.part=='festival'}">
-                         <img src="${root}/image/festival/${img}" class="tripstory-img" onclick="location.href='/myTrip/festivalDetail?tnum=${tdto.tnum}'">
-                       </c:if>
                     </c:forTokens>
                      
                      <div class="titleandstar">
-                        <c:if test="${tdto.part=='trip'}">
-                          <div class="maintriptitle" onclick="location.href='/myTrip/myTripDetail?tnum=${tdto.tnum}'">${tdto.title }</div>
-                        </c:if>
-                        <c:if test="${tdto.part=='themepark'}">
-                          <div class="maintriptitle" onclick="location.href='/myTrip/themeParkDetail?tnum=${tdto.tnum}'">${tdto.title }</div>
-                        </c:if>
-                        <c:if test="${tdto.part=='festival'}">
-                          <div class="maintriptitle" onclick="location.href='/myTrip/festivalDetail?tnum=${tdto.tnum}'">${tdto.title }</div>
-                        </c:if>
+          
+                        <div class="maintriptitle" onclick="location.href='/myTrip/myTripDetail?tnum=${tdto.tnum}'">${tdto.title }</div>
                         
                         <div class="best-star-rating">
 							<div class="tripstory-star-ratings">
@@ -100,6 +85,7 @@
 						</div>
 						
         			 </div>
+        			 
                         <div class="maintripstory-explanation">${tdto.intro }</div>
                         
                         <div class="listbtm">
@@ -107,7 +93,7 @@
 						  <span class="maintripstory-region">${tdto.location }</span>
 						</div>
                      
-                  </div>
+                    </div>
                </c:forEach>
                            
                   </div>
@@ -116,9 +102,15 @@
                      <div class="img-box">
                         <img src="${root}/image/asset/main-tripstorybanner.png">
                      </div>
-                     <div class="tripstory-subject" onclick="location.href='/board/shareTripHome'">
-                        <a >오늘의 여행</a>
+                     
+                     <div class="tripstory-subject-box">
+                       <div class="tripstory-subject">
+                          <a href='/board/shareTripHome'>오늘의 여행</a>
+                       </div>
+                       <img class="tripstory-subject-img" src="/image/asset/plusicon.png" 
+                       onclick="location.href='/board/bulletinBoard'">
                      </div>
+                     
                      <ul class="tripstory-list">
                        <c:forEach var="bdto" items="${boardlist}" begin="0" end="7">
                         <li>

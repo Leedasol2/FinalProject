@@ -173,6 +173,7 @@ ul.gnb > li > ul > li {
     font-size: 15px;
     color: #fff;
     padding: 30px;
+    cursor: pointer;
 }
 
 ul.gnb > li > ul > li:hover{font-size:13pt;}
@@ -486,16 +487,20 @@ div.tripstory-subject{
 	font-family: 'MinSans-Black' !important; 
 	font-size:17pt;
 	cursor: pointer;
-	width: 100%;
-	background-image: url("/image/asset/plusicon.png");
-	background-repeat: no-repeat;
-	background-position: right center;
-	position: relative;
-	display: inline-block;
-	vertical-align: middle;
     padding: 0 15px;
     margin-bottom:20px;
 }
+img.tripstory-subject-img{
+	cursor: pointer;
+    padding-right: 5px;
+    padding-bottom: 17px;
+}
+div.tripstory-subject-box{
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 div.-subject > a {
     float: left;
 }

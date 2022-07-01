@@ -48,7 +48,7 @@
 	
 	<!-- 동현 -->
 	<select id="getAllTrips" resultType="tdto">
-	  select * from trip order by tnum desc
+	  select * from trip where part='trip' order by tnum desc
 	</select>
 	<select id="getAllActivitys" resultType="tdto">
       select * from trip where part=${part} order by tnum desc
