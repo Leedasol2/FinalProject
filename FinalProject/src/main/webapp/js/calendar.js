@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                     alert("내용을 입력하세요.");
                                 }else if(start_date == "" || end_date ==""){
                                     alert("날짜를 입력하세요.");
-                                }else if(new Date(end_date)- new Date(start_date) < 0){ // date 타입으로 변경 후 확인
+                                }else if(new Date(end_date)- new Date(start_date) < 0){ 
                                     alert("종료일이 시작일보다 먼저입니다.");
                                 }else{ // 정상적인 입력 시
                                 var color = $("input[type=radio][name=calendar_color]:checked").val();
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                         "schecolor" : color,
                                     }//전송할 객체 생성
 
-                                    console.log(obj); //서버로 해당 객체를 전달해서 DB 연동 가능
+                                    console.log(obj); //서버로 해당 객체를 전달해서 DB 연동
                                     
                                     $.ajax({
                                     	type:"post",
@@ -72,7 +72,6 @@ document.addEventListener('DOMContentLoaded', function () {
                                     	success:function(data){
 											$('#calendarModal [data-dismiss]').click();
 											window.location.reload();
-											//loadCalendarEvent();				
 										}
 									});
                                     
@@ -123,7 +122,6 @@ document.addEventListener('DOMContentLoaded', function () {
 									$("div.scheGet").html(s);
 									
 									$("#UpdateBtn").on("click",function(){
-										//alert("수정")
 										$("#calendarModal-update").modal("show");
 										$("#calendar_content_update").val(title);
 										
@@ -138,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			                                    alert("내용을 입력하세요.");
 			                                }else if(start_date == "" || end_date ==""){
 			                                    alert("날짜를 입력하세요.");
-			                                }else if(new Date(end_date)- new Date(start_date) < 0){ // date 타입으로 변경 후 확인
+			                                }else if(new Date(end_date)- new Date(start_date) < 0){ 
 			                                    alert("종료일이 시작일보다 먼저입니다.");
 			                                }else{ // 정상적인 입력 시
 			                                    var obj1 = {
@@ -149,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			                                        "schenum" : schenum,
 			                                    }//전송할 객체 생성
 			
-			                                    console.log(obj1); //서버로 해당 객체를 전달해서 DB 연동 가능
+			                                    console.log(obj1); 
 			                                    
 			                                    $.ajax({
 			                                    	type:"post",
@@ -173,7 +171,6 @@ document.addEventListener('DOMContentLoaded', function () {
 										
 									});
 									$("#DeleteBtn").on("click",function(){
-										//alert("삭제")
 										if(confirm("'"+ info.event.title +"' 일정을 삭제하시겠습니까 ?")){
 				                                // 확인 클릭 시
 				                                $.ajax({
@@ -186,7 +183,6 @@ document.addEventListener('DOMContentLoaded', function () {
 													}
 												});
 												window.location.reload();
-												//loadCalendarEvent();
 										}
 									});
 								}
@@ -196,7 +192,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
             
             calendar.render();
-            //window.location.reload();
             loadCalendarEvent();
             
             

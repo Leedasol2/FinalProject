@@ -15,7 +15,7 @@
 		insert into review (mnum,tnum,rstar,rcontents,rday) values(#{mnum},#{tnum},#{rstar},#{rcontents},now())
 	</insert>
 	<update id="updateReview" parameterType="rdto">
-		update review set rcontents=#{rcontents} where rnum=#{rnum}
+		update review set rcontents=#{rcontents}, rstar=#{rstar} where rnum=#{rnum}
 	</update>
 	<delete id="deleteReview" parameterType="String">
 		delete from review where rnum=#{rnum}

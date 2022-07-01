@@ -35,10 +35,8 @@ public class ReviewRestController {
 		List<DetailReviewDto> list=mapper.getList(tnum);
 		for(DetailReviewDto d:list)
 		{
-			//System.out.println(d.getMnum());
 			String userid=memService.getUserId(d.getMnum());
 			d.setUserid(userid);
-			//System.out.println(userid);
 		}
 		return list;
 	}

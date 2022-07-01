@@ -51,9 +51,7 @@
 											</div>
 										</div>
 										<div class="review-edit">
-											<button type="button" rnum=${r.rnum} currentPage=${currentPage }
-												<%-- onclick="location.href='delete?rnum=${r.rnum}&currentPage=${currentPage}'" --%>
-												id="btnDel">삭제</button>
+											<button type="button" rnum=${r.rnum} currentPage=${currentPage} id="btnDel">삭제</button>
 											<button type="button"
 												onclick="location.href='myPageReviewEdit?rnum=${r.rnum}$tnum=${r.tnum}&currentPage=${currentPage}'">수정</button>
 											<div class="review-day">

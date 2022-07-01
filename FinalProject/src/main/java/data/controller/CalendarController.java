@@ -49,7 +49,6 @@ public class CalendarController {
 	@PostMapping("/mypage/ScheDelete")
 	public String delete(@RequestParam String schenum)
 	{
-		//System.out.println(schenum);
 		service.deleteSchedule(schenum);
 		return "true";
 	}
@@ -58,7 +57,6 @@ public class CalendarController {
 	@ResponseBody
 	public CalendarDto ScheGet(@RequestBody String schenum)
 	{
-		//System.out.println("컨트롤러 실행"+schenum);
 		return service.getSchedule(schenum);
 	}
 
@@ -67,7 +65,6 @@ public class CalendarController {
 	@ResponseBody
 	public void updateSchedule(@RequestBody CalendarDto dto)
 	{
-		//System.out.println("컨트롤러 실행");
 		service.updateSchedule(dto);
 	}
 	
