@@ -111,12 +111,16 @@ public class TripController {
 	class AvgrstarComparator implements Comparator<TripDto>{
 		
 		@Override
-		public int compare(TripDto t1,TripDto t2) {
+		public int compare(TripDto t1, TripDto t2) {
+			
+			//리뷰count 같을때 동작
+			if(t1.getReviewcount() == t2.getReviewcount()) {
 			if(t1.getAvgrstar() > t2.getAvgrstar()) {
 				return 1;
 			}else if
 			(t1.getAvgrstar()<t2.getAvgrstar()) {
 				return -1;
+			}
 			}
 			return 0;
 		}
@@ -152,6 +156,19 @@ public class TripController {
 		return "/trip/regionTrip";
 	}
 	
+	//retionTrip 카테고리 클릭 이벤트
+		@PostMapping("/RegionChange")
+		public String RegionChange(@RequestParam String CurrentRegion ,Model model) {
+			
+			List<TripDto> regionList=tservice.getRegionSortList(CurrentRegion);
+
+			String regiontext=CurrentRegion;
+			model.addAttribute("regionList",regionList);
+			model.addAttribute("regiontext",regiontext);
+
+			return "/trip/regionTrip";
+		}
+		
 	@PostMapping("/reviewCountSelect")
 	public String reviewCountSelect(@RequestParam String SelectSort,@RequestParam(value =  "tnum",required = false) String tnum,
 			Model model,@RequestParam String regiontext) {
@@ -179,7 +196,7 @@ public class TripController {
 		}
 		
 		List<TripDto> regionList=tservice.getRegionhrstarList(regiontext);
-		
+		regionList.sort(new AvgrstarComparator().reversed());
 		
 		model.addAttribute("regionList",regionList);
 		model.addAttribute("regiontext",regiontext);
@@ -223,7 +240,7 @@ public class TripController {
 	}
 	
 	//themaTrip Select 선택이벤트
-	@PostMapping("/themahighstarSelect")
+	@PostMapping("/themehighstarSelect")
 	public String themahighstarSelect(@RequestParam String SelectSort,@RequestParam(value =  "tnum",required = false) String tnum,
 			Model model,@RequestParam String themetext) {
 		
@@ -233,7 +250,6 @@ public class TripController {
 		
 		List<TripDto> themeList=tservice.getThemehrstarList(themetext);
 		
-	
 		model.addAttribute("themeList",themeList);
 		model.addAttribute("themetext",themetext);
 		model.addAttribute("SelectSort",SelectSort);
@@ -250,7 +266,7 @@ public class TripController {
 		}
 		
 		List<TripDto> themeList=tservice.getThemeCountList(themetext);
-		
+		themeList.sort(new AvgrstarComparator().reversed());
 		model.addAttribute("themeList",themeList);
 		model.addAttribute("themetext",themetext);
 		model.addAttribute("SelectSort",SelectSort);
@@ -283,29 +299,15 @@ public class TripController {
 			themetext="바다";
 		}
 		
-		List<TripDto> themeList=tservice.getThemeSortList(themetext);
+		List<TripDto> themeList=tservice.getThemeCountList(themetext);
 		
-		model.addAttribute("regionList",themeList);
+		model.addAttribute("themeList",themeList);
 		model.addAttribute("themetext",themetext);
 		model.addAttribute("SelectSort",SelectSort);
 		
 		return "/trip/themaTrip";
 	}
 	
-	
-	//retionTrip 카테고리 클릭 이벤트
-	@PostMapping("/RegionChange")
-	public String RegionChange(@RequestParam String CurrentRegion ,Model model) {
-		
-		List<TripDto> regionList=tservice.getRegionSortList(CurrentRegion);
-
-		String regiontext=CurrentRegion;
-		model.addAttribute("regionList",regionList);
-		model.addAttribute("regiontext",regiontext);
-
-		return "/trip/regionTrip";
-	}
-		
 	//테마별여행지 페이지
 	@GetMapping("/themaTrip")
 	public String themaTrip(Model model,@RequestParam(value =  "tnum",required = false) String tnum,
@@ -325,11 +327,11 @@ public class TripController {
 	@PostMapping("/ThemeChange")
 	public String ThemeChange(@RequestParam String CurrentTheme,Model model) {
 
-		List<TripDto> themeList=tservice.getThemeList(CurrentTheme);
-		String themetest=CurrentTheme;
+		List<TripDto> themeList=tservice.getThemeSortList(CurrentTheme);
+		String themetext=CurrentTheme;
 		
 		model.addAttribute("themeList",themeList);
-		model.addAttribute("themetest",themetest);
+		model.addAttribute("themetext",themetext);
 
 		return "/trip/themaTrip";
 	}

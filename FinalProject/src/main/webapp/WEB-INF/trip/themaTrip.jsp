@@ -27,8 +27,6 @@
 			$("div.themeaofkorea > span").click(function() {
 
 				var CurrentTheme = $(this).text();
-				$("div.regionofkorea > span").css("color", "gray");
-				$(this).css("color", "#2bae66");
 
 				$.ajax({
 
@@ -41,6 +39,7 @@
 					success : function(data) {
 
 						$('body').html(data);
+						colorChange()
 
 					}
 				});
@@ -49,7 +48,7 @@
 			// 	select 클릭시 이벤트
 			$("select.sortselect").change(function() {
 				var SelectSort = $(this).val();
-				var themetest = '${themetest}';
+				var themetext = '${themetext}';
 
 				//조건이 리뷰많은순일때
 				if (SelectSort == "lotsofreviews") {
@@ -61,12 +60,13 @@
 						url : "themereviewCountSelect",
 						data : {
 							"SelectSort" : SelectSort,
-							"themetest" : themetest
+							"themetext" : themetext
 						},
 						success : function(data) {
 
 							$('body').html(data);
 							initSort();
+							colorChange()
 						}
 					});
 				}
@@ -81,12 +81,13 @@
 						url : "themehighstarSelect",
 						data : {
 							"SelectSort" : SelectSort,
-							"themetest" : themetest
+							"themetext" : themetext
 						},
 						success : function(data) {
 
 							$('body').html(data);
 							initSort();
+							colorChange()
 						}
 					});
 				}
@@ -101,12 +102,13 @@
 						url : "themelowstarSelect",
 						data : {
 							"SelectSort" : SelectSort,
-							"themetest" : themetest
+							"themetext" : themetext
 						},
 						success : function(data) {
 
 							$('body').html(data);
 							initSort();
+							colorChange()
 						}
 					});
 				}
@@ -121,12 +123,13 @@
 						url : "themetopviewSelect",
 						data : {
 							"SelectSort" : SelectSort,
-							"themetest" : themetest
+							"themetext" : themetext
 						},
 						success : function(data) {
 
 							$('body').html(data);
 							initSort();
+							colorChange()
 						}
 					});
 				}
@@ -153,6 +156,37 @@
 				$("#selectopt > option[value='lowstarscore']").attr("selected",
 						"selected");
 			}
+		}
+		
+		function colorChange(){
+			var CurrentTheme=$(this).text();
+			var themetext='${themetext}';
+			
+			 if(CurrentTheme=='바다' || themetext=='바다'){
+			       $("span.sea").css("color","#2bae66");
+			       $("span.sea").siblings().css("color","gray");
+			    }else if(CurrentTheme=='산' || themetext=='산'){
+			       $("span.mountain").css("color","#2bae66");
+			       $("span.mountain").siblings().css("color","gray");
+			    }else if(CurrentTheme=='계곡' || themetext=='계곡'){
+			       $("span.valley").css("color","#2bae66");
+			       $("span.valley").siblings().css("color","gray");
+			    }else if(CurrentTheme=='도시관광' || themetext=='도시관광'){
+			       $("span.citytour").css("color","#2bae66");
+			       $("span.citytour").siblings().css("color","gray");
+			    }else if(CurrentTheme=='농촌체험' || themetext=='농촌체험'){
+			       $("span.rural-experience").css("color","#2bae66");
+			       $("span.rural-experience").siblings().css("color","gray");
+			    }else if(CurrentTheme=='이색체험' || themetext=='이색체험'){
+			       $("span.unique-experience").css("color","#2bae66");
+			       $("span.unique-experience").siblings().css("color","gray");
+			    }else if(CurrentTheme=='역사' || themetext=='역사'){
+			       $("span.history").css("color","#2bae66");
+			       $("span.history").siblings().css("color","gray");
+			    }else if(CurrentTheme=='기타' || themetext=='기타'){
+			       $("span.other").css("color","#2bae66");
+			       $("span.other").siblings().css("color","gray");
+			    }
 		}
 	</script>
 
@@ -223,7 +257,6 @@
 											<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 										</div>
 									</div>
-
 								</div>
 							</div>
 							<div class="trip-explanation">${theme.intro }</div>

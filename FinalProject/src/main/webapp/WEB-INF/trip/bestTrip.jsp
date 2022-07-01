@@ -94,33 +94,5 @@
 
 	</div>
 	<!-- 본문 끝 -->
-
-	<!-- 페이징 -->
-	<c:if test="${totalCount>0 }">
-		<div style="text-align: center">
-			<ul class="pagination">
-				<!-- 이전 -->
-				<c:if test="${startPage>1 }">
-					<li><a href="bestTrip?currentPage=${startPage-1}">이전</a></li>
-				</c:if>
-
-				<c:forEach var="pp" begin="${startPage }" end="${endPage }">
-					<c:if test="${currentPage==pp }">
-						<li class="active"><a href="list?currentPage=${pp}">${pp }</a>
-						</li>
-					</c:if>
-					<c:if test="${currentPage!=pp }">
-						<li><a href="bestTrip?currentPage=${pp }">${pp }</a></li>
-					</c:if>
-				</c:forEach>
-
-				<!-- 다음 -->
-				<c:if test="${endPage<totalPage }">
-					<li><a href="bestTrip?currentPage=${endPage+1}">다음</a></li>
-				</c:if>
-			</ul>
-		</div>
-	</c:if>
-
 </body>
 </html>

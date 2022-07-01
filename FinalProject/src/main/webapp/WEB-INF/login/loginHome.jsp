@@ -16,7 +16,7 @@
 		<span class="login-home-title">로그인</span>
 		<hr class="login-home-line-up">		
 			<div class="login-home-main">
-				<form action="loginmain" method="post" class="form-loginhome">
+				<form action="/login/loginmain" method="post" class="form-loginhome">
 					<table class="login-home-table">
 						<tr>
 							<td><input type="text" name="userid" class="form-loginhome-input" placeholder="아이디" required="required"
@@ -47,7 +47,8 @@
 		<div class="login-home-btn3">
 			<button type="button" class="btn-login-home-kakao"><img src="${root }/image/asset/카톡원형.png" width = "50px"
 			onclick="kakaoLogin();"></button>
-			<button type="button" class="btn-login-home-naver"><img src="${root }/image/asset/네이버원형.png" width = "50px"></button>
+			<button type="button" class="btn-login-home-naver" id="naverIdLogin"><img src="${root }/image/asset/네이버원형.png" width = "50px"
+			onclick="naverLogin.init();"></button>
 		</div>
 		
 		<br><br><br>
@@ -92,16 +93,6 @@ function kakaoLogin() {
         	  knickname=response.properties['nickname'];
         	  
         	  $("#kakao_nickname").val(knickname);
-//         	  $("#kakao_profile_image").text(response.properties['profile_image']);
-//         	  $("#kpi").attr("src",response.properties['profile_image']);
-        	  
-//         	  kp=response.properties['profile_image'];
-//         	  $("#kakao_profile_image").val(kp);
-//         	  alert(kp);
-//         	  $("#kakao_birthday").text(response.kakao_account.birthday);
-//         	  kb=response.kakao_account.birthday;
-//         	  $("#kakao_birthday").val(kb);
-//         	  alert(kb);
 
         	  $.ajax({
         			type:"get",
@@ -149,12 +140,19 @@ function kakaoLogout() {
       Kakao.Auth.setAccessToken(undefined)
     }
   }  
+ function nlogout1(){
+	 window.open("http://nid.naver.com/nidlogin.logout");
+ }
+ function nlogout2(){
+	 location.href="/login/logout";
+ }
 </script>
 
 
 <!-- 네이버아이디로로그인 버튼 노출 영역 -->
 <div id="naverIdLogin"></div>
 <!-- //네이버아이디로로그인 버튼 노출 영역 -->
+<div onclick="nlogout2(); nlogout1();">네이버 로그아웃</div>
 
 <!-- 네이버아디디로로그인 초기화 Script -->
 <script type="text/javascript">

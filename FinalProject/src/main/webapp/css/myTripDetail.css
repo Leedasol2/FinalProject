@@ -109,13 +109,16 @@ img.tripimage{
 	height: 400px;
 	border: 1px solid #afafaf;
 }
+div.smimage{
+	width: 600px;
+}
+
 div.smimage > img{
-	width: 196px;
+	width: 197.5px;
 	height: 150px;
 	cursor: pointer;
 	margin-top: 10px;
 	border: 1px solid #afafaf;
-	margin-right: 5px;
 	margin-bottom: 50px;
 }
 div.tripdetailsubject{
