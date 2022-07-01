@@ -9,7 +9,7 @@
 <body>
 <script type="text/javascript">
 	alert("로그인이 필요한 서비스입니다.");
-	location.herf="/board/shareTripHome";
+	location.herf="/board/bulletinBoard";
 </script>
 </body>
 </html>

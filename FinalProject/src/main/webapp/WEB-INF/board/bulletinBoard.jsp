@@ -25,9 +25,11 @@
 		<!-- 게시판이름 + 글쓰기 버튼 -->
 		<div class="bulBoardHeader">
 			<span class="bulBoard">자유게시판</span>
-			<span class="writeBul">
-				<button class="writeBul" onclick="location.href='/board/boardwriteform'">글쓰기</button>
-			</span>
+			<c:if test="${sessionScope.loginok=='yes' }">
+				<span class="writeBul">
+					<button class="writeBul" onclick="location.href='/board/boardwriteform'">글쓰기</button>
+				</span>
+			</c:if>
 		</div>
 		<hr class="hr2">
 		<div>
