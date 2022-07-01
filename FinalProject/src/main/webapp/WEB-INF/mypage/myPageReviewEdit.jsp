@@ -20,7 +20,17 @@ $(function(){
 			$(this).prop("type","submit");
 		}
 	});
+	
+
+	var rstar=${dto.rstar};
+	for(var i=1;i<=5;i++){
+		if(rstar==i){
+			$(":radio[id='"+i+"-stars']").attr('checked', true);
+		};
+	};
+	
 });
+
 </script>
 </head>
 <body>
@@ -31,7 +41,7 @@ $(function(){
 					<div class="mypage-title">마이페이지</div>
 					<div class="mypage-menu">
 						<ul class="mypage-ul">
-							<li class="mypage-li"><a href="${root}/html/myPageEdit">회원정보수정</a></li> <!-- 추후에 맵핑주소 보고 바꾸기 -->
+							<li class="mypage-li"><a href="${root}/html/myPageEdit">회원정보수정</a></li> <!-- TODO: html을 mypage로 바꾸기 -->
 							<li class="mypage-li"><a href="${root}/html/myPageScrap">스크랩</a></li> 
 							<li class="mypage-li"><a href="${root}/html/myPageCalendar">마이캘린더</a></li>
 							<li class="mypage-li"><a href="${root}/mypage/myPageReview">리뷰</a></li>
@@ -47,15 +57,18 @@ $(function(){
 							<div class="review-topbox">
 								<div class="review-title">
 									<a href="#">${dto.title}</a>
-									<div class="tripstory-star-ratings">
-									<div class="tripstory-star-ratings-fill space-x-2 text-lg"
-										style="width: ${dto.rstar*20}%">
-										<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-									</div>
-									<div class="tripstory-star-ratings-base space-x-2 text-lg">
-										<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-									</div>
-								</div>
+									<div class="modal-star-rating-review-write">
+					                      <input type="radio" id="5-stars" name="rstar" value="5" />
+					                      <label for="5-stars" class="star">&#9733;</label>
+					                      <input type="radio" id="4-stars" name="rstar" value="4" />
+					                      <label for="4-stars" class="star">&#9733;</label>
+					                      <input type="radio" id="3-stars" name="rstar" value="3" />
+					                      <label for="3-stars" class="star">&#9733;</label>
+					                      <input type="radio" id="2-stars" name="rstar" value="2" />
+					                      <label for="2-stars" class="star">&#9733;</label>
+					                      <input type="radio" id="1-star" name="rstar" value="1" />
+					                      <label for="1-star" class="star">&#9733;</label>
+						   		</div>
 								</div>
 								<div class="review-edit">
 									<div class="review-day"><span>${dto.rday}</span></div>

@@ -20,6 +20,9 @@ $(function(){
          }
       }
    });
+   $(".later").on("click",function(){
+	  alert("추후 개발 예정") 
+   });
 });
 </script>
 </head>
@@ -87,7 +90,7 @@ $(function(){
                      <a href="/board/shareTripHome">여행 공유</a>
                   </li>
                   <li>
-                     <a href="#">나만의 코스짜기</a>
+                     <a href="#"  class="later">나만의 코스짜기</a>
                   </li>
                </ul>
                <div class="perfect-trip">

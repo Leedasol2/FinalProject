@@ -582,12 +582,12 @@ div.cosmap div.img-box > a > img {width:100%;}
 div.cosmap div.img-box > a > img:first-child {width:80%;}
 div.cosmap div.img-box > a:after {
 	content:"";
-	width: 120px;
+	width: 200px;
 	height: 100%;
 	position: absolute;
 	top: 0;
 	left: 50%;
-	background: no-repeat center url("/image/asset/btn_go.png");
+	background: no-repeat center url("/image/asset/later.png");
 	background-size: contain;
 	transform: translateX(-50%);
 	opacity:0;
