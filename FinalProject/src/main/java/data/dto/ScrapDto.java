@@ -12,4 +12,10 @@ public class ScrapDto {
 	private String mnum;
 	private String tnum;
 	
+	
+	//출력용
+	private String title;
+	private String image;
+	private String part;
+	
 }

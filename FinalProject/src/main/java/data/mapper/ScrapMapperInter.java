@@ -19,5 +19,7 @@ public interface ScrapMapperInter {
 	
 	public String getSnum(HashMap<String, String> map);	
 	
-	public List<ScrapDto> getList();
+	public List<ScrapDto> getList(String mnum);
+	
+	public int getScrapCount(String mnum);
 }

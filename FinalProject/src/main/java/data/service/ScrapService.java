@@ -33,8 +33,12 @@ public class ScrapService {
 		smapper.getSnum(map);
 	}
 	
-	public List<ScrapDto> getList() {
-		return smapper.getList();
+	public List<ScrapDto> getList(String mnum) {
+		return smapper.getList(mnum);
+	}
+	
+	public int getScrapCount(String mnum) {
+		return smapper.getScrapCount(mnum);
 	}
 
 }
