@@ -121,6 +121,12 @@ span.login-emailcheck-failmessage{
     display: none;
 }
 
+span.login-emailcheck-failemailmessage{
+	font-size: 18pt;
+    color: #212529;  
+    display: none;
+}
+
 button.login-emailcheck-btn-check{
 	border-radius: 40px;
     width: 150px;
