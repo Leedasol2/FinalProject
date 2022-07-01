@@ -60,5 +60,10 @@ public class ReviewService {
 	{
 		return mapper.getReviewcount(tnum);
 	}
+
+	public String getTMRcount(String tnum, String mnum)
+	{
+		return mapper.getTMRcount(tnum,mnum);
+	}
 	
 }

@@ -32,4 +32,7 @@
 	<select id="getReviewcount" parameterType="String" resultType="int">
 	select count(ifnull(rnum,0)) from review where tnum=#{tnum}
 	</select>
+	<select id="getTMRcount" parameterType="String" resultType="String">
+		select count(*) from review where tnum=#{tnum} and mnum=#{mnum};
+	</select>
 </mapper>
