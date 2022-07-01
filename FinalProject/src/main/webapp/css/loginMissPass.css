@@ -53,12 +53,12 @@ li.login-misspass-missid{
 	font-family: MinSans-Black;  	
 }
 
-a.missid{
+#amissid{
 	color: #afafaf;
 	
 }
 
-a.missid:hover{
+#amissid:hover{
 	color: #212529;	
 }
 
