@@ -111,15 +111,17 @@ div.listtop > div.theme-name{
 
 
 div.theme-content > div.theme-region{
-	font-size: 0.8em;
+    font-size: 0.8em;
     color: #2bae66;
-    position: relative;
-    top: 25px;
     cursor: pointer;
-    margin-left: 10px;
-    white-space: nowrap;
+    width: 220px;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 15px;
+    position: relative;
+    top: 25px;
+    left: 15px;
 }
 
 div.theme-content > span.theme-region > img{
