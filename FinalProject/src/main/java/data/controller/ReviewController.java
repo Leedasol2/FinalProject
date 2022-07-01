@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import data.dto.ReviewDto;
@@ -133,6 +134,17 @@ public class ReviewController {
 	{
 		service.deleteReview(rnum);
 		return "redirect:myPageReview?currentPage="+currentPage;
+	}
+	
+	@GetMapping("/mypage/tmrcount")
+	@ResponseBody
+	public String count(@RequestParam String tnum, @RequestParam String myid)
+	{
+		String mnum=memService.getMnum(myid);
+		
+		String TMRcount= service.getTMRcount(tnum, mnum);
+		return TMRcount;
+		
 	}
 	
 }

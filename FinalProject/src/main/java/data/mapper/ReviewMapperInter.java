@@ -18,6 +18,7 @@ public interface ReviewMapperInter {
 	public void deleteReview(String rnum);
 	public int getTnum();
 	public String getMnum(String rnum);
+	public String getTMRcount(String tnum, String mnum);
 	
 	//강진
 	public double getAvgrstar(String tnum);

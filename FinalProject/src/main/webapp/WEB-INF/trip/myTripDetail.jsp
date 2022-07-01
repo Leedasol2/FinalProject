@@ -19,6 +19,7 @@ $(function(){
 	myid="${sessionScope.myid}";
 	
 	rlist();
+	tmrcount();
 	
 	<!-- image 클릭 이벤트 -->
 	$(".small").click(function(){
@@ -31,11 +32,11 @@ $(function(){
 	
 	//insert
 	$("#rbtn").click(function(){
-		var tnum=$(this).attr("tnum");
+		var tnum=$(':hidden#tnum').val();
 		var rstar = $('input[name="rating"]:checked').val();
 		var rcontents = $('#detailcontent').val();
 		//alert("tnum:"+tnum+"rstar:"+rstar+"rcontents:"+rcontents);
-		//alert(myid);
+		//alert(tnum);
 		$.ajax({
 			
 			type:"post",
@@ -45,8 +46,9 @@ $(function(){
 			"rstar":rstar,
 			"rcontents":rcontents},
 			success:function(data){
-				
-				rlist();
+				$('#detailcontent').val("");
+				$('input[name="rating"]').prop("checked",false);
+				window.location.reload();
 			}
 		});
 		
@@ -68,7 +70,7 @@ $(function(){
 				data:{"rnum":rnum},
 				success:function(data){
 					$('#myModal3 [data-dismiss]').click();	
-					rlist();
+					window.location.reload();
 				}
 			});	
 		}
@@ -105,16 +107,14 @@ $(function(){
 			url:"/myTripDetail/rupdate",
 			data:{"rnum":rnum,"rcontents":rcontents},
 			success:function(data){
-				rlist();
+				window.location.reload();
 			}
 		});
 	});
 	
-	
 	$("span.tripscrap").click(function(){
 		var tnum=$(':hidden#tnum').val();
-		toggleImage();
-		
+		$("img.scrapImg").attr("src","../image/asset/스크랩아이콘.png");
 		$.ajax({
 			
 			type:"post",
@@ -126,21 +126,38 @@ $(function(){
 			}
 		});
 	});
+	
 });
-function toggleImage(){
-	$("span.tripscrap").toggle(function(){
-		
-		$("img.scrapImg").attr("src","../image/asset/스크랩아이콘.png");
-	},function(){
-		$("img.scrapImg").attr("src","../image/asset/스크랩안함.png");
-	}
-}
+
 function maskingCar(userid) {
     if (userid == undefined || userid === '') {
         return '';
     }
     var pattern = /.{3}$/; // 정규식
     return userid.replace(pattern, "***");
+}
+
+function tmrcount()
+{
+	
+	var tnum=$(':hidden#tnum').val();
+	var myid="${sessionScope.myid}";
+	
+	$.ajax({
+		type:"get",
+		dataType:"text",
+		url:"/mypage/tmrcount",
+		data:{"tnum":tnum,"myid":myid},
+		success:function(data){
+			$(".btnadd").click(function(){
+				if(data>=1){
+					alert("리뷰는 한 ID 당 1개씩 작성할 수 있습니다.")
+					$(this).removeAttr("data-target");
+					$(this).removeAttr("data-toggle");
+				}
+			});
+	}
+	});
 }
 
 function rlist()
