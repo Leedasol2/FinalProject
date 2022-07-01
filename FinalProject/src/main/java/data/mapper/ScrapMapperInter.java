@@ -2,6 +2,7 @@ package data.mapper;
 
 
 import java.util.HashMap;
+import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
@@ -17,4 +18,6 @@ public interface ScrapMapperInter {
 	public int getFindScrap(HashMap<String, String> map);
 	
 	public String getSnum(HashMap<String, String> map);	
+	
+	public List<ScrapDto> getList();
 }
