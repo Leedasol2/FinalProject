@@ -84,6 +84,11 @@ div.mypage-scrap .scrap-main {
     text-align: center;
 }
 
+div.mypage-scrap .part{
+	color: #2bae66;
+	font-size: 9pt;
+}
+
 .mypage-scrap > .mypage-header > .mypage-menu > ul.mypage-ul > li.mypage-li {
     display: inline-block;
     color: #212529;
