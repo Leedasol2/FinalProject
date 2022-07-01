@@ -30,7 +30,7 @@
 
 					<!-- 버튼 -->
 					<div class="login-missid-btn-findid">
-						<button type="submit" class="login-missid-btn-passsuccess" onclick="location.href='/'">홈으로</button>
+						<button type="submit" class="login-missid-btn-passsuccess" onclick="location.href='/loginHome'">로그인</button>
 					</div>
 			</div>
 
