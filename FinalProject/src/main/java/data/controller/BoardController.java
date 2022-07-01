@@ -214,11 +214,6 @@ public class BoardController {
 	@PostMapping("/board/write")
 	public String insertBoard(@ModelAttribute BoardDto dto, // dto에 upload 포함
 			HttpSession session) {
-		String loginok = (String) session.getAttribute("loginok");
-		// 로그인중이 아닐 때
-		if (loginok == null || loginok.equals("")) {
-			return "/board/loginMiss"; // 경고창 띄우고 main으로 가서 로그인 다시 시킴
-		}
 
 		// 업로드할 폴더 지정
 		String path = session.getServletContext().getRealPath("/photo"); // webapp에있는거
