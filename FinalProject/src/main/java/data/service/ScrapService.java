@@ -1,11 +1,13 @@
 package data.service;
 
 import java.util.HashMap;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import data.dto.ScrapDto;
+import data.dto.TripDto;
 import data.mapper.ScrapMapperInter;
 
 
@@ -29,6 +31,10 @@ public class ScrapService {
 		map.put("mnum", mnum); 
 		map.put("tnum", tnum); 
 		smapper.getSnum(map);
+	}
+	
+	public List<ScrapDto> getList() {
+		return smapper.getList();
 	}
 
 }
