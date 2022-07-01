@@ -51,29 +51,34 @@ span.scrap-logo{
 	margin-top: -5px;
 }
 
-img.scrap-img{
+div.mypage-scrap img.scrap-img{
 	width: 210px;
+	height: 250px;
     margin-top: 60px;
-	margin-right: 135px;    
+    border-radius: 10px;
+	/* margin-right: 135px; */    
 }
 
-.scrap-name {
+div.mypage-scrap .scrap-name {
     padding: 20px 0;
     font-family: 'MinSans-Medium';
     font-size:12pt;
 }
 
-.scrap-content {
+div.mypage-scrap .scrap-content {
+	width: 210px;
+	height: 250px;
     display: inline-block;
     margin: 35px;
+    cursor: pointer;
 }
 
-.scrap-img {
+div.mypage-scrap .scrap-img {
     padding: 0 auto;
     text-align: center;
 }
 
-.scrap-main {
+div.mypage-scrap .scrap-main {
     width: 100%;
     overflow: hidden;
     text-align: center;

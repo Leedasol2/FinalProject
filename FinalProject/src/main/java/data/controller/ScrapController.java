@@ -56,8 +56,25 @@ public class ScrapController {
 		//insert
 		smapper.InsertScrap(sdto);
 		}
+		}
+
 	}
 
-}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }

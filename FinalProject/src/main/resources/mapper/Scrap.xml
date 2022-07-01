@@ -16,5 +16,13 @@
 	<select id="getSnum" parameterType="HashMap" resultType="String">
 	select snum from scrap where mnum=#{mnum} and tnum=#{tnum}
 	</select>	
+	
+	<select id="getList" resultType="sdto" parameterType="String">
+		select * from scrap where mnum=#{mnum}
+	</select>
+	
+	<select id="getScrapCount" parameterType="String" resultType="int">
+	select count(*) from scrap where mnum=#{mnum}
+	</select>
 
 </mapper>
