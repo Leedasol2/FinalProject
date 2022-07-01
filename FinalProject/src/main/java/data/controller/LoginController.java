@@ -39,7 +39,7 @@ public class LoginController {
 		return "/login/loginHome";
 	}
 	
-	@PostMapping("/loginmain")
+	@PostMapping("/login/loginmain")
 	public String loginmain(@RequestParam(required = false) String cbsave,
 			@RequestParam String userid,
 			@RequestParam String password,
@@ -57,9 +57,11 @@ public class LoginController {
 			session.setAttribute("saveok", cbsave);
 			
 			return "redirect:/";
-		}else {
-			return "redirect:/login/loginHome";
+		}else{
+			return "/login/loginHome";
 		}
+		
+		
 	}
 	
 	//로그아웃
@@ -68,7 +70,7 @@ public class LoginController {
 			
 		session.removeAttribute("loginok");
 		session.removeAttribute("loggedIn");
-		return "redirect:/loginHome";
+		return "/login/loginHome";
 	}
 	
 	//아이디 찾기 관련

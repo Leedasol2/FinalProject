@@ -110,9 +110,11 @@ $(function(){
 		});
 	});
 	
+	
 	$("span.tripscrap").click(function(){
 		var tnum=$(':hidden#tnum').val();
-		$("img.scrapImg").attr("src","../image/asset/스크랩아이콘.png");
+		toggleImage();
+		
 		$.ajax({
 			
 			type:"post",
@@ -124,9 +126,15 @@ $(function(){
 			}
 		});
 	});
-	
 });
-
+function toggleImage(){
+	$("span.tripscrap").toggle(function(){
+		
+		$("img.scrapImg").attr("src","../image/asset/스크랩아이콘.png");
+	},function(){
+		$("img.scrapImg").attr("src","../image/asset/스크랩안함.png");
+	}
+}
 function maskingCar(userid) {
     if (userid == undefined || userid === '') {
         return '';
@@ -244,7 +252,12 @@ function rlist()
 	<div class="subedit">
 	<img alt="" src="${root }/image/asset/위치아이콘.png"><span class="tripwhere"> ${tdto.location }</span>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<img alt="" src="${root }/image/asset/스크랩안함.png" class="scrapImg"><span class="tripscrap"> 스크랩 하기</span>
+	
+	<!-- 로그인하면 스크랩기능 활성화 -->
+	<c:if test="${not empty sessionScope.loginok || not empty sessionScope.loggedIn}">
+	<img alt="" src="${root }/image/asset/스크랩안함.png" class="scrapImg">
+	<span class="tripscrap"> 스크랩</span>
+	</c:if>
 	</div>
 	</div>
 	</div>

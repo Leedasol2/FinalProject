@@ -112,19 +112,17 @@ div.regionTripText div.trip-content  span.trip-name{
 	margin-top: 10px;
 }
 
-div.regionTripText div.trip-content  span.trip-explanation{
+div.regionTripText div.trip-content span.trip-explanation{
 	 white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    /* padding-top: 20px; */
-    /* padding-left: 15px; */
     margin: 0 auto;
     padding: 15px 10px;
     width: 220px;
     font-size: 10pt;
 }
 
-div.regionTripText div.trip-content  span.trip-region{
+div.regionTripText div.trip-content span.trip-region{
 	 font-size: 0.8em;
     color: #2bae66;
     cursor: pointer;
@@ -133,7 +131,6 @@ div.regionTripText div.trip-content  span.trip-region{
     text-overflow: ellipsis;
     white-space: nowrap;
     padding-right: 15px;
-    margin-left: 10px;
 }
 
 div.regionTripText div.trip-content > span.trip-region > img{
@@ -185,9 +182,9 @@ div.regionTripText > div.regionofkorea > span:hover{
 	color: #212529;
 	transition: 0.3s ease; 
 }
-/* div.regionTripText > div.regionofkorea > span.seoul{ */
-/* 	color: #2bae66; */
-/* } */
+div.regionTripText > div.regionofkorea > span.seoul{
+	color: #2bae66;
+}
 
 div.regionTripText div.sortselectbar{
 	position: relative;

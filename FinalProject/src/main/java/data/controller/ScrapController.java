@@ -30,17 +30,15 @@ public class ScrapController {
 	public void scrapInsert(@ModelAttribute ScrapDto sdto,HttpSession session,
 			@RequestParam(value =  "tnum",required = false) String tnum) {
 		
-		String loginok = (String) session.getAttribute("loginok");
+//		String loginok = (String) session.getAttribute("loginok");
 		
-		if (loginok != null) {
+//		if (loginok != null) {
 		
 		//세션에 로그인한 아이디
 		String myid=(String)session.getAttribute("myid");
 		String mnum=mmapper.getMnum(myid);
-		sdto.setMnum(mnum);
-		sdto.setTnum(tnum);
-//		System.out.println(mnum);
-//		System.out.println(tnum);
+//		sdto.setMnum(mnum);
+//		sdto.setTnum(tnum);
 		
 		HashMap<String, String> map = new HashMap<>();
 		map.put("mnum", mnum);
@@ -58,6 +56,29 @@ public class ScrapController {
 		}
 		}
 
+//	}
+	
+	@PostMapping("/scrap/scrapDelete")
+	public void scrapDelete(@ModelAttribute ScrapDto sdto,HttpSession session,
+			@RequestParam(value =  "tnum",required = false) String tnum) {
+		
+		String myid=(String)session.getAttribute("myid");
+		String mnum=mmapper.getMnum(myid);
+		sdto.setMnum(mnum);
+		sdto.setTnum(tnum);
+		
+		HashMap<String, String> map = new HashMap<>();
+		map.put("mnum", mnum);
+		map.put("tnum", tnum);
+		
+		int check=smapper.getFindScrap(map);
+		String snum = smapper.getSnum(map);
+		
+		if(check ==1) {
+		smapper.deleteScrap(snum);
+			
+		}
+		
 	}
 
 	

@@ -187,10 +187,14 @@ function colorChange(){
 <div class="regionTripText">
 
 <div class="trip-category">
-  <a href="bestTrip" class="best-category tripcategory">베스트 여행지</a><br><br><br>
-  <a href="regionTrip" class="region-category tripcategory">지역별 여행지</a><br><br><br>
-  <a href="themaTrip" class="themea-category tripcategory">테마별 여행지</a>
-</div>
+			<a href="bestTrip" class="best-category tripcategory">베스트 여행지</a><br>
+			<br>
+			<br> <a href="regionTrip" class="region-category tripcategory">지역별
+				여행지</a><br>
+			<br>
+			<br> <a href="themaTrip" class="themea-category tripcategory">테마별
+				여행지</a>
+		</div>
 
 <div class="category-title">
   <span class="main-title">지역별 여행지</span>&nbsp;
@@ -240,21 +244,21 @@ function colorChange(){
           <span class="trip-name">${region.title }</span>
           <div class="best-star-rating">
 
-									<div class="tripstory-star-ratings">
-										<div class="tripstory-star-ratings-fill space-x-2 text-lg"
-											style="width: ${region.avgrstar*20+1.5}%">
-											<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-										</div>
-										<div class="tripstory-star-ratings-base space-x-2 text-lg">
-											<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-										</div>
-									</div>
-								</div>
-								</div>
+		<div class="tripstory-star-ratings">
+		<div class="tripstory-star-ratings-fill space-x-2 text-lg" style="width: ${region.avgrstar*20+1.5}%">
+		<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+		</div>
+		<div class="tripstory-star-ratings-base space-x-2 text-lg">
+		<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+		</div>
+		</div>
+		</div>
+		</div>
             <div class="trip-explanation">${region.intro }</div>
- 		  <span class="trip-region">
- 		    <img src="${root}/image/asset/여행지 위치아이콘.png">${region.location }
- 		  </span>
+ 		  <div class="listbtm">
+ 		  <img src="${root}/image/asset/여행지 위치아이콘.png">
+ 		   <span class="trip-region">${region.location }</span>
+ 		   </div>
         </div>
       </td>
       
