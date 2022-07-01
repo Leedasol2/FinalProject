@@ -35,10 +35,10 @@ function goDetail(tnum,part) {//
 				<div class="mypage-title">마이페이지</div>
 				<div class="mypage-menu">
 					<ul class="mypage-ul">
-						<li class="mypage-li"><a href="#">회원정보수정</a></li>
-						<li class="mypage-li"><a href="#">스크랩</a></li>
-						<li class="mypage-li"><a href="#">마이캘린더</a></li>
-						<li class="mypage-li"><a href="#">리뷰</a></li>
+						<li class="mypage-li"><a href="${root}/mypage/myPageEdit">회원정보수정</a></li>
+						<li class="mypage-li"><a href="${root}/mypage/myPageScrap">스크랩</a></li>
+						<li class="mypage-li"><a href="${root}/mypage/myPageCalendar">마이캘린더</a></li>
+						<li class="mypage-li"><a href="${root}/mypage/myPageReview">리뷰</a></li>
 					</ul>
 				</div>
 				<div class="hr"><hr></div>
