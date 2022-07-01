@@ -5,7 +5,7 @@
 		insert into schedule(mnum,content,beginday,endday,schecolor) values(#{mnum},#{content},#{beginday},#{endday},#{schecolor})
 	</insert>
 	<select id="getScheList" resultType="cdto">
-		select * from schedule where mnum=#{mnum}
+		select schenum,mnum,content,DATE_ADD(beginday, INTERVAL 1 DAY) as beginday,DATE_ADD(endday, INTERVAL 1 DAY) as endday, schecolor from schedule where mnum=#{mnum}
 	</select>
 	<delete id="deleteSchedule" parameterType="cdto">
 		delete from schedule where schenum=#{schenum}

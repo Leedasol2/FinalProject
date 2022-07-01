@@ -96,8 +96,25 @@ document.addEventListener('DOMContentLoaded', function () {
 								data:schenum,
 								success: function(data) {
 									var s="";
-									var start=(data.beginday).substr(0, 10);
-									var end=(data.endday).substr(0, 10);
+									var start=(data.beginday).substr(0, 5);
+									var startMonth=parseInt((data.beginday).substr(6, 3));
+									var startday=parseInt((data.beginday).substr(8, 2))+1;
+									
+									var end=(data.endday).substr(0, 5);
+									var endMonth=parseInt((data.endday).substr(6, 3));
+									var endday=parseInt((data.endday).substr(8, 2))+1;
+									
+									if(startday==31){
+										startMonth+=1;
+										startday=1;
+									}
+									
+									if(endday==32){
+										endMonth+=1;
+										endday=1;
+									}
+									
+									
 									var title=data.content;
 									var color=data.schecolor;
 									var schenum=data.schenum;
@@ -108,9 +125,9 @@ document.addEventListener('DOMContentLoaded', function () {
 									s+="<div class='scheTitle'>"+title;
 									s+="</div>";
 									s+="<div class='scheDate'>";
-									s+="<span class='scheStart'>"+start;
+									s+="<span class='scheStart'>"+start+startMonth+"-"+startday;
 									s+="</span>";
-									s+="<span class='scheEnd'>"+end;
+									s+="<span class='scheEnd'>"+end+endMonth+"-"+endday;
 									s+="</span>";
 									s+="</div>";
 									s+="<div class='EditBtn'>";
