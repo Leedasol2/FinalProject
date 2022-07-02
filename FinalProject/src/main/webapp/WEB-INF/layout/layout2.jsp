@@ -70,7 +70,6 @@
 <script src="${root}/js/shareTripHeader.js"></script>
 <script src="${root}/js/boardwriteform.js"></script>
 <script src="${root}/js/boardupdateform.js"></script>
-<script src="${root}/js/boardDetailPage.js"></script>
 
 
 
