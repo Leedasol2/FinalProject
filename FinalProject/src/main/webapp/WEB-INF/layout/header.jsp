@@ -7,24 +7,6 @@
 <head>
 <meta charset="UTF-8">
 <title>이런여행</title>
-<script type="text/javascript">
-$(function(){
-   $(".searchtext").on("keyup",function(key) {
-      if( key.keyCode == 13 ){
-         var searchtext = $(this).val(); 
-         
-         if(searchtext==null || searchtext==""){
-            location.href='/myTrip/searchFail';
-         }else{
-            location.href='/myTrip/searchTrip?searchtext='+searchtext;
-         }
-      }
-   });
-   $(".later").on("click",function(){
-	  alert("추후 개발 예정") 
-   });
-});
-</script>
 </head>
 <body>
 
@@ -45,9 +27,11 @@ $(function(){
                <div class="member-box">
                   <!-- 로그아웃 상태 -->
                   <c:if test="${empty sessionScope.loggedIn && empty sessionScope.loginok}">
+                        <!-- 로그인 페이지로 이동 -->
 						<button class="login" onclick="location.href='/loginHome'">로그인</button>
 						</c:if>
 						<c:if test="${empty sessionScope.loggedIn && empty sessionScope.loginok}">
+						<!-- 회원가입 페이지로 이동 -->
 						<button class="join" onclick="location.href='/joinMember/loginJoin'">회원가입</button>
 						</c:if>
 						<!-- 로그인 상태 -->
@@ -72,8 +56,10 @@ $(function(){
             <div class="inner">
                <ul class="gnb">
                   <li>
+                     
                      <a href="/myTrip/bestTrip">여행을 떠나요</a>
                      <ul>
+                        <!-- 베스트 여행지, 지역별 여행지, 테마별 여행지 페이지로 이동 -->
                         <li onclick="location.href='/myTrip/bestTrip'">베스트 여행지</li>
                         <li onclick="location.href='/myTrip/regionTrip'">지역별 여행지</li>
                         <li onclick="location.href='/myTrip/themaTrip'">테마별 여행지</li>
@@ -82,11 +68,13 @@ $(function(){
                   <li>
                      <a href="/myTrip/themeParkList">액티비티</a>
                      <ul>
+                        <!-- 테마파크,축제 페이지로 이동 -->
                         <li onclick="location.href='/myTrip/themeParkList'">테마파크</li>
                         <li onclick="location.href='/myTrip/festivalList'">축제</li>
                      </ul>
                   </li>
                   <li>
+                     <!-- 여행공유 페이지로 이동 -->
                      <a href="/board/shareTripHome">여행 공유</a>
                   </li>
                   <li>
@@ -94,7 +82,9 @@ $(function(){
                   </li>
                </ul>
                <div class="perfect-trip">
-                  <button class="perfect-trip-btn" onclick="location.href='/myTrip/myTripStart'">나에게 딱 맞는 여행지는?</button>
+                  <!-- 나에게 딱 맞는 여행지 페이지로 이동 -->
+                  <button onclick="location.href='/myTrip/myTripStart'"
+                  class="perfect-trip-btn">나에게 딱 맞는 여행지는?</button>
                </div>
             </div>
          </div>

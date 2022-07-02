@@ -30,8 +30,9 @@ public class MailController {
   
   @Autowired
   MemberMapperInter mapper;
-  // 인증메일 보내기
-  @RequestMapping(value="/member/CheckMail", method = {RequestMethod.POST})
+  
+    //인증메일 보내기
+    @RequestMapping(value="/member/CheckMail", method = {RequestMethod.POST})
 	@ResponseBody
 	public String SendMail(String mail) {
 
