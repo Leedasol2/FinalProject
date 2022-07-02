@@ -73,6 +73,8 @@ $(function(){
 	<div class="subedit fes">
 	<img alt="" src="${root }/image/asset/위치아이콘.png"><span class="tripwhere"> ${tdto.location }</span>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img alt="" src="${root }/image/asset/링크.png"><a href="${tdto.link }"><span class="tripscrap"> 홈페이지</span></a>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<img alt="" src="${root }/image/asset/스크랩안함.png" class="scrapImg"><span class="tripscrap"> 스크랩 하기</span>
 	</div>
 	</div>
