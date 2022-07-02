@@ -250,7 +250,12 @@ function updateform(content,cnum,e) {
 	
 } 
 
-
+function delBoard(bnum,type) {
+	//alert("test")
+	var a=confirm("정말 게시글을 삭제하시겠습니까?")
+	if(a)
+		location.href="deleteboard?bnum="+bnum+"&type="+type;
+}
 
 </script>
 </head>
@@ -280,7 +285,7 @@ function updateform(content,cnum,e) {
         <span class="likes">추천수 ${likesCnt }</span><br>
         <!-- 로그인중인 아이디=글쓴이 아이디 -->
         <c:if test="${sessionScope.loginok=='yes' && sessionScope.myid==dto.writer}">
-        	<a href="boardupdateform?bnum=${dto.bnum }"><span class="board-upd">수정 |</span></a><a href="deleteboard?bnum=${dto.bnum }&type=${type}"><span class="board-del"> 삭제</span></a>
+        	<a href="boardupdateform?bnum=${dto.bnum }"><span class="board-upd">수정 |</span></a><span class="board-del" onclick="delBoard(${dto.bnum },'${type}')"> 삭제</span>
         </c:if>
        
       <hr class="underline">
