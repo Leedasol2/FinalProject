@@ -48,7 +48,7 @@
 			<button type="button" class="btn-login-home-kakao"><img src="${root }/image/asset/카톡원형.png" width = "50px"
 			onclick="kakaoLogin();"></button>
 			<button type="button" class="btn-login-home-naver" id="naverIdLogin"><img src="${root }/image/asset/네이버원형.png" width = "50px"
-			onclick="naverLogin.init();"></button>
+			onclick="naverLogin.init();" class="naverbtnimg"></button>
 		</div>
 		
 		<br><br><br>
@@ -161,7 +161,7 @@ function kakaoLogout() {
 			clientId: "S4vf7M94cALtBOCIxY7Q",
 			callbackUrl: "http://localhost:9001/callBack",
 			isPopup: false, /* 팝업을 통한 연동처리 여부 */
-			loginButton: {color: "green", type: 3, height: 60} /* 로그인 버튼의 타입을 지정 */
+			loginButton: {color: "green", type: 1, height: 40} /* 로그인 버튼의 타입을 지정 */
 		}
 	);
 	
