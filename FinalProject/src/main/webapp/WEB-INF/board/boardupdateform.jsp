@@ -50,7 +50,7 @@
 						
 		  <tr>
 		    <td colspan="2" align="center">
-			  <button type="button" class="btn-return" onclick="goBack()">이전으로</button>
+			  <button type="button" class="btn-return" onclick="goBackUpdate()">이전으로</button>
 		      <button type="submit" class="btn-update">수정하기</button>
 			</td>
 		  </tr>
