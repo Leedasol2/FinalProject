@@ -7,31 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>이런여행</title>
-<script type="text/javascript">
-$(function(){
-	$("#btnUpdate").click(function(){
-		var rcontents=$("#rcontents").val();
-		if(rcontents.trim().length==0){
-				alert("내용을 입력해주세요");
-				$(this).prop("type","button");
-				return;
-			}
-		else if (rcontents.trim().length>0) {
-			$(this).prop("type","submit");
-		}
-	});
-	
-
-	var rstar=${dto.rstar};
-	for(var i=1;i<=5;i++){
-		if(rstar==i){
-			$(":radio[id='"+i+"-stars']").attr('checked', true);
-		};
-	};
-	
-});
-
-</script>
+<script src="${root}/js/mypageReviewEdit.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -41,9 +17,9 @@ $(function(){
 					<div class="mypage-title">마이페이지</div>
 					<div class="mypage-menu">
 						<ul class="mypage-ul">
-							<li class="mypage-li"><a href="${root}/html/myPageEdit">회원정보수정</a></li> <!-- TODO: html을 mypage로 바꾸기 -->
-							<li class="mypage-li"><a href="${root}/html/myPageScrap">스크랩</a></li> 
-							<li class="mypage-li"><a href="${root}/html/myPageCalendar">마이캘린더</a></li>
+							<li class="mypage-li"><a href="${root}/mypage/myPageEdit">회원정보수정</a></li> 
+							<li class="mypage-li"><a href="${root}/mypage/myPageScrap">스크랩</a></li> 
+							<li class="mypage-li"><a href="${root}/mypage/myPageCalendar">마이캘린더</a></li>
 							<li class="mypage-li"><a href="${root}/mypage/myPageReview">리뷰</a></li>
 						</ul>
 					</div>
@@ -57,6 +33,7 @@ $(function(){
 							<div class="review-topbox">
 								<div class="review-title">
 									<a href="#">${dto.title}</a>
+									<input type="hidden" name="dtorstar" value="${dto.rstar}">
 									<div class="modal-star-rating-review-write">
 					                      <input type="radio" id="5-stars" name="rstar" value="5" />
 					                      <label for="5-stars" class="star">&#9733;</label>
