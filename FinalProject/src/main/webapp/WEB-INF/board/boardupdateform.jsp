@@ -30,6 +30,13 @@ $(function(){
 	
 	
 });
+
+function goBack() {
+	var a=confirm("수정을 취소하시겠습니까?")
+	if(a)
+		history.back();
+}
+
 </script>
 
 </head>
@@ -74,7 +81,7 @@ $(function(){
 						
 		  <tr>
 		    <td colspan="2" align="center">
-			  <button type="button" class="btn-return" onclick="history.back()">이전으로</button>
+			  <button type="button" class="btn-return" onclick="goBack()">이전으로</button>
 		      <button type="submit" class="btn-update">수정하기</button>
 			</td>
 		  </tr>
