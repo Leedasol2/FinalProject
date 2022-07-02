@@ -300,6 +300,7 @@ public class BoardController {
 		for (CommentsDto c : clist) {
 			c.setCwriter(memservice.getUserId(c.getMnum()));
 		}
+		String newBnum=String.valueOf(service.getMaxBnum());
 		
 		model.addObject("dto", dto);
 		model.addObject("currentPage", currentPage);
@@ -308,7 +309,7 @@ public class BoardController {
 		model.addObject("likesCnt", likesCnt);
 		model.addObject("mylike", mylike);
 		model.addObject("type", type);
-		
+		model.addObject("newWrite", service.getBoard(newBnum).getWriteday());
 		
 		
 		model.setViewName("/board/board/boardDetailPage");

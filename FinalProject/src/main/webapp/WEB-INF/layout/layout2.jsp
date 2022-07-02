@@ -62,9 +62,17 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+
 <script src="${root}/js/main.js"></script>
 <script src="${root}/js/festival.js"></script>
 <script src="${root}/js/shareTripHeader.js"></script>
+<script src="${root}/js/boardwriteform.js"></script>
+<script src="${root}/js/boardupdateform.js"></script>
+<script src="${root}/js/boardDetailPage.js"></script>
+
+
 
 </head>
 <body>
