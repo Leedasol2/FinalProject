@@ -20,6 +20,8 @@ $(function(){
 	myid="${sessionScope.myid}";
 	
 	rlist();
+	tmrcount();
+
 	
 	<!-- image 클릭 이벤트 -->
 	$(".small3").click(function(){
@@ -32,7 +34,7 @@ $(function(){
 	
 	//insert
 	$("#rbtn").click(function(){
-		var tnum=$(this).attr("tnum");
+		var tnum=$(':hidden#tnum').val();
 		var rstar = $('input[name="rating"]:checked').val();
 		var rcontents = $('#detailcontent').val();
 		//alert("tnum:"+tnum+"rstar:"+rstar+"rcontents:"+rcontents);
@@ -47,7 +49,9 @@ $(function(){
 			"rcontents":rcontents},
 			success:function(data){
 				
-				rlist();
+				$('#detailcontent').val("");
+				$('input[name="rating"]').prop("checked",false);
+				window.location.reload();
 			}
 		});
 		
@@ -68,7 +72,7 @@ $(function(){
 				data:{"rnum":rnum},
 				success:function(data){
 					$('#myModal3 [data-dismiss]').click();	
-					rlist();
+					window.location.reload();
 				}
 			});	
 		}
@@ -106,7 +110,7 @@ $(document).on("click","#btnaupdate",function(){
 			url:"/themeParkDetail/rupdate",
 			data:{"rnum":rnum,"rcontents":rcontents},
 			success:function(data){
-				rlist();
+				window.location.reload();
 			}
 		});
 	});
@@ -133,6 +137,29 @@ function maskingCar(userid) {
     }
     var pattern = /.{3}$/; // 정규식
     return userid.replace(pattern, "***");
+}
+
+function tmrcount()
+{
+	
+	var tnum=$(':hidden#tnum').val();
+	var myid="${sessionScope.myid}";
+	
+	$.ajax({
+		type:"get",
+		dataType:"text",
+		url:"/mypage/tmrcount",
+		data:{"tnum":tnum,"myid":myid},
+		success:function(data){
+			$(".btnadd").click(function(){
+				if(data>=1){
+					alert("리뷰는 한 ID 당 1개씩 작성할 수 있습니다.")
+					$(this).removeAttr("data-target");
+					$(this).removeAttr("data-toggle");
+				}
+			});
+	}
+	});
 }
 
 
@@ -243,8 +270,10 @@ function rlist()
 	<div class="tripsubcontent">
 	<span class="tripsubcontent-span">${tdto.intro }</span>
 	</div>
-	<div class="subedit">
+	<div class="themepark-subedit">
 	<img alt="" src="${root }/image/asset/위치아이콘.png"><span class="tripwhere"> ${tdto.location }</span>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img alt="" src="${root }/image/asset/링크.png"><a href="${tdto.link }"><span class="tripscrap"> 홈페이지</span></a>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<img alt="" src="${root }/image/asset/스크랩안함.png" class="scrapImg"><span class="tripscrap"> 스크랩 하기</span>
 	</div>
