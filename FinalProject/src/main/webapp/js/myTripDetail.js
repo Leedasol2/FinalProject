@@ -177,19 +177,6 @@ function maskingCar(userid) {
     return userid.replace(pattern, "***");
 }
 
-//scrap
-function scrapEvent(){
-	$.ajax({
-		type:"post",
-		dataType: "text",
-		url:"/scrapInsert",
-		data:{"tnum":tnum},
-		success:function(data){
-			
-		}
-	});
-}
-
 //scrap icon change
 var i = 0;
 function toggle_object(post_id)
