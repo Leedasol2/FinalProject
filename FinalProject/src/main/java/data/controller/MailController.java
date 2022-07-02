@@ -68,10 +68,10 @@ public class MailController {
 	  
 	  int idcheck = service.getIdCheck(userid); // 등록된 아이디인지 아닌지 체크
 	  int emailcheck = service.getSearchEmail(email); // 등록된 메일인지 아닌지 체크
-	  System.out.println(idcheck + " , " + emailcheck);
-	  String mnum = service.Findmnum(email); // 엠넘 찾기
+	  int namecheck = service.nameCheck(name); //등록된 이름인지 확인
+	  String mnum = service.findMnum(email); // 엠넘 찾기
 	  
-	  if(emailcheck + idcheck == 2) {
+	  if(emailcheck + idcheck +namecheck == 3) {
 		  // 임시 비밀번호 만들기
 		  for (int i = 0; i < 3; i++) {
 			  int index = random.nextInt(25) + 65; // A~Z까지 랜덤 알파벳 생성
@@ -82,12 +82,9 @@ public class MailController {
 		  
 		  // 기존 비밀번호 변경
 		  MemberDto dto = service.getData(mnum);
-		  dto.setPassword(	newpass);
-		  System.out.println(dto);
+		  dto.setPassword(newpass);
 		  mapper.updatePass(dto);
-		  String password = service.Findpass(mnum);
-		  System.out.println(password);
-		  System.out.println(newpass);
+
 		  
 		  SimpleMailMessage message = new SimpleMailMessage();
 		  message.setTo(email); // 스크립트에서 보낸 메일을 받을 사용자 이메일 주소

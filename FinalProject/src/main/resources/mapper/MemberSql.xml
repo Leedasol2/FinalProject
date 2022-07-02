@@ -64,11 +64,15 @@ select count(*) from member where name=#{name} and email=#{email}
   update member set password=#{password} where mnum=#{mnum}
 </update>
 
-<select id="Findmnum" resultType="String" parameterType="String">
+<select id="findMnum" resultType="String" parameterType="String">
 	select mnum from member where email=#{email}
 </select>
 
-<select id="Findpass" resultType="String" parameterType="String">
+<select id="findPass" resultType="String" parameterType="String">
 	select password from member where mnum=#{mnum}
+</select>
+
+<select id="nameCheck" parameterType="String" resultType="int">
+select count(*) from member where name=#{name}
 </select>
 </mapper>
