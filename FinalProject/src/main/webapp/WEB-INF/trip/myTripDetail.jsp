@@ -112,22 +112,41 @@ $(function(){
 		});
 	});
 	
-	$("span.tripscrap").click(function(){
-		var tnum=$(':hidden#tnum').val();
-		$("img.scrapImg").attr("src","../image/asset/스크랩아이콘.png");
-		$.ajax({
-			
-			type:"post",
-			dataType: "text",
-			url:"/scrapInsert",
-			data:{"tnum":tnum},
-			success:function(data){
-				
-			}
-		});
-	});
 	
 });
+
+function scrapEvent(){
+	var tnum=$(':hidden#tnum').val();
+	
+	$.ajax({
+		
+		type:"post",
+		dataType: "text",
+		url:"/scrapInsert",
+		data:{"tnum":tnum},
+		success:function(data){
+			
+		}
+	});
+}
+
+var i = 0;
+function toggle_object(post_id)
+{  
+    i = i + post_id;
+    var obj = document.getElementById('scrapImg');  
+    if(!obj) return;  
+ 
+    if(i%2!=0)
+    {  
+        obj.src="../image/asset/스크랩아이콘.png";
+       
+    }
+    else
+    {  
+        obj.src="../image/asset/스크랩안함.png";
+    }
+}
 
 function maskingCar(userid) {
     if (userid == undefined || userid === '') {
@@ -272,8 +291,8 @@ function rlist()
 	
 	<!-- 로그인하면 스크랩기능 활성화 -->
 	<c:if test="${not empty sessionScope.loginok || not empty sessionScope.loggedIn}">
-	<img alt="" src="${root }/image/asset/스크랩안함.png" class="scrapImg">
-	<span class="tripscrap"> 스크랩</span>
+	<img alt="" src="${root }/image/asset/스크랩안함.png" class="scrapImg" id="scrapImg">
+	<span class="tripscrap" onclick="toggle_object(1); scrapEvent();"> 스크랩</span>
 	</c:if>
 	</div>
 	</div>
