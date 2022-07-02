@@ -580,6 +580,7 @@ div.cosmap div.cos-box {
     width: 50%;
     float: left;
     padding-right:50px;
+    visibility: hidden;
 }
 
 div.cosmap div.img-box > a {display:inline-block; position:relative;}
@@ -608,6 +609,7 @@ div.cosmap .map-box {
     width: 50%;
     float: left;
     padding-left:50px;
+    visibility: hidden;
 }
 
 /* 占쎈쐻占쎈짗占쎌굲占쎈쐻占쎈짗占쎌굲 */
