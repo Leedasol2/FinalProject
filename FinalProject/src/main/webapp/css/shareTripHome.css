@@ -65,28 +65,42 @@ div.tripHeader div{
 	font-family: MinSans-Black;
 }
 div.tripHeader>span{
-	font-size: 11px;
+	font-size: 14px;
 	color: #212529;
 	font-family: MinSans-Light;
 	margin-bottom: 20px;
+	width: 900px;
+	margin-left: 5px;
 }
 
 span.verLine{
       font-weight: bold;
 }
 
-div.tripHeader span.tripHeadMsg{
-	font-size: 11pt;
+div.tripHeader span.tripHeadMsg::before {
+    content: "|";
 	color: #212529;
-	width: 900px;
+    font-family: MinSans-black;
+    font-size: 12pt;
 }
-
+div.tripHeader span.newIcon{
+	width: 14px;
+	height: 14px;
+	margin-bottom: 6px;
+}
 div.tripHeader .board span{
-	margin: 0 180px 0 180px;
 	font-size: 16px;
 	color: #777;
 	cursor: pointer;
 }
+div.tripHeader span#best{
+	margin: 0 180px 0 180px;
+}
+div.tripHeader span#bulletin{
+	margin: 0 180px 0 180px;
+}
+
+
 
 div.tripHeader .board{
 	margin: 0;

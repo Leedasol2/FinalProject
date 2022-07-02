@@ -60,10 +60,12 @@ public class BoardController {
 			b.setWriter(memservice.getUserId(b.getMnum()));
 			b.setCommentCnt(comservice.getCommentsCnt(b.getBnum()));
 		}
+		String newBnum=String.valueOf(service.getMaxBnum());
 		
 		model.addObject("bestlist", bestlist);
 		model.addObject("bullist", bullist);
 		model.addObject("type", "home");
+		model.addObject("newWrite", service.getBoard(newBnum).getWriteday());
 		
 		
 		model.setViewName("/board/board/shareTripHome");
@@ -99,7 +101,7 @@ public class BoardController {
 				b.setLikes(service.getLikeCount(b.getBnum()));
 			}
 
-			
+			String newBnum=String.valueOf(service.getMaxBnum());
 			
 			// 댓글개수
 
@@ -111,6 +113,7 @@ public class BoardController {
 			model.addObject("totalBoardCnt", totalBoardCnt);
 			model.addObject("best", "best");
 			model.addObject("type", "best");
+			model.addObject("newWrite", service.getBoard(newBnum).getWriteday());
 			
 			model.setViewName("/board/board/bestBoard");
 
@@ -158,7 +161,7 @@ public class BoardController {
 			b.setCommentCnt(comservice.getCommentsCnt(b.getBnum()));
 			b.setLikes(service.getLikeCount(b.getBnum()));
 		}
-
+		String newBnum=String.valueOf(service.getMaxBnum());
 		// 댓글개수
 
 		// model에 변수 추가
@@ -170,7 +173,8 @@ public class BoardController {
 		model.addObject("currentPage", currentPage);
 		model.addObject("totalBoardCnt", totalBoardCnt);
 		model.addObject("type", "bul");
-
+		model.addObject("newWrite", service.getBoard(newBnum).getWriteday());
+		
 		model.setViewName("/board/board/bulletinBoard");
 
 		return model;

@@ -21,12 +21,16 @@
 	<!-- 여행공유 홈 헤더-공통 -->
 	<div class="tripHeader">
 		<div class="shareTrip">여행공유</div>
-		<span class="tripHeadMsg">｜&nbsp;여러분의 특별했던 여행의 순간을 공유해보세요</span>
+		<span class="tripHeadMsg">&nbsp;여러분의 특별했던 여행의 순간을 공유해보세요</span>
 		<hr class="hr1">
 		<!-- 게시판 -->
 		<div class="board">
 			<span id="best">BEST 게시판</span>
-			<span onclick="location.href='/board/bulletinBoard'" id="bulletin">자유게시판&nbsp;&nbsp;</span>
+			<span onclick="location.href='/board/bulletinBoard'" id="bulletin">자유게시판&nbsp;&nbsp;
+			<c:if test="${newWrite>yesterday }">
+				<span><img src="${root }/image/asset/새글아이콘.png" class="newIcon"></span>
+			</c:if>
+			</span>
 		</div>
 		<div class="boardActive">
 			<c:if test="${type=='best' }">
