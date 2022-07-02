@@ -28,7 +28,11 @@ $(function(){
     });
 	
 });
-
+function goBack() {
+	var a=confirm("작성을 취소하시겠습니까?")
+	if(a)
+		history.back();
+}
 </script>
 
 </head>
@@ -71,7 +75,7 @@ $(function(){
             
             <tr>
               <td colspan="2" align="center">
-                <button type="button" class="btn-cancel" onclick="history.back()">취소하기</button>
+                <button type="button" class="btn-cancel" onclick="goBack()">취소하기</button>
                 <button type="submit" class="btn-insert">등록하기</button>
               </td>
             </tr>
