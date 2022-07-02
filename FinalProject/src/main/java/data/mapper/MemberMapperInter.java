@@ -33,7 +33,7 @@ public interface MemberMapperInter {
 	public void updateMember(MemberDto dto);
 	public void deleteMember(String mnum);
 	public void updatePass(MemberDto dto);
-	public String Findmnum(String email);
-	
-	public String Findpass(String mnum);
+	public String findMnum(String email);
+	public int nameCheck(String name);
+	public String findPass(String mnum);
 }
