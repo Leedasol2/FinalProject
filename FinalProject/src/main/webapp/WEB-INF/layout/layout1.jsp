@@ -64,6 +64,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="${root}/js/main.js"></script>
 <script src="${root}/js/festival.js"></script>
+<script src="${root}/js/header.js"></script>
+<script src="${root}/js/loginEmail.js"></script>
+<script src="${root}/js/loginInfo.js"></script>
 
 </head>
 <body>
