@@ -60,7 +60,7 @@
 								
 								<!-- 현재 시간으로부터 하루이내에 쓰인 글인지 검사 -->
 								<c:if test="${dto.writeday>yesterday }">
-									<span><img src="${root }/image/asset/새글아이콘.png"></span>
+									&nbsp;<span><img src="${root }/image/asset/새글아이콘.png"></span>
 								</c:if>
 							</a>
 						</td>
