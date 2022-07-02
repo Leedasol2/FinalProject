@@ -7,6 +7,52 @@
 <head>
 <meta charset="UTF-8">
 <title>이런여행</title>
+<script type="text/javascript">
+$(function(){
+	//인증코드 일치하는지
+	$(".login-email-btn-code").on("click",function() {
+		if ($(".form-code-input").val() == key) {   //인증 키 값을 비교를 위해 텍스트인풋과 벨류를 비교
+			//인증이 완료되었습니다. 출력
+			$(".email-codeok").css("display","inline-block");
+			$(".email-codefail").css("display","none");
+			$(".login-email-content2").attr("src","${root}/image/asset/o.png");
+			$("input[name=code]").attr("readonly",true);
+			$(".codebackcolor").css("background-color","gainsboro");
+		} else {
+			//인증코드가 일치하지 않습니다. 출력
+			$(".email-codefail").css("display","inline-block");
+		}
+	});
+});
+
+//모달창 사용하기 버튼 클릭시 이메일 입력
+function modalClose()
+{
+	var frontemail=$('input[id=email1]').val();
+	var backemail=$('input[id=email2]').val();
+    
+	//이메일 입력창이 비었는가?
+	if( frontemail != "" && backemail != "" )  {
+		
+	var email='';
+	
+    $('input[name=email]').map(function(){
+    	email += $(this).val();
+    });
+  
+    //모달창에서 입력한 이메일값 담아주기
+    $('input[name=uesemail]').val(email);
+    $("#loginemail-modal").modal('hide');
+    $(".login-email-content1").attr("src","${root}/image/asset/이메일black.png");
+	} else{
+		//이메일 형식을 확인해 주세요. 출력
+		$(".login-emailcheck-failemailmessage").css("display","inline-block");
+		$(".login-emailcheck-message").css("display","none");
+		$(".login-emailcheck-failmessage").css("display","none");
+		return false;
+	}
+}
+</script>
 </head>
 <body>
 
