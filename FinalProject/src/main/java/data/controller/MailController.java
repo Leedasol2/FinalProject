@@ -64,16 +64,12 @@ public class MailController {
 
 	 // 임시 비밀번호 만든 뒤 해당 아이디에 대한 비밀번호 DB값 변경하기
 	  Random random = new Random();
-	  String newpass = "";
+	  String newpass = "";	  
 	  
-	  int idcheck = service.getIdCheck(userid); // 등록된 아이디인지 아닌지 체크
-	  int emailcheck = service.getSearchEmail(email); // 등록된 메일인지 아닌지 체크
-	  int namecheck = service.nameCheck(name); //등록된 이름인지 확인
 	  String mnum = service.findMnum(email); // 엠넘 찾기
-	  
-	  System.out.println(idcheck+emailcheck+namecheck);
-	  
-	  if(emailcheck + idcheck +namecheck > 3) {
+	  MemberDto dto = service.getData(mnum);
+	  	  	  
+	  if(userid.equals(dto.getUserid()) && email.equals(dto.getEmail()) && name.equals(dto.getName()) ) {
 		  // 임시 비밀번호 만들기
 		  for (int i = 0; i < 3; i++) {
 			  int index = random.nextInt(25) + 65; // A~Z까지 랜덤 알파벳 생성
@@ -83,7 +79,7 @@ public class MailController {
 		  newpass += numIndex;
 		  
 		  // 기존 비밀번호 변경
-		  MemberDto dto = service.getData(mnum);
+		  
 		  dto.setPassword(newpass);
 		  mapper.updatePass(dto);
 
