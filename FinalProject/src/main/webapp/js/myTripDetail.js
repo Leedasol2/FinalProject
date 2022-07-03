@@ -38,4 +38,40 @@ $(document).ready(function(){
 	
 });
 
-
+//scrap
+function scrapInsert(){
+	tnum=$('input[name=tnum]').val();
+	var vo='{"tnum":"'+tnum+'"}';
+	
+	$.ajax({
+		type:"post",
+		dataType: "text",
+		url:"/scrap/scrapInsert",
+        contentType: 'application/json',
+		data:vo,
+		success:function(data){
+        	if(data){
+		        alert("스크랩하였습니다")
+			    location.reload();
+        	}
+		}
+	});
+}
+function scrapDelete() {
+	tnum=$('input[name=tnum]').val();
+	var vo='{"tnum":"'+tnum+'"}';
+	/*ajax로 scrap에서 제거 */
+    $.ajax({
+        type : "post",
+        url : "/scrap/scrapDelete",
+        contentType: 'application/json',
+        dataType: "json",
+        data:vo,
+        success : function (data) {
+        	if(data){
+		        alert("스크랩을 취소하였습니다")
+			    location.reload();
+        	}
+        }
+     }); 
+}
