@@ -57,11 +57,15 @@ public class MemberService {
 	public void updatePass(MemberDto dto){
 		mapper.updatePass(dto);
 	}
-	public String Findmnum(String email){
-		return mapper.Findmnum(email);
+	public String findMnum(String email){
+		return mapper.findMnum(email);
 	}
 	
-	public String Findpass(String mnum){
-		return mapper.Findpass(mnum);
+	public String findPass(String mnum){
+		return mapper.findPass(mnum);
+	}
+	
+	public int nameCheck(String name){
+		return mapper.nameCheck(name);
 	}
 }

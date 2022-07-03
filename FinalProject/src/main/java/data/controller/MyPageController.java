@@ -62,7 +62,7 @@ public class MyPageController {
 	public String updateedit(@ModelAttribute MemberDto dto){
 									
 			service.updateMember(dto);
-			return "redirect:/mypage/myPageEdit";
+			return "redirect:/mypage/myPageEditSuccess";
 	}		
 	
 	@GetMapping("/mypage/myPageEditSuccess")

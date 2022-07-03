@@ -64,6 +64,9 @@
     <select id="getFesList" resultType="tdto" parameterType="String">
 	   select * from trip where part='festival' and endday>=#{day} and beginday <![CDATA[ <= ]]> #{day}
 	</select>
+<select id="getThemeParkList" resultType="tdto" parameterType="String">
+       select * from trip where part='themepark' and region='서울' order by readcount desc
+    </select>
 	
 	    <!-- region 정렬 -->
    <select id="getRegionSortList" resultType="tdto">

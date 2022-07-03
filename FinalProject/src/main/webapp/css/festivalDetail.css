@@ -1,10 +1,9 @@
 div.smimage2 > img{
-	width: 120px;
-	height: 120px;
+	width: 117px;
+	height: 117px;
 	cursor: pointer;
 	margin-top: 10px;
 	border: 1px solid #afafaf;
-	margin-right: 5px;
 }
 div.date{
 	font-family: 'MinSans-Black';
