@@ -337,65 +337,69 @@ public class TripController {
 	}
 	
 	//이용기
-		@GetMapping("/themeParkList")
-		public String themeParkList(Model model) {
-			
-			
-			//String CurrentRegion="서울";
-			String themepark="'themepark'";
-			
-			List<TripDto> themeparklist=tservice.getAllActivitys(themepark);
-			
-			for(TripDto r:themeparklist) {
-				if(rservice.getReviewcount(r.getTnum())>0) {
-					double avgrstar=rservice.getAvgrstar(r.getTnum());
-					int reviewcount=rservice.getReviewcount(r.getTnum());
-					r.setAvgrstar(avgrstar);
-					r.setReviewcount(reviewcount);
-				}else {
-					double avgrstar=0;
-					int reviewcount=0;
-					r.setAvgrstar(avgrstar);
-					r.setReviewcount(reviewcount);
-				}
-			}
-				
-			model.addAttribute("themeparklist",themeparklist);
-					
-			return "/myTrip/themeParkList";
-		}
-		
-		
-		@PostMapping("/themeChange")
-		public String themeChange(@RequestParam String CurrentRegion,  Model model) {
-						
-			String themepark="themepark";
-			
-			List<TripDto> themeparklist=tservice.getRegionThemeList(themepark, CurrentRegion);
-						
-			//list에 여행지 별점 추가하기
-			TripDto tdto=new TripDto();
-			for(TripDto t:themeparklist) {
-				if(rservice.getReviewcount(t.getTnum())>0) {
-					double avgrstar=rservice.getAvgrstar(t.getTnum());
-					int reviewcount=rservice.getReviewcount(t.getTnum());
-					t.setAvgrstar(avgrstar);
-					t.setReviewcount(reviewcount);
-				}else {
-					double avgrstar=0;
-					int reviewcount=0;
-					t.setAvgrstar(avgrstar);
-					t.setReviewcount(reviewcount);
-				}
-			    
-			}
-			
-			model.addAttribute("themeparklist", themeparklist);						
-			model.addAttribute("tdto",tdto);
+    @GetMapping("/themeParkList")
+    public String themeParkList(Model model) {
 
-			
-			return "/myTrip/themeParkList";
-		}
+        String CurrentRegion="서울";
+        String themepark="themepark";
+
+        List<TripDto> themeparklist=tservice.getThemeParkList(CurrentRegion, themepark);
+
+        //list에 여행지 별점 추가하기
+        TripDto tdto=new TripDto();
+        for(TripDto r:themeparklist) {
+            if(rservice.getReviewcount(r.getTnum())>0) {
+                double avgrstar=rservice.getAvgrstar(r.getTnum());
+                int reviewcount=rservice.getReviewcount(r.getTnum());
+                r.setAvgrstar(avgrstar);
+                r.setReviewcount(reviewcount);
+            }else {
+                double avgrstar=0;
+                int reviewcount=0;
+                r.setAvgrstar(avgrstar);
+                r.setReviewcount(reviewcount);
+            }
+        }
+
+        model.addAttribute("themeparklist",themeparklist);
+        model.addAttribute("tdto",tdto);
+
+        return "/myTrip/themeParkList";
+    }
+		
+		
+    @PostMapping("/themeChange")
+    public String themeChange(@RequestParam String CurrentRegion,  Model model) {
+
+        String themepark="themepark";
+        String regiontext=CurrentRegion;
+
+        List<TripDto> themeparklist=tservice.getRegionThemeList(themepark, CurrentRegion);
+
+        //list에 여행지 별점 추가하기
+        TripDto tdto=new TripDto();
+        for(TripDto t:themeparklist) {
+            if(rservice.getReviewcount(t.getTnum())>0) {
+                double avgrstar=rservice.getAvgrstar(t.getTnum());
+                int reviewcount=rservice.getReviewcount(t.getTnum());
+                t.setAvgrstar(avgrstar);
+                t.setReviewcount(reviewcount);
+            }else {
+                double avgrstar=0;
+                int reviewcount=0;
+                t.setAvgrstar(avgrstar);
+                t.setReviewcount(reviewcount);
+            }
+
+        }
+
+        model.addAttribute("themeparklist", themeparklist);
+        model.addAttribute("regiontext", regiontext);
+        model.addAttribute("tdto",tdto);
+
+
+        return "/myTrip/themeParkList";
+    }
 		
 		
 		//이용기
