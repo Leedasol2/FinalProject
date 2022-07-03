@@ -39,7 +39,7 @@ $(function(){
 	            $(".login-emailcheck-failmessage").css("display","none");
 	        } else{
 	        	//중복된 이메일 입니다. 출력 후 입력한 이메일 지우기
-	            $(".login-emailcheck-f ailmessage").css("display","inline-block");
+	            $(".login-emailcheck-failmessage").css("display","inline-block");
 	        	$(".login-emailcheck-failemailmessage").css("display","none");
 	        	$(".login-emailcheck-message").css("display","none");
 	            $("#email1").val("");

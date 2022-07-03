@@ -15,9 +15,9 @@
 		<span class="login-missid-title">아이디/비밀번호를 잊어버리셨나요?</span>
 		<ul>
 			
-			<li class="login-misspass-missid"><a id="amissid" href="${root}/loginMissId">아이디 찾기</a></li>
+			<li class="login-misspass-missid"><a id="amissid" href="/login/loginMissId">아이디 찾기</a></li>
 			
-			<li class="login-misspass-misspass"><a href="${root}/loginMissPass">비밀번호 찾기</a></li>
+			<li class="login-misspass-misspass"><a href="/login/loginMissPass">비밀번호 찾기</a></li>
 		</ul>		
 		
 		<hr class="login-missid-line-up">		

@@ -31,14 +31,14 @@
 				</div>
 				<div class="hr"><hr></div>
 			</div>
-			
+
 			<div class="editmember">				
 	  			<input type="hidden" name="mnum" value="${dto.mnum }">
 					
 				<div class = "mypage-editsuccess-edong">
 					<span class="mypage-editsuccess-title">수정이 완료되었습니다</span>
 				</div>
-					
+
 				<div class="btn-editsuccess-group">
 
 					<button type="submit" class="btn-update-information" onclick="location.href='/mypage/myPageEdit'">뒤로가기</button>
