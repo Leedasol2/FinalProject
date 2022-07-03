@@ -175,14 +175,14 @@ article {
 div.theme-main div.regionofkorea{
 	position: relative;
     left: 63px;
-    top: -180px;
+    top: -215px;
    	cursor: pointer;	
 }
 
 div.theme-main div.regionofkorea span.region{
-	margin-left: 33px;
-	font-size: 1.2em;
-	color: gray;
+	 margin-left: 32px;
+    font-size: 1.2em;
+    color: gray;
 }
 
 div.theme-main div.regionofkorea > span:hover{
@@ -200,7 +200,9 @@ div.best-star-rating.themepark{
 	top: 10px;
 }
 
-
+div.theme-main div.regionofkorea span.seoul.region{
+	color: #2bae66;
+}
 
 
 

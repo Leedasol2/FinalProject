@@ -42,6 +42,6 @@ public interface TripMapperInter {
 	//용기
 	public List<TripDto> getRegionThemeList(TripDto tdto);
 	public List<TripDto> getFesList(String fesday);
-}
+	public List<TripDto> getThemeParkList(String region,String part);}
 
 
