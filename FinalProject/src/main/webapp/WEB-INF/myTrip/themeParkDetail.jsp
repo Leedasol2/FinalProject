@@ -12,12 +12,13 @@
 
 </head>
 <body>
-
 <script src="${root}/js/themeParkDetail.js"></script>
 
 
 	<!-- main 시작 -->
-	<input type="hidden" id="tnum" value="${tdto.tnum }">
+	<input type="hidden" id="tnum" name="tnum" value="${tdto.tnum }">
+	<input type="hidden" name="loginok" value="${sessionScope.loginok}">
+	<input type="hidden" name="myid" value="${sessionScope.myid}">
 	<div class="mytripdetail">
 	<div class="tripdetailsubject">
 	<div class="mainmenutitle">
@@ -62,7 +63,11 @@
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<img alt="" src="${root }/image/asset/링크.png"><a href="${tdto.link }"><span class="tripscrap"> 홈페이지</span></a>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<img alt="" src="${root }/image/asset/스크랩안함.png" class="scrapImg"><span class="tripscrap"> 스크랩 하기</span>
+	<!-- 로그인하면 스크랩기능 활성화 -->
+	<c:if test="${not empty sessionScope.loginok || not empty sessionScope.loggedIn}">
+	<img alt="" src="${root }/image/asset/스크랩안함.png" class="scrapImg" id="scrapImg">
+	<span class="tripscrap" onclick="toggle_object(1); scrapEvent();"> 스크랩</span>
+	</c:if>
 	</div>
 	</div>
 	</div>
