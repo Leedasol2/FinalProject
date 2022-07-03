@@ -3,207 +3,75 @@ $(document).ready(function(){
 	loginok=$('input[name=loginok]').val();
 	myid=$('input[name=myid]').val();
 	tnum=$('input[name=tnum]').val();
+	myscrap=$('input[name=myscrap]').val();
 	
-	rlist();
-	tmrcount();
+	//스크랩
 	
-	<!-- image 클릭 이벤트 -->
-	$(".small").click(function(){
-		var src=$(this).attr("src");
-		$(".tripimage").attr("src",src);
-	});
-	
-	
-	//review insert
-	$("#rbtn").click(function(){
-		var rstar = $('input[name="rating"]:checked').val();
-		var rcontents = $('#detailcontent').val();
-		$.ajax({
-			type:"post",
-			dataType:"text",
-			url:"/myTripDetail/rinsert",
-			data:{"tnum":tnum,
-			"rstar":rstar,
-			"rcontents":rcontents},
-			success:function(data)
-			{
-				$('#detailcontent').val("");
-				$('input[name="rating"]').prop("checked",false);
-				window.location.reload();
-			}
-		});
-	});
-	
-	//review delete
-	$(document).on("click","button.rdel",function(){
-		var rnum=$(this).attr("rnum");
-		var a=confirm("해당 리뷰를 삭제할까요?");
+	$("span.tripscrap").click(function() {
 		
-		if(a){
-			$.ajax({
-				type:"get",
-				dataType:"text",
-				url:"/myTripDetail/rdelete",
-				data:{"rnum":rnum},
-				success:function(data){
-					$('#myModal3 [data-dismiss]').click();	
-					window.location.reload();
-				}
-			});	
+		//로그인 했는지 검사
+		if(loginok=="null"){
+			
+			alert("로그인이 필요한 서비스입니다")
+			return
+			
+		}else{
+			//alert("test"); 
+	 		
+			/* 로그인중인 사용자가 추천을 했는지 안했는지 */
+	   		if(myscrap==1){
+				var a=confirm("스크랩을 취소하시겠습니까?");
+			}else{
+				var b=confirm("스크랩 하시겠습니까?");
+			} 
+			
+	 		if(a){
+	 			scrapDelete()
+			}
+			if(b){
+				scrapInsert()
+				
+			}    
 		}
-	});
-	
-	//review get
-	$(document).on("click","button.rmod",function(){
-		var rnum=$(this).attr("rnum");
 		
-		$.ajax({
-			type:"get",
-			dataType:"json",
-			url:"/myTripDetail/rdata",
-			data:{"rnum":rnum},
-			success:function(data){
-				$("#ucontent").val(data.rcontents);
-			}
-		});
-		$("#myModal3").modal();
-	});
-	
-	//review update
-	$(document).on("click","#btnaupdate",function(){
-		var rnum=$("button.rmod").attr("rnum");
-		var rcontents=$("#ucontent").val();
-		
-		$.ajax({
-			type:"post",
-			dataType:"text",
-			url:"/myTripDetail/rupdate",
-			data:{"rnum":rnum,"rcontents":rcontents},
-			success:function(data){
-				window.location.reload();
-			}
-		});
-	});
+	})
 	
 });
 
-//review list
-function rlist()
-{
-	$.ajax({
-		type:"get",
-		dataType:"json",
-		url:"/myTripDetail/rlist",
-		data:{"tnum":tnum},
-		success:function(data){
-			var r="";
-			$.each(data,function(i,drdto){
-				r+="<div class='review-contents'>";
-				r+="<div class='review-topbox'>";
-				r+="<div class='review-title' style='display: flex;align-items: center;'>";
-				r+="<a>"+maskingCar(drdto.userid);
-				r+="</a>";
-				r+="<div class='tripstory-star-ratings'>";
-				r+="<div class='tripstory-star-ratings-fill space-x-2 text-lg' style='width:"+drdto.rstar*20+"%'>";
-				r+="<span>★</span>";
-				r+="<span>★</span>";
-				r+="<span>★</span>";
-				r+="<span>★</span>";
-				r+="<span>★</span>";
-				r+="</div>";
-				r+="<div class='tripstory-star-ratings-base space-x-2 text-lg'>";
-				r+="<span>★</span>";
-				r+="<span>★</span>";
-				r+="<span>★</span>";
-				r+="<span>★</span>";
-				r+="<span>★</span>";
-				r+="</div>";
-				r+="</div>";
-				r+="</div>";
-				
-				if (loginok=="yes" && myid==drdto.userid) 
-				{
-					r+="<div class='review-edit'>";
-					r+="<button type='button' class='rdel' rnum='"+drdto.rnum+"'>삭제</button>";
-					r+="<button type='button' class='rmod' rnum='"+drdto.rnum+"'>수정</button>";
-				}
-				
-				r+="<div class='review-day'>";
-				r+="<span>"+drdto.rday+"</span>";
-				r+="</div>";
-				r+="</div>";
-				r+="</div>";
-				r+="<div class='review-ment'>";
-				r+="<span>"+drdto.rcontents+"</span>";
-				r+="</div>";
-				r+="</div>";
-				r+="</div>";
-				r+="<div class='hr'>";
-				r+="<hr>";
-				r+="</div>";
-			});
-			
-			$("div.detailreview").html(r);
-		}
-	});
-}
-
-//review Duplicate check
-function tmrcount()
-{
-	$.ajax({
-		type:"get",
-		dataType:"text",
-		url:"/mypage/tmrcount",
-		data:{"tnum":tnum,"myid":myid},
-		success:function(data){
-			$(".btnadd").click(function(){
-				if(data>=1){
-					alert("리뷰는 한 ID 당 1개씩 작성할 수 있습니다.")
-					$(this).removeAttr("data-target");
-					$(this).removeAttr("data-toggle");
-				}
-			});
-		}
-	});
-}
-
-//review id masking
-function maskingCar(userid) {
-    if (userid == undefined || userid === '') {
-        return '';
-    }
-    var pattern = /.{3}$/; // 정규식
-    return userid.replace(pattern, "***");
-}
-
 //scrap
-function scrapEvent(){
+function scrapInsert(){
+	tnum=$('input[name=tnum]').val();
+	var vo='{"tnum":"'+tnum+'"}';
+	
 	$.ajax({
 		type:"post",
 		dataType: "text",
-		url:"/scrapInsert",
-		data:{"tnum":tnum},
+		url:"/scrap/scrapInsert",
+        contentType: 'application/json',
+		data:vo,
 		success:function(data){
-			
+        	if(data){
+		        alert("스크랩하였습니다")
+			    location.reload();
+        	}
 		}
 	});
 }
-
-//scrap icon change
-var i = 0;
-function toggle_object(post_id)
-{  
-    i = i + post_id;
-    var obj = document.getElementById('scrapImg');  
-    if(!obj) return;  
- 
-    if(i%2!=0)
-    {  
-        obj.src="../image/asset/스크랩아이콘.png";
-    }
-    else
-    {  
-        obj.src="../image/asset/스크랩안함.png";
-    }
+function scrapDelete() {
+	tnum=$('input[name=tnum]').val();
+	var vo='{"tnum":"'+tnum+'"}';
+	/*ajax로 scrap에서 제거 */
+    $.ajax({
+        type : "post",
+        url : "/scrap/scrapDelete",
+        contentType: 'application/json',
+        dataType: "json",
+        data:vo,
+        success : function (data) {
+        	if(data){
+		        alert("스크랩을 취소하였습니다")
+			    location.reload();
+        	}
+        }
+     }); 
 }

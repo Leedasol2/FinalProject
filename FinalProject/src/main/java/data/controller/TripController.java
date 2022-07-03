@@ -3,8 +3,11 @@ package data.controller;
 import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.bind.DefaultValue;
@@ -20,10 +23,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import data.dto.ReviewDto;
+import data.dto.ScrapDto;
 import data.dto.TripDto;
 import data.mapper.ReviewMapperInter;
+import data.mapper.ScrapMapperInter;
 import data.mapper.TripMapperInter;
+import data.service.MemberService;
 import data.service.ReviewService;
+import data.service.ScrapService;
 import data.service.TripService;
 
 
@@ -44,8 +51,16 @@ public class TripController {
 	@Autowired
 	ReviewService rservice;
 	
+	@Autowired
+	ScrapService sservice;
+	
+	@Autowired
+	MemberService mservice;
+	
+	
 	@GetMapping("/myTripDetail")
-	public ModelAndView myTripDetail(@RequestParam("tnum") String tnum) {
+	public ModelAndView myTripDetail(@RequestParam("tnum") String tnum,
+			HttpSession session) {
 		
 		ModelAndView mview=new ModelAndView();
 		//조회수 증가
@@ -61,7 +76,17 @@ public class TripController {
 			double avgrstar=0;
 			tdto.setAvgrstar(avgrstar);
 		}
+
+		//세션에 로그인한 아이디
+		String myid=(String)session.getAttribute("myid");
+		String mnum=mservice.getMnum(myid);
+		
+		//스크랩
+		int myscrap=sservice.getFindScrap(mnum,tnum);
+		
+		
 		mview.addObject("tdto",tdto);
+		mview.addObject("myscrap",myscrap);
 		mview.setViewName("/trip/myTripDetail");
 		return mview;
 	}
@@ -98,6 +123,7 @@ public class TripController {
 		list.sort(new AvgrstarComparator().reversed()); //별점 높은순 정렬
 //		list.sort(new ReviewCountComparator().reversed()); //리뷰 많은순으로 정렬
 //		list.sort(new AvgrstarComparator()); //별점 낮은순 정렬
+		
 		
 		//출력에 필요한 변수들을 request에 저장
 		mview.addObject("list",list); //댓글개수 포함후 전달
@@ -417,7 +443,8 @@ public class TripController {
 						
 		//이용기
 		@GetMapping("/themeParkDetail")
-		public ModelAndView themeParkDetail(@RequestParam("tnum") String tnum) {
+		public ModelAndView themeParkDetail(@RequestParam("tnum") String tnum,
+				HttpSession session) {
 			
 			ModelAndView model=new ModelAndView();
 			
@@ -434,6 +461,18 @@ public class TripController {
 				double avgrstar=0;
 				tdto.setAvgrstar(avgrstar);
 			}
+
+			//스크랩
+
+			//세션에 로그인한 아이디
+			String myid=(String)session.getAttribute("myid");
+			String mnum=mservice.getMnum(myid);
+			
+			//스크랩
+			int myscrap=sservice.getFindScrap(mnum,tnum);
+			
+			model.addObject("myscrap",myscrap);
+			
 			
 			model.addObject("tdto",tdto);
 			
@@ -444,14 +483,25 @@ public class TripController {
 	
 		//이용기
 		@GetMapping("/festivalDetail")
-		public ModelAndView festivalDetail(@RequestParam("tnum") String tnum) {
+		public ModelAndView festivalDetail(@RequestParam("tnum") String tnum,
+				HttpSession session) {
 					
 			ModelAndView model=new ModelAndView();
 					
 			//조회수 ㅡ증가
 			tripMapper.updateReadCount(tnum);
 			TripDto tdto=tripMapper.getData(tnum);
-					
+
+			//스크랩
+
+			//세션에 로그인한 아이디
+			String myid=(String)session.getAttribute("myid");
+			String mnum=mservice.getMnum(myid);
+			
+			//스크랩
+			int myscrap=sservice.getFindScrap(mnum,tnum);
+			
+			model.addObject("myscrap",myscrap);
 			model.addObject("tdto",tdto);
 					
 			model.setViewName("/festival/festivalDetail");
