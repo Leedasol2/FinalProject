@@ -9,65 +9,52 @@
 <head>
 <meta charset="UTF-8">
 <title>이런여행</title>
-
-</head>
-<body>
-
 <script type="text/javascript">
-$(function(){
+$(document).ready(function(){	
 	
-	loginok="${sessionScope.loginok}";
-	myid="${sessionScope.myid}";
+	loginok=$('input[name=loginok]').val();
+	myid=$('input[name=myid]').val();
+	tnum=$('input[name=tnum]').val();
 	
 	rlist();
 	tmrcount();
-
 	
-	<!-- image 클릭 이벤트 -->
+	 /*image 클릭 이벤트 */
 	$(".small3").click(function(){
-		
 		var src=$(this).attr("src");
-		
 		$(".tripimage").attr("src",src);
 	});
+
 	
-	
-	//insert
+	//review insert
 	$("#rbtn").click(function(){
-		var tnum=$(':hidden#tnum').val();
 		var rstar = $('input[name="rating"]:checked').val();
 		var rcontents = $('#detailcontent').val();
-		//alert("tnum:"+tnum+"rstar:"+rstar+"rcontents:"+rcontents);
-		//alert(myid);
 		$.ajax({
-			
 			type:"post",
 			dataType:"text",
 			url:"/themeParkDetail/rinsert",
 			data:{"tnum":tnum,
 			"rstar":rstar,
 			"rcontents":rcontents},
-			success:function(data){
-				
+			success:function(data)
+			{
 				$('#detailcontent').val("");
 				$('input[name="rating"]').prop("checked",false);
 				window.location.reload();
 			}
 		});
-		
 	});
 	
-	//delete
+	//review delete
 	$(document).on("click","button.rdel",function(){
 		var rnum=$(this).attr("rnum");
-		//alert(rnum);
 		var a=confirm("해당 리뷰를 삭제할까요?");
 		
 		if(a){
 			$.ajax({
-				
 				type:"get",
-				dataType:"text", //return값 없으니까 text
+				dataType:"text",
 				url:"/themeParkDetail/rdelete",
 				data:{"rnum":rnum},
 				success:function(data){
@@ -78,33 +65,28 @@ $(function(){
 		}
 	});
 	
-	
-	//update
+	//review get
 	$(document).on("click","button.rmod",function(){
-
 		var rnum=$(this).attr("rnum");
 		
 		$.ajax({
-			
 			type:"get",
 			dataType:"json",
 			url:"/themeParkDetail/rdata",
 			data:{"rnum":rnum},
 			success:function(data){
-				//모달에 idx값을 가진 content띄우기
 				$("#ucontent").val(data.rcontents);
 			}
 		});
-		
 		$("#myModal3").modal();
 	});
-$(document).on("click","#btnaupdate",function(){
-		
+	
+	//review update
+	$(document).on("click","#btnaupdate",function(){
 		var rnum=$("button.rmod").attr("rnum");
 		var rcontents=$("#ucontent").val();
 		
 		$.ajax({
-			
 			type:"post",
 			dataType:"text",
 			url:"/themeParkDetail/rupdate",
@@ -114,54 +96,17 @@ $(document).on("click","#btnaupdate",function(){
 			}
 		});
 	});
-				
-});	
 
-function maskingCar(userid) {
-    if (userid == undefined || userid === '') {
-        return '';
-    }
-    var pattern = /.{3}$/; // 정규식
-    return userid.replace(pattern, "***");
-}
-
-function tmrcount()
-{
-	
-	var tnum=$(':hidden#tnum').val();
-	var myid="${sessionScope.myid}";
-	
-	$.ajax({
-		type:"get",
-		dataType:"text",
-		url:"/mypage/tmrcount",
-		data:{"tnum":tnum,"myid":myid},
-		success:function(data){
-			$(".btnadd").click(function(){
-				if(data>=1){
-					alert("리뷰는 한 ID 당 1개씩 작성할 수 있습니다.")
-					$(this).removeAttr("data-target");
-					$(this).removeAttr("data-toggle");
-				}
-			});
-	}
-	});
-}
-
-
+//review list
 function rlist()
 {
-	var tnum=$(':hidden#tnum').val();
-	
 	$.ajax({
 		type:"get",
 		dataType:"json",
 		url:"/themeParkDetail/rlist",
 		data:{"tnum":tnum},
 		success:function(data){
-			 //console.log(data);
 			var r="";
-			
 			$.each(data,function(i,drdto){
 				r+="<div class='review-contents'>";
 				r+="<div class='review-topbox'>";
@@ -186,12 +131,12 @@ function rlist()
 				r+="</div>";
 				r+="</div>";
 				
-				if (loginok=="yes" && myid==drdto.userid) {
+				if (loginok=="yes" && myid==drdto.userid) 
+				{
 					r+="<div class='review-edit'>";
 					r+="<button type='button' class='rdel' rnum='"+drdto.rnum+"'>삭제</button>";
 					r+="<button type='button' class='rmod' rnum='"+drdto.rnum+"'>수정</button>";
 				}
-				
 				
 				r+="<div class='review-day'>";
 				r+="<span>"+drdto.rday+"</span>";
@@ -213,10 +158,43 @@ function rlist()
 	});
 }
 
-</script>
+//review Duplicate check
+function tmrcount()
+{
+	$.ajax({
+		type:"get",
+		dataType:"text",
+		url:"/mypage/tmrcount",
+		data:{"tnum":tnum,"myid":myid},
+		success:function(data){
+			$(".btnadd").click(function(){
+				if(data>=1){
+					alert("리뷰는 한 ID 당 1개씩 작성할 수 있습니다.")
+					$(this).removeAttr("data-target");
+					$(this).removeAttr("data-toggle");
+				}
+			});
+		}
+	});
+}
 
+//review id masking
+function maskingCar(userid) {
+    if (userid == undefined || userid === '') {
+        return '';
+    }
+    var pattern = /.{3}$/; // 정규식
+    return userid.replace(pattern, "***");
+}
+
+</script>
+</head>
+<body>
 	<!-- main 시작 -->
-	<input type="hidden" id="tnum" value="${tdto.tnum }">
+	<input type="hidden" id="tnum" name="tnum" value="${tdto.tnum }">
+	<input type="hidden" name="loginok" value="${sessionScope.loginok}">
+	<input type="hidden" name="myid" value="${sessionScope.myid}">
+	<input type="hidden" name="myscrap" value="${myscrap}">
 	<div class="mytripdetail">
 	<div class="tripdetailsubject">
 	<div class="mainmenutitle">
@@ -261,7 +239,16 @@ function rlist()
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<img alt="" src="${root }/image/asset/링크.png"><a href="${tdto.link }"><span class="tripscrap"> 홈페이지</span></a>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<img alt="" src="${root }/image/asset/스크랩안함.png" class="scrapImg"><span class="tripscrap"> 스크랩 하기</span>
+	<!-- 로그인하면 스크랩기능 활성화 -->
+	<c:if test="${not empty sessionScope.loginok || not empty sessionScope.loggedIn}">
+		<c:if test="${myscrap==0 }">
+			<img alt="" src="${root }/image/asset/스크랩안함.png" class="scrapImg" id="scrapImg">
+		</c:if>
+		<c:if test="${myscrap==1 }">
+			<img alt="" src="${root }/image/asset/스크랩아이콘.png" class="scrapImg" id="scrapImg">
+		</c:if>
+		<span class="tripscrap"> 스크랩</span>
+	</c:if>
 	</div>
 	</div>
 	</div>

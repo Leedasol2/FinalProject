@@ -71,7 +71,9 @@ public class MailController {
 	  int namecheck = service.nameCheck(name); //등록된 이름인지 확인
 	  String mnum = service.findMnum(email); // 엠넘 찾기
 	  
-	  if(emailcheck + idcheck +namecheck == 3) {
+	  System.out.println(idcheck+emailcheck+namecheck);
+	  
+	  if(emailcheck + idcheck +namecheck > 3) {
 		  // 임시 비밀번호 만들기
 		  for (int i = 0; i < 3; i++) {
 			  int index = random.nextInt(25) + 65; // A~Z까지 랜덤 알파벳 생성

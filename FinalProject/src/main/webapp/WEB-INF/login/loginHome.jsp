@@ -40,7 +40,7 @@
 			</div>
 			
 		<div class="login-home-btn2">
-			<button type="button" class="login-home-btn-find" onclick="location.href='loginMissId'">아이디ㆍ비밀번호 찾기</button>
+			<button type="button" class="login-home-btn-find" onclick="location.href='/login/loginMissId'">아이디ㆍ비밀번호 찾기</button>
 			<button type="button" class="login-home-btn-join" onclick="location.href='/joinMember/loginJoin'">회원가입</button>
 		</div>
 		
@@ -152,7 +152,7 @@ function kakaoLogout() {
 <!-- 네이버아이디로로그인 버튼 노출 영역 -->
 <div id="naverIdLogin"></div>
 <!-- //네이버아이디로로그인 버튼 노출 영역 -->
-<div onclick="nlogout2(); nlogout1();">네이버 로그아웃</div>
+<div onclick="nlogout2(); nlogout1();"  style="visibility: hidden;">네이버 로그아웃</div>
 
 <!-- 네이버아디디로로그인 초기화 Script -->
 <script type="text/javascript">

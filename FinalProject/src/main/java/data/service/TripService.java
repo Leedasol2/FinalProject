@@ -49,6 +49,10 @@ public class TripService {
 
 		return tripMapper.getRegionThemeList(tdto);
 	}
+	
+	public List<TripDto> getThemeParkList(String part, String region) {
+		return tripMapper.getThemeParkList(part, region);
+	}
 
 	public List<TripDto> getReadCountList() {
 		return tripMapper.getReadCountList();

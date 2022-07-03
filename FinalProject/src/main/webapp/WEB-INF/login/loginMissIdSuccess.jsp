@@ -16,9 +16,9 @@
 		<span class="login-missid-title">아이디/비밀번호를 잊어버리셨나요?</span>
 		<ul>
 			
-			<li class="login-missid-missid"><a href="${root}/loginMissId">아이디 찾기</a></li>
+			<li class="login-missid-missid"><a href="${root}/login/loginMissId">아이디 찾기</a></li>
 			
-			<li class="login-missid-misspass"><a id = "amisspass" href="${root}/loginMissPass">비밀번호 찾기</a></li>
+			<li class="login-missid-misspass"><a id = "amisspass" href="${root}/login/loginMissPass">비밀번호 찾기</a></li>
 		</ul>		
 		
 		<hr class="login-missid-line-up">		
@@ -44,9 +44,10 @@
 					<!-- 버튼 -->
 					<div class="login-missid-btn-findid">
 						<button type="submit" class="login-missid-btn-findid">아이디찾기</button>											
-				</form>
-					<button type="submit" class="login-missid-btn-login" onclick="location.href='/loginHome'">로그인</button>
+			
+					<button type="button" class="login-missid-btn-login" onclick="location.href='/loginHome'">로그인</button>
 					</div>
+					</form>
 			</div>
 
 		<hr class="login-missid-line">
