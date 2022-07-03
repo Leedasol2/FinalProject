@@ -26,11 +26,11 @@ public class ScrapService {
 		smapper.deleteScrap(snum);
 	}
 	
-	public void getSnum(String mnum, String tnum) {
+	public String getSnum(String mnum, String tnum) {
 		HashMap<String, String> map=new HashMap<>(); 
 		map.put("mnum", mnum); 
 		map.put("tnum", tnum); 
-		smapper.getSnum(map);
+		return smapper.getSnum(map);
 	}
 	
 	public List<ScrapDto> getList(String mnum) {
@@ -39,6 +39,13 @@ public class ScrapService {
 	
 	public int getScrapCount(String mnum) {
 		return smapper.getScrapCount(mnum);
+	}
+	public int getFindScrap(String mnum, String tnum) {
+		HashMap<String, String> map=new HashMap<>(); 
+		map.put("mnum", mnum); 
+		map.put("tnum", tnum); 
+		
+		return smapper.getFindScrap(map);
 	}
 
 }

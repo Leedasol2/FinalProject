@@ -68,6 +68,9 @@
 <script src="${root}/js/loginEmail.js"></script>
 <script src="${root}/js/loginInfo.js"></script>
 <script src="${root}/js/myPageEdit.js"></script>
+<script src="${root}/js/myTripDetail.js"></script>
+
+
 
 </head>
 <body>
