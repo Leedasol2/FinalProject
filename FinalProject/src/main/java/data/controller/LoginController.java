@@ -74,7 +74,7 @@ public class LoginController {
 	}
 	
 	//아이디 찾기 관련
-	@GetMapping("/loginMissId")
+	@GetMapping("/login/loginMissId")
 	public String loginMissId() {
 		
 		return "/login/loginMissId";
@@ -93,7 +93,7 @@ public class LoginController {
 	}
 	
 	 
-	@PostMapping("missId")
+	@PostMapping("/login/missId")
 	public String missId(
 			@RequestParam String name,
 			@RequestParam String email,
@@ -110,24 +110,24 @@ public class LoginController {
 
 			return "/login/loginMissIdSuccess";
 		}else {
-			return "redirect:/loginMissIdFalse";
+			return "redirect:/login/loginMissIdFalse";
 		}
 	}
 	
 	//비밀번호 찾기
-	@GetMapping("/loginMissPass")
+	@GetMapping("/login/loginMissPass")
 	public String loginMissPass() {
 		
 		return "/login/loginMissPass";
 	}	
 	
-	@GetMapping("/loginMissPassFalse")
+	@GetMapping("/login/loginMissPassFalse")
 	public String loginMissPassFalse() {
 		
 		return "/login/loginMissPassFalse";
 	}
 	
-	@GetMapping("/loginMissPassSuccess")
+	@GetMapping("/login/loginMissPassSuccess")
 	public String loginMissPassSuccess() {
 		
 		return "/login/loginMissPassSuccess";

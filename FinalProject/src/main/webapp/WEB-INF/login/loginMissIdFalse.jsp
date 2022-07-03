@@ -30,7 +30,7 @@
 
 					<!-- 버튼 -->
 					<div class="login-missid-btn-findid">
-						<button type="submit" class="login-missid-btn-loginfalse" onclick="location.href='/loginMissId'">뒤로가기</button>
+						<button type="submit" class="login-missid-btn-loginfalse" onclick="location.href='/login/loginMissId'">뒤로가기</button>
 					</div>
 			</div>
 
