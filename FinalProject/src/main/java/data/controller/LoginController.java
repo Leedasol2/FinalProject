@@ -80,13 +80,13 @@ public class LoginController {
 		return "/login/loginMissId";
 	}	
 	
-	@GetMapping("/loginMissIdFalse")
+	@GetMapping("/login/loginMissIdFalse")
 	public String loginMissIdFalse() {
 		
 		return "/login/loginMissIdFalse";
 	}
 	
-	@GetMapping("/loginMissIdSuccess")
+	@GetMapping("/login/loginMissIdSuccess")
 	public String loginMissIdSuccess() {
 		
 		return "/login/loginMissIdSuccess";
@@ -119,7 +119,7 @@ public class LoginController {
 	public String loginMissPass() {
 		
 		return "/login/loginMissPass";
-	}	
+	}		  
 	
 	@GetMapping("/login/loginMissPassFalse")
 	public String loginMissPassFalse() {

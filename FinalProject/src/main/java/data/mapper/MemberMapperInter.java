@@ -36,4 +36,7 @@ public interface MemberMapperInter {
 	public String findMnum(String email);
 	public int nameCheck(String name);
 	public String findPass(String mnum);
+	public String getName(String name);
+	public String getEmail(String email);
+
 }

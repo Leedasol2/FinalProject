@@ -53,7 +53,7 @@ select count(*) from member where name=#{name} and email=#{email}
 </select>
 
 <update id="updateMember" parameterType="mdto">
-  update member set userid=#{userid}, name=#{name}, email=#{email}, phone=#{phone}, password=#{password} where mnum=#{mnum}
+  update member set userid=#{userid}, name=#{name}, email=#{email}, phone=#{phone} where mnum=#{mnum}
 </update>
 
 <delete id="deleteMember" parameterType="String">
@@ -75,4 +75,14 @@ select count(*) from member where name=#{name} and email=#{email}
 <select id="nameCheck" parameterType="String" resultType="int">
 select count(*) from member where name=#{name}
 </select>
+
+<select id="getName" resultType="String" parameterType="String">
+	select name from member where mnum=#{mnum}
+</select>
+
+<select id="getEmail" resultType="String" parameterType="String">
+	select email from member where mnum=#{mnum}
+</select>
+
+
 </mapper>
