@@ -96,7 +96,6 @@ $(document).ready(function(){
 			}
 		});
 	});
-});
 
 //review list
 function rlist()

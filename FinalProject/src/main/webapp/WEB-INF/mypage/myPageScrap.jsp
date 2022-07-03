@@ -9,22 +9,6 @@
 <title>이런여행</title>
 
 <script type="text/javascript">
-function goDetail(tnum,part) {//
-	//alert(tnum);
-	 if(part=='trip'){
-		//alert(part);
-		location.href='/myTrip/myTripDetail?tnum='+tnum;
-	}else if(part=='themepark'){
-		//alert(part);
-		location.href='/myTrip/themeParkDetail?tnum='+tnum;
-	}else{
-		//alert(part);
-		location.href='/myTrip/festivalDetail?tnum='+tnum;
-	} 
-	
-	
-	
-}
 </script>
 </head>
 <body>
