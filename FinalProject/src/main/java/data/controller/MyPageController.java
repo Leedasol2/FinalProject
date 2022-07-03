@@ -22,6 +22,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import data.dto.MemberDto;
 import data.dto.ScrapDto;
+import data.mapper.MemberMapperInter;
 import data.service.MemberService;
 import data.service.ScrapService;
 import data.service.TripService;
@@ -38,6 +39,9 @@ public class MyPageController {
 	@Autowired
 	TripService tservice;
 	
+	@Autowired
+	MemberMapperInter mapper;	
+	
 	//업데이트 폼
 	@GetMapping("/mypage/myPageEdit")
 	public ModelAndView myPageEdit(
@@ -48,8 +52,7 @@ public class MyPageController {
 		String myid=(String)session.getAttribute("myid");
 		String mnum = service.getMnum(myid);
 		ModelAndView mview = new ModelAndView();
-		MemberDto dto = service.getData(mnum);
-		
+		MemberDto dto = service.getData(mnum);		
 		mview.addObject("dto",dto);
 		mview.setViewName("/mypage/myPageEdit");
 		
@@ -59,10 +62,23 @@ public class MyPageController {
 	
 	//정보수정
 	@PostMapping("/mypage/updateedit")
-	public String updateedit(@ModelAttribute MemberDto dto){
-									
+	public String updateedit(@ModelAttribute MemberDto dto
+			,@RequestParam String password1){					
+		
+		System.out.println(dto);
+		System.out.println("변경패스워드는"+password1);
+		
+		if(password1 == "") {
 			service.updateMember(dto);
 			return "redirect:/mypage/myPageEditSuccess";
+		}
+		else {
+			service.updateMember(dto);
+			dto.setPassword(password1);
+			mapper.updatePass(dto);
+			
+			return "redirect:/mypage/myPageEditSuccess";
+		}
 	}		
 	
 	@GetMapping("/mypage/myPageEditSuccess")
