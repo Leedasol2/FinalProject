@@ -42,7 +42,7 @@
 											<a href="/myTrip/myTripDetail?tnum=${r.tnum}">${r.title}</a>
 											<div class="tripstory-star-ratings">
 												<div class="tripstory-star-ratings-fill space-x-2 text-lg"
-													style="width: ${r.rstar*20+15}%">
+													style="width: ${r.rstar*20}%">
 													<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 												</div>
 												<div class="tripstory-star-ratings-base space-x-2 text-lg">
