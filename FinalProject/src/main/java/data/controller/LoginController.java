@@ -155,7 +155,7 @@ public class LoginController {
 			
 			session.setAttribute("loginName", knickname);
 			session.setAttribute("myid", kid);
-			session.setAttribute("loginok", "yes");
+			session.setAttribute("loggedIn", "yes");
 		}
 		
 		//네이버 로그인
