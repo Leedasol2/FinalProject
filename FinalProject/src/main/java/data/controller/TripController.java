@@ -133,6 +133,25 @@ public class TripController {
 		return mview;
 	}
 	
+	//별점 높은순(리뷰동일할때 조건)으로 정렬
+		class AvgrstarComparator2 implements Comparator<TripDto>{
+			
+			@Override
+			public int compare(TripDto t1, TripDto t2) {
+				
+				//리뷰count 같을때 동작
+				if(t1.getReviewcount() == t2.getReviewcount()) {
+				if(t1.getAvgrstar() > t2.getAvgrstar()) {
+					return 1;
+				}else if
+				(t1.getAvgrstar()<t2.getAvgrstar()) {
+					return -1;
+				}
+				}
+				return 0;
+			}
+		}
+	
 	//별점 높은순으로 정렬
 	class AvgrstarComparator implements Comparator<TripDto>{
 		
@@ -204,7 +223,7 @@ public class TripController {
 		}
 		
 		List<TripDto> regionList=tservice.getRegionCountList(regiontext);
-		
+		regionList.sort(new AvgrstarComparator2().reversed());
 		model.addAttribute("regionList",regionList);
 		model.addAttribute("regiontext",regiontext);
 		model.addAttribute("SelectSort",SelectSort);
@@ -222,7 +241,6 @@ public class TripController {
 		}
 		
 		List<TripDto> regionList=tservice.getRegionhrstarList(regiontext);
-		regionList.sort(new AvgrstarComparator().reversed());
 		
 		model.addAttribute("regionList",regionList);
 		model.addAttribute("regiontext",regiontext);
@@ -292,7 +310,7 @@ public class TripController {
 		}
 		
 		List<TripDto> themeList=tservice.getThemeCountList(themetext);
-		themeList.sort(new AvgrstarComparator().reversed());
+		themeList.sort(new AvgrstarComparator2().reversed());
 		model.addAttribute("themeList",themeList);
 		model.addAttribute("themetext",themetext);
 		model.addAttribute("SelectSort",SelectSort);
