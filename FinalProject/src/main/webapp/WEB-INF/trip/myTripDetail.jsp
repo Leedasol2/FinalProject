@@ -10,7 +10,7 @@
 <title>이런여행</title>
 <script type="text/javascript">
 
-$(document).ready(function(){
+$(function(){
 
 	loginok=$('input[name=loginok]').val();
 	myid=$('input[name=myid]').val();
@@ -97,7 +97,7 @@ $(document).ready(function(){
 		});
 	});
 	
-
+})
 
 //review list
 function rlist()
@@ -315,7 +315,7 @@ function maskingCar(userid) {
 	</c:if>
 	</div>
 	<div class="detailreview" style="width:850px;"></div>
-	<input type="hidden" id="tnum" value=${tdto.tnum}>
+	<input type="hidden" id="tnum" value="${tdto.tnum}">
 	</div>
 <!-- main 끝 -->
 	
